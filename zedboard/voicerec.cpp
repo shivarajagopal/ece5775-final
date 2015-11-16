@@ -1,0 +1,1 @@
+../amdpool/digitrec.cpp
