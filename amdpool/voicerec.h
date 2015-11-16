@@ -9,7 +9,6 @@
 #include<hls_stream.h>
 
 #include "typedefs.h"
-#include "training_data.h"
 
 // The K_CONST value: number of nearest neighbors
 #define K_CONST 3

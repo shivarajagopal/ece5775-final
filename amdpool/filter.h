@@ -48,10 +48,10 @@ typedef struct
 } filter_executionState;
 
 
-filterType *filter_create( void );
-void filter_destroy( filterType *pObject );
- void filter_init( filterType * pThis );
- void filter_reset( filterType * pThis );
+//filterType *filter_create( void );
+//void filter_destroy( filterType *pObject );
+ //void filter_init( filterType * pThis );
+ //void filter_reset( filterType * pThis );
 #define filter_writeInput( pThis, input )  \
 	filter_filterBlock( pThis, &input, &pThis->output, 1 );
 
@@ -213,23 +213,12 @@ float filter_overflowOutput[63] =
   -0.71544111, -0.31345740, 0.17805620, 0.71312940, 1.20060131, 1.53995323, 1.66998342
 };
 
-filterType *filter_create( void )
-{
-	filterType *result = (filterType *)malloc( sizeof( filterType ) );	// Allocate memory for the object
-	filter_init( result );											// Initialize it
-	return result;																// Return the result
-}
-
 void filter_destroy( filterType *pObject )
 {
 	free( pObject );
 }
 
- void filter_init( filterType * pThis )
-{
-	filter_reset( pThis );
 
-}
 
  void filter_reset( filterType * pThis )
 {
@@ -237,5 +226,18 @@ void filter_destroy( filterType *pObject )
 	pThis->output = 0;									// Reset output
 
 }
+
+ void filter_init( filterType * pThis )
+{
+	filter_reset( pThis );
+
+}
+filterType *filter_create( void )
+{
+	filterType *result = (filterType *)malloc( sizeof( filterType ) );	// Allocate memory for the object
+	filter_init( result );											// Initialize it
+	return result;																// Return the result
+}
+
 #endif // FILTER_H_
 	

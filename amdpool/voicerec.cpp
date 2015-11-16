@@ -3,37 +3,6 @@
 //==========================================================================
 // @brief: A k-nearest-neighbor implementation for digit recognition (k=1)
 
-#include "digitrec.h"
-
-//----------------------------------------------------------
-// Top function
-//----------------------------------------------------------
-
-void dut(
-    hls::stream<bit32_t> &strm_in,
-    hls::stream<bit32_t> &strm_out
-)
-{
-  digit in_digit;
-  bit32_t out_digit;
-  // ------------------------------------------------------
-  // Input processing
-  // ------------------------------------------------------
-  // Read the two input 32-bit words (low word first)
-  bit32_t input_lo = strm_in.read();
-  bit32_t input_hi = strm_in.read();
-
-  // Convert input raw bits to fixed-point representation via bit slicing
-  in_digit(31, 0) = input_lo;
-  in_digit(in_digit.length()-1, 32) = input_hi;
-
-  // Call Digit Recognition
-  out_digit = (bit32_t) digitrec(in_digit);
-  
-  // Write Output
-  strm_out.write( out_digit );
-
-}
 
 /******************************* SOURCE LICENSE *********************************
 Copyright (c) 2013 MicroModeler.
