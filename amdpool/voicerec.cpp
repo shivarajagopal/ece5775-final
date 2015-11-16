@@ -35,185 +35,150 @@ void dut(
 
 }
 
-//----------------------------------------------------------
-// Digitrec
-//----------------------------------------------------------
-// @param[in] : input - the testing instance
-// @return : the recognized digit (0~9)
+/******************************* SOURCE LICENSE *********************************
+Copyright (c) 2013 MicroModeler.
 
-bit4_t digitrec( digit input ) 
+A non-exclusive, nontransferable, perpetual, royalty-free license is granted to the Licensee to 
+use the following Information for academic, non-profit, or government-sponsored research purposes.
+Use of the following Information under this License is restricted to NON-COMMERCIAL PURPOSES ONLY.
+Commercial use of the following Information requires a separately executed written license agreement.
+
+This Information is distributed WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+******************************* END OF LICENSE *********************************/
+
+// A commercial license for MicroModeler DSP can be obtained at http://www.micromodeler.com/launch.jsp
+
+#include "filter.h"
+
+#include <stdlib.h> // For malloc/free
+#include <string.h> // For memset
+#include <stdio.h>    // For test case I/Os
+
+
+
+ int filter_filterBlock( filterType * pThis, float * pInput, float * pOutput, unsigned int count )
 {
-  #include "training_data.h"
+  filter_executionState executionState;          // The executionState structure holds call data, minimizing stack reads and writes 
+  if( ! count ) return 0;                         // If there are no input samples, return immediately
+  executionState.pInput = pInput;                 // Pointers to the input and output buffers that each call to filterBiquad() will use
+  executionState.pOutput = pOutput;               // - pInput and pOutput can be equal, allowing reuse of the same memory.
+  executionState.count = count;                   // The number of samples to be processed
+  executionState.pState = pThis->state;                   // Pointer to the biquad's internal state and coefficients. 
+  executionState.pCoefficients = filter_coefficients;    // Each call to filterBiquad() will advance pState and pCoefficients to the next biquad
 
-  // This array stores K minimum distances per training set
-  bit6_t knn_set[10][K_CONST];
+  // The 1st call to filter1_filterBiquad() reads from the caller supplied input buffer and writes to the output buffer.
+  // The remaining calls to filterBiquad() recycle the same output buffer, so that multiple intermediate buffers are not required.
 
-  // Initialize the knn set
-  for ( int i = 0; i < 10; ++i )
-    for ( int k = 0; k < K_CONST; ++k )
-      // Note that the max distance is 49
-      knn_set[i][k] = 50; 
+  filter_filterBiquad( &executionState );   // Run biquad #0
+  executionState.pInput = executionState.pOutput;         // The remaining biquads will now re-use the same output buffer.
 
-  L1800: for ( int i = 0; i < TRAINING_SIZE; ++i ) {
-    L10: for ( int j = 0; j < 10; j++ ) {
-      // Read a new instance from the training set
-      digit training_instance = training_data[j][i];
-      // Update the KNN set
-      update_knn( input, training_instance, knn_set[j] );
-    }
-  } 
+  filter_filterBiquad( &executionState );   // Run biquad #1
 
-  // Compute the final output
-  return knn_vote( knn_set ); 
-}
+  filter_filterBiquad( &executionState );   // Run biquad #2
 
+  filter_filterBiquad( &executionState );   // Run biquad #3
 
-//-----------------------------------------------------------------------
-// update_knn function
-//-----------------------------------------------------------------------
-// Given the test instance and a (new) training instance, this
-// function maintains/updates an array of K minimum
-// distances per training set.
-
-// @param[in] : test_inst - the testing instance
-// @param[in] : train_inst - the training instance
-// @param[in/out] : min_distances[K_CONST] - the array that stores the current
-//                  K_CONST minimum distance values per training set
-
-void update_knn( digit test_inst, digit train_inst, bit6_t min_distances[K_CONST] )
-{
-  // Compute the difference using XOR
-  digit diff = test_inst ^ train_inst;
-
-  bit6_t dist = 0;
-  // Count the number of set bits
-  for ( int i = 0; i < 49; ++i ) { 
-    dist += diff[i];
-  }
-
-  // for the current digit, find the maximum of the current nearest neighbors
-  bit6_t maxIdx = 0;
-  bit6_t maxVal = 0;
-  for (int i = 0; i < K_CONST; i++) {
-    if (min_distances[i] > maxVal) {
-      maxIdx = i;
-      maxVal = min_distances[i];
-    }
-  }
-
-  // if the current value is less than the max, replace the max with this
-  if (dist < maxVal) {
-    min_distances[maxIdx] = dist;
-  }
+  // At this point, the caller-supplied output buffer will contain the filtered samples and the input buffer will contain the unmodified input samples.  
+  return count;   // Return the number of samples processed, the same as the number of input samples
 
 }
 
-
-//-----------------------------------------------------------------------
-// knn_vote function
-//-----------------------------------------------------------------------
-// Given 10xK minimum distance values, this function 
-// finds the actual K nearest neighbors and determines the
-// final output based on the most common digit represented by 
-// these nearest neighbors (i.e., a vote among KNNs). 
-//
-// @param[in] : knn_set - 10xK_CONST min distance values
-// @return : the recognized digit
-// 
-
-bit4_t knn_vote( bit6_t knn_set[10][K_CONST] )
+ void filter_filterBiquad( filter_executionState * pExecState )
 {
-  bit4_t minDigits[K_CONST];            // An array to hold the digits corresponding to minimal distance
-  bit6_t minDist[K_CONST];              // An array to hold the minimum distances
-  bit6_t maxIdx = 0;                    // A value to hold the index of the maximum distance in minDist
-  bit6_t maxVal = 50;                   // A value to hold the maximum distance in minDist
-  bit4_t bitTally[10] = {0,0,0,0,0,0,0,0,0,0};  // A tally array for all digits
+  // Read state variables
+  float w0, x0;
+  float w1 = pExecState->pState[0];
+  float w2 = pExecState->pState[1];
+
+  // Read coefficients into work registers
+  float b0 = *(pExecState->pCoefficients++);
+  float b1 = *(pExecState->pCoefficients++);
+  float b2 = *(pExecState->pCoefficients++);
+  float a1 = *(pExecState->pCoefficients++);
+  float a2 = *(pExecState->pCoefficients++);
+
+  // Read source and target pointers
+  float *pInput  = pExecState->pInput;
+  float *pOutput = pExecState->pOutput;
+  short count = pExecState->count;
+  float accumulator;
+
+  // Loop for all samples in the input buffer
+  while( count-- )
+  {
+    // Read input sample
+    x0 = *(pInput++);
   
-  //Initialize minimum Distance array
-  for (int i = 0; i < K_CONST; i++) { 
-    minDist[i] = 50;
+    // Run feedback part of filter
+    accumulator  = w2 * a2;
+    accumulator += w1 * a1;
+    accumulator += x0 ;
+
+    w0 = accumulator ;
+  
+    // Run feedforward part of filter
+    accumulator  = w0 * b0;
+    accumulator += w1 * b1;
+    accumulator += w2 * b2;
+
+    w2 = w1;    // Shuffle history buffer
+    w1 = w0;
+
+    // Write output
+    *(pOutput++) = accumulator ;
   }
 
-  // Process through knn_set, replacing the maximum value if a lesser one is found
-  for (int i = 0; i < 10; i++) {                    // for each digit set
-    for (int j = 0; j < K_CONST; j++) {             // for k values in digit set
-      if (knn_set[i][j] < maxVal) {                 // if value is less than max
-        minDigits[maxIdx] = i;                      // set the digit to this value
-        minDist[maxIdx] = knn_set[i][j];            // set distance value to this
-                  
-        // Find new max value and index so we know what to replace
-        maxVal =knn_set[i][j];
-        for (int k = 0; k < K_CONST; k++) {
-          if (minDist[k] >= maxVal) {
-            maxVal = minDist[k];
-            maxIdx = k;
-          }
-        }
-      }
-    }
-  }
+  // Write state variables
+  *(pExecState->pState++) = w1;
+  *(pExecState->pState++) = w2;
 
-  // Process through minDigits, tally up bits
-  // For example, if 9 is in minDigits, bitTally[9]
-  //     will be incremented
-  for (int i = 0; i < K_CONST; i++) {
-    bitTally[minDigits[i]]++;
-  }
-    
-  // Find the maximum tally and output the voting result
-  bit4_t bestGuess = 0;                         // The highest tallied number
-  bit4_t bestTally = 0;                         // The highest tally
-  bit4_t tiedArray[10] = {0,0,0,0,0,0,0,0,0,0}; // Keep track of tied digits with a flag
-  bit4_t numTies = 0;                           // Keep track of number of ties
-  bit4_t startDigit = 0;                        // Keep track of lowest-indexed tie digit
-
-  // Loop through digits, find the best tally
-  // If there are ties, set the flag, and add to numTies
-  for (int i = 0; i < 10; i++) {
-    // If there are no ties, clear out numTies, and set as bestGuess
-    if (bitTally[i] > bestTally) {
-      bestGuess = i;                      // Best guess is this digit
-      bestTally = bitTally[i];            // Set the best tally to this tally
-      numTies = 0;                        // Zero out number of ties for now
-      startDigit = i;                     // Lowest-indexed tie is this
-      tiedArray[i] = 1;                   // Flag the digit for future ties
-
-    // Otherwise, increment numTies and set tied digits flag
-    } else if (bitTally[i] == bestTally) {
-      tiedArray[i] = 1;                   // set the tie flag for this digit
-      numTies++;                          // add one to number of ties
-    }    
-  }
-    
-  // Handle ties
-  // If there's no ties, just return the best guess
-  if (numTies == 0) {
-      return bestGuess;
-  } else {
-
-    // If there are ties, use the sum of the digit's 
-    // best values to break the tie.
-    bit4_t minDigit = 10;
-    bit6_t minSumDist = 50;
-
-    // for each digit, check if the tie flag is set and 
-    // it's after the earliest digit with that count
-    for (int i = 0; i < 10; i++) {
-      if ((tiedArray[i] == 1) && (i >= startDigit)) {
-    
-        // if valid digit, sum all values of knn_set for this digit
-        bit6_t sum = 0;
-        for (int j = 0; j < K_CONST; j++) {
-          sum += knn_set[i][j];
-        }
-
-        // if this is the lowest sum, set it as such
-        if (sum < minSumDist) {
-          minSumDist = sum;
-          minDigit = i;
-        }
-      }
-    }
-  return minDigit;
-  }
 }
+
+
+
+ void filter_compareResult( float * pInput, float * pReference, int count, float maxThreshold, float msThreshold )
+{
+  float ms = 0, mx = 0, actual, delta;
+  printf( "int  float expected  delta\n" );
+  while( count-- )
+  {
+    actual = filter_outputToFloat( *pInput );
+    delta =  actual - *pReference;
+    printf( "%li  %f  %f  %f\n", (long)*(pInput), actual, *pReference, delta );
+    ++pInput;
+    ++pReference;
+
+    ms += delta * delta;
+    if( delta > mx ) mx = delta;
+    if( -delta > mx ) mx = -delta;
+  }
+
+  printf( "Maximum Error: %f. Threshold = %f. Ratio = %f, %s\n",      mx, maxThreshold,   mx / maxThreshold, mx < maxThreshold  ? "PASS" : "FAIL" );
+  printf( "Mean Squared Error: %f. Threshold = %f. Ratio = %f, %s\n",     ms, msThreshold,  ms / msThreshold,  ms < msThreshold   ? "PASS" : "FAIL" );
+
+}
+
+ int filter_filterInChunks( filterType * pThis, float * pInput, float * pOutput, int length )
+{
+  int processedLength = 0;
+  unsigned int chunkLength, outLength;
+  static long random = 0x6428734; // Use pseudo-random number generator to split input into small random length chunks.
+  while( length > 0 )
+  {
+    chunkLength = random & 0xf;                     // Choose random chunkLength from 0 - 15
+    if( chunkLength > length ) chunkLength = length;          // Limit chunk length to the number of remaining samples
+    outLength = filter_filterBlock( pThis,  pInput, pOutput, chunkLength );   // Filter the block and determine the number of returned samples
+    pOutput += outLength;                       // Update the output pointer
+    processedLength += outLength;                   // Update the total number of samples output
+    pInput += chunkLength;                        // Update the input pointer
+    length -= chunkLength;                        // Update the number of samples remaining
+    random = random + 0x834f4527;                   // Cycle the simple random number generator
+  }
+  return processedLength;                         // Return the number of samples processed
+
+}
+
+
+
