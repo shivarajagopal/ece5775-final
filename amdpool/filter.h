@@ -18,6 +18,23 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 #ifndef FILTER_H_ // Include guards
 #define FILTER_H_
 
+
+typedef struct
+{
+  float state[16];
+  float output;
+} filterType;
+
+typedef struct
+{
+  float *pInput;
+  float *pOutput;
+  float *pState;
+  float *pCoefficients;
+  short count;
+} filter_executionState;
+
+
 static const int filter_numStages = 4;
 static const int filter_coefficientLength = 20;
 extern float filter_coefficients[20];
@@ -30,22 +47,12 @@ extern float filter_multiSineOutput[126];
 extern float filter_overflowInput[63];
 extern float filter_overflowOutput[63];
 extern float filter_testOutput[127];
+extern void filter_destroy( filterType *pObject );
+extern void filter_reset( filterType * pThis );
+extern void filter_init( filterType * pThis );
+extern filterType *filter_create( void );
 
 
-typedef struct
-{
-	float state[16];
-	float output;
-} filterType;
-
-typedef struct
-{
-	float *pInput;
-	float *pOutput;
-	float *pState;
-	float *pCoefficients;
-	short count;
-} filter_executionState;
 
 
 //filterType *filter_create( void );
@@ -213,31 +220,7 @@ float filter_overflowOutput[63] =
   -0.71544111, -0.31345740, 0.17805620, 0.71312940, 1.20060131, 1.53995323, 1.66998342
 };
 
-void filter_destroy( filterType *pObject )
-{
-	free( pObject );
-}
 
-
-
- void filter_reset( filterType * pThis )
-{
-	memset( &pThis->state, 0, sizeof( pThis->state ) ); // Reset state to 0
-	pThis->output = 0;									// Reset output
-
-}
-
- void filter_init( filterType * pThis )
-{
-	filter_reset( pThis );
-
-}
-filterType *filter_create( void )
-{
-	filterType *result = (filterType *)malloc( sizeof( filterType ) );	// Allocate memory for the object
-	filter_init( result );											// Initialize it
-	return result;																// Return the result
-}
 
 #endif // FILTER_H_
 	
