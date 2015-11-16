@@ -26,7 +26,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 #include <string.h> // For memset
 #include <stdio.h>    // For test case I/Os
 
-float filter_coefficients[20] = 
+float filter1_coefficients[20] = // 0.0001 - 0.1
 {
 // Scaled for floating point
 
@@ -34,6 +34,11 @@ float filter_coefficients[20] =
     0.015625, -0.02437224075728725, 0.015625, 1.9997093064879747, -0.9997097877836774,// b0, b1, b2, a1, a2
     64, -127.9999962937383, 64.00000000000001, 0.8304352310742761, -0.26019362660662,// b0, b1, b2, a1, a2
     32, -63.99998921392848, 31.999999999999996, 1.5101728467314859, -0.7964750822913285// b0, b1, b2, a1, a2
+
+};
+
+float filter2_coefficients[20] =
+{
 
 };
 
@@ -190,7 +195,7 @@ filterType *filter_create( void )
   return result;                                // Return the result
 }
 
- int filter_filterBlock( filterType * pThis, float * pInput, float * pOutput, unsigned int count )
+ int filter_filterBlock( filterType * pThis, float * pInput, float * pOutput, unsigned int count, float * coeffs )
 {
   filter_executionState executionState;          // The executionState structure holds call data, minimizing stack reads and writes 
   if( ! count ) return 0;                         // If there are no input samples, return immediately
@@ -198,7 +203,7 @@ filterType *filter_create( void )
   executionState.pOutput = pOutput;               // - pInput and pOutput can be equal, allowing reuse of the same memory.
   executionState.count = count;                   // The number of samples to be processed
   executionState.pState = pThis->state;                   // Pointer to the biquad's internal state and coefficients. 
-  executionState.pCoefficients = filter_coefficients;    // Each call to filterBiquad() will advance pState and pCoefficients to the next biquad
+  executionState.pCoefficients = coeffs;    // Each call to filterBiquad() will advance pState and pCoefficients to the next biquad
 
   // The 1st call to filter1_filterBiquad() reads from the caller supplied input buffer and writes to the output buffer.
   // The remaining calls to filterBiquad() recycle the same output buffer, so that multiple intermediate buffers are not required.
@@ -273,12 +278,12 @@ filterType *filter_create( void )
  void filter_compareResult( float * pInput, float * pReference, int count, float maxThreshold, float msThreshold )
 {
   float ms = 0, mx = 0, actual, delta;
-  printf( "int  float expected  delta\n" );
+  //printf( "int  float expected  delta\n" );
   while( count-- )
   {
     actual = filter_outputToFloat( *pInput );
     delta =  actual - *pReference;
-    printf( "%li  %f  %f  %f\n", (long)*(pInput), actual, *pReference, delta );
+    //printf( "%li  %f  %f  %f\n", (long)*(pInput), actual, *pReference, delta );
     ++pInput;
     ++pReference;
 
@@ -301,7 +306,7 @@ filterType *filter_create( void )
   {
     chunkLength = random & 0xf;                     // Choose random chunkLength from 0 - 15
     if( chunkLength > length ) chunkLength = length;          // Limit chunk length to the number of remaining samples
-    outLength = filter_filterBlock( pThis,  pInput, pOutput, chunkLength );   // Filter the block and determine the number of returned samples
+    outLength = filter_filterBlock( pThis,  pInput, pOutput, chunkLength, filter1_coefficients );   // Filter the block and determine the number of returned samples
     pOutput += outLength;                       // Update the output pointer
     processedLength += outLength;                   // Update the total number of samples output
     pInput += chunkLength;                        // Update the input pointer
