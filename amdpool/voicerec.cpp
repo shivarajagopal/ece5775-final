@@ -1,172 +1,232 @@
-//==========================================================================
-//digitrec.cpp
-//==========================================================================
-// @brief: A k-nearest-neighbor implementation for digit recognition (k=1)
 
 
-/******************************* SOURCE LICENSE *********************************
-Copyright (c) 2013 MicroModeler.
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include "constArrays.h"
+#include "testSound.h"
 
-A non-exclusive, nontransferable, perpetual, royalty-free license is granted to the Licensee to 
-use the following Information for academic, non-profit, or government-sponsored research purposes.
-Use of the following Information under this License is restricted to NON-COMMERCIAL PURPOSES ONLY.
-Commercial use of the following Information requires a separately executed written license agreement.
+#define M_PI 3.14159265358979323846
+#define LINESIZE 256
 
-This Information is distributed WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#define MAX_COEFF 0.947543636291F
+#define MIN_COEFF 0.392485425092F
 
-******************************* END OF LICENSE *********************************/
+#define NUM_BANKS 26
 
-// A commercial license for MicroModeler DSP can be obtained at http://www.micromodeler.com/launch.jsp
+void FFT( double *c, int N, int isign );
 
-#include "filter.h"
-
-
-#include <stdlib.h> // For malloc/free
-#include <string.h> // For memset
-#include <stdio.h>    // For test case I/Os
-#include "samples.h"
-
-float filter1_coefficients[20] = // 0.0001 - 0.1
+/****************************************************
+http://www.machinedlearnings.com/2011/06/fast-approximate-logarithm-exponential.html
+*****************************************************/
+static inline float 
+fastlog2 (float x)
 {
-// Scaled for floating point
+  union { float f; uint32_t i; } vx = { x };
+  union { uint32_t i; float f; } mx = { (vx.i & 0x007FFFFF) | 0x3f000000 };
+  float y = vx.i;
+  y *= 1.1920928955078125e-7f;
 
-    0.005215491862785155, -0.0017001336344526702, 0.005215491862785155, 1.9992971668280997, -0.9992973695085173,// b0, b1, b2, a1, a2
-    0.015625, -0.02437224075728725, 0.015625, 1.9997093064879747, -0.9997097877836774,// b0, b1, b2, a1, a2
-    64, -127.9999962937383, 64.00000000000001, 0.8304352310742761, -0.26019362660662,// b0, b1, b2, a1, a2
-    32, -63.99998921392848, 31.999999999999996, 1.5101728467314859, -0.7964750822913285// b0, b1, b2, a1, a2
-
-};
-
-float filter2_coefficients[20] =
-{
-
-};
-
-
-
-
- int filter_filterBlock( filterType * pThis, float * pInput, float * pOutput, unsigned int count, float * coeffs )
-{
-  filter_executionState executionState;          // The executionState structure holds call data, minimizing stack reads and writes 
-  if( ! count ) return 0;                         // If there are no input samples, return immediately
-  executionState.pInput = pInput;                 // Pointers to the input and output buffers that each call to filterBiquad() will use
-  executionState.pOutput = pOutput;               // - pInput and pOutput can be equal, allowing reuse of the same memory.
-  executionState.count = count;                   // The number of samples to be processed
-  executionState.pState = pThis->state;                   // Pointer to the biquad's internal state and coefficients. 
-  executionState.pCoefficients = coeffs;    // Each call to filterBiquad() will advance pState and pCoefficients to the next biquad
-
-  // The 1st call to filter1_filterBiquad() reads from the caller supplied input buffer and writes to the output buffer.
-  // The remaining calls to filterBiquad() recycle the same output buffer, so that multiple intermediate buffers are not required.
-
-  filter_filterBiquad( &executionState );   // Run biquad #0
-  executionState.pInput = executionState.pOutput;         // The remaining biquads will now re-use the same output buffer.
-
-  filter_filterBiquad( &executionState );   // Run biquad #1
-
-  filter_filterBiquad( &executionState );   // Run biquad #2
-
-  filter_filterBiquad( &executionState );   // Run biquad #3
-
-  // At this point, the caller-supplied output buffer will contain the filtered samples and the input buffer will contain the unmodified input samples.  
-  return count;   // Return the number of samples processed, the same as the number of input samples
-
+  return y - 124.22551499f
+           - 1.498030302f * mx.f 
+           - 1.72587999f / (0.3520887068f + mx.f);
 }
 
- void filter_filterBiquad( filter_executionState * pExecState )
+static inline float
+fastlog (float x)
 {
-  // Read state variables
-  float w0, x0;
-  float w1 = pExecState->pState[0];
-  float w2 = pExecState->pState[1];
+  return 0.69314718f * fastlog2 (x);
+}
 
-  // Read coefficients into work registers
-  float b0 = *(pExecState->pCoefficients++);
-  float b1 = *(pExecState->pCoefficients++);
-  float b2 = *(pExecState->pCoefficients++);
-  float a1 = *(pExecState->pCoefficients++);
-  float a2 = *(pExecState->pCoefficients++);
+/****************************************************
+https://unix4lyfe.org/dct-1d/
+****************************************************/
 
-  // Read source and target pointers
-  float *pInput  = pExecState->pInput;
-  float *pOutput = pExecState->pOutput;
-  short count = pExecState->count;
-  float accumulator;
+void dct_ii(int N, double *x, double *X) {
+  for (int k = 0; k < N; ++k) {
+    double sum = 0.;
+    double s = (k == 0) ? sqrt(.5) : 1.;
+    for (int n = 0; n < N; ++n) {
+      sum += s * x[n] * cos(M_PI * (n + .5) * k / N);
+    }
+    X[k] = sum * sqrt(2. / N);
+  }
+}
 
-  // Loop for all samples in the input buffer
-  while( count-- )
+int main( int argc, char *argv[] )
+{
+  int i=0, sp=0, np=0;
+  //double *c, *d;
+
+  if( argc < 3 )
   {
-    // Read input sample
-    x0 = *(pInput++);
+    printf("\n fft takes the FFT of an input array, and outputs\n");
+    printf(" an complex fft data.\n");
+    printf(" All lines at top of input file starting with # are ignored.\n");
+    printf("\n Usage: fft sp np outfile\n");
+    printf("  sp = starting point (0 based)\n");
+    printf("  np = number of points to fft\n");
+    printf("  outfile = output file name\n");
+    return(-1);
+  }
+
+  sp = atoi( argv[1] );
+  np = atoi( argv[2] );
+
+
+  double *c = (double *)malloc( 2 * np * sizeof(double) );
+  double *d = (double *)malloc( np * sizeof(double) );
+
+  //printf("\ninput:\n");
+  for( i = 0; i < np; ++i )
+  {
+    c[2*i] = testSound[sp+i];
+    c[2*i+1] = 0.0;
+    //printf("%lf\t%lf\n", c[2*i], c[2*i+1]);
+  }
+
+  FFT( c, np, 1 );
+
+  //printf("\noutput amplitude:\n");
+  for( i = 0; i < np; ++i )
+  {
+    /*double absRe = (c[2*i] < 0) ? -c[2*i] : c[2*i];
+    double absIm = (c[2*i+1] < 0) ? -c[2*i+1] : c[2*i+1];
+    double max = fmax(absRe, absIm);
+    double min = fmin(absRe, absIm);
+    d[i] = ((MAX_COEFF*max) + (MIN_COEFF*min))/256.0;*/
+    d[i] = (c[2*i]*c[2*i] + c[2*i+1]*c[2*i+1])/256.0;
+    //printf("%d: %f\n", i, d[i]);
+  }
+
+  free( c );
+
+  c = (double *)calloc( (NUM_BANKS) , sizeof(double));
+
+  int mellIdx = 0;
+  //printf("Starting on Mell Index 0, which is %d\n", mell[mellIdx]);
+  for ( i = 0; i < np; ++i ) {
+    if ( i==mell[mellIdx] ) {
+      //printf("Summing d index %d onto c[%d], (%lf)\n", i, mellIdx, d[mell[mellIdx]]);
+      c[ 0 ] += d[ mell[mellIdx] ];
+    }
+
+    if (( i > mell[ mellIdx ] ) && ( i <= mell[ mellIdx+1 ] )) {
+      //printf("Summing d index %d onto c[%d], (%lf)\n", i, mellIdx, d[i]);
+      c[ mellIdx ] += d[i];
+    }
+
+    if (i == mell[ mellIdx+1 ]) {
+      mellIdx++;
+    } 
+  }
+
+  for (i=0 ; i < NUM_BANKS ; i++ ) {
+    if (c[i] <= 0.0) {
+      c[i] = 0.0;
+    } else {
+      c[i] = fastlog(c[i]);
+    }
+  }
   
-    // Run feedback part of filter
-    accumulator  = w2 * a2;
-    accumulator += w1 * a1;
-    accumulator += x0 ;
-
-    w0 = accumulator ;
+  for ( i = 0; i < NUM_BANKS ; ++i) {
+    printf("%lf\n", c[i]);
+  }
   
-    // Run feedforward part of filter
-    accumulator  = w0 * b0;
-    accumulator += w1 * b1;
-    accumulator += w2 * b2;
+  free(d);
+  d= (double *)calloc( NUM_BANKS , sizeof(double));
+  dct_ii(NUM_BANKS, c, d);
 
-    w2 = w1;    // Shuffle history buffer
-    w1 = w0;
-
-    // Write output
-    *(pOutput++) = accumulator ;
+  printf("\nDCT Results:\n");
+  for ( i = 0; i < NUM_BANKS ; ++i) {
+    printf("%lf\n", d[i]);
   }
-
-  // Write state variables
-  *(pExecState->pState++) = w1;
-  *(pExecState->pState++) = w2;
-
 }
 
+/*
+ *                            COPYRIGHT
+ *
+ *  fft - Takes the FFT of a data (time domain) file, and outputs to file
+ *   the complex FFT data.
+ *
+ *  Copyright (C) 2003, 2004, 2005 Exstrom Laboratories LLC
+ */
+/**********************************************************************
+  FFT - calculates the discrete fourier transform of an array of double
+  precision complex numbers using the FFT algorithm.
 
+  c = pointer to an array of size 2*N that contains the real and
+    imaginary parts of the complex numbers. The even numbered indices contain
+    the real parts and the odd numbered indices contain the imaginary parts.
+      c[2*k] = real part of kth data point.
+      c[2*k+1] = imaginary part of kth data point.
+  N = number of data points. The array, c, should contain 2*N elements
+  isign = 1 for forward FFT, -1 for inverse FFT.
+*/
 
- void filter_compareResult( float * pInput, float * pReference, int count, float maxThreshold, float msThreshold )
+void FFT( double *c, int N, int isign )
 {
-  float ms = 0, mx = 0, actual, delta;
-  //printf( "int  float expected  delta\n" );
-  while( count-- )
-  {
-    actual = filter_outputToFloat( *pInput );
-    delta =  actual - *pReference;
-    //printf( "%li  %f  %f  %f\n", (long)*(pInput), actual, *pReference, delta );
-    ++pInput;
-    ++pReference;
+  int n, n2, nb, j, k, i0, i1;
+  double wr, wi, wrk, wik;
+  double d, dr, di, d0r, d0i, d1r, d1i;
+  double *cp;
 
-    ms += delta * delta;
-    if( delta > mx ) mx = delta;
-    if( -delta > mx ) mx = -delta;
+  j = 0;
+  n2 = N / 2;
+  for( k = 0; k < N; ++k )
+  {
+    if( k < j )
+    {
+      i0 = k << 1;
+      i1 = j << 1;
+      dr = c[i0];
+      di = c[i0+1];
+      c[i0] = c[i1];
+      c[i0+1] = c[i1+1];
+      c[i1] = dr;
+      c[i1+1] = di;
+    }
+    n = N >> 1;
+    while( (n >= 2) && (j >= n) )
+    {
+      j -= n;
+    n = n >> 1;
+    }
+    j += n;
   }
 
-  printf( "Maximum Error: %f. Threshold = %f. Ratio = %f, %s\n",      mx, maxThreshold,   mx / maxThreshold, mx < maxThreshold  ? "PASS" : "FAIL" );
-  printf( "Mean Squared Error: %f. Threshold = %f. Ratio = %f, %s\n",     ms, msThreshold,  ms / msThreshold,  ms < msThreshold   ? "PASS" : "FAIL" );
-
-}
-
- int filter_filterInChunks( filterType * pThis, float * pInput, float * pOutput, int length )
-{
-  int processedLength = 0;
-  unsigned int chunkLength, outLength;
-  static long random = 0x6428734; // Use pseudo-random number generator to split input into small random length chunks.
-  while( length > 0 )
+  for( n = 2; n <= N; n = n << 1 )
   {
-    chunkLength = random & 0xf;                     // Choose random chunkLength from 0 - 15
-    if( chunkLength > length ) chunkLength = length;          // Limit chunk length to the number of remaining samples
-    outLength = filter_filterBlock( pThis,  pInput, pOutput, chunkLength, filter1_coefficients );   // Filter the block and determine the number of returned samples
-    pOutput += outLength;                       // Update the output pointer
-    processedLength += outLength;                   // Update the total number of samples output
-    pInput += chunkLength;                        // Update the input pointer
-    length -= chunkLength;                        // Update the number of samples remaining
-    random = random + 0x834f4527;                   // Cycle the simple random number generator
+    wr = cosVec[n-1];
+    wi = sinVec[n-1];
+    if( isign == 1 ) wi = -wi;
+    cp = c;
+    nb = N / n;
+    n2 = n >> 1;
+    for( j = 0; j < nb; ++j )
+    {
+      wrk = 1.0;
+      wik = 0.0;
+      for( k = 0; k < n2; ++k )
+      {
+        i0 = k << 1;
+        i1 = i0 + n;
+        d0r = cp[i0];
+        d0i = cp[i0+1];
+        d1r = cp[i1];
+        d1i = cp[i1+1];
+        dr = wrk * d1r - wik * d1i;
+        di = wrk * d1i + wik * d1r;
+        cp[i0] = d0r + dr;
+        cp[i0+1] = d0i + di;
+        cp[i1] = d0r - dr;
+        cp[i1+1] = d0i - di;
+        d = wrk;
+        wrk = wr * wrk - wi * wik;
+        wik = wr * wik + wi * d;
+      }
+      cp += n << 1;
+    }
   }
-  return processedLength;                         // Return the number of samples processed
-
 }
-
-
-
