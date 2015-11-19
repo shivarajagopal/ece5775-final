@@ -52,44 +52,41 @@ int main()
   int num_test_insts = 0;
   bit32_t interpreted_digit;
 
-  filter_runTests();
+  int i = 0, j=0, sp=0, np = 0, stride = 0;
+
+  if( argc < 2 )
+  {
+    printf("\n fft takes the FFT of an input array, and outputs\n");
+    printf(" an complex fft data.\n");
+    printf(" All lines at top of input file starting with # are ignored.\n");
+    printf("\n Usage: fft sp np outfile\n");
+    printf("  sp = starting point (0 based)\n");
+    printf("  np = number of points to fft\n");
+    return(-1);
+  }
+  sp = 0;
+  np = atoi( argv[1] );
+  stride = np/2;
+  int num_results = (8000/stride);
+  double **results;
+  results = (double **) malloc(num_results * sizeof(double*)); 
+  for (i=0; i < num_results; i++) {
+    results[i] = (double *) malloc(NUM_BANKS * sizeof(double));
+  }
+  int index = 0;
+  for (i = 0; i+np <8000 ; i += stride) {
+    processChunk(i, np, results[index]);
+    sp += stride;  
+    index++;
+  }
+  printf("\nDCT Results:\n");
+  for ( i = 0; i < num_results ; ++i) {
+    printf("\niteration %d\n", i);
+    for ( j = 0; j < NUM_BANKS ; ++j ) {
+      printf("%lf\n", results[i][j]);
+    }
+  }
 
   return 0;
 }
 
- void filter_runTests(  void  )
-{
-  float actual;
-  int samplesProcessed;
-
-  filterType *filter = filter_create(); // Create an instance of the filter
-
-  printf( "\n\nRunning tests for: filter\n" );
-
-  printf( "\nimpulse test\n" );
-  filter_reset( filter );
-  samplesProcessed = filter_filterInChunks( filter, filter_impulseInput, filter_testOutput, 63 );   // Filter the input test signal
-  filter_compareResult( filter_testOutput, filter_impulseOutput, samplesProcessed, 0.000001, 0.000001 );  // Compare with the pre-computed output signal
-
-  printf( "\nnoise test\n" );
-  filter_reset( filter );
-  samplesProcessed = filter_filterInChunks( filter, filter_noiseInput, filter_testOutput, 127 );    // Filter the input test signal
-  filter_compareResult( filter_testOutput, filter_noiseOutput, samplesProcessed, 0.000001, 0.000001 );  // Compare with the pre-computed output signal
-
-  printf( "\nmultiSine test\n" );
-  filter_reset( filter );
-  samplesProcessed = filter_filterInChunks( filter, filter_multiSineInput, filter_testOutput, 126 );    // Filter the input test signal
-  filter_compareResult( filter_testOutput, filter_multiSineOutput, samplesProcessed, 0.000001, 0.000001 );  // Compare with the pre-computed output signal
-
-  printf( "\noverflow test\n" );
-  filter_reset( filter );
-  samplesProcessed = filter_filterInChunks( filter, filter_overflowInput, filter_testOutput, 63 );    // Filter the input test signal
-  filter_compareResult( filter_testOutput, filter_overflowOutput, samplesProcessed, 0.000001, 0.000001 ); // Compare with the pre-computed output signal
-  actual = filter_outputToFloat( filter_testOutput[62] );
-
-  printf( "Overflow test = (%f). Expected = 1.670. ratio=%f. %s\n",
-    actual, actual / 1.670f, actual / 1.670f > 0.95f && actual / 1.670f < 1.05f ? "PASS":"FAIL" );
-
-  filter_destroy( filter );
-
-}

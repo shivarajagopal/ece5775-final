@@ -203,7 +203,7 @@ int processChunk( int sp, int np, double *ret )
   
 }
 
-int main( int argc, char *argv[]) {
+/*int main( int argc, char *argv[]) {
   int i = 0, j=0, sp=0, np = 0, stride = 0;
 
   if( argc < 2 )
@@ -217,7 +217,7 @@ int main( int argc, char *argv[]) {
     return(-1);
   }
   sp = 0;
-  np = atoi( argv[2] );
+  np = atoi( argv[1] );
   stride = np/2;
   int num_results = (8000/stride);
   double **results;
@@ -239,4 +239,4 @@ int main( int argc, char *argv[]) {
     }
   }
   return 0;
-}
+}*/

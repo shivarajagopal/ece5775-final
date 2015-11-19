@@ -16,10 +16,10 @@ CFLAGS = -g -I${VHLS_INC}
 
 all: csim
 
-csim: $(TARGET).cpp $(TARGET)_test.cpp filter.cpp
+csim: $(TARGET).cpp $(TARGET)_test.cpp
 	@echo "Compiling & simulating $(TARGET) on amdpool ..."
 	g++ ${CFLAGS} $^ -o $(TARGET)
-	./$(TARGET)
+	./$(TARGET) 256
 
 bitstream: 
 	@echo "Synthesizing $(TARGET) and creating bitstream on amdpool ..."
