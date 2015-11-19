@@ -46,101 +46,11 @@ https://unix4lyfe.org/dct-1d/
 void dct_ii(int N, double *x, double *X) {
   for (int k = 0; k < N; ++k) {
     double sum = 0.;
-    double s = (k == 0) ? sqrt(.5) : 1.;
+    double s = (k == 0) ? 0.707106781186548 : 1.;
     for (int n = 0; n < N; ++n) {
-      sum += s * x[n] * cos(M_PI * (n + .5) * k / N);
+      sum += s * x[n] * dctMatrix[k][n];
     }
-    X[k] = sum * sqrt(2. / N);
-  }
-}
-
-int main( int argc, char *argv[] )
-{
-  int i=0, sp=0, np=0;
-  //double *c, *d;
-
-  if( argc < 3 )
-  {
-    printf("\n fft takes the FFT of an input array, and outputs\n");
-    printf(" an complex fft data.\n");
-    printf(" All lines at top of input file starting with # are ignored.\n");
-    printf("\n Usage: fft sp np outfile\n");
-    printf("  sp = starting point (0 based)\n");
-    printf("  np = number of points to fft\n");
-    printf("  outfile = output file name\n");
-    return(-1);
-  }
-
-  sp = atoi( argv[1] );
-  np = atoi( argv[2] );
-
-
-  double *c = (double *)malloc( 2 * np * sizeof(double) );
-  double *d = (double *)malloc( np * sizeof(double) );
-
-  //printf("\ninput:\n");
-  for( i = 0; i < np; ++i )
-  {
-    c[2*i] = testSound[sp+i];
-    c[2*i+1] = 0.0;
-    //printf("%lf\t%lf\n", c[2*i], c[2*i+1]);
-  }
-
-  FFT( c, np, 1 );
-
-  //printf("\noutput amplitude:\n");
-  for( i = 0; i < np; ++i )
-  {
-    /*double absRe = (c[2*i] < 0) ? -c[2*i] : c[2*i];
-    double absIm = (c[2*i+1] < 0) ? -c[2*i+1] : c[2*i+1];
-    double max = fmax(absRe, absIm);
-    double min = fmin(absRe, absIm);
-    d[i] = ((MAX_COEFF*max) + (MIN_COEFF*min))/256.0;*/
-    d[i] = (c[2*i]*c[2*i] + c[2*i+1]*c[2*i+1])/256.0;
-    //printf("%d: %f\n", i, d[i]);
-  }
-
-  free( c );
-
-  c = (double *)calloc( (NUM_BANKS) , sizeof(double));
-
-  int mellIdx = 0;
-  //printf("Starting on Mell Index 0, which is %d\n", mell[mellIdx]);
-  for ( i = 0; i < np; ++i ) {
-    if ( i==mell[mellIdx] ) {
-      //printf("Summing d index %d onto c[%d], (%lf)\n", i, mellIdx, d[mell[mellIdx]]);
-      c[ 0 ] += d[ mell[mellIdx] ];
-    }
-
-    if (( i > mell[ mellIdx ] ) && ( i <= mell[ mellIdx+1 ] )) {
-      //printf("Summing d index %d onto c[%d], (%lf)\n", i, mellIdx, d[i]);
-      c[ mellIdx ] += d[i];
-    }
-
-    if (i == mell[ mellIdx+1 ]) {
-      mellIdx++;
-    } 
-  }
-
-  for (i=0 ; i < NUM_BANKS ; i++ ) {
-    if (c[i] <= 0.0) {
-      c[i] = 0.0;
-    } else {
-      c[i] = fastlog(c[i]);
-    }
-  }
-  
-  for ( i = 0; i < NUM_BANKS ; ++i) {
-    printf("%lf\n", c[i]);
-  }
-  
-  free(d);
-  d= (double *)calloc( NUM_BANKS , sizeof(double));
-  dct_ii(NUM_BANKS, c, d);
-
-  printf("\nDCT Results:\n");
-  for ( i = 0; i < NUM_BANKS ; ++i) {
-    printf("%lf\n", d[i]);
+    X[k] = sum * 0.277350098112615;
   }
 }
 
@@ -229,4 +139,104 @@ void FFT( double *c, int N, int isign )
       cp += n << 1;
     }
   }
+}
+
+
+
+int processChunk( int sp, int np, double *ret )
+{
+  int i = 0;
+
+  double *c = (double *)malloc( 2 * np * sizeof(double) );
+  double *d = (double *)malloc( np * sizeof(double) );
+
+  //printf("\ninput:\n");
+  for( i = 0; i < np; ++i )
+  {
+    c[2*i] = testSound[sp+i];
+    c[2*i+1] = 0.0;
+  }
+
+  FFT( c, np, 1 );
+
+  for( i = 0; i < np; ++i )
+  {
+    d[i] = (c[2*i]*c[2*i] + c[2*i+1]*c[2*i+1])/256.0;
+  }
+
+  free( c );
+
+  c = (double *)calloc( (NUM_BANKS) , sizeof(double));
+
+  int mellIdx = 0;
+  for ( i = 0; i < np; ++i ) {
+    if ( i==mell[mellIdx] ) {
+      c[ 0 ] += d[ mell[mellIdx] ];
+    }
+
+    if (( i > mell[ mellIdx ] ) && ( i <= mell[ mellIdx+1 ] )) {
+      c[ mellIdx ] += d[i];
+    }
+
+    if (i == mell[ mellIdx+1 ]) {
+      mellIdx++;
+    } 
+  }
+
+  for (i=0 ; i < NUM_BANKS ; i++ ) {
+    if (c[i] <= 0.0) {
+      c[i] = 0.0;
+    } else {
+      c[i] = fastlog(c[i]);
+    }
+  }
+
+  free(d);
+
+  dct_ii(NUM_BANKS, c, ret);
+
+  /*printf("\nDCT Results:\n");
+  for ( i = 0; i < NUM_BANKS ; ++i) {
+    printf("%lf\n", ret[i]);
+  }*/
+  
+  
+}
+
+int main( int argc, char *argv[]) {
+  int i = 0, j=0, sp=0, np = 0, stride = 0;
+
+  if( argc < 2 )
+  {
+    printf("\n fft takes the FFT of an input array, and outputs\n");
+    printf(" an complex fft data.\n");
+    printf(" All lines at top of input file starting with # are ignored.\n");
+    printf("\n Usage: fft sp np outfile\n");
+    printf("  sp = starting point (0 based)\n");
+    printf("  np = number of points to fft\n");
+    return(-1);
+  }
+  sp = 0;
+  np = atoi( argv[2] );
+  stride = np/2;
+  int num_results = (8000/stride);
+  double **results;
+  results = (double **) malloc(num_results * sizeof(double*)); 
+  for (i=0; i < num_results; i++) {
+    results[i] = (double *) malloc(NUM_BANKS * sizeof(double));
+  }
+  int index = 0;
+  for (i = 0; i+np <8000 ; i += stride) {
+    processChunk(i, np, results[index]);
+    sp += stride;  
+    index++;
+  }
+  printf("\nDCT Results:\n");
+  for ( i = 0; i < num_results ; ++i) {
+    printf("\niteration %d\n", i);
+    for ( j = 0; j < NUM_BANKS ; ++j ) {
+      printf("%lf\n", results[i][j]);
+    }
+  }
+  return 0;
 }
