@@ -71,22 +71,21 @@ int main(int argc, char *argv[])
   double **results;
   results = (double **) malloc(num_results * sizeof(double*)); 
   for (i=0; i < num_results; i++) {
-    results[i] = (double *) malloc(NUM_BANKS * sizeof(double));
+    results[i] = (double *) malloc((NUM_BANKS/2)+1 * sizeof(double));
   }
+
+  double *outSound = (double *)calloc( 8000, sizeof(double));
+
+  preprocessSound(inSound, 16000, outSound, 8000);
+
   int index = 0;
   for (i = 0; i+np <8000 ; i += stride) {
-    processChunk(i, np, results[index]);
+    processChunk(i, np, results[index], outSound);
     sp += stride;  
     index++;
   }
-  printf("\nDCT Results:\n");
-  for ( i = 0; i < num_results ; ++i) {
-    printf("\niteration %d\n", i);
-    for ( j = 0; j < NUM_BANKS ; ++j ) {
-      printf("%lf\n", results[i][j]);
-    }
-  }
-
+  
+  double result = getDistance(results, test, num_results, (NUM_BANKS/2)+1);
   return 0;
 }
 

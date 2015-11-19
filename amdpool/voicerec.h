@@ -35,4 +35,7 @@ bit4_t knn_vote( bit6_t min_distances[10][K_CONST] );
 
 int processChunk( int sp, int np, double *ret );
 
+void preprocessSound(double *inSound, int inSize, double *outSound, int outSize);
+
+double getDistance(double **values, double **test, int rows, int cols)
 #endif
