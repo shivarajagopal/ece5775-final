@@ -29,7 +29,7 @@ float filter_testOutput[127];
 //------------------------------------------------------------------------
 // Digitrec testbench
 //------------------------------------------------------------------------
-int main() 
+int main(int argc, char *argv[]) 
 {
   // Output file that saves the test bench results
   std::ofstream outfile;
