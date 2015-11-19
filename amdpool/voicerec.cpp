@@ -41,11 +41,24 @@ fastlog (float x)
 }
 
 /****************************************************
+http://betterexplained.com/articles/understanding-quakes-fast-inverse-square-root/
+****************************************************/
+
+float fastSqrt(float x){
+    float xhalf = 0.5f * x;
+    int i = *(int*)&x;            // store floating-point bits in integer
+    i = 0x5f3759df - (i >> 1);    // initial guess for Newton's method
+    x = *(float*)&i;              // convert new bits into float
+    x = x*(1.5f - xhalf*x*x);     // One round of Newton's method
+    return (1/x);
+}
+
+/****************************************************
 https://unix4lyfe.org/dct-1d/
 ****************************************************/
 
 void dct_ii(int N, double *x, double *X) {
-  for (int k = 0; k < N; ++k) {
+  for (int k = 0; k < (N/2)+1 ; ++k) {
     double sum = 0.;
     double s = (k == 0) ? 0.707106781186548 : 1.;
     for (int n = 0; n < N; ++n) {
@@ -144,7 +157,7 @@ void FFT( double *c, int N, int isign )
 
 
 
-int processChunk( int sp, int np, double *ret )
+int processChunk( int sp, int np, double *ret , double *inSound)
 {
   int i = 0;
 
@@ -154,7 +167,7 @@ int processChunk( int sp, int np, double *ret )
   //printf("\ninput:\n");
   for( i = 0; i < np; ++i )
   {
-    c[2*i] = testSound[sp+i];
+    c[2*i] = inSound[sp+i];
     c[2*i+1] = 0.0;
   }
 
@@ -194,50 +207,82 @@ int processChunk( int sp, int np, double *ret )
 
   free(d);
 
+  // Calculate a DCT and only keep the first (NUM_BANKS/2) +1 coeffs
   dct_ii(NUM_BANKS, c, ret);
-
-  /*printf("\nDCT Results:\n");
-  for ( i = 0; i < NUM_BANKS ; ++i) {
+/*
+  printf("\nDCT Results:\n");
+  for ( i = 0; i < (NUM_BANKS/2)+1 ; ++i) {
     printf("%lf\n", ret[i]);
   }*/
-  
-  
 }
 
-/*int main( int argc, char *argv[]) {
-  int i = 0, j=0, sp=0, np = 0, stride = 0;
-
-  if( argc < 2 )
-  {
-    printf("\n fft takes the FFT of an input array, and outputs\n");
-    printf(" an complex fft data.\n");
-    printf(" All lines at top of input file starting with # are ignored.\n");
-    printf("\n Usage: fft sp np outfile\n");
-    printf("  sp = starting point (0 based)\n");
-    printf("  np = number of points to fft\n");
-    return(-1);
-  }
-  sp = 0;
-  np = atoi( argv[1] );
-  stride = np/2;
-  int num_results = (8000/stride);
-  double **results;
-  results = (double **) malloc(num_results * sizeof(double*)); 
-  for (i=0; i < num_results; i++) {
-    results[i] = (double *) malloc(NUM_BANKS * sizeof(double));
-  }
-  int index = 0;
-  for (i = 0; i+np <8000 ; i += stride) {
-    processChunk(i, np, results[index]);
-    sp += stride;  
-    index++;
-  }
-  printf("\nDCT Results:\n");
-  for ( i = 0; i < num_results ; ++i) {
-    printf("\niteration %d\n", i);
-    for ( j = 0; j < NUM_BANKS ; ++j ) {
-      printf("%lf\n", results[i][j]);
+void preprocessSound(double *inSound, int inSize, double *outSound, int outSize) {
+  int i = 0;
+  int first = 0;
+  int last = 0;
+  
+  for (i = 0 ; i < inSize ; i++ ) {
+    if (inSound[i] > 0.15) {
+      first = i;
+      break;
     }
   }
-  return 0;
-}*/
+
+  for (i = inSize-1 ; i >= 0 ; i--) {
+    if (inSound[i] > 0.15) {
+      last = i;
+      break;
+    }
+  }
+  int numThreshold = 200;
+  double ampThreshold = 0.15;
+  int markBegin = 0;
+  int count = 0;
+  int deleteFlag = 0;
+  int j = 0;
+
+  for ( i = first ; i <= last ; i++ ) {
+    if (markBegin == 0) {
+      if ( fabs(inSound[i]) < ampThreshold ) {
+        markBegin = i;
+      }
+    } 
+    else {
+      if ( fabs(inSound[i]) < ampThreshold ) {
+        count++;
+        if (count == numThreshold) {
+          deleteFlag = 1;
+        }
+      }
+      else {
+        if (deleteFlag == 1) {
+          for ( j = markBegin ; j < i ; j++ ) {
+            inSound[j] = 0;
+          }
+        }
+        deleteFlag = 0;
+        markBegin = 0;
+        count = 0;
+      }
+    }
+  }
+
+  j = 0;
+  for ( i = first; i <= last; i++) {
+    if (fabs(inSound[i]) > 0) {
+      outSound[j] = inSound[i];
+      j++;
+      if (j == 8000) break;
+    }
+  }
+}
+
+double getDistance(double **values, double **test, int rows, int cols) {
+  int i=0, j=0, acc=0;
+  for (i = 0 ; i < rows ; i++) {
+    for (j = 0; i < cols ; j++) {
+      acc += fastSqrt((values[i][j]*values[i][j])-(test[i][j]*test[i][j]));      
+    }
+  }
+  return acc;
+}
