@@ -3,8 +3,8 @@
 //===========================================================================
 // @brief: This header file defines the interface for the core functions.
 
-#ifndef DIGITREC_H
-#define DIGITREC_H
+#ifndef VOICEREC_H
+#define VOICEREC_H
 
 #include<hls_stream.h>
 
@@ -32,5 +32,7 @@ void update_knn( digit test_inst, digit train_inst, bit6_t min_distances[K_CONST
 // output based on the most common digit represented by these
 // nearest neighbors (i.e., a vote among KNNs). 
 bit4_t knn_vote( bit6_t min_distances[10][K_CONST] );
+
+int processChunk( int sp, int np, double *ret );
 
 #endif
