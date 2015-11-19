@@ -25,6 +25,7 @@ int64_t hexstring_to_int64 (std::string h) {
   return x;
 }
 float filter_testOutput[127];
+#define NUM_BANKS 26
 //------------------------------------------------------------------------
 // Digitrec testbench
 //------------------------------------------------------------------------
@@ -89,4 +90,5 @@ int main()
 
   return 0;
 }
+
 
