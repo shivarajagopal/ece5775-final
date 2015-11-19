@@ -10,7 +10,6 @@
 
 #include "voicerec.h"
 #include "timer.h"
-#include "filter.h"
 
 //------------------------------------------------------------------------
 // Helper function for hex to int conversion
