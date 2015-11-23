@@ -3,8 +3,8 @@
 #include <iostream>
 #include <fstream>
 
-#define TRAINING_SIZE 15000
-#define TESTING_SIZE 500
+#define TRAINING_SIZE 2000
+#define TESTING_SIZE 200
 #define IMAGE_SIZE 784
 
 int reverseInt (int i) 
@@ -19,7 +19,7 @@ int reverseInt (int i)
     return ((int)c1 << 24) + ((int)c2 << 16) + ((int)c3 << 8) + c4;
 }
 
-void read_mnist(float** training_data, int* training_labels, float** testing_data, int* testing_labels)
+void read_mnist(float* training_data, int* training_labels, float* testing_data, int* testing_labels)
 {
     unsigned char temp;
     int tempi;
@@ -111,7 +111,7 @@ void read_mnist(float** training_data, int* training_labels, float** testing_dat
                 for(int c=0;c<n_cols;++c)
                 {
                     file.read((char*)&temp,sizeof(temp));
-                    training_data[i][n_cols*r + c] = (float) temp;
+                    training_data[i*IMAGE_SIZE + n_cols*r + c] = (float) temp;
                 }
             }
         }
@@ -122,7 +122,7 @@ void read_mnist(float** training_data, int* training_labels, float** testing_dat
                 for(int c=0;c<n_cols;++c)
                 {
                     file.read((char*)&temp,sizeof(temp));
-                    testing_data[i][n_cols*r + c] = (float) temp;
+                    testing_data[i*IMAGE_SIZE + n_cols*r + c] = (float) temp;
                 }
             }
         }

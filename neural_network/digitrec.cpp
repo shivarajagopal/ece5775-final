@@ -18,17 +18,13 @@ int main() {
   NeuralNetwork* nn;
   srand((unsigned int)time(0));
 
-  long* training_data = (long*) malloc(TRAINING_SIZE*10 * sizeof(long));
-  int* training_label = (int*) malloc(TRAINING_SIZE*10 * sizeof(int));
-  float** training_input = (float**) malloc(TRAINING_SIZE*10 * sizeof(float*));
-  for (int i = 0; i < TRAINING_SIZE*10; i++)
-    training_input[i] = (float*) malloc(IMAGE_SIZE*sizeof(float));
+  long training_data[TRAINING_SIZE*10];
+  int training_label[TRAINING_SIZE*10];
+  float training_input[TRAINING_SIZE*10 * IMAGE_SIZE];
 
-  long* testing_data = (long*) malloc(TESTING_SIZE * sizeof(long));
-  int* testing_label = (int*) malloc(TESTING_SIZE * sizeof(int));
-  float** testing_input = (float**) malloc(TESTING_SIZE * sizeof(float*));
-  for (int i = 0; i < TESTING_SIZE; i++)
-    testing_input[i] = (float*) malloc(IMAGE_SIZE*sizeof(float));
+  long testing_data[TESTING_SIZE*10];
+  int testing_label[TESTING_SIZE*10];
+  float testing_input[TESTING_SIZE*10 * IMAGE_SIZE];
 
   char inputfile[23];
   
@@ -86,22 +82,21 @@ int main() {
   for (int i = 0; i < TRAINING_SIZE*10; i++) {
     templ = training_data[i];
     for (int j = 0; j < IMAGE_SIZE; j++) {
-      training_input[i][j] = templ % 2;
+      training_input[i*IMAGE_SIZE + j] = templ % 2;
       templ = templ >> 1;
     }
   }
   for (int i = 0; i < TESTING_SIZE; i++) {
     templ = testing_data[i];
     for (int j = 0; j < IMAGE_SIZE; j++) {
-      testing_input[i][j] = templ % 2;
+      testing_input[i*IMAGE_SIZE + j] = templ % 2;
       templ = templ >> 1;
     }
   }
 
-  nn = neuralNetwork(IMAGE_SIZE, 200, 10);
+  nn = neuralNetwork(IMAGE_SIZE, 10);
   trainNetwork(nn, training_input, training_label, TRAINING_SIZE*10,
                    testing_input, testing_label, TESTING_SIZE); 
-  destroyNeuralNetwork(nn);
 
   myfile.close();
 
