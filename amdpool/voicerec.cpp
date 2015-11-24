@@ -13,7 +13,6 @@
 #define MAX_COEFF 0.947543636291F
 #define MIN_COEFF 0.392485425092F
 
-#define NUM_BANKS 26
 
 void FFT( double *c, int N, int isign );
 
@@ -273,5 +272,22 @@ void preprocessSound(double *inSound, int inSize, double *outSound, int outSize)
   }
 }
 
+void voicerec(int np, double *inSound, double result[NUMRESULTS][(NUM_BANKS/2)+1]) {
+  int i = 0, j=0, stride = 0;
 
+  stride = np/2;
+  int num_results = (8000/stride);
+  //double results[num_results][(NUM_BANKS/2)+1];
+  double outSound[8000];
+  preprocessSound(inSound, 16000, outSound, 8000);
 
+  int index = 0;
+  for (i = 0; i+np <8000 ; i += stride) {
+    processChunk(i, np, result[index], outSound);
+    for (j = 0; j < ((NUM_BANKS/2)+1) ; ++j) {
+      //printf("%lf\n", result[index][j]);
+    }
+    index++;
+  }
+  //result = results;
+}
