@@ -10,6 +10,7 @@
 
 #include "voicerec.h"
 #include "timer.h"
+#include "testSound.h"
 
 //------------------------------------------------------------------------
 // Helper function for hex to int conversion
@@ -68,24 +69,28 @@ int main(int argc, char *argv[])
   np = atoi( argv[1] );
   stride = np/2;
   int num_results = (8000/stride);
-  double **results;
+  /*double **results;
   results = (double **) malloc(num_results * sizeof(double*)); 
   for (i=0; i < num_results; i++) {
     results[i] = (double *) malloc((NUM_BANKS/2)+1 * sizeof(double));
   }
 
   double *outSound = (double *)calloc( 8000, sizeof(double));
-
+*/
+  double results[num_results][(NUM_BANKS/2)+1];
+  double outSound[8000];
   preprocessSound(inSound, 16000, outSound, 8000);
 
   int index = 0;
   for (i = 0; i+np <8000 ; i += stride) {
     processChunk(i, np, results[index], outSound);
+    for (j = 0; j < ((NUM_BANKS/2)+1) ; ++j) {
+      printf("%lf\n", results[index][j]);
+    }
     sp += stride;  
     index++;
   }
   
-  double result = getDistance(results, test, num_results, (NUM_BANKS/2)+1);
   return 0;
 }
 

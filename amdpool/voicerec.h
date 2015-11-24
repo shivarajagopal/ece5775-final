@@ -33,9 +33,9 @@ void update_knn( digit test_inst, digit train_inst, bit6_t min_distances[K_CONST
 // nearest neighbors (i.e., a vote among KNNs). 
 bit4_t knn_vote( bit6_t min_distances[10][K_CONST] );
 
-int processChunk( int sp, int np, double *ret );
+void processChunk( int sp, int np, double *ret, double *inSound );
 
 void preprocessSound(double *inSound, int inSize, double *outSound, int outSize);
 
-double getDistance(double **values, double **test, int rows, int cols)
+double getDistance(double **values, double **test, int rows, int cols);
 #endif
