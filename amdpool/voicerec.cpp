@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <inttypes.h>
 #include "constArrays.h"
 #include "voicerec.h"
 
@@ -153,15 +154,13 @@ void FFT( double *c, int N, int isign )
   }
 }
 
-
+double c[2*NP];
+double d[NP];
+double e[NUM_BANKS];
 
 void processChunk( int sp, int np, double *ret, double *inputSound)
 {
   int i = 0;
-
-  double c[2*np];
-  double d[np];
-
 
   //printf("\ninput:\n");
   for( i = 0; i < np; ++i )
@@ -178,7 +177,6 @@ void processChunk( int sp, int np, double *ret, double *inputSound)
   }
 
 
-  double e[NUM_BANKS];
   for (i = 0; i < NUM_BANKS ; ++i) {
     e[i] = 0;
   }
@@ -272,7 +270,7 @@ void preprocessSound(double *inSound, int inSize, double *outSound, int outSize)
   }
 }
 
-void voicerec(int np, double *inSound, double result[NUMRESULTS][(NUM_BANKS/2)+1]) {
+void voicerec(int np, double inSound[ORIGSIZE], double result[NUMRESULTS][(NUM_BANKS/2)+1]) {
   int i = 0, j=0, stride = 0;
 
   stride = np/2;
