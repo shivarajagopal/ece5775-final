@@ -6,8 +6,8 @@ typedef struct _NeuralNetwork NeuralNetwork;
 // construct the neural network
 NeuralNetwork* neuralNetwork(int nInput, int nOutput);
 
-void loadWeights(NeuralNetwork* neuralNetwork, const char* inputFile);
-void saveWeights(NeuralNetwork* neuralNetwork, const char* outputFile);
+void saveNetwork(NeuralNetwork* neuralNetwork, const char* outputfile);
+NeuralNetwork* loadNetwork(const char* inputfile);
 
 void feedForward(NeuralNetwork* nn, float* pattern);
 int guessClassification(int nOutput, float* output);
