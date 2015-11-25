@@ -6,11 +6,11 @@
 #include <fstream>
 #include <string>
 
-#define learningRate 0.02
+#define learningRate 0.001
 #define momentum     0.8
-#define maxEpoch     150
+#define maxEpoch     10
 #define INPUTSIZE    784
-#define HIDDENSIZE    784
+#define HIDDENSIZE    500
 #define OUTPUTSIZE    10
 
 typedef struct _NeuralNetwork {
@@ -46,47 +46,58 @@ NeuralNetwork* neuralNetwork(int nInput, int nOutput) {
   assert(nInput == INPUTSIZE);
   assert(nOutput == OUTPUTSIZE);
 
-  // set bounding variables for the initial weights
-  float rangeIH = 1/sqrt((float)nInput);
-  float rangeHO = 1/sqrt((float)HIDDENSIZE); 
-
   // allocate memory for struct pointer
-  NeuralNetwork* nn = (NeuralNetwork*) malloc(sizeof(NeuralNetwork));
+  NeuralNetwork* nn = new NeuralNetwork;
+  initialize(nn);
+
+  // set bounding variables for the initial weights
+  float rangeIH = 1/sqrt((float)INPUTSIZE);
+  float rangeHO = 1/sqrt((float)HIDDENSIZE); 
   
   // initialize the the IH weights to some constrained random values
   for(int i = 0; i < nInput+1; i++) {   
-    nn->input[i] = 0;
     for(int j = 0; j < HIDDENSIZE; j++) {
       nn->weightIH[i*HIDDENSIZE + j] = (((float)(rand()%100)+1)/100  * 2 * rangeIH) - rangeIH;
-      nn->deltaIH[i*HIDDENSIZE + j] = 0;      
     }
   }
-  nn->input[nInput] = -1;
-
   // initialize the the HO weights to some constrained random values
   for(int i = 0; i < HIDDENSIZE+1; i++) {   
-    nn->hidden[i] = 0;
     if (i != HIDDENSIZE) nn->hiddenErrorGradients[i] = 0;
     for(int j = 0; j < nOutput; j++) {
       nn->weightHO[i*OUTPUTSIZE + j] = (((float)(rand()%100)+1)/100  * 2 * rangeHO) - rangeHO;      
-      nn->deltaHO[i*OUTPUTSIZE + j] = 0; 
     }
-  }
-  nn->hidden[HIDDENSIZE] = -1;
-
-  for (int i=0; i < nOutput; i++) {
-    nn->output[i] = 0;
-    nn->outputErrorGradients[i] = 0;
   }
 
   return nn;
 }
 
-void loadWeights(NeuralNetwork* neuralNetwork, const char* inputFile) {
-  // TODO: Implement a loading function
-}
-void saveWeights(NeuralNetwork* neuralNetwork, const char* outputFile) {
-  // TODO: Implement a saving function
+void initialize(NeuralNetwork* nn) {
+
+  // initialize the the IH weights to some constrained random values
+  for(int i = 0; i < INPUTSIZE+1; i++) {   
+    nn->input[i] = 0;
+    for(int j = 0; j < HIDDENSIZE; j++) {
+      nn->deltaIH[i*HIDDENSIZE + j] = 0;      
+    }
+  }
+  nn->input[INPUTSIZE] = -1;
+
+  // initialize the the HO weights to some constrained random values
+  for(int i = 0; i < HIDDENSIZE+1; i++) {   
+    nn->hidden[i] = 0;
+    if (i != HIDDENSIZE) {
+      nn->hiddenErrorGradients[i] = 0;
+    }
+    for(int j = 0; j < OUTPUTSIZE; j++) {
+      nn->deltaHO[i*OUTPUTSIZE + j] = 0; 
+    }
+  }
+  nn->hidden[HIDDENSIZE] = -1;
+
+  for (int i=0; i < OUTPUTSIZE; i++) {
+    nn->output[i] = 0;
+    nn->outputErrorGradients[i] = 0;
+  }
 }
 
 void feedForward(NeuralNetwork* nn, float* pattern) {
@@ -296,29 +307,3 @@ NeuralNetwork* loadNetwork(const char* inputfile) {
 
   return nn;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

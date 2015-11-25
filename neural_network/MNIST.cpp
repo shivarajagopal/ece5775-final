@@ -14,6 +14,8 @@
 #define COLS 28
 #define ROWS 28
 
+#define LOADNETWORK 0
+
 int main() {
 
   NeuralNetwork* nn;
@@ -81,9 +83,15 @@ int main() {
   //   std::cout << "\n";
   // }
 
-  nn = neuralNetwork(IMAGE_SIZE, 10);
+  if (LOADNETWORK == 1)
+    nn = loadNetwork("mnist_weights.dat");
+  else
+    nn = neuralNetwork(IMAGE_SIZE, 10);
+
   trainNetwork(nn, training_data, training_label, TRAINING_SIZE,
-                   testing_data, testing_label, TESTING_SIZE); 
+                   testing_data, testing_label, TESTING_SIZE);
+
+  saveNetwork(nn, "mnist_weights.dat");
 
   myfile.close();
 }
