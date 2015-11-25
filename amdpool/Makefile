@@ -19,7 +19,7 @@ all: csim
 csim: $(TARGET).cpp $(TARGET)_test.cpp
 	@echo "Compiling & simulating $(TARGET) on amdpool ..."
 	g++ ${CFLAGS} $^ -o $(TARGET)
-	./$(TARGET) 256
+	./$(TARGET)
 
 bitstream: 
 	@echo "Synthesizing $(TARGET) and creating bitstream on amdpool ..."

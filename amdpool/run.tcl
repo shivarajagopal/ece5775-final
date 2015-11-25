@@ -4,17 +4,17 @@
 # @brief: A Tcl script for synthesizing the baseline digit recongnition design.
 
 # Project name
-set hls_prj digitrec.prj
+set hls_prj voicerec.prj
 
 # Open/reset the project
 open_project ${hls_prj} -reset
 
 # Top function of the design is "dut"
-set_top dut
+set_top voicerec
 
 # Add design and testbench files
-add_files digitrec.cpp
-add_files -tb digitrec_test.cpp
+add_files voicerec.cpp
+add_files -tb voicerec_test.cpp
 add_files -tb data
 
 open_solution "solution1"

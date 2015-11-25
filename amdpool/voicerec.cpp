@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <inttypes.h>
 #include "constArrays.h"
-#include "testSound.h"
 #include "voicerec.h"
 
 #define M_PI 3.14159265358979323846
@@ -14,7 +14,6 @@
 #define MAX_COEFF 0.947543636291F
 #define MIN_COEFF 0.392485425092F
 
-#define NUM_BANKS 26
 
 void FFT( double *c, int N, int isign );
 
@@ -155,19 +154,18 @@ void FFT( double *c, int N, int isign )
   }
 }
 
+double c[2*NP];
+double d[NP];
+double e[NUM_BANKS];
 
-
-int processChunk( int sp, int np, double *ret , double *inSound)
+void processChunk( int sp, int np, double *ret, double *inputSound)
 {
   int i = 0;
-
-  double *c = (double *)malloc( 2 * np * sizeof(double) );
-  double *d = (double *)malloc( np * sizeof(double) );
 
   //printf("\ninput:\n");
   for( i = 0; i < np; ++i )
   {
-    c[2*i] = inSound[sp+i];
+    c[2*i] = inputSound[sp+i];
     c[2*i+1] = 0.0;
   }
 
@@ -178,18 +176,19 @@ int processChunk( int sp, int np, double *ret , double *inSound)
     d[i] = (c[2*i]*c[2*i] + c[2*i+1]*c[2*i+1])/256.0;
   }
 
-  free( c );
 
-  c = (double *)calloc( (NUM_BANKS) , sizeof(double));
+  for (i = 0; i < NUM_BANKS ; ++i) {
+    e[i] = 0;
+  }
 
   int mellIdx = 0;
   for ( i = 0; i < np; ++i ) {
     if ( i==mell[mellIdx] ) {
-      c[ 0 ] += d[ mell[mellIdx] ];
+      e[ 0 ] += d[ mell[mellIdx] ];
     }
 
     if (( i > mell[ mellIdx ] ) && ( i <= mell[ mellIdx+1 ] )) {
-      c[ mellIdx ] += d[i];
+      e[ mellIdx ] += d[i];
     }
 
     if (i == mell[ mellIdx+1 ]) {
@@ -198,22 +197,16 @@ int processChunk( int sp, int np, double *ret , double *inSound)
   }
 
   for (i=0 ; i < NUM_BANKS ; i++ ) {
-    if (c[i] <= 0.0) {
-      c[i] = 0.0;
+    if (e[i] <= 0.0) {
+      e[i] = 0.0;
     } else {
-      c[i] = fastlog(c[i]);
+      e[i] = fastlog(e[i]);
     }
   }
 
-  free(d);
-
   // Calculate a DCT and only keep the first (NUM_BANKS/2) +1 coeffs
-  dct_ii(NUM_BANKS, c, ret);
-/*
-  printf("\nDCT Results:\n");
-  for ( i = 0; i < (NUM_BANKS/2)+1 ; ++i) {
-    printf("%lf\n", ret[i]);
-  }*/
+  dct_ii(NUM_BANKS, e, ret);
+
 }
 
 void preprocessSound(double *inSound, int inSize, double *outSound, int outSize) {
@@ -277,12 +270,22 @@ void preprocessSound(double *inSound, int inSize, double *outSound, int outSize)
   }
 }
 
-double getDistance(double **values, double **test, int rows, int cols) {
-  int i=0, j=0, acc=0;
-  for (i = 0 ; i < rows ; i++) {
-    for (j = 0; i < cols ; j++) {
-      acc += fastSqrt((values[i][j]*values[i][j])-(test[i][j]*test[i][j]));      
+void voicerec(int np, double inSound[ORIGSIZE], double result[NUMRESULTS][(NUM_BANKS/2)+1]) {
+  int i = 0, j=0, stride = 0;
+
+  stride = np/2;
+  int num_results = (8000/stride);
+  //double results[num_results][(NUM_BANKS/2)+1];
+  double outSound[8000];
+  preprocessSound(inSound, 16000, outSound, 8000);
+
+  int index = 0;
+  for (i = 0; i+np <8000 ; i += stride) {
+    processChunk(i, np, result[index], outSound);
+    for (j = 0; j < ((NUM_BANKS/2)+1) ; ++j) {
+      //printf("%lf\n", result[index][j]);
     }
+    index++;
   }
-  return acc;
+  //result = results;
 }

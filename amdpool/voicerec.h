@@ -10,32 +10,21 @@
 
 #include "typedefs.h"
 
-// The K_CONST value: number of nearest neighbors
-#define K_CONST 3
-
+#define NUM_BANKS 26
+#define NP 256
+#define STRIDE NP/2
+#define NUMRESULTS 63
+#define ORIGSIZE 16000
+#define SOUNDSIZE 8000
 // Top function for synthesis
 void dut(
     hls::stream<bit32_t> &strm_in,
     hls::stream<bit32_t> &strm_out
 );
 
-// Top function for digit recognition
-bit4_t digitrec( digit input );
-
-// Given the testing instance and a (new) training instance,
-// this function is expected to maintain/update an array of
-// K minimum distances per training set
-void update_knn( digit test_inst, digit train_inst, bit6_t min_distances[K_CONST] );
-
-// Among 10xK minimum distance values, this function finds 
-// the actual K nearest neighbors and determine the final 
-// output based on the most common digit represented by these
-// nearest neighbors (i.e., a vote among KNNs). 
-bit4_t knn_vote( bit6_t min_distances[10][K_CONST] );
-
-int processChunk( int sp, int np, double *ret );
+void processChunk( int sp, int np, double *ret, double *inSound );
 
 void preprocessSound(double *inSound, int inSize, double *outSound, int outSize);
 
-double getDistance(double **values, double **test, int rows, int cols)
+void voicerec(int np, double *inSound, double result[NUMRESULTS][(NUM_BANKS/2)+1]);
 #endif

@@ -10,6 +10,7 @@
 
 #include "voicerec.h"
 #include "timer.h"
+#include "testSound.h"
 
 //------------------------------------------------------------------------
 // Helper function for hex to int conversion
@@ -24,10 +25,12 @@ int64_t hexstring_to_int64 (std::string h) {
   return x;
 }
 float filter_testOutput[127];
-#define NUM_BANKS 26
+
+
 //------------------------------------------------------------------------
-// Digitrec testbench
+// Voicerec testbench
 //------------------------------------------------------------------------
+
 int main(int argc, char *argv[]) 
 {
   // Output file that saves the test bench results
@@ -51,41 +54,20 @@ int main(int argc, char *argv[])
   int error = 0;
   int num_test_insts = 0;
   bit32_t interpreted_digit;
-
-  int i = 0, j=0, sp=0, np = 0, stride = 0;
-
-  if( argc < 2 )
-  {
-    printf("\n fft takes the FFT of an input array, and outputs\n");
-    printf(" an complex fft data.\n");
-    printf(" All lines at top of input file starting with # are ignored.\n");
-    printf("\n Usage: fft sp np outfile\n");
-    printf("  sp = starting point (0 based)\n");
-    printf("  np = number of points to fft\n");
-    return(-1);
+  double result[NUMRESULTS][(NUM_BANKS/2)+1];
+  int i=0, j=0;
+  for (i = 0; i < NUMRESULTS ; ++i) {
+    for (j = 0; j < (NUM_BANKS/2)+1 ; ++j) {
+      result[i][j] = 0.0;
+    }
   }
-  sp = 0;
-  np = atoi( argv[1] );
-  stride = np/2;
-  int num_results = (8000/stride);
-  double **results;
-  results = (double **) malloc(num_results * sizeof(double*)); 
-  for (i=0; i < num_results; i++) {
-    results[i] = (double *) malloc((NUM_BANKS/2)+1 * sizeof(double));
+ 
+  voicerec(NP, inSound, result);
+  for (i = 0; i < NUMRESULTS ; ++i) {
+    for (j = 0; j < (NUM_BANKS/2)+1 ; ++j) {
+      printf("%lf\n", result[i][j]);
+    }
   }
-
-  double *outSound = (double *)calloc( 8000, sizeof(double));
-
-  preprocessSound(inSound, 16000, outSound, 8000);
-
-  int index = 0;
-  for (i = 0; i+np <8000 ; i += stride) {
-    processChunk(i, np, results[index], outSound);
-    sp += stride;  
-    index++;
-  }
-  
-  double result = getDistance(results, test, num_results, (NUM_BANKS/2)+1);
   return 0;
 }
 
