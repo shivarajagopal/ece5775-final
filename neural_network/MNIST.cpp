@@ -14,7 +14,7 @@
 #define COLS 28
 #define ROWS 28
 
-#define LOADNETWORK 0
+#define LOADNETWORK 1
 
 int main() {
 
@@ -22,10 +22,10 @@ int main() {
   srand((unsigned int)time(0));
 
   int training_label[TRAINING_SIZE];
-  float training_data[TRAINING_SIZE * IMAGE_SIZE];
+  float training_data[TRAINING_SIZE][IMAGE_SIZE];
 
   int testing_label[TESTING_SIZE];
-  float testing_data[TESTING_SIZE * IMAGE_SIZE];
+  float testing_data[TESTING_SIZE][IMAGE_SIZE];
 
   char inputfile[23];
 
@@ -46,9 +46,9 @@ int main() {
     training_label[j1] = training_label[j2];
     training_label[j2] = temp;
     for (int k = 0; k < IMAGE_SIZE; k++) {
-      temp_f = training_data[j1*IMAGE_SIZE + k];
-      training_data[j1*IMAGE_SIZE + k] = training_data[j2*IMAGE_SIZE + k];
-      training_data[j2*IMAGE_SIZE + k] = temp_f;
+      temp_f = training_data[j1][k];
+      training_data[j1][k] = training_data[j2][k];
+      training_data[j2][k] = temp_f;
     }
   }
   for (int i = 0; i < 5000; i++) {
@@ -58,9 +58,9 @@ int main() {
     testing_label[j1] = testing_label[j2];
     testing_label[j2] = temp;
     for (int k = 0; k < IMAGE_SIZE; k++) {
-      temp_f = testing_data[j1*IMAGE_SIZE + k];
-      testing_data[j1*IMAGE_SIZE + k] = testing_data[j2*IMAGE_SIZE + k];
-      testing_data[j2*IMAGE_SIZE + k] = temp_f;
+      temp_f = testing_data[j1][k];
+      testing_data[j1][k] = testing_data[j2][k];
+      testing_data[j2][k] = temp_f;
     }
   }
 
@@ -91,7 +91,8 @@ int main() {
   trainNetwork(nn, training_data, training_label, TRAINING_SIZE,
                    testing_data, testing_label, TESTING_SIZE);
 
-  saveNetwork(nn, "mnist_weights.dat");
+  if (LOADNETWORK == 0)
+    saveNetwork(nn, "mnist_weights.dat");
 
   myfile.close();
 }

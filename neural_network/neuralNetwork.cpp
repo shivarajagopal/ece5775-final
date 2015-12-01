@@ -6,12 +6,7 @@
 #include <fstream>
 #include <string>
 
-#define learningRate 0.001
-#define momentum     0.8
-#define maxEpoch     10
-#define INPUTSIZE    784
-#define HIDDENSIZE    500
-#define OUTPUTSIZE    10
+#include "neuralNetwork.h"
 
 typedef struct _NeuralNetwork {
   // neuron values
@@ -20,12 +15,12 @@ typedef struct _NeuralNetwork {
   float output[OUTPUTSIZE];
 
   // inter-layer weight matrices
-  float weightIH[(INPUTSIZE+1) * HIDDENSIZE];
-  float weightHO[(HIDDENSIZE+1) * OUTPUTSIZE];
+  float weightIH[INPUTSIZE+1][HIDDENSIZE];
+  float weightHO[HIDDENSIZE+1][OUTPUTSIZE];
   
   // changes to weights for backpropagation
-  float deltaIH[(INPUTSIZE+1) * HIDDENSIZE];
-  float deltaHO[(HIDDENSIZE+1) * OUTPUTSIZE];
+  float deltaIH[INPUTSIZE+1][HIDDENSIZE];
+  float deltaHO[HIDDENSIZE+1][OUTPUTSIZE];
 
   // error gradients for backpropagation
   float hiddenErrorGradients[HIDDENSIZE];
@@ -57,14 +52,14 @@ NeuralNetwork* neuralNetwork(int nInput, int nOutput) {
   // initialize the the IH weights to some constrained random values
   for(int i = 0; i < nInput+1; i++) {   
     for(int j = 0; j < HIDDENSIZE; j++) {
-      nn->weightIH[i*HIDDENSIZE + j] = (((float)(rand()%100)+1)/100  * 2 * rangeIH) - rangeIH;
+      nn->weightIH[i][j] = (((float)(rand()%100)+1)/100  * 2 * rangeIH) - rangeIH;
     }
   }
   // initialize the the HO weights to some constrained random values
   for(int i = 0; i < HIDDENSIZE+1; i++) {   
     if (i != HIDDENSIZE) nn->hiddenErrorGradients[i] = 0;
     for(int j = 0; j < nOutput; j++) {
-      nn->weightHO[i*OUTPUTSIZE + j] = (((float)(rand()%100)+1)/100  * 2 * rangeHO) - rangeHO;      
+      nn->weightHO[i][j] = (((float)(rand()%100)+1)/100  * 2 * rangeHO) - rangeHO;      
     }
   }
 
@@ -77,7 +72,7 @@ void initialize(NeuralNetwork* nn) {
   for(int i = 0; i < INPUTSIZE+1; i++) {   
     nn->input[i] = 0;
     for(int j = 0; j < HIDDENSIZE; j++) {
-      nn->deltaIH[i*HIDDENSIZE + j] = 0;      
+      nn->deltaIH[i][j] = 0;      
     }
   }
   nn->input[INPUTSIZE] = -1;
@@ -89,7 +84,7 @@ void initialize(NeuralNetwork* nn) {
       nn->hiddenErrorGradients[i] = 0;
     }
     for(int j = 0; j < OUTPUTSIZE; j++) {
-      nn->deltaHO[i*OUTPUTSIZE + j] = 0; 
+      nn->deltaHO[i][j] = 0; 
     }
   }
   nn->hidden[HIDDENSIZE] = -1;
@@ -100,7 +95,7 @@ void initialize(NeuralNetwork* nn) {
   }
 }
 
-void feedForward(NeuralNetwork* nn, float* pattern) {
+void feedForward(NeuralNetwork* nn, float pattern[INPUTSIZE]) {
   std::ofstream outfile;
   outfile.open("feedforward.dat", std::ofstream::app);
   // enter pattern value into input neurons
@@ -113,7 +108,7 @@ void feedForward(NeuralNetwork* nn, float* pattern) {
     // sum the inputs times the weights between them and the hidden neurons
     // and then enter them into an activation function: 1/(1+exp(-x))
     for (int k = 0; k < INPUTSIZE+1; k++)
-      nn->hidden[j] += nn->input[k] * nn->weightIH[k*HIDDENSIZE + j];
+      nn->hidden[j] += nn->input[k] * nn->weightIH[k][j];
     nn->hidden[j] = 1/(1+exp(-1*(nn->hidden[j])));
     //outfile << "hidden[" << j << "] = " << nn->hidden[j] << "\n";
   }
@@ -124,14 +119,14 @@ void feedForward(NeuralNetwork* nn, float* pattern) {
     // sum the hidden values times the weights between them and the output neurons
     // and then enter them into an activation function: 1/(1+exp(-x))
     for (int k = 0; k < HIDDENSIZE+1; k++)
-      nn->output[j] += nn->hidden[k] * nn->weightHO[k*OUTPUTSIZE + j];
+      nn->output[j] += nn->hidden[k] * nn->weightHO[k][j];
     nn->output[j] = 1/(1+exp(-1*(nn->output[j])));
     //outfile << "output[" << j << "] = " << nn->output[j] << "\n";
   }
   outfile.close();
 }
 
-int guessClassification(int nOutput, float* output) {
+int guessClassification(int nOutput, float output[OUTPUTSIZE]) {
   float max = 0;
   int guess;
   for (int j = 0; j < nOutput; j++) {
@@ -147,11 +142,11 @@ int guessClassification(int nOutput, float* output) {
 // PRECONDITIONS:
 //   * each individual input MUST be composed of nInput values
 //   * inputs and labels MUST BOTH have 'size' number of elements
-float getTestAccuracy(NeuralNetwork* nn, float* inputs, int* labels, int size) {
+float getTestAccuracy(NeuralNetwork* nn, float inputs[][INPUTSIZE], int labels[INPUTSIZE], int size) {
   int incorrectPatterns = 0;
 
   for (int i = 0; i < size; i++) {
-    feedForward(nn, &inputs[i*INPUTSIZE]);
+    feedForward(nn, inputs[i]);
     int guess = guessClassification(OUTPUTSIZE, nn->output);
     if (guess != labels[i]) incorrectPatterns++;
   }
@@ -164,8 +159,8 @@ float getTestAccuracy(NeuralNetwork* nn, float* inputs, int* labels, int size) {
 //   * each individual input MUST be composed of nInput values
 //   * inputs and labels MUST BOTH have 'size' number of elements
 void trainNetwork( NeuralNetwork* nn, 
-                   float* inputs, int* labels, int size,
-                   float* testInputs, int* testLabels, int testSize) {
+                   float inputs[][INPUTSIZE], int labels[INPUTSIZE], int size,
+                   float testInputs[][INPUTSIZE], int testLabels[INPUTSIZE], int testSize) {
   int epoch = 0;
 
   std::ofstream outfile;
@@ -183,7 +178,7 @@ void trainNetwork( NeuralNetwork* nn,
       // Feedforward training input
       //***************************************************************************************************************
 
-      feedForward(nn, &inputs[i*INPUTSIZE]);
+      feedForward(nn, inputs[i]);
 
       //***************************************************************************************************************
       // backpropagate errors
@@ -197,7 +192,7 @@ void trainNetwork( NeuralNetwork* nn,
         nn->outputErrorGradients[j] = nn->output[j] * (1-nn->output[j]) * (target - nn->output[j]);
         //outfile << "outputErrorGradients[" << j << "]= " << nn->outputErrorGradients[j] << "\n";
         for (int k = 0; k < HIDDENSIZE+1; k++) {
-          nn->deltaHO[k*OUTPUTSIZE + j] = learningRate * nn->hidden[k] * nn->outputErrorGradients[j] + momentum * nn->deltaHO[k*OUTPUTSIZE + j];
+          nn->deltaHO[k][j] = learningRate * nn->hidden[k] * nn->outputErrorGradients[j] + momentum * nn->deltaHO[k][j];
           //outfile << "deltaHO[" << k << "][" << j << "= " << nn->deltaHO[k][j] << "\n";
         }
       }
@@ -205,11 +200,11 @@ void trainNetwork( NeuralNetwork* nn,
       for (int j = 0; j < HIDDENSIZE; j++) {
         // set error gradient for the output node based on weightsHO times outputErrorGradients
         float sum = 0;
-        for (int k = 0; k < OUTPUTSIZE; k++) sum+= nn->weightHO[j*OUTPUTSIZE + k] * nn->outputErrorGradients[k];
+        for (int k = 0; k < OUTPUTSIZE; k++) sum+= nn->weightHO[j][k] * nn->outputErrorGradients[k];
         nn->hiddenErrorGradients[j] = nn->hidden[j] * (1-nn->hidden[j]) * sum;
         //outfile << "hiddenErrorGradients[" << j << "]= " << nn->hiddenErrorGradients[j] << "\n";
         for (int k = 0; k < INPUTSIZE+1; k++)
-          nn->deltaIH[k*HIDDENSIZE + j] = learningRate * nn->input[k] * nn->hiddenErrorGradients[j] + momentum * nn->deltaIH[k*HIDDENSIZE + j];
+          nn->deltaIH[k][j] = learningRate * nn->input[k] * nn->hiddenErrorGradients[j] + momentum * nn->deltaIH[k][j];
       }
 
       //***************************************************************************************************************
@@ -217,12 +212,12 @@ void trainNetwork( NeuralNetwork* nn,
       //***************************************************************************************************************      
       for (int j = 0; j < INPUTSIZE+1; j++) {
         for (int k = 0; k < HIDDENSIZE; k++) {
-          nn->weightIH[j*HIDDENSIZE + k] += nn->deltaIH[j*HIDDENSIZE + k];
+          nn->weightIH[j][k] += nn->deltaIH[j][k];
         }
       }
       for (int j = 0; j < HIDDENSIZE+1; j++) {
         for (int k = 0; k < OUTPUTSIZE; k++) {
-          nn->weightHO[j*OUTPUTSIZE + k] += nn->deltaHO[j*OUTPUTSIZE + k];
+          nn->weightHO[j][k] += nn->deltaHO[j][k];
         }
       }
 
@@ -257,24 +252,28 @@ void trainNetwork( NeuralNetwork* nn,
   //outfile.close();
 }
 
-void saveNetwork(NeuralNetwork* nn, const char* outputfile) {
+void saveNetwork(NeuralNetwork* nn, const char outputfile[]) {
   std::ofstream savefile(outputfile);
 
   savefile << INPUTSIZE << "\n";
   savefile << HIDDENSIZE << "\n";
   savefile << OUTPUTSIZE << "\n";
 
-  for (int i = 1; i < (INPUTSIZE+1)*HIDDENSIZE; i++) {
-      savefile <<  nn->weightIH[i] << "\n";
+  for (int i = 0; i < INPUTSIZE+1; i++) {
+    for (int j = 0; j < HIDDENSIZE; j++) {
+      savefile <<  nn->weightIH[i][j] << "\n";
+    }
   }
-  for (int i = 1; i < (HIDDENSIZE+1)*OUTPUTSIZE; i++) {
-      savefile << nn->weightHO[i] << "\n";
+  for (int i = 0; i < HIDDENSIZE+1; i++) {
+    for (int j = 0; j < OUTPUTSIZE; j++) {
+      savefile << nn->weightHO[i][j] << "\n";
+    }
   }
 
   savefile.close();
 }
 
-NeuralNetwork* loadNetwork(const char* inputfile) {
+NeuralNetwork* loadNetwork(const char inputfile[]) {
   std::ifstream loadfile(inputfile);
   std::string line;
 
@@ -296,13 +295,17 @@ NeuralNetwork* loadNetwork(const char* inputfile) {
   NeuralNetwork* nn = new NeuralNetwork;
   initialize(nn);
 
-  for (int i = 1; i < (INPUTSIZE+1)*HIDDENSIZE; i++) {
-    std::getline(loadfile, line);
-    nn->weightIH[i] = strtof(line.c_str(), NULL);
+  for (int i = 0; i < INPUTSIZE+1; i++) {
+    for (int j = 0; j < HIDDENSIZE; j++) {
+      std::getline(loadfile, line);
+      nn->weightIH[i][j] = strtof(line.c_str(), NULL);
+    }
   }
-  for (int i = 1; i < (HIDDENSIZE+1)*OUTPUTSIZE; i++) {
-    std::getline(loadfile, line);
-    nn->weightHO[i] = strtof(line.c_str(), NULL);
+  for (int i = 0; i < HIDDENSIZE+1; i++) {
+    for (int j = 0; j < OUTPUTSIZE; j++) {
+      std::getline(loadfile, line);
+      nn->weightHO[i][j] = strtof(line.c_str(), NULL);
+    }
   }
 
   return nn;
