@@ -6,10 +6,10 @@ while(1)
     recordblocking(recObj,2);
     disp('Recording ended')
     y=getaudiodata(recObj);
-    scrsz = get(groot,'ScreenSize');
-    figure('Position', [1 (scrsz(4)/2)-120 scrsz(3)/2 scrsz(4)/2])
-    plot(y);
-    title('original')
+    %scrsz = get(groot,'ScreenSize');
+    %figure('Position', [1 (scrsz(4)/2)-120 scrsz(3)/2 scrsz(4)/2])
+    %plot(y);
+    %title('original')
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Clean Signal
@@ -78,10 +78,10 @@ while(1)
           y2 = [y2;zeropad];
     end
 
-    figure('Position', [scrsz(3)/2 (scrsz(4)/2)-120 scrsz(3)/2 scrsz(4)/2])
-    plot(y2);
-    title('Filtered and Normalized')
-    soundsc(y);
+%     figure('Position', [scrsz(3)/2 (scrsz(4)/2)-120 scrsz(3)/2 scrsz(4)/2])
+%     plot(y2);
+%     title('Filtered and Normalized')
+    %soundsc(y);
     soundsc(y2);
     str = input('Rerecord? (y or n) (default:n)\n','s');
     if (numel(str)== 0)
