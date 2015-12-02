@@ -1,4 +1,4 @@
-mnist: MNIST.cpp neuralNetwork.cpp
+mnist: MNIST.cpp MNISTParser.h neuralNetwork.cpp
 	g++ -std=c++14 -g -Ofast -o $@ $^
 
 digitrec: digitrec.cpp neuralNetwork.cpp
@@ -6,5 +6,5 @@ digitrec: digitrec.cpp neuralNetwork.cpp
 
 .PHONY: clean
 clean:
-	@rm -f digitrec mnist *.dat
+	@rm -f digitrec mnist
 
