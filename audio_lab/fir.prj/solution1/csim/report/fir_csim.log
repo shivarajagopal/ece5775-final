@@ -1,0 +1,14 @@
+   Compiling(apcc) ../../../../fir_test.c in debug mode
+@I [HLS-10] Running '/opt/xilinx/Vivado_HLS/2014.2/bin/unwrapped/lnx64.o/apcc'
+            for user 'tjp79' on host 'amdpool-04' (Linux_x86_64 version 2.6.18-406.el5) on Mon Nov 23 13:09:02 EST 2015
+            in directory '/home/student/tjp79/classes/ece5775/audio_lab/audio.prj/solution1/csim/build'
+@I [APCC-3] Tmp directory is /tmp/apcc_db_tjp79/148041448302142161544
+@I [APCC-1] APCC is done.
+   Compiling(apcc) ../../../../fir.c in debug mode
+@I [HLS-10] Running '/opt/xilinx/Vivado_HLS/2014.2/bin/unwrapped/lnx64.o/apcc'
+            for user 'tjp79' on host 'amdpool-04' (Linux_x86_64 version 2.6.18-406.el5) on Mon Nov 23 13:09:05 EST 2015
+            in directory '/home/student/tjp79/classes/ece5775/audio_lab/audio.prj/solution1/csim/build'
+@I [APCC-3] Tmp directory is /tmp/apcc_db_tjp79/148521448302145582483
+@I [APCC-1] APCC is done.
+   Generating csim.exe
+@I [SIM-1] CSim done with 0 errors.

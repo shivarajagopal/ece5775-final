@@ -1,0 +1,6 @@
+@I [HLS-10] Running '/opt/xilinx/Vivado_HLS/2014.2/bin/unwrapped/lnx64.o/apcc'
+            for user 'tjp79' on host 'amdpool-04' (Linux_x86_64 version 2.6.18-406.el5) on Mon Nov 23 13:11:25 EST 2015
+            in directory '/home/student/tjp79/classes/ece5775/audio_lab/audio.prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+@I [APCC-1] APCC is done.

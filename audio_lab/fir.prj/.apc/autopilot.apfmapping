@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fir_coef.dat" path="/home/student/tjp79/classes/ece5775/audio_lab/fir_coef.dat"/>
+    <originFiles name="fir.c" path="/home/student/tjp79/classes/ece5775/audio_lab/fir.c"/>
+  </source>
+  <testbench>
+    <originFiles name="fir_test.c" path="/home/student/tjp79/classes/ece5775/audio_lab/fir_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

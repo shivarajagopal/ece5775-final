@@ -1,0 +1,4 @@
+   Build using "/opt/xilinx/Vivado_HLS/2014.2/lnx64/tools/gcc/bin/g++"
+   Compiling fir.autotb.cpp
+   Compiling fir.cpp
+   Generating cosim.sc.exe

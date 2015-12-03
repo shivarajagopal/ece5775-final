@@ -1,0 +1,346 @@
+
+
+================================================================
+== Vivado HLS Report for 'fir'
+================================================================
+* Date:           Mon Nov 23 13:19:07 2015
+
+* Version:        2014.2 (Build 932637 on Wed Jun 11 12:38:34 PM 2014)
+* Project:        audio.prj
+* Solution:       solution1
+* Product family: zynq zynq_fpv6 
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      7.95|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   63|   63|   64|   64|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- loop    |   59|   59|         3|          1|          1|    57|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+---------+--------------+--------+
+|       RTL Ports      | Dir | Bits| Protocol| Source Object| C Type |
++----------------------+-----+-----+---------+--------------+--------+
+|s_axi_fir_io_AWVALID  |  in |    1|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_AWREADY  | out |    1|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_AWADDR   |  in |    6|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_WVALID   |  in |    1|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_WREADY   | out |    1|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_WDATA    |  in |   32|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_WSTRB    |  in |    4|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_ARVALID  |  in |    1|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_ARREADY  | out |    1|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_ARADDR   |  in |    6|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_RVALID   | out |    1|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_RREADY   |  in |    1|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_RDATA    | out |   32|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_RRESP    | out |    2|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_BVALID   | out |    1|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_BREADY   |  in |    1|  s_axi  |    fir_io    | scalar |
+|s_axi_fir_io_BRESP    | out |    2|  s_axi  |    fir_io    | scalar |
++----------------------+-----+-----+---------+--------------+--------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 7
+* Pipeline: 1
+  Pipeline-0: II = 1, D = 3, States = { 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / (tmp_3)
+	4  / (!tmp_3)
+7 --> 
+* FSM state operations: 
+
+ <State 1>: 2.39ns
+ST_1: shift_reg_load [2/2] 2.39ns
+:7  %shift_reg_load = load i16* getelementptr inbounds ([58 x i16]* @shift_reg, i64 0, i64 57), align 2
+
+
+ <State 2>: 2.39ns
+ST_2: shift_reg_load [1/2] 2.39ns
+:7  %shift_reg_load = load i16* getelementptr inbounds ([58 x i16]* @shift_reg, i64 0, i64 57), align 2
+
+
+ <State 3>: 7.95ns
+ST_3: stg_10 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i16* %y) nounwind, !map !0
+
+ST_3: stg_11 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i16 %x) nounwind, !map !6
+
+ST_3: stg_12 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @str) nounwind
+
+ST_3: x_read [1/1] 0.00ns
+:3  %x_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %x) nounwind
+
+ST_3: stg_14 [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [7 x i8]* @p_str1, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+
+ST_3: stg_15 [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecInterface(i16* %y, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [7 x i8]* @p_str1, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+
+ST_3: stg_16 [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecInterface(i16 %x, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [7 x i8]* @p_str1, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+
+ST_3: tmp_1_cast [1/1] 0.00ns
+:8  %tmp_1_cast = sext i16 %shift_reg_load to i26
+
+ST_3: acc [1/1] 6.38ns
+:9  %acc = mul i26 %tmp_1_cast, -378
+
+ST_3: acc_cast [1/1] 0.00ns
+:10  %acc_cast = sext i26 %acc to i37
+
+ST_3: stg_20 [1/1] 1.57ns
+:11  br label %1
+
+
+ <State 4>: 4.11ns
+ST_4: i [1/1] 0.00ns
+:1  %i = phi i6 [ -7, %0 ], [ %i_1, %2 ]
+
+ST_4: tmp_3 [1/1] 1.94ns
+:3  %tmp_3 = icmp eq i6 %i, 0
+
+ST_4: i_1 [1/1] 1.72ns
+:4  %i_1 = add i6 %i, -1
+
+ST_4: tmp_s [1/1] 0.00ns
+:5  %tmp_s = zext i6 %i_1 to i64
+
+ST_4: shift_reg_addr [1/1] 0.00ns
+:6  %shift_reg_addr = getelementptr inbounds [58 x i16]* @shift_reg, i64 0, i64 %tmp_s
+
+ST_4: shift_reg_load_1 [2/2] 2.39ns
+:7  %shift_reg_load_1 = load i16* %shift_reg_addr, align 2
+
+ST_4: tmp_6 [1/1] 0.00ns
+:9  %tmp_6 = zext i6 %i to i64
+
+ST_4: c_addr [1/1] 0.00ns
+:10  %c_addr = getelementptr inbounds [59 x i16]* @c, i64 0, i64 %tmp_6
+
+ST_4: c_load [2/2] 2.39ns
+:11  %c_load = load i16* %c_addr, align 2
+
+
+ <State 5>: 4.78ns
+ST_5: shift_reg_load_1 [1/2] 2.39ns
+:7  %shift_reg_load_1 = load i16* %shift_reg_addr, align 2
+
+ST_5: c_load [1/2] 2.39ns
+:11  %c_load = load i16* %c_addr, align 2
+
+ST_5: shift_reg_addr_1 [1/1] 0.00ns
+:16  %shift_reg_addr_1 = getelementptr inbounds [58 x i16]* @shift_reg, i64 0, i64 %tmp_6
+
+ST_5: stg_33 [1/1] 2.39ns
+:17  store i16 %shift_reg_load_1, i16* %shift_reg_addr_1, align 2
+
+
+ <State 6>: 6.38ns
+ST_6: acc1 [1/1] 0.00ns
+:0  %acc1 = phi i37 [ %acc_cast, %0 ], [ %acc_2, %2 ]
+
+ST_6: tmp_2 [1/1] 0.00ns
+:2  %tmp_2 = trunc i37 %acc1 to i31
+
+ST_6: stg_36 [1/1] 0.00ns
+:4  br i1 %tmp_3, label %3, label %2
+
+ST_6: empty [1/1] 0.00ns
+:0  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 57, i64 57, i64 57) nounwind
+
+ST_6: stg_38 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecLoopName([5 x i8]* @p_str3) nounwind
+
+ST_6: tmp [1/1] 0.00ns
+:2  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([5 x i8]* @p_str3) nounwind
+
+ST_6: stg_40 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
+
+ST_6: tmp_2_cast [1/1] 0.00ns
+:8  %tmp_2_cast = sext i16 %shift_reg_load_1 to i32
+
+ST_6: tmp_9_cast [1/1] 0.00ns
+:12  %tmp_9_cast = sext i16 %c_load to i32
+
+ST_6: tmp_1 [1/1] 3.36ns
+:13  %tmp_1 = mul i32 %tmp_9_cast, %tmp_2_cast
+
+ST_6: tmp_10_cast [1/1] 0.00ns
+:14  %tmp_10_cast = sext i32 %tmp_1 to i37
+
+ST_6: acc_2 [1/1] 3.02ns
+:15  %acc_2 = add i37 %tmp_10_cast, %acc1
+
+ST_6: empty_4 [1/1] 0.00ns
+:18  %empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([5 x i8]* @p_str3, i32 %tmp) nounwind
+
+ST_6: stg_47 [1/1] 0.00ns
+:19  br label %1
+
+
+ <State 7>: 6.38ns
+ST_7: tmp_4_cast [1/1] 0.00ns
+:0  %tmp_4_cast = sext i16 %x_read to i26
+
+ST_7: tmp_5 [1/1] 3.36ns
+:1  %tmp_5 = mul i26 %tmp_4_cast, -378
+
+ST_7: tmp_5_cast [1/1] 0.00ns
+:2  %tmp_5_cast = sext i26 %tmp_5 to i31
+
+ST_7: acc_1 [1/1] 3.02ns
+:3  %acc_1 = add i31 %tmp_2, %tmp_5_cast
+
+ST_7: stg_52 [1/1] 2.39ns
+:4  store i16 %x_read, i16* getelementptr inbounds ([58 x i16]* @shift_reg, i64 0, i64 0), align 16
+
+ST_7: tmp_8 [1/1] 0.00ns
+:5  %tmp_8 = call i16 @_ssdm_op_PartSelect.i16.i31.i32.i32(i31 %acc_1, i32 15, i32 30)
+
+ST_7: stg_54 [1/1] 0.00ns
+:6  call void @_ssdm_op_Write.ap_auto.i16P(i16* %y, i16 %tmp_8) nounwind
+
+ST_7: stg_55 [1/1] 0.00ns
+:7  ret void
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
