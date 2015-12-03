@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2014.1 (64-bit)
+# SW Build 881834 on Fri Apr  4 14:00:25 MDT 2014
+# IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
+# Start of session at: Wed Dec  2 23:12:28 2015
+# Process ID: 497
+# Log file: /home/student/svr24/ece5775/final_proj/audio_lab/vivado.log
+# Journal file: /home/student/svr24/ece5775/final_proj/audio_lab/vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  2 23:13:40 2015...

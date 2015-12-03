@@ -1,0 +1,495 @@
+/*
+
+Vivado v2014.2 (64-bit)
+SW Build 932637 on Wed Jun 11 13:08:52 MDT 2014
+Process ID: 1386
+
+Current time: 	12/2/15 11:14:59 PM
+Time zone: 	Eastern Standard Time (US/Eastern)
+
+OS: Red Hat Enterprise Linux Server release 5.11 (Tikanga)
+Version: 2.6.18-406.el5
+Architecture: amd64
+Available processors (cores): 8
+
+DISPLAY: localhost:31.0
+Screen size: 1280x720
+Screen resolution (DPI): 96
+Available screens: 1
+
+Java version: 	1.7.0_40 64-bit
+Java home: 	/opt/xilinx/Vivado/2014.2/tps/lnx64/jre
+
+User name: 	svr24
+User directory: /home/student/svr24/ece5775/final_proj/audio_lab
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Gui allocated memory:	122 mb
+Gui max memory:		3,066 mb
+Engine allocated memory: 3,870 mb
+
+*/
+
+// HColorUtils.generateUniqueColorPalette (num colors: 56) elapsed time: 1.3s
+// TclEventType: START_GUI
+// HMemoryUtils.trashcanNow. Engine heap size: 3,870 MB. GUI used memory: 22 MB. Current time: 12/2/15 11:15:02 PM
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // k:JideButton (JPanel:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// [GUI Memory]: 32 mb (+30723kb) [00:00:23]
+// [Engine Memory]: 3,870 mb (+3906116kb) [00:00:23]
+setFileChooser("/home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.xpr");
+// co:P (cg:JFrame):  Open Project : addNotify
+// Tcl Message: open_project /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.xpr 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 53 mb (+22069kb) [00:00:37]
+// [Engine Memory]: 3,883 mb (+13869kb) [00:00:37]
+// [Engine Memory]: 3,932 mb (+51367kb) [00:00:39]
+// Tcl Message: open_project /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/student/tjp79/classes/ece5775/audio_lab/audio' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/student/svr24/ece5775/final_proj/audio_lab/ip_repo'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/student/svr24/ece5775/final_proj/audio_lab/fir.prj/solution1/impl/ip'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/Vivado/2014.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,938 MB. GUI used memory: 27 MB. Current time: 12/2/15 11:15:27 PM
+// [Engine Memory]: 3,938 mb (+6299kb) [00:00:41]
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 4653.305 ; gain = 63.941 
+// 'g' command handler elapsed time: 21 seconds
+// Elapsed time: 16 seconds
+dismissDialog("Open Project"); // co:P (cg:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 73 mb (+21140kb) [00:01:01]
+// PAPropertyPanels.initPanels (system.bd) elapsed time: 0.4s
+// [GUI Memory]: 83 mb (+10446kb) [00:01:02]
+// [Engine Memory]: 3,943 mb (+4956kb) [00:01:02]
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system (system.bd)]", 1, true); // u:k (w:JPanel, cg:JFrame) - Node
+// [Engine Memory]: 3,956 mb (+14491kb) [00:01:03]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system (system.bd), system_axi_gpio_0_0 (system_axi_gpio_0_0.xci)]", 2, false, false, false, false, false, true); // u:k (w:JPanel, cg:JFrame) - Double Click
+// co:P (cg:JFrame):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {/home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.srcs/sources_1/bd/system/system.bd} 
+// Tcl Message: Adding component instance block -- xilinx.com:ip:processing_system7:5.4 - processing_system7_0 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,963 MB. GUI used memory: 28 MB. Current time: 12/2/15 11:15:51 PM
+// [Engine Memory]: 3,963 mb (+6459kb) [00:01:11]
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0 Adding component instance block -- xilinx.com:user:zed_audio_ctrl:1.0 - zed_audio_ctrl_0 Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M Adding component instance block -- xilinx.com:hls:fir:1.0 - fir_left Adding component instance block -- xilinx.com:hls:fir:1.0 - fir_right Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 3,964 mb (+2031kb) [00:01:19]
+// [Engine Memory]: 4,103 mb (+145752kb) [00:01:25]
+// [Engine Memory]: 4,104 mb (+1048kb) [00:01:25]
+// [Engine Memory]: 4,115 mb (+11534kb) [00:01:26]
+// [Engine Memory]: 4,129 mb (+13901kb) [00:01:26]
+// [Engine Memory]: 4,139 mb (+10485kb) [00:01:26]
+// Tcl Message: Successfully read diagram <system> from BD file </home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.srcs/sources_1/bd/system/system.bd> 
+// HMemoryUtils.trashcanNow. Engine heap size: 4,139 MB. GUI used memory: 31 MB. Current time: 12/2/15 11:16:15 PM
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:26 . Memory (MB): peak = 4873.621 ; gain = 189.605 
+// Elapsed time: 26 seconds
+dismissDialog("Open Block Design"); // co:P (cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// co:P (cg:JFrame):  Re-customize IP : addNotify
+// [Engine Memory]: 4,147 mb (+8323kb) [00:02:36]
+// q:P (cg:JFrame): Re-customize IP: addNotify
+// cn:ae (q:P): Configuration Presets: addNotify
+// [Engine Memory]: 4,150 mb (+3149kb) [00:02:40]
+// Elapsed time: 70 seconds
+dismissDialog("Re-customize IP"); // co:P (cg:JFrame)
+// [Engine Memory]: 4,156 mb (+6299kb) [00:02:46]
+// Elapsed time: 12 seconds
+selectButton("Interrupts", "Interrupts"); // k:JideButton (cj:ButtonPanel, q:P)
+selectTreeTable(PAResourceEtoH.GICTreeTablePanel_GIC_TREE_TABLE, "Fabric Interrupts ;  ; Enable PL Interrupts to PS and vice versa", 0, "Fabric Interrupts", 0, true); // ap:cw (JViewport:JComponent, q:P) - Node
+selectCheckBox((HResource) null, (String) null, true); // cy:h (ap:cw, q:P): TRUE
+// Elapsed time: 18 seconds
+selectCheckBox((HResource) null, (String) null, false); // cy:h (ap:cw, q:P): FALSE
+selectCheckBox((HResource) null, (String) null, true); // cy:h (ap:cw, q:P): TRUE
+expandTreeTable(PAResourceEtoH.GICTreeTablePanel_GIC_TREE_TABLE, "Fabric Interrupts ;  ; Enable PL Interrupts to PS and vice versa", 0); // ap:cw (JViewport:JComponent, q:P)
+expandTreeTable(PAResourceEtoH.GICTreeTablePanel_GIC_TREE_TABLE, "PL-PS Interrupt Ports ; PL-PS Interrupt Ports ; PL-PS Interrupt Ports", 1); // ap:cw (JViewport:JComponent, q:P)
+selectTreeTable(PAResourceEtoH.GICTreeTablePanel_GIC_TREE_TABLE, "IRQ_F2P[15:0] ; [91:84], [68:61] ; Enables 16-bit shared interrupt port from the PL. MSB is assigned the highest Interrupt ID of 91", 2, "IRQ_F2P[15:0]", 0, false); // ap:cw (JViewport:JComponent, q:P)
+selectCheckBox((HResource) null, (String) null, true); // cy:h (ap:cw, q:P): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, q:P)
+// co:P (q:P):  Customize IP : addNotify
+// Tcl Message: startgroup 
+// TclEventType: RSB_PROPERTY_CHANGE
+// [GUI Memory]: 83 mb (+227kb) [00:03:40]
+// [Engine Memory]: 4,163 mb (+7340kb) [00:03:40]
+// Tcl Message: set_property -dict [list CONFIG.PCW_USE_FABRIC_INTERRUPT {1} CONFIG.PCW_IRQ_F2P_INTR {1}] [get_bd_cells processing_system7_0] 
+// Tcl Message: endgroup 
+// HMemoryUtils.trashcanNow. Engine heap size: 4,163 MB. GUI used memory: 45 MB. Current time: 12/2/15 11:18:27 PM
+dismissDialog("Customize IP"); // co:P (q:P)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 437, 96, 754, 386, false, false, false, true, false); // dd:aC (TdiGroup:JideTabbedPane, cg:JFrame) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC, "Customize Block..."); // ab:JMenuItem (ag:JPopupMenu, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// [Engine Memory]: 4,169 mb (+7004kb) [00:03:45]
+// co:P (cg:JFrame):  Re-customize IP : addNotify
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, co:P)
+// [Engine Memory]: 4,172 mb (+3145kb) [00:03:52]
+dismissDialog("Re-customize IP"); // co:P (cg:JFrame)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 327, 107, 754, 386, false, false, false, true, false); // dd:aC (TdiGroup:JideTabbedPane, cg:JFrame) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ab:JMenuItem (ag:JPopupMenu, cg:JFrame)
+// [GUI Memory]: 90 mb (+7256kb) [00:04:06]
+// Elapsed time: 67 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "concat"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Concat ; xilinx.com:ip:xlconcat:2.1", 7, "Concat", 0, false); // J:aq (JViewport:JComponent, ResizableWindow:JWindow)
+applyEnter(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, (String) null); // J:aq (JViewport:JComponent, ResizableWindow:JWindow)
+// Tcl Message: startgroup 
+// co:P (cg:JFrame):  Add IP : addNotify
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // co:P (cg:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 93 mb (+3484kb) [00:05:10]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 93 mb (+38kb) [00:05:35]
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fir_right/interrupt] [get_bd_pins xlconcat_0/In0] 
+// PAPropertyPanels.initPanels (fir_right_interrupt) elapsed time: 0.2s
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fir_left/interrupt] [get_bd_pins xlconcat_0/In1] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins processing_system7_0/IRQ_F2P] 
+// Elapsed time: 101 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cg:JFrame)
+// Elapsed time: 63 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, "Validate Design"); // ab:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN
+// TclEventType: RSB_SCRIPT_TASK
+// co:P (cg:JFrame):  Validate Design : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: validate_bd_design 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [GUI Memory]: 96 mb (+2748kb) [00:07:59]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: validate_bd_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 4907.418 ; gain = 0.000 
+// Elapsed time: 15 seconds
+dismissDialog("Validate Design"); // co:P (cg:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton("PAResourceTtoZ.ValidateRSBDesign_VALIDATION_SUCCESSFUL_THERE_NO_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, P:JDialog)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cg:JFrame)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cg:JFrame)
+// Elapsed time: 14 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // u:k (w:JPanel, cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // u:k (w:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system (system.bd)]", 1, true, false, false, false, true, false); // u:k (w:JPanel, cg:JFrame) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_CREATE_TOP_HDL, "Create HDL Wrapper..."); // ab:JMenuItem (ag:JPopupMenu, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CREATE_TOP_HDL
+// a:ae (cg:JFrame): Create HDL Wrapper: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, a:ae)
+// 'H' command handler elapsed time: 8 seconds
+dismissDialog("Create HDL Wrapper"); // a:ae (cg:JFrame)
+// co:P (cg:JFrame):  Create HDL Wrapper : addNotify
+// Tcl Message: make_wrapper -files [get_files /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.srcs/sources_1/bd/system/system.bd] -top 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: Exporting to file /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.srcs/sources_1/bd/system/hw_handoff/system.hwh 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Verilog Output written to : system.v Verilog Output written to : system_wrapper.v 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// [Engine Memory]: 4,181 mb (+8912kb) [00:09:14]
+// Tcl Message: Wrote  : </home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.srcs/sources_1/bd/system/system.bd>  
+// Tcl Message: make_wrapper: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 4915.914 ; gain = 8.496 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 4,183 mb (+2301kb) [00:09:14]
+// Tcl Message: add_files -norecurse /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.srcs/sources_1/bd/system/hdl/system_wrapper.v 
+// Elapsed time: 17 seconds
+dismissDialog("Create HDL Wrapper"); // co:P (cg:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 4,203 MB. GUI used memory: 47 MB. Current time: 12/2/15 11:24:02 PM
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 4,203 mb (+20463kb) [00:09:16]
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 4,206 mb (+3686kb) [00:09:18]
+// [Engine Memory]: 4,210 mb (+3694kb) [00:09:39]
+// Elapsed time: 28 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // w:X (v:w, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cg:JFrame): Add Sources: addNotify
+// [Engine Memory]: 4,213 mb (+3948kb) [00:09:46]
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_OR_CREATE_CONSTRAINT_FILES, "Add or Create Constraints"); // a:JRadioButton (JPanel:JComponent, b:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files..."); // a:JButton (JPanel:JComponent, b:g)
+// Elapsed time: 49 seconds
+setFileChooser("/home/student/svr24/ece5775/final_proj/audio_lab/zed_audio_constraints.xdc");
+// Elapsed time: 13 seconds
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'f' command handler elapsed time: 75 seconds
+dismissDialog("Add Sources"); // b:g (cg:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 -norecurse /home/student/svr24/ece5775/final_proj/audio_lab/zed_audio_constraints.xdc 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_files -fileset constrs_1 /home/student/svr24/ece5775/final_proj/audio_lab/zed_audio_constraints.xdc 
+// [Engine Memory]: 4,216 mb (+2588kb) [00:11:01]
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // w:X (v:w, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// an:bF (cg:JFrame): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, an:bF)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // an:bF (cg:JFrame)
+dismissDialog("No Implementation Results Available"); // an:bF (cg:JFrame)
+// Tcl Message: reset_run synth_1 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// co:P (cg:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 4,222 mb (+6291kb) [00:11:28]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Exporting to file /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.srcs/sources_1/bd/system/hw_handoff/system.hwh Verilog Output written to : system.v Verilog Output written to : system_wrapper.v 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Wrote  : </home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.srcs/sources_1/bd/system/system.bd>  
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_processing_system7_0_0'... 
+// [Engine Memory]: 4,222 mb (+65kb) [00:11:31]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,227 MB. GUI used memory: 47 MB. Current time: 12/2/15 11:26:32 PM
+// [Engine Memory]: 4,227 mb (+5242kb) [00:11:56]
+// [Engine Memory]: 4,230 mb (+3145kb) [00:12:21]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_axi_gpio_0_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 . INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_zed_audio_ctrl_0_0'... 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block zed_audio_ctrl_0 . INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_rst_processing_system7_0_100M_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M . INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_xbar_0'... INFO: [IP_Flow 19-616] The current project language is set to Verilog. However the IP definition 'xilinx.com:ip:fifo_generator:12.0' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead. INFO: [IP_Flow 19-616] The current project language is set to Verilog. However the IP definition 'xilinx.com:ip:blk_mem_gen:8.2' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead. 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Dec  2 23:27:30 2015] Launched synth_1... Run output will be captured here: /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.runs/synth_1/runme.log [Wed Dec  2 23:27:30 2015] Launched impl_1... Run output will be captured here: /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:01:33 ; elapsed = 00:01:32 . Memory (MB): peak = 4964.961 ; gain = 14.062 
+// Elapsed time: 92 seconds
+dismissDialog("Generate Bitstream"); // co:P (cg:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 99 mb (+2722kb) [00:18:31]
+// [Engine Memory]: 4,240 mb (+10272kb) [00:18:31]
+// TclEventType: RUN_COMPLETED
+// [Engine Memory]: 4,242 mb (+2097kb) [00:19:11]
+// N:an (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 393 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, N:an)
+// bF:P (cg:JFrame): Feedback Request: addNotify
+dismissDialog("Bitstream Generation Completed"); // N:an (cg:JFrame)
+selectButton(RDIResource.BaseDialog_NO, "No"); // a:JButton (JPanel:JComponent, bF:P)
+dismissDialog("Feedback Request"); // bF:P (cg:JFrame)
+selectButton("PAResourceTtoZ.TouchpointSurveyDialog_USE_TOOLS_OPTIONS_WINDOWS_BEHAVIOR_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, P:JDialog)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_EXAMPLE_PROJECT, "Open Example Project"); // Y:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Y:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Y:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Y:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware"); // ab:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// s:ae (cg:JFrame): Export Hardware: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, s:ae)
+// 'd' command handler elapsed time: 5 seconds
+dismissDialog("Export Hardware"); // s:ae (cg:JFrame)
+// Tcl Message: file mkdir /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk 
+// co:P (cg:JFrame):  Export Hardware : addNotify
+// Tcl Message: file copy -force /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.runs/impl_1/system_wrapper.sysdef /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk/system_wrapper.hdf  
+dismissDialog("Export Hardware"); // co:P (cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Y:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ab:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// G:ae (cg:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, G:ae)
+// 'm' command handler elapsed time: 5 seconds
+dismissDialog("Launch SDK"); // G:ae (cg:JFrame)
+// co:P (cg:JFrame):  Launch SDK : addNotify
+// Tcl Message: launch_sdk -workspace /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk -hwspec /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk/system_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk -hwspec /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk/system_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+dismissDialog("Launch SDK"); // co:P (cg:JFrame)
+// Elapsed time: 63 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectButton(PAResourceCommand.PACommandNames_OPEN_PROJECT, "open_project"); // v:JideButton (CommandBar:DockableBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// Elapsed time: 17 seconds
+dismissFileChooser();
+// 'g' command handler elapsed time: 17 seconds
+// Elapsed time: 41 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_EXAMPLE_PROJECT, "Open Example Project"); // Y:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Y:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ab:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// G:ae (cg:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, G:ae)
+dismissDialog("Launch SDK"); // G:ae (cg:JFrame)
+// co:P (cg:JFrame):  Launch SDK : addNotify
+// Tcl Message: launch_sdk -workspace /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk -hwspec /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk/system_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk -hwspec /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk/system_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+dismissDialog("Launch SDK"); // co:P (cg:JFrame)
+// [GUI Memory]: 99 mb (+185kb) [00:27:26]
+// [GUI Memory]: 100 mb (+878kb) [00:27:51]
+// [GUI Memory]: 101 mb (+1271kb) [00:28:16]
+// Elapsed time: 384 seconds
+selectButton(PAResourceCommand.PACommandNames_OPEN_PROJECT, "open_project"); // v:JideButton (CommandBar:DockableBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// [GUI Memory]: 103 mb (+2081kb) [00:30:58]
+// [GUI Memory]: 106 mb (+3180kb) [00:33:03]
