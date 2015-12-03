@@ -2,9 +2,35 @@
 # Vivado v2014.2 (64-bit)
 # SW Build 932637 on Wed Jun 11 13:08:52 MDT 2014
 # IP Build 924643 on Fri May 30 09:20:16 MDT 2014
-# Start of session at: Wed Dec  2 22:56:40 2015
-# Process ID: 32036
-# Log file: /home/student/tjp79/classes/ece5775/audio_lab/vivado.log
-# Journal file: /home/student/tjp79/classes/ece5775/audio_lab/vivado.jou
+# Start of session at: Wed Dec  2 23:14:28 2015
+# Process ID: 1386
+# Log file: /home/student/svr24/ece5775/final_proj/audio_lab/vivado.log
+# Journal file: /home/student/svr24/ece5775/final_proj/audio_lab/vivado.jou
 #-----------------------------------------------------------
 start_gui
+open_project /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.xpr
+open_bd_design {/home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.srcs/sources_1/bd/system/system.bd}
+startgroup
+set_property -dict [list CONFIG.PCW_USE_FABRIC_INTERRUPT {1} CONFIG.PCW_IRQ_F2P_INTR {1}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+connect_bd_net [get_bd_pins fir_right/interrupt] [get_bd_pins xlconcat_0/In0]
+connect_bd_net [get_bd_pins fir_left/interrupt] [get_bd_pins xlconcat_0/In1]
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins processing_system7_0/IRQ_F2P]
+validate_bd_design
+make_wrapper -files [get_files /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.srcs/sources_1/bd/system/system.bd] -top
+add_files -norecurse /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.srcs/sources_1/bd/system/hdl/system_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+add_files -fileset constrs_1 -norecurse /home/student/svr24/ece5775/final_proj/audio_lab/zed_audio_constraints.xdc
+import_files -fileset constrs_1 /home/student/svr24/ece5775/final_proj/audio_lab/zed_audio_constraints.xdc
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+file mkdir /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk
+file copy -force /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.runs/impl_1/system_wrapper.sysdef /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk/system_wrapper.hdf
+
+launch_sdk -workspace /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk -hwspec /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk/system_wrapper.hdf
+launch_sdk -workspace /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk -hwspec /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk/system_wrapper.hdf
