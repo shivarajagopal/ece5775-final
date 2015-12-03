@@ -2,25 +2,26 @@
 #define NEURALNETWORK_H
 
 #define learningRate 0.001
-#define momentum     0.8
-#define maxEpoch     4
-#define INPUTSIZE    784
-#define HIDDENSIZE    500
-#define OUTPUTSIZE    10
+#define momentum     0.85
+#define maxEpoch     3
+#define INPUT_SIZE    882
+#define HIDDEN_SIZE    500
+#define OUTPUT_SIZE    10
+#define DESIRED_ACCURACY 0.98
 
 typedef struct _NeuralNetwork NeuralNetwork;
 
 // construct the neural network
-NeuralNetwork* neuralNetwork(int nInput, int nOutput);
+NeuralNetwork* neuralNetwork();
 
 void saveNetwork(NeuralNetwork* neuralNetwork, const char outputfile[]);
 NeuralNetwork* loadNetwork(const char inputfile[]);
 
-void feedForward(NeuralNetwork* nn, float pattern[INPUTSIZE]);
-int guessClassification(int nOutput, float output[OUTPUTSIZE]);
-float getTestAccuracy(NeuralNetwork* nn, float inputs[][INPUTSIZE], int labels[INPUTSIZE], int size);
+void feedForward(NeuralNetwork* nn, float pattern[INPUT_SIZE]);
+int guessClassification(float output[OUTPUT_SIZE]);
+float getTestAccuracy(NeuralNetwork* nn, float inputs[][INPUT_SIZE], int labels[INPUT_SIZE], int size);
 void trainNetwork(NeuralNetwork* nn, 
-                  float inputs[][INPUTSIZE], int labels[INPUTSIZE], int size,
-                  float testInputs[][INPUTSIZE], int testLabels[INPUTSIZE], int testSize);
+                  float inputs[][INPUT_SIZE], int labels[INPUT_SIZE], int size,
+                  float testInputs[][INPUT_SIZE], int testLabels[INPUT_SIZE], int testSize);
 
 //#endif
