@@ -8,8 +8,9 @@ end
 for i= 1:iterations
     fprintf(fid, 'const double %s%d[63][14]={', filename, i);
     close all
-    disp('Get Ready...')
-    pause(3)
+    disp('Sample number: ');
+    disp(i);
+    pause(0.5)
     sound = recordAndClean;
     xform = FFTandMell(sound, 256, 128, 300, 4000, 26);
     dctans = (dct(xform));
