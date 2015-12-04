@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
  
   voicerec(NP, inSound, result);
 
-  classification = classify(nn, result);
+  classification = classifySound(nn, result);
   std::cout << "classification: " << classification;
 
   return 0;

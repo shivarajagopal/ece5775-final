@@ -151,7 +151,7 @@ float getTestAccuracy(NeuralNetwork* nn, float inputs[][INPUT_SIZE], int labels[
   return 1.0 - (float)incorrectPatterns / (float)size;
 }
 
-int classify(NeuralNetwork* nn, float input[63][14]) {
+int classifySound(NeuralNetwork* nn, float input[63][14]) {
   int guess;
   float flatInput[INPUT_SIZE];
   for (int i = 0; i < 63; i++) {
