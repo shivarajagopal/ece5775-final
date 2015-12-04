@@ -98,7 +98,7 @@ void feedForward(NeuralNetwork* nn, float pattern[INPUT_SIZE]) {
   outfile.open("feedforward.dat", std::ofstream::app);
   // enter pattern value into input neurons
   for (int j = 0; j < INPUT_SIZE; j++){
-    //outfile << "input[" << j << "] = " << pattern[j] << "\n";
+    outfile << "input[" << j << "] = " << pattern[j] << "\n";
     nn->input[j] = pattern[j];
   }
   for (int j = 0; j < HIDDEN_SIZE; j++) {
@@ -107,6 +107,7 @@ void feedForward(NeuralNetwork* nn, float pattern[INPUT_SIZE]) {
     // and then enter them into an activation function: 1/(1+exp(-x))
     for (int k = 0; k < INPUT_SIZE+1; k++)
       nn->hidden[j] += nn->input[k] * nn->weightIH[k][j];
+    outfile << "hidden[" << j << "] = " << nn->hidden[j] << "\n";
     nn->hidden[j] = 1/(1+exp(-1*(nn->hidden[j])));
     //outfile << "hidden[" << j << "] = " << nn->hidden[j] << "\n";
   }
@@ -119,7 +120,7 @@ void feedForward(NeuralNetwork* nn, float pattern[INPUT_SIZE]) {
     for (int k = 0; k < HIDDEN_SIZE+1; k++)
       nn->output[j] += nn->hidden[k] * nn->weightHO[k][j];
     nn->output[j] = 1/(1+exp(-1*(nn->output[j])));
-    //outfile << "output[" << j << "] = " << nn->output[j] << "\n";
+    outfile << "output[" << j << "] = " << nn->output[j] << "\n";
   }
   outfile.close();
 }
@@ -128,6 +129,7 @@ int guessClassification(float output[OUTPUT_SIZE]) {
   float max = 0;
   int guess;
   for (int j = 0; j < OUTPUT_SIZE; j++) {
+    std::cout << "output: " << j << " = " << output[j] << "\n";
     if (output[j] > max) {
       guess = j;
       max = output[j];
@@ -151,12 +153,12 @@ float getTestAccuracy(NeuralNetwork* nn, float inputs[][INPUT_SIZE], int labels[
   return 1.0 - (float)incorrectPatterns / (float)size;
 }
 
-int classifySound(NeuralNetwork* nn, float input[63][14]) {
+int classifySound(NeuralNetwork* nn, double input[63][14]) {
   int guess;
   float flatInput[INPUT_SIZE];
   for (int i = 0; i < 63; i++) {
     for (int j = 0; j < 14; j++) {
-      flatInput[i*j + j] = input[i][j];
+      flatInput[i*14 + j] = (float)(input[i][j]);
     }
   }
 
