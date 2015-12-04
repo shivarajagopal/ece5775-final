@@ -1,4 +1,4 @@
-//#ifndef NEURALNETWORK_H
+#ifndef NEURALNETWORK_H
 #define NEURALNETWORK_H
 
 #define learningRate 0.001
@@ -20,8 +20,9 @@ NeuralNetwork* loadNetwork(const char inputfile[]);
 void feedForward(NeuralNetwork* nn, float pattern[INPUT_SIZE]);
 int guessClassification(float output[OUTPUT_SIZE]);
 float getTestAccuracy(NeuralNetwork* nn, float inputs[][INPUT_SIZE], int labels[INPUT_SIZE], int size);
+int classifySound(NeuralNetwork* nn, float input[63][14]);
 void trainNetwork(NeuralNetwork* nn, 
                   float inputs[][INPUT_SIZE], int labels[INPUT_SIZE], int size,
                   float testInputs[][INPUT_SIZE], int testLabels[INPUT_SIZE], int testSize);
 
-//#endif
+#endif

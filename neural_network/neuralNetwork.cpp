@@ -151,6 +151,19 @@ float getTestAccuracy(NeuralNetwork* nn, float inputs[][INPUT_SIZE], int labels[
   return 1.0 - (float)incorrectPatterns / (float)size;
 }
 
+int classify(NeuralNetwork* nn, float input[63][14]) {
+  int guess;
+  float flatInput[INPUT_SIZE];
+  for (int i = 0; i < 63; i++) {
+    for (int j = 0; j < 14; j++) {
+      flatInput[i*j + j] = input[i][j];
+    }
+  }
+
+  feedForward(nn, flatInput);
+  return guessClassification(nn->output);
+}
+
 // train the network 
 // note: the _<____+1 in the for loop conditions could be _<=____ instead
 // PRECONDITIONS:
