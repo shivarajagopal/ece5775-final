@@ -1,7 +1,7 @@
-function Recorder(iterations, filename)
+function genTestSamples(iterations, filename)
 % This script records a sound, cleans it up, runs a piecewise FFT, and finally a Mell Transform on it.
 % Be ready to speak quickly after running
-fid = fopen(strcat(filename, '.h'), 'w');
+fid = fopen(strcat('test_',strcat(filename, '.h')), 'w');
 if (fid==1)
     return
 end

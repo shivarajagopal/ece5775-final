@@ -1,3 +1,41 @@
+function genTrainingData(iterations, filename)
+% This script records a sound, cleans it up, runs a piecewise FFT, and finally a Mell Transform on it.
+% Be ready to speak quickly after running
+fid = fopen(strcat('train_',strcat(filename, '.h')), 'w');
+if (fid==1)
+    return
+end
+for i= 1:iterations
+    fprintf(fid, 'const double %s%d[63][14]={', filename, i);
+    close all
+    disp('Sample number: ');
+    disp(i);
+    pause(0.5)
+    sound = recordAndClean;
+    xform = FFTandMell(sound, 256, 128, 300, 4000, 26);
+    dctans = (dct(xform));
+    dctans = dctans(1:14,:);
+    for j= 1:63
+        fprintf(fid, '{');
+        for k=1:14
+            if k == 14
+                fprintf(fid, '%f', dctans(k,j));
+            else
+                fprintf(fid, '%f,', dctans(k,j));
+            end            
+        end
+        if j==63
+            fprintf(fid, '}\n');
+        else
+            fprintf(fid, '},\n');
+        end
+    end
+    fprintf(fid, '};\n\n');
+end
+fclose('all')
+end
+
+
 function out = recordAndClean()
 while(1)
     % Record a 2-second sample at 8 kHz
@@ -93,3 +131,76 @@ while(1)
 end
 out=y2;
 close all
+end
+
+function outMatrix = FFTandMell(soundIn, stepSize, stride, minFreq, maxFreq, nMell)
+% Returns the spaced FFTs as columns
+first = 1;
+last = stepSize;
+done=0;
+idx = 1;
+cols = ceil(length(soundIn) / stepSize);
+outXForm = zeros(nMell, cols);
+while(~done)
+
+    if (last > length(soundIn))
+        piece = soundIn(first:end);
+        needZeros = 256 - length(piece);
+        zeropad = zeros(needZeros,1);
+        piece = [piece;zeropad];
+    else
+        piece = soundIn(first:last);
+    end
+    outFFTvec = abs(fft(piece));
+    outPowerSpec = (outFFTvec.^2)./stepSize;
+    outXForm(1:nMell, idx) = mellTransform(outPowerSpec, minFreq, maxFreq, nMell);
+
+    idx= idx + 1;
+    first = first + stride;
+    last = last + stride;
+    if (first > length(soundIn))
+        done = 1;
+    end
+end
+outMatrix = outXForm;
+
+end
+
+function xformed = mellTransform(FFTvector, minFreq, maxFreq, nBanks)
+
+%Get Mell of Low and High frequencies
+mellLow = 1125 * log(1+(minFreq/700));
+mellHigh = 1125 * log(1+(maxFreq/700));
+
+% Get a spacing for the filters, based on the number of desired banks
+spacing = (mellHigh-mellLow)/(nBanks);
+
+% Get all Mell Freqs on frequency
+mellFreqs = mellLow:spacing:mellHigh;
+
+% Convert back to regular frequencies
+spacedFreqs = 700*(exp(mellFreqs./1125) -1);
+
+% Get as indices of FFT
+indices = floor(((length(FFTvector(:,1)))+1).*spacedFreqs / maxFreq);
+
+% Calculate a series of Mell-based coefficients
+
+cols = length(FFTvector(1,:));
+rows = nBanks;
+mellCoeffs = zeros(rows,1);
+
+for j = 1:nBanks
+    mellCoeffs(j, 1) = sum(FFTvector(indices(j)+1:indices(j+1),1));
+    if (j==1) 
+        mellCoeffs(j,1) = mellCoeffs(j,1) + FFTvector(indices(1),1);
+    end
+    if (mellCoeffs(j,1) <= 0)
+        mellCoeffs(j,1) = 0;
+    else
+        mellCoeffs(j,1) = log(mellCoeffs(j,1));
+    end
+end
+
+xformed = mellCoeffs;
+end
