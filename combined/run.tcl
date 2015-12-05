@@ -14,6 +14,7 @@ set_top voicerec
 
 # Add design and testbench files
 add_files voicerec.cpp
+add_files neuralNetwork.cpp
 add_files -tb voicerec_test.cpp
 add_files -tb data
 

@@ -26,5 +26,5 @@ void processChunk( int sp, int np, double *ret, double *inSound );
 
 void preprocessSound(double *inSound, int inSize, double *outSound, int outSize);
 
-void voicerec(int np, double *inSound, double result[NUMRESULTS][(NUM_BANKS/2)+1]);
+int voicerec(int np, double *inSound);
 #endif

@@ -7,6 +7,7 @@
 #include <inttypes.h>
 #include "constArrays.h"
 #include "voicerec.h"
+#include "neuralNetwork.h"
 
 #define M_PI 3.14159265358979323846
 #define LINESIZE 256
@@ -270,8 +271,11 @@ void preprocessSound(double *inSound, int inSize, double *outSound, int outSize)
   }
 }
 
-void voicerec(int np, double inSound[ORIGSIZE], double result[NUMRESULTS][(NUM_BANKS/2)+1]) {
-  int i = 0, j=0, stride = 0;
+NeuralNetwork* nn;
+double result[NUMRESULTS][(NUM_BANKS/2)+1];
+int voicerec(int np, double inSound[ORIGSIZE]) {
+  nn = loadNetwork("speech_weights.dat");  
+  int i = 0, j=0, stride = 0, classification = -1;
 
   stride = np/2;
   int num_results = (8000/stride);
@@ -287,5 +291,7 @@ void voicerec(int np, double inSound[ORIGSIZE], double result[NUMRESULTS][(NUM_B
     }
     index++;
   }
+  classification = classifySound(nn, result);
+  return classification;
   //result = results;
 }
