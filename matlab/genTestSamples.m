@@ -1,6 +1,12 @@
 function genTestSamples(iterations, filename)
-% This script records a sound, cleans it up, runs a piecewise FFT, and finally a Mell Transform on it.
-% Be ready to speak quickly after running
+% This script records 2 seconds of sound and outputs it to 
+% a C header file of type double. 8kHz, 2 seconds = 16000 samples.
+% @in: iterations- number of test samples to generate
+% @in: filename- String of name of samples and filename
+%
+% Output: File of name test_<filename>.h containing arrays 
+%   of format <filename>x[16000]
+
 fid = fopen(strcat('test_',strcat(filename, '.h')), 'w');
 if (fid==1)
     return

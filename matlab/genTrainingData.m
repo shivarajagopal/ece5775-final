@@ -1,7 +1,17 @@
 function genTrainingData(iterations, filename)
-% This script records a sound, cleans it up, runs a piecewise FFT, and finally a Mell Transform on it.
-% Be ready to speak quickly after running
-fid = fopen(strcat('train_',strcat(filename, '.h')), 'w');
+% This script records 2 seconds of sound, cleans it up, runs a 
+% piecewise FFT, followed by a Mell Transform, combination of Mell buckets,
+% and then an inverse Mell transform. Finally, we run a DCT on the result.
+% This is then output to a C data file of type double. This ends up with 
+% a 2D array of size 63x14.
+%
+% @in: iterations- number of test samples to generate
+% @in: filename- String of name of samples and filename
+%
+% Output: File of name train_<filename>.dat containing arrays 
+%   of format <filename>x[63][14]
+
+fid = fopen(strcat('train_',strcat(filename, '.dat')), 'w');
 if (fid==1)
     return
 end
