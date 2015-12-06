@@ -42,7 +42,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
 set SourceFiles {sc {} c {../../neuralNetworkSynth.cpp ../../voicerec.cpp}}
 set SourceFlags {sc {} c {{} {}}}
-set DirectiveFile {/home/student/iyv2/ece5775/ece5775-final/combined/voicerec.prj/solution1/solution1.directive}
+set DirectiveFile {/home/student/svr24/ece5775/final_proj/combined/voicerec.prj/solution1/solution1.directive}
 set TBFiles {verilog {../../data ../../voicerec_test.cpp} bc {../../data ../../voicerec_test.cpp} sc {../../data ../../voicerec_test.cpp} vhdl {../../data ../../voicerec_test.cpp} c {} cas {../../data ../../voicerec_test.cpp}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

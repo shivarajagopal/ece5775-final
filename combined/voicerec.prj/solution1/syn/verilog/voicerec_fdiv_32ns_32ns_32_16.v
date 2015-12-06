@@ -10,7 +10,7 @@
 
 module voicerec_fdiv_32ns_32ns_32_16
 #(parameter
-    ID         = 17,
+    ID         = 16,
     NUM_STAGE  = 16,
     din0_WIDTH = 32,
     din1_WIDTH = 32,

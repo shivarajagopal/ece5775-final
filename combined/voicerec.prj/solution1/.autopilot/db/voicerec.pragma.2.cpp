@@ -1,5 +1,5 @@
-# 1 "/home/student/iyv2/ece5775/ece5775-final/combined/voicerec.prj/solution1/.autopilot/db/voicerec.pragma.1.cpp"
-# 1 "/home/student/iyv2/ece5775/ece5775-final/combined/voicerec.prj/solution1/.autopilot/db/voicerec.pragma.1.cpp" 1
+# 1 "/home/student/svr24/ece5775/final_proj/combined/voicerec.prj/solution1/.autopilot/db/voicerec.pragma.1.cpp"
+# 1 "/home/student/svr24/ece5775/final_proj/combined/voicerec.prj/solution1/.autopilot/db/voicerec.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -198,7 +198,7 @@ extern "C" {
 #define _ssdm_op_Delayed(X) X */
 # 6 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "/home/student/iyv2/ece5775/ece5775-final/combined/voicerec.prj/solution1/.autopilot/db/voicerec.pragma.1.cpp" 2
+# 1 "/home/student/svr24/ece5775/final_proj/combined/voicerec.prj/solution1/.autopilot/db/voicerec.pragma.1.cpp" 2
 # 1 "voicerec.cpp"
 # 1 "voicerec.cpp" 1
 # 1 "<built-in>" 1
@@ -42024,11 +42024,11 @@ void dut(
     hls::stream<bit32_t> &strm_out
 );
 
-void processChunk( int sp, int np, double *ret, double *inSound );
+void processChunk( int sp, double *ret, double *inSound );
 
 void preprocessSound(double *inSound, int inSize, double *outSound, int outSize);
 
-int voicerec(int np, double *inSound);
+int voicerec(double *inSound);
 # 10 "voicerec.cpp" 2
 # 1 "./neuralNetworkSynth.h" 1
 
@@ -42122,16 +42122,16 @@ void dct_ii(int N, double *x, double *X) {
   isign = 1 for forward FFT, -1 for inverse FFT.
 */
 
-void FFT( double *c, int N, int isign )
+void FFT( double *c, int isign )
 {
-  int n, n2, nb, j, k, i0, i1;
+  int n, n2, nb, j, k, i0, i1, q;
   double wr, wi, wrk, wik;
   double d, dr, di, d0r, d0i, d1r, d1i;
   double *cp;
 
   j = 0;
-  n2 = N / 2;
-  for( k = 0; k < N; ++k )
+  n2 = 256 / 2;
+  for( k = 0; k < 256; ++k )
   {
     if( k < j )
     {
@@ -42144,46 +42144,56 @@ void FFT( double *c, int N, int isign )
       c[i1] = dr;
       c[i1+1] = di;
     }
-    n = N >> 1;
-    while( (n >= 2) && (j >= n) )
-    {
-      j -= n;
-    n = n >> 1;
+    n = 256 >> 1;
+    //while( (n >= 2) && (j >= n) )
+    //{
+      //j -= n;
+      //n = n >> 1;
+    //}
+    for (q=0; q < 7; ++q) {
+      if ( (j >= n) && (n >= 2) ) {
+        j -= n;
+        n = n >> 1;
+      }
     }
     j += n;
   }
 
-  for( n = 2; n <= N; n = n << 1 )
+  for( n = 2; n <= 256; n = n << 1 )
   {
     wr = cosVec[n-1];
     wi = sinVec[n-1];
     if( isign == 1 ) wi = -wi;
     cp = c;
-    nb = N / n;
+    nb = 256 / n;
     n2 = n >> 1;
-    for( j = 0; j < nb; ++j )
+    for( j = 0; j < 128; ++j )
     {
-      wrk = 1.0;
-      wik = 0.0;
-      for( k = 0; k < n2; ++k )
-      {
-        i0 = k << 1;
-        i1 = i0 + n;
-        d0r = cp[i0];
-        d0i = cp[i0+1];
-        d1r = cp[i1];
-        d1i = cp[i1+1];
-        dr = wrk * d1r - wik * d1i;
-        di = wrk * d1i + wik * d1r;
-        cp[i0] = d0r + dr;
-        cp[i0+1] = d0i + di;
-        cp[i1] = d0r - dr;
-        cp[i1+1] = d0i - di;
-        d = wrk;
-        wrk = wr * wrk - wi * wik;
-        wik = wr * wik + wi * d;
+      if (j < nb) {
+        wrk = 1.0;
+        wik = 0.0;
+        for( k = 0; k < (256 >> 1); ++k )
+        {
+          if (k < n2) {
+            i0 = k << 1;
+            i1 = i0 + n;
+            d0r = cp[i0];
+            d0i = cp[i0+1];
+            d1r = cp[i1];
+            d1i = cp[i1+1];
+            dr = wrk * d1r - wik * d1i;
+            di = wrk * d1i + wik * d1r;
+            cp[i0] = d0r + dr;
+            cp[i0+1] = d0i + di;
+            cp[i1] = d0r - dr;
+            cp[i1+1] = d0i - di;
+            d = wrk;
+            wrk = wr * wrk - wi * wik;
+            wik = wr * wik + wi * d;
+          }
+        }
+        cp += n << 1;
       }
-      cp += n << 1;
     }
   }
 }
@@ -42192,20 +42202,20 @@ double c[2*256];
 double d[256];
 double e[26];
 
-void processChunk( int sp, int np, double *ret, double *inputSound)
+void processChunk( int sp, double *ret, double *inputSound)
 {
   int i = 0;
 
   //printf("\ninput:\n");
-  for( i = 0; i < np; ++i )
+  for( i = 0; i < 256; ++i )
   {
     c[2*i] = inputSound[sp+i];
     c[2*i+1] = 0.0;
   }
 
-  FFT( c, np, 1 );
+  FFT( c, 1 );
 
-  for( i = 0; i < np; ++i )
+  for( i = 0; i < 256; ++i )
   {
     d[i] = (c[2*i]*c[2*i] + c[2*i+1]*c[2*i+1])/256.0;
   }
@@ -42216,7 +42226,7 @@ void processChunk( int sp, int np, double *ret, double *inputSound)
   }
 
   int mellIdx = 0;
-  for ( i = 0; i < np; ++i ) {
+  for ( i = 0; i < 256; ++i ) {
     if ( i==mell[mellIdx] ) {
       e[ 0 ] += d[ mell[mellIdx] ];
     }
@@ -42268,54 +42278,65 @@ void preprocessSound(double *inSound, int inSize, double *outSound, int outSize)
   int deleteFlag = 0;
   int j = 0;
 
-  for ( i = first ; i <= last ; i++ ) {
-    if (markBegin == 0) {
-      if ( fabs(inSound[i]) < ampThreshold ) {
-        markBegin = i;
-      }
-    }
-    else {
-      if ( fabs(inSound[i]) < ampThreshold ) {
-        count++;
-        if (count == numThreshold) {
-          deleteFlag = 1;
+  for ( i = 0 ; i < inSize ; i++ ) {
+    if ((i >= first) && (i <= last)) {
+      if (markBegin == 0) {
+        if ( fabs(inSound[i]) < ampThreshold ) {
+          markBegin = i;
         }
       }
       else {
-        if (deleteFlag == 1) {
-          for ( j = markBegin ; j < i ; j++ ) {
-            inSound[j] = 0;
+        if ( fabs(inSound[i]) < ampThreshold ) {
+          count++;
+          if (count == numThreshold) {
+            deleteFlag = 1;
           }
         }
-        deleteFlag = 0;
-        markBegin = 0;
-        count = 0;
+        else {
+          if (deleteFlag == 1) {
+            for ( j = 0 ; j < inSize ; j++ ) {
+              if ((j >= markBegin) && ( j < i )) {
+                inSound[j] = 0;
+              }
+            }
+          }
+          deleteFlag = 0;
+          markBegin = 0;
+          count = 0;
+        }
       }
     }
   }
 
   j = 0;
-  for ( i = first; i <= last && j != 8000; i++) {
-    if (fabs(inSound[i]) > 0) {
-      outSound[j] = inSound[i];
+  for ( i = 0; i < inSize; i++) {
+    if ((i >= first && i <= last && j != 8000)) {
+      if (fabs(inSound[i]) > 0) {
+        outSound[j] = inSound[i];
+        j++;
+      }
+    } else if (j < 8000) {
+      outSound[j] = 0;
       j++;
     }
   }
+
 }
 
 double result[63][(26/2)+1];
-int voicerec(int np, double inSound[16000]) {_ssdm_SpecArrayDimSize(inSound,16000);
+int voicerec(double inSound[16000]) {_ssdm_SpecArrayDimSize(inSound,16000);
   int i = 0, j=0, stride = 0, classification = -1;
 
-  stride = np/2;
+  //stride = np/2;
+  stride = 256/2;
   int num_results = (8000/stride);
   //double results[num_results][(NUM_BANKS/2)+1];
   double outSound[8000];
   preprocessSound(inSound, 16000, outSound, 8000);
 
   int index = 0;
-  for (i = 0; i+np <8000 ; i += stride) {
-    processChunk(i, np, result[index], outSound);
+  for (i = 0; i+256 <8000 ; i += stride) {
+    processChunk(i, result[index], outSound);
     for (j = 0; j < ((26/2)+1) ; ++j) {
       //printf("%lf\n", result[index][j]);
     }

@@ -9,13 +9,11 @@ set C_modelName {voicerec_FFT}
 set C_modelType { void 0 }
 set C_modelArgList { 
 	{ c double 64 regular {array 512 { 2 2 } 1 1 }  }
-	{ N int 32 regular  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "c", "interface" : "memory", "bitwidth" : 64 ,"direction" : "READWRITE" } , 
- 	{ "Name" : "N", "interface" : "wire", "bitwidth" : 32 ,"direction" : "READONLY" } ]}
+	{ "Name" : "c", "interface" : "memory", "bitwidth" : 64 ,"direction" : "READWRITE" } ]}
 # RTL Port declarations: 
-set portNum 17
+set portNum 16
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -33,7 +31,6 @@ set portList {
 	{ c_we1 sc_out sc_logic 1 signal 0 } 
 	{ c_d1 sc_out sc_lv 64 signal 0 } 
 	{ c_q1 sc_in sc_lv 64 signal 0 } 
-	{ N sc_in sc_lv 32 signal 1 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -51,9 +48,7 @@ set NewPortList {[
  	{ "name": "c_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "c", "role": "ce1" }} , 
  	{ "name": "c_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "c", "role": "we1" }} , 
  	{ "name": "c_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "c", "role": "d1" }} , 
- 	{ "name": "c_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "c", "role": "q1" }} , 
- 	{ "name": "N", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "N", "role": "default" }}  ]}
+ 	{ "name": "c_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "c", "role": "q1" }}  ]}
 set Spec2ImplPortList { 
 	c { ap_memory {  { c_address0 mem_address 1 9 }  { c_ce0 mem_ce 1 1 }  { c_we0 mem_we 1 1 }  { c_d0 mem_din 1 64 }  { c_q0 mem_dout 0 64 }  { c_address1 mem_address 1 9 }  { c_ce1 mem_ce 1 1 }  { c_we1 mem_we 1 1 }  { c_d1 mem_din 1 64 }  { c_q1 mem_dout 0 64 } } }
-	N { ap_none {  { N in_data 0 32 } } }
 }

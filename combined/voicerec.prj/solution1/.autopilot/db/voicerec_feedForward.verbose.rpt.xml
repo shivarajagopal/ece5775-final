@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'voicerec_feedForward'" level="0">
-<item name = "Date">Sun Dec  6 14:07:51 2015
+<item name = "Date">Sun Dec  6 17:20:14 2015
 </item>
 <item name = "Version">2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)</item>
 <item name = "Project">voicerec.prj</item>
@@ -65,13 +65,13 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="voicerec_dadd_64ns_64ns_64_5_full_dsp_U39">voicerec_dadd_64ns_64ns_64_5_full_dsp, 0, 3, 445, 1149</column>
-<column name="voicerec_ddiv_64ns_64ns_64_31_U40">voicerec_ddiv_64ns_64ns_64_31, 0, 0, 3211, 3658</column>
-<column name="voicerec_dexp_64ns_64ns_64_18_full_dsp_U41">voicerec_dexp_64ns_64ns_64_18_full_dsp, 0, 26, 1549, 2599</column>
-<column name="voicerec_fadd_32ns_32ns_32_5_full_dsp_U35">voicerec_fadd_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
-<column name="voicerec_fmul_32ns_32ns_32_4_max_dsp_U36">voicerec_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
-<column name="voicerec_fpext_32ns_64_1_U38">voicerec_fpext_32ns_64_1, 0, 0, 100, 138</column>
-<column name="voicerec_fptrunc_64ns_32_1_U37">voicerec_fptrunc_64ns_32_1, 0, 0, 128, 277</column>
+<column name="voicerec_dadd_64ns_64ns_64_5_full_dsp_U37">voicerec_dadd_64ns_64ns_64_5_full_dsp, 0, 3, 445, 1149</column>
+<column name="voicerec_ddiv_64ns_64ns_64_31_U38">voicerec_ddiv_64ns_64ns_64_31, 0, 0, 3211, 3658</column>
+<column name="voicerec_dexp_64ns_64ns_64_18_full_dsp_U39">voicerec_dexp_64ns_64ns_64_18_full_dsp, 0, 26, 1549, 2599</column>
+<column name="voicerec_fadd_32ns_32ns_32_5_full_dsp_U33">voicerec_fadd_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
+<column name="voicerec_fmul_32ns_32ns_32_4_max_dsp_U34">voicerec_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
+<column name="voicerec_fpext_32ns_64_1_U36">voicerec_fpext_32ns_64_1, 0, 0, 100, 138</column>
+<column name="voicerec_fptrunc_64ns_32_1_U35">voicerec_fptrunc_64ns_32_1, 0, 0, 128, 277</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">

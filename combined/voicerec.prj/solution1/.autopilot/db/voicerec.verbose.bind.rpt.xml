@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'voicerec'" level="0">
-<item name = "Date">Sun Dec  6 14:07:49 2015
+<item name = "Date">Sun Dec  6 17:20:12 2015
 </item>
 <item name = "Version">2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)</item>
 <item name = "Project">voicerec.prj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">?, ?, ?, ?, none</column>
+<column name="">1464529, 433885023, 1464530, 433885024, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">?, ?, ?, -, -, ?, no</column>
+<column name="- Loop 1">1149423, 177393917, 18843 ~ 2908097, -, -, 61, no</column>
 </table>
 </item>
 </section>

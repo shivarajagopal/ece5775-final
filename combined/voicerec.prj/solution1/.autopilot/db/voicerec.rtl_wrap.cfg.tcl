@@ -109,42 +109,30 @@ set DataType6 "double"
 set Port6 [list $PortName6 $Interface6 $DataType6 $Pointer6 $Dims6 $Const6 $Volatile6 $ArrayOpt6 $Initializer6 $External6 $NameSpace6]
 lappend globalVariable $Port6
 set PortList ""
-set PortName7 "np"
-set BitWidth7 "32"
+set PortName7 "inSound"
+set BitWidth7 "64"
 set ArrayOpt7 ""
 set Const7 "0"
 set Volatile7 "0"
 set Pointer7 "0"
 set Reference7 "0"
-set Dims7 [list 0]
+set Dims7 [list 16000]
 set Interface7 "wire"
-set DataType7 "int"
+set DataType7 "double"
 set Port7 [list $PortName7 $Interface7 $DataType7 $Pointer7 $Dims7 $Const7 $Volatile7 $ArrayOpt7]
 lappend PortList $Port7
-set PortName8 "inSound"
-set BitWidth8 "64"
+set PortName8 "return"
+set BitWidth8 "32"
 set ArrayOpt8 ""
 set Const8 "0"
 set Volatile8 "0"
 set Pointer8 "0"
 set Reference8 "0"
-set Dims8 [list 16000]
+set Dims8 [list 0]
 set Interface8 "wire"
-set DataType8 "double"
+set DataType8 "int"
 set Port8 [list $PortName8 $Interface8 $DataType8 $Pointer8 $Dims8 $Const8 $Volatile8 $ArrayOpt8]
 lappend PortList $Port8
-set PortName9 "return"
-set BitWidth9 "32"
-set ArrayOpt9 ""
-set Const9 "0"
-set Volatile9 "0"
-set Pointer9 "0"
-set Reference9 "0"
-set Dims9 [list 0]
-set Interface9 "wire"
-set DataType9 "int"
-set Port9 [list $PortName9 $Interface9 $DataType9 $Pointer9 $Dims9 $Const9 $Volatile9 $ArrayOpt9]
-lappend PortList $Port9
 set globalAPint "" 
 set returnAPInt "" 
 set hasCPPAPInt 0 

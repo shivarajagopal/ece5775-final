@@ -1,4 +1,4 @@
 #!/bin/sh
 lli=${LLVMINTERP-lli}
 exec $lli \
-    /home/student/iyv2/ece5775/ece5775-final/combined/voicerec.prj/solution1/.autopilot/db/a.o.pre.bc ${1+"$@"}
+    /home/student/svr24/ece5775/final_proj/combined/voicerec.prj/solution1/.autopilot/db/a.o.pre.bc ${1+"$@"}

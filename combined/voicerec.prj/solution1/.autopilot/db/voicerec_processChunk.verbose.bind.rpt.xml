@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'voicerec_processChunk'" level="0">
-<item name = "Date">Sun Dec  6 14:07:47 2015
+<item name = "Date">Sun Dec  6 17:20:11 2015
 </item>
 <item name = "Version">2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)</item>
 <item name = "Project">voicerec.prj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">?, ?, ?, ?, none</column>
+<column name="">18841, 2908095, 18841, 2908095, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,10 +35,10 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">?, ?, 2, -, -, ?, no</column>
-<column name="- Loop 2">?, ?, 20, -, -, ?, no</column>
+<column name="- Loop 1">512, 512, 2, -, -, 256, no</column>
+<column name="- Loop 2">5120, 5120, 20, -, -, 256, no</column>
 <column name="- Loop 3">26, 26, 1, -, -, 26, no</column>
-<column name="- Loop 4">?, ?, 5 ~ 18, -, -, ?, no</column>
+<column name="- Loop 4">1280, 4608, 5 ~ 18, -, -, 256, no</column>
 <column name="- Loop 5">130, 936, 5 ~ 36, -, -, 26, no</column>
 <column name="- Loop 6">7028, 7028, 502, -, -, 14, no</column>
 <column name=" + Loop 6.1">494, 494, 19, -, -, 26, no</column>

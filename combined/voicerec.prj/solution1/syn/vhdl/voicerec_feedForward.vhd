@@ -612,7 +612,7 @@ begin
         ce0 => weightHO_ce0,
         q0 => weightHO_q0);
 
-    voicerec_fadd_32ns_32ns_32_5_full_dsp_U35 : component voicerec_fadd_32ns_32ns_32_5_full_dsp
+    voicerec_fadd_32ns_32ns_32_5_full_dsp_U33 : component voicerec_fadd_32ns_32ns_32_5_full_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -627,7 +627,7 @@ begin
         ce => grp_fu_245_ce,
         dout => grp_fu_245_p2);
 
-    voicerec_fmul_32ns_32ns_32_4_max_dsp_U36 : component voicerec_fmul_32ns_32ns_32_4_max_dsp
+    voicerec_fmul_32ns_32ns_32_4_max_dsp_U34 : component voicerec_fmul_32ns_32ns_32_4_max_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -642,7 +642,7 @@ begin
         ce => grp_fu_251_ce,
         dout => grp_fu_251_p2);
 
-    voicerec_fptrunc_64ns_32_1_U37 : component voicerec_fptrunc_64ns_32_1
+    voicerec_fptrunc_64ns_32_1_U35 : component voicerec_fptrunc_64ns_32_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -652,7 +652,7 @@ begin
         din0 => grp_fu_259_p0,
         dout => grp_fu_259_p1);
 
-    voicerec_fpext_32ns_64_1_U38 : component voicerec_fpext_32ns_64_1
+    voicerec_fpext_32ns_64_1_U36 : component voicerec_fpext_32ns_64_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -662,7 +662,7 @@ begin
         din0 => grp_fu_262_p0,
         dout => grp_fu_262_p1);
 
-    voicerec_dadd_64ns_64ns_64_5_full_dsp_U39 : component voicerec_dadd_64ns_64ns_64_5_full_dsp
+    voicerec_dadd_64ns_64ns_64_5_full_dsp_U37 : component voicerec_dadd_64ns_64ns_64_5_full_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -677,7 +677,7 @@ begin
         ce => grp_fu_265_ce,
         dout => grp_fu_265_p2);
 
-    voicerec_ddiv_64ns_64ns_64_31_U40 : component voicerec_ddiv_64ns_64ns_64_31
+    voicerec_ddiv_64ns_64ns_64_31_U38 : component voicerec_ddiv_64ns_64ns_64_31
     generic map (
         ID => 1,
         NUM_STAGE => 31,
@@ -692,7 +692,7 @@ begin
         ce => grp_fu_270_ce,
         dout => grp_fu_270_p2);
 
-    voicerec_dexp_64ns_64ns_64_18_full_dsp_U41 : component voicerec_dexp_64ns_64ns_64_18_full_dsp
+    voicerec_dexp_64ns_64ns_64_18_full_dsp_U39 : component voicerec_dexp_64ns_64ns_64_18_full_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 18,

@@ -275,10 +275,10 @@
 
 <node id="20" bw="11" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-.preheader.preheader:4  %tmp_9 = sub i11 %p_shl_cast, %p_shl2_cast
+.preheader.preheader:4  %tmp_8 = sub i11 %p_shl_cast, %p_shl2_cast
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 
 <operation id="24" st_id="2" stage="1" lat="1">
@@ -291,7 +291,7 @@
 
 <node id="21" bw="12" op_0_bw="11">
 <![CDATA[
-.preheader.preheader:5  %result_addr1_cast = sext i11 %tmp_9 to i12
+.preheader.preheader:5  %result_addr1_cast = sext i11 %tmp_8 to i12
 
 ]]></node>
 <StgValue><ssdm name="result_addr1_cast"/></StgValue>
@@ -386,10 +386,10 @@
 
 <node id="27" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader:3  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)
+.preheader:3  %empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)
 
 ]]></node>
-<StgValue><ssdm name="empty_9"/></StgValue>
+<StgValue><ssdm name="empty_7"/></StgValue>
 </operation>
 
 <operation id="31" st_id="3" stage="1" lat="1">
@@ -432,10 +432,10 @@
 
 <node id="31" bw="12" op_0_bw="4">
 <![CDATA[
-:0  %tmp_1_trn_cast = zext i4 %j to i12
+:0  %tmp_9_trn_cast = zext i4 %j to i12
 
 ]]></node>
-<StgValue><ssdm name="tmp_1_trn_cast"/></StgValue>
+<StgValue><ssdm name="tmp_9_trn_cast"/></StgValue>
 </operation>
 
 <operation id="34" st_id="3" stage="1" lat="1">
@@ -448,7 +448,7 @@
 
 <node id="32" bw="12" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-:1  %result_addr2 = add i12 %tmp_1_trn_cast, %result_addr1_cast
+:1  %result_addr2 = add i12 %tmp_9_trn_cast, %result_addr1_cast
 
 ]]></node>
 <StgValue><ssdm name="result_addr2"/></StgValue>
@@ -528,10 +528,10 @@
 
 <node id="38" bw="11" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-:7  %tmp_3 = add i11 %tmp_9, %j_cast3
+:7  %tmp_2 = add i11 %tmp_8, %j_cast3
 
 ]]></node>
-<StgValue><ssdm name="tmp_3"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -564,10 +564,10 @@
 
 <node id="37" bw="32" op_0_bw="64">
 <![CDATA[
-:6  %tmp_2 = fptrunc double %result_load to float
+:6  %tmp_1 = fptrunc double %result_load to float
 
 ]]></node>
-<StgValue><ssdm name="tmp_2"/></StgValue>
+<StgValue><ssdm name="tmp_1"/></StgValue>
 </operation>
 </state>
 
@@ -582,10 +582,10 @@
 
 <node id="39" bw="32" op_0_bw="11">
 <![CDATA[
-:8  %tmp_3_cast = sext i11 %tmp_3 to i32
+:8  %tmp_2_cast = sext i11 %tmp_2 to i32
 
 ]]></node>
-<StgValue><ssdm name="tmp_3_cast"/></StgValue>
+<StgValue><ssdm name="tmp_2_cast"/></StgValue>
 </operation>
 
 <operation id="43" st_id="6" stage="1" lat="1">
@@ -597,10 +597,10 @@
 
 <node id="40" bw="64" op_0_bw="32">
 <![CDATA[
-:9  %tmp_4 = zext i32 %tmp_3_cast to i64
+:9  %tmp_3 = zext i32 %tmp_2_cast to i64
 
 ]]></node>
-<StgValue><ssdm name="tmp_4"/></StgValue>
+<StgValue><ssdm name="tmp_3"/></StgValue>
 </operation>
 
 <operation id="44" st_id="6" stage="1" lat="1">
@@ -612,7 +612,7 @@
 
 <node id="41" bw="10" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-:10  %flatInput_addr = getelementptr inbounds [882 x float]* %flatInput, i64 0, i64 %tmp_4
+:10  %flatInput_addr = getelementptr inbounds [882 x float]* %flatInput, i64 0, i64 %tmp_3
 
 ]]></node>
 <StgValue><ssdm name="flatInput_addr"/></StgValue>
@@ -627,7 +627,7 @@
 
 <node id="42" bw="0" op_0_bw="32" op_1_bw="10">
 <![CDATA[
-:11  store float %tmp_2, float* %flatInput_addr, align 4
+:11  store float %tmp_1, float* %flatInput_addr, align 4
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -768,10 +768,10 @@
 
 <node id="53" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:5  %empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind
+:5  %empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind
 
 ]]></node>
-<StgValue><ssdm name="empty_10"/></StgValue>
+<StgValue><ssdm name="empty_8"/></StgValue>
 </operation>
 
 <operation id="55" st_id="8" stage="1" lat="1">
@@ -946,10 +946,10 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="62" bw="23" op_0_bw="32">
 <![CDATA[
-._crit_edge.i:5  %tmp_5 = trunc i32 %max_to_int to i23
+._crit_edge.i:5  %tmp_4 = trunc i32 %max_to_int to i23
 
 ]]></node>
-<StgValue><ssdm name="tmp_5"/></StgValue>
+<StgValue><ssdm name="tmp_4"/></StgValue>
 </operation>
 
 <operation id="66" st_id="11" stage="1" lat="1">
@@ -976,10 +976,10 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="64" bw="8" op_0_bw="8" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge.i:7  %tmp_6 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_i_to_int, i32 23, i32 30)
+._crit_edge.i:7  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_i_to_int, i32 23, i32 30)
 
 ]]></node>
-<StgValue><ssdm name="tmp_6"/></StgValue>
+<StgValue><ssdm name="tmp_5"/></StgValue>
 </operation>
 
 <operation id="68" st_id="11" stage="1" lat="1">
@@ -991,10 +991,10 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="65" bw="23" op_0_bw="32">
 <![CDATA[
-._crit_edge.i:8  %tmp_7 = trunc i32 %max_i_to_int to i23
+._crit_edge.i:8  %tmp_6 = trunc i32 %max_i_to_int to i23
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_6"/></StgValue>
 </operation>
 
 <operation id="69" st_id="11" stage="1" lat="1">
@@ -1021,7 +1021,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="67" bw="1" op_0_bw="23" op_1_bw="23">
 <![CDATA[
-._crit_edge.i:10  %notrhs = icmp eq i23 %tmp_5, 0
+._crit_edge.i:10  %notrhs = icmp eq i23 %tmp_4, 0
 
 ]]></node>
 <StgValue><ssdm name="notrhs"/></StgValue>
@@ -1036,10 +1036,10 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="68" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-._crit_edge.i:11  %tmp_8 = or i1 %notrhs, %notlhs
+._crit_edge.i:11  %tmp_7 = or i1 %notrhs, %notlhs
 
 ]]></node>
-<StgValue><ssdm name="tmp_8"/></StgValue>
+<StgValue><ssdm name="tmp_7"/></StgValue>
 </operation>
 
 <operation id="72" st_id="11" stage="1" lat="1">
@@ -1051,7 +1051,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="69" bw="1" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-._crit_edge.i:12  %notlhs6 = icmp ne i8 %tmp_6, -1
+._crit_edge.i:12  %notlhs6 = icmp ne i8 %tmp_5, -1
 
 ]]></node>
 <StgValue><ssdm name="notlhs6"/></StgValue>
@@ -1066,7 +1066,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="70" bw="1" op_0_bw="23" op_1_bw="23">
 <![CDATA[
-._crit_edge.i:13  %notrhs7 = icmp eq i23 %tmp_7, 0
+._crit_edge.i:13  %notrhs7 = icmp eq i23 %tmp_6, 0
 
 ]]></node>
 <StgValue><ssdm name="notrhs7"/></StgValue>
@@ -1096,10 +1096,10 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="72" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-._crit_edge.i:15  %tmp_1 = and i1 %tmp_8, %tmp_s
+._crit_edge.i:15  %tmp_9 = and i1 %tmp_7, %tmp_s
 
 ]]></node>
-<StgValue><ssdm name="tmp_1"/></StgValue>
+<StgValue><ssdm name="tmp_9"/></StgValue>
 </operation>
 
 <operation id="76" st_id="11" stage="1" lat="1">
@@ -1111,7 +1111,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="74" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-._crit_edge.i:17  %tmp_11 = and i1 %tmp_1, %tmp_10
+._crit_edge.i:17  %tmp_11 = and i1 %tmp_9, %tmp_10
 
 ]]></node>
 <StgValue><ssdm name="tmp_11"/></StgValue>

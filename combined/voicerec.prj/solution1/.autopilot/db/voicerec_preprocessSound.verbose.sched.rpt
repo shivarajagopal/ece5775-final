@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'voicerec_preprocessSound'
 ================================================================
-* Date:           Sun Dec  6 14:07:46 2015
+* Date:           Sun Dec  6 17:20:09 2015
 
 * Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
 * Project:        voicerec.prj
@@ -25,28 +25,28 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----+-----+-----+-----+---------+
-    |  Latency  |  Interval | Pipeline|
-    | min | max | min | max |   Type  |
-    +-----+-----+-----+-----+---------+
-    |    ?|    ?|    ?|    ?|   none  |
-    +-----+-----+-----+-----+---------+
+    +-------+-----------+-------+-----------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |  min  |    max    |  min  |    max    |   Type  |
+    +-------+-----------+-------+-----------+---------+
+    |  64012|  256240012|  64012|  256240012|   none  |
+    +-------+-----------+-------+-----------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +-------------+-----+-------+----------+-----------+-----------+-----------+----------+
-        |             |   Latency   | Iteration|  Initiation Interval  |    Trip   |          |
-        |  Loop Name  | min |  max  |  Latency |  achieved |   target  |   Count   | Pipelined|
-        +-------------+-----+-------+----------+-----------+-----------+-----------+----------+
-        |- Loop 1     |    4|  64003|         4|          -|          -| 1 ~ 16000 |    no    |
-        |- Loop 2     |    4|  64003|         4|          -|          -| 1 ~ 16000 |    no    |
-        |- Loop 3     |    ?|      ?|         ?|          -|          -|          ?|    no    |
-        | + Loop 3.1  |    ?|      ?|         1|          -|          -|          ?|    no    |
-        |- Loop 4     |    ?|      ?|         3|          -|          -|          ?|    no    |
-        +-------------+-----+-------+----------+-----------+-----------+-----------+----------+
+        +-------------+-------+-----------+-----------+-----------+-----------+-----------+----------+
+        |             |      Latency      | Iteration |  Initiation Interval  |    Trip   |          |
+        |  Loop Name  |  min  |    max    |  Latency  |  achieved |   target  |   Count   | Pipelined|
+        +-------------+-------+-----------+-----------+-----------+-----------+-----------+----------+
+        |- Loop 1     |      4|      64003|          4|          -|          -| 1 ~ 16000 |    no    |
+        |- Loop 2     |      4|      64003|          4|          -|          -| 1 ~ 16000 |    no    |
+        |- Loop 3     |  32000|  256064000| 2 ~ 16004 |          -|          -|      16000|    no    |
+        | + Loop 3.1  |  16000|      16000|          1|          -|          -|      16000|    no    |
+        |- Loop 4     |  32000|      48000|   2 ~ 3   |          -|          -|      16000|    no    |
+        +-------------+-------+-----------+-----------+-----------+-----------+-----------+----------+
 
 
 
@@ -139,30 +139,32 @@ IsGatedGlobalClock: 0
 4 --> 
 	5  / true
 5 --> 
-	2  / (tmp & !tmp_20)
-	6  / (!tmp) | (tmp_20)
+	2  / (tmp & !tmp_19)
+	6  / (!tmp) | (tmp_19)
 6 --> 
-	7  / (!tmp_47)
-	9  / (tmp_47)
+	7  / (!tmp_46)
+	9  / (tmp_46)
 7 --> 
 	8  / true
 8 --> 
 	9  / true
 9 --> 
-	6  / (!tmp_47 & !tmp_25)
-	10  / (tmp_47) | (tmp_25)
+	6  / (!tmp_46 & !tmp_24)
+	10  / (tmp_46) | (tmp_24)
 10 --> 
-	11  / (!tmp_49)
-	14  / (tmp_49)
+	11  / (!exitcond1 & !or_cond)
+	13  / (!exitcond1 & or_cond)
+	14  / (exitcond1)
 11 --> 
 	12  / true
 12 --> 
 	13  / true
 13 --> 
-	13  / (!tmp_50 & !tmp_37 & tmp_55 & tmp_57)
-	10  / (tmp_50) | (tmp_37) | (!tmp_55) | (!tmp_57)
+	13  / (!or_cond & !tmp_50 & !tmp_36 & tmp_58 & !exitcond)
+	10  / (or_cond) | (tmp_50) | (tmp_36) | (!tmp_58) | (exitcond)
 14 --> 
-	15  / (!demorgan)
+	15  / (!exitcond2 & !or_cond6)
+	16  / (!exitcond2 & or_cond6)
 15 --> 
 	16  / true
 16 --> 
@@ -176,7 +178,7 @@ ST_1: stg_17 [1/1] 1.57ns
 
  <State 2>: 3.78ns
 ST_2: first [1/1] 0.00ns
-:0  %first = phi i14 [ 0, %0 ], [ %i_2, %2 ]
+:0  %first = phi i14 [ 0, %0 ], [ %i, %2 ]
 
 ST_2: tmp [1/1] 2.21ns
 :1  %tmp = icmp ult i14 %first, -384
@@ -184,8 +186,8 @@ ST_2: tmp [1/1] 2.21ns
 ST_2: empty [1/1] 0.00ns
 :2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 16000, i64 8000)
 
-ST_2: i_2 [1/1] 1.96ns
-:3  %i_2 = add i14 %first, 1
+ST_2: i [1/1] 1.96ns
+:3  %i = add i14 %first, 1
 
 ST_2: stg_22 [1/1] 1.57ns
 :4  br i1 %tmp, label %2, label %.loopexit2
@@ -209,45 +211,42 @@ ST_3: inSound_load [1/2] 2.71ns
 ST_4: inSound_load_to_int [1/1] 0.00ns
 :3  %inSound_load_to_int = bitcast double %inSound_load to i64
 
-ST_4: tmp_16 [1/1] 0.00ns
-:4  %tmp_16 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %inSound_load_to_int, i32 52, i32 62)
+ST_4: tmp_15 [1/1] 0.00ns
+:4  %tmp_15 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %inSound_load_to_int, i32 52, i32 62)
 
 ST_4: tmp_14 [1/1] 0.00ns
 :5  %tmp_14 = trunc i64 %inSound_load_to_int to i52
 
 ST_4: notlhs1 [1/1] 2.11ns
-:6  %notlhs1 = icmp ne i11 %tmp_16, -1
+:6  %notlhs1 = icmp ne i11 %tmp_15, -1
 
 ST_4: notrhs1 [1/1] 2.64ns
 :7  %notrhs1 = icmp eq i52 %tmp_14, 0
 
-ST_4: tmp_18 [1/1] 1.37ns
-:8  %tmp_18 = or i1 %notrhs1, %notlhs1
+ST_4: tmp_17 [1/1] 1.37ns
+:8  %tmp_17 = or i1 %notrhs1, %notlhs1
 
-ST_4: tmp_19 [1/1] 6.83ns
-:9  %tmp_19 = fcmp ogt double %inSound_load, 1.500000e-01
+ST_4: tmp_18 [1/1] 6.83ns
+:9  %tmp_18 = fcmp ogt double %inSound_load, 1.500000e-01
 
-ST_4: tmp_20 [1/1] 1.37ns
-:10  %tmp_20 = and i1 %tmp_18, %tmp_19
+ST_4: tmp_19 [1/1] 1.37ns
+:10  %tmp_19 = and i1 %tmp_17, %tmp_18
 
 
  <State 5>: 1.57ns
 ST_5: stg_35 [1/1] 1.57ns
-:11  br i1 %tmp_20, label %.loopexit2, label %1
+:11  br i1 %tmp_19, label %.loopexit2, label %1
 
-ST_5: i [1/1] 0.00ns
-.loopexit2:0  %i = phi i14 [ 0, %1 ], [ %first, %2 ]
+ST_5: first1 [1/1] 0.00ns
+.loopexit2:0  %first1 = phi i14 [ 0, %1 ], [ %first, %2 ]
 
-ST_5: i_cast [1/1] 0.00ns
-.loopexit2:1  %i_cast = zext i14 %i to i32
-
-ST_5: stg_38 [1/1] 1.57ns
-.loopexit2:2  br label %._crit_edge
+ST_5: stg_37 [1/1] 1.57ns
+.loopexit2:1  br label %._crit_edge
 
 
  <State 6>: 4.67ns
 ST_6: i_1_in [1/1] 0.00ns
-._crit_edge:0  %i_1_in = phi i14 [ -384, %.loopexit2 ], [ %tmp_15, %3 ]
+._crit_edge:0  %i_1_in = phi i14 [ -384, %.loopexit2 ], [ %tmp_16, %3 ]
 
 ST_6: i_1_in_cast [1/1] 0.00ns
 ._crit_edge:1  %i_1_in_cast = zext i14 %i_1_in to i15
@@ -255,26 +254,26 @@ ST_6: i_1_in_cast [1/1] 0.00ns
 ST_6: last_2 [1/1] 1.96ns
 ._crit_edge:2  %last_2 = add i15 -1, %i_1_in_cast
 
-ST_6: last_2_cast1 [1/1] 0.00ns
-._crit_edge:3  %last_2_cast1 = sext i15 %last_2 to i32
+ST_6: last_2_cast5 [1/1] 0.00ns
+._crit_edge:3  %last_2_cast5 = sext i15 %last_2 to i32
 
-ST_6: tmp_15 [1/1] 0.00ns
-._crit_edge:4  %tmp_15 = trunc i15 %last_2 to i14
+ST_6: tmp_16 [1/1] 0.00ns
+._crit_edge:4  %tmp_16 = trunc i15 %last_2 to i14
 
-ST_6: tmp_47 [1/1] 2.21ns
-._crit_edge:5  %tmp_47 = icmp eq i14 %i_1_in, 0
+ST_6: tmp_46 [1/1] 2.21ns
+._crit_edge:5  %tmp_46 = icmp eq i14 %i_1_in, 0
 
-ST_6: empty_15 [1/1] 0.00ns
-._crit_edge:6  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 16000, i64 8000)
+ST_6: empty_17 [1/1] 0.00ns
+._crit_edge:6  %empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 16000, i64 8000)
 
-ST_6: stg_46 [1/1] 1.57ns
-._crit_edge:7  br i1 %tmp_47, label %.loopexit, label %3
+ST_6: stg_45 [1/1] 1.57ns
+._crit_edge:7  br i1 %tmp_46, label %.loopexit, label %3
 
-ST_6: tmp_48 [1/1] 0.00ns
-:0  %tmp_48 = zext i32 %last_2_cast1 to i64
+ST_6: tmp_47 [1/1] 0.00ns
+:0  %tmp_47 = zext i32 %last_2_cast5 to i64
 
 ST_6: inSound_addr_1 [1/1] 0.00ns
-:1  %inSound_addr_1 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_48
+:1  %inSound_addr_1 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_47
 
 ST_6: inSound_load_1 [2/2] 2.71ns
 :2  %inSound_load_1 = load double* %inSound_addr_1, align 8
@@ -289,148 +288,166 @@ ST_7: inSound_load_1 [1/2] 2.71ns
 ST_8: inSound_load_1_to_int [1/1] 0.00ns
 :3  %inSound_load_1_to_int = bitcast double %inSound_load_1 to i64
 
-ST_8: tmp_21 [1/1] 0.00ns
-:4  %tmp_21 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %inSound_load_1_to_int, i32 52, i32 62)
+ST_8: tmp_20 [1/1] 0.00ns
+:4  %tmp_20 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %inSound_load_1_to_int, i32 52, i32 62)
 
-ST_8: tmp_17 [1/1] 0.00ns
-:5  %tmp_17 = trunc i64 %inSound_load_1_to_int to i52
+ST_8: tmp_21 [1/1] 0.00ns
+:5  %tmp_21 = trunc i64 %inSound_load_1_to_int to i52
 
 ST_8: notlhs2 [1/1] 2.11ns
-:6  %notlhs2 = icmp ne i11 %tmp_21, -1
+:6  %notlhs2 = icmp ne i11 %tmp_20, -1
 
 ST_8: notrhs2 [1/1] 2.64ns
-:7  %notrhs2 = icmp eq i52 %tmp_17, 0
+:7  %notrhs2 = icmp eq i52 %tmp_21, 0
 
-ST_8: tmp_23 [1/1] 1.37ns
-:8  %tmp_23 = or i1 %notrhs2, %notlhs2
+ST_8: tmp_22 [1/1] 1.37ns
+:8  %tmp_22 = or i1 %notrhs2, %notlhs2
 
-ST_8: tmp_24 [1/1] 6.83ns
-:9  %tmp_24 = fcmp ogt double %inSound_load_1, 1.500000e-01
+ST_8: tmp_23 [1/1] 6.83ns
+:9  %tmp_23 = fcmp ogt double %inSound_load_1, 1.500000e-01
 
-ST_8: tmp_25 [1/1] 1.37ns
-:10  %tmp_25 = and i1 %tmp_23, %tmp_24
+ST_8: tmp_24 [1/1] 1.37ns
+:10  %tmp_24 = and i1 %tmp_22, %tmp_23
 
 
  <State 9>: 1.57ns
-ST_9: stg_59 [1/1] 1.57ns
-:11  br i1 %tmp_25, label %.loopexit, label %._crit_edge
+ST_9: stg_58 [1/1] 1.57ns
+:11  br i1 %tmp_24, label %.loopexit, label %._crit_edge
 
 ST_9: last [1/1] 0.00ns
 .loopexit:0  %last = phi i15 [ 0, %._crit_edge ], [ %last_2, %3 ]
 
-ST_9: j [1/1] 0.00ns
-.loopexit:1  %j = alloca i32
-
 ST_9: deleteFlag [1/1] 0.00ns
-.loopexit:2  %deleteFlag = alloca i32
+.loopexit:1  %deleteFlag = alloca i32
 
 ST_9: count [1/1] 0.00ns
-.loopexit:3  %count = alloca i32
+.loopexit:2  %count = alloca i32
 
-ST_9: last_cast [1/1] 0.00ns
-.loopexit:4  %last_cast = sext i15 %last to i32
+ST_9: markBegin [1/1] 0.00ns
+.loopexit:3  %markBegin = alloca i32
 
-ST_9: stg_65 [1/1] 1.57ns
+ST_9: stg_63 [1/1] 1.57ns
+.loopexit:4  store i32 0, i32* %markBegin
+
+ST_9: stg_64 [1/1] 1.57ns
 .loopexit:5  store i32 0, i32* %count
 
-ST_9: stg_66 [1/1] 1.57ns
+ST_9: stg_65 [1/1] 1.57ns
 .loopexit:6  store i32 0, i32* %deleteFlag
 
-ST_9: stg_67 [1/1] 1.57ns
-.loopexit:7  store i32 0, i32* %j
-
-ST_9: stg_68 [1/1] 1.57ns
-.loopexit:8  br label %4
+ST_9: stg_66 [1/1] 1.57ns
+.loopexit:7  br label %._crit_edge11
 
 
- <State 10>: 2.71ns
-ST_10: markBegin [1/1] 0.00ns
-:0  %markBegin = phi i32 [ %i_cast, %.loopexit ], [ %i_6, %11 ]
+ <State 10>: 3.62ns
+ST_10: markBegin_2 [1/1] 0.00ns
+._crit_edge11:0  %markBegin_2 = phi i14 [ 0, %.loopexit ], [ %i_5, %._crit_edge11.backedge ]
 
-ST_10: j_9 [1/1] 0.00ns
-:1  %j_9 = load i32* %j
+ST_10: markBegin_2_cast [1/1] 0.00ns
+._crit_edge11:1  %markBegin_2_cast = zext i14 %markBegin_2 to i15
 
-ST_10: tmp_49 [1/1] 2.52ns
-:2  %tmp_49 = icmp sgt i32 %markBegin, %last_cast
+ST_10: exitcond1 [1/1] 2.21ns
+._crit_edge11:2  %exitcond1 = icmp eq i14 %markBegin_2, -384
+
+ST_10: empty_18 [1/1] 0.00ns
+._crit_edge11:3  %empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16000, i64 16000, i64 16000)
+
+ST_10: i_5 [1/1] 1.96ns
+._crit_edge11:4  %i_5 = add i14 %markBegin_2, 1
 
 ST_10: stg_72 [1/1] 0.00ns
-:3  br i1 %tmp_49, label %.preheader.preheader, label %5
+._crit_edge11:5  br i1 %exitcond1, label %.preheader.preheader, label %4
 
-ST_10: tmp_52 [1/1] 0.00ns
-:1  %tmp_52 = sext i32 %markBegin to i64
+ST_10: tmp_48 [1/1] 2.21ns
+:0  %tmp_48 = icmp ult i14 %markBegin_2, %first1
+
+ST_10: tmp_49 [1/1] 2.25ns
+:1  %tmp_49 = icmp sgt i15 %markBegin_2_cast, %last
+
+ST_10: or_cond [1/1] 1.37ns
+:2  %or_cond = or i1 %tmp_48, %tmp_49
+
+ST_10: stg_76 [1/1] 0.00ns
+:3  br i1 %or_cond, label %._crit_edge11.backedge, label %5
+
+ST_10: tmp_54 [1/1] 0.00ns
+:2  %tmp_54 = zext i14 %markBegin_2 to i64
 
 ST_10: inSound_addr_3 [1/1] 0.00ns
-:2  %inSound_addr_3 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_52
+:3  %inSound_addr_3 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_54
 
 ST_10: inSound_load_2 [2/2] 2.71ns
-:3  %inSound_load_2 = load double* %inSound_addr_3, align 8
+:4  %inSound_load_2 = load double* %inSound_addr_3, align 8
 
 ST_10: j_1 [1/1] 0.00ns
 .preheader.preheader:0  %j_1 = alloca i32
 
-ST_10: stg_77 [1/1] 1.57ns
+ST_10: stg_81 [1/1] 1.57ns
 .preheader.preheader:1  store i32 0, i32* %j_1
 
-ST_10: stg_78 [1/1] 1.57ns
+ST_10: stg_82 [1/1] 1.57ns
 .preheader.preheader:2  br label %.preheader
 
 
  <State 11>: 2.71ns
 ST_11: inSound_load_2 [1/2] 2.71ns
-:3  %inSound_load_2 = load double* %inSound_addr_3, align 8
+:4  %inSound_load_2 = load double* %inSound_addr_3, align 8
 
 
  <State 12>: 8.20ns
+ST_12: markBegin_load_1 [1/1] 0.00ns
+:0  %markBegin_load_1 = load i32* %markBegin
+
 ST_12: tmp_50 [1/1] 2.52ns
-:0  %tmp_50 = icmp eq i32 %j_9, 0
+:1  %tmp_50 = icmp eq i32 %markBegin_load_1, 0
 
 ST_12: p_Val2_s [1/1] 0.00ns
-:4  %p_Val2_s = bitcast double %inSound_load_2 to i64
+:5  %p_Val2_s = bitcast double %inSound_load_2 to i64
 
-ST_12: tmp_22 [1/1] 0.00ns
-:5  %tmp_22 = trunc i64 %p_Val2_s to i63
+ST_12: tmp_25 [1/1] 0.00ns
+:6  %tmp_25 = trunc i64 %p_Val2_s to i63
 
 ST_12: tmp_26 [1/1] 0.00ns
-:6  %tmp_26 = trunc i64 %p_Val2_s to i52
+:7  %tmp_26 = trunc i64 %p_Val2_s to i52
 
 ST_12: p_Result_s [1/1] 0.00ns
-:7  %p_Result_s = call i64 @_ssdm_op_BitConcatenate.i64.i1.i63(i1 false, i63 %tmp_22)
+:8  %p_Result_s = call i64 @_ssdm_op_BitConcatenate.i64.i1.i63(i1 false, i63 %tmp_25)
 
 ST_12: ret_i_i_i_i_i [1/1] 0.00ns
-:8  %ret_i_i_i_i_i = bitcast i64 %p_Result_s to double
+:9  %ret_i_i_i_i_i = bitcast i64 %p_Result_s to double
 
-ST_12: tmp_34 [1/1] 0.00ns
-:9  %tmp_34 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_s, i32 52, i32 62)
+ST_12: tmp_33 [1/1] 0.00ns
+:10  %tmp_33 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_s, i32 52, i32 62)
 
-ST_12: notlhs7 [1/1] 2.11ns
-:10  %notlhs7 = icmp ne i11 %tmp_34, -1
+ST_12: notlhs4 [1/1] 2.11ns
+:11  %notlhs4 = icmp ne i11 %tmp_33, -1
 
-ST_12: notrhs8 [1/1] 2.64ns
-:11  %notrhs8 = icmp eq i52 %tmp_26, 0
+ST_12: notrhs4 [1/1] 2.64ns
+:12  %notrhs4 = icmp eq i52 %tmp_26, 0
 
-ST_12: tmp_35 [1/1] 1.37ns
-:12  %tmp_35 = or i1 %notrhs8, %notlhs7
+ST_12: tmp_34 [1/1] 1.37ns
+:13  %tmp_34 = or i1 %notrhs4, %notlhs4
 
-ST_12: tmp_36 [1/1] 6.83ns
-:13  %tmp_36 = fcmp olt double %ret_i_i_i_i_i, 1.500000e-01
+ST_12: tmp_35 [1/1] 6.83ns
+:14  %tmp_35 = fcmp olt double %ret_i_i_i_i_i, 1.500000e-01
 
-ST_12: tmp_37 [1/1] 1.37ns
-:14  %tmp_37 = and i1 %tmp_35, %tmp_36
+ST_12: tmp_36 [1/1] 1.37ns
+:15  %tmp_36 = and i1 %tmp_34, %tmp_35
 
-ST_12: stg_92 [1/1] 0.00ns
-:15  br i1 %tmp_50, label %6, label %7
+ST_12: stg_97 [1/1] 0.00ns
+:16  br i1 %tmp_50, label %6, label %7
 
 ST_12: deleteFlag_load [1/1] 0.00ns
 :0  %deleteFlag_load = load i32* %deleteFlag
 
-ST_12: stg_94 [1/1] 0.00ns
-:1  br i1 %tmp_37, label %8, label %9
+ST_12: stg_99 [1/1] 0.00ns
+:1  br i1 %tmp_36, label %8, label %9
 
-ST_12: tmp_55 [1/1] 2.52ns
-:0  %tmp_55 = icmp eq i32 %deleteFlag_load, 1
+ST_12: tmp_58 [1/1] 2.52ns
+:0  %tmp_58 = icmp eq i32 %deleteFlag_load, 1
 
-ST_12: stg_96 [1/1] 1.57ns
-:1  br i1 %tmp_55, label %.preheader4, label %.loopexit5
+ST_12: stg_101 [1/1] 1.57ns
+:1  br i1 %tmp_58, label %.preheader7, label %.loopexit8
 
 ST_12: count_load [1/1] 0.00ns
 :0  %count_load = load i32* %count
@@ -438,104 +455,176 @@ ST_12: count_load [1/1] 0.00ns
 ST_12: count_1 [1/1] 2.44ns
 :1  %count_1 = add nsw i32 %count_load, 1
 
-ST_12: tmp_54 [1/1] 2.52ns
-:2  %tmp_54 = icmp eq i32 %count_1, 200
+ST_12: tmp_57 [1/1] 2.52ns
+:2  %tmp_57 = icmp eq i32 %count_1, 200
 
 ST_12: p_deleteFlag [1/1] 1.37ns
-:3  %p_deleteFlag = select i1 %tmp_54, i32 1, i32 %deleteFlag_load
+:3  %p_deleteFlag = select i1 %tmp_57, i32 1, i32 %deleteFlag_load
 
-ST_12: stg_101 [1/1] 1.57ns
+ST_12: stg_106 [1/1] 1.57ns
 :4  store i32 %count_1, i32* %count
 
-ST_12: stg_102 [1/1] 1.57ns
+ST_12: stg_107 [1/1] 1.57ns
 :5  store i32 %p_deleteFlag, i32* %deleteFlag
 
-ST_12: stg_103 [1/1] 0.00ns
-:6  br label %11
+ST_12: stg_108 [1/1] 0.00ns
+:6  br label %._crit_edge11.backedge
 
 
- <State 13>: 2.94ns
+ <State 13>: 5.26ns
 ST_13: j9 [1/1] 0.00ns
-.preheader4:0  %j9 = phi i32 [ %j_8, %10 ], [ %j_9, %9 ]
+.preheader7:0  %j9 = phi i14 [ %j_8, %._crit_edge12 ], [ 0, %9 ]
 
-ST_13: tmp_57 [1/1] 2.52ns
-.preheader4:1  %tmp_57 = icmp slt i32 %j9, %markBegin
+ST_13: j9_cast3 [1/1] 0.00ns
+.preheader7:1  %j9_cast3 = zext i14 %j9 to i32
 
-ST_13: stg_106 [1/1] 0.00ns
-.preheader4:2  br i1 %tmp_57, label %10, label %.loopexit5
+ST_13: exitcond [1/1] 2.21ns
+.preheader7:2  %exitcond = icmp eq i14 %j9, -384
 
-ST_13: tmp_58 [1/1] 0.00ns
-:0  %tmp_58 = sext i32 %j9 to i64
+ST_13: empty_19 [1/1] 0.00ns
+.preheader7:3  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16000, i64 16000, i64 16000)
 
-ST_13: inSound_addr_4 [1/1] 0.00ns
-:1  %inSound_addr_4 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_58
+ST_13: j_8 [1/1] 1.96ns
+.preheader7:4  %j_8 = add i14 %j9, 1
 
-ST_13: stg_109 [1/1] 2.71ns
-:2  store double 0.000000e+00, double* %inSound_addr_4, align 8
+ST_13: stg_114 [1/1] 0.00ns
+.preheader7:5  br i1 %exitcond, label %.loopexit8, label %10
 
-ST_13: j_8 [1/1] 2.44ns
-:3  %j_8 = add nsw i32 %j9, 1
+ST_13: markBegin_load [1/1] 0.00ns
+:0  %markBegin_load = load i32* %markBegin
 
-ST_13: stg_111 [1/1] 0.00ns
-:4  br label %.preheader4
+ST_13: slt [1/1] 2.52ns
+:1  %slt = icmp slt i32 %j9_cast3, %markBegin_load
 
-ST_13: stg_112 [1/1] 1.57ns
-.loopexit5:0  store i32 0, i32* %count
+ST_13: rev6 [1/1] 1.37ns
+:2  %rev6 = xor i1 %slt, true
 
-ST_13: stg_113 [1/1] 1.57ns
-.loopexit5:1  store i32 0, i32* %deleteFlag
+ST_13: tmp_61 [1/1] 2.21ns
+:3  %tmp_61 = icmp ult i14 %j9, %markBegin_2
 
-ST_13: stg_114 [1/1] 1.57ns
-.loopexit5:2  store i32 0, i32* %j
-
-ST_13: stg_115 [1/1] 0.00ns
-.loopexit5:3  br label %11
-
-ST_13: markBegin_1 [1/1] 1.37ns
-:0  %markBegin_1 = select i1 %tmp_37, i32 %markBegin, i32 0
-
-ST_13: stg_117 [1/1] 1.57ns
-:1  store i32 %markBegin_1, i32* %j
-
-ST_13: stg_118 [1/1] 0.00ns
-:2  br label %11
-
-ST_13: i_6 [1/1] 2.44ns
-:0  %i_6 = add nsw i32 %markBegin, 1
+ST_13: or_cond4 [1/1] 1.37ns
+:4  %or_cond4 = and i1 %rev6, %tmp_61
 
 ST_13: stg_120 [1/1] 0.00ns
-:1  br label %4
+:5  br i1 %or_cond4, label %11, label %._crit_edge12
+
+ST_13: tmp_62 [1/1] 0.00ns
+:0  %tmp_62 = zext i14 %j9 to i64
+
+ST_13: inSound_addr_4 [1/1] 0.00ns
+:1  %inSound_addr_4 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_62
+
+ST_13: stg_123 [1/1] 2.71ns
+:2  store double 0.000000e+00, double* %inSound_addr_4, align 8
+
+ST_13: stg_124 [1/1] 0.00ns
+:3  br label %._crit_edge12
+
+ST_13: stg_125 [1/1] 0.00ns
+._crit_edge12:0  br label %.preheader7
+
+ST_13: stg_126 [1/1] 1.57ns
+.loopexit8:0  store i32 0, i32* %markBegin
+
+ST_13: stg_127 [1/1] 1.57ns
+.loopexit8:1  store i32 0, i32* %count
+
+ST_13: stg_128 [1/1] 1.57ns
+.loopexit8:2  store i32 0, i32* %deleteFlag
+
+ST_13: stg_129 [1/1] 0.00ns
+.loopexit8:3  br label %._crit_edge11.backedge
+
+ST_13: markBegin_1 [1/1] 1.37ns
+:0  %markBegin_1 = select i1 %tmp_36, i14 %markBegin_2, i14 0
+
+ST_13: markBegin_1_cast [1/1] 0.00ns
+:1  %markBegin_1_cast = zext i14 %markBegin_1 to i32
+
+ST_13: stg_132 [1/1] 1.57ns
+:2  store i32 %markBegin_1_cast, i32* %markBegin
+
+ST_13: stg_133 [1/1] 0.00ns
+:3  br label %._crit_edge11.backedge
+
+ST_13: stg_134 [1/1] 0.00ns
+._crit_edge11.backedge:0  br label %._crit_edge11
 
 
- <State 14>: 3.89ns
+ <State 14>: 5.26ns
 ST_14: i_3 [1/1] 0.00ns
-.preheader:0  %i_3 = phi i32 [ %i_5, %._crit_edge8 ], [ %i_cast, %.preheader.preheader ]
+.preheader:0  %i_3 = phi i14 [ 0, %.preheader.preheader ], [ %i_4, %.preheader.backedge ]
+
+ST_14: i_3_cast [1/1] 0.00ns
+.preheader:1  %i_3_cast = zext i14 %i_3 to i15
+
+ST_14: exitcond2 [1/1] 2.21ns
+.preheader:2  %exitcond2 = icmp eq i14 %i_3, -384
+
+ST_14: empty_20 [1/1] 0.00ns
+.preheader:3  %empty_20 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16000, i64 16000, i64 16000)
+
+ST_14: i_4 [1/1] 1.96ns
+.preheader:4  %i_4 = add i14 %i_3, 1
+
+ST_14: stg_140 [1/1] 0.00ns
+.preheader:5  br i1 %exitcond2, label %17, label %12
 
 ST_14: j_1_load [1/1] 0.00ns
-.preheader:1  %j_1_load = load i32* %j_1
+:0  %j_1_load = load i32* %j_1
 
-ST_14: tmp_51 [1/1] 2.52ns
-.preheader:2  %tmp_51 = icmp eq i32 %j_1_load, 8000
+ST_14: tmp_51 [1/1] 2.21ns
+:1  %tmp_51 = icmp ult i14 %i_3, %first1
 
-ST_14: slt [1/1] 2.52ns
-.preheader:3  %slt = icmp slt i32 %last_cast, %i_3
+ST_14: tmp_52 [1/1] 2.25ns
+:2  %tmp_52 = icmp sgt i15 %i_3_cast, %last
 
-ST_14: demorgan [1/1] 1.37ns
-.preheader:4  %demorgan = or i1 %slt, %tmp_51
+ST_14: tmp_53 [1/1] 2.52ns
+:3  %tmp_53 = icmp eq i32 %j_1_load, 8000
 
-ST_14: stg_126 [1/1] 0.00ns
-.preheader:5  br i1 %demorgan, label %14, label %12
+ST_14: tmp1 [1/1] 1.37ns
+:4  %tmp1 = or i1 %tmp_52, %tmp_53
 
-ST_14: tmp_53 [1/1] 0.00ns
-:0  %tmp_53 = sext i32 %i_3 to i64
+ST_14: or_cond6 [1/1] 1.37ns
+:5  %or_cond6 = or i1 %tmp1, %tmp_51
+
+ST_14: stg_147 [1/1] 0.00ns
+:6  br i1 %or_cond6, label %15, label %13
+
+ST_14: tmp_56 [1/1] 0.00ns
+:0  %tmp_56 = zext i14 %i_3 to i64
 
 ST_14: inSound_addr_2 [1/1] 0.00ns
-:1  %inSound_addr_2 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_53
+:1  %inSound_addr_2 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_56
 
 ST_14: inSound_load_3 [2/2] 2.71ns
 :2  %inSound_load_3 = load double* %inSound_addr_2, align 8
 
-ST_14: stg_130 [1/1] 0.00ns
+ST_14: tmp_55 [1/1] 2.52ns
+:0  %tmp_55 = icmp slt i32 %j_1_load, 8000
+
+ST_14: stg_152 [1/1] 0.00ns
+:1  br i1 %tmp_55, label %16, label %.preheader.backedge
+
+ST_14: tmp_59 [1/1] 0.00ns
+:0  %tmp_59 = sext i32 %j_1_load to i64
+
+ST_14: outSound_addr [1/1] 0.00ns
+:1  %outSound_addr = getelementptr [8000 x double]* %outSound, i64 0, i64 %tmp_59
+
+ST_14: stg_155 [1/1] 2.71ns
+:2  store double 0.000000e+00, double* %outSound_addr, align 8
+
+ST_14: j [1/1] 2.44ns
+:3  %j = add nsw i32 %j_1_load, 1
+
+ST_14: stg_157 [1/1] 1.57ns
+:4  store i32 %j, i32* %j_1
+
+ST_14: stg_158 [1/1] 0.00ns
+:5  br label %.preheader.backedge
+
+ST_14: stg_159 [1/1] 0.00ns
 :0  ret void
 
 
@@ -548,62 +637,62 @@ ST_15: inSound_load_3 [1/2] 2.71ns
 ST_16: p_Val2_1 [1/1] 0.00ns
 :3  %p_Val2_1 = bitcast double %inSound_load_3 to i64
 
-ST_16: tmp_27 [1/1] 0.00ns
-:4  %tmp_27 = trunc i64 %p_Val2_1 to i63
+ST_16: tmp_31 [1/1] 0.00ns
+:4  %tmp_31 = trunc i64 %p_Val2_1 to i63
 
 ST_16: tmp_32 [1/1] 0.00ns
 :5  %tmp_32 = trunc i64 %p_Val2_1 to i52
 
 ST_16: p_Result_1 [1/1] 0.00ns
-:6  %p_Result_1 = call i64 @_ssdm_op_BitConcatenate.i64.i1.i63(i1 false, i63 %tmp_27)
+:6  %p_Result_1 = call i64 @_ssdm_op_BitConcatenate.i64.i1.i63(i1 false, i63 %tmp_31)
 
 ST_16: ret_i_i_i_i_i2 [1/1] 0.00ns
 :7  %ret_i_i_i_i_i2 = bitcast i64 %p_Result_1 to double
 
-ST_16: tmp_28 [1/1] 0.00ns
-:8  %tmp_28 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_1, i32 52, i32 62)
+ST_16: tmp_27 [1/1] 0.00ns
+:8  %tmp_27 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_1, i32 52, i32 62)
 
-ST_16: notlhs9 [1/1] 2.11ns
-:9  %notlhs9 = icmp ne i11 %tmp_28, -1
+ST_16: notlhs3 [1/1] 2.11ns
+:9  %notlhs3 = icmp ne i11 %tmp_27, -1
 
 ST_16: notrhs3 [1/1] 2.64ns
 :10  %notrhs3 = icmp eq i52 %tmp_32, 0
 
-ST_16: tmp_29 [1/1] 1.37ns
-:11  %tmp_29 = or i1 %notrhs3, %notlhs9
+ST_16: tmp_28 [1/1] 1.37ns
+:11  %tmp_28 = or i1 %notrhs3, %notlhs3
 
-ST_16: tmp_30 [1/1] 6.83ns
-:12  %tmp_30 = fcmp ogt double %ret_i_i_i_i_i2, 0.000000e+00
+ST_16: tmp_29 [1/1] 6.83ns
+:12  %tmp_29 = fcmp ogt double %ret_i_i_i_i_i2, 0.000000e+00
 
-ST_16: tmp_31 [1/1] 1.37ns
-:13  %tmp_31 = and i1 %tmp_29, %tmp_30
+ST_16: tmp_30 [1/1] 1.37ns
+:13  %tmp_30 = and i1 %tmp_28, %tmp_29
 
-ST_16: stg_143 [1/1] 0.00ns
-:14  br i1 %tmp_31, label %13, label %._crit_edge8
+ST_16: stg_172 [1/1] 0.00ns
+:14  br i1 %tmp_30, label %14, label %.preheader.backedge
 
-ST_16: tmp_56 [1/1] 0.00ns
-:0  %tmp_56 = sext i32 %j_1_load to i64
+ST_16: j_1_load_1 [1/1] 0.00ns
+:0  %j_1_load_1 = load i32* %j_1
 
-ST_16: outSound_addr [1/1] 0.00ns
-:1  %outSound_addr = getelementptr [8000 x double]* %outSound, i64 0, i64 %tmp_56
+ST_16: tmp_60 [1/1] 0.00ns
+:1  %tmp_60 = sext i32 %j_1_load_1 to i64
 
-ST_16: stg_146 [1/1] 2.71ns
-:2  store double %inSound_load_3, double* %outSound_addr, align 8
+ST_16: outSound_addr_1 [1/1] 0.00ns
+:2  %outSound_addr_1 = getelementptr [8000 x double]* %outSound, i64 0, i64 %tmp_60
+
+ST_16: stg_176 [1/1] 2.71ns
+:3  store double %inSound_load_3, double* %outSound_addr_1, align 8
 
 ST_16: j_7 [1/1] 2.44ns
-:3  %j_7 = add nsw i32 %j_1_load, 1
+:4  %j_7 = add nsw i32 %j_1_load_1, 1
 
-ST_16: stg_148 [1/1] 1.57ns
-:4  store i32 %j_7, i32* %j_1
+ST_16: stg_178 [1/1] 1.57ns
+:5  store i32 %j_7, i32* %j_1
 
-ST_16: stg_149 [1/1] 0.00ns
-:5  br label %._crit_edge8
+ST_16: stg_179 [1/1] 0.00ns
+:6  br label %.preheader.backedge
 
-ST_16: i_5 [1/1] 2.44ns
-._crit_edge8:0  %i_5 = add nsw i32 %i_3, 1
-
-ST_16: stg_151 [1/1] 0.00ns
-._crit_edge8:1  br label %.preheader
+ST_16: stg_180 [1/1] 0.00ns
+.preheader.backedge:0  br label %.preheader
 
 
 

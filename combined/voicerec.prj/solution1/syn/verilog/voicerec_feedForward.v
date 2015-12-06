@@ -464,7 +464,7 @@ voicerec_fadd_32ns_32ns_32_5_full_dsp #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-voicerec_fadd_32ns_32ns_32_5_full_dsp_U35(
+voicerec_fadd_32ns_32ns_32_5_full_dsp_U33(
     .clk( ap_clk ),
     .reset( ap_rst ),
     .din0( grp_fu_245_p0 ),
@@ -479,7 +479,7 @@ voicerec_fmul_32ns_32ns_32_4_max_dsp #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-voicerec_fmul_32ns_32ns_32_4_max_dsp_U36(
+voicerec_fmul_32ns_32ns_32_4_max_dsp_U34(
     .clk( ap_clk ),
     .reset( ap_rst ),
     .din0( grp_fu_251_p0 ),
@@ -493,7 +493,7 @@ voicerec_fptrunc_64ns_32_1 #(
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 64 ),
     .dout_WIDTH( 32 ))
-voicerec_fptrunc_64ns_32_1_U37(
+voicerec_fptrunc_64ns_32_1_U35(
     .din0( grp_fu_259_p0 ),
     .dout( grp_fu_259_p1 )
 );
@@ -503,7 +503,7 @@ voicerec_fpext_32ns_64_1 #(
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 32 ),
     .dout_WIDTH( 64 ))
-voicerec_fpext_32ns_64_1_U38(
+voicerec_fpext_32ns_64_1_U36(
     .din0( grp_fu_262_p0 ),
     .dout( grp_fu_262_p1 )
 );
@@ -514,7 +514,7 @@ voicerec_dadd_64ns_64ns_64_5_full_dsp #(
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-voicerec_dadd_64ns_64ns_64_5_full_dsp_U39(
+voicerec_dadd_64ns_64ns_64_5_full_dsp_U37(
     .clk( ap_clk ),
     .reset( ap_rst ),
     .din0( grp_fu_265_p0 ),
@@ -529,7 +529,7 @@ voicerec_ddiv_64ns_64ns_64_31 #(
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-voicerec_ddiv_64ns_64ns_64_31_U40(
+voicerec_ddiv_64ns_64ns_64_31_U38(
     .clk( ap_clk ),
     .reset( ap_rst ),
     .din0( grp_fu_270_p0 ),
@@ -544,7 +544,7 @@ voicerec_dexp_64ns_64ns_64_18_full_dsp #(
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-voicerec_dexp_64ns_64ns_64_18_full_dsp_U41(
+voicerec_dexp_64ns_64ns_64_18_full_dsp_U39(
     .clk( ap_clk ),
     .reset( ap_rst ),
     .din0( grp_fu_275_p0 ),

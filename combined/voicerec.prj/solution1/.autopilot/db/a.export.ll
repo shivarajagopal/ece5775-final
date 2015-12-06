@@ -1,4 +1,4 @@
-; ModuleID = '/home/student/iyv2/ece5775/ece5775-final/combined/voicerec.prj/solution1/.autopilot/db/a.o.2.bc'
+; ModuleID = '/home/student/svr24/ece5775/final_proj/combined/voicerec.prj/solution1/.autopilot/db/a.o.2.bc'
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
 
@@ -41,35 +41,25 @@ declare void @_GLOBAL__I_a1939() nounwind section ".text.startup"
 
 declare double @llvm.exp.f64(double) nounwind readonly
 
-define i32 @voicerec(i32 %np, [16000 x double]* %inSound) nounwind uwtable {
-  call void (...)* @_ssdm_op_SpecBitsMap(i32 %np) nounwind, !map !56
-  call void (...)* @_ssdm_op_SpecBitsMap([16000 x double]* %inSound) nounwind, !map !62
-  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !68
+define i32 @voicerec([16000 x double]* %inSound) nounwind uwtable {
+  call void (...)* @_ssdm_op_SpecBitsMap([16000 x double]* %inSound) nounwind, !map !56
+  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !62
   call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @voicerec_str) nounwind
-  %np_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %np) nounwind
   %outSound = alloca [8000 x double], align 16
-  %tmp_3 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %np_read, i32 31)
-  %p_neg = sub i32 0, %np_read
-  %p_lshr = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %p_neg, i32 1, i32 31)
-  %tmp_1 = zext i31 %p_lshr to i32
-  %p_neg_t = sub i32 0, %tmp_1
-  %p_lshr_f = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %np_read, i32 1, i32 31)
-  %tmp_2 = zext i31 %p_lshr_f to i32
-  %stride = select i1 %tmp_3, i32 %p_neg_t, i32 %tmp_2
   call fastcc void @voicerec_preprocessSound([16000 x double]* %inSound, [8000 x double]* %outSound) nounwind
   br label %1
 
 ; <label>:1                                       ; preds = %2, %0
-  %i = phi i32 [ 0, %0 ], [ %i_1, %2 ]
-  %index = phi i32 [ 0, %0 ], [ %index_1, %2 ]
-  %tmp = add nsw i32 %i, %np_read
-  %tmp_s = icmp slt i32 %tmp, 8000
-  %index_1 = add nsw i32 %index, 1
-  br i1 %tmp_s, label %2, label %3
+  %i = phi i13 [ 0, %0 ], [ %i_1, %2 ]
+  %index = phi i6 [ 0, %0 ], [ %index_1, %2 ]
+  %exitcond1 = icmp eq i6 %index, -3
+  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 61, i64 61, i64 61) nounwind
+  %index_1 = add i6 %index, 1
+  br i1 %exitcond1, label %3, label %2
 
 ; <label>:2                                       ; preds = %1
-  call fastcc void @voicerec_processChunk(i32 %i, i32 %np_read, [882 x double]* nocapture @result, i32 %index, [8000 x double]* nocapture %outSound) nounwind
-  %i_1 = add nsw i32 %stride, %i
+  call fastcc void @voicerec_processChunk(i13 %i, [882 x double]* nocapture @result, i6 %index, [8000 x double]* nocapture %outSound) nounwind
+  %i_1 = add i13 %i, 128
   br label %1
 
 ; <label>:3                                       ; preds = %1
@@ -93,31 +83,31 @@ define internal fastcc i32 @voicerec_classifySound() {
   %p_shl_cast = zext i10 %p_shl to i11
   %p_shl2 = call i7 @_ssdm_op_BitConcatenate.i7.i6.i1(i6 %i, i1 false)
   %p_shl2_cast = zext i7 %p_shl2 to i11
-  %tmp_9 = sub i11 %p_shl_cast, %p_shl2_cast
-  %result_addr1_cast = sext i11 %tmp_9 to i12
+  %tmp_8 = sub i11 %p_shl_cast, %p_shl2_cast
+  %result_addr1_cast = sext i11 %tmp_8 to i12
   br label %.preheader
 
 .preheader:                                       ; preds = %1, %.preheader.preheader
   %j = phi i4 [ %j_1, %1 ], [ 0, %.preheader.preheader ]
   %j_cast3 = zext i4 %j to i11
   %exitcond = icmp eq i4 %j, -2
-  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)
+  %empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)
   %j_1 = add i4 %j, 1
   br i1 %exitcond, label %.loopexit, label %1
 
 ; <label>:1                                       ; preds = %.preheader
-  %tmp_1_trn_cast = zext i4 %j to i12
-  %result_addr2 = add i12 %tmp_1_trn_cast, %result_addr1_cast
+  %tmp_9_trn_cast = zext i4 %j to i12
+  %result_addr2 = add i12 %tmp_9_trn_cast, %result_addr1_cast
   %result_addr2_cast = sext i12 %result_addr2 to i32
   %tmp_12 = zext i32 %result_addr2_cast to i64
   %result_addr = getelementptr [882 x double]* @result, i64 0, i64 %tmp_12
   %result_load = load double* %result_addr, align 8
-  %tmp_2 = fptrunc double %result_load to float
-  %tmp_3 = add i11 %tmp_9, %j_cast3
-  %tmp_3_cast = sext i11 %tmp_3 to i32
-  %tmp_4 = zext i32 %tmp_3_cast to i64
-  %flatInput_addr = getelementptr inbounds [882 x float]* %flatInput, i64 0, i64 %tmp_4
-  store float %tmp_2, float* %flatInput_addr, align 4
+  %tmp_1 = fptrunc double %result_load to float
+  %tmp_2 = add i11 %tmp_8, %j_cast3
+  %tmp_2_cast = sext i11 %tmp_2 to i32
+  %tmp_3 = zext i32 %tmp_2_cast to i64
+  %flatInput_addr = getelementptr inbounds [882 x float]* %flatInput, i64 0, i64 %tmp_3
+  store float %tmp_1, float* %flatInput_addr, align 4
   br label %.preheader
 
 ; <label>:2                                       ; preds = %.loopexit
@@ -130,7 +120,7 @@ define internal fastcc i32 @voicerec_classifySound() {
   %max_i = phi float [ 0.000000e+00, %2 ], [ %max_1, %._crit_edge.i ]
   %guess_cast1 = zext i3 %guess to i32
   %exitcond_i = icmp eq i3 %guess, -4
-  %empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind
+  %empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind
   %j_2 = add i3 %guess, 1
   br i1 %exitcond_i, label %guessClassification.exit, label %._crit_edge.i
 
@@ -140,19 +130,19 @@ define internal fastcc i32 @voicerec_classifySound() {
   %max = load float* %output_addr, align 4
   %max_to_int = bitcast float %max to i32
   %tmp = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_to_int, i32 23, i32 30)
-  %tmp_5 = trunc i32 %max_to_int to i23
+  %tmp_4 = trunc i32 %max_to_int to i23
   %max_i_to_int = bitcast float %max_i to i32
-  %tmp_6 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_i_to_int, i32 23, i32 30)
-  %tmp_7 = trunc i32 %max_i_to_int to i23
+  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_i_to_int, i32 23, i32 30)
+  %tmp_6 = trunc i32 %max_i_to_int to i23
   %notlhs = icmp ne i8 %tmp, -1
-  %notrhs = icmp eq i23 %tmp_5, 0
-  %tmp_8 = or i1 %notrhs, %notlhs
-  %notlhs6 = icmp ne i8 %tmp_6, -1
-  %notrhs7 = icmp eq i23 %tmp_7, 0
+  %notrhs = icmp eq i23 %tmp_4, 0
+  %tmp_7 = or i1 %notrhs, %notlhs
+  %notlhs6 = icmp ne i8 %tmp_5, -1
+  %notrhs7 = icmp eq i23 %tmp_6, 0
   %tmp_s = or i1 %notrhs7, %notlhs6
-  %tmp_1 = and i1 %tmp_8, %tmp_s
+  %tmp_9 = and i1 %tmp_7, %tmp_s
   %tmp_10 = fcmp ogt float %max, %max_i
-  %tmp_11 = and i1 %tmp_1, %tmp_10
+  %tmp_11 = and i1 %tmp_9, %tmp_10
   %guess_1 = select i1 %tmp_11, i32 %guess_cast1, i32 %guess_i
   %max_1 = select i1 %tmp_11, float %max, float %max_i
   br label %3
@@ -182,7 +172,7 @@ define internal fastcc void @voicerec_feedForward([882 x float]* nocapture %patt
 .preheader5:                                      ; preds = %1, %6
   %j1 = phi i5 [ %j_2, %6 ], [ 0, %1 ]
   %exitcond3 = icmp eq i5 %j1, -7
-  %empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 25, i64 25, i64 25)
+  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 25, i64 25, i64 25)
   %j_2 = add i5 %j1, 1
   br i1 %exitcond3, label %.preheader, label %3
 
@@ -198,7 +188,7 @@ define internal fastcc void @voicerec_feedForward([882 x float]* nocapture %patt
   %k = phi i10 [ 0, %3 ], [ %k_1, %5 ]
   %phi_mul = phi i15 [ 0, %3 ], [ %next_mul, %5 ]
   %exitcond2 = icmp eq i10 %k, -141
-  %empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 883, i64 883, i64 883)
+  %empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 883, i64 883, i64 883)
   %k_1 = add i10 %k, 1
   br i1 %exitcond2, label %6, label %5
 
@@ -231,7 +221,7 @@ define internal fastcc void @voicerec_feedForward([882 x float]* nocapture %patt
 .preheader:                                       ; preds = %.preheader5, %10
   %j2 = phi i3 [ %j_3, %10 ], [ 0, %.preheader5 ]
   %exitcond1 = icmp eq i3 %j2, -4
-  %empty_13 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
+  %empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
   %j_3 = add i3 %j2, 1
   br i1 %exitcond1, label %11, label %7
 
@@ -246,7 +236,7 @@ define internal fastcc void @voicerec_feedForward([882 x float]* nocapture %patt
   %tmp_12 = phi float [ 0.000000e+00, %7 ], [ %tmp_21, %9 ]
   %k3 = phi i5 [ 0, %7 ], [ %k_2, %9 ]
   %exitcond = icmp eq i5 %k3, -6
-  %empty_14 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
+  %empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
   %k_2 = add i5 %k3, 1
   br i1 %exitcond, label %10, label %9
 
@@ -281,39 +271,39 @@ define internal fastcc void @voicerec_feedForward([882 x float]* nocapture %patt
   ret void
 }
 
-define internal fastcc void @voicerec_FFT([512 x double]* nocapture %c, i32 %N) {
-  %N_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %N)
+define internal fastcc void @voicerec_FFT([512 x double]* nocapture %c) {
   br label %1
 
-; <label>:1                                       ; preds = %6, %0
-  %k = phi i31 [ 0, %0 ], [ %k_3, %6 ]
-  %j = phi i32 [ 0, %0 ], [ %j_5, %6 ]
-  %k_cast = zext i31 %k to i32
-  %tmp = icmp slt i32 %k_cast, %N_read
-  %k_3 = add i31 %k, 1
-  br i1 %tmp, label %2, label %.preheader8
+; <label>:1                                       ; preds = %5, %0
+  %k = phi i9 [ 0, %0 ], [ %k_3, %5 ]
+  %j = phi i32 [ 0, %0 ], [ %j_4, %5 ]
+  %k_cast3 = zext i9 %k to i32
+  %exitcond3 = icmp eq i9 %k, -256
+  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 256, i64 256, i64 256)
+  %k_3 = add i9 %k, 1
+  br i1 %exitcond3, label %.preheader4, label %2
 
 ; <label>:2                                       ; preds = %1
-  %tmp_s = icmp slt i32 %k_cast, %j
-  br i1 %tmp_s, label %3, label %._crit_edge
+  %tmp = icmp slt i32 %k_cast3, %j
+  br i1 %tmp, label %3, label %._crit_edge
 
 ; <label>:3                                       ; preds = %2
-  %i0 = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 %k, i1 false)
+  %i0 = shl i9 %k, 1
   %i1 = shl i32 %j, 1
-  %tmp_23 = sext i32 %i0 to i64
-  %c_addr = getelementptr [512 x double]* %c, i64 0, i64 %tmp_23
+  %tmp_24 = zext i9 %i0 to i64
+  %c_addr = getelementptr [512 x double]* %c, i64 0, i64 %tmp_24
   %dr = load double* %c_addr, align 8
-  %tmp_24 = or i32 %i0, 1
-  %tmp_25 = sext i32 %tmp_24 to i64
-  %c_addr_1 = getelementptr [512 x double]* %c, i64 0, i64 %tmp_25
+  %tmp_25 = or i9 %i0, 1
+  %tmp_26 = zext i9 %tmp_25 to i64
+  %c_addr_1 = getelementptr [512 x double]* %c, i64 0, i64 %tmp_26
   %di = load double* %c_addr_1, align 8
-  %tmp_26 = sext i32 %i1 to i64
-  %c_addr_2 = getelementptr [512 x double]* %c, i64 0, i64 %tmp_26
+  %tmp_27 = sext i32 %i1 to i64
+  %c_addr_2 = getelementptr [512 x double]* %c, i64 0, i64 %tmp_27
   %c_load = load double* %c_addr_2, align 8
   store double %c_load, double* %c_addr, align 8
-  %tmp_27 = or i32 %i1, 1
-  %tmp_28 = sext i32 %tmp_27 to i64
-  %c_addr_3 = getelementptr [512 x double]* %c, i64 0, i64 %tmp_28
+  %tmp_28 = or i32 %i1, 1
+  %tmp_29 = sext i32 %tmp_28 to i64
+  %c_addr_3 = getelementptr [512 x double]* %c, i64 0, i64 %tmp_29
   %c_load_1 = load double* %c_addr_3, align 8
   store double %c_load_1, double* %c_addr_1, align 8
   store double %dr, double* %c_addr_2, align 8
@@ -323,116 +313,134 @@ define internal fastcc void @voicerec_FFT([512 x double]* nocapture %c, i32 %N) 
 ._crit_edge:                                      ; preds = %3, %2
   br label %4
 
-; <label>:4                                       ; preds = %5, %._crit_edge
-  %j_1 = phi i32 [ %j, %._crit_edge ], [ %j_4, %5 ]
-  %n_0_in = phi i32 [ %N_read, %._crit_edge ], [ %n, %5 ]
-  %tmp_5 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %n_0_in, i32 1, i32 31)
-  %n = sext i31 %tmp_5 to i32
-  %tmp_11 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %n_0_in, i32 2, i32 31)
-  %icmp = icmp sgt i30 %tmp_11, 0
-  %slt = icmp slt i32 %j_1, %n
-  %rev6 = xor i1 %slt, true
-  %tmp_31 = and i1 %icmp, %rev6
-  br i1 %tmp_31, label %5, label %6
+; <label>:4                                       ; preds = %_ifconv, %._crit_edge
+  %q = phi i3 [ 0, %._crit_edge ], [ %q_1, %_ifconv ]
+  %j_1 = phi i32 [ %j, %._crit_edge ], [ %j_2, %_ifconv ]
+  %n = phi i32 [ 128, %._crit_edge ], [ %n_1, %_ifconv ]
+  %exitcond2 = icmp eq i3 %q, -1
+  %empty_13 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 7, i64 7, i64 7)
+  %q_1 = add i3 %q, 1
+  br i1 %exitcond2, label %5, label %_ifconv
 
-; <label>:5                                       ; preds = %4
-  %j_4 = sub nsw i32 %j_1, %n
+_ifconv:                                          ; preds = %4
+  %slt = icmp slt i32 %j_1, %n
+  %rev5 = xor i1 %slt, true
+  %tmp_11 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %n, i32 1, i32 31)
+  %icmp = icmp sgt i31 %tmp_11, 0
+  %or_cond = and i1 %rev5, %icmp
+  %j_6 = sub nsw i32 %j_1, %n
+  %tmp_5 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %n, i32 1, i32 31)
+  %n_4 = zext i31 %tmp_5 to i32
+  %j_2 = select i1 %or_cond, i32 %j_6, i32 %j_1
+  %n_1 = select i1 %or_cond, i32 %n_4, i32 %n
   br label %4
 
-; <label>:6                                       ; preds = %4
-  %j_5 = add nsw i32 %j_1, %n
+; <label>:5                                       ; preds = %4
+  %j_4 = add nsw i32 %j_1, %n
   br label %1
 
-.preheader8:                                      ; preds = %7, %1
-  %n_1 = phi i32 [ 2, %1 ], [ %n_2, %7 ]
-  %tmp_22 = icmp sgt i32 %n_1, %N_read
-  br i1 %tmp_22, label %10, label %._crit_edge9
+.preheader4:                                      ; preds = %6, %1
+  %n_2 = phi i32 [ 2, %1 ], [ %n_3, %6 ]
+  %tmp_s = icmp slt i32 %n_2, 257
+  %empty_14 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
+  br i1 %tmp_s, label %._crit_edge6, label %10
 
-._crit_edge9:                                     ; preds = %.preheader8
-  %tmp_29 = add nsw i32 -1, %n_1
-  %tmp_30 = sext i32 %tmp_29 to i64
-  %cosVec_addr = getelementptr inbounds [256 x double]* @cosVec, i64 0, i64 %tmp_30
+._crit_edge6:                                     ; preds = %.preheader4
+  %tmp_22 = add nsw i32 -1, %n_2
+  %tmp_23 = sext i32 %tmp_22 to i64
+  %cosVec_addr = getelementptr inbounds [256 x double]* @cosVec, i64 0, i64 %tmp_23
   %wr = load double* %cosVec_addr, align 8
-  %sinVec_addr = getelementptr inbounds [256 x double]* @sinVec, i64 0, i64 %tmp_30
+  %sinVec_addr = getelementptr inbounds [256 x double]* @sinVec, i64 0, i64 %tmp_23
   %wi = load double* %sinVec_addr, align 8
   %wi_1_to_int = bitcast double %wi to i64
   %wi_1_neg = xor i64 %wi_1_to_int, -9223372036854775808
   %wi_1 = bitcast i64 %wi_1_neg to double
-  %nb = sdiv i32 %N_read, %n_1
-  %tmp_3 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %n_1, i32 1, i32 31)
-  %n_2 = shl i32 %n_1, 1
-  %tmp_31_cast = sext i32 %n_2 to i63
-  %tmp_10 = trunc i32 %n_1 to i11
-  br label %7
+  %nb = sdiv i32 256, %n_2
+  %tmp_3 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %n_2, i32 1, i32 31)
+  %n_3 = shl i32 %n_2, 1
+  %tmp_8 = trunc i32 %n_2 to i11
+  br label %6
 
-; <label>:7                                       ; preds = %9, %._crit_edge9
-  %j_2 = phi i31 [ 0, %._crit_edge9 ], [ %j_6, %9 ]
-  %cp_0_rec = phi i63 [ 0, %._crit_edge9 ], [ %p_rec, %9 ]
-  %j_2_cast = zext i31 %j_2 to i32
-  %tmp_32 = icmp slt i32 %j_2_cast, %nb
-  %j_6 = add i31 %j_2, 1
-  br i1 %tmp_32, label %.preheader, label %.preheader8
+; <label>:6                                       ; preds = %._crit_edge7, %._crit_edge6
+  %j_3 = phi i8 [ 0, %._crit_edge6 ], [ %j_5, %._crit_edge7 ]
+  %cp_rec = phi i39 [ 0, %._crit_edge6 ], [ %cp_addr_rec, %._crit_edge7 ]
+  %j_3_cast2 = zext i8 %j_3 to i32
+  %exitcond1 = icmp eq i8 %j_3, -128
+  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 128, i64 128, i64 128)
+  %j_5 = add i8 %j_3, 1
+  br i1 %exitcond1, label %.preheader4, label %7
 
-.preheader:                                       ; preds = %7, %8
-  %d_1 = phi double [ %wrk, %8 ], [ 1.000000e+00, %7 ]
-  %k_1 = phi i30 [ %k_4, %8 ], [ 0, %7 ]
-  %wik = phi double [ %wik_1, %8 ], [ 0.000000e+00, %7 ]
-  %k_1_cast = zext i30 %k_1 to i31
-  %tmp_33 = icmp slt i31 %k_1_cast, %tmp_3
-  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 1073741823, i64 0)
-  %k_4 = add i30 %k_1, 1
-  br i1 %tmp_33, label %8, label %9
+; <label>:7                                       ; preds = %6
+  %tmp_30 = icmp slt i32 %j_3_cast2, %nb
+  br i1 %tmp_30, label %.preheader, label %._crit_edge7
+
+.preheader:                                       ; preds = %8, %9, %7
+  %d_1 = phi double [ 1.000000e+00, %7 ], [ %wrk, %9 ], [ %d_1, %8 ]
+  %wik = phi double [ 0.000000e+00, %7 ], [ %wik_1, %9 ], [ %wik, %8 ]
+  %k_1 = phi i8 [ 0, %7 ], [ %k_4, %9 ], [ %k_4, %8 ]
+  %k_1_cast1 = zext i8 %k_1 to i31
+  %exitcond = icmp eq i8 %k_1, -128
+  %empty_16 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 128, i64 128, i64 128)
+  %k_4 = add i8 %k_1, 1
+  br i1 %exitcond, label %._crit_edge7, label %8
 
 ; <label>:8                                       ; preds = %.preheader
-  %tmp_12 = trunc i30 %k_1 to i10
-  %tmp_34 = call i11 @_ssdm_op_BitConcatenate.i11.i10.i1(i10 %tmp_12, i1 false)
-  %tmp_13 = trunc i63 %cp_0_rec to i11
-  %sum8 = add i11 %tmp_34, %tmp_13
-  %sum8_cast = zext i11 %sum8 to i64
-  %c_addr_4 = getelementptr [512 x double]* %c, i64 0, i64 %sum8_cast
+  %tmp_31 = icmp slt i31 %k_1_cast1, %tmp_3
+  br i1 %tmp_31, label %9, label %.preheader
+
+; <label>:9                                       ; preds = %8
+  %i0_1 = shl i8 %k_1, 1
+  %tmp_32 = zext i8 %i0_1 to i11
+  %tmp_13 = trunc i39 %cp_rec to i11
+  %cp_sum = add i11 %tmp_13, %tmp_32
+  %cp_sum_cast = zext i11 %cp_sum to i64
+  %c_addr_4 = getelementptr [512 x double]* %c, i64 0, i64 %cp_sum_cast
   %d0r = load double* %c_addr_4, align 8
-  %tmp_39_cast = or i11 %tmp_34, 1
-  %sum = add i11 %tmp_39_cast, %tmp_13
-  %sum_cast = zext i11 %sum to i64
-  %c_addr_5 = getelementptr [512 x double]* %c, i64 0, i64 %sum_cast
+  %tmp_33 = or i8 %i0_1, 1
+  %tmp_37_cast = zext i8 %tmp_33 to i11
+  %cp_sum9 = add i11 %tmp_13, %tmp_37_cast
+  %cp_sum9_cast = zext i11 %cp_sum9 to i64
+  %c_addr_5 = getelementptr [512 x double]* %c, i64 0, i64 %cp_sum9_cast
   %d0i = load double* %c_addr_5, align 8
-  %tmp_40_cast = add i11 %tmp_34, %tmp_10
-  %sum1 = add i11 %tmp_40_cast, %tmp_13
-  %sum1_cast = zext i11 %sum1 to i64
-  %c_addr_6 = getelementptr [512 x double]* %c, i64 0, i64 %sum1_cast
+  %tmp_38_cast = add i11 %tmp_8, %tmp_32
+  %cp_sum1 = add i11 %tmp_13, %tmp_38_cast
+  %cp_sum1_cast = zext i11 %cp_sum1 to i64
+  %c_addr_6 = getelementptr [512 x double]* %c, i64 0, i64 %cp_sum1_cast
   %d1r = load double* %c_addr_6, align 8
-  %tmp_42_cast = or i11 %tmp_40_cast, 1
-  %sum2 = add i11 %tmp_42_cast, %tmp_13
-  %sum2_cast = zext i11 %sum2 to i64
-  %c_addr_7 = getelementptr [512 x double]* %c, i64 0, i64 %sum2_cast
+  %tmp_40_cast = or i11 %tmp_38_cast, 1
+  %cp_sum2 = add i11 %tmp_13, %tmp_40_cast
+  %cp_sum2_cast = zext i11 %cp_sum2 to i64
+  %c_addr_7 = getelementptr [512 x double]* %c, i64 0, i64 %cp_sum2_cast
   %d1i = load double* %c_addr_7, align 8
-  %tmp_35 = fmul double %d_1, %d1r
-  %tmp_36 = fmul double %wik, %d1i
-  %dr_1 = fsub double %tmp_35, %tmp_36
-  %tmp_37 = fmul double %d_1, %d1i
-  %tmp_38 = fmul double %wik, %d1r
-  %di_1 = fadd double %tmp_37, %tmp_38
-  %tmp_39 = fadd double %d0r, %dr_1
-  store double %tmp_39, double* %c_addr_4, align 8
-  %tmp_40 = fadd double %d0i, %di_1
-  store double %tmp_40, double* %c_addr_5, align 8
-  %tmp_41 = fsub double %d0r, %dr_1
-  store double %tmp_41, double* %c_addr_6, align 8
-  %tmp_42 = fsub double %d0i, %di_1
-  store double %tmp_42, double* %c_addr_7, align 8
-  %tmp_43 = fmul double %wr, %d_1
-  %tmp_44 = fmul double %wik, %wi_1
-  %wrk = fsub double %tmp_43, %tmp_44
-  %tmp_45 = fmul double %wr, %wik
-  %tmp_46 = fmul double %d_1, %wi_1
-  %wik_1 = fadd double %tmp_45, %tmp_46
+  %tmp_34 = fmul double %d_1, %d1r
+  %tmp_35 = fmul double %wik, %d1i
+  %dr_1 = fsub double %tmp_34, %tmp_35
+  %tmp_36 = fmul double %d_1, %d1i
+  %tmp_37 = fmul double %wik, %d1r
+  %di_1 = fadd double %tmp_36, %tmp_37
+  %tmp_38 = fadd double %d0r, %dr_1
+  store double %tmp_38, double* %c_addr_4, align 8
+  %tmp_39 = fadd double %d0i, %di_1
+  store double %tmp_39, double* %c_addr_5, align 8
+  %tmp_40 = fsub double %d0r, %dr_1
+  store double %tmp_40, double* %c_addr_6, align 8
+  %tmp_41 = fsub double %d0i, %di_1
+  store double %tmp_41, double* %c_addr_7, align 8
+  %tmp_42 = fmul double %wr, %d_1
+  %tmp_43 = fmul double %wik, %wi_1
+  %wrk = fsub double %tmp_42, %tmp_43
+  %tmp_44 = fmul double %wr, %wik
+  %tmp_45 = fmul double %d_1, %wi_1
+  %wik_1 = fadd double %tmp_44, %tmp_45
   br label %.preheader
 
-; <label>:9                                       ; preds = %.preheader
-  %p_rec = add i63 %tmp_31_cast, %cp_0_rec
-  br label %7
+._crit_edge7:                                     ; preds = %.preheader, %7
+  %cp_s = phi i32 [ 0, %7 ], [ %n_3, %.preheader ]
+  %cp_cast = sext i32 %cp_s to i39
+  %cp_addr_rec = add i39 %cp_cast, %cp_rec
+  br label %6
 
-; <label>:10                                      ; preds = %.preheader8
+; <label>:10                                      ; preds = %.preheader4
   ret void
 }
 
@@ -440,10 +448,10 @@ define internal fastcc void @voicerec_preprocessSound([16000 x double]* nocaptur
   br label %1
 
 ; <label>:1                                       ; preds = %2, %0
-  %first = phi i14 [ 0, %0 ], [ %i_2, %2 ]
+  %first = phi i14 [ 0, %0 ], [ %i, %2 ]
   %tmp = icmp ult i14 %first, -384
   %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 16000, i64 8000)
-  %i_2 = add i14 %first, 1
+  %i = add i14 %first, 1
   br i1 %tmp, label %2, label %.loopexit2
 
 ; <label>:2                                       ; preds = %1
@@ -451,166 +459,207 @@ define internal fastcc void @voicerec_preprocessSound([16000 x double]* nocaptur
   %inSound_addr = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_s
   %inSound_load = load double* %inSound_addr, align 8
   %inSound_load_to_int = bitcast double %inSound_load to i64
-  %tmp_16 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %inSound_load_to_int, i32 52, i32 62)
+  %tmp_15 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %inSound_load_to_int, i32 52, i32 62)
   %tmp_14 = trunc i64 %inSound_load_to_int to i52
-  %notlhs1 = icmp ne i11 %tmp_16, -1
+  %notlhs1 = icmp ne i11 %tmp_15, -1
   %notrhs1 = icmp eq i52 %tmp_14, 0
-  %tmp_18 = or i1 %notrhs1, %notlhs1
-  %tmp_19 = fcmp ogt double %inSound_load, 1.500000e-01
-  %tmp_20 = and i1 %tmp_18, %tmp_19
-  br i1 %tmp_20, label %.loopexit2, label %1
+  %tmp_17 = or i1 %notrhs1, %notlhs1
+  %tmp_18 = fcmp ogt double %inSound_load, 1.500000e-01
+  %tmp_19 = and i1 %tmp_17, %tmp_18
+  br i1 %tmp_19, label %.loopexit2, label %1
 
 .loopexit2:                                       ; preds = %2, %1
-  %i = phi i14 [ 0, %1 ], [ %first, %2 ]
-  %i_cast = zext i14 %i to i32
+  %first1 = phi i14 [ 0, %1 ], [ %first, %2 ]
   br label %._crit_edge
 
 ._crit_edge:                                      ; preds = %3, %.loopexit2
-  %i_1_in = phi i14 [ -384, %.loopexit2 ], [ %tmp_15, %3 ]
+  %i_1_in = phi i14 [ -384, %.loopexit2 ], [ %tmp_16, %3 ]
   %i_1_in_cast = zext i14 %i_1_in to i15
   %last_2 = add i15 -1, %i_1_in_cast
-  %last_2_cast1 = sext i15 %last_2 to i32
-  %tmp_15 = trunc i15 %last_2 to i14
-  %tmp_47 = icmp eq i14 %i_1_in, 0
-  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 16000, i64 8000)
-  br i1 %tmp_47, label %.loopexit, label %3
+  %last_2_cast5 = sext i15 %last_2 to i32
+  %tmp_16 = trunc i15 %last_2 to i14
+  %tmp_46 = icmp eq i14 %i_1_in, 0
+  %empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 16000, i64 8000)
+  br i1 %tmp_46, label %.loopexit, label %3
 
 ; <label>:3                                       ; preds = %._crit_edge
-  %tmp_48 = zext i32 %last_2_cast1 to i64
-  %inSound_addr_1 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_48
+  %tmp_47 = zext i32 %last_2_cast5 to i64
+  %inSound_addr_1 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_47
   %inSound_load_1 = load double* %inSound_addr_1, align 8
   %inSound_load_1_to_int = bitcast double %inSound_load_1 to i64
-  %tmp_21 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %inSound_load_1_to_int, i32 52, i32 62)
-  %tmp_17 = trunc i64 %inSound_load_1_to_int to i52
-  %notlhs2 = icmp ne i11 %tmp_21, -1
-  %notrhs2 = icmp eq i52 %tmp_17, 0
-  %tmp_23 = or i1 %notrhs2, %notlhs2
-  %tmp_24 = fcmp ogt double %inSound_load_1, 1.500000e-01
-  %tmp_25 = and i1 %tmp_23, %tmp_24
-  br i1 %tmp_25, label %.loopexit, label %._crit_edge
+  %tmp_20 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %inSound_load_1_to_int, i32 52, i32 62)
+  %tmp_21 = trunc i64 %inSound_load_1_to_int to i52
+  %notlhs2 = icmp ne i11 %tmp_20, -1
+  %notrhs2 = icmp eq i52 %tmp_21, 0
+  %tmp_22 = or i1 %notrhs2, %notlhs2
+  %tmp_23 = fcmp ogt double %inSound_load_1, 1.500000e-01
+  %tmp_24 = and i1 %tmp_22, %tmp_23
+  br i1 %tmp_24, label %.loopexit, label %._crit_edge
 
 .loopexit:                                        ; preds = %3, %._crit_edge
   %last = phi i15 [ 0, %._crit_edge ], [ %last_2, %3 ]
-  %j = alloca i32
   %deleteFlag = alloca i32
   %count = alloca i32
-  %last_cast = sext i15 %last to i32
+  %markBegin = alloca i32
+  store i32 0, i32* %markBegin
   store i32 0, i32* %count
   store i32 0, i32* %deleteFlag
-  store i32 0, i32* %j
-  br label %4
+  br label %._crit_edge11
 
-; <label>:4                                       ; preds = %11, %.loopexit
-  %markBegin = phi i32 [ %i_cast, %.loopexit ], [ %i_6, %11 ]
-  %j_9 = load i32* %j
-  %tmp_49 = icmp sgt i32 %markBegin, %last_cast
-  br i1 %tmp_49, label %.preheader.preheader, label %5
+._crit_edge11:                                    ; preds = %._crit_edge11.backedge, %.loopexit
+  %markBegin_2 = phi i14 [ 0, %.loopexit ], [ %i_5, %._crit_edge11.backedge ]
+  %markBegin_2_cast = zext i14 %markBegin_2 to i15
+  %exitcond1 = icmp eq i14 %markBegin_2, -384
+  %empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16000, i64 16000, i64 16000)
+  %i_5 = add i14 %markBegin_2, 1
+  br i1 %exitcond1, label %.preheader.preheader, label %4
 
-.preheader.preheader:                             ; preds = %4
+.preheader.preheader:                             ; preds = %._crit_edge11
   %j_1 = alloca i32
   store i32 0, i32* %j_1
   br label %.preheader
 
+; <label>:4                                       ; preds = %._crit_edge11
+  %tmp_48 = icmp ult i14 %markBegin_2, %first1
+  %tmp_49 = icmp sgt i15 %markBegin_2_cast, %last
+  %or_cond = or i1 %tmp_48, %tmp_49
+  br i1 %or_cond, label %._crit_edge11.backedge, label %5
+
 ; <label>:5                                       ; preds = %4
-  %tmp_50 = icmp eq i32 %j_9, 0
-  %tmp_52 = sext i32 %markBegin to i64
-  %inSound_addr_3 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_52
+  %markBegin_load_1 = load i32* %markBegin
+  %tmp_50 = icmp eq i32 %markBegin_load_1, 0
+  %tmp_54 = zext i14 %markBegin_2 to i64
+  %inSound_addr_3 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_54
   %inSound_load_2 = load double* %inSound_addr_3, align 8
   %p_Val2_s = bitcast double %inSound_load_2 to i64
-  %tmp_22 = trunc i64 %p_Val2_s to i63
+  %tmp_25 = trunc i64 %p_Val2_s to i63
   %tmp_26 = trunc i64 %p_Val2_s to i52
-  %p_Result_s = call i64 @_ssdm_op_BitConcatenate.i64.i1.i63(i1 false, i63 %tmp_22)
+  %p_Result_s = call i64 @_ssdm_op_BitConcatenate.i64.i1.i63(i1 false, i63 %tmp_25)
   %ret_i_i_i_i_i = bitcast i64 %p_Result_s to double
-  %tmp_34 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_s, i32 52, i32 62)
-  %notlhs7 = icmp ne i11 %tmp_34, -1
-  %notrhs8 = icmp eq i52 %tmp_26, 0
-  %tmp_35 = or i1 %notrhs8, %notlhs7
-  %tmp_36 = fcmp olt double %ret_i_i_i_i_i, 1.500000e-01
-  %tmp_37 = and i1 %tmp_35, %tmp_36
+  %tmp_33 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_s, i32 52, i32 62)
+  %notlhs4 = icmp ne i11 %tmp_33, -1
+  %notrhs4 = icmp eq i52 %tmp_26, 0
+  %tmp_34 = or i1 %notrhs4, %notlhs4
+  %tmp_35 = fcmp olt double %ret_i_i_i_i_i, 1.500000e-01
+  %tmp_36 = and i1 %tmp_34, %tmp_35
   br i1 %tmp_50, label %6, label %7
 
 ; <label>:6                                       ; preds = %5
-  %markBegin_1 = select i1 %tmp_37, i32 %markBegin, i32 0
-  store i32 %markBegin_1, i32* %j
-  br label %11
+  %markBegin_1 = select i1 %tmp_36, i14 %markBegin_2, i14 0
+  %markBegin_1_cast = zext i14 %markBegin_1 to i32
+  store i32 %markBegin_1_cast, i32* %markBegin
+  br label %._crit_edge11.backedge
 
 ; <label>:7                                       ; preds = %5
   %deleteFlag_load = load i32* %deleteFlag
-  br i1 %tmp_37, label %8, label %9
+  br i1 %tmp_36, label %8, label %9
 
 ; <label>:8                                       ; preds = %7
   %count_load = load i32* %count
   %count_1 = add nsw i32 %count_load, 1
-  %tmp_54 = icmp eq i32 %count_1, 200
-  %p_deleteFlag = select i1 %tmp_54, i32 1, i32 %deleteFlag_load
+  %tmp_57 = icmp eq i32 %count_1, 200
+  %p_deleteFlag = select i1 %tmp_57, i32 1, i32 %deleteFlag_load
   store i32 %count_1, i32* %count
   store i32 %p_deleteFlag, i32* %deleteFlag
-  br label %11
+  br label %._crit_edge11.backedge
 
 ; <label>:9                                       ; preds = %7
-  %tmp_55 = icmp eq i32 %deleteFlag_load, 1
-  br i1 %tmp_55, label %.preheader4, label %.loopexit5
+  %tmp_58 = icmp eq i32 %deleteFlag_load, 1
+  br i1 %tmp_58, label %.preheader7, label %.loopexit8
 
-.preheader4:                                      ; preds = %9, %10
-  %j9 = phi i32 [ %j_8, %10 ], [ %j_9, %9 ]
-  %tmp_57 = icmp slt i32 %j9, %markBegin
-  br i1 %tmp_57, label %10, label %.loopexit5
+.preheader7:                                      ; preds = %9, %._crit_edge12
+  %j9 = phi i14 [ %j_8, %._crit_edge12 ], [ 0, %9 ]
+  %j9_cast3 = zext i14 %j9 to i32
+  %exitcond = icmp eq i14 %j9, -384
+  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16000, i64 16000, i64 16000)
+  %j_8 = add i14 %j9, 1
+  br i1 %exitcond, label %.loopexit8, label %10
 
-; <label>:10                                      ; preds = %.preheader4
-  %tmp_58 = sext i32 %j9 to i64
-  %inSound_addr_4 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_58
+; <label>:10                                      ; preds = %.preheader7
+  %markBegin_load = load i32* %markBegin
+  %slt = icmp slt i32 %j9_cast3, %markBegin_load
+  %rev6 = xor i1 %slt, true
+  %tmp_61 = icmp ult i14 %j9, %markBegin_2
+  %or_cond4 = and i1 %rev6, %tmp_61
+  br i1 %or_cond4, label %11, label %._crit_edge12
+
+; <label>:11                                      ; preds = %10
+  %tmp_62 = zext i14 %j9 to i64
+  %inSound_addr_4 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_62
   store double 0.000000e+00, double* %inSound_addr_4, align 8
-  %j_8 = add nsw i32 %j9, 1
-  br label %.preheader4
+  br label %._crit_edge12
 
-.loopexit5:                                       ; preds = %.preheader4, %9
+._crit_edge12:                                    ; preds = %11, %10
+  br label %.preheader7
+
+.loopexit8:                                       ; preds = %.preheader7, %9
+  store i32 0, i32* %markBegin
   store i32 0, i32* %count
   store i32 0, i32* %deleteFlag
-  store i32 0, i32* %j
-  br label %11
+  br label %._crit_edge11.backedge
 
-; <label>:11                                      ; preds = %.loopexit5, %8, %6
-  %i_6 = add nsw i32 %markBegin, 1
-  br label %4
+._crit_edge11.backedge:                           ; preds = %.loopexit8, %8, %6, %4
+  br label %._crit_edge11
 
-.preheader:                                       ; preds = %.preheader.preheader, %._crit_edge8
-  %i_3 = phi i32 [ %i_5, %._crit_edge8 ], [ %i_cast, %.preheader.preheader ]
-  %j_1_load = load i32* %j_1
-  %tmp_51 = icmp eq i32 %j_1_load, 8000
-  %slt = icmp slt i32 %last_cast, %i_3
-  %demorgan = or i1 %slt, %tmp_51
-  br i1 %demorgan, label %14, label %12
+.preheader:                                       ; preds = %.preheader.backedge, %.preheader.preheader
+  %i_3 = phi i14 [ 0, %.preheader.preheader ], [ %i_4, %.preheader.backedge ]
+  %i_3_cast = zext i14 %i_3 to i15
+  %exitcond2 = icmp eq i14 %i_3, -384
+  %empty_20 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16000, i64 16000, i64 16000)
+  %i_4 = add i14 %i_3, 1
+  br i1 %exitcond2, label %17, label %12
 
 ; <label>:12                                      ; preds = %.preheader
-  %tmp_53 = sext i32 %i_3 to i64
-  %inSound_addr_2 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_53
-  %inSound_load_3 = load double* %inSound_addr_2, align 8
-  %p_Val2_1 = bitcast double %inSound_load_3 to i64
-  %tmp_27 = trunc i64 %p_Val2_1 to i63
-  %tmp_32 = trunc i64 %p_Val2_1 to i52
-  %p_Result_1 = call i64 @_ssdm_op_BitConcatenate.i64.i1.i63(i1 false, i63 %tmp_27)
-  %ret_i_i_i_i_i2 = bitcast i64 %p_Result_1 to double
-  %tmp_28 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_1, i32 52, i32 62)
-  %notlhs9 = icmp ne i11 %tmp_28, -1
-  %notrhs3 = icmp eq i52 %tmp_32, 0
-  %tmp_29 = or i1 %notrhs3, %notlhs9
-  %tmp_30 = fcmp ogt double %ret_i_i_i_i_i2, 0.000000e+00
-  %tmp_31 = and i1 %tmp_29, %tmp_30
-  br i1 %tmp_31, label %13, label %._crit_edge8
+  %j_1_load = load i32* %j_1
+  %tmp_51 = icmp ult i14 %i_3, %first1
+  %tmp_52 = icmp sgt i15 %i_3_cast, %last
+  %tmp_53 = icmp eq i32 %j_1_load, 8000
+  %tmp1 = or i1 %tmp_52, %tmp_53
+  %or_cond6 = or i1 %tmp1, %tmp_51
+  br i1 %or_cond6, label %15, label %13
 
 ; <label>:13                                      ; preds = %12
-  %tmp_56 = sext i32 %j_1_load to i64
-  %outSound_addr = getelementptr [8000 x double]* %outSound, i64 0, i64 %tmp_56
-  store double %inSound_load_3, double* %outSound_addr, align 8
-  %j_7 = add nsw i32 %j_1_load, 1
-  store i32 %j_7, i32* %j_1
-  br label %._crit_edge8
+  %tmp_56 = zext i14 %i_3 to i64
+  %inSound_addr_2 = getelementptr [16000 x double]* %inSound, i64 0, i64 %tmp_56
+  %inSound_load_3 = load double* %inSound_addr_2, align 8
+  %p_Val2_1 = bitcast double %inSound_load_3 to i64
+  %tmp_31 = trunc i64 %p_Val2_1 to i63
+  %tmp_32 = trunc i64 %p_Val2_1 to i52
+  %p_Result_1 = call i64 @_ssdm_op_BitConcatenate.i64.i1.i63(i1 false, i63 %tmp_31)
+  %ret_i_i_i_i_i2 = bitcast i64 %p_Result_1 to double
+  %tmp_27 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_1, i32 52, i32 62)
+  %notlhs3 = icmp ne i11 %tmp_27, -1
+  %notrhs3 = icmp eq i52 %tmp_32, 0
+  %tmp_28 = or i1 %notrhs3, %notlhs3
+  %tmp_29 = fcmp ogt double %ret_i_i_i_i_i2, 0.000000e+00
+  %tmp_30 = and i1 %tmp_28, %tmp_29
+  br i1 %tmp_30, label %14, label %.preheader.backedge
 
-._crit_edge8:                                     ; preds = %13, %12
-  %i_5 = add nsw i32 %i_3, 1
+; <label>:14                                      ; preds = %13
+  %j_1_load_1 = load i32* %j_1
+  %tmp_60 = sext i32 %j_1_load_1 to i64
+  %outSound_addr_1 = getelementptr [8000 x double]* %outSound, i64 0, i64 %tmp_60
+  store double %inSound_load_3, double* %outSound_addr_1, align 8
+  %j_7 = add nsw i32 %j_1_load_1, 1
+  store i32 %j_7, i32* %j_1
+  br label %.preheader.backedge
+
+; <label>:15                                      ; preds = %12
+  %tmp_55 = icmp slt i32 %j_1_load, 8000
+  br i1 %tmp_55, label %16, label %.preheader.backedge
+
+; <label>:16                                      ; preds = %15
+  %tmp_59 = sext i32 %j_1_load to i64
+  %outSound_addr = getelementptr [8000 x double]* %outSound, i64 0, i64 %tmp_59
+  store double 0.000000e+00, double* %outSound_addr, align 8
+  %j = add nsw i32 %j_1_load, 1
+  store i32 %j, i32* %j_1
+  br label %.preheader.backedge
+
+.preheader.backedge:                              ; preds = %16, %15, %14, %13
   br label %.preheader
 
-; <label>:14                                      ; preds = %.preheader
+; <label>:17                                      ; preds = %.preheader
   ret void
 }
 
@@ -622,101 +671,102 @@ entry:
 define weak i64 @_ssdm_op_BitConcatenate.i64.i1.i63(i1, i63) nounwind readnone {
 entry:
   %empty = zext i1 %0 to i64
-  %empty_16 = zext i63 %1 to i64
-  %empty_17 = shl i64 %empty, 63
-  %empty_18 = or i64 %empty_17, %empty_16
-  ret i64 %empty_18
+  %empty_21 = zext i63 %1 to i64
+  %empty_22 = shl i64 %empty, 63
+  %empty_23 = or i64 %empty_22, %empty_21
+  ret i64 %empty_23
 }
 
-define internal fastcc void @voicerec_processChunk(i32 %sp, i32 %np, [882 x double]* nocapture %ret, i32 %tmp_122, [8000 x double]* nocapture %inputSound) {
-  %tmp_122_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %tmp_122)
-  %np_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %np)
-  %sp_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %sp)
+define internal fastcc void @voicerec_processChunk(i13 %sp, [882 x double]* nocapture %ret, i6 %tmp, [8000 x double]* nocapture %inputSound) {
+  %tmp_read = call i6 @_ssdm_op_Read.ap_auto.i6(i6 %tmp)
+  %sp_read = call i13 @_ssdm_op_Read.ap_auto.i13(i13 %sp)
   br label %1
 
 ; <label>:1                                       ; preds = %2, %0
-  %i = phi i31 [ 0, %0 ], [ %i_5, %2 ]
-  %i_cast = zext i31 %i to i32
-  %tmp = icmp slt i32 %i_cast, %np_read
-  %i_5 = add i31 %i, 1
-  br i1 %tmp, label %2, label %3
+  %i = phi i9 [ 0, %0 ], [ %i_5, %2 ]
+  %i_cast7 = zext i9 %i to i13
+  %exitcond4 = icmp eq i9 %i, -256
+  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 256, i64 256, i64 256)
+  %i_5 = add i9 %i, 1
+  br i1 %exitcond4, label %3, label %2
 
 ; <label>:2                                       ; preds = %1
-  %tmp_s = add nsw i32 %i_cast, %sp_read
-  %tmp_59 = sext i32 %tmp_s to i64
-  %inputSound_addr = getelementptr [8000 x double]* %inputSound, i64 0, i64 %tmp_59
+  %tmp1 = add i13 %sp_read, %i_cast7
+  %tmp_s = zext i13 %tmp1 to i64
+  %inputSound_addr = getelementptr [8000 x double]* %inputSound, i64 0, i64 %tmp_s
   %inputSound_load = load double* %inputSound_addr, align 8
-  %tmp_60 = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 %i, i1 false)
-  %tmp_61 = sext i32 %tmp_60 to i64
-  %c_addr = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_61
+  %tmp_33 = shl i9 %i, 1
+  %tmp_63 = zext i9 %tmp_33 to i64
+  %c_addr = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_63
   store double %inputSound_load, double* %c_addr, align 16
-  %tmp_62 = or i32 %tmp_60, 1
-  %tmp_63 = sext i32 %tmp_62 to i64
-  %c_addr_8 = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_63
-  store double 0.000000e+00, double* %c_addr_8, align 8
+  %tmp_64 = or i9 %tmp_33, 1
+  %tmp_65 = zext i9 %tmp_64 to i64
+  %c_addr_4 = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_65
+  store double 0.000000e+00, double* %c_addr_4, align 8
   br label %1
 
 ; <label>:3                                       ; preds = %1
-  call fastcc void @voicerec_FFT([512 x double]* @c, i32 %np_read)
+  call fastcc void @voicerec_FFT([512 x double]* @c)
   br label %4
 
 ; <label>:4                                       ; preds = %5, %3
-  %i_1 = phi i31 [ 0, %3 ], [ %i_6, %5 ]
-  %i_1_cast = zext i31 %i_1 to i32
-  %tmp_64 = icmp slt i32 %i_1_cast, %np_read
-  %i_6 = add i31 %i_1, 1
-  br i1 %tmp_64, label %5, label %.preheader3
+  %i_1 = phi i9 [ 0, %3 ], [ %i_6, %5 ]
+  %exitcond3 = icmp eq i9 %i_1, -256
+  %empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 256, i64 256, i64 256)
+  %i_6 = add i9 %i_1, 1
+  br i1 %exitcond3, label %.preheader6, label %5
 
 ; <label>:5                                       ; preds = %4
-  %tmp_65 = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 %i_1, i1 false)
-  %tmp_66 = sext i32 %tmp_65 to i64
-  %c_addr_9 = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_66
-  %c_load = load double* %c_addr_9, align 16
+  %tmp_34 = shl i9 %i_1, 1
+  %tmp_66 = zext i9 %tmp_34 to i64
+  %c_addr_5 = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_66
+  %c_load = load double* %c_addr_5, align 16
   %tmp_67 = fmul double %c_load, %c_load
-  %tmp_68 = or i32 %tmp_65, 1
-  %tmp_69 = sext i32 %tmp_68 to i64
-  %c_addr_10 = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_69
-  %c_load_6 = load double* %c_addr_10, align 8
-  %tmp_70 = fmul double %c_load_6, %c_load_6
+  %tmp_68 = or i9 %tmp_34, 1
+  %tmp_69 = zext i9 %tmp_68 to i64
+  %c_addr_6 = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_69
+  %c_load_2 = load double* %c_addr_6, align 8
+  %tmp_70 = fmul double %c_load_2, %c_load_2
   %tmp_71 = fadd double %tmp_67, %tmp_70
   %tmp_72 = fmul double %tmp_71, 3.906250e-03
-  %tmp_73 = zext i31 %i_1 to i64
+  %tmp_73 = zext i9 %i_1 to i64
   %d_addr = getelementptr inbounds [256 x double]* @d, i64 0, i64 %tmp_73
   store double %tmp_72, double* %d_addr, align 8
   br label %4
 
-.preheader3:                                      ; preds = %4, %6
+.preheader6:                                      ; preds = %4, %6
   %i_2 = phi i5 [ %i_7, %6 ], [ 0, %4 ]
-  %exitcond1 = icmp eq i5 %i_2, -6
-  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
+  %exitcond2 = icmp eq i5 %i_2, -6
+  %empty_25 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
   %i_7 = add i5 %i_2, 1
-  br i1 %exitcond1, label %.preheader2, label %6
+  br i1 %exitcond2, label %.preheader5, label %6
 
-; <label>:6                                       ; preds = %.preheader3
-  %tmp_75 = zext i5 %i_2 to i64
-  %e_addr = getelementptr inbounds [26 x double]* @e, i64 0, i64 %tmp_75
+; <label>:6                                       ; preds = %.preheader6
+  %tmp_74 = zext i5 %i_2 to i64
+  %e_addr = getelementptr inbounds [26 x double]* @e, i64 0, i64 %tmp_74
   store double 0.000000e+00, double* %e_addr, align 8
-  br label %.preheader3
+  br label %.preheader6
 
-.preheader2:                                      ; preds = %.preheader3, %._crit_edge4
-  %i_3 = phi i31 [ %i_9, %._crit_edge4 ], [ 0, %.preheader3 ]
-  %mellIdx = phi i32 [ %p_mellIdx, %._crit_edge4 ], [ 0, %.preheader3 ]
-  %i_3_cast = zext i31 %i_3 to i32
-  %tmp_74 = icmp slt i32 %i_3_cast, %np_read
-  %i_9 = add i31 %i_3, 1
-  br i1 %tmp_74, label %7, label %.preheader
+.preheader5:                                      ; preds = %.preheader6, %._crit_edge7
+  %i_3 = phi i9 [ %i_9, %._crit_edge7 ], [ 0, %.preheader6 ]
+  %mellIdx = phi i32 [ %p_mellIdx, %._crit_edge7 ], [ 0, %.preheader6 ]
+  %i_3_cast = zext i9 %i_3 to i10
+  %exitcond1 = icmp eq i9 %i_3, -256
+  %empty_26 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 256, i64 256, i64 256)
+  %i_9 = add i9 %i_3, 1
+  br i1 %exitcond1, label %.preheader, label %7
 
-; <label>:7                                       ; preds = %.preheader2
-  %tmp_76 = sext i32 %mellIdx to i64
-  %mell_addr = getelementptr [27 x i8]* @mell, i64 0, i64 %tmp_76
+; <label>:7                                       ; preds = %.preheader5
+  %tmp_75 = sext i32 %mellIdx to i64
+  %mell_addr = getelementptr [27 x i8]* @mell, i64 0, i64 %tmp_75
   %mell_load = load i8* %mell_addr, align 1
-  %mell_load_cast = zext i8 %mell_load to i32
-  %mell_load_cast_cast = zext i8 %mell_load to i31
-  %tmp_77 = icmp eq i32 %i_3_cast, %mell_load_cast
-  br i1 %tmp_77, label %8, label %._crit_edge
+  %mell_load_cast = zext i8 %mell_load to i10
+  %mell_load_cast_cast = zext i8 %mell_load to i9
+  %tmp_76 = icmp eq i10 %i_3_cast, %mell_load_cast
+  br i1 %tmp_76, label %8, label %._crit_edge
 
 ; <label>:8                                       ; preds = %7
-  %tmp_78 = zext i31 %i_3 to i64
+  %tmp_78 = zext i9 %i_3 to i64
   %d_addr_1 = getelementptr inbounds [256 x double]* @d, i64 0, i64 %tmp_78
   %d_load = load double* %d_addr_1, align 8
   %e_load = load double* getelementptr inbounds ([26 x double]* @e, i64 0, i64 0), align 16
@@ -725,64 +775,67 @@ define internal fastcc void @voicerec_processChunk(i32 %sp, i32 %np, [882 x doub
   br label %._crit_edge
 
 ._crit_edge:                                      ; preds = %8, %7
-  %tmp_80 = icmp ugt i31 %i_3, %mell_load_cast_cast
-  br i1 %tmp_80, label %9, label %._crit_edge4
+  %tmp_80 = icmp ugt i9 %i_3, %mell_load_cast_cast
+  br i1 %tmp_80, label %9, label %._crit_edge7
 
 ; <label>:9                                       ; preds = %._crit_edge
   %tmp_82 = add nsw i32 %mellIdx, 1
   %tmp_83 = sext i32 %tmp_82 to i64
   %mell_addr_1 = getelementptr [27 x i8]* @mell, i64 0, i64 %tmp_83
   %mell_load_1 = load i8* %mell_addr_1, align 1
-  %mell_load_1_cast_cast = zext i8 %mell_load_1 to i31
-  %tmp_84 = icmp ugt i31 %i_3, %mell_load_1_cast_cast
-  br i1 %tmp_84, label %._crit_edge4, label %10
+  %mell_load_1_cast_cast = zext i8 %mell_load_1 to i9
+  %tmp_84 = icmp ugt i9 %i_3, %mell_load_1_cast_cast
+  br i1 %tmp_84, label %._crit_edge7, label %10
 
 ; <label>:10                                      ; preds = %9
-  %tmp_86 = zext i31 %i_3 to i64
-  %d_addr_2 = getelementptr inbounds [256 x double]* @d, i64 0, i64 %tmp_86
+  %tmp_85 = zext i9 %i_3 to i64
+  %d_addr_2 = getelementptr inbounds [256 x double]* @d, i64 0, i64 %tmp_85
   %d_load_1 = load double* %d_addr_2, align 8
-  %e_addr_2 = getelementptr inbounds [26 x double]* @e, i64 0, i64 %tmp_76
+  %e_addr_2 = getelementptr inbounds [26 x double]* @e, i64 0, i64 %tmp_75
   %e_load_2 = load double* %e_addr_2, align 8
-  %tmp_87 = fadd double %e_load_2, %d_load_1
-  store double %tmp_87, double* %e_addr_2, align 8
-  br label %._crit_edge4
+  %tmp_86 = fadd double %e_load_2, %d_load_1
+  store double %tmp_86, double* %e_addr_2, align 8
+  br label %._crit_edge7
 
-._crit_edge4:                                     ; preds = %10, %9, %._crit_edge
+._crit_edge7:                                     ; preds = %10, %9, %._crit_edge
   %mellIdx_1 = add nsw i32 %mellIdx, 1
-  %tmp_88 = sext i32 %mellIdx_1 to i64
-  %mell_addr_2 = getelementptr [27 x i8]* @mell, i64 0, i64 %tmp_88
+  %tmp_87 = sext i32 %mellIdx_1 to i64
+  %mell_addr_2 = getelementptr [27 x i8]* @mell, i64 0, i64 %tmp_87
   %mell_load_2 = load i8* %mell_addr_2, align 1
-  %mell_load_2_cast = zext i8 %mell_load_2 to i32
-  %tmp_89 = icmp eq i32 %i_3_cast, %mell_load_2_cast
-  %p_mellIdx = select i1 %tmp_89, i32 %mellIdx_1, i32 %mellIdx
+  %mell_load_2_cast = zext i8 %mell_load_2 to i10
+  %tmp_88 = icmp eq i10 %i_3_cast, %mell_load_2_cast
+  %p_mellIdx = select i1 %tmp_88, i32 %mellIdx_1, i32 %mellIdx
+  br label %.preheader5
+
+.preheader:                                       ; preds = %.preheader5, %13
+  %i_4 = phi i5 [ %i_8, %13 ], [ 0, %.preheader5 ]
+  %exitcond = icmp eq i5 %i_4, -6
+  %empty_27 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
+  %i_8 = add i5 %i_4, 1
+  br i1 %exitcond, label %.preheader2.preheader, label %11
+
+.preheader2.preheader:                            ; preds = %.preheader
+  %tmp_55 = call i10 @_ssdm_op_BitConcatenate.i10.i6.i4(i6 %tmp_read, i4 0)
+  %p_shl_cast = zext i10 %tmp_55 to i11
+  %tmp_56 = call i7 @_ssdm_op_BitConcatenate.i7.i6.i1(i6 %tmp_read, i1 false)
+  %p_shl5_cast = zext i7 %tmp_56 to i11
+  %p_addr = sub i11 %p_shl_cast, %p_shl5_cast
+  %p_addr_cast = sext i11 %p_addr to i12
   br label %.preheader2
 
-.preheader:                                       ; preds = %.preheader2, %13
-  %i_4 = phi i5 [ %i_8, %13 ], [ 0, %.preheader2 ]
-  %exitcond = icmp eq i5 %i_4, -6
-  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
-  %i_8 = add i5 %i_4, 1
-  br i1 %exitcond, label %.preheader4.preheader, label %11
-
-.preheader4.preheader:                            ; preds = %.preheader
-  %tmp_33 = shl i32 %tmp_122_read, 4
-  %tmp_34 = shl i32 %tmp_122_read, 1
-  %p_addr = sub i32 %tmp_33, %tmp_34
-  br label %.preheader4
-
 ; <label>:11                                      ; preds = %.preheader
-  %tmp_81 = zext i5 %i_4 to i64
-  %e_addr_1 = getelementptr inbounds [26 x double]* @e, i64 0, i64 %tmp_81
+  %tmp_77 = zext i5 %i_4 to i64
+  %e_addr_1 = getelementptr inbounds [26 x double]* @e, i64 0, i64 %tmp_77
   %e_load_1 = load double* %e_addr_1, align 8
   %e_load_1_to_int = bitcast double %e_load_1 to i64
-  %tmp_44 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %e_load_1_to_int, i32 52, i32 62)
+  %tmp_43 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %e_load_1_to_int, i32 52, i32 62)
   %tmp_35 = trunc i64 %e_load_1_to_int to i52
-  %notlhs = icmp ne i11 %tmp_44, -1
+  %notlhs = icmp ne i11 %tmp_43, -1
   %notrhs = icmp eq i52 %tmp_35, 0
-  %tmp_46 = or i1 %notrhs, %notlhs
-  %tmp_47 = fcmp ole double %e_load_1, 0.000000e+00
-  %tmp_48 = and i1 %tmp_46, %tmp_47
-  br i1 %tmp_48, label %13, label %12
+  %tmp_45 = or i1 %notrhs, %notlhs
+  %tmp_46 = fcmp ole double %e_load_1, 0.000000e+00
+  %tmp_47 = and i1 %tmp_45, %tmp_46
+  br i1 %tmp_47, label %13, label %12
 
 ; <label>:12                                      ; preds = %11
   %x_assign = fptrunc double %e_load_1 to float
@@ -790,8 +843,8 @@ define internal fastcc void @voicerec_processChunk(i32 %sp, i32 %np, [882 x doub
   %tmp_36 = trunc i32 %tmp_i_i to i23
   %mx_i_i = call i30 @_ssdm_op_BitConcatenate.i30.i7.i23(i7 -2, i23 %tmp_36)
   %mx_i_i_cast = zext i30 %mx_i_i to i32
-  %tmp_i_i1 = zext i32 %tmp_i_i to i64
-  %y = sitofp i64 %tmp_i_i1 to float
+  %tmp_i_i2 = zext i32 %tmp_i_i to i64
+  %y = sitofp i64 %tmp_i_i2 to float
   %y_1 = fmul float %y, 0x3E80000000000000
   %tmp_1_i_i = fadd float %y_1, 0xC05F0E6EE0000000
   %tmp_2_i_i = bitcast i32 %mx_i_i_cast to float
@@ -801,34 +854,34 @@ define internal fastcc void @voicerec_processChunk(i32 %sp, i32 %np, [882 x doub
   %tmp_6_i_i = fdiv float 0x3FFB9D3460000000, %tmp_5_i_i
   %tmp_7_i_i = fsub float %tmp_4_i_i, %tmp_6_i_i
   %tmp_i = fmul float %tmp_7_i_i, 0x3FE62E4300000000
-  %tmp_85 = fpext float %tmp_i to double
+  %tmp_81 = fpext float %tmp_i to double
   br label %13
 
 ; <label>:13                                      ; preds = %12, %11
-  %storemerge = phi double [ %tmp_85, %12 ], [ 0.000000e+00, %11 ]
+  %storemerge = phi double [ %tmp_81, %12 ], [ 0.000000e+00, %11 ]
   store double %storemerge, double* %e_addr_1, align 8
   br label %.preheader
 
-.preheader4:                                      ; preds = %.preheader4.preheader, %17
-  %k_i = phi i4 [ %k, %17 ], [ 0, %.preheader4.preheader ]
-  %phi_mul = phi i9 [ %next_mul, %17 ], [ 0, %.preheader4.preheader ]
+.preheader2:                                      ; preds = %.preheader2.preheader, %17
+  %k_i = phi i4 [ %k, %17 ], [ 0, %.preheader2.preheader ]
+  %phi_mul = phi i9 [ %next_mul, %17 ], [ 0, %.preheader2.preheader ]
   %next_mul = add i9 %phi_mul, 26
-  %exitcond3_i = icmp eq i4 %k_i, -2
-  %empty_20 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)
+  %exitcond4_i = icmp eq i4 %k_i, -2
+  %empty_28 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)
   %k = add i4 %k_i, 1
-  br i1 %exitcond3_i, label %dct_ii.exit, label %14
+  br i1 %exitcond4_i, label %dct_ii.exit, label %14
 
-; <label>:14                                      ; preds = %.preheader4
+; <label>:14                                      ; preds = %.preheader2
   %tmp_i1 = icmp eq i4 %k_i, 0
   %s = select i1 %tmp_i1, double 0x3FE6A09E667F3BD1, double 1.000000e+00
-  %tmp_27_i_trn2 = zext i4 %k_i to i32
+  %tmp_27_i_trn2_cast = zext i4 %k_i to i12
   br label %15
 
 ; <label>:15                                      ; preds = %16, %14
   %sum_i = phi double [ 0.000000e+00, %14 ], [ %sum, %16 ]
   %n_i = phi i5 [ 0, %14 ], [ %n, %16 ]
   %exitcond_i = icmp eq i5 %n_i, -6
-  %empty_21 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
+  %empty_29 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
   %n = add i5 %n_i, 1
   br i1 %exitcond_i, label %17, label %16
 
@@ -839,8 +892,8 @@ define internal fastcc void @voicerec_processChunk(i32 %sp, i32 %np, [882 x doub
   %tmp_30_i = fmul double %s, %e_load_3
   %tmp_29_i_trn_cast = zext i5 %n_i to i9
   %dctMatrix_addr4 = add i9 %tmp_29_i_trn_cast, %phi_mul
-  %tmp_56 = zext i9 %dctMatrix_addr4 to i64
-  %dctMatrix_addr = getelementptr [676 x double]* @dctMatrix, i64 0, i64 %tmp_56
+  %tmp_58 = zext i9 %dctMatrix_addr4 to i64
+  %dctMatrix_addr = getelementptr [676 x double]* @dctMatrix, i64 0, i64 %tmp_58
   %dctMatrix_load = load double* %dctMatrix_addr, align 8
   %tmp_31_i = fmul double %tmp_30_i, %dctMatrix_load
   %sum = fadd double %sum_i, %tmp_31_i
@@ -848,141 +901,109 @@ define internal fastcc void @voicerec_processChunk(i32 %sp, i32 %np, [882 x doub
 
 ; <label>:17                                      ; preds = %15
   %tmp_32_i = fmul double %sum_i, 0x3FD1C01AA03BE89E
-  %p_addr1 = add i32 %tmp_27_i_trn2, %p_addr
-  %tmp_55 = sext i32 %p_addr1 to i64
-  %ret_addr = getelementptr [882 x double]* %ret, i64 0, i64 %tmp_55
+  %p_addr1 = add i12 %p_addr_cast, %tmp_27_i_trn2_cast
+  %p_addr1_cast = sext i12 %p_addr1 to i32
+  %tmp_57 = zext i32 %p_addr1_cast to i64
+  %ret_addr = getelementptr [882 x double]* %ret, i64 0, i64 %tmp_57
   store double %tmp_32_i, double* %ret_addr, align 8
-  br label %.preheader4
+  br label %.preheader2
 
-dct_ii.exit:                                      ; preds = %.preheader4
+dct_ii.exit:                                      ; preds = %.preheader2
   ret void
 }
 
 define weak i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32, i32, i32) nounwind readnone {
 entry:
   %empty = call i32 @llvm.part.select.i32(i32 %0, i32 %1, i32 %2)
-  %empty_22 = trunc i32 %empty to i8
-  ret i8 %empty_22
+  %empty_30 = trunc i32 %empty to i8
+  ret i8 %empty_30
 }
 
 define weak i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64, i32, i32) nounwind readnone {
 entry:
   %empty = call i64 @llvm.part.select.i64(i64 %0, i32 %1, i32 %2)
-  %empty_23 = trunc i64 %empty to i11
-  ret i11 %empty_23
-}
-
-define weak i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32, i32, i32) nounwind readnone {
-entry:
-  %empty = call i32 @llvm.part.select.i32(i32 %0, i32 %1, i32 %2)
-  %empty_24 = trunc i32 %empty to i31
-  ret i31 %empty_24
+  %empty_31 = trunc i64 %empty to i11
+  ret i11 %empty_31
 }
 
 define weak i7 @_ssdm_op_BitConcatenate.i7.i6.i1(i6, i1) nounwind readnone {
 entry:
   %empty = zext i6 %0 to i7
-  %empty_25 = zext i1 %1 to i7
-  %empty_26 = shl i7 %empty, 1
-  %empty_27 = or i7 %empty_26, %empty_25
-  ret i7 %empty_27
+  %empty_32 = zext i1 %1 to i7
+  %empty_33 = shl i7 %empty, 1
+  %empty_34 = or i7 %empty_33, %empty_32
+  ret i7 %empty_34
 }
 
 define weak i10 @_ssdm_op_BitConcatenate.i10.i6.i4(i6, i4) nounwind readnone {
 entry:
   %empty = zext i6 %0 to i10
-  %empty_28 = zext i4 %1 to i10
-  %empty_29 = shl i10 %empty, 4
-  %empty_30 = or i10 %empty_29, %empty_28
-  ret i10 %empty_30
+  %empty_35 = zext i4 %1 to i10
+  %empty_36 = shl i10 %empty, 4
+  %empty_37 = or i10 %empty_36, %empty_35
+  ret i10 %empty_37
 }
 
-define weak i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31, i1) nounwind readnone {
+define weak i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32, i32, i32) nounwind readnone {
 entry:
-  %empty = zext i31 %0 to i32
-  %empty_31 = zext i1 %1 to i32
-  %empty_32 = shl i32 %empty, 1
-  %empty_33 = or i32 %empty_32, %empty_31
-  ret i32 %empty_33
+  %empty = call i32 @llvm.part.select.i32(i32 %0, i32 %1, i32 %2)
+  %empty_38 = trunc i32 %empty to i31
+  ret i31 %empty_38
 }
 
 define weak i7 @_ssdm_op_BitConcatenate.i7.i5.i2(i5, i2) nounwind readnone {
 entry:
   %empty = zext i5 %0 to i7
-  %empty_34 = zext i2 %1 to i7
-  %empty_35 = shl i7 %empty, 2
-  %empty_36 = or i7 %empty_35, %empty_34
-  ret i7 %empty_36
-}
-
-define weak i11 @_ssdm_op_BitConcatenate.i11.i10.i1(i10, i1) nounwind readnone {
-entry:
-  %empty = zext i10 %0 to i11
-  %empty_37 = zext i1 %1 to i11
-  %empty_38 = shl i11 %empty, 1
-  %empty_39 = or i11 %empty_38, %empty_37
-  ret i11 %empty_39
+  %empty_39 = zext i2 %1 to i7
+  %empty_40 = shl i7 %empty, 2
+  %empty_41 = or i7 %empty_40, %empty_39
+  ret i7 %empty_41
 }
 
 define weak i30 @_ssdm_op_BitConcatenate.i30.i7.i23(i7, i23) nounwind readnone {
 entry:
   %empty = zext i7 %0 to i30
-  %empty_40 = zext i23 %1 to i30
-  %empty_41 = shl i30 %empty, 23
-  %empty_42 = or i30 %empty_41, %empty_40
-  ret i30 %empty_42
+  %empty_42 = zext i23 %1 to i30
+  %empty_43 = shl i30 %empty, 23
+  %empty_44 = or i30 %empty_43, %empty_42
+  ret i30 %empty_44
 }
 
-define weak i32 @_ssdm_op_Read.ap_auto.i32(i32) {
+define weak i13 @_ssdm_op_Read.ap_auto.i13(i13) {
 entry:
-  ret i32 %0
+  ret i13 %0
 }
 
-define weak i1 @_ssdm_op_BitSelect.i1.i32.i32(i32, i32) nounwind readnone {
+define weak i6 @_ssdm_op_Read.ap_auto.i6(i6) {
 entry:
-  %empty = shl i32 1, %1
-  %empty_43 = and i32 %0, %empty
-  %empty_44 = icmp ne i32 %empty_43, 0
-  ret i1 %empty_44
-}
-
-define weak i30 @_ssdm_op_PartSelect.i30.i31.i32.i32(i31, i32, i32) nounwind readnone {
-entry:
-  %empty = call i31 @llvm.part.select.i31(i31 %0, i32 %1, i32 %2)
-  %empty_45 = trunc i31 %empty to i30
-  ret i30 %empty_45
+  ret i6 %0
 }
 
 declare i32 @llvm.part.select.i32(i32, i32, i32) nounwind readnone
 
 declare i64 @llvm.part.select.i64(i64, i32, i32) nounwind readnone
 
-declare i31 @llvm.part.select.i31(i31, i32, i32) nounwind readnone
-
 declare i23 @_ssdm_op_PartSelect.i23.i32.i32.i32(i32, i32, i32) nounwind readnone
 
-define weak i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32, i32, i32) nounwind readnone {
-entry:
-  %empty = call i32 @llvm.part.select.i32(i32 %0, i32 %1, i32 %2)
-  %empty_46 = trunc i32 %empty to i30
-  ret i30 %empty_46
-}
+declare i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31, i1) nounwind readnone
+
+declare i8 @_ssdm_op_PartSelect.i8.i9.i32.i32(i9, i32, i32) nounwind readnone
+
+declare i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8, i1) nounwind readnone
 
 declare i11 @_ssdm_op_PartSelect.i11.i32.i32.i32(i32, i32, i32) nounwind readnone
 
-declare i11 @_ssdm_op_PartSelect.i11.i63.i32.i32(i63, i32, i32) nounwind readnone
+declare i11 @_ssdm_op_PartSelect.i11.i39.i32.i32(i39, i32, i32) nounwind readnone
 
-declare i10 @_ssdm_op_PartSelect.i10.i30.i32.i32(i30, i32, i32) nounwind readnone
+declare i7 @_ssdm_op_PartSelect.i7.i8.i32.i32(i8, i32, i32) nounwind readnone
+
+declare i8 @_ssdm_op_BitConcatenate.i8.i7.i1(i7, i1) nounwind readnone
 
 declare i52 @_ssdm_op_PartSelect.i52.i64.i32.i32(i64, i32, i32) nounwind readnone
 
 declare i14 @_ssdm_op_PartSelect.i14.i15.i32.i32(i15, i32, i32) nounwind readnone
 
 declare i63 @_ssdm_op_PartSelect.i63.i64.i32.i32(i64, i32, i32) nounwind readnone
-
-declare i28 @_ssdm_op_PartSelect.i28.i32.i32.i32(i32, i32, i32) nounwind readnone
-
-declare i32 @_ssdm_op_BitConcatenate.i32.i28.i4(i28, i4) nounwind readnone
 
 !hls.encrypted.func = !{}
 !llvm.map.gv = !{!0, !7, !14, !21, !28, !35, !40, !48, !55}
@@ -1044,20 +1065,14 @@ declare i32 @_ssdm_op_BitConcatenate.i32.i28.i4(i28, i4) nounwind readnone
 !54 = metadata !{i32 0, i32 2, i32 1}
 !55 = metadata !{metadata !41, [882 x double]* @result}
 !56 = metadata !{metadata !57}
-!57 = metadata !{i32 0, i32 31, metadata !58}
+!57 = metadata !{i32 0, i32 63, metadata !58}
 !58 = metadata !{metadata !59}
-!59 = metadata !{metadata !"np", metadata !60, metadata !"int", i32 0, i32 31}
+!59 = metadata !{metadata !"inSound", metadata !60, metadata !"double", i32 0, i32 63}
 !60 = metadata !{metadata !61}
-!61 = metadata !{i32 0, i32 0, i32 0}
+!61 = metadata !{i32 0, i32 15999, i32 1}
 !62 = metadata !{metadata !63}
-!63 = metadata !{i32 0, i32 63, metadata !64}
+!63 = metadata !{i32 0, i32 31, metadata !64}
 !64 = metadata !{metadata !65}
-!65 = metadata !{metadata !"inSound", metadata !66, metadata !"double", i32 0, i32 63}
+!65 = metadata !{metadata !"return", metadata !66, metadata !"int", i32 0, i32 31}
 !66 = metadata !{metadata !67}
-!67 = metadata !{i32 0, i32 15999, i32 1}
-!68 = metadata !{metadata !69}
-!69 = metadata !{i32 0, i32 31, metadata !70}
-!70 = metadata !{metadata !71}
-!71 = metadata !{metadata !"return", metadata !72, metadata !"int", i32 0, i32 31}
-!72 = metadata !{metadata !73}
-!73 = metadata !{i32 0, i32 1, i32 0}
+!67 = metadata !{i32 0, i32 1, i32 0}

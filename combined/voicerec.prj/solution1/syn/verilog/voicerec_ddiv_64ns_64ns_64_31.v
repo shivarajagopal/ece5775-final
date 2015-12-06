@@ -10,7 +10,7 @@
 
 module voicerec_ddiv_64ns_64ns_64_31
 #(parameter
-    ID         = 40,
+    ID         = 38,
     NUM_STAGE  = 31,
     din0_WIDTH = 64,
     din1_WIDTH = 64,

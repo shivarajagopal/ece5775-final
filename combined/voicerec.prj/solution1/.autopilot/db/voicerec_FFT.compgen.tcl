@@ -141,13 +141,13 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 set id 10
-set name voicerec_sdiv_32ns_32ns_32_36_seq
+set name voicerec_sdiv_11ns_32ns_32_15_seq
 set corename simcore_sdiv_seq
 set op sdiv
-set stage_num 36
+set stage_num 15
 set max_latency -1
 set registered_input 1
-set in0_width 32
+set in0_width 11
 set in0_signed 0
 set in1_width 32
 set in1_signed 0
@@ -392,21 +392,6 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 }
 
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 14 \
-    name N \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_N \
-    op interface \
-    ports { N { I 32 vector } } \
-} "
-}
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {

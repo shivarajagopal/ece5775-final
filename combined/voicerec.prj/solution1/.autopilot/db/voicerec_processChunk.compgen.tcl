@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 15
+set id 14
 set name voicerec_faddfsub_32ns_32ns_32_5_full_dsp
 set corename simcore_faddfsub
 set op faddfsub
@@ -70,7 +70,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 16
+set id 15
 set name voicerec_fmul_32ns_32ns_32_4_max_dsp
 set corename simcore_fmul
 set op fmul
@@ -140,7 +140,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 17
+set id 16
 set name voicerec_fdiv_32ns_32ns_32_16
 set corename simcore_fdiv
 set op fdiv
@@ -207,7 +207,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 18
+set id 17
 set name voicerec_sitofp_64ns_32_6
 set corename simcore_sitofp
 set op sitofp
@@ -268,7 +268,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 19
+set id 18
 set name voicerec_fptrunc_64ns_32_1
 set corename simcore_fptrunc
 set op fptrunc
@@ -329,7 +329,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 20
+set id 19
 set name voicerec_fpext_32ns_64_1
 set corename simcore_fpext
 set op fpext
@@ -390,7 +390,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 21
+set id 20
 set name voicerec_dadd_64ns_64ns_64_5_full_dsp
 set corename simcore_dadd
 set op dadd
@@ -461,7 +461,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 # Memory (RAM/ROM)  definition:
-set ID 25
+set ID 24
 set MemName voicerec_processChunk_c
 set CoreName ap_simcore_mem
 set PortList { 2 2 }
@@ -544,7 +544,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 26
+set ID 25
 set MemName voicerec_processChunk_d
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
@@ -627,7 +627,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 27
+set ID 26
 set MemName voicerec_processChunk_e
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
@@ -710,7 +710,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 28
+set ID 27
 set MemName voicerec_processChunk_mell
 set CoreName ap_simcore_mem
 set PortList { 1 }
@@ -790,7 +790,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 29
+set ID 28
 set MemName voicerec_processChunk_dctMatrix
 set CoreName ap_simcore_mem
 set PortList { 1 }
@@ -880,7 +880,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 32 \
+    id 30 \
     name ret \
     reset_level 1 \
     sync_rst true \
@@ -899,7 +899,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 34 \
+    id 32 \
     name inputSound \
     reset_level 1 \
     sync_rst true \
@@ -917,7 +917,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 30 \
+    id 29 \
     name sp \
     type other \
     dir I \
@@ -925,7 +925,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_sp \
     op interface \
-    ports { sp { I 32 vector } } \
+    ports { sp { I 13 vector } } \
 } "
 }
 
@@ -933,29 +933,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 31 \
-    name np \
+    name tmp \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_np \
+    corename dc_tmp \
     op interface \
-    ports { np { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 33 \
-    name tmp_122 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_tmp_122 \
-    op interface \
-    ports { tmp_122 { I 32 vector } } \
+    ports { tmp { I 6 vector } } \
 } "
 }
 

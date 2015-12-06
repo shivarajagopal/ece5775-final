@@ -10,7 +10,7 @@
 
 module voicerec_fptrunc_64ns_32_1
 #(parameter
-    ID         = 19,
+    ID         = 18,
     NUM_STAGE  = 1,
     din0_WIDTH = 64,
     dout_WIDTH = 32

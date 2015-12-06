@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'voicerec_classifySound'
 ================================================================
-* Date:           Sun Dec  6 14:07:48 2015
+* Date:           Sun Dec  6 17:20:11 2015
 
 * Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
 * Project:        voicerec.prj
@@ -189,11 +189,11 @@ ST_2: p_shl2 [1/1] 0.00ns
 ST_2: p_shl2_cast [1/1] 0.00ns
 .preheader.preheader:3  %p_shl2_cast = zext i7 %p_shl2 to i11
 
-ST_2: tmp_9 [1/1] 1.84ns
-.preheader.preheader:4  %tmp_9 = sub i11 %p_shl_cast, %p_shl2_cast
+ST_2: tmp_8 [1/1] 1.84ns
+.preheader.preheader:4  %tmp_8 = sub i11 %p_shl_cast, %p_shl2_cast
 
 ST_2: result_addr1_cast [1/1] 0.00ns
-.preheader.preheader:5  %result_addr1_cast = sext i11 %tmp_9 to i12
+.preheader.preheader:5  %result_addr1_cast = sext i11 %tmp_8 to i12
 
 ST_2: stg_25 [1/1] 1.57ns
 .preheader.preheader:6  br label %.preheader
@@ -212,8 +212,8 @@ ST_3: j_cast3 [1/1] 0.00ns
 ST_3: exitcond [1/1] 1.88ns
 .preheader:2  %exitcond = icmp eq i4 %j, -2
 
-ST_3: empty_9 [1/1] 0.00ns
-.preheader:3  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)
+ST_3: empty_7 [1/1] 0.00ns
+.preheader:3  %empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)
 
 ST_3: j_1 [1/1] 0.80ns
 .preheader:4  %j_1 = add i4 %j, 1
@@ -221,11 +221,11 @@ ST_3: j_1 [1/1] 0.80ns
 ST_3: stg_32 [1/1] 0.00ns
 .preheader:5  br i1 %exitcond, label %.loopexit, label %1
 
-ST_3: tmp_1_trn_cast [1/1] 0.00ns
-:0  %tmp_1_trn_cast = zext i4 %j to i12
+ST_3: tmp_9_trn_cast [1/1] 0.00ns
+:0  %tmp_9_trn_cast = zext i4 %j to i12
 
 ST_3: result_addr2 [1/1] 1.84ns
-:1  %result_addr2 = add i12 %tmp_1_trn_cast, %result_addr1_cast
+:1  %result_addr2 = add i12 %tmp_9_trn_cast, %result_addr1_cast
 
 ST_3: result_addr2_cast [1/1] 0.00ns
 :2  %result_addr2_cast = sext i12 %result_addr2 to i32
@@ -239,8 +239,8 @@ ST_3: result_addr [1/1] 0.00ns
 ST_3: result_load [2/2] 2.71ns
 :5  %result_load = load double* %result_addr, align 8
 
-ST_3: tmp_3 [1/1] 1.84ns
-:7  %tmp_3 = add i11 %tmp_9, %j_cast3
+ST_3: tmp_2 [1/1] 1.84ns
+:7  %tmp_2 = add i11 %tmp_8, %j_cast3
 
 
  <State 4>: 2.71ns
@@ -249,22 +249,22 @@ ST_4: result_load [1/2] 2.71ns
 
 
  <State 5>: 6.50ns
-ST_5: tmp_2 [1/1] 6.50ns
-:6  %tmp_2 = fptrunc double %result_load to float
+ST_5: tmp_1 [1/1] 6.50ns
+:6  %tmp_1 = fptrunc double %result_load to float
 
 
  <State 6>: 2.71ns
-ST_6: tmp_3_cast [1/1] 0.00ns
-:8  %tmp_3_cast = sext i11 %tmp_3 to i32
+ST_6: tmp_2_cast [1/1] 0.00ns
+:8  %tmp_2_cast = sext i11 %tmp_2 to i32
 
-ST_6: tmp_4 [1/1] 0.00ns
-:9  %tmp_4 = zext i32 %tmp_3_cast to i64
+ST_6: tmp_3 [1/1] 0.00ns
+:9  %tmp_3 = zext i32 %tmp_2_cast to i64
 
 ST_6: flatInput_addr [1/1] 0.00ns
-:10  %flatInput_addr = getelementptr inbounds [882 x float]* %flatInput, i64 0, i64 %tmp_4
+:10  %flatInput_addr = getelementptr inbounds [882 x float]* %flatInput, i64 0, i64 %tmp_3
 
 ST_6: stg_45 [1/1] 2.71ns
-:11  store float %tmp_2, float* %flatInput_addr, align 4
+:11  store float %tmp_1, float* %flatInput_addr, align 4
 
 ST_6: stg_46 [1/1] 0.00ns
 :12  br label %.preheader
@@ -294,8 +294,8 @@ ST_8: guess_cast1 [1/1] 0.00ns
 ST_8: exitcond_i [1/1] 1.62ns
 :4  %exitcond_i = icmp eq i3 %guess, -4
 
-ST_8: empty_10 [1/1] 0.00ns
-:5  %empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind
+ST_8: empty_8 [1/1] 0.00ns
+:5  %empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind
 
 ST_8: j_2 [1/1] 0.80ns
 :6  %j_2 = add i3 %guess, 1
@@ -333,41 +333,41 @@ ST_11: max_to_int [1/1] 0.00ns
 ST_11: tmp [1/1] 0.00ns
 ._crit_edge.i:4  %tmp = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_to_int, i32 23, i32 30)
 
-ST_11: tmp_5 [1/1] 0.00ns
-._crit_edge.i:5  %tmp_5 = trunc i32 %max_to_int to i23
+ST_11: tmp_4 [1/1] 0.00ns
+._crit_edge.i:5  %tmp_4 = trunc i32 %max_to_int to i23
 
 ST_11: max_i_to_int [1/1] 0.00ns
 ._crit_edge.i:6  %max_i_to_int = bitcast float %max_i to i32
 
-ST_11: tmp_6 [1/1] 0.00ns
-._crit_edge.i:7  %tmp_6 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_i_to_int, i32 23, i32 30)
+ST_11: tmp_5 [1/1] 0.00ns
+._crit_edge.i:7  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_i_to_int, i32 23, i32 30)
 
-ST_11: tmp_7 [1/1] 0.00ns
-._crit_edge.i:8  %tmp_7 = trunc i32 %max_i_to_int to i23
+ST_11: tmp_6 [1/1] 0.00ns
+._crit_edge.i:8  %tmp_6 = trunc i32 %max_i_to_int to i23
 
 ST_11: notlhs [1/1] 2.00ns
 ._crit_edge.i:9  %notlhs = icmp ne i8 %tmp, -1
 
 ST_11: notrhs [1/1] 2.39ns
-._crit_edge.i:10  %notrhs = icmp eq i23 %tmp_5, 0
+._crit_edge.i:10  %notrhs = icmp eq i23 %tmp_4, 0
 
-ST_11: tmp_8 [1/1] 1.37ns
-._crit_edge.i:11  %tmp_8 = or i1 %notrhs, %notlhs
+ST_11: tmp_7 [1/1] 1.37ns
+._crit_edge.i:11  %tmp_7 = or i1 %notrhs, %notlhs
 
 ST_11: notlhs6 [1/1] 2.00ns
-._crit_edge.i:12  %notlhs6 = icmp ne i8 %tmp_6, -1
+._crit_edge.i:12  %notlhs6 = icmp ne i8 %tmp_5, -1
 
 ST_11: notrhs7 [1/1] 2.39ns
-._crit_edge.i:13  %notrhs7 = icmp eq i23 %tmp_7, 0
+._crit_edge.i:13  %notrhs7 = icmp eq i23 %tmp_6, 0
 
 ST_11: tmp_s [1/1] 1.37ns
 ._crit_edge.i:14  %tmp_s = or i1 %notrhs7, %notlhs6
 
-ST_11: tmp_1 [1/1] 1.37ns
-._crit_edge.i:15  %tmp_1 = and i1 %tmp_8, %tmp_s
+ST_11: tmp_9 [1/1] 1.37ns
+._crit_edge.i:15  %tmp_9 = and i1 %tmp_7, %tmp_s
 
 ST_11: tmp_11 [1/1] 1.37ns
-._crit_edge.i:17  %tmp_11 = and i1 %tmp_1, %tmp_10
+._crit_edge.i:17  %tmp_11 = and i1 %tmp_9, %tmp_10
 
 ST_11: guess_1 [1/1] 1.37ns
 ._crit_edge.i:18  %guess_1 = select i1 %tmp_11, i32 %guess_cast1, i32 %guess_i

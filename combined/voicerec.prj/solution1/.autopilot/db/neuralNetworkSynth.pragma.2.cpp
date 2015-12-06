@@ -1,5 +1,5 @@
-# 1 "/home/student/iyv2/ece5775/ece5775-final/combined/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.1.cpp"
-# 1 "/home/student/iyv2/ece5775/ece5775-final/combined/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.1.cpp" 1
+# 1 "/home/student/svr24/ece5775/final_proj/combined/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.1.cpp"
+# 1 "/home/student/svr24/ece5775/final_proj/combined/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -198,7 +198,7 @@ extern "C" {
 #define _ssdm_op_Delayed(X) X */
 # 6 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "/home/student/iyv2/ece5775/ece5775-final/combined/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.1.cpp" 2
+# 1 "/home/student/svr24/ece5775/final_proj/combined/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.1.cpp" 2
 # 1 "neuralNetworkSynth.cpp"
 # 1 "neuralNetworkSynth.cpp" 1
 # 1 "<built-in>" 1

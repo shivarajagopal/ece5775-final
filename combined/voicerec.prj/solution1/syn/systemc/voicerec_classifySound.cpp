@@ -84,14 +84,14 @@ voicerec_classifySound::voicerec_classifySound(sc_module_name name) : sc_module(
     grp_voicerec_feedForward_fu_160->output_r_ce0(grp_voicerec_feedForward_fu_160_output_r_ce0);
     grp_voicerec_feedForward_fu_160->output_r_we0(grp_voicerec_feedForward_fu_160_output_r_we0);
     grp_voicerec_feedForward_fu_160->output_r_d0(grp_voicerec_feedForward_fu_160_output_r_d0);
-    voicerec_fptrunc_64ns_32_1_U48 = new voicerec_fptrunc_64ns_32_1<1,1,64,32>("voicerec_fptrunc_64ns_32_1_U48");
-    voicerec_fptrunc_64ns_32_1_U48->din0(tmp_2_fu_175_p0);
-    voicerec_fptrunc_64ns_32_1_U48->dout(tmp_2_fu_175_p1);
-    voicerec_fcmp_32ns_32ns_1_1_U49 = new voicerec_fcmp_32ns_32ns_1_1<1,1,32,32,1>("voicerec_fcmp_32ns_32ns_1_1_U49");
-    voicerec_fcmp_32ns_32ns_1_1_U49->din0(tmp_10_fu_178_p0);
-    voicerec_fcmp_32ns_32ns_1_1_U49->din1(tmp_10_fu_178_p1);
-    voicerec_fcmp_32ns_32ns_1_1_U49->opcode(tmp_10_fu_178_opcode);
-    voicerec_fcmp_32ns_32ns_1_1_U49->dout(tmp_10_fu_178_p2);
+    voicerec_fptrunc_64ns_32_1_U46 = new voicerec_fptrunc_64ns_32_1<1,1,64,32>("voicerec_fptrunc_64ns_32_1_U46");
+    voicerec_fptrunc_64ns_32_1_U46->din0(tmp_1_fu_175_p0);
+    voicerec_fptrunc_64ns_32_1_U46->dout(tmp_1_fu_175_p1);
+    voicerec_fcmp_32ns_32ns_1_1_U47 = new voicerec_fcmp_32ns_32ns_1_1<1,1,32,32,1>("voicerec_fcmp_32ns_32ns_1_1_U47");
+    voicerec_fcmp_32ns_32ns_1_1_U47->din0(tmp_10_fu_178_p0);
+    voicerec_fcmp_32ns_32ns_1_1_U47->din1(tmp_10_fu_178_p1);
+    voicerec_fcmp_32ns_32ns_1_1_U47->opcode(tmp_10_fu_178_opcode);
+    voicerec_fcmp_32ns_32ns_1_1_U47->dout(tmp_10_fu_178_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -199,7 +199,7 @@ voicerec_classifySound::voicerec_classifySound(sc_module_name name) : sc_module(
     sensitive << ( grp_voicerec_feedForward_fu_160_pattern_address0 );
     sensitive << ( ap_sig_cseq_ST_st6_fsm_5 );
     sensitive << ( ap_sig_cseq_ST_st7_fsm_6 );
-    sensitive << ( tmp_4_fu_271_p1 );
+    sensitive << ( tmp_3_fu_271_p1 );
 
     SC_METHOD(thread_flatInput_ce0);
     sensitive << ( grp_voicerec_feedForward_fu_160_pattern_ce0 );
@@ -207,7 +207,7 @@ voicerec_classifySound::voicerec_classifySound(sc_module_name name) : sc_module(
     sensitive << ( ap_sig_cseq_ST_st7_fsm_6 );
 
     SC_METHOD(thread_flatInput_d0);
-    sensitive << ( tmp_2_reg_434 );
+    sensitive << ( tmp_1_reg_434 );
     sensitive << ( ap_sig_cseq_ST_st6_fsm_5 );
 
     SC_METHOD(thread_flatInput_we0);
@@ -253,7 +253,7 @@ voicerec_classifySound::voicerec_classifySound(sc_module_name name) : sc_module(
 
     SC_METHOD(thread_notlhs6_fu_350_p2);
     sensitive << ( ap_sig_cseq_ST_st11_fsm_10 );
-    sensitive << ( tmp_6_fu_318_p4 );
+    sensitive << ( tmp_5_fu_318_p4 );
 
     SC_METHOD(thread_notlhs_fu_332_p2);
     sensitive << ( ap_sig_cseq_ST_st11_fsm_10 );
@@ -261,11 +261,11 @@ voicerec_classifySound::voicerec_classifySound(sc_module_name name) : sc_module(
 
     SC_METHOD(thread_notrhs7_fu_356_p2);
     sensitive << ( ap_sig_cseq_ST_st11_fsm_10 );
-    sensitive << ( tmp_7_fu_328_p1 );
+    sensitive << ( tmp_6_fu_328_p1 );
 
     SC_METHOD(thread_notrhs_fu_338_p2);
     sensitive << ( ap_sig_cseq_ST_st11_fsm_10 );
-    sensitive << ( tmp_5_fu_310_p1 );
+    sensitive << ( tmp_4_fu_310_p1 );
 
     SC_METHOD(thread_output_r_address0);
     sensitive << ( ap_sig_cseq_ST_st8_fsm_7 );
@@ -299,14 +299,14 @@ voicerec_classifySound::voicerec_classifySound(sc_module_name name) : sc_module(
     sensitive << ( i_reg_103 );
 
     SC_METHOD(thread_result_addr1_cast_fu_225_p1);
-    sensitive << ( tmp_9_fu_219_p2 );
+    sensitive << ( tmp_8_fu_219_p2 );
 
     SC_METHOD(thread_result_addr2_cast_fu_254_p1);
     sensitive << ( result_addr2_fu_249_p2 );
 
     SC_METHOD(thread_result_addr2_fu_249_p2);
     sensitive << ( result_addr1_cast_reg_406 );
-    sensitive << ( tmp_1_trn_cast_fu_245_p1 );
+    sensitive << ( tmp_9_trn_cast_fu_245_p1 );
 
     SC_METHOD(thread_result_address0);
     sensitive << ( ap_sig_cseq_ST_st3_fsm_2 );
@@ -328,48 +328,48 @@ voicerec_classifySound::voicerec_classifySound(sc_module_name name) : sc_module(
 
     SC_METHOD(thread_tmp_11_fu_374_p2);
     sensitive << ( tmp_10_reg_464 );
-    sensitive << ( tmp_1_fu_368_p2 );
+    sensitive << ( tmp_9_fu_368_p2 );
 
     SC_METHOD(thread_tmp_12_fu_258_p1);
     sensitive << ( result_addr2_cast_fu_254_p1 );
 
-    SC_METHOD(thread_tmp_1_fu_368_p2);
-    sensitive << ( tmp_8_fu_344_p2 );
-    sensitive << ( tmp_s_fu_362_p2 );
-
-    SC_METHOD(thread_tmp_1_trn_cast_fu_245_p1);
-    sensitive << ( j_reg_114 );
-
-    SC_METHOD(thread_tmp_2_fu_175_p0);
+    SC_METHOD(thread_tmp_1_fu_175_p0);
     sensitive << ( result_load_reg_429 );
     sensitive << ( ap_sig_cseq_ST_st5_fsm_4 );
 
-    SC_METHOD(thread_tmp_3_cast_fu_268_p1);
-    sensitive << ( tmp_3_reg_424 );
+    SC_METHOD(thread_tmp_2_cast_fu_268_p1);
+    sensitive << ( tmp_2_reg_424 );
 
-    SC_METHOD(thread_tmp_3_fu_263_p2);
-    sensitive << ( tmp_9_reg_401 );
+    SC_METHOD(thread_tmp_2_fu_263_p2);
+    sensitive << ( tmp_8_reg_401 );
     sensitive << ( j_cast3_fu_229_p1 );
 
-    SC_METHOD(thread_tmp_4_fu_271_p1);
-    sensitive << ( tmp_3_cast_fu_268_p1 );
+    SC_METHOD(thread_tmp_3_fu_271_p1);
+    sensitive << ( tmp_2_cast_fu_268_p1 );
 
-    SC_METHOD(thread_tmp_5_fu_310_p1);
+    SC_METHOD(thread_tmp_4_fu_310_p1);
     sensitive << ( max_to_int_fu_297_p1 );
 
-    SC_METHOD(thread_tmp_6_fu_318_p4);
+    SC_METHOD(thread_tmp_5_fu_318_p4);
     sensitive << ( max_i_to_int_fu_314_p1 );
 
-    SC_METHOD(thread_tmp_7_fu_328_p1);
+    SC_METHOD(thread_tmp_6_fu_328_p1);
     sensitive << ( max_i_to_int_fu_314_p1 );
 
-    SC_METHOD(thread_tmp_8_fu_344_p2);
+    SC_METHOD(thread_tmp_7_fu_344_p2);
     sensitive << ( notrhs_fu_338_p2 );
     sensitive << ( notlhs_fu_332_p2 );
 
-    SC_METHOD(thread_tmp_9_fu_219_p2);
+    SC_METHOD(thread_tmp_8_fu_219_p2);
     sensitive << ( p_shl_cast_fu_203_p1 );
     sensitive << ( p_shl2_cast_fu_215_p1 );
+
+    SC_METHOD(thread_tmp_9_fu_368_p2);
+    sensitive << ( tmp_7_fu_344_p2 );
+    sensitive << ( tmp_s_fu_362_p2 );
+
+    SC_METHOD(thread_tmp_9_trn_cast_fu_245_p1);
+    sensitive << ( j_reg_114 );
 
     SC_METHOD(thread_tmp_fu_300_p4);
     sensitive << ( max_to_int_fu_297_p1 );
@@ -424,8 +424,8 @@ voicerec_classifySound::voicerec_classifySound(sc_module_name name) : sc_module(
     sc_trace(mVcdFile, i_1_reg_396, "i_1_reg_396");
     sc_trace(mVcdFile, ap_sig_cseq_ST_st2_fsm_1, "ap_sig_cseq_ST_st2_fsm_1");
     sc_trace(mVcdFile, ap_sig_bdd_58, "ap_sig_bdd_58");
-    sc_trace(mVcdFile, tmp_9_fu_219_p2, "tmp_9_fu_219_p2");
-    sc_trace(mVcdFile, tmp_9_reg_401, "tmp_9_reg_401");
+    sc_trace(mVcdFile, tmp_8_fu_219_p2, "tmp_8_fu_219_p2");
+    sc_trace(mVcdFile, tmp_8_reg_401, "tmp_8_reg_401");
     sc_trace(mVcdFile, exitcond1_fu_183_p2, "exitcond1_fu_183_p2");
     sc_trace(mVcdFile, result_addr1_cast_fu_225_p1, "result_addr1_cast_fu_225_p1");
     sc_trace(mVcdFile, result_addr1_cast_reg_406, "result_addr1_cast_reg_406");
@@ -434,13 +434,13 @@ voicerec_classifySound::voicerec_classifySound(sc_module_name name) : sc_module(
     sc_trace(mVcdFile, ap_sig_cseq_ST_st3_fsm_2, "ap_sig_cseq_ST_st3_fsm_2");
     sc_trace(mVcdFile, ap_sig_bdd_75, "ap_sig_bdd_75");
     sc_trace(mVcdFile, exitcond_fu_233_p2, "exitcond_fu_233_p2");
-    sc_trace(mVcdFile, tmp_3_fu_263_p2, "tmp_3_fu_263_p2");
-    sc_trace(mVcdFile, tmp_3_reg_424, "tmp_3_reg_424");
+    sc_trace(mVcdFile, tmp_2_fu_263_p2, "tmp_2_fu_263_p2");
+    sc_trace(mVcdFile, tmp_2_reg_424, "tmp_2_reg_424");
     sc_trace(mVcdFile, result_load_reg_429, "result_load_reg_429");
     sc_trace(mVcdFile, ap_sig_cseq_ST_st4_fsm_3, "ap_sig_cseq_ST_st4_fsm_3");
     sc_trace(mVcdFile, ap_sig_bdd_90, "ap_sig_bdd_90");
-    sc_trace(mVcdFile, tmp_2_fu_175_p1, "tmp_2_fu_175_p1");
-    sc_trace(mVcdFile, tmp_2_reg_434, "tmp_2_reg_434");
+    sc_trace(mVcdFile, tmp_1_fu_175_p1, "tmp_1_fu_175_p1");
+    sc_trace(mVcdFile, tmp_1_reg_434, "tmp_1_reg_434");
     sc_trace(mVcdFile, ap_sig_cseq_ST_st5_fsm_4, "ap_sig_cseq_ST_st5_fsm_4");
     sc_trace(mVcdFile, ap_sig_bdd_99, "ap_sig_bdd_99");
     sc_trace(mVcdFile, guess_cast1_fu_276_p1, "guess_cast1_fu_276_p1");
@@ -488,33 +488,33 @@ voicerec_classifySound::voicerec_classifySound(sc_module_name name) : sc_module(
     sc_trace(mVcdFile, max_i_reg_148, "max_i_reg_148");
     sc_trace(mVcdFile, grp_voicerec_feedForward_fu_160_ap_start_ap_start_reg, "grp_voicerec_feedForward_fu_160_ap_start_ap_start_reg");
     sc_trace(mVcdFile, tmp_12_fu_258_p1, "tmp_12_fu_258_p1");
-    sc_trace(mVcdFile, tmp_4_fu_271_p1, "tmp_4_fu_271_p1");
+    sc_trace(mVcdFile, tmp_3_fu_271_p1, "tmp_3_fu_271_p1");
     sc_trace(mVcdFile, tmp_i_fu_292_p1, "tmp_i_fu_292_p1");
-    sc_trace(mVcdFile, tmp_2_fu_175_p0, "tmp_2_fu_175_p0");
+    sc_trace(mVcdFile, tmp_1_fu_175_p0, "tmp_1_fu_175_p0");
     sc_trace(mVcdFile, tmp_10_fu_178_p0, "tmp_10_fu_178_p0");
     sc_trace(mVcdFile, tmp_10_fu_178_p1, "tmp_10_fu_178_p1");
     sc_trace(mVcdFile, p_shl_fu_195_p3, "p_shl_fu_195_p3");
     sc_trace(mVcdFile, p_shl2_fu_207_p3, "p_shl2_fu_207_p3");
     sc_trace(mVcdFile, p_shl_cast_fu_203_p1, "p_shl_cast_fu_203_p1");
     sc_trace(mVcdFile, p_shl2_cast_fu_215_p1, "p_shl2_cast_fu_215_p1");
-    sc_trace(mVcdFile, tmp_1_trn_cast_fu_245_p1, "tmp_1_trn_cast_fu_245_p1");
+    sc_trace(mVcdFile, tmp_9_trn_cast_fu_245_p1, "tmp_9_trn_cast_fu_245_p1");
     sc_trace(mVcdFile, result_addr2_fu_249_p2, "result_addr2_fu_249_p2");
     sc_trace(mVcdFile, result_addr2_cast_fu_254_p1, "result_addr2_cast_fu_254_p1");
     sc_trace(mVcdFile, j_cast3_fu_229_p1, "j_cast3_fu_229_p1");
-    sc_trace(mVcdFile, tmp_3_cast_fu_268_p1, "tmp_3_cast_fu_268_p1");
+    sc_trace(mVcdFile, tmp_2_cast_fu_268_p1, "tmp_2_cast_fu_268_p1");
     sc_trace(mVcdFile, max_to_int_fu_297_p1, "max_to_int_fu_297_p1");
     sc_trace(mVcdFile, max_i_to_int_fu_314_p1, "max_i_to_int_fu_314_p1");
     sc_trace(mVcdFile, tmp_fu_300_p4, "tmp_fu_300_p4");
-    sc_trace(mVcdFile, tmp_5_fu_310_p1, "tmp_5_fu_310_p1");
+    sc_trace(mVcdFile, tmp_4_fu_310_p1, "tmp_4_fu_310_p1");
     sc_trace(mVcdFile, notrhs_fu_338_p2, "notrhs_fu_338_p2");
     sc_trace(mVcdFile, notlhs_fu_332_p2, "notlhs_fu_332_p2");
-    sc_trace(mVcdFile, tmp_6_fu_318_p4, "tmp_6_fu_318_p4");
-    sc_trace(mVcdFile, tmp_7_fu_328_p1, "tmp_7_fu_328_p1");
+    sc_trace(mVcdFile, tmp_5_fu_318_p4, "tmp_5_fu_318_p4");
+    sc_trace(mVcdFile, tmp_6_fu_328_p1, "tmp_6_fu_328_p1");
     sc_trace(mVcdFile, notrhs7_fu_356_p2, "notrhs7_fu_356_p2");
     sc_trace(mVcdFile, notlhs6_fu_350_p2, "notlhs6_fu_350_p2");
-    sc_trace(mVcdFile, tmp_8_fu_344_p2, "tmp_8_fu_344_p2");
+    sc_trace(mVcdFile, tmp_7_fu_344_p2, "tmp_7_fu_344_p2");
     sc_trace(mVcdFile, tmp_s_fu_362_p2, "tmp_s_fu_362_p2");
-    sc_trace(mVcdFile, tmp_1_fu_368_p2, "tmp_1_fu_368_p2");
+    sc_trace(mVcdFile, tmp_9_fu_368_p2, "tmp_9_fu_368_p2");
     sc_trace(mVcdFile, tmp_11_fu_374_p2, "tmp_11_fu_374_p2");
     sc_trace(mVcdFile, tmp_10_fu_178_opcode, "tmp_10_fu_178_opcode");
     sc_trace(mVcdFile, ap_return_preg, "ap_return_preg");
@@ -531,8 +531,8 @@ voicerec_classifySound::~voicerec_classifySound() {
     delete output_r_U;
     delete flatInput_U;
     delete grp_voicerec_feedForward_fu_160;
-    delete voicerec_fptrunc_64ns_32_1_U48;
-    delete voicerec_fcmp_32ns_32ns_1_1_U49;
+    delete voicerec_fptrunc_64ns_32_1_U46;
+    delete voicerec_fcmp_32ns_32ns_1_1_U47;
 }
 
 void voicerec_classifySound::thread_ap_clk_no_reset_() {
@@ -602,7 +602,7 @@ void voicerec_classifySound::thread_ap_clk_no_reset_() {
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_st2_fsm_1.read()) && esl_seteq<1,1,1>(exitcond1_fu_183_p2.read(), ap_const_lv1_0))) {
         result_addr1_cast_reg_406 = result_addr1_cast_fu_225_p1.read();
-        tmp_9_reg_401 = tmp_9_fu_219_p2.read();
+        tmp_8_reg_401 = tmp_8_fu_219_p2.read();
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_st4_fsm_3.read())) {
         result_load_reg_429 = result_q0.read();
@@ -611,10 +611,10 @@ void voicerec_classifySound::thread_ap_clk_no_reset_() {
         tmp_10_reg_464 = tmp_10_fu_178_p2.read();
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_st5_fsm_4.read())) {
-        tmp_2_reg_434 = tmp_2_fu_175_p1.read();
+        tmp_1_reg_434 = tmp_1_fu_175_p1.read();
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_st3_fsm_2.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, exitcond_fu_233_p2.read()))) {
-        tmp_3_reg_424 = tmp_3_fu_263_p2.read();
+        tmp_2_reg_424 = tmp_2_fu_263_p2.read();
     }
 }
 
@@ -802,7 +802,7 @@ void voicerec_classifySound::thread_exitcond_i_fu_280_p2() {
 
 void voicerec_classifySound::thread_flatInput_address0() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_st6_fsm_5.read())) {
-        flatInput_address0 =  (sc_lv<10>) (tmp_4_fu_271_p1.read());
+        flatInput_address0 =  (sc_lv<10>) (tmp_3_fu_271_p1.read());
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_st7_fsm_6.read())) {
         flatInput_address0 = grp_voicerec_feedForward_fu_160_pattern_address0.read();
     } else {
@@ -821,7 +821,7 @@ void voicerec_classifySound::thread_flatInput_ce0() {
 }
 
 void voicerec_classifySound::thread_flatInput_d0() {
-    flatInput_d0 = tmp_2_reg_434.read();
+    flatInput_d0 = tmp_1_reg_434.read();
 }
 
 void voicerec_classifySound::thread_flatInput_we0() {
@@ -877,7 +877,7 @@ void voicerec_classifySound::thread_max_to_int_fu_297_p1() {
 }
 
 void voicerec_classifySound::thread_notlhs6_fu_350_p2() {
-    notlhs6_fu_350_p2 = (!tmp_6_fu_318_p4.read().is_01() || !ap_const_lv8_FF.is_01())? sc_lv<1>(): sc_lv<1>(tmp_6_fu_318_p4.read() != ap_const_lv8_FF);
+    notlhs6_fu_350_p2 = (!tmp_5_fu_318_p4.read().is_01() || !ap_const_lv8_FF.is_01())? sc_lv<1>(): sc_lv<1>(tmp_5_fu_318_p4.read() != ap_const_lv8_FF);
 }
 
 void voicerec_classifySound::thread_notlhs_fu_332_p2() {
@@ -885,11 +885,11 @@ void voicerec_classifySound::thread_notlhs_fu_332_p2() {
 }
 
 void voicerec_classifySound::thread_notrhs7_fu_356_p2() {
-    notrhs7_fu_356_p2 = (!tmp_7_fu_328_p1.read().is_01() || !ap_const_lv23_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_7_fu_328_p1.read() == ap_const_lv23_0);
+    notrhs7_fu_356_p2 = (!tmp_6_fu_328_p1.read().is_01() || !ap_const_lv23_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_6_fu_328_p1.read() == ap_const_lv23_0);
 }
 
 void voicerec_classifySound::thread_notrhs_fu_338_p2() {
-    notrhs_fu_338_p2 = (!tmp_5_fu_310_p1.read().is_01() || !ap_const_lv23_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_5_fu_310_p1.read() == ap_const_lv23_0);
+    notrhs_fu_338_p2 = (!tmp_4_fu_310_p1.read().is_01() || !ap_const_lv23_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_4_fu_310_p1.read() == ap_const_lv23_0);
 }
 
 void voicerec_classifySound::thread_output_r_address0() {
@@ -941,7 +941,7 @@ void voicerec_classifySound::thread_p_shl_fu_195_p3() {
 }
 
 void voicerec_classifySound::thread_result_addr1_cast_fu_225_p1() {
-    result_addr1_cast_fu_225_p1 = esl_sext<12,11>(tmp_9_fu_219_p2.read());
+    result_addr1_cast_fu_225_p1 = esl_sext<12,11>(tmp_8_fu_219_p2.read());
 }
 
 void voicerec_classifySound::thread_result_addr2_cast_fu_254_p1() {
@@ -949,7 +949,7 @@ void voicerec_classifySound::thread_result_addr2_cast_fu_254_p1() {
 }
 
 void voicerec_classifySound::thread_result_addr2_fu_249_p2() {
-    result_addr2_fu_249_p2 = (!tmp_1_trn_cast_fu_245_p1.read().is_01() || !result_addr1_cast_reg_406.read().is_01())? sc_lv<12>(): (sc_biguint<12>(tmp_1_trn_cast_fu_245_p1.read()) + sc_bigint<12>(result_addr1_cast_reg_406.read()));
+    result_addr2_fu_249_p2 = (!tmp_9_trn_cast_fu_245_p1.read().is_01() || !result_addr1_cast_reg_406.read().is_01())? sc_lv<12>(): (sc_biguint<12>(tmp_9_trn_cast_fu_245_p1.read()) + sc_bigint<12>(result_addr1_cast_reg_406.read()));
 }
 
 void voicerec_classifySound::thread_result_address0() {
@@ -977,55 +977,55 @@ void voicerec_classifySound::thread_tmp_10_fu_178_p1() {
 }
 
 void voicerec_classifySound::thread_tmp_11_fu_374_p2() {
-    tmp_11_fu_374_p2 = (tmp_1_fu_368_p2.read() & tmp_10_reg_464.read());
+    tmp_11_fu_374_p2 = (tmp_9_fu_368_p2.read() & tmp_10_reg_464.read());
 }
 
 void voicerec_classifySound::thread_tmp_12_fu_258_p1() {
     tmp_12_fu_258_p1 = esl_zext<64,32>(result_addr2_cast_fu_254_p1.read());
 }
 
-void voicerec_classifySound::thread_tmp_1_fu_368_p2() {
-    tmp_1_fu_368_p2 = (tmp_8_fu_344_p2.read() & tmp_s_fu_362_p2.read());
+void voicerec_classifySound::thread_tmp_1_fu_175_p0() {
+    tmp_1_fu_175_p0 = result_load_reg_429.read();
 }
 
-void voicerec_classifySound::thread_tmp_1_trn_cast_fu_245_p1() {
-    tmp_1_trn_cast_fu_245_p1 = esl_zext<12,4>(j_reg_114.read());
+void voicerec_classifySound::thread_tmp_2_cast_fu_268_p1() {
+    tmp_2_cast_fu_268_p1 = esl_sext<32,11>(tmp_2_reg_424.read());
 }
 
-void voicerec_classifySound::thread_tmp_2_fu_175_p0() {
-    tmp_2_fu_175_p0 = result_load_reg_429.read();
+void voicerec_classifySound::thread_tmp_2_fu_263_p2() {
+    tmp_2_fu_263_p2 = (!tmp_8_reg_401.read().is_01() || !j_cast3_fu_229_p1.read().is_01())? sc_lv<11>(): (sc_biguint<11>(tmp_8_reg_401.read()) + sc_biguint<11>(j_cast3_fu_229_p1.read()));
 }
 
-void voicerec_classifySound::thread_tmp_3_cast_fu_268_p1() {
-    tmp_3_cast_fu_268_p1 = esl_sext<32,11>(tmp_3_reg_424.read());
+void voicerec_classifySound::thread_tmp_3_fu_271_p1() {
+    tmp_3_fu_271_p1 = esl_zext<64,32>(tmp_2_cast_fu_268_p1.read());
 }
 
-void voicerec_classifySound::thread_tmp_3_fu_263_p2() {
-    tmp_3_fu_263_p2 = (!tmp_9_reg_401.read().is_01() || !j_cast3_fu_229_p1.read().is_01())? sc_lv<11>(): (sc_biguint<11>(tmp_9_reg_401.read()) + sc_biguint<11>(j_cast3_fu_229_p1.read()));
+void voicerec_classifySound::thread_tmp_4_fu_310_p1() {
+    tmp_4_fu_310_p1 = max_to_int_fu_297_p1.read().range(23-1, 0);
 }
 
-void voicerec_classifySound::thread_tmp_4_fu_271_p1() {
-    tmp_4_fu_271_p1 = esl_zext<64,32>(tmp_3_cast_fu_268_p1.read());
+void voicerec_classifySound::thread_tmp_5_fu_318_p4() {
+    tmp_5_fu_318_p4 = max_i_to_int_fu_314_p1.read().range(30, 23);
 }
 
-void voicerec_classifySound::thread_tmp_5_fu_310_p1() {
-    tmp_5_fu_310_p1 = max_to_int_fu_297_p1.read().range(23-1, 0);
+void voicerec_classifySound::thread_tmp_6_fu_328_p1() {
+    tmp_6_fu_328_p1 = max_i_to_int_fu_314_p1.read().range(23-1, 0);
 }
 
-void voicerec_classifySound::thread_tmp_6_fu_318_p4() {
-    tmp_6_fu_318_p4 = max_i_to_int_fu_314_p1.read().range(30, 23);
+void voicerec_classifySound::thread_tmp_7_fu_344_p2() {
+    tmp_7_fu_344_p2 = (notrhs_fu_338_p2.read() | notlhs_fu_332_p2.read());
 }
 
-void voicerec_classifySound::thread_tmp_7_fu_328_p1() {
-    tmp_7_fu_328_p1 = max_i_to_int_fu_314_p1.read().range(23-1, 0);
+void voicerec_classifySound::thread_tmp_8_fu_219_p2() {
+    tmp_8_fu_219_p2 = (!p_shl_cast_fu_203_p1.read().is_01() || !p_shl2_cast_fu_215_p1.read().is_01())? sc_lv<11>(): (sc_biguint<11>(p_shl_cast_fu_203_p1.read()) - sc_biguint<11>(p_shl2_cast_fu_215_p1.read()));
 }
 
-void voicerec_classifySound::thread_tmp_8_fu_344_p2() {
-    tmp_8_fu_344_p2 = (notrhs_fu_338_p2.read() | notlhs_fu_332_p2.read());
+void voicerec_classifySound::thread_tmp_9_fu_368_p2() {
+    tmp_9_fu_368_p2 = (tmp_7_fu_344_p2.read() & tmp_s_fu_362_p2.read());
 }
 
-void voicerec_classifySound::thread_tmp_9_fu_219_p2() {
-    tmp_9_fu_219_p2 = (!p_shl_cast_fu_203_p1.read().is_01() || !p_shl2_cast_fu_215_p1.read().is_01())? sc_lv<11>(): (sc_biguint<11>(p_shl_cast_fu_203_p1.read()) - sc_biguint<11>(p_shl2_cast_fu_215_p1.read()));
+void voicerec_classifySound::thread_tmp_9_trn_cast_fu_245_p1() {
+    tmp_9_trn_cast_fu_245_p1 = esl_zext<12,4>(j_reg_114.read());
 }
 
 void voicerec_classifySound::thread_tmp_fu_300_p4() {

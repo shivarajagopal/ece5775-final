@@ -10,7 +10,7 @@ use ieee.std_logic_1164.all;
 
 entity voicerec_faddfsub_32ns_32ns_32_5_full_dsp is
     generic (
-        ID         : integer := 15;
+        ID         : integer := 14;
         NUM_STAGE  : integer := 5;
         din0_WIDTH : integer := 32;
         din1_WIDTH : integer := 32;

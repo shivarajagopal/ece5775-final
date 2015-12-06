@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'voicerec_feedForward'
 ================================================================
-* Date:           Sun Dec  6 14:07:51 2015
+* Date:           Sun Dec  6 17:20:14 2015
 
 * Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
 * Project:        voicerec.prj
@@ -76,13 +76,13 @@
     +--------------------------------------------+----------------------------------------+---------+-------+------+------+
     |                  Instance                  |                 Module                 | BRAM_18K| DSP48E|  FF  |  LUT |
     +--------------------------------------------+----------------------------------------+---------+-------+------+------+
-    |voicerec_dadd_64ns_64ns_64_5_full_dsp_U39   |voicerec_dadd_64ns_64ns_64_5_full_dsp   |        0|      3|   445|  1149|
-    |voicerec_ddiv_64ns_64ns_64_31_U40           |voicerec_ddiv_64ns_64ns_64_31           |        0|      0|  3211|  3658|
-    |voicerec_dexp_64ns_64ns_64_18_full_dsp_U41  |voicerec_dexp_64ns_64ns_64_18_full_dsp  |        0|     26|  1549|  2599|
-    |voicerec_fadd_32ns_32ns_32_5_full_dsp_U35   |voicerec_fadd_32ns_32ns_32_5_full_dsp   |        0|      2|   205|   390|
-    |voicerec_fmul_32ns_32ns_32_4_max_dsp_U36    |voicerec_fmul_32ns_32ns_32_4_max_dsp    |        0|      3|   143|   321|
-    |voicerec_fpext_32ns_64_1_U38                |voicerec_fpext_32ns_64_1                |        0|      0|   100|   138|
-    |voicerec_fptrunc_64ns_32_1_U37              |voicerec_fptrunc_64ns_32_1              |        0|      0|   128|   277|
+    |voicerec_dadd_64ns_64ns_64_5_full_dsp_U37   |voicerec_dadd_64ns_64ns_64_5_full_dsp   |        0|      3|   445|  1149|
+    |voicerec_ddiv_64ns_64ns_64_31_U38           |voicerec_ddiv_64ns_64ns_64_31           |        0|      0|  3211|  3658|
+    |voicerec_dexp_64ns_64ns_64_18_full_dsp_U39  |voicerec_dexp_64ns_64ns_64_18_full_dsp  |        0|     26|  1549|  2599|
+    |voicerec_fadd_32ns_32ns_32_5_full_dsp_U33   |voicerec_fadd_32ns_32ns_32_5_full_dsp   |        0|      2|   205|   390|
+    |voicerec_fmul_32ns_32ns_32_4_max_dsp_U34    |voicerec_fmul_32ns_32ns_32_4_max_dsp    |        0|      3|   143|   321|
+    |voicerec_fpext_32ns_64_1_U36                |voicerec_fpext_32ns_64_1                |        0|      0|   100|   138|
+    |voicerec_fptrunc_64ns_32_1_U35              |voicerec_fptrunc_64ns_32_1              |        0|      0|   128|   277|
     +--------------------------------------------+----------------------------------------+---------+-------+------+------+
     |Total                                       |                                        |        0|     34|  5781|  8532|
     +--------------------------------------------+----------------------------------------+---------+-------+------+------+

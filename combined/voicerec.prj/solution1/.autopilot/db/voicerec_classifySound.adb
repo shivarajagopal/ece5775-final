@@ -56,7 +56,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -97,7 +97,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -168,7 +168,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -210,7 +210,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -252,7 +252,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -295,7 +295,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -338,7 +338,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -379,7 +379,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -422,7 +422,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -454,7 +454,7 @@
             <Obj>
               <type>0</type>
               <id>20</id>
-              <name>tmp_9</name>
+              <name>tmp_8</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>55</lineNumber>
@@ -463,7 +463,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -478,7 +478,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_9_fu_219_p2</rtlName>
+              <rtlName>tmp_8_fu_219_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -505,7 +505,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -546,7 +546,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -617,7 +617,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -658,7 +658,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -700,7 +700,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -742,7 +742,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -776,7 +776,7 @@
             <Obj>
               <type>0</type>
               <id>31</id>
-              <name>tmp_1_trn_cast</name>
+              <name>tmp_9_trn_cast</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>55</lineNumber>
@@ -785,7 +785,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -800,7 +800,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_1_trn_cast_fu_245_p1</rtlName>
+              <rtlName>tmp_9_trn_cast_fu_245_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>12</bitwidth>
@@ -826,7 +826,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -868,7 +868,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -909,7 +909,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -950,7 +950,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -993,7 +993,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1025,7 +1025,7 @@
             <Obj>
               <type>0</type>
               <id>37</id>
-              <name>tmp_2</name>
+              <name>tmp_1</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>55</lineNumber>
@@ -1034,7 +1034,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1049,7 +1049,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>voicerec_fptrunc_64ns_32_1_U48</rtlName>
+              <rtlName>voicerec_fptrunc_64ns_32_1_U46</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1066,7 +1066,7 @@
             <Obj>
               <type>0</type>
               <id>38</id>
-              <name>tmp_3</name>
+              <name>tmp_2</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>55</lineNumber>
@@ -1075,7 +1075,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1090,7 +1090,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_3_fu_263_p2</rtlName>
+              <rtlName>tmp_2_fu_263_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -1108,7 +1108,7 @@
             <Obj>
               <type>0</type>
               <id>39</id>
-              <name>tmp_3_cast</name>
+              <name>tmp_2_cast</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>55</lineNumber>
@@ -1117,7 +1117,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1132,7 +1132,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_3_cast_fu_268_p1</rtlName>
+              <rtlName>tmp_2_cast_fu_268_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1149,7 +1149,7 @@
             <Obj>
               <type>0</type>
               <id>40</id>
-              <name>tmp_4</name>
+              <name>tmp_3</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>55</lineNumber>
@@ -1158,7 +1158,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1173,7 +1173,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_4_fu_271_p1</rtlName>
+              <rtlName>tmp_3_fu_271_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1199,7 +1199,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1242,7 +1242,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1284,7 +1284,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1325,7 +1325,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1372,7 +1372,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1510,7 +1510,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1558,7 +1558,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1607,7 +1607,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1656,7 +1656,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1706,7 +1706,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1754,7 +1754,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1804,7 +1804,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1852,7 +1852,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1900,7 +1900,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1942,7 +1942,7 @@
             <Obj>
               <type>0</type>
               <id>62</id>
-              <name>tmp_5</name>
+              <name>tmp_4</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>42</lineNumber>
@@ -1951,7 +1951,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1973,7 +1973,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_5_fu_310_p1</rtlName>
+              <rtlName>tmp_4_fu_310_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>23</bitwidth>
@@ -1999,7 +1999,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2038,7 +2038,7 @@
             <Obj>
               <type>0</type>
               <id>64</id>
-              <name>tmp_6</name>
+              <name>tmp_5</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>42</lineNumber>
@@ -2047,7 +2047,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2069,7 +2069,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_6_fu_318_p4</rtlName>
+              <rtlName>tmp_5_fu_318_p4</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -2089,7 +2089,7 @@
             <Obj>
               <type>0</type>
               <id>65</id>
-              <name>tmp_7</name>
+              <name>tmp_6</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>42</lineNumber>
@@ -2098,7 +2098,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2120,7 +2120,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_7_fu_328_p1</rtlName>
+              <rtlName>tmp_6_fu_328_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>23</bitwidth>
@@ -2146,7 +2146,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2195,7 +2195,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2235,7 +2235,7 @@
             <Obj>
               <type>0</type>
               <id>68</id>
-              <name>tmp_8</name>
+              <name>tmp_7</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>42</lineNumber>
@@ -2244,7 +2244,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2266,7 +2266,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_8_fu_344_p2</rtlName>
+              <rtlName>tmp_7_fu_344_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -2293,7 +2293,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2342,7 +2342,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2391,7 +2391,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2431,7 +2431,7 @@
             <Obj>
               <type>0</type>
               <id>72</id>
-              <name>tmp_1</name>
+              <name>tmp_9</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>42</lineNumber>
@@ -2440,7 +2440,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2462,7 +2462,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_1_fu_368_p2</rtlName>
+              <rtlName>tmp_9_fu_368_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -2489,7 +2489,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2511,7 +2511,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>voicerec_fcmp_32ns_32ns_1_1_U49</rtlName>
+              <rtlName>voicerec_fcmp_32ns_32ns_1_1_U47</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -2538,7 +2538,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2587,7 +2587,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2637,7 +2637,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2687,7 +2687,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2735,7 +2735,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/iyv2/ece5775/ece5775-final/combined</first>
+                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5156,7 +5156,7 @@
           </second>
         </item>
         <item>
-          <first>voicerec_fcmp_32ns_32ns_1_1_U49 (voicerec_fcmp_32ns_32ns_1_1)</first>
+          <first>voicerec_fcmp_32ns_32ns_1_1_U47 (voicerec_fcmp_32ns_32ns_1_1)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -5175,7 +5175,7 @@
           </second>
         </item>
         <item>
-          <first>voicerec_fptrunc_64ns_32_1_U48 (voicerec_fptrunc_64ns_32_1)</first>
+          <first>voicerec_fptrunc_64ns_32_1_U46 (voicerec_fptrunc_64ns_32_1)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -5528,30 +5528,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_1_fu_368_p2 ( and ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>1</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_3_fu_263_p2 ( + ) </first>
+          <first>tmp_2_fu_263_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -5574,7 +5551,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_8_fu_344_p2 ( or ) </first>
+          <first>tmp_7_fu_344_p2 ( or ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -5597,7 +5574,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_9_fu_219_p2 ( - ) </first>
+          <first>tmp_8_fu_219_p2 ( - ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -5616,6 +5593,29 @@
             <item>
               <first>LUT</first>
               <second>11</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>tmp_9_fu_368_p2 ( and ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>1</second>
             </item>
           </second>
         </item>
@@ -6286,7 +6286,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_2_reg_434</first>
+          <first>tmp_1_reg_434</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6305,7 +6305,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_3_reg_424</first>
+          <first>tmp_2_reg_424</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6324,7 +6324,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_9_reg_401</first>
+          <first>tmp_8_reg_401</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6355,7 +6355,7 @@
           </second>
         </item>
         <item>
-          <first>voicerec_fcmp_32ns_32ns_1_1_U49 (voicerec_fcmp_32ns_32ns_1_1)</first>
+          <first>voicerec_fcmp_32ns_32ns_1_1_U47 (voicerec_fcmp_32ns_32ns_1_1)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -6363,7 +6363,7 @@
           </second>
         </item>
         <item>
-          <first>voicerec_fptrunc_64ns_32_1_U48 (voicerec_fptrunc_64ns_32_1)</first>
+          <first>voicerec_fptrunc_64ns_32_1_U46 (voicerec_fptrunc_64ns_32_1)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -6487,15 +6487,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_1_fu_368_p2 ( and ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>72</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_3_fu_263_p2 ( + ) </first>
+          <first>tmp_2_fu_263_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -6503,7 +6495,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_8_fu_344_p2 ( or ) </first>
+          <first>tmp_7_fu_344_p2 ( or ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -6511,11 +6503,19 @@
           </second>
         </item>
         <item>
-          <first>tmp_9_fu_219_p2 ( - ) </first>
+          <first>tmp_8_fu_219_p2 ( - ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
             <item>20</item>
+          </second>
+        </item>
+        <item>
+          <first>tmp_9_fu_368_p2 ( and ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>72</item>
           </second>
         </item>
         <item>
@@ -7776,23 +7776,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_1_fu_368</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>72</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_1_trn_cast_fu_245</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>31</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_2_fu_175</first>
+        <first>tmp_1_fu_175</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7800,7 +7784,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_3_cast_fu_268</first>
+        <first>tmp_2_cast_fu_268</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7808,7 +7792,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_3_fu_263</first>
+        <first>tmp_2_fu_263</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7816,7 +7800,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_4_fu_271</first>
+        <first>tmp_3_fu_271</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7824,7 +7808,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_5_fu_310</first>
+        <first>tmp_4_fu_310</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7832,7 +7816,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_6_fu_318</first>
+        <first>tmp_5_fu_318</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7840,7 +7824,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_7_fu_328</first>
+        <first>tmp_6_fu_328</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7848,7 +7832,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_8_fu_344</first>
+        <first>tmp_7_fu_344</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7856,11 +7840,27 @@
         </second>
       </item>
       <item>
-        <first>tmp_9_fu_219</first>
+        <first>tmp_8_fu_219</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>20</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_9_fu_368</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>72</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_9_trn_cast_fu_245</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>31</item>
         </second>
       </item>
       <item>
@@ -8326,7 +8326,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_2_reg_434</first>
+        <first>tmp_1_reg_434</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8334,7 +8334,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_3_reg_424</first>
+        <first>tmp_2_reg_424</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8342,7 +8342,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_9_reg_401</first>
+        <first>tmp_8_reg_401</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

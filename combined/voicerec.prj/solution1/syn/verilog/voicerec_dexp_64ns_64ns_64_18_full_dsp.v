@@ -10,7 +10,7 @@
 
 module voicerec_dexp_64ns_64ns_64_18_full_dsp
 #(parameter
-    ID         = 41,
+    ID         = 39,
     NUM_STAGE  = 18,
     din0_WIDTH = 64,
     din1_WIDTH = 64,

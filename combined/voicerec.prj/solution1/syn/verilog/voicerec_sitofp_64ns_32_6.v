@@ -10,7 +10,7 @@
 
 module voicerec_sitofp_64ns_32_6
 #(parameter
-    ID         = 18,
+    ID         = 17,
     NUM_STAGE  = 6,
     din0_WIDTH = 64,
     dout_WIDTH = 32

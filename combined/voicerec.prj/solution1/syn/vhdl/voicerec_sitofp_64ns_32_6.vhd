@@ -10,7 +10,7 @@ use ieee.std_logic_1164.all;
 
 entity voicerec_sitofp_64ns_32_6 is
     generic (
-        ID         : integer := 18;
+        ID         : integer := 17;
         NUM_STAGE  : integer := 6;
         din0_WIDTH : integer := 64;
         dout_WIDTH : integer := 32

@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="voicerec,hls_ip_2015_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=8.952400,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=121,HLS_SYN_DSP=114,HLS_SYN_FF=16673,HLS_SYN_LUT=25985}" *)
+(* CORE_GENERATION_INFO="voicerec,hls_ip_2015_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=8.952400,HLS_SYN_LAT=81746031,HLS_SYN_TPT=none,HLS_SYN_MEM=121,HLS_SYN_DSP=114,HLS_SYN_FF=15799,HLS_SYN_LUT=24981}" *)
 
 module voicerec (
         ap_clk,
@@ -16,7 +16,6 @@ module voicerec (
         ap_done,
         ap_idle,
         ap_ready,
-        np,
         inSound_address0,
         inSound_ce0,
         inSound_we0,
@@ -34,13 +33,16 @@ parameter    ap_ST_st4_fsm_3 = 5'b1000;
 parameter    ap_ST_st5_fsm_4 = 5'b10000;
 parameter    ap_const_lv32_0 = 32'b00000000000000000000000000000000;
 parameter    ap_const_lv1_1 = 1'b1;
-parameter    ap_const_lv32_1 = 32'b1;
 parameter    ap_const_lv32_2 = 32'b10;
 parameter    ap_const_lv1_0 = 1'b0;
+parameter    ap_const_lv13_0 = 13'b0000000000000;
+parameter    ap_const_lv32_1 = 32'b1;
 parameter    ap_const_lv32_3 = 32'b11;
+parameter    ap_const_lv6_0 = 6'b000000;
 parameter    ap_const_lv32_4 = 32'b100;
-parameter    ap_const_lv32_1F = 32'b11111;
-parameter    ap_const_lv32_1F40 = 32'b1111101000000;
+parameter    ap_const_lv6_3D = 6'b111101;
+parameter    ap_const_lv6_1 = 6'b1;
+parameter    ap_const_lv13_80 = 13'b10000000;
 parameter    ap_true = 1'b1;
 
 input   ap_clk;
@@ -49,7 +51,6 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [31:0] np;
 output  [13:0] inSound_address0;
 output   inSound_ce0;
 output   inSound_we0;
@@ -70,74 +71,63 @@ reg    result_ce0;
 reg    result_we0;
 wire   [63:0] result_d0;
 wire   [63:0] result_q0;
-reg    ap_sig_cseq_ST_st2_fsm_1;
-reg    ap_sig_bdd_55;
-wire    grp_voicerec_preprocessSound_fu_134_ap_done;
-wire   [31:0] stride_fu_190_p3;
-reg   [31:0] stride_reg_226;
-wire   [31:0] index_1_fu_209_p2;
-reg   [31:0] index_1_reg_234;
+wire   [5:0] index_1_fu_141_p2;
+reg   [5:0] index_1_reg_156;
 reg    ap_sig_cseq_ST_st3_fsm_2;
-reg    ap_sig_bdd_70;
-wire   [31:0] i_1_fu_215_p2;
-reg   [31:0] i_1_reg_239;
-wire   [0:0] tmp_s_fu_203_p2;
+reg    ap_sig_bdd_54;
+wire   [12:0] i_1_fu_147_p2;
+reg   [12:0] i_1_reg_161;
+wire   [0:0] exitcond1_fu_135_p2;
 reg   [12:0] outSound_address0;
 reg    outSound_ce0;
 reg    outSound_we0;
 wire   [63:0] outSound_d0;
 wire   [63:0] outSound_q0;
-wire    grp_voicerec_processChunk_fu_92_ap_start;
-wire    grp_voicerec_processChunk_fu_92_ap_done;
-wire    grp_voicerec_processChunk_fu_92_ap_idle;
-wire    grp_voicerec_processChunk_fu_92_ap_ready;
-wire   [31:0] grp_voicerec_processChunk_fu_92_sp;
-wire   [31:0] grp_voicerec_processChunk_fu_92_np;
-wire   [9:0] grp_voicerec_processChunk_fu_92_ret_address0;
-wire    grp_voicerec_processChunk_fu_92_ret_ce0;
-wire    grp_voicerec_processChunk_fu_92_ret_we0;
-wire   [63:0] grp_voicerec_processChunk_fu_92_ret_d0;
-wire   [31:0] grp_voicerec_processChunk_fu_92_tmp_122;
-wire   [12:0] grp_voicerec_processChunk_fu_92_inputSound_address0;
-wire    grp_voicerec_processChunk_fu_92_inputSound_ce0;
-wire   [63:0] grp_voicerec_processChunk_fu_92_inputSound_q0;
-wire    grp_voicerec_classifySound_fu_118_ap_start;
-wire    grp_voicerec_classifySound_fu_118_ap_done;
-wire    grp_voicerec_classifySound_fu_118_ap_idle;
-wire    grp_voicerec_classifySound_fu_118_ap_ready;
-wire   [9:0] grp_voicerec_classifySound_fu_118_result_address0;
-wire    grp_voicerec_classifySound_fu_118_result_ce0;
-wire   [63:0] grp_voicerec_classifySound_fu_118_result_q0;
-wire   [31:0] grp_voicerec_classifySound_fu_118_ap_return;
-wire    grp_voicerec_preprocessSound_fu_134_ap_start;
-wire    grp_voicerec_preprocessSound_fu_134_ap_idle;
-wire    grp_voicerec_preprocessSound_fu_134_ap_ready;
-wire   [13:0] grp_voicerec_preprocessSound_fu_134_inSound_address0;
-wire    grp_voicerec_preprocessSound_fu_134_inSound_ce0;
-wire    grp_voicerec_preprocessSound_fu_134_inSound_we0;
-wire   [63:0] grp_voicerec_preprocessSound_fu_134_inSound_d0;
-wire   [63:0] grp_voicerec_preprocessSound_fu_134_inSound_q0;
-wire   [12:0] grp_voicerec_preprocessSound_fu_134_outSound_address0;
-wire    grp_voicerec_preprocessSound_fu_134_outSound_ce0;
-wire    grp_voicerec_preprocessSound_fu_134_outSound_we0;
-wire   [63:0] grp_voicerec_preprocessSound_fu_134_outSound_d0;
-reg   [31:0] i_reg_68;
+wire    grp_voicerec_processChunk_fu_86_ap_start;
+wire    grp_voicerec_processChunk_fu_86_ap_done;
+wire    grp_voicerec_processChunk_fu_86_ap_idle;
+wire    grp_voicerec_processChunk_fu_86_ap_ready;
+wire   [12:0] grp_voicerec_processChunk_fu_86_sp;
+wire   [9:0] grp_voicerec_processChunk_fu_86_ret_address0;
+wire    grp_voicerec_processChunk_fu_86_ret_ce0;
+wire    grp_voicerec_processChunk_fu_86_ret_we0;
+wire   [63:0] grp_voicerec_processChunk_fu_86_ret_d0;
+wire   [5:0] grp_voicerec_processChunk_fu_86_tmp;
+wire   [12:0] grp_voicerec_processChunk_fu_86_inputSound_address0;
+wire    grp_voicerec_processChunk_fu_86_inputSound_ce0;
+wire   [63:0] grp_voicerec_processChunk_fu_86_inputSound_q0;
+wire    grp_voicerec_classifySound_fu_111_ap_start;
+wire    grp_voicerec_classifySound_fu_111_ap_done;
+wire    grp_voicerec_classifySound_fu_111_ap_idle;
+wire    grp_voicerec_classifySound_fu_111_ap_ready;
+wire   [9:0] grp_voicerec_classifySound_fu_111_result_address0;
+wire    grp_voicerec_classifySound_fu_111_result_ce0;
+wire   [63:0] grp_voicerec_classifySound_fu_111_result_q0;
+wire   [31:0] grp_voicerec_classifySound_fu_111_ap_return;
+wire    grp_voicerec_preprocessSound_fu_127_ap_start;
+wire    grp_voicerec_preprocessSound_fu_127_ap_done;
+wire    grp_voicerec_preprocessSound_fu_127_ap_idle;
+wire    grp_voicerec_preprocessSound_fu_127_ap_ready;
+wire   [13:0] grp_voicerec_preprocessSound_fu_127_inSound_address0;
+wire    grp_voicerec_preprocessSound_fu_127_inSound_ce0;
+wire    grp_voicerec_preprocessSound_fu_127_inSound_we0;
+wire   [63:0] grp_voicerec_preprocessSound_fu_127_inSound_d0;
+wire   [63:0] grp_voicerec_preprocessSound_fu_127_inSound_q0;
+wire   [12:0] grp_voicerec_preprocessSound_fu_127_outSound_address0;
+wire    grp_voicerec_preprocessSound_fu_127_outSound_ce0;
+wire    grp_voicerec_preprocessSound_fu_127_outSound_we0;
+wire   [63:0] grp_voicerec_preprocessSound_fu_127_outSound_d0;
+reg   [12:0] i_reg_62;
+reg    ap_sig_cseq_ST_st2_fsm_1;
+reg    ap_sig_bdd_120;
 reg    ap_sig_cseq_ST_st4_fsm_3;
-reg    ap_sig_bdd_136;
-reg   [31:0] index_reg_80;
-reg    grp_voicerec_processChunk_fu_92_ap_start_ap_start_reg = 1'b0;
-reg    grp_voicerec_classifySound_fu_118_ap_start_ap_start_reg = 1'b0;
+reg    ap_sig_bdd_130;
+reg   [5:0] index_reg_74;
+reg    grp_voicerec_processChunk_fu_86_ap_start_ap_start_reg = 1'b0;
+reg    grp_voicerec_classifySound_fu_111_ap_start_ap_start_reg = 1'b0;
 reg    ap_sig_cseq_ST_st5_fsm_4;
-reg    ap_sig_bdd_234;
-reg    grp_voicerec_preprocessSound_fu_134_ap_start_ap_start_reg = 1'b0;
-wire   [31:0] p_neg_fu_150_p2;
-wire   [30:0] p_lshr_fu_156_p4;
-wire   [31:0] tmp_1_fu_166_p1;
-wire   [30:0] p_lshr_f_fu_176_p4;
-wire   [0:0] tmp_3_fu_142_p3;
-wire   [31:0] p_neg_t_fu_170_p2;
-wire   [31:0] tmp_2_fu_186_p1;
-wire   [31:0] tmp_fu_198_p2;
+reg    ap_sig_bdd_230;
+reg    grp_voicerec_preprocessSound_fu_127_ap_start_ap_start_reg = 1'b0;
 reg   [4:0] ap_NS_fsm;
 
 
@@ -169,54 +159,53 @@ outSound_U(
     .q0( outSound_q0 )
 );
 
-voicerec_processChunk grp_voicerec_processChunk_fu_92(
+voicerec_processChunk grp_voicerec_processChunk_fu_86(
     .ap_clk( ap_clk ),
     .ap_rst( ap_rst ),
-    .ap_start( grp_voicerec_processChunk_fu_92_ap_start ),
-    .ap_done( grp_voicerec_processChunk_fu_92_ap_done ),
-    .ap_idle( grp_voicerec_processChunk_fu_92_ap_idle ),
-    .ap_ready( grp_voicerec_processChunk_fu_92_ap_ready ),
-    .sp( grp_voicerec_processChunk_fu_92_sp ),
-    .np( grp_voicerec_processChunk_fu_92_np ),
-    .ret_address0( grp_voicerec_processChunk_fu_92_ret_address0 ),
-    .ret_ce0( grp_voicerec_processChunk_fu_92_ret_ce0 ),
-    .ret_we0( grp_voicerec_processChunk_fu_92_ret_we0 ),
-    .ret_d0( grp_voicerec_processChunk_fu_92_ret_d0 ),
-    .tmp_122( grp_voicerec_processChunk_fu_92_tmp_122 ),
-    .inputSound_address0( grp_voicerec_processChunk_fu_92_inputSound_address0 ),
-    .inputSound_ce0( grp_voicerec_processChunk_fu_92_inputSound_ce0 ),
-    .inputSound_q0( grp_voicerec_processChunk_fu_92_inputSound_q0 )
+    .ap_start( grp_voicerec_processChunk_fu_86_ap_start ),
+    .ap_done( grp_voicerec_processChunk_fu_86_ap_done ),
+    .ap_idle( grp_voicerec_processChunk_fu_86_ap_idle ),
+    .ap_ready( grp_voicerec_processChunk_fu_86_ap_ready ),
+    .sp( grp_voicerec_processChunk_fu_86_sp ),
+    .ret_address0( grp_voicerec_processChunk_fu_86_ret_address0 ),
+    .ret_ce0( grp_voicerec_processChunk_fu_86_ret_ce0 ),
+    .ret_we0( grp_voicerec_processChunk_fu_86_ret_we0 ),
+    .ret_d0( grp_voicerec_processChunk_fu_86_ret_d0 ),
+    .tmp( grp_voicerec_processChunk_fu_86_tmp ),
+    .inputSound_address0( grp_voicerec_processChunk_fu_86_inputSound_address0 ),
+    .inputSound_ce0( grp_voicerec_processChunk_fu_86_inputSound_ce0 ),
+    .inputSound_q0( grp_voicerec_processChunk_fu_86_inputSound_q0 )
 );
 
-voicerec_classifySound grp_voicerec_classifySound_fu_118(
+voicerec_classifySound grp_voicerec_classifySound_fu_111(
     .ap_clk( ap_clk ),
     .ap_rst( ap_rst ),
-    .ap_start( grp_voicerec_classifySound_fu_118_ap_start ),
-    .ap_done( grp_voicerec_classifySound_fu_118_ap_done ),
-    .ap_idle( grp_voicerec_classifySound_fu_118_ap_idle ),
-    .ap_ready( grp_voicerec_classifySound_fu_118_ap_ready ),
-    .result_address0( grp_voicerec_classifySound_fu_118_result_address0 ),
-    .result_ce0( grp_voicerec_classifySound_fu_118_result_ce0 ),
-    .result_q0( grp_voicerec_classifySound_fu_118_result_q0 ),
-    .ap_return( grp_voicerec_classifySound_fu_118_ap_return )
+    .ap_start( grp_voicerec_classifySound_fu_111_ap_start ),
+    .ap_done( grp_voicerec_classifySound_fu_111_ap_done ),
+    .ap_idle( grp_voicerec_classifySound_fu_111_ap_idle ),
+    .ap_ready( grp_voicerec_classifySound_fu_111_ap_ready ),
+    .result_address0( grp_voicerec_classifySound_fu_111_result_address0 ),
+    .result_ce0( grp_voicerec_classifySound_fu_111_result_ce0 ),
+    .result_q0( grp_voicerec_classifySound_fu_111_result_q0 ),
+    .ap_return( grp_voicerec_classifySound_fu_111_ap_return )
 );
 
-voicerec_preprocessSound grp_voicerec_preprocessSound_fu_134(
+voicerec_preprocessSound grp_voicerec_preprocessSound_fu_127(
     .ap_clk( ap_clk ),
     .ap_rst( ap_rst ),
-    .ap_start( grp_voicerec_preprocessSound_fu_134_ap_start ),
-    .ap_done( grp_voicerec_preprocessSound_fu_134_ap_done ),
-    .ap_idle( grp_voicerec_preprocessSound_fu_134_ap_idle ),
-    .ap_ready( grp_voicerec_preprocessSound_fu_134_ap_ready ),
-    .inSound_address0( grp_voicerec_preprocessSound_fu_134_inSound_address0 ),
-    .inSound_ce0( grp_voicerec_preprocessSound_fu_134_inSound_ce0 ),
-    .inSound_we0( grp_voicerec_preprocessSound_fu_134_inSound_we0 ),
-    .inSound_d0( grp_voicerec_preprocessSound_fu_134_inSound_d0 ),
-    .inSound_q0( grp_voicerec_preprocessSound_fu_134_inSound_q0 ),
-    .outSound_address0( grp_voicerec_preprocessSound_fu_134_outSound_address0 ),
-    .outSound_ce0( grp_voicerec_preprocessSound_fu_134_outSound_ce0 ),
-    .outSound_we0( grp_voicerec_preprocessSound_fu_134_outSound_we0 ),
-    .outSound_d0( grp_voicerec_preprocessSound_fu_134_outSound_d0 )
+    .ap_start( grp_voicerec_preprocessSound_fu_127_ap_start ),
+    .ap_done( grp_voicerec_preprocessSound_fu_127_ap_done ),
+    .ap_idle( grp_voicerec_preprocessSound_fu_127_ap_idle ),
+    .ap_ready( grp_voicerec_preprocessSound_fu_127_ap_ready ),
+    .inSound_address0( grp_voicerec_preprocessSound_fu_127_inSound_address0 ),
+    .inSound_ce0( grp_voicerec_preprocessSound_fu_127_inSound_ce0 ),
+    .inSound_we0( grp_voicerec_preprocessSound_fu_127_inSound_we0 ),
+    .inSound_d0( grp_voicerec_preprocessSound_fu_127_inSound_d0 ),
+    .inSound_q0( grp_voicerec_preprocessSound_fu_127_inSound_q0 ),
+    .outSound_address0( grp_voicerec_preprocessSound_fu_127_outSound_address0 ),
+    .outSound_ce0( grp_voicerec_preprocessSound_fu_127_outSound_ce0 ),
+    .outSound_we0( grp_voicerec_preprocessSound_fu_127_outSound_we0 ),
+    .outSound_d0( grp_voicerec_preprocessSound_fu_127_outSound_d0 )
 );
 
 
@@ -231,44 +220,44 @@ begin : ap_ret_ap_CS_fsm
     end
 end
 
-/// grp_voicerec_classifySound_fu_118_ap_start_ap_start_reg assign process. ///
+/// grp_voicerec_classifySound_fu_111_ap_start_ap_start_reg assign process. ///
 always @ (posedge ap_clk)
-begin : ap_ret_grp_voicerec_classifySound_fu_118_ap_start_ap_start_reg
+begin : ap_ret_grp_voicerec_classifySound_fu_111_ap_start_ap_start_reg
     if (ap_rst == 1'b1) begin
-        grp_voicerec_classifySound_fu_118_ap_start_ap_start_reg <= ap_const_logic_0;
+        grp_voicerec_classifySound_fu_111_ap_start_ap_start_reg <= ap_const_logic_0;
     end else begin
-        if (((ap_const_logic_1 == ap_sig_cseq_ST_st3_fsm_2) & (tmp_s_fu_203_p2 == ap_const_lv1_0))) begin
-            grp_voicerec_classifySound_fu_118_ap_start_ap_start_reg <= ap_const_logic_1;
-        end else if ((ap_const_logic_1 == grp_voicerec_classifySound_fu_118_ap_ready)) begin
-            grp_voicerec_classifySound_fu_118_ap_start_ap_start_reg <= ap_const_logic_0;
+        if (((ap_const_logic_1 == ap_sig_cseq_ST_st3_fsm_2) & ~(exitcond1_fu_135_p2 == ap_const_lv1_0))) begin
+            grp_voicerec_classifySound_fu_111_ap_start_ap_start_reg <= ap_const_logic_1;
+        end else if ((ap_const_logic_1 == grp_voicerec_classifySound_fu_111_ap_ready)) begin
+            grp_voicerec_classifySound_fu_111_ap_start_ap_start_reg <= ap_const_logic_0;
         end
     end
 end
 
-/// grp_voicerec_preprocessSound_fu_134_ap_start_ap_start_reg assign process. ///
+/// grp_voicerec_preprocessSound_fu_127_ap_start_ap_start_reg assign process. ///
 always @ (posedge ap_clk)
-begin : ap_ret_grp_voicerec_preprocessSound_fu_134_ap_start_ap_start_reg
+begin : ap_ret_grp_voicerec_preprocessSound_fu_127_ap_start_ap_start_reg
     if (ap_rst == 1'b1) begin
-        grp_voicerec_preprocessSound_fu_134_ap_start_ap_start_reg <= ap_const_logic_0;
+        grp_voicerec_preprocessSound_fu_127_ap_start_ap_start_reg <= ap_const_logic_0;
     end else begin
         if (((ap_const_logic_1 == ap_sig_cseq_ST_st1_fsm_0) & ~(ap_start == ap_const_logic_0))) begin
-            grp_voicerec_preprocessSound_fu_134_ap_start_ap_start_reg <= ap_const_logic_1;
-        end else if ((ap_const_logic_1 == grp_voicerec_preprocessSound_fu_134_ap_ready)) begin
-            grp_voicerec_preprocessSound_fu_134_ap_start_ap_start_reg <= ap_const_logic_0;
+            grp_voicerec_preprocessSound_fu_127_ap_start_ap_start_reg <= ap_const_logic_1;
+        end else if ((ap_const_logic_1 == grp_voicerec_preprocessSound_fu_127_ap_ready)) begin
+            grp_voicerec_preprocessSound_fu_127_ap_start_ap_start_reg <= ap_const_logic_0;
         end
     end
 end
 
-/// grp_voicerec_processChunk_fu_92_ap_start_ap_start_reg assign process. ///
+/// grp_voicerec_processChunk_fu_86_ap_start_ap_start_reg assign process. ///
 always @ (posedge ap_clk)
-begin : ap_ret_grp_voicerec_processChunk_fu_92_ap_start_ap_start_reg
+begin : ap_ret_grp_voicerec_processChunk_fu_86_ap_start_ap_start_reg
     if (ap_rst == 1'b1) begin
-        grp_voicerec_processChunk_fu_92_ap_start_ap_start_reg <= ap_const_logic_0;
+        grp_voicerec_processChunk_fu_86_ap_start_ap_start_reg <= ap_const_logic_0;
     end else begin
-        if (((ap_const_logic_1 == ap_sig_cseq_ST_st3_fsm_2) & ~(tmp_s_fu_203_p2 == ap_const_lv1_0))) begin
-            grp_voicerec_processChunk_fu_92_ap_start_ap_start_reg <= ap_const_logic_1;
-        end else if ((ap_const_logic_1 == grp_voicerec_processChunk_fu_92_ap_ready)) begin
-            grp_voicerec_processChunk_fu_92_ap_start_ap_start_reg <= ap_const_logic_0;
+        if (((ap_const_logic_1 == ap_sig_cseq_ST_st3_fsm_2) & (exitcond1_fu_135_p2 == ap_const_lv1_0))) begin
+            grp_voicerec_processChunk_fu_86_ap_start_ap_start_reg <= ap_const_logic_1;
+        end else if ((ap_const_logic_1 == grp_voicerec_processChunk_fu_86_ap_ready)) begin
+            grp_voicerec_processChunk_fu_86_ap_start_ap_start_reg <= ap_const_logic_0;
         end
     end
 end
@@ -276,28 +265,28 @@ end
 /// assign process. ///
 always @(posedge ap_clk)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(ap_const_logic_0 == grp_voicerec_processChunk_fu_92_ap_done))) begin
-        i_reg_68 <= i_1_reg_239;
-    end else if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & ~(ap_const_logic_0 == grp_voicerec_preprocessSound_fu_134_ap_done))) begin
-        i_reg_68 <= ap_const_lv32_0;
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(ap_const_logic_0 == grp_voicerec_processChunk_fu_86_ap_done))) begin
+        i_reg_62 <= i_1_reg_161;
+    end else if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & ~(ap_const_logic_0 == grp_voicerec_preprocessSound_fu_127_ap_done))) begin
+        i_reg_62 <= ap_const_lv13_0;
     end
 end
 
 /// assign process. ///
 always @(posedge ap_clk)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(ap_const_logic_0 == grp_voicerec_processChunk_fu_92_ap_done))) begin
-        index_reg_80 <= index_1_reg_234;
-    end else if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & ~(ap_const_logic_0 == grp_voicerec_preprocessSound_fu_134_ap_done))) begin
-        index_reg_80 <= ap_const_lv32_0;
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(ap_const_logic_0 == grp_voicerec_processChunk_fu_86_ap_done))) begin
+        index_reg_74 <= index_1_reg_156;
+    end else if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & ~(ap_const_logic_0 == grp_voicerec_preprocessSound_fu_127_ap_done))) begin
+        index_reg_74 <= ap_const_lv6_0;
     end
 end
 
 /// assign process. ///
 always @(posedge ap_clk)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st3_fsm_2) & ~(tmp_s_fu_203_p2 == ap_const_lv1_0))) begin
-        i_1_reg_239 <= i_1_fu_215_p2;
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st3_fsm_2) & (exitcond1_fu_135_p2 == ap_const_lv1_0))) begin
+        i_1_reg_161 <= i_1_fu_147_p2;
     end
 end
 
@@ -305,22 +294,14 @@ end
 always @(posedge ap_clk)
 begin
     if ((ap_const_logic_1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        index_1_reg_234 <= index_1_fu_209_p2;
-    end
-end
-
-/// assign process. ///
-always @(posedge ap_clk)
-begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & ~(ap_const_logic_0 == grp_voicerec_preprocessSound_fu_134_ap_done))) begin
-        stride_reg_226 <= stride_fu_190_p3;
+        index_1_reg_156 <= index_1_fu_141_p2;
     end
 end
 
 /// ap_done assign process. ///
-always @ (grp_voicerec_classifySound_fu_118_ap_done or ap_sig_cseq_ST_st5_fsm_4)
+always @ (grp_voicerec_classifySound_fu_111_ap_done or ap_sig_cseq_ST_st5_fsm_4)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4) & ~(ap_const_logic_0 == grp_voicerec_classifySound_fu_118_ap_done))) begin
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4) & ~(ap_const_logic_0 == grp_voicerec_classifySound_fu_111_ap_done))) begin
         ap_done = ap_const_logic_1;
     end else begin
         ap_done = ap_const_logic_0;
@@ -338,9 +319,9 @@ begin
 end
 
 /// ap_ready assign process. ///
-always @ (grp_voicerec_classifySound_fu_118_ap_done or ap_sig_cseq_ST_st5_fsm_4)
+always @ (grp_voicerec_classifySound_fu_111_ap_done or ap_sig_cseq_ST_st5_fsm_4)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4) & ~(ap_const_logic_0 == grp_voicerec_classifySound_fu_118_ap_done))) begin
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4) & ~(ap_const_logic_0 == grp_voicerec_classifySound_fu_111_ap_done))) begin
         ap_ready = ap_const_logic_1;
     end else begin
         ap_ready = ap_const_logic_0;
@@ -358,9 +339,9 @@ begin
 end
 
 /// ap_sig_cseq_ST_st2_fsm_1 assign process. ///
-always @ (ap_sig_bdd_55)
+always @ (ap_sig_bdd_120)
 begin
-    if (ap_sig_bdd_55) begin
+    if (ap_sig_bdd_120) begin
         ap_sig_cseq_ST_st2_fsm_1 = ap_const_logic_1;
     end else begin
         ap_sig_cseq_ST_st2_fsm_1 = ap_const_logic_0;
@@ -368,9 +349,9 @@ begin
 end
 
 /// ap_sig_cseq_ST_st3_fsm_2 assign process. ///
-always @ (ap_sig_bdd_70)
+always @ (ap_sig_bdd_54)
 begin
-    if (ap_sig_bdd_70) begin
+    if (ap_sig_bdd_54) begin
         ap_sig_cseq_ST_st3_fsm_2 = ap_const_logic_1;
     end else begin
         ap_sig_cseq_ST_st3_fsm_2 = ap_const_logic_0;
@@ -378,9 +359,9 @@ begin
 end
 
 /// ap_sig_cseq_ST_st4_fsm_3 assign process. ///
-always @ (ap_sig_bdd_136)
+always @ (ap_sig_bdd_130)
 begin
-    if (ap_sig_bdd_136) begin
+    if (ap_sig_bdd_130) begin
         ap_sig_cseq_ST_st4_fsm_3 = ap_const_logic_1;
     end else begin
         ap_sig_cseq_ST_st4_fsm_3 = ap_const_logic_0;
@@ -388,9 +369,9 @@ begin
 end
 
 /// ap_sig_cseq_ST_st5_fsm_4 assign process. ///
-always @ (ap_sig_bdd_234)
+always @ (ap_sig_bdd_230)
 begin
-    if (ap_sig_bdd_234) begin
+    if (ap_sig_bdd_230) begin
         ap_sig_cseq_ST_st5_fsm_4 = ap_const_logic_1;
     end else begin
         ap_sig_cseq_ST_st5_fsm_4 = ap_const_logic_0;
@@ -398,94 +379,94 @@ begin
 end
 
 /// inSound_ce0 assign process. ///
-always @ (ap_sig_cseq_ST_st2_fsm_1 or grp_voicerec_preprocessSound_fu_134_inSound_ce0)
+always @ (grp_voicerec_preprocessSound_fu_127_inSound_ce0 or ap_sig_cseq_ST_st2_fsm_1)
 begin
     if ((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1)) begin
-        inSound_ce0 = grp_voicerec_preprocessSound_fu_134_inSound_ce0;
+        inSound_ce0 = grp_voicerec_preprocessSound_fu_127_inSound_ce0;
     end else begin
         inSound_ce0 = ap_const_logic_0;
     end
 end
 
 /// inSound_we0 assign process. ///
-always @ (ap_sig_cseq_ST_st2_fsm_1 or grp_voicerec_preprocessSound_fu_134_inSound_we0)
+always @ (grp_voicerec_preprocessSound_fu_127_inSound_we0 or ap_sig_cseq_ST_st2_fsm_1)
 begin
     if ((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1)) begin
-        inSound_we0 = grp_voicerec_preprocessSound_fu_134_inSound_we0;
+        inSound_we0 = grp_voicerec_preprocessSound_fu_127_inSound_we0;
     end else begin
         inSound_we0 = ap_const_logic_0;
     end
 end
 
 /// outSound_address0 assign process. ///
-always @ (ap_sig_cseq_ST_st2_fsm_1 or grp_voicerec_processChunk_fu_92_inputSound_address0 or grp_voicerec_preprocessSound_fu_134_outSound_address0 or ap_sig_cseq_ST_st4_fsm_3)
+always @ (grp_voicerec_processChunk_fu_86_inputSound_address0 or grp_voicerec_preprocessSound_fu_127_outSound_address0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st4_fsm_3)
 begin
     if ((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1)) begin
-        outSound_address0 = grp_voicerec_preprocessSound_fu_134_outSound_address0;
+        outSound_address0 = grp_voicerec_preprocessSound_fu_127_outSound_address0;
     end else if ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3)) begin
-        outSound_address0 = grp_voicerec_processChunk_fu_92_inputSound_address0;
+        outSound_address0 = grp_voicerec_processChunk_fu_86_inputSound_address0;
     end else begin
         outSound_address0 = 'bx;
     end
 end
 
 /// outSound_ce0 assign process. ///
-always @ (ap_sig_cseq_ST_st2_fsm_1 or grp_voicerec_processChunk_fu_92_inputSound_ce0 or grp_voicerec_preprocessSound_fu_134_outSound_ce0 or ap_sig_cseq_ST_st4_fsm_3)
+always @ (grp_voicerec_processChunk_fu_86_inputSound_ce0 or grp_voicerec_preprocessSound_fu_127_outSound_ce0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st4_fsm_3)
 begin
     if ((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1)) begin
-        outSound_ce0 = grp_voicerec_preprocessSound_fu_134_outSound_ce0;
+        outSound_ce0 = grp_voicerec_preprocessSound_fu_127_outSound_ce0;
     end else if ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3)) begin
-        outSound_ce0 = grp_voicerec_processChunk_fu_92_inputSound_ce0;
+        outSound_ce0 = grp_voicerec_processChunk_fu_86_inputSound_ce0;
     end else begin
         outSound_ce0 = ap_const_logic_0;
     end
 end
 
 /// outSound_we0 assign process. ///
-always @ (ap_sig_cseq_ST_st2_fsm_1 or grp_voicerec_preprocessSound_fu_134_outSound_we0)
+always @ (grp_voicerec_preprocessSound_fu_127_outSound_we0 or ap_sig_cseq_ST_st2_fsm_1)
 begin
     if ((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1)) begin
-        outSound_we0 = grp_voicerec_preprocessSound_fu_134_outSound_we0;
+        outSound_we0 = grp_voicerec_preprocessSound_fu_127_outSound_we0;
     end else begin
         outSound_we0 = ap_const_logic_0;
     end
 end
 
 /// result_address0 assign process. ///
-always @ (grp_voicerec_processChunk_fu_92_ret_address0 or grp_voicerec_classifySound_fu_118_result_address0 or ap_sig_cseq_ST_st4_fsm_3 or ap_sig_cseq_ST_st5_fsm_4)
+always @ (grp_voicerec_processChunk_fu_86_ret_address0 or grp_voicerec_classifySound_fu_111_result_address0 or ap_sig_cseq_ST_st4_fsm_3 or ap_sig_cseq_ST_st5_fsm_4)
 begin
     if ((ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        result_address0 = grp_voicerec_classifySound_fu_118_result_address0;
+        result_address0 = grp_voicerec_classifySound_fu_111_result_address0;
     end else if ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3)) begin
-        result_address0 = grp_voicerec_processChunk_fu_92_ret_address0;
+        result_address0 = grp_voicerec_processChunk_fu_86_ret_address0;
     end else begin
         result_address0 = 'bx;
     end
 end
 
 /// result_ce0 assign process. ///
-always @ (grp_voicerec_processChunk_fu_92_ret_ce0 or grp_voicerec_classifySound_fu_118_result_ce0 or ap_sig_cseq_ST_st4_fsm_3 or ap_sig_cseq_ST_st5_fsm_4)
+always @ (grp_voicerec_processChunk_fu_86_ret_ce0 or grp_voicerec_classifySound_fu_111_result_ce0 or ap_sig_cseq_ST_st4_fsm_3 or ap_sig_cseq_ST_st5_fsm_4)
 begin
     if ((ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        result_ce0 = grp_voicerec_classifySound_fu_118_result_ce0;
+        result_ce0 = grp_voicerec_classifySound_fu_111_result_ce0;
     end else if ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3)) begin
-        result_ce0 = grp_voicerec_processChunk_fu_92_ret_ce0;
+        result_ce0 = grp_voicerec_processChunk_fu_86_ret_ce0;
     end else begin
         result_ce0 = ap_const_logic_0;
     end
 end
 
 /// result_we0 assign process. ///
-always @ (grp_voicerec_processChunk_fu_92_ret_we0 or ap_sig_cseq_ST_st4_fsm_3)
+always @ (grp_voicerec_processChunk_fu_86_ret_we0 or ap_sig_cseq_ST_st4_fsm_3)
 begin
     if ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3)) begin
-        result_we0 = grp_voicerec_processChunk_fu_92_ret_we0;
+        result_we0 = grp_voicerec_processChunk_fu_86_ret_we0;
     end else begin
         result_we0 = ap_const_logic_0;
     end
 end
 /// the next state (ap_NS_fsm) of the state machine. ///
-always @ (ap_start or ap_CS_fsm or grp_voicerec_preprocessSound_fu_134_ap_done or tmp_s_fu_203_p2 or grp_voicerec_processChunk_fu_92_ap_done or grp_voicerec_classifySound_fu_118_ap_done)
+always @ (ap_start or ap_CS_fsm or exitcond1_fu_135_p2 or grp_voicerec_processChunk_fu_86_ap_done or grp_voicerec_classifySound_fu_111_ap_done or grp_voicerec_preprocessSound_fu_127_ap_done)
 begin
     case (ap_CS_fsm)
         ap_ST_st1_fsm_0 : 
@@ -498,7 +479,7 @@ begin
         end
         ap_ST_st2_fsm_1 : 
         begin
-            if (~(ap_const_logic_0 == grp_voicerec_preprocessSound_fu_134_ap_done)) begin
+            if (~(ap_const_logic_0 == grp_voicerec_preprocessSound_fu_127_ap_done)) begin
                 ap_NS_fsm = ap_ST_st3_fsm_2;
             end else begin
                 ap_NS_fsm = ap_ST_st2_fsm_1;
@@ -506,7 +487,7 @@ begin
         end
         ap_ST_st3_fsm_2 : 
         begin
-            if ((tmp_s_fu_203_p2 == ap_const_lv1_0)) begin
+            if (~(exitcond1_fu_135_p2 == ap_const_lv1_0)) begin
                 ap_NS_fsm = ap_ST_st5_fsm_4;
             end else begin
                 ap_NS_fsm = ap_ST_st4_fsm_3;
@@ -514,7 +495,7 @@ begin
         end
         ap_ST_st4_fsm_3 : 
         begin
-            if (~(ap_const_logic_0 == grp_voicerec_processChunk_fu_92_ap_done)) begin
+            if (~(ap_const_logic_0 == grp_voicerec_processChunk_fu_86_ap_done)) begin
                 ap_NS_fsm = ap_ST_st3_fsm_2;
             end else begin
                 ap_NS_fsm = ap_ST_st4_fsm_3;
@@ -522,7 +503,7 @@ begin
         end
         ap_ST_st5_fsm_4 : 
         begin
-            if (~(ap_const_logic_0 == grp_voicerec_classifySound_fu_118_ap_done)) begin
+            if (~(ap_const_logic_0 == grp_voicerec_classifySound_fu_111_ap_done)) begin
                 ap_NS_fsm = ap_ST_st1_fsm_0;
             end else begin
                 ap_NS_fsm = ap_ST_st5_fsm_4;
@@ -535,12 +516,18 @@ begin
     endcase
 end
 
-assign ap_return = grp_voicerec_classifySound_fu_118_ap_return;
+assign ap_return = grp_voicerec_classifySound_fu_111_ap_return;
 
-/// ap_sig_bdd_136 assign process. ///
+/// ap_sig_bdd_120 assign process. ///
 always @ (ap_CS_fsm)
 begin
-    ap_sig_bdd_136 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_3]);
+    ap_sig_bdd_120 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_1]);
+end
+
+/// ap_sig_bdd_130 assign process. ///
+always @ (ap_CS_fsm)
+begin
+    ap_sig_bdd_130 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_3]);
 end
 
 /// ap_sig_bdd_21 assign process. ///
@@ -549,48 +536,32 @@ begin
     ap_sig_bdd_21 = (ap_CS_fsm[ap_const_lv32_0] == ap_const_lv1_1);
 end
 
-/// ap_sig_bdd_234 assign process. ///
+/// ap_sig_bdd_230 assign process. ///
 always @ (ap_CS_fsm)
 begin
-    ap_sig_bdd_234 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_4]);
+    ap_sig_bdd_230 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_4]);
 end
 
-/// ap_sig_bdd_55 assign process. ///
+/// ap_sig_bdd_54 assign process. ///
 always @ (ap_CS_fsm)
 begin
-    ap_sig_bdd_55 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_1]);
+    ap_sig_bdd_54 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_2]);
 end
-
-/// ap_sig_bdd_70 assign process. ///
-always @ (ap_CS_fsm)
-begin
-    ap_sig_bdd_70 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_2]);
-end
-assign grp_voicerec_classifySound_fu_118_ap_start = grp_voicerec_classifySound_fu_118_ap_start_ap_start_reg;
-assign grp_voicerec_classifySound_fu_118_result_q0 = result_q0;
-assign grp_voicerec_preprocessSound_fu_134_ap_start = grp_voicerec_preprocessSound_fu_134_ap_start_ap_start_reg;
-assign grp_voicerec_preprocessSound_fu_134_inSound_q0 = inSound_q0;
-assign grp_voicerec_processChunk_fu_92_ap_start = grp_voicerec_processChunk_fu_92_ap_start_ap_start_reg;
-assign grp_voicerec_processChunk_fu_92_inputSound_q0 = outSound_q0;
-assign grp_voicerec_processChunk_fu_92_np = np;
-assign grp_voicerec_processChunk_fu_92_sp = i_reg_68;
-assign grp_voicerec_processChunk_fu_92_tmp_122 = index_reg_80;
-assign i_1_fu_215_p2 = (stride_reg_226 + i_reg_68);
-assign inSound_address0 = grp_voicerec_preprocessSound_fu_134_inSound_address0;
-assign inSound_d0 = grp_voicerec_preprocessSound_fu_134_inSound_d0;
-assign index_1_fu_209_p2 = (index_reg_80 + ap_const_lv32_1);
-assign outSound_d0 = grp_voicerec_preprocessSound_fu_134_outSound_d0;
-assign p_lshr_f_fu_176_p4 = {{np[ap_const_lv32_1F : ap_const_lv32_1]}};
-assign p_lshr_fu_156_p4 = {{p_neg_fu_150_p2[ap_const_lv32_1F : ap_const_lv32_1]}};
-assign p_neg_fu_150_p2 = (ap_const_lv32_0 - np);
-assign p_neg_t_fu_170_p2 = (ap_const_lv32_0 - tmp_1_fu_166_p1);
-assign result_d0 = grp_voicerec_processChunk_fu_92_ret_d0;
-assign stride_fu_190_p3 = ((tmp_3_fu_142_p3[0:0]===1'b1)? p_neg_t_fu_170_p2: tmp_2_fu_186_p1);
-assign tmp_1_fu_166_p1 = p_lshr_fu_156_p4;
-assign tmp_2_fu_186_p1 = p_lshr_f_fu_176_p4;
-assign tmp_3_fu_142_p3 = np[ap_const_lv32_1F];
-assign tmp_fu_198_p2 = (i_reg_68 + np);
-assign tmp_s_fu_203_p2 = ($signed(tmp_fu_198_p2) < $signed(32'b1111101000000)? 1'b1: 1'b0);
+assign exitcond1_fu_135_p2 = (index_reg_74 == ap_const_lv6_3D? 1'b1: 1'b0);
+assign grp_voicerec_classifySound_fu_111_ap_start = grp_voicerec_classifySound_fu_111_ap_start_ap_start_reg;
+assign grp_voicerec_classifySound_fu_111_result_q0 = result_q0;
+assign grp_voicerec_preprocessSound_fu_127_ap_start = grp_voicerec_preprocessSound_fu_127_ap_start_ap_start_reg;
+assign grp_voicerec_preprocessSound_fu_127_inSound_q0 = inSound_q0;
+assign grp_voicerec_processChunk_fu_86_ap_start = grp_voicerec_processChunk_fu_86_ap_start_ap_start_reg;
+assign grp_voicerec_processChunk_fu_86_inputSound_q0 = outSound_q0;
+assign grp_voicerec_processChunk_fu_86_sp = i_reg_62;
+assign grp_voicerec_processChunk_fu_86_tmp = index_reg_74;
+assign i_1_fu_147_p2 = (i_reg_62 + ap_const_lv13_80);
+assign inSound_address0 = grp_voicerec_preprocessSound_fu_127_inSound_address0;
+assign inSound_d0 = grp_voicerec_preprocessSound_fu_127_inSound_d0;
+assign index_1_fu_141_p2 = (index_reg_74 + ap_const_lv6_1);
+assign outSound_d0 = grp_voicerec_preprocessSound_fu_127_outSound_d0;
+assign result_d0 = grp_voicerec_processChunk_fu_86_ret_d0;
 
 
 endmodule //voicerec
