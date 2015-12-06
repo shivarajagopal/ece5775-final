@@ -271,10 +271,8 @@ void preprocessSound(double *inSound, int inSize, double *outSound, int outSize)
   }
 }
 
-NeuralNetwork* nn;
 double result[NUMRESULTS][(NUM_BANKS/2)+1];
 int voicerec(int np, double inSound[ORIGSIZE]) {
-  nn = loadNetwork("speech_weights.dat");  
   int i = 0, j=0, stride = 0, classification = -1;
 
   stride = np/2;
@@ -291,7 +289,7 @@ int voicerec(int np, double inSound[ORIGSIZE]) {
     }
     index++;
   }
-  classification = classifySound(nn, result);
+  classification = classifySound(result);
   return classification;
   //result = results;
 }

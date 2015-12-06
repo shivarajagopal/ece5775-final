@@ -11,7 +11,6 @@
 #include "voicerec.h"
 #include "timer.h"
 #include "testSound.h"
-#include "neuralNetwork.h"
 
 //------------------------------------------------------------------------
 // Helper function for hex to int conversion
@@ -34,9 +33,7 @@ float filter_testOutput[127];
 
 int main(int argc, char *argv[]) 
 {
-  NeuralNetwork* nn;
   int classification;
-  nn = loadNetwork("speech_weights.dat");
 
   // Number of test instances
   const int N = 180;

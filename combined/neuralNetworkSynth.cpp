@@ -1,5 +1,11 @@
+#include <math.h>
 
+#include "speech_weights.h"
+#include "neuralNetworkSynth.h"
 
+float input[INPUT_SIZE+1];
+float hidden[HIDDEN_SIZE+1];
+float output[OUTPUT_SIZE];
 
 void feedForward(float pattern[INPUT_SIZE]) {
   // enter pattern value into input neurons
