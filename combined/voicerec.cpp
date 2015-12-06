@@ -262,11 +262,10 @@ void preprocessSound(double *inSound, int inSize, double *outSound, int outSize)
   }
 
   j = 0;
-  for ( i = first; i <= last; i++) {
+  for ( i = first; i <= last && j != 8000; i++) {
     if (fabs(inSound[i]) > 0) {
       outSound[j] = inSound[i];
       j++;
-      if (j == 8000) break;
     }
   }
 }
