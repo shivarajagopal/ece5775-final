@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     }
   }
  
-  classification = voicerec(NP, inSound);
+  classification = voicerec(inSound);
 
   //classification = classifySound(nn, result);
   std::cout << "classification: " << classification << "\n";

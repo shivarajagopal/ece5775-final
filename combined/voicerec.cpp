@@ -12,12 +12,6 @@
 #define M_PI 3.14159265358979323846
 #define LINESIZE 256
 
-#define MAX_COEFF 0.947543636291F
-#define MIN_COEFF 0.392485425092F
-
-
-void FFT( double *c, int N, int isign );
-
 /****************************************************
 http://www.machinedlearnings.com/2011/06/fast-approximate-logarithm-exponential.html
 *****************************************************/
@@ -134,29 +128,33 @@ void FFT( double *c, int isign )
     cp = c;
     nb = NP / n;
     n2 = n >> 1;
-    for( j = 0; j < nb; ++j )
+    for( j = 0; j < 128; ++j )
     {
-      wrk = 1.0;
-      wik = 0.0;
-      for( k = 0; k < n2; ++k )
-      {
-        i0 = k << 1;
-        i1 = i0 + n;
-        d0r = cp[i0];
-        d0i = cp[i0+1];
-        d1r = cp[i1];
-        d1i = cp[i1+1];
-        dr = wrk * d1r - wik * d1i;
-        di = wrk * d1i + wik * d1r;
-        cp[i0] = d0r + dr;
-        cp[i0+1] = d0i + di;
-        cp[i1] = d0r - dr;
-        cp[i1+1] = d0i - di;
-        d = wrk;
-        wrk = wr * wrk - wi * wik;
-        wik = wr * wik + wi * d;
+      if (j < nb) {
+        wrk = 1.0;
+        wik = 0.0;
+        for( k = 0; k < (NP >> 1); ++k )
+        {
+          if (k < n2) {
+            i0 = k << 1;
+            i1 = i0 + n;
+            d0r = cp[i0];
+            d0i = cp[i0+1];
+            d1r = cp[i1];
+            d1i = cp[i1+1];
+            dr = wrk * d1r - wik * d1i;
+            di = wrk * d1i + wik * d1r;
+            cp[i0] = d0r + dr;
+            cp[i0+1] = d0i + di;
+            cp[i1] = d0r - dr;
+            cp[i1+1] = d0i - di;
+            d = wrk;
+            wrk = wr * wrk - wi * wik;
+            wik = wr * wik + wi * d;
+          }
+        }
+        cp += n << 1;
       }
-      cp += n << 1;
     }
   }
 }
@@ -241,39 +239,49 @@ void preprocessSound(double *inSound, int inSize, double *outSound, int outSize)
   int deleteFlag = 0;
   int j = 0;
 
-  for ( i = first ; i <= last ; i++ ) {
-    if (markBegin == 0) {
-      if ( fabs(inSound[i]) < ampThreshold ) {
-        markBegin = i;
-      }
-    } 
-    else {
-      if ( fabs(inSound[i]) < ampThreshold ) {
-        count++;
-        if (count == numThreshold) {
-          deleteFlag = 1;
+  for ( i = 0 ; i < inSize ; i++ ) {
+    if ((i >= first) && (i <= last)) {
+      if (markBegin == 0) {
+        if ( fabs(inSound[i]) < ampThreshold ) {
+          markBegin = i;
         }
-      }
+      } 
       else {
-        if (deleteFlag == 1) {
-          for ( j = markBegin ; j < i ; j++ ) {
-            inSound[j] = 0;
+        if ( fabs(inSound[i]) < ampThreshold ) {
+          count++;
+          if (count == numThreshold) {
+            deleteFlag = 1;
           }
         }
-        deleteFlag = 0;
-        markBegin = 0;
-        count = 0;
+        else {
+          if (deleteFlag == 1) {
+            for ( j = 0 ; j < inSize ; j++ ) {
+              if ((j >= markBegin) && ( j < i )) {
+                inSound[j] = 0;
+              }
+            }
+          }
+          deleteFlag = 0;
+          markBegin = 0;
+          count = 0;
+        }
       }
     }
   }
 
   j = 0;
-  for ( i = first; i <= last && j != 8000; i++) {
-    if (fabs(inSound[i]) > 0) {
-      outSound[j] = inSound[i];
+  for ( i = 0; i < inSize; i++) {
+    if ((i >= first && i <= last && j != 8000)) {
+      if (fabs(inSound[i]) > 0) {
+        outSound[j] = inSound[i];
+        j++;
+      }
+    } else if (j < 8000) {
+      outSound[j] = 0;
       j++;
     }
   }
+
 }
 
 double result[NUMRESULTS][(NUM_BANKS/2)+1];
