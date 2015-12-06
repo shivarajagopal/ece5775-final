@@ -1,0 +1,258 @@
+
+
+================================================================
+== Vivado HLS Report for 'voicerec'
+================================================================
+* Date:           Sun Dec  6 14:07:48 2015
+
+* Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
+* Project:        voicerec.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.95|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 5
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / (tmp_s)
+	5  / (!tmp_s)
+4 --> 
+	3  / true
+5 --> 
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: outSound [1/1] 0.00ns
+:5  %outSound = alloca [8000 x double], align 16
+
+ST_1: stg_7 [2/2] 0.00ns
+:14  call fastcc void @voicerec_preprocessSound([16000 x double]* %inSound, [8000 x double]* %outSound) nounwind
+
+
+ <State 2>: 6.25ns
+ST_2: stg_8 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i32 %np) nounwind, !map !56
+
+ST_2: stg_9 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap([16000 x double]* %inSound) nounwind, !map !62
+
+ST_2: stg_10 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !68
+
+ST_2: stg_11 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @voicerec_str) nounwind
+
+ST_2: np_read [1/1] 0.00ns
+:4  %np_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %np) nounwind
+
+ST_2: tmp_3 [1/1] 0.00ns
+:6  %tmp_3 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %np_read, i32 31)
+
+ST_2: p_neg [1/1] 2.44ns
+:7  %p_neg = sub i32 0, %np_read
+
+ST_2: p_lshr [1/1] 0.00ns
+:8  %p_lshr = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %p_neg, i32 1, i32 31)
+
+ST_2: tmp_1 [1/1] 0.00ns
+:9  %tmp_1 = zext i31 %p_lshr to i32
+
+ST_2: p_neg_t [1/1] 2.44ns
+:10  %p_neg_t = sub i32 0, %tmp_1
+
+ST_2: p_lshr_f [1/1] 0.00ns
+:11  %p_lshr_f = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %np_read, i32 1, i32 31)
+
+ST_2: tmp_2 [1/1] 0.00ns
+:12  %tmp_2 = zext i31 %p_lshr_f to i32
+
+ST_2: stride [1/1] 1.37ns
+:13  %stride = select i1 %tmp_3, i32 %p_neg_t, i32 %tmp_2
+
+ST_2: stg_21 [1/2] 0.00ns
+:14  call fastcc void @voicerec_preprocessSound([16000 x double]* %inSound, [8000 x double]* %outSound) nounwind
+
+ST_2: stg_22 [1/1] 1.57ns
+:15  br label %1
+
+
+ <State 3>: 4.96ns
+ST_3: i [1/1] 0.00ns
+:0  %i = phi i32 [ 0, %0 ], [ %i_1, %2 ]
+
+ST_3: index [1/1] 0.00ns
+:1  %index = phi i32 [ 0, %0 ], [ %index_1, %2 ]
+
+ST_3: tmp [1/1] 2.44ns
+:2  %tmp = add nsw i32 %i, %np_read
+
+ST_3: tmp_s [1/1] 2.52ns
+:3  %tmp_s = icmp slt i32 %tmp, 8000
+
+ST_3: index_1 [1/1] 2.44ns
+:4  %index_1 = add nsw i32 %index, 1
+
+ST_3: stg_28 [1/1] 0.00ns
+:5  br i1 %tmp_s, label %2, label %3
+
+ST_3: stg_29 [2/2] 0.00ns
+:0  call fastcc void @voicerec_processChunk(i32 %i, i32 %np_read, [882 x double]* nocapture @result, i32 %index, [8000 x double]* nocapture %outSound) nounwind
+
+ST_3: i_1 [1/1] 2.44ns
+:1  %i_1 = add nsw i32 %stride, %i
+
+ST_3: classification [2/2] 0.00ns
+:0  %classification = call fastcc i32 @voicerec_classifySound() nounwind
+
+
+ <State 4>: 0.00ns
+ST_4: stg_32 [1/2] 0.00ns
+:0  call fastcc void @voicerec_processChunk(i32 %i, i32 %np_read, [882 x double]* nocapture @result, i32 %index, [8000 x double]* nocapture %outSound) nounwind
+
+ST_4: stg_33 [1/1] 0.00ns
+:2  br label %1
+
+
+ <State 5>: 0.00ns
+ST_5: classification [1/2] 0.00ns
+:0  %classification = call fastcc i32 @voicerec_classifySound() nounwind
+
+ST_5: stg_35 [1/1] 0.00ns
+:1  ret i32 %classification
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
