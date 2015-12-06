@@ -89,16 +89,16 @@ void dct_ii(int N, double *x, double *X) {
   isign = 1 for forward FFT, -1 for inverse FFT.
 */
 
-void FFT( double *c, int N, int isign )
+void FFT( double *c, int isign )
 {
-  int n, n2, nb, j, k, i0, i1;
+  int n, n2, nb, j, k, i0, i1, q;
   double wr, wi, wrk, wik;
   double d, dr, di, d0r, d0i, d1r, d1i;
   double *cp;
 
   j = 0;
-  n2 = N / 2;
-  for( k = 0; k < N; ++k )
+  n2 = NP / 2;
+  for( k = 0; k < NP; ++k )
   {
     if( k < j )
     {
@@ -111,22 +111,28 @@ void FFT( double *c, int N, int isign )
       c[i1] = dr;
       c[i1+1] = di;
     }
-    n = N >> 1;
-    while( (n >= 2) && (j >= n) )
-    {
-      j -= n;
-    n = n >> 1;
+    n = NP >> 1;
+    //while( (n >= 2) && (j >= n) )
+    //{
+      //j -= n;
+      //n = n >> 1;
+    //}
+    for (q=0; q < 7; ++q) {
+      if ( (j >= n) && (n >= 2) ) {
+        j -= n;
+        n = n >> 1;
+      }
     }
     j += n;
   }
 
-  for( n = 2; n <= N; n = n << 1 )
+  for( n = 2; n <= NP; n = n << 1 )
   {
     wr = cosVec[n-1];
     wi = sinVec[n-1];
     if( isign == 1 ) wi = -wi;
     cp = c;
-    nb = N / n;
+    nb = NP / n;
     n2 = n >> 1;
     for( j = 0; j < nb; ++j )
     {
@@ -159,20 +165,20 @@ double c[2*NP];
 double d[NP];
 double e[NUM_BANKS];
 
-void processChunk( int sp, int np, double *ret, double *inputSound)
+void processChunk( int sp, double *ret, double *inputSound)
 {
   int i = 0;
 
   //printf("\ninput:\n");
-  for( i = 0; i < np; ++i )
+  for( i = 0; i < NP; ++i )
   {
     c[2*i] = inputSound[sp+i];
     c[2*i+1] = 0.0;
   }
 
-  FFT( c, np, 1 );
+  FFT( c, 1 );
 
-  for( i = 0; i < np; ++i )
+  for( i = 0; i < NP; ++i )
   {
     d[i] = (c[2*i]*c[2*i] + c[2*i+1]*c[2*i+1])/256.0;
   }
@@ -183,7 +189,7 @@ void processChunk( int sp, int np, double *ret, double *inputSound)
   }
 
   int mellIdx = 0;
-  for ( i = 0; i < np; ++i ) {
+  for ( i = 0; i < NP; ++i ) {
     if ( i==mell[mellIdx] ) {
       e[ 0 ] += d[ mell[mellIdx] ];
     }
@@ -271,18 +277,19 @@ void preprocessSound(double *inSound, int inSize, double *outSound, int outSize)
 }
 
 double result[NUMRESULTS][(NUM_BANKS/2)+1];
-int voicerec(int np, double inSound[ORIGSIZE]) {
+int voicerec(double inSound[ORIGSIZE]) {
   int i = 0, j=0, stride = 0, classification = -1;
 
-  stride = np/2;
+  //stride = np/2;
+  stride = NP/2;
   int num_results = (8000/stride);
   //double results[num_results][(NUM_BANKS/2)+1];
   double outSound[8000];
   preprocessSound(inSound, 16000, outSound, 8000);
 
   int index = 0;
-  for (i = 0; i+np <8000 ; i += stride) {
-    processChunk(i, np, result[index], outSound);
+  for (i = 0; i+NP <8000 ; i += stride) {
+    processChunk(i, result[index], outSound);
     for (j = 0; j < ((NUM_BANKS/2)+1) ; ++j) {
       //printf("%lf\n", result[index][j]);
     }

@@ -22,9 +22,9 @@ void dut(
     hls::stream<bit32_t> &strm_out
 );
 
-void processChunk( int sp, int np, double *ret, double *inSound );
+void processChunk( int sp, double *ret, double *inSound );
 
 void preprocessSound(double *inSound, int inSize, double *outSound, int outSize);
 
-int voicerec(int np, double *inSound);
+int voicerec(double *inSound);
 #endif
