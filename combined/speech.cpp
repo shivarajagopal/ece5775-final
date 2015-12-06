@@ -20,7 +20,7 @@
 #define LEFT 2
 #define BACK 3
 
-#define LOADNETWORK 1
+#define LOADNETWORK 0
 
 int main() {
 
@@ -200,8 +200,9 @@ int main() {
   }
 
 
-  if (LOADNETWORK == 0)
-    saveNetwork(nn, "speech_weights.dat");
-
+  if (LOADNETWORK == 0) {
+      saveNetwork(nn, "speech_weights.dat");
+      saveNetworkHeaderFile(nn, "speech_weights.h");
+  }
   myfile.close();
 }

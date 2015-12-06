@@ -94,11 +94,11 @@ void initialize(NeuralNetwork* nn) {
 }
 
 void feedForward(NeuralNetwork* nn, float pattern[INPUT_SIZE]) {
-  std::ofstream outfile;
-  outfile.open("feedforward.dat", std::ofstream::app);
+  // std::ofstream outfile;
+  // outfile.open("feedforward.dat", std::ofstream::app);
   // enter pattern value into input neurons
   for (int j = 0; j < INPUT_SIZE; j++){
-    outfile << "input[" << j << "] = " << pattern[j] << "\n";
+    //outfile << "input[" << j << "] = " << pattern[j] << "\n";
     nn->input[j] = pattern[j];
   }
   for (int j = 0; j < HIDDEN_SIZE; j++) {
@@ -107,7 +107,7 @@ void feedForward(NeuralNetwork* nn, float pattern[INPUT_SIZE]) {
     // and then enter them into an activation function: 1/(1+exp(-x))
     for (int k = 0; k < INPUT_SIZE+1; k++)
       nn->hidden[j] += nn->input[k] * nn->weightIH[k][j];
-    outfile << "hidden[" << j << "] = " << nn->hidden[j] << "\n";
+    //outfile << "hidden[" << j << "] = " << nn->hidden[j] << "\n";
     nn->hidden[j] = 1/(1+exp(-1*(nn->hidden[j])));
     //outfile << "hidden[" << j << "] = " << nn->hidden[j] << "\n";
   }
@@ -120,16 +120,16 @@ void feedForward(NeuralNetwork* nn, float pattern[INPUT_SIZE]) {
     for (int k = 0; k < HIDDEN_SIZE+1; k++)
       nn->output[j] += nn->hidden[k] * nn->weightHO[k][j];
     nn->output[j] = 1/(1+exp(-1*(nn->output[j])));
-    outfile << "output[" << j << "] = " << nn->output[j] << "\n";
+    //outfile << "output[" << j << "] = " << nn->output[j] << "\n";
   }
-  outfile.close();
+  //outfile.close();
 }
 
 int guessClassification(float output[OUTPUT_SIZE]) {
   float max = 0;
   int guess;
   for (int j = 0; j < OUTPUT_SIZE; j++) {
-    std::cout << "output: " << j << " = " << output[j] << "\n";
+    //std::cout << "output: " << j << " = " << output[j] << "\n";
     if (output[j] > max) {
       guess = j;
       max = output[j];
@@ -284,6 +284,41 @@ void saveNetwork(NeuralNetwork* nn, const char outputfile[]) {
       savefile << nn->weightHO[i][j] << "\n";
     }
   }
+
+  savefile.close();
+}
+
+void saveNetworkHeaderFile(NeuralNetwork* nn, const char outputfile[]) {
+  std::ofstream savefile(outputfile);
+
+  savefile << "float weightIH[" << INPUT_SIZE+1 << "][" << HIDDEN_SIZE << "] = {\n";
+  for (int i = 0; i < INPUT_SIZE; i++) {
+    savefile << "\t{";
+    for (int j = 0; j < HIDDEN_SIZE-1; j++) {
+      savefile <<  nn->weightIH[i][j] << ", ";
+    }
+    savefile << nn->weightIH[i][HIDDEN_SIZE-1] << "},\n";
+  }
+  savefile << "\t{";
+  for (int j = 0; j < HIDDEN_SIZE-1; j++) {
+    savefile <<  nn->weightIH[INPUT_SIZE][j] << ", ";
+  }
+  savefile << nn->weightIH[INPUT_SIZE][HIDDEN_SIZE-1] << "}\n};\n\n";
+
+
+  savefile << "float weightHO[" << HIDDEN_SIZE+1 << "][" << OUTPUT_SIZE << "] = {\n";
+  for (int i = 0; i < HIDDEN_SIZE; i++) {
+    savefile << "\t{";
+    for (int j = 0; j < OUTPUT_SIZE-1; j++) {
+      savefile << nn->weightHO[i][j] << ", ";
+    }
+    savefile << nn->weightHO[i][OUTPUT_SIZE-1] << "},\n";
+  }
+  savefile << "\t{";
+  for (int j = 0; j < OUTPUT_SIZE-1; j++) {
+    savefile <<  nn->weightHO[HIDDEN_SIZE][j] << ", ";
+  }
+  savefile << nn->weightHO[HIDDEN_SIZE][OUTPUT_SIZE-1] << "}\n};\n\n";
 
   savefile.close();
 }

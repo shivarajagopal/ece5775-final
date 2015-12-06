@@ -1,20 +1,15 @@
 #ifndef NEURALNETWORK_H
 #define NEURALNETWORK_H
 
-#define learningRate 0.001
-#define momentum     0.85
-#define maxEpoch     3
-#define INPUT_SIZE    882
-#define HIDDEN_SIZE    500
-#define OUTPUT_SIZE    4
-#define DESIRED_ACCURACY 0.98
+#include "neuralNetworkConstants.h"
 
 typedef struct _NeuralNetwork NeuralNetwork;
 
 // construct the neural network
 NeuralNetwork* neuralNetwork();
 
-void saveNetwork(NeuralNetwork* neuralNetwork, const char outputfile[]);
+void saveNetwork(NeuralNetwork* nn, const char outputfile[]);
+void saveNetworkHeaderFile(NeuralNetwork* nn, const char outputfile[]);
 NeuralNetwork* loadNetwork(const char inputfile[]);
 
 void feedForward(NeuralNetwork* nn, float pattern[INPUT_SIZE]);

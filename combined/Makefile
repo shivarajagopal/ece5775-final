@@ -16,7 +16,7 @@ CFLAGS = -g -I${VHLS_INC}
 
 all: csim
 
-csim: $(TARGET).cpp $(TARGET)_test.cpp neuralNetwork.cpp
+csim: $(TARGET).cpp $(TARGET)_test.cpp neuralNetworkSynth.cpp
 	@echo "Compiling & simulating $(TARGET) on amdpool ..."
 	g++ ${CFLAGS} $^ -o $(TARGET)
 	./$(TARGET)
@@ -26,6 +26,7 @@ bitstream:
 	vivado_hls -f run_pipeline.tcl
 	./run_bitstream.sh
 
+# Use this command to train the network offline
 speech: speech.cpp neuralNetwork.cpp
 	g++ -std=c++14 -g -Ofast -o $@ $^
 
