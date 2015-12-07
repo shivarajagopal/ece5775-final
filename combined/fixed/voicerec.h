@@ -24,7 +24,7 @@ void dut(
 
 void processChunk( int sp, double *ret, double *inSound );
 
-void preprocessSound(double *inSound, int inSize, double *outSound, int outSize);
+void preprocessSound(sound_t *inSound, int inSize, sound_t *outSound, int outSize);
 
-int voicerec(double *inSound);
+int voicerec(sound_t *inSound);
 #endif

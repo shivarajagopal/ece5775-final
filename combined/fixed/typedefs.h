@@ -10,6 +10,7 @@
 #include "ap_fixed.h"
 
 typedef ap_fixed<10,2> sound_t;
+typedef ap_fixed<32,16> precise_t;
 typedef ap_uint<32> bit32_t;
 typedef ap_uint<64> bit64_t;
 

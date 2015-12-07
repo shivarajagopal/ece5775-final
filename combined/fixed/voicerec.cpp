@@ -83,12 +83,12 @@ void dct_ii(int N, double *x, double *X) {
   isign = 1 for forward FFT, -1 for inverse FFT.
 */
 
-void FFT( double *c, int isign )
+void FFT( precise_t *c, int isign )
 {
   int n, n2, nb, j, k, i0, i1, q;
   double wr, wi, wrk, wik;
   double d, dr, di, d0r, d0i, d1r, d1i;
-  double *cp;
+  precise_t *cp;
 
   j = 0;
   n2 = NP / 2;
@@ -159,26 +159,27 @@ void FFT( double *c, int isign )
   }
 }
 
-double c[2*NP];
-double d[NP];
+precise_t c[2*NP];
+precise_t d[NP];
 double e[NUM_BANKS];
+//precise_t e[NUM_BANKS];
 
-void processChunk( int sp, double *ret, double *inputSound)
+void processChunk( int sp, double *ret, sound_t *inputSound)
 {
   int i = 0;
 
   //printf("\ninput:\n");
   for( i = 0; i < NP; ++i )
   {
-    c[2*i] = inputSound[sp+i];
-    c[2*i+1] = 0.0;
+    c[2*i] = (precise_t)inputSound[sp+i];
+    c[2*i+1] = (precise_t)0.0;
   }
 
   FFT( c, 1 );
 
   for( i = 0; i < NP; ++i )
   {
-    d[i] = (c[2*i]*c[2*i] + c[2*i+1]*c[2*i+1])/256.0;
+    d[i] = (c[2*i]*c[2*i] + c[2*i+1]*c[2*i+1])/(precise_t)256.0;
   }
 
 
@@ -189,11 +190,11 @@ void processChunk( int sp, double *ret, double *inputSound)
   int mellIdx = 0;
   for ( i = 0; i < NP; ++i ) {
     if ( i==mell[mellIdx] ) {
-      e[ 0 ] += d[ mell[mellIdx] ];
+      e[ 0 ] += (double)d[ mell[mellIdx] ];
     }
 
     if (( i > mell[ mellIdx ] ) && ( i <= mell[ mellIdx+1 ] )) {
-      e[ mellIdx ] += d[i];
+      e[ mellIdx ] += (double)d[i];
     }
 
     if (i == mell[ mellIdx+1 ]) {
@@ -214,7 +215,7 @@ void processChunk( int sp, double *ret, double *inputSound)
 
 }
 
-void preprocessSound(double *inSound, int inSize, double *outSound, int outSize) {
+void preprocessSound(sound_t *inSound, int inSize, sound_t *outSound, int outSize) {
   int i = 0;
   int first = 0;
   int last = 0;
@@ -233,7 +234,7 @@ void preprocessSound(double *inSound, int inSize, double *outSound, int outSize)
     }
   }
   int numThreshold = 200;
-  double ampThreshold = 0.15;
+  sound_t ampThreshold = 0.15;
   int markBegin = 0;
   int count = 0;
   int deleteFlag = 0;
@@ -285,14 +286,14 @@ void preprocessSound(double *inSound, int inSize, double *outSound, int outSize)
 }
 
 double result[NUMRESULTS][(NUM_BANKS/2)+1];
-int voicerec(double inSound[ORIGSIZE]) {
+int voicerec(sound_t inSound[ORIGSIZE]) {
   int i = 0, j=0, stride = 0, classification = -1;
 
   //stride = np/2;
   stride = NP/2;
   int num_results = (8000/stride);
   //double results[num_results][(NUM_BANKS/2)+1];
-  double outSound[8000];
+  sound_t outSound[8000];
   preprocessSound(inSound, 16000, outSound, 8000);
 
   int index = 0;
