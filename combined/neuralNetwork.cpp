@@ -171,7 +171,7 @@ int classifySound(NeuralNetwork* nn, double input[63][14]) {
 // PRECONDITIONS:
 //   * each individual input MUST be composed of INPUT_SIZE values
 //   * inputs and labels MUST BOTH have 'size' number of elements
-void trainNetwork( NeuralNetwork* nn, 
+float trainNetwork( NeuralNetwork* nn, 
                    float inputs[][INPUT_SIZE], int labels[INPUT_SIZE], int size,
                    float testInputs[][INPUT_SIZE], int testLabels[INPUT_SIZE], int testSize) {
   int epoch = 0;
@@ -265,6 +265,7 @@ void trainNetwork( NeuralNetwork* nn,
     done_training = (nn->trainingSetAccuracy + nn->testSetAccuracy >= DESIRED_ACCURACY*2);
   }
   //outfile.close();
+  return (nn->trainingSetAccuracy + nn->testSetAccuracy) / 2.0;
 }
 
 void saveNetwork(NeuralNetwork* nn, const char outputfile[]) {

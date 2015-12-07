@@ -13,14 +13,14 @@
 
 #define TRAINING_SIZE 180
 #define TESTING_SIZE 20
-#define TRAINING_CYCLES 15
+#define TRAINING_CYCLES 100
 
 #define FORWARD 0
 #define RIGHT 1
 #define LEFT 2
 #define BACK 3
 
-#define LOADNETWORK 0
+#define LOADNETWORK 1
 
 int main() {
 
@@ -151,11 +151,12 @@ int main() {
   int j1, j2, temp;
   float temp_f;
   float* templ;
+  float accuracy = 0;
 
 
-  for (int x = 0; x < TRAINING_CYCLES; x++) {
+  for (int x = 0; x < TRAINING_CYCLES && accuracy < DESIRED_ACCURACY; x++) {
     // move items between the training and testing sets
-    for (int i = 0; i < 500; i++) {
+    for (int i = 0; i < 1000; i++) {
       j1 = rand() % (TRAINING_SIZE);
       j2 = rand() % (TESTING_SIZE);
       temp = training_label[j1];
@@ -169,7 +170,7 @@ int main() {
     }
 
     // "shuffle" the data order (it's not perfectly random but i don't care)
-    for (int i = 0; i < TRAINING_SIZE; i++) {
+    for (int i = 0; i < 450; i++) {
       j1 = rand() % (TRAINING_SIZE);
       j2 = rand() % (TRAINING_SIZE);
       temp = training_label[j1];
@@ -181,7 +182,7 @@ int main() {
         training_data[j2][k] = temp_f;
       }
     }
-    for (int i = 0; i < TESTING_SIZE; i++) {
+    for (int i = 0; i < 50; i++) {
       j1 = rand() % (TESTING_SIZE);
       j2 = rand() % (TESTING_SIZE);
       temp = testing_label[j1];
@@ -195,7 +196,7 @@ int main() {
     }
 
     std::cout << "***** training iteration " << x << " *****\n";
-    trainNetwork(nn, training_data, training_label, TRAINING_SIZE,
+    accuracy = trainNetwork(nn, training_data, training_label, TRAINING_SIZE,
                    testing_data, testing_label, TESTING_SIZE);
   }
 
