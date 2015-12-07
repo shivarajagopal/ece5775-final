@@ -12,27 +12,31 @@
 #define M_PI 3.14159265358979323846
 #define LINESIZE 256
 
-/****************************************************
-http://www.machinedlearnings.com/2011/06/fast-approximate-logarithm-exponential.html
-*****************************************************/
-static inline float 
-fastlog2 (float x)
-{
-  union { float f; uint32_t i; } vx = { x };
-  union { uint32_t i; float f; } mx = { (vx.i & 0x007FFFFF) | 0x3f000000 };
-  float y = vx.i;
-  y *= 1.1920928955078125e-7f;
-
-  return y - 124.22551499f
-           - 1.498030302f * mx.f 
-           - 1.72587999f / (0.3520887068f + mx.f);
+static inline precise_t mylog (precise_t x) {
+  int i, result = 0; 
+  precise_t temp = x;
+  precise_t y= 0;
+  precise_t b = (precise_t) 0.5;
+  for (i=0; i < 8; ++i) {
+    if (temp < 1) {
+      temp = temp << 1;
+      y= y-1;
+    }
+    else if (temp >= 2) {
+      temp = temp >> 1;
+      y++;
+    }
+  }
+  for (i=0; i < 10; ++i) {
+    temp = temp*temp;
+    if (temp >= 2) {
+      temp = temp >> 1;
+      y = y + b;
+    }
+    b = b >> 1;
+  }
+  return y;
 }
-
-static inline float fastlog (float x)
-{
-  return 0.69314718f * fastlog2 (x);
-}
-
 
 /****************************************************
 http://betterexplained.com/articles/understanding-quakes-fast-inverse-square-root/
@@ -205,7 +209,7 @@ void processChunk( int sp, precise_t *ret, sound_t *inputSound)
     if (e[i] <= 0.0) {
       e[i] = 0.0;
     } else {
-      e[i] = (precise_t)fastlog((float)e[i]);
+      e[i] = mylog(e[i]);
     }
   }
 
@@ -240,6 +244,7 @@ void preprocessSound(sound_t *inSound, int inSize, sound_t *outSound, int outSiz
   int j = 0;
 
   for ( i = 0 ; i < inSize ; i++ ) {
+    if (i > last) break;
     if ((i >= first) && (i <= last)) {
       if (markBegin == 0) {
         if ( fabs(inSound[i]) < ampThreshold ) {
@@ -255,7 +260,7 @@ void preprocessSound(sound_t *inSound, int inSize, sound_t *outSound, int outSiz
         }
         else {
           if (deleteFlag == 1) {
-            for ( j = 0 ; j < inSize ; j++ ) {
+            for ( j =0 ; j < inSize ; j++ ) {
               if ((j >= markBegin) && ( j < i )) {
                 inSound[j] = 0;
               }
@@ -271,6 +276,7 @@ void preprocessSound(sound_t *inSound, int inSize, sound_t *outSound, int outSiz
 
   j = 0;
   for ( i = 0; i < inSize; i++) {
+    if (j > 8000) break;
     if ((i >= first && i <= last && j != 8000)) {
       if (fabs(inSound[i]) > 0) {
         outSound[j] = inSound[i];
