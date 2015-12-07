@@ -28,11 +28,11 @@ fastlog2 (float x)
            - 1.72587999f / (0.3520887068f + mx.f);
 }
 
-static inline float
-fastlog (float x)
+static inline float fastlog (float x)
 {
   return 0.69314718f * fastlog2 (x);
 }
+
 
 /****************************************************
 http://betterexplained.com/articles/understanding-quakes-fast-inverse-square-root/
