@@ -1,5 +1,5 @@
 #include <math.h>
-
+#include <iostream>
 #include "speech_weights.h"
 #include "neuralNetworkSynth.h"
 
@@ -39,6 +39,7 @@ int guessClassification() {
   float max = 0;
   int guess;
   for (int j = 0; j < OUTPUT_SIZE; j++) {
+    std::cout << "output [" << j << "] = " << output[j] << "\n";
     if (output[j] > max) {
       guess = j;
       max = output[j];
