@@ -5,8 +5,8 @@
 #include <string.h>
 #include <math.h>
 #include <inttypes.h>
-#include "constArrays.h"
 #include "voicerec.h"
+#include "constArrays.h"
 #include "neuralNetworkSynth.h"
 
 #define M_PI 3.14159265358979323846
@@ -51,14 +51,14 @@ float fastSqrt(float x){
 https://unix4lyfe.org/dct-1d/
 ****************************************************/
 
-void dct_ii(int N, double *x, double *X) {
+void dct_ii(int N, precise_t *x, precise_t *X) {
   for (int k = 0; k < (N/2)+1 ; ++k) {
-    double sum = 0.;
-    double s = (k == 0) ? 0.707106781186548 : 1.;
+    precise_t sum = 0.;
+    precise_t s = (k == 0) ? 0.707106781186548 : 1.;
     for (int n = 0; n < N; ++n) {
       sum += s * x[n] * dctMatrix[k][n];
     }
-    X[k] = sum * 0.277350098112615;
+    X[k] = (sum * (precise_t)0.277350098112615);
   }
 }
 
@@ -86,8 +86,8 @@ void dct_ii(int N, double *x, double *X) {
 void FFT( precise_t *c, int isign )
 {
   int n, n2, nb, j, k, i0, i1, q;
-  double wr, wi, wrk, wik;
-  double d, dr, di, d0r, d0i, d1r, d1i;
+  precise_t wr, wi, wrk, wik;
+  precise_t d, dr, di, d0r, d0i, d1r, d1i;
   precise_t *cp;
 
   j = 0;
@@ -161,10 +161,9 @@ void FFT( precise_t *c, int isign )
 
 precise_t c[2*NP];
 precise_t d[NP];
-double e[NUM_BANKS];
-//precise_t e[NUM_BANKS];
+precise_t e[NUM_BANKS];
 
-void processChunk( int sp, double *ret, sound_t *inputSound)
+void processChunk( int sp, precise_t *ret, sound_t *inputSound)
 {
   int i = 0;
 
@@ -190,11 +189,11 @@ void processChunk( int sp, double *ret, sound_t *inputSound)
   int mellIdx = 0;
   for ( i = 0; i < NP; ++i ) {
     if ( i==mell[mellIdx] ) {
-      e[ 0 ] += (double)d[ mell[mellIdx] ];
+      e[ 0 ] += d[ mell[mellIdx] ];
     }
 
     if (( i > mell[ mellIdx ] ) && ( i <= mell[ mellIdx+1 ] )) {
-      e[ mellIdx ] += (double)d[i];
+      e[ mellIdx ] += d[i];
     }
 
     if (i == mell[ mellIdx+1 ]) {
@@ -206,7 +205,7 @@ void processChunk( int sp, double *ret, sound_t *inputSound)
     if (e[i] <= 0.0) {
       e[i] = 0.0;
     } else {
-      e[i] = fastlog(e[i]);
+      e[i] = (precise_t)fastlog((float)e[i]);
     }
   }
 
@@ -285,14 +284,13 @@ void preprocessSound(sound_t *inSound, int inSize, sound_t *outSound, int outSiz
 
 }
 
-double result[NUMRESULTS][(NUM_BANKS/2)+1];
+precise_t result[NUMRESULTS][(NUM_BANKS/2)+1];
 int voicerec(sound_t inSound[ORIGSIZE]) {
   int i = 0, j=0, stride = 0, classification = -1;
 
   //stride = np/2;
   stride = NP/2;
   int num_results = (8000/stride);
-  //double results[num_results][(NUM_BANKS/2)+1];
   sound_t outSound[8000];
   preprocessSound(inSound, 16000, outSound, 8000);
 
