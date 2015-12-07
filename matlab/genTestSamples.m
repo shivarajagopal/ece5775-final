@@ -17,10 +17,20 @@ recObj = audiorecorder;
 for i = 1:iterations
     fprintf(fid, 'double %s%d[16000]={', filename, i);
     pause(0.5);
-    disp('Say something...')
-    recordblocking(recObj,2);
-    disp('Recording ended')
-    y=getaudiodata(recObj);
+    while(1)
+        disp('Say something...')
+        recordblocking(recObj,2);
+        disp('Recording ended')
+        y=getaudiodata(recObj);
+        soundsc(y);
+        str = input('Rerecord? (y or n) (default:n)\n','s');
+        if (numel(str)== 0)
+            break;
+        end
+        if (str(1) == 'n')
+            break;
+        end
+    end
     for j= 1:16000
         if j == 16000
             fprintf(fid, '%f', y(j));
