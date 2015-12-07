@@ -218,11 +218,18 @@ void processChunk( int sp, precise_t *ret, sound_t *inputSound)
 
 }
 
+int begins[80];
+int ends[80];
 void preprocessSound(sound_t *inSound, int inSize, sound_t *outSound, int outSize) {
   int i = 0;
   int first = 0;
   int last = 0;
   
+  for (i= 0; i < 80; i++) {
+    begins[i] = -1;
+    ends[i] = -1;
+  }
+
   for (i = 0 ; i < inSize ; i++ ) {
     if (inSound[i] > 0.15) {
       first = i;
@@ -242,6 +249,7 @@ void preprocessSound(sound_t *inSound, int inSize, sound_t *outSound, int outSiz
   int count = 0;
   int deleteFlag = 0;
   int j = 0;
+  int index=0;
 
   for ( i = 0 ; i < inSize ; i++ ) {
     if (i > last) break;
@@ -260,16 +268,25 @@ void preprocessSound(sound_t *inSound, int inSize, sound_t *outSound, int outSiz
         }
         else {
           if (deleteFlag == 1) {
-            for ( j =0 ; j < inSize ; j++ ) {
-              if ((j >= markBegin) && ( j < i )) {
-                inSound[j] = 0;
-              }
-            }
+            begins[index] = markBegin;
+            ends[index] = i;
+            index++;
           }
           deleteFlag = 0;
           markBegin = 0;
           count = 0;
         }
+      }
+    }
+  }
+
+  index=0; 
+  for (j = 0 ; j < inSize ; j++) {
+    if (begins[index] != -1) {
+      if ((j >= begins[index]) && (j < ends[index])) {
+        inSound[j] = 0;
+      } else if (j == ends[index]) {
+        index++;
       }
     }
   }
@@ -303,9 +320,6 @@ int voicerec(sound_t inSound[ORIGSIZE]) {
   int index = 0;
   for (i = 0; i+NP <8000 ; i += stride) {
     processChunk(i, result[index], outSound);
-    for (j = 0; j < ((NUM_BANKS/2)+1) ; ++j) {
-      //printf("%lf\n", result[index][j]);
-    }
     index++;
   }
   classification = classifySound(result);
