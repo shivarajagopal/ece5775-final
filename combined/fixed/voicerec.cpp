@@ -1,5 +1,5 @@
 
-#include "typedefs.h"
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -214,7 +214,7 @@ void processChunk( int sp, double *ret, double *inputSound)
 
 }
 
-void preprocessSound(sound_t *inSound, int inSize, double *outSound, int outSize) {
+void preprocessSound(double *inSound, int inSize, double *outSound, int outSize) {
   int i = 0;
   int first = 0;
   int last = 0;
@@ -285,7 +285,7 @@ void preprocessSound(sound_t *inSound, int inSize, double *outSound, int outSize
 }
 
 double result[NUMRESULTS][(NUM_BANKS/2)+1];
-int voicerec(sound_t inSound[ORIGSIZE]) {
+int voicerec(double inSound[ORIGSIZE]) {
   int i = 0, j=0, stride = 0, classification = -1;
 
   //stride = np/2;

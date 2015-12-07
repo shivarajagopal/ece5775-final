@@ -21,12 +21,6 @@ csim: $(TARGET).cpp $(TARGET)_test.cpp neuralNetworkSynth.cpp
 	g++ ${CFLAGS} $^ -o $(TARGET)
 	./$(TARGET)
 
-fixed: $(TARGET)_fixed.cpp $(TARGET)_test.cpp neuralNetworkSynth.cpp
-	@echo "Compiling & simulating $(TARGET) on amdpool ..."
-	g++ ${CFLAGS} $^ -o $(TARGET)
-	./$(TARGET)
-
-
 bitstream: 
 	@echo "Synthesizing $(TARGET) and creating bitstream on amdpool ..."
 	vivado_hls -f run_pipeline.tcl

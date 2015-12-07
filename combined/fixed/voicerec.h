@@ -26,5 +26,5 @@ void processChunk( int sp, double *ret, double *inSound );
 
 void preprocessSound(double *inSound, int inSize, double *outSound, int outSize);
 
-int voicerec(sound_t *inSound);
+int voicerec(double *inSound);
 #endif
