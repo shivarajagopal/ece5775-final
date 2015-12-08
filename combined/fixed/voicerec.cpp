@@ -292,7 +292,7 @@ void preprocessSound(sound_t *inSound, int inSize, sound_t *outSound, int outSiz
         outSound[j] = inSound[i];
         j++;
       }
-    } else if (j < 8000) {
+    } else if (j < 8000 && i >= first) {
       outSound[j] = 0;
       j++;
     }
