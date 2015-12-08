@@ -33,6 +33,10 @@ typedef struct _NeuralNetwork {
 void initialize(NeuralNetwork* nn);
 
 // construct the neural network
+// Important Note:
+//  the '+1' in all the malloc's is to include an extra neuron whose
+//  value is set to -1. This works to set a bias value to each connection.
+//  the _<____+1 in the for loop conditions could be _<=____ instead
 NeuralNetwork* neuralNetwork() {
 
   // allocate memory for struct pointer
@@ -122,8 +126,8 @@ void feedForward(NeuralNetwork* nn, float pattern[INPUT_SIZE]) {
 }
 
 int guessClassification(float output[OUTPUT_SIZE]) {
-  float max = CLASSIFICATION_THRESHOLD;
-  int guess = -1;
+  float max = 0;
+  int guess;
   for (int j = 0; j < OUTPUT_SIZE; j++) {
     //std::cout << "output: " << j << " = " << output[j] << "\n";
     if (output[j] > max) {
@@ -150,6 +154,7 @@ float getTestAccuracy(NeuralNetwork* nn, float inputs[][INPUT_SIZE], int labels[
 }
 
 int classifySound(NeuralNetwork* nn, double input[63][14]) {
+  int guess;
   float flatInput[INPUT_SIZE];
   for (int i = 0; i < 63; i++) {
     for (int j = 0; j < 14; j++) {
@@ -162,7 +167,11 @@ int classifySound(NeuralNetwork* nn, double input[63][14]) {
 }
 
 // train the network 
-float trainNetwork( NeuralNetwork* nn, 
+// note: the _<____+1 in the for loop conditions could be _<=____ instead
+// PRECONDITIONS:
+//   * each individual input MUST be composed of INPUT_SIZE values
+//   * inputs and labels MUST BOTH have 'size' number of elements
+void trainNetwork( NeuralNetwork* nn, 
                    float inputs[][INPUT_SIZE], int labels[INPUT_SIZE], int size,
                    float testInputs[][INPUT_SIZE], int testLabels[INPUT_SIZE], int testSize) {
   int epoch = 0;
@@ -256,7 +265,6 @@ float trainNetwork( NeuralNetwork* nn,
     done_training = (nn->trainingSetAccuracy + nn->testSetAccuracy >= DESIRED_ACCURACY*2);
   }
   //outfile.close();
-  return (nn->trainingSetAccuracy + nn->testSetAccuracy) / 2.0;
 }
 
 void saveNetwork(NeuralNetwork* nn, const char outputfile[]) {

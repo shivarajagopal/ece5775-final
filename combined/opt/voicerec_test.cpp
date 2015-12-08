@@ -11,13 +11,6 @@
 #include "voicerec.h"
 #include "timer.h"
 #include "testSound.h"
-#include "test_backup.h"
-#include "test_reverse.h"
-#include "test_left2.h"
-#include "leftTest.h"
-#include "rightTest.h"
-#include "forwardTest.h"
-#include "neuralNetworkSynth.h"
 
 //------------------------------------------------------------------------
 // Helper function for hex to int conversion
@@ -60,32 +53,8 @@ int main(int argc, char *argv[])
     }
   }
  
-  //classification = voicerec(backup1);
-  classification = classifySound(forwardTest1);
-  classification = classifySound(forwardTest2);
-  classification = classifySound(forwardTest3);
-  classification = classifySound(forwardTest4);
-  classification = classifySound(forwardTest5);
-  classification = classifySound(rightTest1);
-  classification = classifySound(rightTest2);
-  classification = classifySound(rightTest3);
-  classification = classifySound(rightTest4);
-  classification = classifySound(rightTest5);
-  classification = classifySound(leftTest1);
-  classification = classifySound(leftTest2);
-  classification = classifySound(leftTest3);
-  classification = classifySound(leftTest4);
-  classification = classifySound(leftTest5);
-  classification = voicerec(left21);
-  classification = voicerec(left22);
-  classification = voicerec(left23);
-  classification = voicerec(left24);
-  classification = voicerec(left25);
-  classification = voicerec(reverse1);
-  classification = voicerec(reverse2);
-  classification = voicerec(reverse3);
-  classification = voicerec(reverse4);
-  classification = voicerec(reverse5);
+  classification = voicerec(inSound);
+
   //classification = classifySound(nn, result);
   std::cout << "classification: " << classification << "\n";
 

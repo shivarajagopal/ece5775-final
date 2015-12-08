@@ -28,7 +28,7 @@ bitstream:
 
 # Use this command to train the network offline
 speech: speech.cpp neuralNetwork.cpp
-	g++ -g -o $@ $^
+	g++ -std=c++14 -g -Ofast -o $@ $^
 
 clean:
 	rm -rf $(TARGET) *.dat *.prj *.log

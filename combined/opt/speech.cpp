@@ -13,12 +13,12 @@
 
 #define TRAINING_SIZE 180
 #define TESTING_SIZE 20
-#define TRAINING_CYCLES 100
+#define TRAINING_CYCLES 15
 
 #define FORWARD 0
 #define RIGHT 1
 #define LEFT 2
-#define REVERSE 3
+#define BACK 3
 
 #define LOADNETWORK 0
 
@@ -88,24 +88,24 @@ int main() {
   myfile.clear();
 
   /********************************************************************************************************************
-  * Load the REVERSE data
+  * Load the BACK data
   ********************************************************************************************************************/
 
-  myfile.open("data/reverse.dat");
+  myfile.open("data/back.dat");
 
   for (int i = 2*TRAINING_SIZE/4; i < 3*TRAINING_SIZE/4; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       training_data[i][j] =  strtof(line.c_str(), NULL);
     }
-    training_label[i] = REVERSE;
+    training_label[i] = BACK;
   }
   for (int i = 2*TESTING_SIZE/4; i < 3*TESTING_SIZE/4; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       testing_data[i][j] =  strtof(line.c_str(), NULL);
     }
-    testing_label[i] = REVERSE;
+    testing_label[i] = BACK;
   }
 
   myfile.close();
@@ -115,7 +115,7 @@ int main() {
   * Load the LEFT data
   ********************************************************************************************************************/
 
-  myfile.open("data/left2.dat");
+  myfile.open("data/left.dat");
 
   for (int i = 3*TRAINING_SIZE/4; i < TRAINING_SIZE; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
@@ -151,12 +151,11 @@ int main() {
   int j1, j2, temp;
   float temp_f;
   float* templ;
-  float accuracy = 0;
 
 
-  for (int x = 0; x < TRAINING_CYCLES && accuracy < DESIRED_ACCURACY; x++) {
-    //move items between the training and testing sets
-    for (int i = 0; i < 1000; i++) {
+  for (int x = 0; x < TRAINING_CYCLES; x++) {
+    // move items between the training and testing sets
+    for (int i = 0; i < 500; i++) {
       j1 = rand() % (TRAINING_SIZE);
       j2 = rand() % (TESTING_SIZE);
       temp = training_label[j1];
@@ -170,7 +169,7 @@ int main() {
     }
 
     // "shuffle" the data order (it's not perfectly random but i don't care)
-    for (int i = 0; i < 450; i++) {
+    for (int i = 0; i < TRAINING_SIZE; i++) {
       j1 = rand() % (TRAINING_SIZE);
       j2 = rand() % (TRAINING_SIZE);
       temp = training_label[j1];
@@ -182,7 +181,7 @@ int main() {
         training_data[j2][k] = temp_f;
       }
     }
-    for (int i = 0; i < 50; i++) {
+    for (int i = 0; i < TESTING_SIZE; i++) {
       j1 = rand() % (TESTING_SIZE);
       j2 = rand() % (TESTING_SIZE);
       temp = testing_label[j1];
@@ -196,7 +195,7 @@ int main() {
     }
 
     std::cout << "***** training iteration " << x << " *****\n";
-    accuracy = trainNetwork(nn, training_data, training_label, TRAINING_SIZE,
+    trainNetwork(nn, training_data, training_label, TRAINING_SIZE,
                    testing_data, testing_label, TESTING_SIZE);
   }
 
