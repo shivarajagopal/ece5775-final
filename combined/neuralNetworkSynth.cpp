@@ -1,3 +1,4 @@
+#include <iostream>
 #include <math.h>
 
 #include "speech_weights.h"
@@ -39,11 +40,13 @@ int guessClassification() {
   float max = 0;
   int guess;
   for (int j = 0; j < OUTPUT_SIZE; j++) {
+    //std::cout << "output: " << j << " = " << output[j] << "\n";
     if (output[j] > max) {
       guess = j;
       max = output[j];
     }
   }
+  std::cout << "classified as: " << guess << "\n";
   return guess;
 }
 

@@ -18,7 +18,7 @@
 #define FORWARD 0
 #define RIGHT 1
 #define LEFT 2
-#define BACK 3
+#define REVERSE 3
 
 #define LOADNETWORK 0
 
@@ -88,24 +88,24 @@ int main() {
   myfile.clear();
 
   /********************************************************************************************************************
-  * Load the BACK data
+  * Load the REVERSE data
   ********************************************************************************************************************/
 
-  myfile.open("data/back.dat");
+  myfile.open("data/reverse.dat");
 
   for (int i = 2*TRAINING_SIZE/4; i < 3*TRAINING_SIZE/4; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       training_data[i][j] =  strtof(line.c_str(), NULL);
     }
-    training_label[i] = BACK;
+    training_label[i] = REVERSE;
   }
   for (int i = 2*TESTING_SIZE/4; i < 3*TESTING_SIZE/4; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       testing_data[i][j] =  strtof(line.c_str(), NULL);
     }
-    testing_label[i] = BACK;
+    testing_label[i] = REVERSE;
   }
 
   myfile.close();
@@ -115,7 +115,7 @@ int main() {
   * Load the LEFT data
   ********************************************************************************************************************/
 
-  myfile.open("data/left.dat");
+  myfile.open("data/left2.dat");
 
   for (int i = 3*TRAINING_SIZE/4; i < TRAINING_SIZE; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {

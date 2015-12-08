@@ -131,7 +131,7 @@ int guessClassification(float output[OUTPUT_SIZE]) {
       max = output[j];
     }
   }
-  return guess % OUTPUT_MOD_SIZE;
+  return guess;
 }
 
 // get the classification accuracy of the provided data set
@@ -191,7 +191,7 @@ float trainNetwork( NeuralNetwork* nn,
       //***************************************************************************************************************
 
       for (int j = 0; j < OUTPUT_SIZE; j++) {
-        float target = labels[i] == (j % OUTPUT_MOD_SIZE);
+        float target = labels[i] == j;
         //outfile << "label: " << labels[i] << "     j: " << j << "\n";
         // set error gradient for the output node
         nn->outputErrorGradients[j] = nn->output[j] * (1-nn->output[j]) * (target - nn->output[j]);
