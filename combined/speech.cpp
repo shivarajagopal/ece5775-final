@@ -20,7 +20,7 @@
 #define LEFT 2
 #define BACK 3
 
-#define LOADNETWORK 1
+#define LOADNETWORK 0
 
 int main() {
 
@@ -153,9 +153,11 @@ int main() {
   float* templ;
   float accuracy = 0;
 
+  std::cout << "starting";
+
 
   for (int x = 0; x < TRAINING_CYCLES && accuracy < DESIRED_ACCURACY; x++) {
-    // move items between the training and testing sets
+    //move items between the training and testing sets
     for (int i = 0; i < 1000; i++) {
       j1 = rand() % (TRAINING_SIZE);
       j2 = rand() % (TESTING_SIZE);

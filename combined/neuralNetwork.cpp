@@ -126,8 +126,8 @@ void feedForward(NeuralNetwork* nn, float pattern[INPUT_SIZE]) {
 }
 
 int guessClassification(float output[OUTPUT_SIZE]) {
-  float max = 0;
-  int guess;
+  float max = CLASSIFICATION_THRESHOLD;
+  int guess = -1;
   for (int j = 0; j < OUTPUT_SIZE; j++) {
     //std::cout << "output: " << j << " = " << output[j] << "\n";
     if (output[j] > max) {
@@ -154,7 +154,6 @@ float getTestAccuracy(NeuralNetwork* nn, float inputs[][INPUT_SIZE], int labels[
 }
 
 int classifySound(NeuralNetwork* nn, double input[63][14]) {
-  int guess;
   float flatInput[INPUT_SIZE];
   for (int i = 0; i < 63; i++) {
     for (int j = 0; j < 14; j++) {
