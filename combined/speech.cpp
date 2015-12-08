@@ -153,8 +153,6 @@ int main() {
   float* templ;
   float accuracy = 0;
 
-  std::cout << "starting";
-
 
   for (int x = 0; x < TRAINING_CYCLES && accuracy < DESIRED_ACCURACY; x++) {
     //move items between the training and testing sets

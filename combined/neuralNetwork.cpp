@@ -33,10 +33,6 @@ typedef struct _NeuralNetwork {
 void initialize(NeuralNetwork* nn);
 
 // construct the neural network
-// Important Note:
-//  the '+1' in all the malloc's is to include an extra neuron whose
-//  value is set to -1. This works to set a bias value to each connection.
-//  the _<____+1 in the for loop conditions could be _<=____ instead
 NeuralNetwork* neuralNetwork() {
 
   // allocate memory for struct pointer
@@ -135,7 +131,7 @@ int guessClassification(float output[OUTPUT_SIZE]) {
       max = output[j];
     }
   }
-  return guess;
+  return guess % OUTPUT_MOD_SIZE;
 }
 
 // get the classification accuracy of the provided data set
@@ -166,10 +162,6 @@ int classifySound(NeuralNetwork* nn, double input[63][14]) {
 }
 
 // train the network 
-// note: the _<____+1 in the for loop conditions could be _<=____ instead
-// PRECONDITIONS:
-//   * each individual input MUST be composed of INPUT_SIZE values
-//   * inputs and labels MUST BOTH have 'size' number of elements
 float trainNetwork( NeuralNetwork* nn, 
                    float inputs[][INPUT_SIZE], int labels[INPUT_SIZE], int size,
                    float testInputs[][INPUT_SIZE], int testLabels[INPUT_SIZE], int testSize) {
@@ -199,7 +191,7 @@ float trainNetwork( NeuralNetwork* nn,
       //***************************************************************************************************************
 
       for (int j = 0; j < OUTPUT_SIZE; j++) {
-        float target = labels[i] == j;
+        float target = labels[i] == (j % OUTPUT_MOD_SIZE);
         //outfile << "label: " << labels[i] << "     j: " << j << "\n";
         // set error gradient for the output node
         nn->outputErrorGradients[j] = nn->output[j] * (1-nn->output[j]) * (target - nn->output[j]);
