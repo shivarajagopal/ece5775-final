@@ -27,7 +27,7 @@ static inline precise_t mylog (precise_t x) {
       y++;
     }
   }
-  for (i=0; i < 10; ++i) {
+  for (i=0; i < 8; ++i) {
     temp = temp*temp;
     if (temp >= 2) {
       temp = temp >> 1;
@@ -110,11 +110,6 @@ void FFT( precise_t *c, int isign )
       c[i1+1] = di;
     }
     n = NP >> 1;
-    //while( (n >= 2) && (j >= n) )
-    //{
-      //j -= n;
-      //n = n >> 1;
-    //}
     for (q=0; q < 7; ++q) {
       if ( (j >= n) && (n >= 2) ) {
         j -= n;
@@ -252,7 +247,7 @@ void preprocessSound(sound_t *inSound, int inSize, sound_t *outSound, int outSiz
   int index=0;
 
   for ( i = 0 ; i < inSize ; i++ ) {
-    if (i > last) break;
+//#pragma HLS pipeline
     if ((i >= first) && (i <= last)) {
       if (markBegin == 0) {
         if ( fabs(inSound[i]) < ampThreshold ) {
@@ -282,6 +277,7 @@ void preprocessSound(sound_t *inSound, int inSize, sound_t *outSound, int outSiz
 
   index=0; 
   for (j = 0 ; j < inSize ; j++) {
+//#pragma HLS pipeline
     if (begins[index] != -1) {
       if ((j >= begins[index]) && (j < ends[index])) {
         inSound[j] = 0;
@@ -293,7 +289,7 @@ void preprocessSound(sound_t *inSound, int inSize, sound_t *outSound, int outSiz
 
   j = 0;
   for ( i = 0; i < inSize; i++) {
-    if (j > 8000) break;
+//#pragma HLS pipeline
     if ((i >= first && i <= last && j != 8000)) {
       if (fabs(inSound[i]) > 0) {
         outSound[j] = inSound[i];
@@ -319,6 +315,7 @@ int voicerec(sound_t inSound[ORIGSIZE]) {
 
   int index = 0;
   for (i = 0; i+NP <8000 ; i += stride) {
+#pragma HLS pipeline
     processChunk(i, result[index], outSound);
     index++;
   }
