@@ -11,8 +11,8 @@
 
 #include "neuralNetwork.h"
 
-#define TRAINING_SIZE 320
-#define TESTING_SIZE 30
+#define TRAINING_SIZE 225
+#define TESTING_SIZE 25
 #define TRAINING_CYCLES 100
 
 #define FORWARD 0
@@ -45,14 +45,14 @@ int main() {
 
   myfile.open("data/forward.dat");
 
-  for (int i = 0; i < TRAINING_SIZE/4; i++) {
+  for (int i = 0; i < TRAINING_SIZE/5; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       training_data[i][j] =  strtof(line.c_str(), NULL);
     }
     training_label[i] = FORWARD;
   }
-  for (int i = 0; i < TESTING_SIZE/4; i++) {
+  for (int i = 0; i < TESTING_SIZE/5; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       testing_data[i][j] =  strtof(line.c_str(), NULL);
@@ -69,14 +69,14 @@ int main() {
 
   myfile.open("data/right.dat");
 
-  for (int i = TRAINING_SIZE/6; i < 2*TRAINING_SIZE/6; i++) {
+  for (int i = TRAINING_SIZE/5; i < 2*TRAINING_SIZE/5; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       training_data[i][j] =  strtof(line.c_str(), NULL);
     }
     training_label[i] = RIGHT;
   }
-  for (int i = TESTING_SIZE/6; i < 2*TESTING_SIZE/6; i++) {
+  for (int i = TESTING_SIZE/5; i < 2*TESTING_SIZE/5; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       testing_data[i][j] =  strtof(line.c_str(), NULL);
@@ -89,14 +89,14 @@ int main() {
 
   myfile.open("data/train_right2.dat");
 
-  for (int i = 4*TRAINING_SIZE/6; i < 5*TRAINING_SIZE/6; i++) {
+  for (int i = 4*TRAINING_SIZE/5; i < TRAINING_SIZE; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       training_data[i][j] =  strtof(line.c_str(), NULL);
     }
     training_label[i] = RIGHT;
   }
-  for (int i = 4*TESTING_SIZE/6; i < 5*TESTING_SIZE/6; i++) {
+  for (int i = 4*TESTING_SIZE/5; i < TESTING_SIZE; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       testing_data[i][j] =  strtof(line.c_str(), NULL);
@@ -113,14 +113,14 @@ int main() {
 
   myfile.open("data/back.dat");
 
-  for (int i = 2*TRAINING_SIZE/6; i < 3*TRAINING_SIZE/6; i++) {
+  for (int i = 2*TRAINING_SIZE/5; i < 3*TRAINING_SIZE/5; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       training_data[i][j] =  strtof(line.c_str(), NULL);
     }
     training_label[i] = REVERSE;
   }
-  for (int i = 2*TESTING_SIZE/6; i < 3*TESTING_SIZE/6; i++) {
+  for (int i = 2*TESTING_SIZE/5; i < 3*TESTING_SIZE/5; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       testing_data[i][j] =  strtof(line.c_str(), NULL);
@@ -155,36 +155,36 @@ int main() {
   * Load the LEFT data
   ********************************************************************************************************************/
 
-  myfile.open("data/left2.dat");
+  // myfile.open("data/left2.dat");
 
-  for (int i = 3*TRAINING_SIZE/6; i < 4*TRAINING_SIZE/6; i++) {
-    for (int j = 0; j < INPUT_SIZE; j++) {
-      std::getline(myfile, line);
-      training_data[i][j] =  strtof(line.c_str(), NULL);
-    }
-    training_label[i] = LEFT;
-  }
-  for (int i = 3*TESTING_SIZE/6; i < 4*TESTING_SIZE/6; i++) {
-    for (int j = 0; j < INPUT_SIZE; j++) {
-      std::getline(myfile, line);
-      testing_data[i][j] =  strtof(line.c_str(), NULL);
-    }
-    testing_label[i] = LEFT;
-  }
+  // for (int i = 3*TRAINING_SIZE/6; i < 4*TRAINING_SIZE/6; i++) {
+  //   for (int j = 0; j < INPUT_SIZE; j++) {
+  //     std::getline(myfile, line);
+  //     training_data[i][j] =  strtof(line.c_str(), NULL);
+  //   }
+  //   training_label[i] = LEFT;
+  // }
+  // for (int i = 3*TESTING_SIZE/6; i < 4*TESTING_SIZE/6; i++) {
+  //   for (int j = 0; j < INPUT_SIZE; j++) {
+  //     std::getline(myfile, line);
+  //     testing_data[i][j] =  strtof(line.c_str(), NULL);
+  //   }
+  //   testing_label[i] = LEFT;
+  // }
 
-  myfile.close();
-  myfile.clear();
+  // myfile.close();
+  // myfile.clear();
 
   myfile.open("data/left.dat");
 
-  for (int i = 5*TRAINING_SIZE/6; i < TRAINING_SIZE; i++) {
+  for (int i = 3*TRAINING_SIZE/5; i < 4*TRAINING_SIZE/5; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       training_data[i][j] =  strtof(line.c_str(), NULL);
     }
     training_label[i] = LEFT;
   }
-  for (int i = 5*TESTING_SIZE/6; i < TESTING_SIZE; i++) {
+  for (int i = 3*TESTING_SIZE/5; i < 4*TESTING_SIZE/5; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       testing_data[i][j] =  strtof(line.c_str(), NULL);
