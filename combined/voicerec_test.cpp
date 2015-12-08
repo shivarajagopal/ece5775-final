@@ -11,9 +11,13 @@
 #include "voicerec.h"
 #include "timer.h"
 #include "testSound.h"
+#include "test_forward2.h"
 #include "test_backup.h"
 #include "test_reverse.h"
+#include "test_reverse2.h"
+#include "test_right2.h"
 #include "test_left2.h"
+#include "test_left3.h"
 #include "leftTest.h"
 #include "rightTest.h"
 #include "forwardTest.h"
@@ -61,16 +65,31 @@ int main(int argc, char *argv[])
   }
  
   //classification = voicerec(backup1);
+  std::cout << "should be 0 ****************" << classification << "\n";
   classification = classifySound(forwardTest1);
   classification = classifySound(forwardTest2);
   classification = classifySound(forwardTest3);
   classification = classifySound(forwardTest4);
   classification = classifySound(forwardTest5);
+  classification = voicerec(forward21);
+  classification = voicerec(forward22);
+  classification = voicerec(forward23);
+  classification = voicerec(forward24);
+  classification = voicerec(forward25);
+
+  std::cout << "should be 1 ****************" << classification << "\n";
   classification = classifySound(rightTest1);
   classification = classifySound(rightTest2);
   classification = classifySound(rightTest3);
   classification = classifySound(rightTest4);
   classification = classifySound(rightTest5);
+  classification = voicerec(right21);
+  classification = voicerec(right22);
+  classification = voicerec(right23);
+  classification = voicerec(right24);
+  classification = voicerec(right25);
+
+  std::cout << "should be 2 ****************" << classification << "\n";
   classification = classifySound(leftTest1);
   classification = classifySound(leftTest2);
   classification = classifySound(leftTest3);
@@ -81,11 +100,24 @@ int main(int argc, char *argv[])
   classification = voicerec(left23);
   classification = voicerec(left24);
   classification = voicerec(left25);
+  classification = voicerec(left31);
+  classification = voicerec(left32);
+  classification = voicerec(left33);
+  classification = voicerec(left34);
+  classification = voicerec(left35);
+
+  std::cout << "should be 3 ****************" << classification << "\n";
   classification = voicerec(reverse1);
   classification = voicerec(reverse2);
   classification = voicerec(reverse3);
   classification = voicerec(reverse4);
   classification = voicerec(reverse5);
+  classification = voicerec(reverse21);
+  classification = voicerec(reverse22);
+  classification = voicerec(reverse23);
+  classification = voicerec(reverse24);
+  classification = voicerec(reverse25);
+  
   //classification = classifySound(nn, result);
   std::cout << "classification: " << classification << "\n";
 
