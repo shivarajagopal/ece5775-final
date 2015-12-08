@@ -29,7 +29,8 @@ bitstream:
 # Use this command to train the network offline
 speech: speech.cpp neuralNetwork.cpp
 	g++ -g -o $@ $^
+	./speech
 
 clean:
 	rm -rf $(TARGET) *.dat *.prj *.log
-	rm -rf zedboard_project* xillydemo.bit
+	rm -rf zedboard_project* xillydemo.bit speech voicerec
