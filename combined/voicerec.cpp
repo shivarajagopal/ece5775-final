@@ -276,7 +276,7 @@ void preprocessSound(double *inSound, int inSize, double *outSound, int outSize)
         outSound[j] = inSound[i];
         j++;
       }
-    } else if (j < 8000) {
+    } else if (j < 8000 && i >= first) {
       outSound[j] = 0;
       j++;
     }
@@ -294,7 +294,6 @@ int voicerec(double inSound[ORIGSIZE]) {
   //double results[num_results][(NUM_BANKS/2)+1];
   double outSound[8000];
   preprocessSound(inSound, 16000, outSound, 8000);
-
   int index = 0;
   for (i = 0; i+NP <8000 ; i += stride) {
     processChunk(i, result[index], outSound);
