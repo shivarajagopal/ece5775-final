@@ -11,8 +11,8 @@
 
 #include "neuralNetwork.h"
 
-#define TRAINING_SIZE 360
-#define TESTING_SIZE 40
+#define TRAINING_SIZE 320
+#define TESTING_SIZE 30
 #define TRAINING_CYCLES 100
 
 #define FORWARD 0
@@ -69,14 +69,14 @@ int main() {
 
   myfile.open("data/right.dat");
 
-  for (int i = TRAINING_SIZE/8; i < 2*TRAINING_SIZE/8; i++) {
+  for (int i = TRAINING_SIZE/6; i < 2*TRAINING_SIZE/6; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       training_data[i][j] =  strtof(line.c_str(), NULL);
     }
     training_label[i] = RIGHT;
   }
-  for (int i = TESTING_SIZE/8; i < 2*TESTING_SIZE/8; i++) {
+  for (int i = TESTING_SIZE/6; i < 2*TESTING_SIZE/6; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       testing_data[i][j] =  strtof(line.c_str(), NULL);
@@ -89,14 +89,14 @@ int main() {
 
   myfile.open("data/train_right2.dat");
 
-  for (int i = 4*TRAINING_SIZE/8; i < 5*TRAINING_SIZE/8; i++) {
+  for (int i = 4*TRAINING_SIZE/6; i < 5*TRAINING_SIZE/6; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       training_data[i][j] =  strtof(line.c_str(), NULL);
     }
     training_label[i] = RIGHT;
   }
-  for (int i = 4*TESTING_SIZE/8; i < 5*TESTING_SIZE/8; i++) {
+  for (int i = 4*TESTING_SIZE/6; i < 5*TESTING_SIZE/6; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       testing_data[i][j] =  strtof(line.c_str(), NULL);
@@ -111,16 +111,16 @@ int main() {
   * Load the REVERSE data
   ********************************************************************************************************************/
 
-  myfile.open("data/reverse.dat");
+  myfile.open("data/back.dat");
 
-  for (int i = 2*TRAINING_SIZE/8; i < 3*TRAINING_SIZE/8; i++) {
+  for (int i = 2*TRAINING_SIZE/6; i < 3*TRAINING_SIZE/6; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       training_data[i][j] =  strtof(line.c_str(), NULL);
     }
     training_label[i] = REVERSE;
   }
-  for (int i = 2*TESTING_SIZE/8; i < 3*TESTING_SIZE/8; i++) {
+  for (int i = 2*TESTING_SIZE/6; i < 3*TESTING_SIZE/6; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       testing_data[i][j] =  strtof(line.c_str(), NULL);
@@ -131,25 +131,25 @@ int main() {
   myfile.close();
   myfile.clear();
 
-  myfile.open("data/train_reverse2.dat");
+  // myfile.open("data/train_reverse2.dat");
 
-  for (int i = 5*TRAINING_SIZE/8; i < 6*TRAINING_SIZE/8; i++) {
-    for (int j = 0; j < INPUT_SIZE; j++) {
-      std::getline(myfile, line);
-      training_data[i][j] =  strtof(line.c_str(), NULL);
-    }
-    training_label[i] = REVERSE;
-  }
-  for (int i = 5*TESTING_SIZE/8; i < 6*TESTING_SIZE/8; i++) {
-    for (int j = 0; j < INPUT_SIZE; j++) {
-      std::getline(myfile, line);
-      testing_data[i][j] =  strtof(line.c_str(), NULL);
-    }
-    testing_label[i] = REVERSE;
-  }
+  // for (int i = 5*TRAINING_SIZE/8; i < 6*TRAINING_SIZE/8; i++) {
+  //   for (int j = 0; j < INPUT_SIZE; j++) {
+  //     std::getline(myfile, line);
+  //     training_data[i][j] =  strtof(line.c_str(), NULL);
+  //   }
+  //   training_label[i] = REVERSE;
+  // }
+  // for (int i = 5*TESTING_SIZE/8; i < 6*TESTING_SIZE/8; i++) {
+  //   for (int j = 0; j < INPUT_SIZE; j++) {
+  //     std::getline(myfile, line);
+  //     testing_data[i][j] =  strtof(line.c_str(), NULL);
+  //   }
+  //   testing_label[i] = REVERSE;
+  // }
 
-  myfile.close();
-  myfile.clear();
+  // myfile.close();
+  // myfile.clear();
 
   /********************************************************************************************************************
   * Load the LEFT data
@@ -157,14 +157,14 @@ int main() {
 
   myfile.open("data/left2.dat");
 
-  for (int i = 3*TRAINING_SIZE/8; i < 4*TRAINING_SIZE/8; i++) {
+  for (int i = 3*TRAINING_SIZE/6; i < 4*TRAINING_SIZE/6; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       training_data[i][j] =  strtof(line.c_str(), NULL);
     }
     training_label[i] = LEFT;
   }
-  for (int i = 3*TESTING_SIZE/8; i < 4*TESTING_SIZE/8; i++) {
+  for (int i = 3*TESTING_SIZE/6; i < 4*TESTING_SIZE/6; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       testing_data[i][j] =  strtof(line.c_str(), NULL);
@@ -177,14 +177,14 @@ int main() {
 
   myfile.open("data/left.dat");
 
-  for (int i = 6*TRAINING_SIZE/8; i < 7*TRAINING_SIZE/8; i++) {
+  for (int i = 5*TRAINING_SIZE/6; i < TRAINING_SIZE; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       training_data[i][j] =  strtof(line.c_str(), NULL);
     }
     training_label[i] = LEFT;
   }
-  for (int i = 6*TESTING_SIZE/8; i < 7*TESTING_SIZE/8; i++) {
+  for (int i = 5*TESTING_SIZE/6; i < TESTING_SIZE; i++) {
     for (int j = 0; j < INPUT_SIZE; j++) {
       std::getline(myfile, line);
       testing_data[i][j] =  strtof(line.c_str(), NULL);
@@ -195,25 +195,25 @@ int main() {
   myfile.close();
   myfile.clear();
 
-  myfile.open("data/train_left3.dat");
+  // myfile.open("data/train_left3.dat");
 
-  for (int i = 7*TRAINING_SIZE/8; i < TRAINING_SIZE; i++) {
-    for (int j = 0; j < INPUT_SIZE; j++) {
-      std::getline(myfile, line);
-      training_data[i][j] =  strtof(line.c_str(), NULL);
-    }
-    training_label[i] = LEFT;
-  }
-  for (int i = 7*TESTING_SIZE/8; i < TESTING_SIZE; i++) {
-    for (int j = 0; j < INPUT_SIZE; j++) {
-      std::getline(myfile, line);
-      testing_data[i][j] =  strtof(line.c_str(), NULL);
-    }
-    testing_label[i] = LEFT;
-  }
+  // for (int i = 7*TRAINING_SIZE/8; i < TRAINING_SIZE; i++) {
+  //   for (int j = 0; j < INPUT_SIZE; j++) {
+  //     std::getline(myfile, line);
+  //     training_data[i][j] =  strtof(line.c_str(), NULL);
+  //   }
+  //   training_label[i] = LEFT;
+  // }
+  // for (int i = 7*TESTING_SIZE/8; i < TESTING_SIZE; i++) {
+  //   for (int j = 0; j < INPUT_SIZE; j++) {
+  //     std::getline(myfile, line);
+  //     testing_data[i][j] =  strtof(line.c_str(), NULL);
+  //   }
+  //   testing_label[i] = LEFT;
+  // }
 
-  myfile.close();
-  myfile.clear();
+  // myfile.close();
+  // myfile.clear();
 
   /********************************************************************************************************************
   * instantiate the network
