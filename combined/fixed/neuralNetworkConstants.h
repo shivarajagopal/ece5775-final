@@ -3,7 +3,7 @@
 
 #define learningRate 0.001
 #define momentum     0.85
-#define maxEpoch     3
+#define maxEpoch     10
 #define INPUT_ROWS 63
 #define INPUT_COLS 14
 #define INPUT_SIZE    882 // = INPUT_ROWS*INPUT_COLS
