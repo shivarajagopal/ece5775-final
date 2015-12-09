@@ -22,7 +22,7 @@
 #include "rightTest.h"
 #include "forwardTest.h"
 #include "neuralNetworkSynth.h"
-#include "data/backTest.h"
+
 //------------------------------------------------------------------------
 // Helper function for hex to int conversion
 //------------------------------------------------------------------------
@@ -111,11 +111,6 @@ int main(int argc, char *argv[])
   classification = voicerec(left35);
 
   std::cout << "should be 3 ****************" << classification << "\n";
-  classification = classifySound(backTest1);
-  classification = classifySound(backTest2);
-  classification = classifySound(backTest3);
-  classification = classifySound(backTest4);
-  classification = classifySound(backTest5);
   classification = voicerec(reverse1);
   classification = voicerec(reverse2);
   classification = voicerec(reverse3);
