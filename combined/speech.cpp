@@ -40,14 +40,14 @@ int main() {
   int testing_label[TESTING_SIZE];
   float testing_data[TESTING_SIZE][INPUT_SIZE];
 
-  char inputfile[NUM_TRAINING_FILES][23] = {  "data/forward.dat",
-                                              "data/right.dat",
-                                              "data/train_right2.dat",
-                                              "data/train_reverse.dat",
-                                              "data/train_reverse2.dat",
-                                              "data/left.dat",
-                                              "data/left2.dat" 
-                                            };
+  char* inputfile[]= {  "data/forward.dat",
+                        "data/right.dat",
+                        "data/train_right2.dat",
+                        "data/train_reverse.dat",
+                        "data/train_reverse2.dat",
+                        "data/left.dat",
+                        "data/left2.dat"
+                      };
 
 
   /********************************************************************************************************************
