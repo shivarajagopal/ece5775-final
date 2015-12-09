@@ -63,11 +63,6 @@ int main(int argc, char *argv[])
       result[i][j] = 0.0;
     }
   }
-#ifdef GENTRAIN
-  //voicerec(inSound);
-  voicerec(forward21);
-#endif
-#ifdef TEST 
   //classification = voicerec(backup1);
   std::cout << "should be 0 ****************" << "\n";
   classification = classifySound(forwardTest1);
@@ -124,7 +119,6 @@ int main(int argc, char *argv[])
 
   //classification = classifySound(nn, result);
   //std::cout << "classification: " << classification << "\n";
-#endif
   return 0;
 }
 
