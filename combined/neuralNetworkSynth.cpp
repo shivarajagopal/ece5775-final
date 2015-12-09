@@ -37,16 +37,18 @@ void feedForward(float pattern[INPUT_SIZE]) {
 }
 
 int guessClassification() {
+  float second_max = 0;
   float max = 0;
   int guess;
   for (int j = 0; j < OUTPUT_SIZE; j++) {
     //std::cout << "output: " << j << " = " << output[j] << "\n";
     if (output[j] > max) {
       guess = j;
+      second_max = max;
       max = output[j];
     }
   }
-  std::cout << "classified as: " << guess << "\n";
+  std::cout << "classified as: " << guess << " by a margin of: " << max-second_max << "\n";
   return guess;
 }
 
