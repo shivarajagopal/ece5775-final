@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
   classification = voicerec(forward24);
   classification = voicerec(forward25);
 
-  std::cout << "should be 1 ****************" << classification << "\n";
+  std::cout << "should be 1 ****************" << "\n";
   classification = classifySound(rightTest1);
   classification = classifySound(rightTest2);
   classification = classifySound(rightTest3);
@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
   classification = voicerec(right24);
   classification = voicerec(right25);
 
-  std::cout << "should be 2 ****************" << classification << "\n";
+  std::cout << "should be 2 ****************" << "\n";
   classification = classifySound(leftTest1);
   classification = classifySound(leftTest2);
   classification = classifySound(leftTest3);
@@ -110,7 +110,7 @@ int main(int argc, char *argv[])
   classification = voicerec(left34);
   classification = voicerec(left35);
 
-  std::cout << "should be 3 ****************" << classification << "\n";
+  std::cout << "should be 3 ****************" << "\n";
   classification = voicerec(reverse1);
   classification = voicerec(reverse2);
   classification = voicerec(reverse3);

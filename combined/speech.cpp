@@ -49,7 +49,8 @@ int main() {
                             "data/left2.dat"
                           };
 
-  int* classifications =  { FORWARD,
+  int classifications[NUM_TRAINING_FILES] =  { 
+                            FORWARD,
                             RIGHT,
                             RIGHT,
                             REVERSE,
@@ -73,7 +74,7 @@ int main() {
         std::getline(myfile, line);
         training_data[trn_idx][j] =  strtof(line.c_str(), NULL);
       }
-      training_label[trn_idx] = FORWARD;
+      training_label[trn_idx] = classifications[k];
       trn_idx++;
     }
     for (int i = 0; i < TESTING_SET_SIZE; i++) {
@@ -81,7 +82,7 @@ int main() {
         std::getline(myfile, line);
         testing_data[tst_idx][j] =  strtof(line.c_str(), NULL);
       }
-      testing_label[tst_idx] = FORWARD;
+      testing_label[tst_idx] = classifications[k];
       tst_idx++;
     }
   
