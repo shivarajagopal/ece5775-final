@@ -19,15 +19,8 @@ all: csim
 
 csim: $(TARGET).cpp $(TARGET)_test.cpp neuralNetworkSynth.cpp
 	@echo "Compiling & simulating $(TARGET) on amdpool ..."
-	g++ ${CFLAGS} $^ -DTEST -o $(TARGET)
+	g++ ${CFLAGS} $^ -o $(TARGET)
 	./$(TARGET)
-
-trainData: $(TARGET).cpp $(TARGET)_test.cpp neuralNetworkSynth.cpp
-	@echo "Compiling & simulating $(TARGET) on amdpool ..."
-	g++ ${CFLAGS} $^ -DGENTRAIN -o $(TARGET)
-	rm -rf $(TRAINFILE)
-	./$(TARGET) >> $(TRAINFILE)
-
 
 bitstream: 
 	@echo "Synthesizing $(TARGET) and creating bitstream on amdpool ..."
