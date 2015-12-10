@@ -28,6 +28,8 @@ voicerec_classifySound_output_r
 voicerec_classifySound_flatInput
 voicerec_result
 voicerec_outSound
+voicerec_voicerec_ctrl_s_axi
+voicerec_voicerec_inSound_m_axi
 voicerec_preprocessSound
 voicerec_FFT
 voicerec_processChunk

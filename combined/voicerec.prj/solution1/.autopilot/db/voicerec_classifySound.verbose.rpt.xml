@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'voicerec_classifySound'" level="0">
-<item name = "Date">Sun Dec  6 17:20:15 2015
+<item name = "Date">Wed Dec  9 22:20:29 2015
 </item>
-<item name = "Version">2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)</item>
+<item name = "Version">2015.3 (Build 1244743 on Sun May 31 20:30:40 PM 2015)</item>
 <item name = "Project">voicerec.prj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -111,10 +111,10 @@
 <column name="guess_reg_125">3, 2, 3, 6</column>
 <column name="i_reg_103">6, 2, 6, 12</column>
 <column name="j_reg_114">4, 2, 4, 8</column>
-<column name="max_i_reg_148">32, 2, 32, 64</column>
 <column name="output_r_address0">2, 3, 2, 6</column>
 <column name="output_r_ce0">1, 3, 1, 3</column>
 <column name="output_r_we0">1, 2, 1, 2</column>
+<column name="second_max_reg_148">32, 2, 32, 64</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -130,10 +130,10 @@
 <column name="j_1_reg_414">4, 0, 4, 0</column>
 <column name="j_2_reg_447">3, 0, 3, 0</column>
 <column name="j_reg_114">4, 0, 4, 0</column>
-<column name="max_i_reg_148">32, 0, 32, 0</column>
 <column name="max_reg_457">32, 0, 32, 0</column>
 <column name="result_addr1_cast_reg_406">11, 0, 12, 1</column>
 <column name="result_load_reg_429">64, 0, 64, 0</column>
+<column name="second_max_reg_148">32, 0, 32, 0</column>
 <column name="tmp_10_reg_464">1, 0, 1, 0</column>
 <column name="tmp_1_reg_434">32, 0, 32, 0</column>
 <column name="tmp_2_reg_424">11, 0, 11, 0</column>

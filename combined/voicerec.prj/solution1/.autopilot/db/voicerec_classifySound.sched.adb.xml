@@ -723,10 +723,10 @@
 
 <node id="50" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:2  %max_i = phi float [ 0.000000e+00, %2 ], [ %max_1, %._crit_edge.i ]
+:2  %second_max = phi float [ 0.000000e+00, %2 ], [ %max_1, %._crit_edge.i ]
 
 ]]></node>
-<StgValue><ssdm name="max_i"/></StgValue>
+<StgValue><ssdm name="second_max"/></StgValue>
 </operation>
 
 <operation id="52" st_id="8" stage="1" lat="1">
@@ -898,7 +898,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="73" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-._crit_edge.i:16  %tmp_10 = fcmp ogt float %max, %max_i
+._crit_edge.i:16  %tmp_10 = fcmp ogt float %max, %second_max
 
 ]]></node>
 <StgValue><ssdm name="tmp_10"/></StgValue>
@@ -961,10 +961,10 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="63" bw="32" op_0_bw="32">
 <![CDATA[
-._crit_edge.i:6  %max_i_to_int = bitcast float %max_i to i32
+._crit_edge.i:6  %second_max_to_int = bitcast float %second_max to i32
 
 ]]></node>
-<StgValue><ssdm name="max_i_to_int"/></StgValue>
+<StgValue><ssdm name="second_max_to_int"/></StgValue>
 </operation>
 
 <operation id="67" st_id="11" stage="1" lat="1">
@@ -976,7 +976,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="64" bw="8" op_0_bw="8" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge.i:7  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_i_to_int, i32 23, i32 30)
+._crit_edge.i:7  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %second_max_to_int, i32 23, i32 30)
 
 ]]></node>
 <StgValue><ssdm name="tmp_5"/></StgValue>
@@ -991,7 +991,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="65" bw="23" op_0_bw="32">
 <![CDATA[
-._crit_edge.i:8  %tmp_6 = trunc i32 %max_i_to_int to i23
+._crit_edge.i:8  %tmp_6 = trunc i32 %second_max_to_int to i23
 
 ]]></node>
 <StgValue><ssdm name="tmp_6"/></StgValue>
@@ -1141,7 +1141,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="76" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-._crit_edge.i:19  %max_1 = select i1 %tmp_11, float %max, float %max_i
+._crit_edge.i:19  %max_1 = select i1 %tmp_11, float %max, float %second_max
 
 ]]></node>
 <StgValue><ssdm name="max_1"/></StgValue>

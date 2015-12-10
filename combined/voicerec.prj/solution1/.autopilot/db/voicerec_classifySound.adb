@@ -50,13 +50,13 @@
               <name>flatInput</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>52</lineNumber>
+              <lineNumber>57</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -65,7 +65,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>52</second>
+                      <second>57</second>
                     </item>
                   </second>
                 </item>
@@ -91,13 +91,13 @@
               <name/>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>53</lineNumber>
+              <lineNumber>58</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -106,7 +106,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>53</second>
+                      <second>58</second>
                     </item>
                   </second>
                 </item>
@@ -162,13 +162,13 @@
               <name>exitcond1</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>53</lineNumber>
+              <lineNumber>58</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -177,7 +177,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>53</second>
+                      <second>58</second>
                     </item>
                   </second>
                 </item>
@@ -204,13 +204,13 @@
               <name>i_1</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>53</lineNumber>
+              <lineNumber>58</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -219,7 +219,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>53</second>
+                      <second>58</second>
                     </item>
                   </second>
                 </item>
@@ -246,13 +246,13 @@
               <name/>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>53</lineNumber>
+              <lineNumber>58</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -261,7 +261,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>53</second>
+                      <second>58</second>
                     </item>
                   </second>
                 </item>
@@ -289,13 +289,13 @@
               <name>p_shl</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -304,7 +304,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -332,13 +332,13 @@
               <name>p_shl_cast</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -347,7 +347,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -373,13 +373,13 @@
               <name>p_shl2</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -388,7 +388,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -416,13 +416,13 @@
               <name>p_shl2_cast</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -431,7 +431,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -457,13 +457,13 @@
               <name>tmp_8</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -472,7 +472,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -499,13 +499,13 @@
               <name>result_addr1_cast</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -514,7 +514,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -540,13 +540,13 @@
               <name/>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>54</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -555,7 +555,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>54</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
@@ -611,13 +611,13 @@
               <name>j_cast3</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>54</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -626,7 +626,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>54</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
@@ -652,13 +652,13 @@
               <name>exitcond</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>54</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -667,7 +667,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>54</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
@@ -694,13 +694,13 @@
               <name>j_1</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>54</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -709,7 +709,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>54</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
@@ -736,13 +736,13 @@
               <name/>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>54</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -751,7 +751,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>54</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
@@ -779,13 +779,13 @@
               <name>tmp_9_trn_cast</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -794,7 +794,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -820,13 +820,13 @@
               <name>result_addr2</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -835,7 +835,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -862,13 +862,13 @@
               <name>result_addr2_cast</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -877,7 +877,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -903,13 +903,13 @@
               <name>tmp_12</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -918,7 +918,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -944,13 +944,13 @@
               <name>result_addr</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -959,7 +959,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -987,13 +987,13 @@
               <name>result_load</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1002,7 +1002,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -1028,13 +1028,13 @@
               <name>tmp_1</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1043,7 +1043,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -1069,13 +1069,13 @@
               <name>tmp_2</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1084,7 +1084,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -1111,13 +1111,13 @@
               <name>tmp_2_cast</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1126,7 +1126,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -1152,13 +1152,13 @@
               <name>tmp_3</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1167,7 +1167,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -1193,13 +1193,13 @@
               <name>flatInput_addr</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1208,7 +1208,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -1236,13 +1236,13 @@
               <name/>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>60</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1251,7 +1251,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>55</second>
+                      <second>60</second>
                     </item>
                   </second>
                 </item>
@@ -1278,13 +1278,13 @@
               <name/>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>54</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1293,7 +1293,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>54</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
@@ -1319,13 +1319,13 @@
               <name/>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>59</lineNumber>
+              <lineNumber>64</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1334,7 +1334,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>59</second>
+                      <second>64</second>
                     </item>
                   </second>
                 </item>
@@ -1366,13 +1366,13 @@
               <name/>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>41</lineNumber>
+              <lineNumber>43</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1381,14 +1381,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>41</second>
+                      <second>43</second>
                     </item>
                   </second>
                 </item>
@@ -1471,7 +1471,7 @@
             <Obj>
               <type>0</type>
               <id>50</id>
-              <name>max_i</name>
+              <name>second_max</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -1504,13 +1504,13 @@
               <name>guess_cast1</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>41</lineNumber>
+              <lineNumber>43</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1519,14 +1519,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>41</second>
+                      <second>43</second>
                     </item>
                   </second>
                 </item>
@@ -1552,13 +1552,13 @@
               <name>exitcond_i</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>41</lineNumber>
+              <lineNumber>43</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1567,14 +1567,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>41</second>
+                      <second>43</second>
                     </item>
                   </second>
                 </item>
@@ -1601,13 +1601,13 @@
               <name>j_2</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>41</lineNumber>
+              <lineNumber>43</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1616,14 +1616,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>41</second>
+                      <second>43</second>
                     </item>
                   </second>
                 </item>
@@ -1650,13 +1650,13 @@
               <name/>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>41</lineNumber>
+              <lineNumber>43</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1665,14 +1665,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>41</second>
+                      <second>43</second>
                     </item>
                   </second>
                 </item>
@@ -1700,13 +1700,13 @@
               <name>tmp_i</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1715,14 +1715,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -1748,13 +1748,13 @@
               <name>output_addr</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1763,14 +1763,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -1798,13 +1798,13 @@
               <name>max</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1813,14 +1813,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -1846,13 +1846,13 @@
               <name>max_to_int</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1861,14 +1861,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -1894,13 +1894,13 @@
               <name>tmp</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1909,14 +1909,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -1945,13 +1945,13 @@
               <name>tmp_4</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -1960,14 +1960,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -1990,16 +1990,16 @@
             <Obj>
               <type>0</type>
               <id>63</id>
-              <name>max_i_to_int</name>
+              <name>second_max_to_int</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2008,20 +2008,20 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>max_i_to_int_fu_314_p1</rtlName>
+              <rtlName>second_max_to_int_fu_314_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2041,13 +2041,13 @@
               <name>tmp_5</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2056,14 +2056,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -2092,13 +2092,13 @@
               <name>tmp_6</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2107,14 +2107,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -2140,13 +2140,13 @@
               <name>notlhs</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2155,14 +2155,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -2189,13 +2189,13 @@
               <name>notrhs</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2204,14 +2204,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -2238,13 +2238,13 @@
               <name>tmp_7</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2253,14 +2253,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -2287,13 +2287,13 @@
               <name>notlhs6</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2302,14 +2302,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -2336,13 +2336,13 @@
               <name>notrhs7</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2351,14 +2351,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -2385,13 +2385,13 @@
               <name>tmp_s</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2400,14 +2400,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -2434,13 +2434,13 @@
               <name>tmp_9</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2449,14 +2449,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -2483,13 +2483,13 @@
               <name>tmp_10</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2498,14 +2498,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -2532,13 +2532,13 @@
               <name>tmp_11</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2547,14 +2547,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -2581,13 +2581,13 @@
               <name>guess_1</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2596,14 +2596,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -2631,13 +2631,13 @@
               <name>max_1</name>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>42</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2646,14 +2646,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>42</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
@@ -2681,13 +2681,13 @@
               <name/>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>41</lineNumber>
+              <lineNumber>43</lineNumber>
               <contextFuncName>guessClassification</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -2696,14 +2696,14 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                     <item>
                       <first>
                         <first>neuralNetworkSynth.cpp</first>
                         <second>guessClassification</second>
                       </first>
-                      <second>41</second>
+                      <second>43</second>
                     </item>
                   </second>
                 </item>
@@ -2729,13 +2729,13 @@
               <name/>
               <fileName>neuralNetworkSynth.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>60</lineNumber>
+              <lineNumber>65</lineNumber>
               <contextFuncName>classifySound</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/student/svr24/ece5775/final_proj/combined</first>
+                  <first>/home/rz252/tjp79/ece5775-final/combined</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2744,7 +2744,7 @@
                         <first>neuralNetworkSynth.cpp</first>
                         <second>classifySound</second>
                       </first>
-                      <second>60</second>
+                      <second>65</second>
                     </item>
                   </second>
                 </item>
@@ -5886,29 +5886,6 @@
           </second>
         </item>
         <item>
-          <first>max_i_reg_148</first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Size)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>32</second>
-            </item>
-            <item>
-              <first>(2Count)</first>
-              <second>64</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>32</second>
-            </item>
-          </second>
-        </item>
-        <item>
           <first>output_r_address0</first>
           <second>
             <count>4</count>
@@ -5974,6 +5951,29 @@
             <item>
               <first>LUT</first>
               <second>1</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>second_max_reg_148</first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0Size)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>(1Bits)</first>
+              <second>32</second>
+            </item>
+            <item>
+              <first>(2Count)</first>
+              <second>64</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>32</second>
             </item>
           </second>
         </item>
@@ -6191,25 +6191,6 @@
           </second>
         </item>
         <item>
-          <first>max_i_reg_148</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
-              <second>32</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>32</second>
-            </item>
-          </second>
-        </item>
-        <item>
           <first>max_reg_457</first>
           <second>
             <count>3</count>
@@ -6263,6 +6244,25 @@
             <item>
               <first>FF</first>
               <second>64</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>second_max_reg_148</first>
+          <second>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(Bits)</first>
+              <second>32</second>
+            </item>
+            <item>
+              <first>(Consts)</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>32</second>
             </item>
           </second>
         </item>
@@ -7624,22 +7624,6 @@
         </second>
       </item>
       <item>
-        <first>max_i_phi_fu_152</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>50</item>
-        </second>
-      </item>
-      <item>
-        <first>max_i_to_int_fu_314</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>63</item>
-        </second>
-      </item>
-      <item>
         <first>max_to_int_fu_297</first>
         <second>
           <count>1</count>
@@ -7749,6 +7733,22 @@
           <count>1</count>
           <item_version>0</item_version>
           <item>35</item>
+        </second>
+      </item>
+      <item>
+        <first>second_max_phi_fu_152</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>50</item>
+        </second>
+      </item>
+      <item>
+        <first>second_max_to_int_fu_314</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>63</item>
         </second>
       </item>
       <item>
@@ -8270,14 +8270,6 @@
         </second>
       </item>
       <item>
-        <first>max_i_reg_148</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>50</item>
-        </second>
-      </item>
-      <item>
         <first>max_reg_457</first>
         <second>
           <count>1</count>
@@ -8315,6 +8307,14 @@
           <count>1</count>
           <item_version>0</item_version>
           <item>36</item>
+        </second>
+      </item>
+      <item>
+        <first>second_max_reg_148</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>50</item>
         </second>
       </item>
       <item>
@@ -8430,7 +8430,7 @@
         </second>
       </item>
       <item>
-        <first>max_i_reg_148</first>
+        <first>second_max_reg_148</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

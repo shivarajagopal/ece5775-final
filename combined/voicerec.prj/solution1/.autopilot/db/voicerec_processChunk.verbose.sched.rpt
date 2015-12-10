@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'voicerec_processChunk'
 ================================================================
-* Date:           Sun Dec  6 17:20:11 2015
+* Date:           Wed Dec  9 22:20:25 2015
 
-* Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
+* Version:        2015.3 (Build 1244743 on Sun May 31 20:30:40 PM 2015)
 * Project:        voicerec.prj
 * Solution:       solution1
 * Product family: zynq
@@ -188,8 +188,8 @@ IsGatedGlobalClock: 0
 	27  / (!exitcond1)
 	44  / (exitcond1)
 27 --> 
-	28  / (tmp_76)
-	34  / (!tmp_76)
+	28  / (tmp_61)
+	34  / (!tmp_61)
 28 --> 
 	29  / true
 29 --> 
@@ -203,11 +203,11 @@ IsGatedGlobalClock: 0
 33 --> 
 	34  / true
 34 --> 
-	35  / (tmp_80)
-	42  / (!tmp_80)
+	35  / (tmp_67)
+	42  / (!tmp_67)
 35 --> 
-	36  / (!tmp_84)
-	42  / (tmp_84)
+	36  / (!tmp_71)
+	42  / (tmp_71)
 36 --> 
 	37  / true
 37 --> 
@@ -403,26 +403,26 @@ ST_2: stg_119 [2/2] 0.00ns
 ST_3: inputSound_load [1/2] 2.71ns
 :3  %inputSound_load = load double* %inputSound_addr, align 8
 
-ST_3: tmp_33 [1/1] 0.00ns
-:4  %tmp_33 = shl i9 %i, 1
+ST_3: tmp_14 [1/1] 0.00ns
+:4  %tmp_14 = shl i9 %i, 1
 
-ST_3: tmp_63 [1/1] 0.00ns
-:5  %tmp_63 = zext i9 %tmp_33 to i64
+ST_3: tmp_48 [1/1] 0.00ns
+:5  %tmp_48 = zext i9 %tmp_14 to i64
 
 ST_3: c_addr [1/1] 0.00ns
-:6  %c_addr = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_63
+:6  %c_addr = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_48
 
 ST_3: stg_124 [1/1] 2.71ns
 :7  store double %inputSound_load, double* %c_addr, align 16
 
-ST_3: tmp_64 [1/1] 0.00ns
-:8  %tmp_64 = or i9 %tmp_33, 1
+ST_3: tmp_49 [1/1] 0.00ns
+:8  %tmp_49 = or i9 %tmp_14, 1
 
-ST_3: tmp_65 [1/1] 0.00ns
-:9  %tmp_65 = zext i9 %tmp_64 to i64
+ST_3: tmp_50 [1/1] 0.00ns
+:9  %tmp_50 = zext i9 %tmp_49 to i64
 
 ST_3: c_addr_4 [1/1] 0.00ns
-:10  %c_addr_4 = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_65
+:10  %c_addr_4 = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_50
 
 ST_3: stg_128 [1/1] 2.71ns
 :11  store double 0.000000e+00, double* %c_addr_4, align 8
@@ -446,8 +446,8 @@ ST_5: i_1 [1/1] 0.00ns
 ST_5: exitcond3 [1/1] 2.03ns
 :1  %exitcond3 = icmp eq i9 %i_1, -256
 
-ST_5: empty_24 [1/1] 0.00ns
-:2  %empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 256, i64 256, i64 256)
+ST_5: empty_20 [1/1] 0.00ns
+:2  %empty_20 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 256, i64 256, i64 256)
 
 ST_5: i_6 [1/1] 1.84ns
 :3  %i_6 = add i9 %i_1, 1
@@ -455,26 +455,26 @@ ST_5: i_6 [1/1] 1.84ns
 ST_5: stg_136 [1/1] 1.57ns
 :4  br i1 %exitcond3, label %.preheader6, label %5
 
-ST_5: tmp_34 [1/1] 0.00ns
-:0  %tmp_34 = shl i9 %i_1, 1
+ST_5: tmp_15 [1/1] 0.00ns
+:0  %tmp_15 = shl i9 %i_1, 1
 
-ST_5: tmp_66 [1/1] 0.00ns
-:1  %tmp_66 = zext i9 %tmp_34 to i64
+ST_5: tmp_51 [1/1] 0.00ns
+:1  %tmp_51 = zext i9 %tmp_15 to i64
 
 ST_5: c_addr_5 [1/1] 0.00ns
-:2  %c_addr_5 = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_66
+:2  %c_addr_5 = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_51
 
 ST_5: c_load [2/2] 2.71ns
 :3  %c_load = load double* %c_addr_5, align 16
 
-ST_5: tmp_68 [1/1] 0.00ns
-:5  %tmp_68 = or i9 %tmp_34, 1
+ST_5: tmp_53 [1/1] 0.00ns
+:5  %tmp_53 = or i9 %tmp_15, 1
 
-ST_5: tmp_69 [1/1] 0.00ns
-:6  %tmp_69 = zext i9 %tmp_68 to i64
+ST_5: tmp_54 [1/1] 0.00ns
+:6  %tmp_54 = zext i9 %tmp_53 to i64
 
 ST_5: c_addr_6 [1/1] 0.00ns
-:7  %c_addr_6 = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_69
+:7  %c_addr_6 = getelementptr inbounds [512 x double]* @c, i64 0, i64 %tmp_54
 
 ST_5: c_load_2 [2/2] 2.71ns
 :8  %c_load_2 = load double* %c_addr_6, align 8
@@ -489,117 +489,117 @@ ST_6: c_load_2 [1/2] 2.71ns
 
 
  <State 7>: 7.79ns
-ST_7: tmp_67 [6/6] 7.79ns
-:4  %tmp_67 = fmul double %c_load, %c_load
+ST_7: tmp_52 [6/6] 7.79ns
+:4  %tmp_52 = fmul double %c_load, %c_load
 
-ST_7: tmp_70 [6/6] 7.79ns
-:9  %tmp_70 = fmul double %c_load_2, %c_load_2
+ST_7: tmp_55 [6/6] 7.79ns
+:9  %tmp_55 = fmul double %c_load_2, %c_load_2
 
 
  <State 8>: 7.79ns
-ST_8: tmp_67 [5/6] 7.79ns
-:4  %tmp_67 = fmul double %c_load, %c_load
+ST_8: tmp_52 [5/6] 7.79ns
+:4  %tmp_52 = fmul double %c_load, %c_load
 
-ST_8: tmp_70 [5/6] 7.79ns
-:9  %tmp_70 = fmul double %c_load_2, %c_load_2
+ST_8: tmp_55 [5/6] 7.79ns
+:9  %tmp_55 = fmul double %c_load_2, %c_load_2
 
 
  <State 9>: 7.79ns
-ST_9: tmp_67 [4/6] 7.79ns
-:4  %tmp_67 = fmul double %c_load, %c_load
+ST_9: tmp_52 [4/6] 7.79ns
+:4  %tmp_52 = fmul double %c_load, %c_load
 
-ST_9: tmp_70 [4/6] 7.79ns
-:9  %tmp_70 = fmul double %c_load_2, %c_load_2
+ST_9: tmp_55 [4/6] 7.79ns
+:9  %tmp_55 = fmul double %c_load_2, %c_load_2
 
 
  <State 10>: 7.79ns
-ST_10: tmp_67 [3/6] 7.79ns
-:4  %tmp_67 = fmul double %c_load, %c_load
+ST_10: tmp_52 [3/6] 7.79ns
+:4  %tmp_52 = fmul double %c_load, %c_load
 
-ST_10: tmp_70 [3/6] 7.79ns
-:9  %tmp_70 = fmul double %c_load_2, %c_load_2
+ST_10: tmp_55 [3/6] 7.79ns
+:9  %tmp_55 = fmul double %c_load_2, %c_load_2
 
 
  <State 11>: 7.79ns
-ST_11: tmp_67 [2/6] 7.79ns
-:4  %tmp_67 = fmul double %c_load, %c_load
+ST_11: tmp_52 [2/6] 7.79ns
+:4  %tmp_52 = fmul double %c_load, %c_load
 
-ST_11: tmp_70 [2/6] 7.79ns
-:9  %tmp_70 = fmul double %c_load_2, %c_load_2
+ST_11: tmp_55 [2/6] 7.79ns
+:9  %tmp_55 = fmul double %c_load_2, %c_load_2
 
 
  <State 12>: 7.79ns
-ST_12: tmp_67 [1/6] 7.79ns
-:4  %tmp_67 = fmul double %c_load, %c_load
+ST_12: tmp_52 [1/6] 7.79ns
+:4  %tmp_52 = fmul double %c_load, %c_load
 
-ST_12: tmp_70 [1/6] 7.79ns
-:9  %tmp_70 = fmul double %c_load_2, %c_load_2
+ST_12: tmp_55 [1/6] 7.79ns
+:9  %tmp_55 = fmul double %c_load_2, %c_load_2
 
 
  <State 13>: 8.23ns
-ST_13: tmp_71 [5/5] 8.23ns
-:10  %tmp_71 = fadd double %tmp_67, %tmp_70
+ST_13: tmp_56 [5/5] 8.23ns
+:10  %tmp_56 = fadd double %tmp_52, %tmp_55
 
 
  <State 14>: 8.23ns
-ST_14: tmp_71 [4/5] 8.23ns
-:10  %tmp_71 = fadd double %tmp_67, %tmp_70
+ST_14: tmp_56 [4/5] 8.23ns
+:10  %tmp_56 = fadd double %tmp_52, %tmp_55
 
 
  <State 15>: 8.23ns
-ST_15: tmp_71 [3/5] 8.23ns
-:10  %tmp_71 = fadd double %tmp_67, %tmp_70
+ST_15: tmp_56 [3/5] 8.23ns
+:10  %tmp_56 = fadd double %tmp_52, %tmp_55
 
 
  <State 16>: 8.23ns
-ST_16: tmp_71 [2/5] 8.23ns
-:10  %tmp_71 = fadd double %tmp_67, %tmp_70
+ST_16: tmp_56 [2/5] 8.23ns
+:10  %tmp_56 = fadd double %tmp_52, %tmp_55
 
 
  <State 17>: 8.23ns
-ST_17: tmp_71 [1/5] 8.23ns
-:10  %tmp_71 = fadd double %tmp_67, %tmp_70
+ST_17: tmp_56 [1/5] 8.23ns
+:10  %tmp_56 = fadd double %tmp_52, %tmp_55
 
 
  <State 18>: 7.79ns
-ST_18: tmp_72 [6/6] 7.79ns
-:11  %tmp_72 = fmul double %tmp_71, 3.906250e-03
+ST_18: tmp_57 [6/6] 7.79ns
+:11  %tmp_57 = fmul double %tmp_56, 3.906250e-03
 
 
  <State 19>: 7.79ns
-ST_19: tmp_72 [5/6] 7.79ns
-:11  %tmp_72 = fmul double %tmp_71, 3.906250e-03
+ST_19: tmp_57 [5/6] 7.79ns
+:11  %tmp_57 = fmul double %tmp_56, 3.906250e-03
 
 
  <State 20>: 7.79ns
-ST_20: tmp_72 [4/6] 7.79ns
-:11  %tmp_72 = fmul double %tmp_71, 3.906250e-03
+ST_20: tmp_57 [4/6] 7.79ns
+:11  %tmp_57 = fmul double %tmp_56, 3.906250e-03
 
 
  <State 21>: 7.79ns
-ST_21: tmp_72 [3/6] 7.79ns
-:11  %tmp_72 = fmul double %tmp_71, 3.906250e-03
+ST_21: tmp_57 [3/6] 7.79ns
+:11  %tmp_57 = fmul double %tmp_56, 3.906250e-03
 
 
  <State 22>: 7.79ns
-ST_22: tmp_72 [2/6] 7.79ns
-:11  %tmp_72 = fmul double %tmp_71, 3.906250e-03
+ST_22: tmp_57 [2/6] 7.79ns
+:11  %tmp_57 = fmul double %tmp_56, 3.906250e-03
 
 
  <State 23>: 7.79ns
-ST_23: tmp_72 [1/6] 7.79ns
-:11  %tmp_72 = fmul double %tmp_71, 3.906250e-03
+ST_23: tmp_57 [1/6] 7.79ns
+:11  %tmp_57 = fmul double %tmp_56, 3.906250e-03
 
 
  <State 24>: 2.71ns
-ST_24: tmp_73 [1/1] 0.00ns
-:12  %tmp_73 = zext i9 %i_1 to i64
+ST_24: tmp_58 [1/1] 0.00ns
+:12  %tmp_58 = zext i9 %i_1 to i64
 
 ST_24: d_addr [1/1] 0.00ns
-:13  %d_addr = getelementptr inbounds [256 x double]* @d, i64 0, i64 %tmp_73
+:13  %d_addr = getelementptr inbounds [256 x double]* @d, i64 0, i64 %tmp_58
 
 ST_24: stg_172 [1/1] 2.71ns
-:14  store double %tmp_72, double* %d_addr, align 8
+:14  store double %tmp_57, double* %d_addr, align 8
 
 ST_24: stg_173 [1/1] 0.00ns
 :15  br label %4
@@ -612,8 +612,8 @@ ST_25: i_2 [1/1] 0.00ns
 ST_25: exitcond2 [1/1] 1.91ns
 .preheader6:1  %exitcond2 = icmp eq i5 %i_2, -6
 
-ST_25: empty_25 [1/1] 0.00ns
-.preheader6:2  %empty_25 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
+ST_25: empty_21 [1/1] 0.00ns
+.preheader6:2  %empty_21 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
 
 ST_25: i_7 [1/1] 1.72ns
 .preheader6:3  %i_7 = add i5 %i_2, 1
@@ -621,11 +621,11 @@ ST_25: i_7 [1/1] 1.72ns
 ST_25: stg_178 [1/1] 1.57ns
 .preheader6:4  br i1 %exitcond2, label %.preheader5, label %6
 
-ST_25: tmp_74 [1/1] 0.00ns
-:0  %tmp_74 = zext i5 %i_2 to i64
+ST_25: tmp_59 [1/1] 0.00ns
+:0  %tmp_59 = zext i5 %i_2 to i64
 
 ST_25: e_addr [1/1] 0.00ns
-:1  %e_addr = getelementptr inbounds [26 x double]* @e, i64 0, i64 %tmp_74
+:1  %e_addr = getelementptr inbounds [26 x double]* @e, i64 0, i64 %tmp_59
 
 ST_25: stg_181 [1/1] 2.71ns
 :2  store double 0.000000e+00, double* %e_addr, align 8
@@ -647,8 +647,8 @@ ST_26: i_3_cast [1/1] 0.00ns
 ST_26: exitcond1 [1/1] 2.03ns
 .preheader5:3  %exitcond1 = icmp eq i9 %i_3, -256
 
-ST_26: empty_26 [1/1] 0.00ns
-.preheader5:4  %empty_26 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 256, i64 256, i64 256)
+ST_26: empty_22 [1/1] 0.00ns
+.preheader5:4  %empty_22 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 256, i64 256, i64 256)
 
 ST_26: i_9 [1/1] 1.84ns
 .preheader5:5  %i_9 = add i9 %i_3, 1
@@ -656,11 +656,11 @@ ST_26: i_9 [1/1] 1.84ns
 ST_26: stg_189 [1/1] 1.57ns
 .preheader5:6  br i1 %exitcond1, label %.preheader, label %7
 
-ST_26: tmp_75 [1/1] 0.00ns
-:0  %tmp_75 = sext i32 %mellIdx to i64
+ST_26: tmp_60 [1/1] 0.00ns
+:0  %tmp_60 = sext i32 %mellIdx to i64
 
 ST_26: mell_addr [1/1] 0.00ns
-:1  %mell_addr = getelementptr [27 x i8]* @mell, i64 0, i64 %tmp_75
+:1  %mell_addr = getelementptr [27 x i8]* @mell, i64 0, i64 %tmp_60
 
 ST_26: mell_load [2/2] 2.39ns
 :2  %mell_load = load i8* %mell_addr, align 1
@@ -676,17 +676,17 @@ ST_27: mell_load_cast [1/1] 0.00ns
 ST_27: mell_load_cast_cast [1/1] 0.00ns
 :4  %mell_load_cast_cast = zext i8 %mell_load to i9
 
-ST_27: tmp_76 [1/1] 2.03ns
-:5  %tmp_76 = icmp eq i10 %i_3_cast, %mell_load_cast
+ST_27: tmp_61 [1/1] 2.03ns
+:5  %tmp_61 = icmp eq i10 %i_3_cast, %mell_load_cast
 
 ST_27: stg_197 [1/1] 0.00ns
-:6  br i1 %tmp_76, label %8, label %._crit_edge
+:6  br i1 %tmp_61, label %8, label %._crit_edge
 
-ST_27: tmp_78 [1/1] 0.00ns
-:0  %tmp_78 = zext i9 %i_3 to i64
+ST_27: tmp_65 [1/1] 0.00ns
+:0  %tmp_65 = zext i9 %i_3 to i64
 
 ST_27: d_addr_1 [1/1] 0.00ns
-:1  %d_addr_1 = getelementptr inbounds [256 x double]* @d, i64 0, i64 %tmp_78
+:1  %d_addr_1 = getelementptr inbounds [256 x double]* @d, i64 0, i64 %tmp_65
 
 ST_27: d_load [2/2] 2.71ns
 :2  %d_load = load double* %d_addr_1, align 8
@@ -704,51 +704,51 @@ ST_28: e_load [1/2] 2.71ns
 
 
  <State 29>: 8.23ns
-ST_29: tmp_79 [5/5] 8.23ns
-:4  %tmp_79 = fadd double %e_load, %d_load
+ST_29: tmp_66 [5/5] 8.23ns
+:4  %tmp_66 = fadd double %e_load, %d_load
 
 
  <State 30>: 8.23ns
-ST_30: tmp_79 [4/5] 8.23ns
-:4  %tmp_79 = fadd double %e_load, %d_load
+ST_30: tmp_66 [4/5] 8.23ns
+:4  %tmp_66 = fadd double %e_load, %d_load
 
 
  <State 31>: 8.23ns
-ST_31: tmp_79 [3/5] 8.23ns
-:4  %tmp_79 = fadd double %e_load, %d_load
+ST_31: tmp_66 [3/5] 8.23ns
+:4  %tmp_66 = fadd double %e_load, %d_load
 
 
  <State 32>: 8.23ns
-ST_32: tmp_79 [2/5] 8.23ns
-:4  %tmp_79 = fadd double %e_load, %d_load
+ST_32: tmp_66 [2/5] 8.23ns
+:4  %tmp_66 = fadd double %e_load, %d_load
 
 
  <State 33>: 8.23ns
-ST_33: tmp_79 [1/5] 8.23ns
-:4  %tmp_79 = fadd double %e_load, %d_load
+ST_33: tmp_66 [1/5] 8.23ns
+:4  %tmp_66 = fadd double %e_load, %d_load
 
 
  <State 34>: 4.83ns
 ST_34: stg_209 [1/1] 2.71ns
-:5  store double %tmp_79, double* getelementptr inbounds ([26 x double]* @e, i64 0, i64 0), align 16
+:5  store double %tmp_66, double* getelementptr inbounds ([26 x double]* @e, i64 0, i64 0), align 16
 
 ST_34: stg_210 [1/1] 0.00ns
 :6  br label %._crit_edge
 
-ST_34: tmp_80 [1/1] 2.03ns
-._crit_edge:0  %tmp_80 = icmp ugt i9 %i_3, %mell_load_cast_cast
+ST_34: tmp_67 [1/1] 2.03ns
+._crit_edge:0  %tmp_67 = icmp ugt i9 %i_3, %mell_load_cast_cast
 
 ST_34: stg_212 [1/1] 0.00ns
-._crit_edge:1  br i1 %tmp_80, label %9, label %._crit_edge7
+._crit_edge:1  br i1 %tmp_67, label %9, label %._crit_edge7
 
-ST_34: tmp_82 [1/1] 2.44ns
-:0  %tmp_82 = add nsw i32 %mellIdx, 1
+ST_34: tmp_69 [1/1] 2.44ns
+:0  %tmp_69 = add nsw i32 %mellIdx, 1
 
-ST_34: tmp_83 [1/1] 0.00ns
-:1  %tmp_83 = sext i32 %tmp_82 to i64
+ST_34: tmp_70 [1/1] 0.00ns
+:1  %tmp_70 = sext i32 %tmp_69 to i64
 
 ST_34: mell_addr_1 [1/1] 0.00ns
-:2  %mell_addr_1 = getelementptr [27 x i8]* @mell, i64 0, i64 %tmp_83
+:2  %mell_addr_1 = getelementptr [27 x i8]* @mell, i64 0, i64 %tmp_70
 
 ST_34: mell_load_1 [2/2] 2.39ns
 :3  %mell_load_1 = load i8* %mell_addr_1, align 1
@@ -761,23 +761,23 @@ ST_35: mell_load_1 [1/2] 2.39ns
 ST_35: mell_load_1_cast_cast [1/1] 0.00ns
 :4  %mell_load_1_cast_cast = zext i8 %mell_load_1 to i9
 
-ST_35: tmp_84 [1/1] 2.03ns
-:5  %tmp_84 = icmp ugt i9 %i_3, %mell_load_1_cast_cast
+ST_35: tmp_71 [1/1] 2.03ns
+:5  %tmp_71 = icmp ugt i9 %i_3, %mell_load_1_cast_cast
 
 ST_35: stg_220 [1/1] 0.00ns
-:6  br i1 %tmp_84, label %._crit_edge7, label %10
+:6  br i1 %tmp_71, label %._crit_edge7, label %10
 
-ST_35: tmp_85 [1/1] 0.00ns
-:0  %tmp_85 = zext i9 %i_3 to i64
+ST_35: tmp_72 [1/1] 0.00ns
+:0  %tmp_72 = zext i9 %i_3 to i64
 
 ST_35: d_addr_2 [1/1] 0.00ns
-:1  %d_addr_2 = getelementptr inbounds [256 x double]* @d, i64 0, i64 %tmp_85
+:1  %d_addr_2 = getelementptr inbounds [256 x double]* @d, i64 0, i64 %tmp_72
 
 ST_35: d_load_1 [2/2] 2.71ns
 :2  %d_load_1 = load double* %d_addr_2, align 8
 
 ST_35: e_addr_2 [1/1] 0.00ns
-:3  %e_addr_2 = getelementptr inbounds [26 x double]* @e, i64 0, i64 %tmp_75
+:3  %e_addr_2 = getelementptr inbounds [26 x double]* @e, i64 0, i64 %tmp_60
 
 ST_35: e_load_2 [2/2] 2.71ns
 :4  %e_load_2 = load double* %e_addr_2, align 8
@@ -792,33 +792,33 @@ ST_36: e_load_2 [1/2] 2.71ns
 
 
  <State 37>: 8.23ns
-ST_37: tmp_86 [5/5] 8.23ns
-:5  %tmp_86 = fadd double %e_load_2, %d_load_1
+ST_37: tmp_73 [5/5] 8.23ns
+:5  %tmp_73 = fadd double %e_load_2, %d_load_1
 
 
  <State 38>: 8.23ns
-ST_38: tmp_86 [4/5] 8.23ns
-:5  %tmp_86 = fadd double %e_load_2, %d_load_1
+ST_38: tmp_73 [4/5] 8.23ns
+:5  %tmp_73 = fadd double %e_load_2, %d_load_1
 
 
  <State 39>: 8.23ns
-ST_39: tmp_86 [3/5] 8.23ns
-:5  %tmp_86 = fadd double %e_load_2, %d_load_1
+ST_39: tmp_73 [3/5] 8.23ns
+:5  %tmp_73 = fadd double %e_load_2, %d_load_1
 
 
  <State 40>: 8.23ns
-ST_40: tmp_86 [2/5] 8.23ns
-:5  %tmp_86 = fadd double %e_load_2, %d_load_1
+ST_40: tmp_73 [2/5] 8.23ns
+:5  %tmp_73 = fadd double %e_load_2, %d_load_1
 
 
  <State 41>: 8.23ns
-ST_41: tmp_86 [1/5] 8.23ns
-:5  %tmp_86 = fadd double %e_load_2, %d_load_1
+ST_41: tmp_73 [1/5] 8.23ns
+:5  %tmp_73 = fadd double %e_load_2, %d_load_1
 
 
  <State 42>: 4.83ns
 ST_42: stg_233 [1/1] 2.71ns
-:6  store double %tmp_86, double* %e_addr_2, align 8
+:6  store double %tmp_73, double* %e_addr_2, align 8
 
 ST_42: stg_234 [1/1] 0.00ns
 :7  br label %._crit_edge7
@@ -826,11 +826,11 @@ ST_42: stg_234 [1/1] 0.00ns
 ST_42: mellIdx_1 [1/1] 2.44ns
 ._crit_edge7:0  %mellIdx_1 = add nsw i32 %mellIdx, 1
 
-ST_42: tmp_87 [1/1] 0.00ns
-._crit_edge7:1  %tmp_87 = sext i32 %mellIdx_1 to i64
+ST_42: tmp_74 [1/1] 0.00ns
+._crit_edge7:1  %tmp_74 = sext i32 %mellIdx_1 to i64
 
 ST_42: mell_addr_2 [1/1] 0.00ns
-._crit_edge7:2  %mell_addr_2 = getelementptr [27 x i8]* @mell, i64 0, i64 %tmp_87
+._crit_edge7:2  %mell_addr_2 = getelementptr [27 x i8]* @mell, i64 0, i64 %tmp_74
 
 ST_42: mell_load_2 [2/2] 2.39ns
 ._crit_edge7:3  %mell_load_2 = load i8* %mell_addr_2, align 1
@@ -843,11 +843,11 @@ ST_43: mell_load_2 [1/2] 2.39ns
 ST_43: mell_load_2_cast [1/1] 0.00ns
 ._crit_edge7:4  %mell_load_2_cast = zext i8 %mell_load_2 to i10
 
-ST_43: tmp_88 [1/1] 2.03ns
-._crit_edge7:5  %tmp_88 = icmp eq i10 %i_3_cast, %mell_load_2_cast
+ST_43: tmp_75 [1/1] 2.03ns
+._crit_edge7:5  %tmp_75 = icmp eq i10 %i_3_cast, %mell_load_2_cast
 
 ST_43: p_mellIdx [1/1] 1.37ns
-._crit_edge7:6  %p_mellIdx = select i1 %tmp_88, i32 %mellIdx_1, i32 %mellIdx
+._crit_edge7:6  %p_mellIdx = select i1 %tmp_75, i32 %mellIdx_1, i32 %mellIdx
 
 ST_43: stg_243 [1/1] 0.00ns
 ._crit_edge7:7  br label %.preheader5
@@ -860,8 +860,8 @@ ST_44: i_4 [1/1] 0.00ns
 ST_44: exitcond [1/1] 1.91ns
 .preheader:1  %exitcond = icmp eq i5 %i_4, -6
 
-ST_44: empty_27 [1/1] 0.00ns
-.preheader:2  %empty_27 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
+ST_44: empty_23 [1/1] 0.00ns
+.preheader:2  %empty_23 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
 
 ST_44: i_8 [1/1] 1.72ns
 .preheader:3  %i_8 = add i5 %i_4, 1
@@ -869,26 +869,26 @@ ST_44: i_8 [1/1] 1.72ns
 ST_44: stg_248 [1/1] 0.00ns
 .preheader:4  br i1 %exitcond, label %.preheader2.preheader, label %11
 
-ST_44: tmp_77 [1/1] 0.00ns
-:0  %tmp_77 = zext i5 %i_4 to i64
+ST_44: tmp_64 [1/1] 0.00ns
+:0  %tmp_64 = zext i5 %i_4 to i64
 
 ST_44: e_addr_1 [1/1] 0.00ns
-:1  %e_addr_1 = getelementptr inbounds [26 x double]* @e, i64 0, i64 %tmp_77
+:1  %e_addr_1 = getelementptr inbounds [26 x double]* @e, i64 0, i64 %tmp_64
 
 ST_44: e_load_1 [2/2] 2.71ns
 :2  %e_load_1 = load double* %e_addr_1, align 8
 
-ST_44: tmp_55 [1/1] 0.00ns
-.preheader2.preheader:0  %tmp_55 = call i10 @_ssdm_op_BitConcatenate.i10.i6.i4(i6 %tmp_read, i4 0)
+ST_44: tmp_62 [1/1] 0.00ns
+.preheader2.preheader:0  %tmp_62 = call i10 @_ssdm_op_BitConcatenate.i10.i6.i4(i6 %tmp_read, i4 0)
 
 ST_44: p_shl_cast [1/1] 0.00ns
-.preheader2.preheader:1  %p_shl_cast = zext i10 %tmp_55 to i11
+.preheader2.preheader:1  %p_shl_cast = zext i10 %tmp_62 to i11
 
-ST_44: tmp_56 [1/1] 0.00ns
-.preheader2.preheader:2  %tmp_56 = call i7 @_ssdm_op_BitConcatenate.i7.i6.i1(i6 %tmp_read, i1 false)
+ST_44: tmp_63 [1/1] 0.00ns
+.preheader2.preheader:2  %tmp_63 = call i7 @_ssdm_op_BitConcatenate.i7.i6.i1(i6 %tmp_read, i1 false)
 
 ST_44: p_shl5_cast [1/1] 0.00ns
-.preheader2.preheader:3  %p_shl5_cast = zext i7 %tmp_56 to i11
+.preheader2.preheader:3  %p_shl5_cast = zext i7 %tmp_63 to i11
 
 ST_44: p_addr [1/1] 1.84ns
 .preheader2.preheader:4  %p_addr = sub i11 %p_shl_cast, %p_shl5_cast
@@ -917,14 +917,14 @@ ST_47: e_load_1_to_int [1/1] 0.00ns
 ST_47: tmp_43 [1/1] 0.00ns
 :4  %tmp_43 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %e_load_1_to_int, i32 52, i32 62)
 
-ST_47: tmp_35 [1/1] 0.00ns
-:5  %tmp_35 = trunc i64 %e_load_1_to_int to i52
+ST_47: tmp_16 [1/1] 0.00ns
+:5  %tmp_16 = trunc i64 %e_load_1_to_int to i52
 
 ST_47: notlhs [1/1] 2.11ns
 :6  %notlhs = icmp ne i11 %tmp_43, -1
 
 ST_47: notrhs [1/1] 2.64ns
-:7  %notrhs = icmp eq i52 %tmp_35, 0
+:7  %notrhs = icmp eq i52 %tmp_16, 0
 
 ST_47: tmp_45 [1/1] 1.37ns
 :8  %tmp_45 = or i1 %notrhs, %notlhs
@@ -943,11 +943,11 @@ ST_47: x_assign [1/1] 6.50ns
 ST_48: tmp_i_i [1/1] 0.00ns
 :1  %tmp_i_i = bitcast float %x_assign to i32
 
-ST_48: tmp_36 [1/1] 0.00ns
-:2  %tmp_36 = trunc i32 %tmp_i_i to i23
+ST_48: tmp_17 [1/1] 0.00ns
+:2  %tmp_17 = trunc i32 %tmp_i_i to i23
 
 ST_48: mx_i_i [1/1] 0.00ns
-:3  %mx_i_i = call i30 @_ssdm_op_BitConcatenate.i30.i7.i23(i7 -2, i23 %tmp_36)
+:3  %mx_i_i = call i30 @_ssdm_op_BitConcatenate.i30.i7.i23(i7 -2, i23 %tmp_17)
 
 ST_48: mx_i_i_cast [1/1] 0.00ns
 :4  %mx_i_i_cast = zext i30 %mx_i_i to i32
@@ -1180,8 +1180,8 @@ ST_77: tmp_i [1/4] 5.70ns
 
 
  <State 78>: 7.12ns
-ST_78: tmp_81 [1/1] 5.55ns
-:16  %tmp_81 = fpext float %tmp_i to double
+ST_78: tmp_68 [1/1] 5.55ns
+:16  %tmp_68 = fpext float %tmp_i to double
 
 ST_78: stg_331 [1/1] 1.57ns
 :17  br label %13
@@ -1189,7 +1189,7 @@ ST_78: stg_331 [1/1] 1.57ns
 
  <State 79>: 2.71ns
 ST_79: storemerge [1/1] 0.00ns
-:0  %storemerge = phi double [ %tmp_81, %12 ], [ 0.000000e+00, %11 ]
+:0  %storemerge = phi double [ %tmp_68, %12 ], [ 0.000000e+00, %11 ]
 
 ST_79: stg_333 [1/1] 2.71ns
 :1  store double %storemerge, double* %e_addr_1, align 8
@@ -1211,8 +1211,8 @@ ST_80: next_mul [1/1] 1.84ns
 ST_80: exitcond4_i [1/1] 1.88ns
 .preheader2:3  %exitcond4_i = icmp eq i4 %k_i, -2
 
-ST_80: empty_28 [1/1] 0.00ns
-.preheader2:4  %empty_28 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)
+ST_80: empty_24 [1/1] 0.00ns
+.preheader2:4  %empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)
 
 ST_80: k [1/1] 0.80ns
 .preheader2:5  %k = add i4 %k_i, 1
@@ -1246,8 +1246,8 @@ ST_81: n_i [1/1] 0.00ns
 ST_81: exitcond_i [1/1] 1.91ns
 :2  %exitcond_i = icmp eq i5 %n_i, -6
 
-ST_81: empty_29 [1/1] 0.00ns
-:3  %empty_29 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
+ST_81: empty_25 [1/1] 0.00ns
+:3  %empty_25 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
 
 ST_81: n [1/1] 1.72ns
 :4  %n = add i5 %n_i, 1
@@ -1306,11 +1306,11 @@ ST_86: tmp_30_i [3/6] 7.79ns
 ST_87: tmp_30_i [2/6] 7.79ns
 :3  %tmp_30_i = fmul double %s, %e_load_3
 
-ST_87: tmp_58 [1/1] 0.00ns
-:6  %tmp_58 = zext i9 %dctMatrix_addr4 to i64
+ST_87: tmp_77 [1/1] 0.00ns
+:6  %tmp_77 = zext i9 %dctMatrix_addr4 to i64
 
 ST_87: dctMatrix_addr [1/1] 0.00ns
-:7  %dctMatrix_addr = getelementptr [676 x double]* @dctMatrix, i64 0, i64 %tmp_58
+:7  %dctMatrix_addr = getelementptr [676 x double]* @dctMatrix, i64 0, i64 %tmp_77
 
 ST_87: dctMatrix_load [2/2] 2.39ns
 :8  %dctMatrix_load = load double* %dctMatrix_addr, align 8
@@ -1411,11 +1411,11 @@ ST_104: tmp_32_i [1/6] 7.79ns
 ST_105: p_addr1_cast [1/1] 0.00ns
 :2  %p_addr1_cast = sext i12 %p_addr1 to i32
 
-ST_105: tmp_57 [1/1] 0.00ns
-:3  %tmp_57 = zext i32 %p_addr1_cast to i64
+ST_105: tmp_76 [1/1] 0.00ns
+:3  %tmp_76 = zext i32 %p_addr1_cast to i64
 
 ST_105: ret_addr [1/1] 0.00ns
-:4  %ret_addr = getelementptr [882 x double]* %ret, i64 0, i64 %tmp_57
+:4  %ret_addr = getelementptr [882 x double]* %ret, i64 0, i64 %tmp_76
 
 ST_105: stg_391 [1/1] 2.71ns
 :5  store double %tmp_32_i, double* %ret_addr, align 8

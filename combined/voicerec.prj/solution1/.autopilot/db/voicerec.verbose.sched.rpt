@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'voicerec'
 ================================================================
-* Date:           Sun Dec  6 17:20:12 2015
+* Date:           Wed Dec  9 22:20:26 2015
 
-* Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
+* Version:        2015.3 (Build 1244743 on Sun May 31 20:30:40 PM 2015)
 * Project:        voicerec.prj
 * Solution:       solution1
 * Product family: zynq
@@ -25,12 +25,12 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +---------+-----------+---------+-----------+---------+
-    |       Latency       |       Interval      | Pipeline|
-    |   min   |    max    |   min   |    max    |   Type  |
-    +---------+-----------+---------+-----------+---------+
-    |  1464529|  433885023|  1464530|  433885024|   none  |
-    +---------+-----------+---------+-----------+---------+
+    +---------+------------+---------+------------+---------+
+    |        Latency       |       Interval       | Pipeline|
+    |   min   |     max    |   min   |     max    |   Type  |
+    +---------+------------+---------+------------+---------+
+    |  1464539|  1714125033|  1464540|  1714125034|   none  |
+    +---------+------------+---------+------------+---------+
 
     + Detail: 
         * Instance: 
@@ -92,7 +92,27 @@
 == Interface
 ================================================================
 * Summary: 
-N/A
++-----------------------------+-----+-----+---------+---------------+--------------+
+|          RTL Ports          | Dir | Bits| Protocol| Source Object |    C Type    |
++-----------------------------+-----+-----+---------+---------------+--------------+
+|s_axi_voicerec_ctrl_AWVALID  |  in |    1|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_AWREADY  | out |    1|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_AWADDR   |  in |    5|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_WVALID   |  in |    1|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_WREADY   | out |    1|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_WDATA    |  in |   32|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_WSTRB    |  in |    4|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_ARVALID  |  in |    1|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_ARREADY  | out |    1|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_ARADDR   |  in |    5|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_RVALID   | out |    1|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_RREADY   |  in |    1|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_RDATA    | out |   32|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_RRESP    | out |    2|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_BVALID   | out |    1|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_BREADY   |  in |    1|  s_axi  | voicerec_ctrl | return value |
+|s_axi_voicerec_ctrl_BRESP    | out |    2|  s_axi  | voicerec_ctrl | return value |
++-----------------------------+-----+-----+---------+---------------+--------------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -142,24 +162,33 @@ ST_1: outSound [1/1] 0.00ns
 :3  %outSound = alloca [8000 x double], align 16
 
 ST_1: stg_7 [2/2] 0.00ns
-:4  call fastcc void @voicerec_preprocessSound([16000 x double]* %inSound, [8000 x double]* %outSound) nounwind
+:7  call fastcc void @voicerec_preprocessSound(double* %voicerec_inSound, [8000 x double]* %outSound)
 
 
  <State 2>: 1.57ns
 ST_2: stg_8 [1/1] 0.00ns
-:0  call void (...)* @_ssdm_op_SpecBitsMap([16000 x double]* %inSound) nounwind, !map !56
+:0  call void (...)* @_ssdm_op_SpecBitsMap(double* %voicerec_inSound), !map !54
 
 ST_2: stg_9 [1/1] 0.00ns
-:1  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !62
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !60
 
 ST_2: stg_10 [1/1] 0.00ns
 :2  call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @voicerec_str) nounwind
 
-ST_2: stg_11 [1/2] 0.00ns
-:4  call fastcc void @voicerec_preprocessSound([16000 x double]* %inSound, [8000 x double]* %outSound) nounwind
+ST_2: stg_11 [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecInterface(double* %voicerec_inSound, [6 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [17 x i8]* @p_str14, [1 x i8]* @p_str25, [1 x i8]* @p_str25)
 
-ST_2: stg_12 [1/1] 1.57ns
-:5  br label %1
+ST_2: stg_12 [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str36, i32 0, i32 0, i32 0, i32 0, [14 x i8]* @p_str4, [1 x i8]* @p_str25, [1 x i8]* @p_str25) nounwind
+
+ST_2: stg_13 [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecMemCore(double* %voicerec_inSound, [1 x i8]* @p_str25, [12 x i8]* @p_str5, [1 x i8]* @p_str25, i32 -1, [1 x i8]* @p_str25, [1 x i8]* @p_str25, [24 x i8]* @p_str6)
+
+ST_2: stg_14 [1/2] 0.00ns
+:7  call fastcc void @voicerec_preprocessSound(double* %voicerec_inSound, [8000 x double]* %outSound)
+
+ST_2: stg_15 [1/1] 1.57ns
+:8  br label %1
 
 
  <State 3>: 1.96ns
@@ -178,10 +207,10 @@ ST_3: empty [1/1] 0.00ns
 ST_3: index_1 [1/1] 1.72ns
 :4  %index_1 = add i6 %index, 1
 
-ST_3: stg_18 [1/1] 0.00ns
+ST_3: stg_21 [1/1] 0.00ns
 :5  br i1 %exitcond1, label %3, label %2
 
-ST_3: stg_19 [2/2] 0.00ns
+ST_3: stg_22 [2/2] 0.00ns
 :0  call fastcc void @voicerec_processChunk(i13 %i, [882 x double]* nocapture @result, i6 %index, [8000 x double]* nocapture %outSound) nounwind
 
 ST_3: i_1 [1/1] 1.96ns
@@ -192,10 +221,10 @@ ST_3: classification [2/2] 0.00ns
 
 
  <State 4>: 0.00ns
-ST_4: stg_22 [1/2] 0.00ns
+ST_4: stg_25 [1/2] 0.00ns
 :0  call fastcc void @voicerec_processChunk(i13 %i, [882 x double]* nocapture @result, i6 %index, [8000 x double]* nocapture %outSound) nounwind
 
-ST_4: stg_23 [1/1] 0.00ns
+ST_4: stg_26 [1/1] 0.00ns
 :2  br label %1
 
 
@@ -203,7 +232,7 @@ ST_4: stg_23 [1/1] 0.00ns
 ST_5: classification [1/2] 0.00ns
 :0  %classification = call fastcc i32 @voicerec_classifySound() nounwind
 
-ST_5: stg_25 [1/1] 0.00ns
+ST_5: stg_28 [1/1] 0.00ns
 :1  ret i32 %classification
 
 

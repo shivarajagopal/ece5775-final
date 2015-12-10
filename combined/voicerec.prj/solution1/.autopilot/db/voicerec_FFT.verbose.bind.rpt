@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'voicerec_FFT'
 ================================================================
-* Date:           Sun Dec  6 17:20:10 2015
+* Date:           Wed Dec  9 22:20:25 2015
 
-* Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
+* Version:        2015.3 (Build 1244743 on Sun May 31 20:30:40 PM 2015)
 * Project:        voicerec.prj
 * Solution:       solution1
 * Product family: zynq
@@ -371,8 +371,8 @@ ST_6: stg_88 [1/1] 0.00ns
 ST_6: slt [1/1] 2.52ns
 _ifconv:0  %slt = icmp slt i32 %j_1, %n
 
-ST_6: rev5 [1/1] 1.37ns
-_ifconv:1  %rev5 = xor i1 %slt, true
+ST_6: rev [1/1] 1.37ns
+_ifconv:1  %rev = xor i1 %slt, true
 
 ST_6: tmp_11 [1/1] 0.00ns
 _ifconv:2  %tmp_11 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %n, i32 1, i32 31)
@@ -381,7 +381,7 @@ ST_6: icmp [1/1] 2.50ns
 _ifconv:3  %icmp = icmp sgt i31 %tmp_11, 0
 
 ST_6: or_cond [1/1] 1.37ns
-_ifconv:4  %or_cond = and i1 %rev5, %icmp
+_ifconv:4  %or_cond = and i1 %rev, %icmp
 
 ST_6: j_6 [1/1] 2.44ns
 _ifconv:5  %j_6 = sub nsw i32 %j_1, %n
@@ -1033,9 +1033,9 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ c]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; mode=0x2fc895d0; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
-Port [ cosVec]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; mode=0x2fc8b2b0; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ sinVec]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; mode=0x2fc8f980; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ c]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; mode=0x7f49f80f8570; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ cosVec]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; mode=0x7f49f80f8b40; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ sinVec]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; mode=0x7f49f80f96d0; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -1082,7 +1082,7 @@ empty_13     (speclooptripcount) [ 000000000000000000000000000000000000000000000
 q_1          (add              ) [ 0011111000000000000000000000000000000000000000]
 stg_88       (br               ) [ 0000000000000000000000000000000000000000000000]
 slt          (icmp             ) [ 0000000000000000000000000000000000000000000000]
-rev5         (xor              ) [ 0000000000000000000000000000000000000000000000]
+rev          (xor              ) [ 0000000000000000000000000000000000000000000000]
 tmp_11       (partselect       ) [ 0000000000000000000000000000000000000000000000]
 icmp         (icmp             ) [ 0000000000000000000000000000000000000000000000]
 or_cond      (and              ) [ 0000000000000000000000000000000000000000000000]
@@ -2244,7 +2244,7 @@ stg_279      (br               ) [ 000000011111111111111111111111111111111111111
 </bind>
 </comp>
 
-<comp id="456" class="1004" name="rev5_fu_456">
+<comp id="456" class="1004" name="rev_fu_456">
 <pin_list>
 <pin id="457" dir="0" index="0" bw="1" slack="0"/>
 <pin id="458" dir="0" index="1" bw="1" slack="0"/>
@@ -2252,7 +2252,7 @@ stg_279      (br               ) [ 000000011111111111111111111111111111111111111
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="rev5/6 "/>
+<opset="rev/6 "/>
 </bind>
 </comp>
 
@@ -3736,7 +3736,7 @@ stg_279      (br               ) [ 000000011111111111111111111111111111111111111
 		q_1 : 1
 		stg_88 : 2
 		slt : 1
-		rev5 : 2
+		rev : 2
 		tmp_11 : 1
 		icmp : 2
 		or_cond : 3
@@ -3867,7 +3867,7 @@ stg_279      (br               ) [ 000000011111111111111111111111111111111111111
 |          |    cp_sum2_fu_694   |    0    |    0    |    11   |
 |          |  cp_addr_rec_fu_709 |    0    |    0    |    39   |
 |----------|---------------------|---------|---------|---------|
-|    xor   |     rev5_fu_456     |    0    |    0    |    1    |
+|    xor   |      rev_fu_456     |    0    |    0    |    1    |
 |          |   wi_1_neg_fu_554   |    0    |    0    |    87   |
 |----------|---------------------|---------|---------|---------|
 |          |   exitcond3_fu_376  |    0    |    0    |    3    |

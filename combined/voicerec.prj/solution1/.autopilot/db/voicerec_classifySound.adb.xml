@@ -724,10 +724,10 @@
 
 <node id="50" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:2  %max_i = phi float [ 0.000000e+00, %2 ], [ %max_1, %._crit_edge.i ]
+:2  %second_max = phi float [ 0.000000e+00, %2 ], [ %max_1, %._crit_edge.i ]
 
 ]]></node>
-<StgValue><ssdm name="max_i"/></StgValue>
+<StgValue><ssdm name="second_max"/></StgValue>
 </operation>
 
 <operation id="52" st_id="8" stage="1" lat="1">
@@ -899,7 +899,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="73" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-._crit_edge.i:16  %tmp_10 = fcmp ogt float %max, %max_i
+._crit_edge.i:16  %tmp_10 = fcmp ogt float %max, %second_max
 
 ]]></node>
 <StgValue><ssdm name="tmp_10"/></StgValue>
@@ -962,10 +962,10 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="63" bw="32" op_0_bw="32">
 <![CDATA[
-._crit_edge.i:6  %max_i_to_int = bitcast float %max_i to i32
+._crit_edge.i:6  %second_max_to_int = bitcast float %second_max to i32
 
 ]]></node>
-<StgValue><ssdm name="max_i_to_int"/></StgValue>
+<StgValue><ssdm name="second_max_to_int"/></StgValue>
 </operation>
 
 <operation id="67" st_id="11" stage="1" lat="1">
@@ -977,7 +977,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="64" bw="8" op_0_bw="8" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge.i:7  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_i_to_int, i32 23, i32 30)
+._crit_edge.i:7  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %second_max_to_int, i32 23, i32 30)
 
 ]]></node>
 <StgValue><ssdm name="tmp_5"/></StgValue>
@@ -992,7 +992,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="65" bw="23" op_0_bw="32">
 <![CDATA[
-._crit_edge.i:8  %tmp_6 = trunc i32 %max_i_to_int to i23
+._crit_edge.i:8  %tmp_6 = trunc i32 %second_max_to_int to i23
 
 ]]></node>
 <StgValue><ssdm name="tmp_6"/></StgValue>
@@ -1142,7 +1142,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="76" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-._crit_edge.i:19  %max_1 = select i1 %tmp_11, float %max, float %max_i
+._crit_edge.i:19  %max_1 = select i1 %tmp_11, float %max, float %second_max
 
 ]]></node>
 <StgValue><ssdm name="max_1"/></StgValue>
@@ -1391,20 +1391,20 @@ guessClassification.exit:0  ret i32 %guess_i
 <dataflow id="199" from="stg_79" to="guess_i" fromId="79" toId="50">
 <BackEdge/>
 </dataflow>
-<dataflow id="201" from="stg_200" to="max_i" fromId="200" toId="51">
+<dataflow id="201" from="stg_200" to="second_max" fromId="200" toId="51">
 <condition id="62">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </dataflow>
-<dataflow id="202" from="stg_48" to="max_i" fromId="48" toId="51">
+<dataflow id="202" from="stg_48" to="second_max" fromId="48" toId="51">
 </dataflow>
-<dataflow id="203" from="max_1" to="max_i" fromId="78" toId="51">
+<dataflow id="203" from="max_1" to="second_max" fromId="78" toId="51">
 <BackEdge/>
 <condition id="63">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </dataflow>
-<dataflow id="204" from="stg_79" to="max_i" fromId="79" toId="51">
+<dataflow id="204" from="stg_79" to="second_max" fromId="79" toId="51">
 <BackEdge/>
 </dataflow>
 <dataflow id="205" from="guess" to="guess_cast1" fromId="49" toId="52">
@@ -1443,7 +1443,7 @@ guessClassification.exit:0  ret i32 %guess_i
 </dataflow>
 <dataflow id="225" from="max" to="tmp_10" fromId="61" toId="62">
 </dataflow>
-<dataflow id="226" from="max_i" to="tmp_10" fromId="51" toId="62">
+<dataflow id="226" from="second_max" to="tmp_10" fromId="51" toId="62">
 </dataflow>
 <dataflow id="227" from="max" to="max_to_int" fromId="61" toId="63">
 </dataflow>
@@ -1457,17 +1457,17 @@ guessClassification.exit:0  ret i32 %guess_i
 </dataflow>
 <dataflow id="235" from="max_to_int" to="tmp_4" fromId="63" toId="65">
 </dataflow>
-<dataflow id="236" from="max_i" to="max_i_to_int" fromId="51" toId="66">
+<dataflow id="236" from="second_max" to="second_max_to_int" fromId="51" toId="66">
 </dataflow>
 <dataflow id="237" from="_ssdm_op_PartSelect.i8.i32.i32.i32" to="tmp_5" fromId="228" toId="67">
 </dataflow>
-<dataflow id="238" from="max_i_to_int" to="tmp_5" fromId="66" toId="67">
+<dataflow id="238" from="second_max_to_int" to="tmp_5" fromId="66" toId="67">
 </dataflow>
 <dataflow id="239" from="stg_231" to="tmp_5" fromId="231" toId="67">
 </dataflow>
 <dataflow id="240" from="stg_233" to="tmp_5" fromId="233" toId="67">
 </dataflow>
-<dataflow id="241" from="max_i_to_int" to="tmp_6" fromId="66" toId="68">
+<dataflow id="241" from="second_max_to_int" to="tmp_6" fromId="66" toId="68">
 </dataflow>
 <dataflow id="242" from="tmp" to="notlhs" fromId="64" toId="69">
 </dataflow>
@@ -1511,7 +1511,7 @@ guessClassification.exit:0  ret i32 %guess_i
 </dataflow>
 <dataflow id="264" from="max" to="max_1" fromId="61" toId="78">
 </dataflow>
-<dataflow id="265" from="max_i" to="max_1" fromId="51" toId="78">
+<dataflow id="265" from="second_max" to="max_1" fromId="51" toId="78">
 </dataflow>
 <dataflow id="266" from="exitcond1" to="stg_2" fromId="15" toId="2">
 </dataflow>

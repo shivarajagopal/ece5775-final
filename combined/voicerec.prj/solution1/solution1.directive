@@ -1,2 +1,26 @@
-<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView"/>
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="voicerec" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="inSound" positionalBoolean="4"/>
+                <option name="core" value="RAM_1P_BRAM"/>
+                <option name="metadata" value="{-bus_bundle voicerec_io}"/>
+            </pragma>
+        </directive>
+        <directive functionName="voicerec" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+                <option name="bundle" value="voicerec_ctrl"/>
+            </pragma>
+        </directive>
+        <directive functionName="voicerec" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="m_axi" value="" positionalBoolean="mode"/>
+                <option name="port" value="inSound" positionalBoolean="4"/>
+                <option name="bundle" value="voicerec_inSound"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
 

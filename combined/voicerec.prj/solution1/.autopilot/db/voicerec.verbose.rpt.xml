@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'voicerec'" level="0">
-<item name = "Date">Sun Dec  6 17:20:15 2015
+<item name = "Date">Wed Dec  9 22:20:30 2015
 </item>
-<item name = "Version">2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)</item>
+<item name = "Version">2015.3 (Build 1244743 on Sun May 31 20:30:40 PM 2015)</item>
 <item name = "Project">voicerec.prj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -24,16 +24,16 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1464529, 433885023, 1464530, 433885024, none</column>
+<column name="">1464539, 1714125033, 1464540, 1714125034, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_voicerec_processChunk_fu_86">voicerec_processChunk, 18841, 2908095, 18841, 2908095, none</column>
-<column name="grp_voicerec_classifySound_fu_111">voicerec_classifySound, 251091, 251091, 251091, 251091, none</column>
-<column name="grp_voicerec_preprocessSound_fu_127">voicerec_preprocessSound, 64012, 256240012, 64012, 256240012, none</column>
+<column name="grp_voicerec_processChunk_fu_106">voicerec_processChunk, 18841, 2908095, 18841, 2908095, none</column>
+<column name="grp_voicerec_classifySound_fu_131">voicerec_classifySound, 251091, 251091, 251091, 251091, none</column>
+<column name="grp_voicerec_preprocessSound_fu_147">voicerec_preprocessSound, 64022, 1536480022, 64022, 1536480022, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -52,21 +52,23 @@
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="Expression">-, -, 0, 22</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">85, 114, 15753, 24910</column>
+<column name="Instance">85, 114, 16444, 25831</column>
 <column name="Memory">36, -, 0, 0</column>
-<column name="Multiplexer">-, -, -, 49</column>
+<column name="Multiplexer">-, -, -, 47</column>
 <column name="Register">-, -, 46, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">43, 51, 14, 46</specialColumn>
+<specialColumn name="Utilization (%)">43, 51, 15, 48</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="grp_voicerec_classifySound_fu_111">voicerec_classifySound, 69, 34, 7077, 10161</column>
-<column name="grp_voicerec_preprocessSound_fu_127">voicerec_preprocessSound, 0, 0, 499, 1318</column>
-<column name="grp_voicerec_processChunk_fu_86">voicerec_processChunk, 16, 80, 8177, 13431</column>
+<column name="grp_voicerec_classifySound_fu_131">voicerec_classifySound, 69, 34, 7077, 10161</column>
+<column name="grp_voicerec_preprocessSound_fu_147">voicerec_preprocessSound, 0, 0, 574, 1435</column>
+<column name="grp_voicerec_processChunk_fu_106">voicerec_processChunk, 16, 80, 8177, 13431</column>
+<column name="voicerec_voicerec_ctrl_s_axi_U">voicerec_voicerec_ctrl_s_axi, 0, 0, 68, 104</column>
+<column name="voicerec_voicerec_inSound_m_axi_U">voicerec_voicerec_inSound_m_axi, 0, 0, 548, 700</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -81,18 +83,16 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_1_fu_147_p2">+, 0, 0, 13, 13, 8</column>
-<column name="index_1_fu_141_p2">+, 0, 0, 6, 6, 1</column>
-<column name="exitcond1_fu_135_p2">icmp, 0, 0, 3, 6, 3</column>
+<column name="i_1_fu_167_p2">+, 0, 0, 13, 13, 8</column>
+<column name="index_1_fu_161_p2">+, 0, 0, 6, 6, 1</column>
+<column name="exitcond1_fu_155_p2">icmp, 0, 0, 3, 6, 3</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">1, 6, 1, 6</column>
-<column name="i_reg_62">13, 2, 13, 26</column>
-<column name="inSound_ce0">1, 2, 1, 2</column>
-<column name="inSound_we0">1, 2, 1, 2</column>
-<column name="index_reg_74">6, 2, 6, 12</column>
+<column name="i_reg_82">13, 2, 13, 26</column>
+<column name="index_reg_94">6, 2, 6, 12</column>
 <column name="outSound_address0">13, 3, 13, 39</column>
 <column name="outSound_ce0">1, 3, 1, 3</column>
 <column name="outSound_we0">1, 2, 1, 2</column>
@@ -104,13 +104,13 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">5, 0, 5, 0</column>
-<column name="grp_voicerec_classifySound_fu_111_ap_start_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_voicerec_preprocessSound_fu_127_ap_start_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_voicerec_processChunk_fu_86_ap_start_ap_start_reg">1, 0, 1, 0</column>
-<column name="i_1_reg_161">13, 0, 13, 0</column>
-<column name="i_reg_62">13, 0, 13, 0</column>
-<column name="index_1_reg_156">6, 0, 6, 0</column>
-<column name="index_reg_74">6, 0, 6, 0</column>
+<column name="grp_voicerec_classifySound_fu_131_ap_start_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_voicerec_preprocessSound_fu_147_ap_start_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_voicerec_processChunk_fu_106_ap_start_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_1_reg_181">13, 0, 13, 0</column>
+<column name="i_reg_82">13, 0, 13, 0</column>
+<column name="index_1_reg_176">6, 0, 6, 0</column>
+<column name="index_reg_94">6, 0, 6, 0</column>
 </table>
 </item>
 </section>
@@ -120,18 +120,71 @@
 <section name = "Interface" level="0">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_voicerec_ctrl_AWVALID">in, 1, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_AWREADY">out, 1, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_AWADDR">in, 5, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_WVALID">in, 1, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_WREADY">out, 1, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_WDATA">in, 32, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_WSTRB">in, 4, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_ARVALID">in, 1, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_ARREADY">out, 1, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_ARADDR">in, 5, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_RVALID">out, 1, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_RREADY">in, 1, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_RDATA">out, 32, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_RRESP">out, 2, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_BVALID">out, 1, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_BREADY">in, 1, s_axi, voicerec_ctrl, return value</column>
+<column name="s_axi_voicerec_ctrl_BRESP">out, 2, s_axi, voicerec_ctrl, return value</column>
 <column name="ap_clk">in, 1, ap_ctrl_hs, voicerec, return value</column>
-<column name="ap_rst">in, 1, ap_ctrl_hs, voicerec, return value</column>
-<column name="ap_start">in, 1, ap_ctrl_hs, voicerec, return value</column>
-<column name="ap_done">out, 1, ap_ctrl_hs, voicerec, return value</column>
-<column name="ap_idle">out, 1, ap_ctrl_hs, voicerec, return value</column>
-<column name="ap_ready">out, 1, ap_ctrl_hs, voicerec, return value</column>
-<column name="ap_return">out, 32, ap_ctrl_hs, voicerec, return value</column>
-<column name="inSound_address0">out, 14, ap_memory, inSound, array</column>
-<column name="inSound_ce0">out, 1, ap_memory, inSound, array</column>
-<column name="inSound_we0">out, 1, ap_memory, inSound, array</column>
-<column name="inSound_d0">out, 64, ap_memory, inSound, array</column>
-<column name="inSound_q0">in, 64, ap_memory, inSound, array</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, voicerec, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, voicerec, return value</column>
+<column name="m_axi_voicerec_inSound_AWVALID">out, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_AWREADY">in, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_AWADDR">out, 32, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_AWID">out, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_AWLEN">out, 8, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_AWSIZE">out, 3, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_AWBURST">out, 2, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_AWLOCK">out, 2, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_AWCACHE">out, 4, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_AWPROT">out, 3, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_AWQOS">out, 4, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_AWREGION">out, 4, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_AWUSER">out, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_WVALID">out, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_WREADY">in, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_WDATA">out, 64, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_WSTRB">out, 8, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_WLAST">out, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_WID">out, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_WUSER">out, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_ARVALID">out, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_ARREADY">in, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_ARADDR">out, 32, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_ARID">out, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_ARLEN">out, 8, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_ARSIZE">out, 3, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_ARBURST">out, 2, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_ARLOCK">out, 2, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_ARCACHE">out, 4, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_ARPROT">out, 3, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_ARQOS">out, 4, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_ARREGION">out, 4, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_ARUSER">out, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_RVALID">in, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_RREADY">out, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_RDATA">in, 64, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_RLAST">in, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_RID">in, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_RUSER">in, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_RRESP">in, 2, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_BVALID">in, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_BREADY">out, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_BRESP">in, 2, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_BID">in, 1, m_axi, voicerec_inSound, pointer</column>
+<column name="m_axi_voicerec_inSound_BUSER">in, 1, m_axi, voicerec_inSound, pointer</column>
 </table>
 </item>
 </section>

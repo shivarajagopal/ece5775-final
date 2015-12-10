@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'voicerec_classifySound'
 ================================================================
-* Date:           Sun Dec  6 17:20:11 2015
+* Date:           Wed Dec  9 22:20:26 2015
 
-* Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
+* Version:        2015.3 (Build 1244743 on Sun May 31 20:30:40 PM 2015)
 * Project:        voicerec.prj
 * Solution:       solution1
 * Product family: zynq
@@ -285,8 +285,8 @@ ST_8: guess [1/1] 0.00ns
 ST_8: guess_i [1/1] 0.00ns
 :1  %guess_i = phi i32 [ undef, %2 ], [ %guess_1, %._crit_edge.i ]
 
-ST_8: max_i [1/1] 0.00ns
-:2  %max_i = phi float [ 0.000000e+00, %2 ], [ %max_1, %._crit_edge.i ]
+ST_8: second_max [1/1] 0.00ns
+:2  %second_max = phi float [ 0.000000e+00, %2 ], [ %max_1, %._crit_edge.i ]
 
 ST_8: guess_cast1 [1/1] 0.00ns
 :3  %guess_cast1 = zext i3 %guess to i32
@@ -323,7 +323,7 @@ ST_9: max [1/2] 2.39ns
 
  <State 10>: 6.79ns
 ST_10: tmp_10 [1/1] 6.79ns
-._crit_edge.i:16  %tmp_10 = fcmp ogt float %max, %max_i
+._crit_edge.i:16  %tmp_10 = fcmp ogt float %max, %second_max
 
 
  <State 11>: 7.87ns
@@ -336,14 +336,14 @@ ST_11: tmp [1/1] 0.00ns
 ST_11: tmp_4 [1/1] 0.00ns
 ._crit_edge.i:5  %tmp_4 = trunc i32 %max_to_int to i23
 
-ST_11: max_i_to_int [1/1] 0.00ns
-._crit_edge.i:6  %max_i_to_int = bitcast float %max_i to i32
+ST_11: second_max_to_int [1/1] 0.00ns
+._crit_edge.i:6  %second_max_to_int = bitcast float %second_max to i32
 
 ST_11: tmp_5 [1/1] 0.00ns
-._crit_edge.i:7  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_i_to_int, i32 23, i32 30)
+._crit_edge.i:7  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %second_max_to_int, i32 23, i32 30)
 
 ST_11: tmp_6 [1/1] 0.00ns
-._crit_edge.i:8  %tmp_6 = trunc i32 %max_i_to_int to i23
+._crit_edge.i:8  %tmp_6 = trunc i32 %second_max_to_int to i23
 
 ST_11: notlhs [1/1] 2.00ns
 ._crit_edge.i:9  %notlhs = icmp ne i8 %tmp, -1
@@ -373,7 +373,7 @@ ST_11: guess_1 [1/1] 1.37ns
 ._crit_edge.i:18  %guess_1 = select i1 %tmp_11, i32 %guess_cast1, i32 %guess_i
 
 ST_11: max_1 [1/1] 1.37ns
-._crit_edge.i:19  %max_1 = select i1 %tmp_11, float %max, float %max_i
+._crit_edge.i:19  %max_1 = select i1 %tmp_11, float %max, float %second_max
 
 ST_11: stg_79 [1/1] 0.00ns
 ._crit_edge.i:20  br label %3

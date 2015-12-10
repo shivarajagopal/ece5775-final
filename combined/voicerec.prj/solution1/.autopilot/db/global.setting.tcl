@@ -12,9 +12,10 @@ set noPortSwitchingFlag 0
 set FloatingPointFlag 1
 set FftOrFirFlag 0
 set NbRWValue 0
+set intNbAccess 0
 set NewDSPMapping 1
 set HasDSPModule 0
-set ResetLevelFlag 1
+set ResetLevelFlag 0
 set ResetStyle "control"
 set ResetSyncFlag 1
 set ResetRegisterFlag 0
@@ -42,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
 set SourceFiles {sc {} c {../../neuralNetworkSynth.cpp ../../voicerec.cpp}}
 set SourceFlags {sc {} c {{} {}}}
-set DirectiveFile {/home/student/svr24/ece5775/final_proj/combined/voicerec.prj/solution1/solution1.directive}
+set DirectiveFile {/home/rz252/tjp79/ece5775-final/combined/voicerec.prj/solution1/solution1.directive}
 set TBFiles {verilog {../../data ../../voicerec_test.cpp} bc {../../data ../../voicerec_test.cpp} sc {../../data ../../voicerec_test.cpp} vhdl {../../data ../../voicerec_test.cpp} c {} cas {../../data ../../voicerec_test.cpp}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

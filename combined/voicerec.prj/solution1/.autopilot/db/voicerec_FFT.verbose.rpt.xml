@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'voicerec_FFT'" level="0">
-<item name = "Date">Sun Dec  6 17:20:13 2015
+<item name = "Date">Wed Dec  9 22:20:28 2015
 </item>
-<item name = "Version">2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)</item>
+<item name = "Version">2015.3 (Build 1244743 on Sun May 31 20:30:40 PM 2015)</item>
 <item name = "Project">voicerec.prj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -116,7 +116,7 @@
 <column name="tmp_28_fu_427_p2">or, 0, 0, 44, 32, 1</column>
 <column name="tmp_33_fu_651_p2">or, 0, 0, 8, 8, 1</column>
 <column name="tmp_40_cast_fu_688_p2">or, 0, 0, 13, 11, 1</column>
-<column name="rev5_fu_456_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="rev_fu_456_p2">xor, 0, 0, 2, 1, 2</column>
 <column name="wi_1_neg_fu_554_p2">xor, 0, 0, 89, 64, 65</column>
 </table>
 </item>

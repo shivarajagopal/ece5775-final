@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'voicerec_classifySound'
 ================================================================
-* Date:           Sun Dec  6 17:20:15 2015
+* Date:           Wed Dec  9 22:20:29 2015
 
-* Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
+* Version:        2015.3 (Build 1244743 on Sun May 31 20:30:40 PM 2015)
 * Project:        voicerec.prj
 * Solution:       solution1
 * Product family: zynq
@@ -137,10 +137,10 @@
     |guess_reg_125       |   3|          2|    3|          6|
     |i_reg_103           |   6|          2|    6|         12|
     |j_reg_114           |   4|          2|    4|          8|
-    |max_i_reg_148       |  32|          2|   32|         64|
     |output_r_address0   |   2|          3|    2|          6|
     |output_r_ce0        |   1|          3|    1|          3|
     |output_r_we0        |   1|          2|    1|          2|
+    |second_max_reg_148  |  32|          2|   32|         64|
     +--------------------+----+-----------+-----+-----------+
     |Total               |  98|         36|   93|        210|
     +--------------------+----+-----------+-----+-----------+
@@ -160,10 +160,10 @@
     |j_1_reg_414                                            |   4|   0|    4|          0|
     |j_2_reg_447                                            |   3|   0|    3|          0|
     |j_reg_114                                              |   4|   0|    4|          0|
-    |max_i_reg_148                                          |  32|   0|   32|          0|
     |max_reg_457                                            |  32|   0|   32|          0|
     |result_addr1_cast_reg_406                              |  11|   0|   12|          1|
     |result_load_reg_429                                    |  64|   0|   64|          0|
+    |second_max_reg_148                                     |  32|   0|   32|          0|
     |tmp_10_reg_464                                         |   1|   0|    1|          0|
     |tmp_1_reg_434                                          |  32|   0|   32|          0|
     |tmp_2_reg_424                                          |  11|   0|   11|          0|
@@ -382,8 +382,8 @@ ST_8: guess [1/1] 0.00ns
 ST_8: guess_i [1/1] 0.00ns
 :1  %guess_i = phi i32 [ undef, %2 ], [ %guess_1, %._crit_edge.i ]
 
-ST_8: max_i [1/1] 0.00ns
-:2  %max_i = phi float [ 0.000000e+00, %2 ], [ %max_1, %._crit_edge.i ]
+ST_8: second_max [1/1] 0.00ns
+:2  %second_max = phi float [ 0.000000e+00, %2 ], [ %max_1, %._crit_edge.i ]
 
 ST_8: guess_cast1 [1/1] 0.00ns
 :3  %guess_cast1 = zext i3 %guess to i32
@@ -420,7 +420,7 @@ ST_9: max [1/2] 2.39ns
 
  <State 10>: 6.79ns
 ST_10: tmp_10 [1/1] 6.79ns
-._crit_edge.i:16  %tmp_10 = fcmp ogt float %max, %max_i
+._crit_edge.i:16  %tmp_10 = fcmp ogt float %max, %second_max
 
 
  <State 11>: 7.87ns
@@ -433,14 +433,14 @@ ST_11: tmp [1/1] 0.00ns
 ST_11: tmp_4 [1/1] 0.00ns
 ._crit_edge.i:5  %tmp_4 = trunc i32 %max_to_int to i23
 
-ST_11: max_i_to_int [1/1] 0.00ns
-._crit_edge.i:6  %max_i_to_int = bitcast float %max_i to i32
+ST_11: second_max_to_int [1/1] 0.00ns
+._crit_edge.i:6  %second_max_to_int = bitcast float %second_max to i32
 
 ST_11: tmp_5 [1/1] 0.00ns
-._crit_edge.i:7  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_i_to_int, i32 23, i32 30)
+._crit_edge.i:7  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %second_max_to_int, i32 23, i32 30)
 
 ST_11: tmp_6 [1/1] 0.00ns
-._crit_edge.i:8  %tmp_6 = trunc i32 %max_i_to_int to i23
+._crit_edge.i:8  %tmp_6 = trunc i32 %second_max_to_int to i23
 
 ST_11: notlhs [1/1] 2.00ns
 ._crit_edge.i:9  %notlhs = icmp ne i8 %tmp, -1
@@ -470,7 +470,7 @@ ST_11: guess_1 [1/1] 1.37ns
 ._crit_edge.i:18  %guess_1 = select i1 %tmp_11, i32 %guess_cast1, i32 %guess_i
 
 ST_11: max_1 [1/1] 1.37ns
-._crit_edge.i:19  %max_1 = select i1 %tmp_11, float %max, float %max_i
+._crit_edge.i:19  %max_1 = select i1 %tmp_11, float %max, float %second_max
 
 ST_11: stg_79 [1/1] 0.00ns
 ._crit_edge.i:20  br label %3
@@ -489,12 +489,12 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ result]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=0; extern=0; dir=0; type=1; mode=0x2fc7a520; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ input_r]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=2; type=1; mode=0x2fc7aaf0; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ hidden]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=2; type=1; mode=0x2fc7b0c0; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ weightIH]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; mode=0x2fc7b690; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ output_r]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=0; extern=0; dir=2; type=1; mode=0x2fc7bc60; pingpong=0; private_global=1; linkage=0; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ weightHO]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; mode=0x2fc7c230; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ result]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=0; extern=0; dir=0; type=1; mode=0x7f49f80d9b20; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ input_r]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=2; type=1; mode=0x7f49f80da0f0; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ hidden]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=2; type=1; mode=0x7f49f80dac90; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ weightIH]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; mode=0x7f49f80db9c0; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ output_r]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=0; extern=0; dir=2; type=1; mode=0x7f49f80dc550; pingpong=0; private_global=1; linkage=0; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ weightHO]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; mode=0x7f49f80dd3d0; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -538,7 +538,7 @@ stg_47            (call             ) [ 000000000000]
 stg_48            (br               ) [ 000000011111]
 guess             (phi              ) [ 000000001000]
 guess_i           (phi              ) [ 000000001111]
-max_i             (phi              ) [ 000000001111]
+second_max        (phi              ) [ 000000001111]
 guess_cast1       (zext             ) [ 000000000111]
 exitcond_i        (icmp             ) [ 000000001111]
 empty_8           (speclooptripcount) [ 000000000000]
@@ -552,7 +552,7 @@ tmp_10            (fcmp             ) [ 000000000001]
 max_to_int        (bitcast          ) [ 000000000000]
 tmp               (partselect       ) [ 000000000000]
 tmp_4             (trunc            ) [ 000000000000]
-max_i_to_int      (bitcast          ) [ 000000000000]
+second_max_to_int (bitcast          ) [ 000000000000]
 tmp_5             (partselect       ) [ 000000000000]
 tmp_6             (trunc            ) [ 000000000000]
 notlhs            (icmp             ) [ 000000000000]
@@ -1047,17 +1047,17 @@ stg_79            (br               ) [ 000000011111]
 </bind>
 </comp>
 
-<comp id="148" class="1005" name="max_i_reg_148">
+<comp id="148" class="1005" name="second_max_reg_148">
 <pin_list>
 <pin id="149" dir="0" index="0" bw="32" slack="1"/>
 <pin id="150" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="max_i (phireg) "/>
+<opset="second_max (phireg) "/>
 </bind>
 </comp>
 
-<comp id="152" class="1004" name="max_i_phi_fu_152">
+<comp id="152" class="1004" name="second_max_phi_fu_152">
 <pin_list>
 <pin id="153" dir="0" index="0" bw="32" slack="1"/>
 <pin id="154" dir="0" index="1" bw="0" slack="2147483647"/>
@@ -1067,7 +1067,7 @@ stg_79            (br               ) [ 000000011111]
 </pin_list>
 <bind>
 <opcode="phi(47) " fcode="phi"/>
-<opset="max_i/8 "/>
+<opset="second_max/8 "/>
 </bind>
 </comp>
 
@@ -1402,14 +1402,14 @@ stg_79            (br               ) [ 000000011111]
 </bind>
 </comp>
 
-<comp id="314" class="1004" name="max_i_to_int_fu_314">
+<comp id="314" class="1004" name="second_max_to_int_fu_314">
 <pin_list>
 <pin id="315" dir="0" index="0" bw="32" slack="3"/>
 <pin id="316" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitcast(44) " fcode="bitcast"/>
-<opset="max_i_to_int/11 "/>
+<opset="second_max_to_int/11 "/>
 </bind>
 </comp>
 
@@ -2122,12 +2122,12 @@ Memories:
 |       j_2_reg_447       |    3   |
 |        j_reg_114        |    4   |
 |      max_1_reg_474      |   32   |
-|      max_i_reg_148      |   32   |
 |       max_reg_457       |   32   |
 |   output_addr_reg_452   |    2   |
 |result_addr1_cast_reg_406|   12   |
 |   result_addr_reg_419   |   10   |
 |   result_load_reg_429   |   64   |
+|    second_max_reg_148   |   32   |
 |      tmp_10_reg_464     |    1   |
 |      tmp_1_reg_434      |   32   |
 |      tmp_2_reg_424      |   11   |
@@ -2137,16 +2137,16 @@ Memories:
 +-------------------------+--------+
 
 * Multiplexer (MUX) list: 
-|------------------|------|------|------|--------||---------||---------|
-|       Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
-|------------------|------|------|------|--------||---------||---------|
-| grp_access_fu_75 |  p0  |   2  |  10  |   20   ||    10   |
-| grp_access_fu_98 |  p0  |   2  |   2  |    4   ||    2    |
-|  guess_i_reg_136 |  p0  |   2  |  32  |   64   ||    32   |
-|   max_i_reg_148  |  p0  |   2  |  32  |   64   ||    32   |
-|------------------|------|------|------|--------||---------||---------|
-|       Total      |      |      |      |   152  ||  6.284  ||    76   |
-|------------------|------|------|------|--------||---------||---------|
+|--------------------|------|------|------|--------||---------||---------|
+|        Comp        |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|--------------------|------|------|------|--------||---------||---------|
+|  grp_access_fu_75  |  p0  |   2  |  10  |   20   ||    10   |
+|  grp_access_fu_98  |  p0  |   2  |   2  |    4   ||    2    |
+|   guess_i_reg_136  |  p0  |   2  |  32  |   64   ||    32   |
+| second_max_reg_148 |  p0  |   2  |  32  |   64   ||    32   |
+|--------------------|------|------|------|--------||---------||---------|
+|        Total       |      |      |      |   152  ||  6.284  ||    76   |
+|--------------------|------|------|------|--------||---------||---------|
 
 
 

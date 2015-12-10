@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'voicerec_processChunk'" level="0">
-<item name = "Date">Sun Dec  6 17:20:11 2015
+<item name = "Date">Wed Dec  9 22:20:25 2015
 </item>
-<item name = "Version">2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)</item>
+<item name = "Version">2015.3 (Build 1244743 on Sun May 31 20:30:40 PM 2015)</item>
 <item name = "Project">voicerec.prj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>

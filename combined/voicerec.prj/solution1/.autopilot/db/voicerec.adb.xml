@@ -3,33 +3,33 @@
 
 <trans_list>
 
-<trans id="26" from="1" to="2">
+<trans id="29" from="1" to="2">
 <condition id="9">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="27" from="2" to="3">
+<trans id="30" from="2" to="3">
 <condition id="11">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="28" from="3" to="4">
+<trans id="31" from="3" to="4">
 <condition id="13">
 <or_exp><and_exp><literal name="exitcond1" val="0"/>
 </and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="29" from="3" to="5">
+<trans id="32" from="3" to="5">
 <condition id="12">
 <or_exp><and_exp><literal name="exitcond1" val="1"/>
 </and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="31" from="4" to="3">
+<trans id="34" from="4" to="3">
 <condition id="16">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
@@ -65,9 +65,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="19" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64">
+<node id="22" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-:4  call fastcc void @voicerec_preprocessSound([16000 x double]* %inSound, [8000 x double]* %outSound) nounwind
+:7  call fastcc void @voicerec_preprocessSound(double* %voicerec_inSound, [8000 x double]* %outSound)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -85,7 +85,7 @@
 
 <node id="15" bw="0" op_0_bw="0" op_1_bw="64">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecBitsMap([16000 x double]* %inSound) nounwind, !map !56
+:0  call void (...)* @_ssdm_op_SpecBitsMap(double* %voicerec_inSound), !map !54
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -100,7 +100,7 @@
 
 <node id="16" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-:1  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !62
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !60
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -121,16 +121,16 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="11" st_id="2" stage="1" lat="2">
-<core></core>
+<operation id="11" st_id="2" stage="1" lat="1">
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="19" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64">
+<node id="19" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-:4  call fastcc void @voicerec_preprocessSound([16000 x double]* %inSound, [8000 x double]* %outSound) nounwind
+:4  call void (...)* @_ssdm_op_SpecInterface(double* %voicerec_inSound, [6 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [17 x i8]* @p_str14, [1 x i8]* @p_str25, [1 x i8]* @p_str25)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -143,9 +143,54 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="20" bw="0" op_0_bw="0">
+<node id="20" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-:5  br label %1
+:5  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str36, i32 0, i32 0, i32 0, i32 0, [14 x i8]* @p_str4, [1 x i8]* @p_str25, [1 x i8]* @p_str25) nounwind
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="13" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="21" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="8" op_7_bw="8" op_8_bw="8">
+<![CDATA[
+:6  call void (...)* @_ssdm_op_SpecMemCore(double* %voicerec_inSound, [1 x i8]* @p_str25, [12 x i8]* @p_str5, [1 x i8]* @p_str25, i32 -1, [1 x i8]* @p_str25, [1 x i8]* @p_str25, [24 x i8]* @p_str6)
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="14" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="22" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:7  call fastcc void @voicerec_preprocessSound(double* %voicerec_inSound, [8000 x double]* %outSound)
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="15" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="23" bw="0" op_0_bw="0">
+<![CDATA[
+:8  br label %1
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -154,51 +199,6 @@
 
 <state id="3" st_id="3">
 
-<operation id="13" st_id="3" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="2">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<node id="22" bw="13" op_0_bw="13" op_1_bw="0">
-<![CDATA[
-:0  %i = phi i13 [ 0, %0 ], [ %i_1, %2 ]
-
-]]></node>
-<StgValue><ssdm name="i"/></StgValue>
-</operation>
-
-<operation id="14" st_id="3" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="2">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<node id="23" bw="6" op_0_bw="6" op_1_bw="0">
-<![CDATA[
-:1  %index = phi i6 [ 0, %0 ], [ %index_1, %2 ]
-
-]]></node>
-<StgValue><ssdm name="index"/></StgValue>
-</operation>
-
-<operation id="15" st_id="3" stage="1" lat="1">
-<core>Cmp</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="2">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<node id="24" bw="1" op_0_bw="6" op_1_bw="6">
-<![CDATA[
-:2  %exitcond1 = icmp eq i6 %index, -3
-
-]]></node>
-<StgValue><ssdm name="exitcond1"/></StgValue>
-</operation>
-
 <operation id="16" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
@@ -206,7 +206,52 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="25" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
+<node id="25" bw="13" op_0_bw="13" op_1_bw="0">
+<![CDATA[
+:0  %i = phi i13 [ 0, %0 ], [ %i_1, %2 ]
+
+]]></node>
+<StgValue><ssdm name="i"/></StgValue>
+</operation>
+
+<operation id="17" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="2">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="26" bw="6" op_0_bw="6" op_1_bw="0">
+<![CDATA[
+:1  %index = phi i6 [ 0, %0 ], [ %index_1, %2 ]
+
+]]></node>
+<StgValue><ssdm name="index"/></StgValue>
+</operation>
+
+<operation id="18" st_id="3" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="2">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="27" bw="1" op_0_bw="6" op_1_bw="6">
+<![CDATA[
+:2  %exitcond1 = icmp eq i6 %index, -3
+
+]]></node>
+<StgValue><ssdm name="exitcond1"/></StgValue>
+</operation>
+
+<operation id="19" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="2">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="28" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
 :3  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 61, i64 61, i64 61) nounwind
 
@@ -214,14 +259,14 @@
 <StgValue><ssdm name="empty"/></StgValue>
 </operation>
 
-<operation id="17" st_id="3" stage="1" lat="1">
+<operation id="20" st_id="3" stage="1" lat="1">
 <core>AddSub</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="2">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="26" bw="6" op_0_bw="6" op_1_bw="6">
+<node id="29" bw="6" op_0_bw="6" op_1_bw="6">
 <![CDATA[
 :4  %index_1 = add i6 %index, 1
 
@@ -229,14 +274,14 @@
 <StgValue><ssdm name="index_1"/></StgValue>
 </operation>
 
-<operation id="18" st_id="3" stage="1" lat="1">
+<operation id="21" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="2">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="27" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<node id="30" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
 :5  br i1 %exitcond1, label %3, label %2
 
@@ -244,7 +289,7 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="19" st_id="3" stage="2" lat="2">
+<operation id="22" st_id="3" stage="2" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="4">
@@ -252,7 +297,7 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="29" bw="0" op_0_bw="0" op_1_bw="13" op_2_bw="64" op_3_bw="6" op_4_bw="64">
+<node id="32" bw="0" op_0_bw="0" op_1_bw="13" op_2_bw="64" op_3_bw="6" op_4_bw="64">
 <![CDATA[
 :0  call fastcc void @voicerec_processChunk(i13 %i, [882 x double]* nocapture @result, i6 %index, [8000 x double]* nocapture %outSound) nounwind
 
@@ -260,7 +305,7 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="20" st_id="3" stage="1" lat="1">
+<operation id="23" st_id="3" stage="1" lat="1">
 <core>AddSub</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="4">
@@ -268,7 +313,7 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="30" bw="13" op_0_bw="13" op_1_bw="13">
+<node id="33" bw="13" op_0_bw="13" op_1_bw="13">
 <![CDATA[
 :1  %i_1 = add i13 %i, 128
 
@@ -276,7 +321,7 @@
 <StgValue><ssdm name="i_1"/></StgValue>
 </operation>
 
-<operation id="21" st_id="3" stage="2" lat="2">
+<operation id="24" st_id="3" stage="2" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="6">
@@ -284,7 +329,7 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="33" bw="32" op_0_bw="32">
+<node id="36" bw="32" op_0_bw="32">
 <![CDATA[
 :0  %classification = call fastcc i32 @voicerec_classifySound() nounwind
 
@@ -295,14 +340,14 @@
 
 <state id="4" st_id="4">
 
-<operation id="22" st_id="4" stage="1" lat="2">
+<operation id="25" st_id="4" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="7">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="29" bw="0" op_0_bw="0" op_1_bw="13" op_2_bw="64" op_3_bw="6" op_4_bw="64">
+<node id="32" bw="0" op_0_bw="0" op_1_bw="13" op_2_bw="64" op_3_bw="6" op_4_bw="64">
 <![CDATA[
 :0  call fastcc void @voicerec_processChunk(i13 %i, [882 x double]* nocapture @result, i6 %index, [8000 x double]* nocapture %outSound) nounwind
 
@@ -310,14 +355,14 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="23" st_id="4" stage="1" lat="1">
+<operation id="26" st_id="4" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="7">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="31" bw="0" op_0_bw="0">
+<node id="34" bw="0" op_0_bw="0">
 <![CDATA[
 :2  br label %1
 
@@ -328,14 +373,14 @@
 
 <state id="5" st_id="5">
 
-<operation id="24" st_id="5" stage="1" lat="2">
+<operation id="27" st_id="5" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="8">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="33" bw="32" op_0_bw="32">
+<node id="36" bw="32" op_0_bw="32">
 <![CDATA[
 :0  %classification = call fastcc i32 @voicerec_classifySound() nounwind
 
@@ -343,14 +388,14 @@
 <StgValue><ssdm name="classification"/></StgValue>
 </operation>
 
-<operation id="25" st_id="5" stage="1" lat="1">
+<operation id="28" st_id="5" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="8">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="34" bw="0" op_0_bw="32">
+<node id="37" bw="0" op_0_bw="32">
 <![CDATA[
 :1  ret i32 %classification
 
@@ -362,59 +407,58 @@
 
 
 <ports>
-<port id="33" name="inSound" dir="2" iftype="1">
-<core>RAM</core><StgValue><ssdm name="inSound"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<port id="36" name="voicerec_inSound" dir="2" iftype="4">
+<core>NULL</core><StgValue><ssdm name="voicerec_inSound"/></StgValue>
 </port>
-<port id="34" name="c" dir="2" iftype="1">
+<port id="37" name="c" dir="2" iftype="1">
 <core>RAM</core><StgValue><ssdm name="c"/><MemPortTyVec>2 2 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="35" name="cosVec" dir="0" iftype="1">
+<port id="38" name="cosVec" dir="0" iftype="1">
 <core>ROM_nP</core><StgValue><ssdm name="cosVec"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="36" name="sinVec" dir="0" iftype="1">
+<port id="39" name="sinVec" dir="0" iftype="1">
 <core>ROM_nP</core><StgValue><ssdm name="sinVec"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="37" name="d" dir="2" iftype="1">
+<port id="40" name="d" dir="2" iftype="1">
 <core>RAM</core><StgValue><ssdm name="d"/><MemPortTyVec>2 3 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="38" name="e" dir="2" iftype="1">
+<port id="41" name="e" dir="2" iftype="1">
 <core>RAM</core><StgValue><ssdm name="e"/><MemPortTyVec>2 3 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="39" name="mell" dir="0" iftype="1">
+<port id="42" name="mell" dir="0" iftype="1">
 <core>ROM_nP</core><StgValue><ssdm name="mell"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="40" name="dctMatrix" dir="0" iftype="1">
+<port id="43" name="dctMatrix" dir="0" iftype="1">
 <core>ROM_nP</core><StgValue><ssdm name="dctMatrix"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="41" name="result" dir="2" iftype="1">
+<port id="44" name="result" dir="2" iftype="1">
 <core>RAM</core><StgValue><ssdm name="result"/><MemPortTyVec>2 3 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="42" name="input_r" dir="2" iftype="1">
+<port id="45" name="input_r" dir="2" iftype="1">
 <core>RAM</core><StgValue><ssdm name="input_r"/><MemPortTyVec>2 3 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="43" name="hidden" dir="2" iftype="1">
+<port id="46" name="hidden" dir="2" iftype="1">
 <core>RAM</core><StgValue><ssdm name="hidden"/><MemPortTyVec>2 3 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="44" name="weightIH" dir="0" iftype="1">
+<port id="47" name="weightIH" dir="0" iftype="1">
 <core>ROM_nP</core><StgValue><ssdm name="weightIH"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="45" name="output_r" dir="2" iftype="1">
+<port id="48" name="output_r" dir="2" iftype="1">
 <core>RAM</core><StgValue><ssdm name="output_r"/><MemPortTyVec>2 3 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="46" name="weightHO" dir="0" iftype="1">
+<port id="49" name="weightHO" dir="0" iftype="1">
 <core>ROM_nP</core><StgValue><ssdm name="weightHO"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
@@ -422,165 +466,223 @@
 
 
 <dataflows>
-<dataflow id="48" from="stg_47" to="outSound" fromId="47" toId="6">
+<dataflow id="51" from="stg_50" to="outSound" fromId="50" toId="6">
 </dataflow>
-<dataflow id="50" from="voicerec_preprocessSound" to="stg_7" fromId="49" toId="7">
+<dataflow id="53" from="voicerec_preprocessSound" to="stg_7" fromId="52" toId="7">
 </dataflow>
-<dataflow id="51" from="inSound" to="stg_7" fromId="33" toId="7">
+<dataflow id="54" from="voicerec_inSound" to="stg_7" fromId="36" toId="7">
 </dataflow>
-<dataflow id="52" from="outSound" to="stg_7" fromId="6" toId="7">
+<dataflow id="55" from="outSound" to="stg_7" fromId="6" toId="7">
 </dataflow>
-<dataflow id="54" from="_ssdm_op_SpecBitsMap" to="stg_8" fromId="53" toId="8">
+<dataflow id="57" from="_ssdm_op_SpecBitsMap" to="stg_8" fromId="56" toId="8">
 </dataflow>
-<dataflow id="55" from="inSound" to="stg_8" fromId="33" toId="8">
+<dataflow id="58" from="voicerec_inSound" to="stg_8" fromId="36" toId="8">
 </dataflow>
-<dataflow id="56" from="_ssdm_op_SpecBitsMap" to="stg_9" fromId="53" toId="9">
+<dataflow id="59" from="_ssdm_op_SpecBitsMap" to="stg_9" fromId="56" toId="9">
 </dataflow>
-<dataflow id="58" from="stg_57" to="stg_9" fromId="57" toId="9">
+<dataflow id="61" from="stg_60" to="stg_9" fromId="60" toId="9">
 </dataflow>
-<dataflow id="60" from="_ssdm_op_SpecTopModule" to="stg_10" fromId="59" toId="10">
+<dataflow id="63" from="_ssdm_op_SpecTopModule" to="stg_10" fromId="62" toId="10">
 </dataflow>
-<dataflow id="62" from="voicerec_str" to="stg_10" fromId="61" toId="10">
+<dataflow id="65" from="voicerec_str" to="stg_10" fromId="64" toId="10">
 </dataflow>
-<dataflow id="63" from="voicerec_preprocessSound" to="stg_11" fromId="49" toId="11">
+<dataflow id="67" from="_ssdm_op_SpecInterface" to="stg_11" fromId="66" toId="11">
 </dataflow>
-<dataflow id="64" from="inSound" to="stg_11" fromId="33" toId="11">
+<dataflow id="68" from="voicerec_inSound" to="stg_11" fromId="36" toId="11">
 </dataflow>
-<dataflow id="65" from="outSound" to="stg_11" fromId="6" toId="11">
+<dataflow id="70" from="p_str3" to="stg_11" fromId="69" toId="11">
 </dataflow>
-<dataflow id="67" from="stg_66" to="i" fromId="66" toId="13">
+<dataflow id="71" from="stg_60" to="stg_11" fromId="60" toId="11">
+</dataflow>
+<dataflow id="72" from="stg_60" to="stg_11" fromId="60" toId="11">
+</dataflow>
+<dataflow id="73" from="stg_60" to="stg_11" fromId="60" toId="11">
+</dataflow>
+<dataflow id="74" from="stg_60" to="stg_11" fromId="60" toId="11">
+</dataflow>
+<dataflow id="76" from="p_str14" to="stg_11" fromId="75" toId="11">
+</dataflow>
+<dataflow id="78" from="p_str25" to="stg_11" fromId="77" toId="11">
+</dataflow>
+<dataflow id="79" from="p_str25" to="stg_11" fromId="77" toId="11">
+</dataflow>
+<dataflow id="80" from="_ssdm_op_SpecInterface" to="stg_12" fromId="66" toId="12">
+</dataflow>
+<dataflow id="81" from="stg_60" to="stg_12" fromId="60" toId="12">
+</dataflow>
+<dataflow id="83" from="p_str36" to="stg_12" fromId="82" toId="12">
+</dataflow>
+<dataflow id="84" from="stg_60" to="stg_12" fromId="60" toId="12">
+</dataflow>
+<dataflow id="85" from="stg_60" to="stg_12" fromId="60" toId="12">
+</dataflow>
+<dataflow id="86" from="stg_60" to="stg_12" fromId="60" toId="12">
+</dataflow>
+<dataflow id="87" from="stg_60" to="stg_12" fromId="60" toId="12">
+</dataflow>
+<dataflow id="89" from="p_str4" to="stg_12" fromId="88" toId="12">
+</dataflow>
+<dataflow id="90" from="p_str25" to="stg_12" fromId="77" toId="12">
+</dataflow>
+<dataflow id="91" from="p_str25" to="stg_12" fromId="77" toId="12">
+</dataflow>
+<dataflow id="93" from="_ssdm_op_SpecMemCore" to="stg_13" fromId="92" toId="13">
+</dataflow>
+<dataflow id="94" from="voicerec_inSound" to="stg_13" fromId="36" toId="13">
+</dataflow>
+<dataflow id="95" from="p_str25" to="stg_13" fromId="77" toId="13">
+</dataflow>
+<dataflow id="97" from="p_str5" to="stg_13" fromId="96" toId="13">
+</dataflow>
+<dataflow id="98" from="p_str25" to="stg_13" fromId="77" toId="13">
+</dataflow>
+<dataflow id="100" from="stg_99" to="stg_13" fromId="99" toId="13">
+</dataflow>
+<dataflow id="101" from="p_str25" to="stg_13" fromId="77" toId="13">
+</dataflow>
+<dataflow id="102" from="p_str25" to="stg_13" fromId="77" toId="13">
+</dataflow>
+<dataflow id="104" from="p_str6" to="stg_13" fromId="103" toId="13">
+</dataflow>
+<dataflow id="105" from="voicerec_preprocessSound" to="stg_14" fromId="52" toId="14">
+</dataflow>
+<dataflow id="106" from="voicerec_inSound" to="stg_14" fromId="36" toId="14">
+</dataflow>
+<dataflow id="107" from="outSound" to="stg_14" fromId="6" toId="14">
+</dataflow>
+<dataflow id="109" from="stg_108" to="i" fromId="108" toId="16">
 <condition id="23">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </dataflow>
-<dataflow id="68" from="stg_12" to="i" fromId="12" toId="13">
+<dataflow id="110" from="stg_15" to="i" fromId="15" toId="16">
 </dataflow>
-<dataflow id="69" from="i_1" to="i" fromId="20" toId="13">
+<dataflow id="111" from="i_1" to="i" fromId="23" toId="16">
 <BackEdge/>
 <condition id="24">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </dataflow>
-<dataflow id="70" from="stg_23" to="i" fromId="23" toId="13">
+<dataflow id="112" from="stg_26" to="i" fromId="26" toId="16">
 <BackEdge/>
 </dataflow>
-<dataflow id="72" from="stg_71" to="index" fromId="71" toId="14">
+<dataflow id="114" from="stg_113" to="index" fromId="113" toId="17">
 <condition id="25">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </dataflow>
-<dataflow id="73" from="stg_12" to="index" fromId="12" toId="14">
+<dataflow id="115" from="stg_15" to="index" fromId="15" toId="17">
 </dataflow>
-<dataflow id="74" from="index_1" to="index" fromId="17" toId="14">
+<dataflow id="116" from="index_1" to="index" fromId="20" toId="17">
 <BackEdge/>
 <condition id="26">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </dataflow>
-<dataflow id="75" from="stg_23" to="index" fromId="23" toId="14">
+<dataflow id="117" from="stg_26" to="index" fromId="26" toId="17">
 <BackEdge/>
 </dataflow>
-<dataflow id="76" from="index" to="exitcond1" fromId="14" toId="15">
+<dataflow id="118" from="index" to="exitcond1" fromId="17" toId="18">
 </dataflow>
-<dataflow id="78" from="stg_77" to="exitcond1" fromId="77" toId="15">
+<dataflow id="120" from="stg_119" to="exitcond1" fromId="119" toId="18">
 </dataflow>
-<dataflow id="80" from="_ssdm_op_SpecLoopTripCount" to="empty" fromId="79" toId="16">
+<dataflow id="122" from="_ssdm_op_SpecLoopTripCount" to="empty" fromId="121" toId="19">
 </dataflow>
-<dataflow id="82" from="stg_81" to="empty" fromId="81" toId="16">
+<dataflow id="124" from="stg_123" to="empty" fromId="123" toId="19">
 </dataflow>
-<dataflow id="83" from="stg_81" to="empty" fromId="81" toId="16">
+<dataflow id="125" from="stg_123" to="empty" fromId="123" toId="19">
 </dataflow>
-<dataflow id="84" from="stg_81" to="empty" fromId="81" toId="16">
+<dataflow id="126" from="stg_123" to="empty" fromId="123" toId="19">
 </dataflow>
-<dataflow id="85" from="index" to="index_1" fromId="14" toId="17">
+<dataflow id="127" from="index" to="index_1" fromId="17" toId="20">
 </dataflow>
-<dataflow id="87" from="stg_86" to="index_1" fromId="86" toId="17">
+<dataflow id="129" from="stg_128" to="index_1" fromId="128" toId="20">
 </dataflow>
-<dataflow id="88" from="exitcond1" to="stg_18" fromId="15" toId="18">
+<dataflow id="130" from="exitcond1" to="stg_21" fromId="18" toId="21">
 </dataflow>
-<dataflow id="90" from="voicerec_processChunk" to="stg_19" fromId="89" toId="19">
+<dataflow id="132" from="voicerec_processChunk" to="stg_22" fromId="131" toId="22">
 </dataflow>
-<dataflow id="91" from="i" to="stg_19" fromId="13" toId="19">
+<dataflow id="133" from="i" to="stg_22" fromId="16" toId="22">
 </dataflow>
-<dataflow id="92" from="result" to="stg_19" fromId="41" toId="19">
+<dataflow id="134" from="result" to="stg_22" fromId="44" toId="22">
 </dataflow>
-<dataflow id="93" from="index" to="stg_19" fromId="14" toId="19">
+<dataflow id="135" from="index" to="stg_22" fromId="17" toId="22">
 </dataflow>
-<dataflow id="94" from="outSound" to="stg_19" fromId="6" toId="19">
+<dataflow id="136" from="outSound" to="stg_22" fromId="6" toId="22">
 </dataflow>
-<dataflow id="95" from="c" to="stg_19" fromId="34" toId="19">
+<dataflow id="137" from="c" to="stg_22" fromId="37" toId="22">
 </dataflow>
-<dataflow id="96" from="cosVec" to="stg_19" fromId="35" toId="19">
+<dataflow id="138" from="cosVec" to="stg_22" fromId="38" toId="22">
 </dataflow>
-<dataflow id="97" from="sinVec" to="stg_19" fromId="36" toId="19">
+<dataflow id="139" from="sinVec" to="stg_22" fromId="39" toId="22">
 </dataflow>
-<dataflow id="98" from="d" to="stg_19" fromId="37" toId="19">
+<dataflow id="140" from="d" to="stg_22" fromId="40" toId="22">
 </dataflow>
-<dataflow id="99" from="e" to="stg_19" fromId="38" toId="19">
+<dataflow id="141" from="e" to="stg_22" fromId="41" toId="22">
 </dataflow>
-<dataflow id="100" from="mell" to="stg_19" fromId="39" toId="19">
+<dataflow id="142" from="mell" to="stg_22" fromId="42" toId="22">
 </dataflow>
-<dataflow id="101" from="dctMatrix" to="stg_19" fromId="40" toId="19">
+<dataflow id="143" from="dctMatrix" to="stg_22" fromId="43" toId="22">
 </dataflow>
-<dataflow id="102" from="i" to="i_1" fromId="13" toId="20">
+<dataflow id="144" from="i" to="i_1" fromId="16" toId="23">
 </dataflow>
-<dataflow id="104" from="stg_103" to="i_1" fromId="103" toId="20">
+<dataflow id="146" from="stg_145" to="i_1" fromId="145" toId="23">
 </dataflow>
-<dataflow id="106" from="voicerec_classifySound" to="classification" fromId="105" toId="21">
+<dataflow id="148" from="voicerec_classifySound" to="classification" fromId="147" toId="24">
 </dataflow>
-<dataflow id="107" from="result" to="classification" fromId="41" toId="21">
+<dataflow id="149" from="result" to="classification" fromId="44" toId="24">
 </dataflow>
-<dataflow id="108" from="input_r" to="classification" fromId="42" toId="21">
+<dataflow id="150" from="input_r" to="classification" fromId="45" toId="24">
 </dataflow>
-<dataflow id="109" from="hidden" to="classification" fromId="43" toId="21">
+<dataflow id="151" from="hidden" to="classification" fromId="46" toId="24">
 </dataflow>
-<dataflow id="110" from="weightIH" to="classification" fromId="44" toId="21">
+<dataflow id="152" from="weightIH" to="classification" fromId="47" toId="24">
 </dataflow>
-<dataflow id="111" from="output_r" to="classification" fromId="45" toId="21">
+<dataflow id="153" from="output_r" to="classification" fromId="48" toId="24">
 </dataflow>
-<dataflow id="112" from="weightHO" to="classification" fromId="46" toId="21">
+<dataflow id="154" from="weightHO" to="classification" fromId="49" toId="24">
 </dataflow>
-<dataflow id="113" from="voicerec_processChunk" to="stg_22" fromId="89" toId="22">
+<dataflow id="155" from="voicerec_processChunk" to="stg_25" fromId="131" toId="25">
 </dataflow>
-<dataflow id="114" from="i" to="stg_22" fromId="13" toId="22">
+<dataflow id="156" from="i" to="stg_25" fromId="16" toId="25">
 </dataflow>
-<dataflow id="115" from="result" to="stg_22" fromId="41" toId="22">
+<dataflow id="157" from="result" to="stg_25" fromId="44" toId="25">
 </dataflow>
-<dataflow id="116" from="index" to="stg_22" fromId="14" toId="22">
+<dataflow id="158" from="index" to="stg_25" fromId="17" toId="25">
 </dataflow>
-<dataflow id="117" from="outSound" to="stg_22" fromId="6" toId="22">
+<dataflow id="159" from="outSound" to="stg_25" fromId="6" toId="25">
 </dataflow>
-<dataflow id="118" from="c" to="stg_22" fromId="34" toId="22">
+<dataflow id="160" from="c" to="stg_25" fromId="37" toId="25">
 </dataflow>
-<dataflow id="119" from="cosVec" to="stg_22" fromId="35" toId="22">
+<dataflow id="161" from="cosVec" to="stg_25" fromId="38" toId="25">
 </dataflow>
-<dataflow id="120" from="sinVec" to="stg_22" fromId="36" toId="22">
+<dataflow id="162" from="sinVec" to="stg_25" fromId="39" toId="25">
 </dataflow>
-<dataflow id="121" from="d" to="stg_22" fromId="37" toId="22">
+<dataflow id="163" from="d" to="stg_25" fromId="40" toId="25">
 </dataflow>
-<dataflow id="122" from="e" to="stg_22" fromId="38" toId="22">
+<dataflow id="164" from="e" to="stg_25" fromId="41" toId="25">
 </dataflow>
-<dataflow id="123" from="mell" to="stg_22" fromId="39" toId="22">
+<dataflow id="165" from="mell" to="stg_25" fromId="42" toId="25">
 </dataflow>
-<dataflow id="124" from="dctMatrix" to="stg_22" fromId="40" toId="22">
+<dataflow id="166" from="dctMatrix" to="stg_25" fromId="43" toId="25">
 </dataflow>
-<dataflow id="125" from="voicerec_classifySound" to="classification" fromId="105" toId="24">
+<dataflow id="167" from="voicerec_classifySound" to="classification" fromId="147" toId="27">
 </dataflow>
-<dataflow id="126" from="result" to="classification" fromId="41" toId="24">
+<dataflow id="168" from="result" to="classification" fromId="44" toId="27">
 </dataflow>
-<dataflow id="127" from="input_r" to="classification" fromId="42" toId="24">
+<dataflow id="169" from="input_r" to="classification" fromId="45" toId="27">
 </dataflow>
-<dataflow id="128" from="hidden" to="classification" fromId="43" toId="24">
+<dataflow id="170" from="hidden" to="classification" fromId="46" toId="27">
 </dataflow>
-<dataflow id="129" from="weightIH" to="classification" fromId="44" toId="24">
+<dataflow id="171" from="weightIH" to="classification" fromId="47" toId="27">
 </dataflow>
-<dataflow id="130" from="output_r" to="classification" fromId="45" toId="24">
+<dataflow id="172" from="output_r" to="classification" fromId="48" toId="27">
 </dataflow>
-<dataflow id="131" from="weightHO" to="classification" fromId="46" toId="24">
+<dataflow id="173" from="weightHO" to="classification" fromId="49" toId="27">
 </dataflow>
-<dataflow id="132" from="classification" to="stg_25" fromId="24" toId="25">
+<dataflow id="174" from="classification" to="stg_28" fromId="27" toId="28">
 </dataflow>
-<dataflow id="133" from="exitcond1" to="stg_3" fromId="15" toId="3">
+<dataflow id="175" from="exitcond1" to="stg_3" fromId="18" toId="3">
 </dataflow>
 </dataflows>
 

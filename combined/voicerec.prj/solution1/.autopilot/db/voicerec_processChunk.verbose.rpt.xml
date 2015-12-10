@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'voicerec_processChunk'" level="0">
-<item name = "Date">Sun Dec  6 17:20:14 2015
+<item name = "Date">Wed Dec  9 22:20:28 2015
 </item>
-<item name = "Version">2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)</item>
+<item name = "Version">2015.3 (Build 1244743 on Sun May 31 20:30:40 PM 2015)</item>
 <item name = "Project">voicerec.prj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -121,14 +121,14 @@
 <column name="exitcond_i_fu_872_p2">icmp, 0, 0, 2, 5, 4</column>
 <column name="notlhs_fu_784_p2">icmp, 0, 0, 4, 11, 2</column>
 <column name="notrhs_fu_790_p2">icmp, 0, 0, 18, 52, 1</column>
-<column name="tmp_76_fu_661_p2">icmp, 0, 0, 4, 10, 10</column>
-<column name="tmp_80_fu_671_p2">icmp, 0, 0, 3, 9, 9</column>
-<column name="tmp_84_fu_685_p2">icmp, 0, 0, 3, 9, 9</column>
-<column name="tmp_88_fu_705_p2">icmp, 0, 0, 4, 10, 10</column>
+<column name="tmp_61_fu_661_p2">icmp, 0, 0, 4, 10, 10</column>
+<column name="tmp_67_fu_671_p2">icmp, 0, 0, 3, 9, 9</column>
+<column name="tmp_71_fu_685_p2">icmp, 0, 0, 3, 9, 9</column>
+<column name="tmp_75_fu_705_p2">icmp, 0, 0, 4, 10, 10</column>
 <column name="tmp_i1_fu_854_p2">icmp, 0, 0, 2, 4, 1</column>
 <column name="tmp_45_fu_796_p2">or, 0, 0, 1, 1, 1</column>
-<column name="tmp_64_fu_565_p2">or, 0, 0, 9, 9, 1</column>
-<column name="tmp_68_fu_599_p2">or, 0, 0, 9, 9, 1</column>
+<column name="tmp_49_fu_565_p2">or, 0, 0, 9, 9, 1</column>
+<column name="tmp_53_fu_599_p2">or, 0, 0, 9, 9, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -212,13 +212,13 @@
 <column name="tmp_27_i_trn2_cast_reg_1138">4, 0, 12, 8</column>
 <column name="tmp_2_i_i_reg_1099">23, 0, 32, 9</column>
 <column name="tmp_46_reg_1081">1, 0, 1, 0</column>
+<column name="tmp_55_reg_969">64, 0, 64, 0</column>
+<column name="tmp_60_reg_996">64, 0, 64, 0</column>
+<column name="tmp_61_reg_1011">1, 0, 1, 0</column>
+<column name="tmp_67_reg_1020">1, 0, 1, 0</column>
 <column name="tmp_6_i_i_reg_1110">32, 0, 32, 0</column>
-<column name="tmp_70_reg_969">64, 0, 64, 0</column>
-<column name="tmp_75_reg_996">64, 0, 64, 0</column>
-<column name="tmp_76_reg_1011">1, 0, 1, 0</column>
-<column name="tmp_80_reg_1020">1, 0, 1, 0</column>
-<column name="tmp_84_reg_1029">1, 0, 1, 0</column>
-<column name="tmp_86_reg_1043">64, 0, 64, 0</column>
+<column name="tmp_71_reg_1029">1, 0, 1, 0</column>
+<column name="tmp_73_reg_1043">64, 0, 64, 0</column>
 <column name="x_assign_reg_1089">32, 0, 32, 0</column>
 <column name="y_reg_1105">32, 0, 32, 0</column>
 </table>

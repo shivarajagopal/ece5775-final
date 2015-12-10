@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'voicerec_preprocessSound'
 ================================================================
-* Date:           Sun Dec  6 17:20:13 2015
+* Date:           Wed Dec  9 22:20:27 2015
 
-* Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
+* Version:        2015.3 (Build 1244743 on Sun May 31 20:30:40 PM 2015)
 * Project:        voicerec.prj
 * Solution:       solution1
 * Product family: zynq
@@ -20,33 +20,33 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      8.20|        1.25|
+    |ap_clk  |  10.00|      8.75|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
     * Summary: 
-    +-------+-----------+-------+-----------+---------+
-    |      Latency      |      Interval     | Pipeline|
-    |  min  |    max    |  min  |    max    |   Type  |
-    +-------+-----------+-------+-----------+---------+
-    |  64012|  256240012|  64012|  256240012|   none  |
-    +-------+-----------+-------+-----------+---------+
+    +-------+------------+-------+------------+---------+
+    |       Latency      |      Interval      | Pipeline|
+    |  min  |     max    |  min  |     max    |   Type  |
+    +-------+------------+-------+------------+---------+
+    |  64022|  1536480022|  64022|  1536480022|   none  |
+    +-------+------------+-------+------------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +-------------+-------+-----------+-----------+-----------+-----------+-----------+----------+
-        |             |      Latency      | Iteration |  Initiation Interval  |    Trip   |          |
-        |  Loop Name  |  min  |    max    |  Latency  |  achieved |   target  |   Count   | Pipelined|
-        +-------------+-------+-----------+-----------+-----------+-----------+-----------+----------+
-        |- Loop 1     |      4|      64003|          4|          -|          -| 1 ~ 16000 |    no    |
-        |- Loop 2     |      4|      64003|          4|          -|          -| 1 ~ 16000 |    no    |
-        |- Loop 3     |  32000|  256064000| 2 ~ 16004 |          -|          -|      16000|    no    |
-        | + Loop 3.1  |  16000|      16000|          1|          -|          -|      16000|    no    |
-        |- Loop 4     |  32000|      48000|   2 ~ 3   |          -|          -|      16000|    no    |
-        +-------------+-------+-----------+-----------+-----------+-----------+-----------+----------+
+        +-------------+-------+------------+-----------+-----------+-----------+-----------+----------+
+        |             |       Latency      | Iteration |  Initiation Interval  |    Trip   |          |
+        |  Loop Name  |  min  |     max    |  Latency  |  achieved |   target  |   Count   | Pipelined|
+        +-------------+-------+------------+-----------+-----------+-----------+-----------+----------+
+        |- Loop 1     |      3|       48002|          3|          -|          -| 1 ~ 16000 |    no    |
+        |- Loop 2     |     10|      160009|         10|          -|          -| 1 ~ 16000 |    no    |
+        |- Loop 3     |  32000|  1536144000| 2 ~ 96009 |          -|          -|      16000|    no    |
+        | + Loop 3.1  |  32000|       96000|   2 ~ 6   |          -|          -|      16000|    no    |
+        |- Loop 4     |  32000|      128000|   2 ~ 8   |          -|          -|      16000|    no    |
+        +-------------+-------+------------+-----------+-----------+-----------+-----------+----------+
 
 
 
@@ -57,14 +57,14 @@
 +-----------------+---------+-------+--------+-------+
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
-|Expression       |        -|      -|       0|    401|
+|Expression       |        -|      -|       0|    408|
 |FIFO             |        -|      -|       -|      -|
 |Instance         |        -|      0|     130|    469|
 |Memory           |        -|      -|       -|      -|
-|Multiplexer      |        -|      -|       -|    448|
-|Register         |        -|      -|     369|      -|
+|Multiplexer      |        -|      -|       -|    558|
+|Register         |        -|      -|     444|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |        0|      0|     499|   1318|
+|Total            |        0|      0|     574|   1435|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
@@ -91,116 +91,133 @@
     +------------------------+----------+-------+---+----+------------+------------+
     |      Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +------------------------+----------+-------+---+----+------------+------------+
-    |count_1_fu_511_p2       |     +    |      0|  0|  32|          32|           1|
-    |grp_fu_243_p2           |     +    |      0|  0|  32|          32|           1|
-    |i_4_fu_612_p2           |     +    |      0|  0|  14|          14|           1|
-    |i_5_fu_400_p2           |     +    |      0|  0|  14|          14|           1|
-    |i_fu_266_p2             |     +    |      0|  0|  14|          14|           1|
-    |j_8_fu_551_p2           |     +    |      0|  0|  14|          14|           1|
-    |last_2_fu_323_p2        |     +    |      0|  0|  15|           2|          15|
-    |markBegin_1_fu_586_p3   |  Select  |      0|  0|  14|           1|          14|
-    |p_deleteFlag_fu_523_p3  |  Select  |      0|  0|  32|           1|           1|
-    |or_cond4_fu_575_p2      |    and   |      0|  0|   1|           1|           1|
-    |tmp_19_fu_313_p2        |    and   |      0|  0|   1|           1|           1|
-    |tmp_24_fu_384_p2        |    and   |      0|  0|   1|           1|           1|
-    |tmp_30_fu_717_p2        |    and   |      0|  0|   1|           1|           1|
-    |tmp_36_fu_493_p2        |    and   |      0|  0|   1|           1|           1|
-    |exitcond1_fu_394_p2     |   icmp   |      0|  0|   5|          14|          10|
-    |exitcond2_fu_606_p2     |   icmp   |      0|  0|   5|          14|          10|
-    |exitcond_fu_545_p2      |   icmp   |      0|  0|   5|          14|          10|
-    |notlhs1_fu_295_p2       |   icmp   |      0|  0|   4|          11|           2|
-    |notlhs2_fu_366_p2       |   icmp   |      0|  0|   4|          11|           2|
-    |notlhs3_fu_699_p2       |   icmp   |      0|  0|   4|          11|           2|
-    |notlhs4_fu_475_p2       |   icmp   |      0|  0|   4|          11|           2|
-    |notrhs1_fu_301_p2       |   icmp   |      0|  0|  18|          52|           1|
-    |notrhs2_fu_372_p2       |   icmp   |      0|  0|  18|          52|           1|
-    |notrhs3_fu_705_p2       |   icmp   |      0|  0|  18|          52|           1|
-    |notrhs4_fu_481_p2       |   icmp   |      0|  0|  18|          52|           1|
-    |slt_fu_557_p2           |   icmp   |      0|  0|  11|          32|          32|
-    |tmp_46_fu_337_p2        |   icmp   |      0|  0|   5|          14|           1|
-    |tmp_48_fu_406_p2        |   icmp   |      0|  0|   5|          14|          14|
-    |tmp_49_fu_412_p2        |   icmp   |      0|  0|   6|          15|          15|
-    |tmp_50_fu_434_p2        |   icmp   |      0|  0|  11|          32|           1|
-    |tmp_51_fu_618_p2        |   icmp   |      0|  0|   5|          14|          14|
-    |tmp_52_fu_624_p2        |   icmp   |      0|  0|   6|          15|          15|
-    |tmp_53_fu_630_p2        |   icmp   |      0|  0|  11|          32|          13|
-    |tmp_55_fu_653_p2        |   icmp   |      0|  0|  11|          32|          13|
-    |tmp_57_fu_517_p2        |   icmp   |      0|  0|  11|          32|           8|
-    |tmp_58_fu_502_p2        |   icmp   |      0|  0|  11|          32|           1|
-    |tmp_61_fu_569_p2        |   icmp   |      0|  0|   5|          14|          14|
-    |tmp_fu_260_p2           |   icmp   |      0|  0|   5|          14|          10|
-    |or_cond6_fu_642_p2      |    or    |      0|  0|   1|           1|           1|
-    |or_cond_fu_418_p2       |    or    |      0|  0|   1|           1|           1|
-    |tmp1_fu_636_p2          |    or    |      0|  0|   1|           1|           1|
-    |tmp_17_fu_307_p2        |    or    |      0|  0|   1|           1|           1|
-    |tmp_22_fu_378_p2        |    or    |      0|  0|   1|           1|           1|
-    |tmp_28_fu_711_p2        |    or    |      0|  0|   1|           1|           1|
-    |tmp_34_fu_487_p2        |    or    |      0|  0|   1|           1|           1|
-    |rev6_fu_563_p2          |    xor   |      0|  0|   2|           1|           2|
+    |count_1_fu_521_p2       |     +    |      0|  0|  32|          32|           1|
+    |grp_fu_247_p2           |     +    |      0|  0|  32|          32|           1|
+    |i_4_fu_628_p2           |     +    |      0|  0|  14|          14|           1|
+    |i_5_fu_404_p2           |     +    |      0|  0|  14|          14|           1|
+    |i_fu_270_p2             |     +    |      0|  0|  14|          14|           1|
+    |j_8_fu_561_p2           |     +    |      0|  0|  14|          14|           1|
+    |last_2_fu_322_p2        |     +    |      0|  0|  15|           2|          15|
+    |markBegin_1_fu_602_p3   |  Select  |      0|  0|  14|           1|          14|
+    |p_deleteFlag_fu_533_p3  |  Select  |      0|  0|  32|           1|           1|
+    |ap_sig_bdd_137          |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_394          |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_432          |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_434          |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_436          |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_441          |    and   |      0|  0|   1|           1|           1|
+    |or_cond4_fu_585_p2      |    and   |      0|  0|   1|           1|           1|
+    |tmp_19_fu_312_p2        |    and   |      0|  0|   1|           1|           1|
+    |tmp_24_fu_388_p2        |    and   |      0|  0|   1|           1|           1|
+    |tmp_30_fu_745_p2        |    and   |      0|  0|   1|           1|           1|
+    |tmp_36_fu_503_p2        |    and   |      0|  0|   1|           1|           1|
+    |exitcond1_fu_398_p2     |   icmp   |      0|  0|   5|          14|          10|
+    |exitcond2_fu_622_p2     |   icmp   |      0|  0|   5|          14|          10|
+    |exitcond_fu_555_p2      |   icmp   |      0|  0|   5|          14|          10|
+    |notlhs1_fu_294_p2       |   icmp   |      0|  0|   4|          11|           2|
+    |notlhs2_fu_370_p2       |   icmp   |      0|  0|   4|          11|           2|
+    |notlhs3_fu_727_p2       |   icmp   |      0|  0|   4|          11|           2|
+    |notlhs4_fu_485_p2       |   icmp   |      0|  0|   4|          11|           2|
+    |notrhs1_fu_300_p2       |   icmp   |      0|  0|  18|          52|           1|
+    |notrhs2_fu_376_p2       |   icmp   |      0|  0|  18|          52|           1|
+    |notrhs3_fu_733_p2       |   icmp   |      0|  0|  18|          52|           1|
+    |notrhs4_fu_491_p2       |   icmp   |      0|  0|  18|          52|           1|
+    |slt_fu_567_p2           |   icmp   |      0|  0|  11|          32|          32|
+    |tmp_47_fu_336_p2        |   icmp   |      0|  0|   5|          14|           1|
+    |tmp_49_fu_410_p2        |   icmp   |      0|  0|   5|          14|          14|
+    |tmp_50_fu_416_p2        |   icmp   |      0|  0|   6|          15|          15|
+    |tmp_51_fu_634_p2        |   icmp   |      0|  0|   5|          14|          14|
+    |tmp_52_fu_640_p2        |   icmp   |      0|  0|   6|          15|          15|
+    |tmp_53_fu_646_p2        |   icmp   |      0|  0|  11|          32|          13|
+    |tmp_54_fu_444_p2        |   icmp   |      0|  0|  11|          32|           1|
+    |tmp_55_fu_675_p2        |   icmp   |      0|  0|  11|          32|          13|
+    |tmp_61_fu_527_p2        |   icmp   |      0|  0|  11|          32|           8|
+    |tmp_62_fu_512_p2        |   icmp   |      0|  0|  11|          32|           1|
+    |tmp_64_fu_579_p2        |   icmp   |      0|  0|   5|          14|          14|
+    |tmp_fu_264_p2           |   icmp   |      0|  0|   5|          14|          10|
+    |or_cond6_fu_658_p2      |    or    |      0|  0|   1|           1|           1|
+    |or_cond7_fu_681_p2      |    or    |      0|  0|   1|           1|           1|
+    |or_cond_fu_422_p2       |    or    |      0|  0|   1|           1|           1|
+    |tmp1_fu_652_p2          |    or    |      0|  0|   1|           1|           1|
+    |tmp_17_fu_306_p2        |    or    |      0|  0|   1|           1|           1|
+    |tmp_22_fu_382_p2        |    or    |      0|  0|   1|           1|           1|
+    |tmp_28_fu_739_p2        |    or    |      0|  0|   1|           1|           1|
+    |tmp_34_fu_497_p2        |    or    |      0|  0|   1|           1|           1|
+    |rev_fu_573_p2           |    xor   |      0|  0|   2|           1|           2|
     +------------------------+----------+-------+---+----+------------+------------+
-    |Total                   |          |      0|  0| 401|         723|         243|
+    |Total                   |          |      0|  0| 408|         730|         250|
     +------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
-    +---------------------+----+-----------+-----+-----------+
-    |         Name        | LUT| Input Size| Bits| Total Bits|
-    +---------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm            |  15|         17|    1|         17|
-    |count_fu_56          |  32|          2|   32|         64|
-    |deleteFlag_fu_52     |  32|          2|   32|         64|
-    |first1_reg_146       |  14|          2|   14|         28|
-    |first_reg_134        |  14|          2|   14|         28|
-    |grp_fu_216_opcode    |   5|          3|    5|         15|
-    |grp_fu_216_p0        |  64|          4|   64|        256|
-    |grp_fu_216_p1        |  64|          3|   64|        192|
-    |i_1_in_reg_159       |  14|          2|   14|         28|
-    |i_3_reg_205          |  14|          2|   14|         28|
-    |inSound_address0     |  14|          6|   14|         84|
-    |j9_reg_194           |  14|          2|   14|         28|
-    |j_1_fu_64            |  32|          2|   32|         64|
-    |last_reg_170         |  15|          2|   15|         30|
-    |markBegin_2_reg_182  |  14|          2|   14|         28|
-    |markBegin_fu_60      |  14|          2|   14|         28|
-    |outSound_address0    |  13|          3|   13|         39|
-    |outSound_d0          |  64|          3|   64|        192|
-    +---------------------+----+-----------+-----+-----------+
-    |Total                | 448|         61|  434|       1213|
-    +---------------------+----+-----------+-----+-----------+
+    +--------------------------------------+----+-----------+-----+-----------+
+    |                 Name                 | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                             |  72|         42|    1|         42|
+    |ap_sig_ioackin_m_axi_inSound_ARREADY  |   1|          2|    1|          2|
+    |ap_sig_ioackin_m_axi_inSound_AWREADY  |   1|          2|    1|          2|
+    |ap_sig_ioackin_m_axi_inSound_WREADY   |   1|          2|    1|          2|
+    |count_fu_86                           |  32|          2|   32|         64|
+    |deleteFlag_fu_82                      |  32|          2|   32|         64|
+    |first1_reg_150                        |  14|          2|   14|         28|
+    |first_reg_138                         |  14|          2|   14|         28|
+    |grp_fu_220_opcode                     |   5|          3|    5|         15|
+    |grp_fu_220_p0                         |  64|          4|   64|        256|
+    |grp_fu_220_p1                         |  64|          3|   64|        192|
+    |i_1_in_reg_163                        |  14|          2|   14|         28|
+    |i_3_reg_209                           |  14|          2|   14|         28|
+    |j9_reg_198                            |  14|          2|   14|         28|
+    |j_1_fu_94                             |  32|          2|   32|         64|
+    |last_reg_174                          |  15|          2|   15|         30|
+    |m_axi_inSound_ARADDR                  |  32|          5|   32|        160|
+    |m_axi_inSound_ARLEN                   |  32|          3|   32|         96|
+    |markBegin_2_reg_186                   |  14|          2|   14|         28|
+    |markBegin_fu_90                       |  14|          2|   14|         28|
+    |outSound_address0                     |  13|          3|   13|         39|
+    |outSound_d0                           |  64|          3|   64|        192|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Total                                 | 558|         94|  487|       1416|
+    +--------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +---------------------+----+----+-----+-----------+
-    |         Name        | FF | LUT| Bits| Const Bits|
-    +---------------------+----+----+-----+-----------+
-    |ap_CS_fsm            |  16|   0|   16|          0|
-    |count_fu_56          |  32|   0|   32|          0|
-    |deleteFlag_fu_52     |  32|   0|   32|          0|
-    |first1_reg_146       |  14|   0|   14|          0|
-    |first_reg_134        |  14|   0|   14|          0|
-    |i_1_in_reg_159       |  14|   0|   14|          0|
-    |i_3_reg_205          |  14|   0|   14|          0|
-    |i_4_reg_841          |  14|   0|   14|          0|
-    |i_5_reg_793          |  14|   0|   14|          0|
-    |i_reg_732            |  14|   0|   14|          0|
-    |j9_reg_194           |  14|   0|   14|          0|
-    |j_1_fu_64            |  32|   0|   32|          0|
-    |last_2_reg_746       |  15|   0|   15|          0|
-    |last_reg_170         |  15|   0|   15|          0|
-    |markBegin_2_reg_182  |  14|   0|   14|          0|
-    |markBegin_fu_60      |  14|   0|   32|         18|
-    |or_cond6_reg_846     |   1|   0|    1|          0|
-    |or_cond_reg_798      |   1|   0|    1|          0|
-    |reg_254              |  64|   0|   64|          0|
-    |tmp_16_reg_751       |  14|   0|   14|          0|
-    |tmp_19_reg_742       |   1|   0|    1|          0|
-    |tmp_24_reg_765       |   1|   0|    1|          0|
-    |tmp_36_reg_818       |   1|   0|    1|          0|
-    |tmp_46_reg_756       |   1|   0|    1|          0|
-    |tmp_50_reg_814       |   1|   0|    1|          0|
-    |tmp_58_reg_823       |   1|   0|    1|          0|
-    |tmp_reg_728          |   1|   0|    1|          0|
-    +---------------------+----+----+-----+-----------+
-    |Total                | 369|   0|  387|         18|
-    +---------------------+----+----+-----+-----------+
+    +--------------------------------------+----+----+-----+-----------+
+    |                 Name                 | FF | LUT| Bits| Const Bits|
+    +--------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                             |  41|   0|   41|          0|
+    |ap_reg_ioackin_m_axi_inSound_ARREADY  |   1|   0|    1|          0|
+    |ap_reg_ioackin_m_axi_inSound_AWREADY  |   1|   0|    1|          0|
+    |ap_reg_ioackin_m_axi_inSound_WREADY   |   1|   0|    1|          0|
+    |count_fu_86                           |  32|   0|   32|          0|
+    |deleteFlag_fu_82                      |  32|   0|   32|          0|
+    |first1_reg_150                        |  14|   0|   14|          0|
+    |first_reg_138                         |  14|   0|   14|          0|
+    |i_1_in_reg_163                        |  14|   0|   14|          0|
+    |i_3_reg_209                           |  14|   0|   14|          0|
+    |i_4_reg_877                           |  14|   0|   14|          0|
+    |i_5_reg_822                           |  14|   0|   14|          0|
+    |i_reg_760                             |  14|   0|   14|          0|
+    |j9_reg_198                            |  14|   0|   14|          0|
+    |j_1_fu_94                             |  32|   0|   32|          0|
+    |j_8_reg_860                           |  14|   0|   14|          0|
+    |last_2_cast5_reg_774                  |  32|   0|   32|          0|
+    |last_2_reg_769                        |  15|   0|   15|          0|
+    |last_reg_174                          |  15|   0|   15|          0|
+    |markBegin_2_reg_186                   |  14|   0|   14|          0|
+    |markBegin_fu_90                       |  14|   0|   32|         18|
+    |or_cond4_reg_865                      |   1|   0|    1|          0|
+    |or_cond6_reg_882                      |   1|   0|    1|          0|
+    |or_cond_reg_827                       |   1|   0|    1|          0|
+    |reg_258                               |  64|   0|   64|          0|
+    |tmp_19_reg_765                        |   1|   0|    1|          0|
+    |tmp_24_reg_794                        |   1|   0|    1|          0|
+    |tmp_25_reg_779                        |  14|   0|   14|          0|
+    |tmp_36_reg_848                        |   1|   0|    1|          0|
+    |tmp_47_reg_784                        |   1|   0|    1|          0|
+    |tmp_54_reg_844                        |   1|   0|    1|          0|
+    |tmp_62_reg_853                        |   1|   0|    1|          0|
+    |tmp_reg_756                           |   1|   0|    1|          0|
+    +--------------------------------------+----+----+-----+-----------+
+    |Total                                 | 444|   0|  462|         18|
+    +--------------------------------------+----+----+-----+-----------+
 
 
 
@@ -208,23 +225,63 @@
 == Interface
 ================================================================
 * Summary: 
-+-------------------+-----+-----+------------+--------------------------+--------------+
-|     RTL Ports     | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
-+-------------------+-----+-----+------------+--------------------------+--------------+
-|ap_clk             |  in |    1| ap_ctrl_hs | voicerec_preprocessSound | return value |
-|ap_rst             |  in |    1| ap_ctrl_hs | voicerec_preprocessSound | return value |
-|ap_start           |  in |    1| ap_ctrl_hs | voicerec_preprocessSound | return value |
-|ap_done            | out |    1| ap_ctrl_hs | voicerec_preprocessSound | return value |
-|ap_idle            | out |    1| ap_ctrl_hs | voicerec_preprocessSound | return value |
-|ap_ready           | out |    1| ap_ctrl_hs | voicerec_preprocessSound | return value |
-|inSound_address0   | out |   14|  ap_memory |          inSound         |     array    |
-|inSound_ce0        | out |    1|  ap_memory |          inSound         |     array    |
-|inSound_we0        | out |    1|  ap_memory |          inSound         |     array    |
-|inSound_d0         | out |   64|  ap_memory |          inSound         |     array    |
-|inSound_q0         |  in |   64|  ap_memory |          inSound         |     array    |
-|outSound_address0  | out |   13|  ap_memory |         outSound         |     array    |
-|outSound_ce0       | out |    1|  ap_memory |         outSound         |     array    |
-|outSound_we0       | out |    1|  ap_memory |         outSound         |     array    |
-|outSound_d0        | out |   64|  ap_memory |         outSound         |     array    |
-+-------------------+-----+-----+------------+--------------------------+--------------+
++------------------------+-----+-----+------------+--------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
++------------------------+-----+-----+------------+--------------------------+--------------+
+|ap_clk                  |  in |    1| ap_ctrl_hs | voicerec_preprocessSound | return value |
+|ap_rst                  |  in |    1| ap_ctrl_hs | voicerec_preprocessSound | return value |
+|ap_start                |  in |    1| ap_ctrl_hs | voicerec_preprocessSound | return value |
+|ap_done                 | out |    1| ap_ctrl_hs | voicerec_preprocessSound | return value |
+|ap_idle                 | out |    1| ap_ctrl_hs | voicerec_preprocessSound | return value |
+|ap_ready                | out |    1| ap_ctrl_hs | voicerec_preprocessSound | return value |
+|m_axi_inSound_AWVALID   | out |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_AWREADY   |  in |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_AWADDR    | out |   32|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_AWID      | out |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_AWLEN     | out |   32|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_AWSIZE    | out |    3|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_AWBURST   | out |    2|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_AWLOCK    | out |    2|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_AWCACHE   | out |    4|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_AWPROT    | out |    3|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_AWQOS     | out |    4|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_AWREGION  | out |    4|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_AWUSER    | out |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_WVALID    | out |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_WREADY    |  in |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_WDATA     | out |   64|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_WSTRB     | out |    8|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_WLAST     | out |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_WID       | out |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_WUSER     | out |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_ARVALID   | out |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_ARREADY   |  in |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_ARADDR    | out |   32|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_ARID      | out |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_ARLEN     | out |   32|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_ARSIZE    | out |    3|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_ARBURST   | out |    2|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_ARLOCK    | out |    2|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_ARCACHE   | out |    4|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_ARPROT    | out |    3|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_ARQOS     | out |    4|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_ARREGION  | out |    4|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_ARUSER    | out |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_RVALID    |  in |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_RREADY    | out |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_RDATA     |  in |   64|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_RLAST     |  in |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_RID       |  in |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_RUSER     |  in |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_RRESP     |  in |    2|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_BVALID    |  in |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_BREADY    | out |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_BRESP     |  in |    2|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_BID       |  in |    1|    m_axi   |          inSound         |    pointer   |
+|m_axi_inSound_BUSER     |  in |    1|    m_axi   |          inSound         |    pointer   |
+|outSound_address0       | out |   13|  ap_memory |         outSound         |     array    |
+|outSound_ce0            | out |    1|  ap_memory |         outSound         |     array    |
+|outSound_we0            | out |    1|  ap_memory |         outSound         |     array    |
+|outSound_d0             | out |   64|  ap_memory |         outSound         |     array    |
++------------------------+-----+-----+------------+--------------------------+--------------+
 
