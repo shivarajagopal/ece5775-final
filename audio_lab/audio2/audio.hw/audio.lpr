@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2015.2.1 (64-bit)                   -->
+<!-- Product Version: Vivado v2015.1_sda (64-bit)                 -->
 <!--                                                              -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.        -->
 
-<labtools version="1" minor="0"/>
+<labtools version="1" minor="0">
+  <HWSession Dir="hw_1" File="hw.xml"/>
+</labtools>

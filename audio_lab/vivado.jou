@@ -156,3 +156,15 @@ add_files -fileset constrs_1 -norecurse /home/rz252/tjp79/ece5775-final/audio_la
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream
 wait_on_run impl_1
+open_hw
+close_hw
+open_run impl_1
+startgroup 
+set_property is_bel_fixed true [get_cells [list system_i/voicerec_0/inst/grp_voicerec_classifySound_fu_131/grp_voicerec_feedForward_fu_160/voicerec_dexp_64ns_64ns_64_18_full_dsp_U39/voicerec_ap_dexp_16_full_dsp_64_u/U0/i_synth/EXP_OP.OP/i_calculate_Xf/dsp.two.dsp48e1_add_hi/DSP]]
+set_property is_loc_fixed true [get_cells [list system_i/voicerec_0/inst/grp_voicerec_classifySound_fu_131/grp_voicerec_feedForward_fu_160/voicerec_dexp_64ns_64ns_64_18_full_dsp_U39/voicerec_ap_dexp_16_full_dsp_64_u/U0/i_synth/EXP_OP.OP/i_calculate_Xf/dsp.two.dsp48e1_add_hi/DSP]]
+endgroup
+startgroup 
+set_property is_bel_fixed false [get_cells [list system_i/voicerec_0/inst/grp_voicerec_classifySound_fu_131/grp_voicerec_feedForward_fu_160/voicerec_dexp_64ns_64ns_64_18_full_dsp_U39/voicerec_ap_dexp_16_full_dsp_64_u/U0/i_synth/EXP_OP.OP/i_calculate_Xf/dsp.two.dsp48e1_add_hi/DSP]]
+set_property is_loc_fixed false [get_cells [list system_i/voicerec_0/inst/grp_voicerec_classifySound_fu_131/grp_voicerec_feedForward_fu_160/voicerec_dexp_64ns_64ns_64_18_full_dsp_U39/voicerec_ap_dexp_16_full_dsp_64_u/U0/i_synth/EXP_OP.OP/i_calculate_Xf/dsp.two.dsp48e1_add_hi/DSP]]
+endgroup
+close_design

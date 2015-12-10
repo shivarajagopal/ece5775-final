@@ -12,9 +12,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "/usr/tools/Xilinx/SDAccel/2015.1/Vivado/ids_lite/ISE/bin/lin64;/usr/tools/Xilinx/SDAccel/2015.1/Vivado/ids_lite/ISE/lib/lin64;/usr/tools/Xilinx/SDAccel/2015.1/Vivado/bin;";
+  PathVal = "/usr/tools/Xilinx/SDAccel/2015.4/SDK/2015.4/bin:/usr/tools/Xilinx/SDAccel/2015.4/Vivado/2015.4/ids_lite/ISE/bin/lin64;/usr/tools/Xilinx/SDAccel/2015.4/Vivado/2015.4/ids_lite/ISE/lib/lin64;/usr/tools/Xilinx/SDAccel/2015.4/Vivado/2015.4/bin;";
 } else {
-  PathVal = "/usr/tools/Xilinx/SDAccel/2015.1/Vivado/ids_lite/ISE/bin/lin64;/usr/tools/Xilinx/SDAccel/2015.1/Vivado/ids_lite/ISE/lib/lin64;/usr/tools/Xilinx/SDAccel/2015.1/Vivado/bin;" + PathVal;
+  PathVal = "/usr/tools/Xilinx/SDAccel/2015.4/SDK/2015.4/bin:/usr/tools/Xilinx/SDAccel/2015.4/Vivado/2015.4/ids_lite/ISE/bin/lin64;/usr/tools/Xilinx/SDAccel/2015.4/Vivado/2015.4/ids_lite/ISE/lib/lin64;/usr/tools/Xilinx/SDAccel/2015.4/Vivado/2015.4/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 // pre-commands:
-ISETouchFile( "init_design", "begin" );
+ISETouchFile( "write_bitstream", "begin" );
 ISEStep( "vivado",
          "-log system_wrapper.vdi -applog -m64 -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace" );
 
