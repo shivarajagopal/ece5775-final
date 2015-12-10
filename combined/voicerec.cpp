@@ -9,17 +9,22 @@
 #include "voicerec.h"
 #include "neuralNetworkSynth.h"
 
-//#define LINESIZE 256
-
+/****************************************************
+ * GLOBAL VARIABLES
+*****************************************************/
 double result[NUMRESULTS][(NUM_BANKS/2)+1];
 double c[2*NP];
-double d[NP];
+double spec[NP];
 double e[NUM_BANKS];
 int begins[80];
 int ends[80];
 
+/****************************************************
+ * Math and Signal Processing Helper Functions
+*****************************************************/
 
 /****************************************************
+Fast Logarithm function from:
 http://www.machinedlearnings.com/2011/06/fast-approximate-logarithm-exponential.html
 *****************************************************/
 static inline float 
@@ -42,6 +47,7 @@ fastlog (float x)
 }
 
 /****************************************************
+1D DCT II from:
 https://unix4lyfe.org/dct-1d/
 ****************************************************/
 
@@ -56,25 +62,24 @@ void dct_ii(int N, double *x, double *X) {
   }
 }
 
-/*
- *                            COPYRIGHT
- *
- *  fft - Takes the FFT of a data (time domain) file, and outputs to file
- *   the complex FFT data.
- *
- *  Copyright (C) 2003, 2004, 2005 Exstrom Laboratories LLC
- */
-/**********************************************************************
-  FFT - calculates the discrete fourier transform of an array of double
-  precision complex numbers using the FFT algorithm.
+/* COPYRIGHT
+ fft - Takes the FFT of a data (time domain) 
+ file, and outputs to file the complex FFT data.
+ 
+ Copyright (C) 2003, 2004, 2005 Exstrom 
+ Laboratories LLC
 
-  c = pointer to an array of size 2*N that contains the real and
-    imaginary parts of the complex numbers. The even numbered indices contain
-    the real parts and the odd numbered indices contain the imaginary parts.
-      c[2*k] = real part of kth data point.
-      c[2*k+1] = imaginary part of kth data point.
-  N = number of data points. The array, c, should contain 2*N elements
-  isign = 1 for forward FFT, -1 for inverse FFT.
+ FFT - calculates the discrete fourier transform of 
+ an array of double precision complex numbers using 
+ the FFT algorithm.
+
+ c = pointer to an array of size 2*N that contains 
+ the real and imaginary parts of the complex numbers.
+ The even numbered indices contain the real parts and
+ the odd numbered indices contain the imaginary parts
+
+ c[2*k] = real part of kth data point.
+ c[2*k+1] = imaginary part of kth data point.
 */
 
 void FFT( double *c )
@@ -147,6 +152,15 @@ void FFT( double *c )
   }
 }
 
+/****************************************************
+ * HELPER FUNCTIONS
+*****************************************************/
+
+/****************************************************
+Processor for a 256-sample (32ms) chunk of sound to 
+generate fingerprint.
+*****************************************************/
+
 void processChunk( int sp, double *ret, double *inputSound)
 {
   int i = 0;
@@ -162,17 +176,17 @@ void processChunk( int sp, double *ret, double *inputSound)
 
   for( i = 0; i < NP; ++i )
   {
-    d[i] = (c[2*i]*c[2*i] + c[2*i+1]*c[2*i+1])/256.0;
+    spec[i] = (c[2*i]*c[2*i] + c[2*i+1]*c[2*i+1])/256.0;
   }
 
   int mellIdx = 0;
   for ( i = 0; i < NP; ++i ) {
     if ( i==mell[mellIdx] ) {
-      e[ 0 ] += d[ mell[mellIdx] ];
+      e[ 0 ] += spec[ mell[mellIdx] ];
     }
 
     if (( i > mell[ mellIdx ] ) && ( i <= mell[ mellIdx+1 ] )) {
-      e[ mellIdx ] += d[i];
+      e[ mellIdx ] += spec[i];
     }
 
     if (i == mell[ mellIdx+1 ]) {
@@ -193,6 +207,10 @@ void processChunk( int sp, double *ret, double *inputSound)
 
 }
 
+/****************************************************
+Sound preprocessor. Takes a 16000 size sample (2s),
+gets rid of noise, and normalizes to 8000 samples (1s)
+*****************************************************/
 void preprocessSound(double *inSound, int inSize, double *outSound, int outSize) {
   int i = 0;
   int first = 0;
@@ -268,7 +286,13 @@ void preprocessSound(double *inSound, int inSize, double *outSound, int outSize)
   }
 }
 
-
+/****************************************************
+ * TOP LEVEL FUNCTION
+ * Takes in a sound of size 16000 samples at 8kHz
+ * (2 seconds), generates a fingerprint, and runs
+ * it through the neural network classifier to get
+ * the most likely result
+*****************************************************/
 int voicerec(double inSound[ORIGSIZE]) {
   int i = 0, j=0, stride = 0, classification = -1;
 
