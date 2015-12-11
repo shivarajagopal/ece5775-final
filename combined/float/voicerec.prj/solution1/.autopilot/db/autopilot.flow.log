@@ -1,0 +1,1245 @@
+@I [HLS-0] Workspace /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1 opened at Fri Dec 11 15:32:43 EST 2015
+@I [HLS-100] Command 'open_solution' returned 0; elapsed 0.01Total elapsed time: 0.997 sec.
+@I [HLS-100] Command "set_part xc7z020clg484-1 "
+@I [HLS-100] Command "add_library xilinx/zynq/zynq:xc7z020:clg484:-1 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.4 sec.
+@I [HLS-100] Command "license_exists VIVADO_HLS "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 1.30 sec.
+@I [HLS-100] Command "license_exists ap_opencl "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 1.51 sec.
+@I [HLS-100] Command "license_exists ap_sdsoc "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 1.72 sec.
+@I [HLS-100] Command "license_exists AUTOESL_NI "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0.02Total elapsed time: 1.92 sec.
+@I [HLS-100] Command "license_exists HLS "
+@I [HLS-100] Command 'license_exists' returned 0; elapsed 0Total elapsed time: 1.93 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 1.95 sec.
+@I [HLS-100] Command "import_lib /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/zynq/zynq "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/xilinx.lib "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/xilinx_interface.lib "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/plb46.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.99 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/fsl.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.100 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/axi4.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.101 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/maxi.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.102 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/saxilite.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.103 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.103 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/dsp48.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.104 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/ip/dds_compiler.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.105 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/ip/xfft.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.106 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/ip/xfir.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.107 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.109 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/xilinx_old.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.112 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/xilinx_vivado.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.114 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.120 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.122 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.122 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.122 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.124 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.125 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/zynq/dsp48e1.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.125 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.126 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.126 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed medium "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.126 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.01Total elapsed time: 1.128 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.134 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.136 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.140 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.146 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.159 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.159 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 1.176 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 1.191 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.197 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.198 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.17Total elapsed time: 1.378 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/tps/tcl/tcllib1.11.1/struct/list.tcl "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.406 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.407 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/tps/tcl/tcllib1.11.1/math/bignum.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.424 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.06Total elapsed time: 1.435 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.3Total elapsed time: 1.435 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.438 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.3Total elapsed time: 1.438 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.3Total elapsed time: 1.438 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.440 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.441 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed slow "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.441 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.34Total elapsed time: 1.442 sec.
+@I [HLS-100] Command "add_library xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.443 sec.
+@I [HLS-100] Command "license_exists VIVADO_HLS "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 1.464 sec.
+@I [HLS-100] Command "license_exists ap_opencl "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 1.486 sec.
+@I [HLS-100] Command "license_exists ap_sdsoc "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0.01Total elapsed time: 1.507 sec.
+@I [HLS-100] Command "license_exists AUTOESL_NI "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 1.528 sec.
+@I [HLS-100] Command "license_exists HLS "
+@I [HLS-100] Command 'license_exists' returned 0; elapsed 0Total elapsed time: 1.528 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 1.529 sec.
+@I [HLS-100] Command "import_lib /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/xilinx_fpv7.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.534 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/xilinx_fpv.hlp "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.548 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.549 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.549 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.549 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.551 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 1.552 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 1.552 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.03Total elapsed time: 1.560 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.564 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.564 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.06Total elapsed time: 1.567 sec.
+@I [HLS-10] Setting target device to 'xc7z020clg484-1'
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.41Total elapsed time: 1.567 sec.
+@I [HLS-100] Command "create_clock -period 10 "
+@I [HLS-100] Command "config_clock -quiet -name default -period 10 -default=false "
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-100] Command 'config_clock' returned 0; elapsed 0Total elapsed time: 1.570 sec.
+@I [HLS-100] Command 'create_clock' returned 0; elapsed 0Total elapsed time: 1.570 sec.
+@I [HLS-100] Command "csynth_design "
+@I [HLS-100] Command "elaborate -effort=medium -skip_syncheck=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 "
+@I [HLS-10] Analyzing design file 'neuralNetworkSynth.cpp' ... 
+@0 [HLS-0] Analyzing design file 'neuralNetworkSynth.cpp' ... 
+@I [HLS-0] Compiling one TU...
+@I [HLS-0] 
+Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit   -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/systemc/include" -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/include" -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/include/ap_sysc" -fexceptions -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot" -include etc/autopilot_ssdm_op.h "neuralNetworkSynth.cpp"  -o "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pp.00.o"
+
+@I [HLS-100] Command "is_encrypted /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pp.00.o "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 2.156 sec.
+@I [HLS-0] Syntax Checker time: 0 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "neuralNetworkSynth.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot" -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pp.0.cpp"
+
+@I [HLS-0] GCC PP time: 0 seconds per iteration
+@I [HLS-100] Command "list_core -type functional_unit "
+@I [HLS-100] Command 'list_core' returned 0; elapsed 0Total elapsed time: 2.345 sec.
+@I [HLS-0] Marker-Pragma convertor: /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pp.0.cpp /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pp.0.cpp.ap-line.cpp /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pp.0.cpp.ap-line.cpp.CXX 1
+@I [HLS-0] 
+Source processor: exec /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lib/classes/autopilot.sourceprocessor.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lib/classes/jargs.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.0.v20140514-1158.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.0.v20140514-1158.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.0.v20140514-1158.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pp.0.cpp.ap-line.cpp"  -m "voicerec" -o "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pp.0.cpp.ap-cdt.cpp" --pp --directive /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/solution1.directive --source /home/student/svr24/ece5775/final_proj/combined/float/neuralNetworkSynth.cpp --error /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S MulnS MuxnS" --ve --vetcl /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db --ca --es --gf --df --pd --p2d /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db --sd --scff /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/.systemc_flag --ad
+
+@I [HLS-0] Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __value;
+Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __tmp;
+@I [HLS-0] Marker-Pragma convertor: /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pp.0.cpp.ap-cdt.cpp /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.0.cpp /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.0.cpp.ap-line.CXX 0
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 7.578 sec.
+@I [HLS-0] CDT processor time: 5 seconds per iteration
+@I [HLS-0] Pragma handling time: 0 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot" -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.2.cpp"
+
+@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot" -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.g.bc"
+@I [HLS-10] Analyzing design file 'voicerec.cpp' ... 
+@0 [HLS-0] Analyzing design file 'voicerec.cpp' ... 
+@I [HLS-0] Compiling one TU...
+@I [HLS-0] 
+Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit   -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/systemc/include" -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/include" -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/include/ap_sysc" -fexceptions -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot" -include etc/autopilot_ssdm_op.h "voicerec.cpp"  -o "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.pp.00.o"
+
+@I [HLS-100] Command "is_encrypted /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.pp.00.o "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 10.408 sec.
+@I [HLS-0] Syntax Checker time: 1 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "voicerec.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot" -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.pp.0.cpp"
+
+@I [HLS-0] GCC PP time: 0 seconds per iteration
+@I [HLS-100] Command "list_core -type functional_unit "
+@I [HLS-100] Command 'list_core' returned 0; elapsed 0Total elapsed time: 10.683 sec.
+@I [HLS-0] Marker-Pragma convertor: /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.pp.0.cpp /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.pp.0.cpp.ap-line.cpp /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.pp.0.cpp.ap-line.cpp.CXX 1
+@I [HLS-0] 
+Source processor: exec /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lib/classes/autopilot.sourceprocessor.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lib/classes/jargs.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.0.v20140514-1158.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.0.v20140514-1158.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.0.v20140514-1158.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.pp.0.cpp.ap-line.cpp"  -m "voicerec" -o "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.pp.0.cpp.ap-cdt.cpp" --pp --directive /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/solution1.directive --source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.cpp --error /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S MulnS MuxnS" --ve --vetcl /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db --ca --es --gf --df --pd --p2d /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db --sd --scff /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/.systemc_flag --ad
+
+@I [HLS-0] Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __value;
+Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __tmp;
+@I [HLS-0] Marker-Pragma convertor: /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.pp.0.cpp.ap-cdt.cpp /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.pragma.0.cpp /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.pragma.0.cpp.ap-line.CXX 0
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 22.41 sec.
+@I [HLS-0] CDT processor time: 11 seconds per iteration
+@I [HLS-0] Pragma handling time: 1 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot" -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.pragma.2.cpp"
+
+@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot" -I "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.g.bc"
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/ve_warning.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 24.700 sec.
+@I [HLS-10] Validating synthesis directives ...
+@0 [HLS-0] Validating synthesis directives ...
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 24.702 sec.
+@I [HLS-0] Linking all ...
+@I [HLS-0] exec llvm-ld  "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.bc" "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.bc"  -disable-opt  -L/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/lib -lm_basic -o "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.o.pre"
+@I [HLS-0] Link time: 8 seconds per iteration
+@I [HLS-0] Linking all ...
+@I [HLS-0] exec llvm-ld  "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.g.bc" "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.g.bc"  -disable-opt  -L/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/lib -lm_basic -o "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.g.pre"
+@I [HLS-0] Link time: 8 seconds per iteration
+@I [HLS-100] Command "opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 "
+@I [HLS-100] Command "cleanup_all_models "
+@I [HLS-100] Command 'cleanup_all_models' returned 0; elapsed 0Total elapsed time: 41.705 sec.
+@I [HLS-10] Starting code transformations ...
+@0 [HLS-0] Starting code transformations ...
+@I [HLS-0] std xform: transform -hls -share-std-xform -always-inline -promote-dbg-pointer  -interface-preproc  -scalarrepl -mem2reg -keep-read-access -instcombine -dce  -promote-dbg-pointer  -bitop-raise  -indvars -loop-simplify -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -basicaa  -simplifycfg -mem2reg -globalopt  -global-constprop -deadargelim -instcombine -simplifycfg  -prune-eh -simplifycfg  -scalarrepl -instcombine -reassociate -licm  -simplifycfg -loop-simplify -indvars -instcombine  -simplifycfg -mem2reg -loop-simplify -indvars -instcombine  -gvn -gvn -instcombine -adce  -break-crit-edges  -simplifycfg -loop-delete  -global-array-opt -dce -dse -adce  -find-syn-modules -top voicerec  -deadargelim  -mem2reg -instcombine -dce  -presyn-prepare -auto-rom-infer  -interface-preproc  -syn-check -check-rec-only  -find-region -simplifycfg -func-extr -function-inline  -globaldce -mem2reg -instcombine -dce   -gvn -globaldce -adce -adse  -constprop -instcombine -bit-constprop  -instcombine -dce -simplifycfg -bitop-raise  -simplifycfg -dce -loop-delete -reassociate  -globalopt -global-privatize -mem2reg -dce  -global-constprop -pointer-simplify -constprop -dce  -func-inst -deadargelim  -promote-dbg-pointer  -norm-name   /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.g.0.bc -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.g.1.bc -f  -phase std-opt
+@I [HLS-0] Std xform time: 6 seconds per iteration
+@I [HLS-100] Command "is_encrypted /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.g.1.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 57.295 sec.
+@I [HLS-10] Checking synthesizability ...
+@0 [HLS-0] Checking synthesizability ...
+@I [HLS-0] syn check 1/2: transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine  -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce  -array-normalize -instcombine -dce  -array-seg-normalize -instcombine -dce  -array-flatten -instcombine -dce  -array-burst -dce  -deadargelim -promote-global-argument  -function-inline -globaldce -dce  -doublePtrSimplify -doublePtrElim -dce  -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -dse -adse -instcombine  -ptrLegalization  -simplifycfg -dce -instcombine  -pointer-simplify -ptrArgReplace -dce -instcombine   -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine -ptrLegalization   -simplifycfg -deadargelim  -instcombine -dce -inst-simplify  -function-uniquify -directive-preproc -mem2reg -dse -dce  -globaldce    /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.g.1.bc -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.g.2.prechk.bc -f
+@I [XFORM-602] Inlining function 'fp_struct<double>::data' into 'fp_struct<double>::to_double' (/wrk/buildscratch/2015.2/continuous/20150626163259/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:504) automatically.
+@I [XFORM-602] Inlining function 'fp_struct<double>::to_double' into 'fp_struct<double>::to_ieee' (/wrk/buildscratch/2015.2/continuous/20150626163259/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:518) automatically.
+@I [XFORM-602] Inlining function 'fp_struct<double>::to_ieee' into 'hls::copysign' (/wrk/buildscratch/2015.2/continuous/20150626163259/src/products/hls/hls_lib/src/hls_math.h:254) automatically.
+@I [XFORM-602] Inlining function 'hls::copysign' into 'hls::fabs' (/wrk/buildscratch/2015.2/continuous/20150626163259/src/products/hls/hls_lib/src/hls_math.h:276) automatically.
+@I [XFORM-602] Inlining function 'hls::fabs' into 'fabs' (/wrk/buildscratch/2015.2/continuous/20150626163259/src/products/hls/hls_lib/src/lib_hlsm.cpp:134) automatically.
+@I [XFORM-602] Inlining function 'fabs' into 'preprocessSound' (voicerec.cpp:243) automatically.
+@I [XFORM-602] Inlining function 'fastlog2' into 'fastlog' (voicerec.cpp:46) automatically.
+@I [XFORM-602] Inlining function 'fastlog' into 'processChunk' (voicerec.cpp:201) automatically.
+@I [XFORM-602] Inlining function 'dct_ii' into 'processChunk' (voicerec.cpp:206) automatically.
+@I [XFORM-602] Inlining function 'guessClassification' into 'classifySound' (neuralNetworkSynth.cpp:65) automatically.
+@I [HLS-0] Syn check 1/2 time: 1 seconds per iteration
+@I [HLS-0] syn check 2/2: transform -syn-check   /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.g.2.bc -f  -phase syn-check
+@I [HLS-0] Syn check 2/2 time: 0 seconds per iteration
+@I [HLS-0] Compiler optimizing ...
+@I [HLS-0] Share syncheck's 1.bc for syn flow: copy /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.g.1.bc to /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.o.1.bc
+@I [HLS-0] presyn 1: transform -hls -tmp /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db -type-info  -function-uniquify -directive-preproc -mem2reg -dse -dce  -disaggr -scalarrepl -norm-name -deadargelim  -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify  -clib-intrinsic-prepare -dce  -func-buffer -dce -array-normalize  -func-legal -instcombine -gvn -constprop -dce   -ptrArgReplace -mem2reg -instcombine -dce  -array-seg-normalize -deadargelim  -instcombine -dce  -pointer-simplify -dce  -port-alignment -dce  -interface-preproc  -data-pack -instcombine -dce   -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -loop-simplify -indvars -instcombine  -gvn -loop-simplify -mem2reg -dce -simplifycfg  -find-region -instcombine  -auto-loop-pipeline  -inst-simplify  -interface-preproc  -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -attach-range  -gvn -disable-agg-range -inst-simplify  -constprop -simplifycfg -dce  -pointer-simplify -dce  -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce  -auto-par -instcombine -dce  -array-transform-check  -array-reshape -instcombine -simplifycfg -dce  -ptrArgReplace -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -array-partition -instcombine -simplifycfg -dce  -ptrArgReplace -global-constprop -deadargelim -mem2reg  -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce   -mem-intrinsic-preproc -dce  -global-privatize  -mem2reg -globaldce  -promote-global-argument  -ptrArgReplace -mem2reg -instcombine -dce  -globalopt -mergereturn -simplify-global-access -mem2reg -dce  -pointer-simplify -dce  -functionattrs  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -inst-simplify -dce -norm-name  -function-inline -globaldce  -func-inst -constprop -instcombine -simplifycfg -dce  -func-legal -dce   -loop-bound  -arraycheck -bitwidthmin -on-by-dataflow  -loop-delete -instcombine -simplifycfg -dce -loop-simplify -clean-region -simplifycfg -loop-stream -instcombine -simplifycfg -dce -globaldce  -stream-intrinsic-preproc -dce  -check-ap-stream -check-dataflow-syntax  -legalize-stream-variable -legalize-global -legalize-global-1  -extract-subproc -scalar-propagation -globaldce -mem2reg  -check-dataflow-channels -function-stream -dce -globaldce  -prop-fifo-spec -internal-stream-gen  -array-streaming -instcombine -simplifycfg -dce    -function-uniquify -directive-preproc -mem2reg -dse -dce  -group-axi-access    -simplifycfg -dce -loop-delete  -norm-name  /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.o.1.bc -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.o.1.tmp.bc -f
+@I [XFORM-602] Inlining function 'fp_struct<double>::data' into 'fp_struct<double>::to_double' (/wrk/buildscratch/2015.2/continuous/20150626163259/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:504) automatically.
+@I [XFORM-602] Inlining function 'fp_struct<double>::to_double' into 'fp_struct<double>::to_ieee' (/wrk/buildscratch/2015.2/continuous/20150626163259/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:518) automatically.
+@I [XFORM-602] Inlining function 'fp_struct<double>::to_ieee' into 'hls::copysign' (/wrk/buildscratch/2015.2/continuous/20150626163259/src/products/hls/hls_lib/src/hls_math.h:254) automatically.
+@I [XFORM-602] Inlining function 'hls::copysign' into 'hls::fabs' (/wrk/buildscratch/2015.2/continuous/20150626163259/src/products/hls/hls_lib/src/hls_math.h:276) automatically.
+@I [XFORM-602] Inlining function 'hls::fabs' into 'fabs' (/wrk/buildscratch/2015.2/continuous/20150626163259/src/products/hls/hls_lib/src/lib_hlsm.cpp:134) automatically.
+@I [XFORM-602] Inlining function 'fabs' into 'preprocessSound' (voicerec.cpp:243) automatically.
+@I [XFORM-602] Inlining function 'fastlog2' into 'fastlog' (voicerec.cpp:46) automatically.
+@I [XFORM-602] Inlining function 'fastlog' into 'processChunk' (voicerec.cpp:201) automatically.
+@I [XFORM-602] Inlining function 'dct_ii' into 'processChunk' (voicerec.cpp:206) automatically.
+@I [XFORM-602] Inlining function 'guessClassification' into 'classifySound' (neuralNetworkSynth.cpp:65) automatically.
+@I [HLS-0] Presyn 1 time: 2 seconds per iteration
+@I [HLS-0] presyn 2: transform -hls -keep-callgraph -scalarrepl -mem2reg  -port-alignment -attach-range -dce  -pipe-mux-gen  -indvars -loop-bound  -inst-simplify -instcombine -dce  -merge-array-access -mem2reg -dce  -clean-region -mergereturn -if-conv  -instcombine -dce -constprop  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -scalarrepl -mem2reg  -global-constprop -deadargelim -deadargelim  -instcombine -dce -simplifycfg    -ptrArgReplace -mem2reg -function-inline  -globaldce -mem2reg -instcombine -dce -expr-balance  -instcombine -dce  -bitwidthmin  -directive-preproc  -inst-rectify -instcombine -dce  -functionattrs  -constprop -instcombine -bit-constprop  -simplify-global-access  -globalopt -globaldce  -inst-simplify -instcombine -elimdeaddata -dce  -loop-delete -simplifycfg   -norm-name /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.o.2.bc -f  -phase presyn
+@I [XFORM-401] Performing if-conversion on hyperblock from (voicerec.cpp:109:7) to (voicerec.cpp:108:22) in function 'FFT'... converting 3 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (voicerec.cpp:225:5) to (voicerec.cpp:224:29) in function 'preprocessSound'... converting 3 basic blocks.
+@I [HLS-0] Presyn 2 time: 0 seconds per iteration
+@I [HLS-100] Command "is_encrypted /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.o.2.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 65.925 sec.
+@I [HLS-0] build ssdm: transform -hls -function-uniquify -auto-function-inline -globaldce  -ptrArgReplace -mem2reg -instcombine -dce  -loop-simplify -indvars -licm -loop-dep  -loop-bound -licm -loop-simplify -flattenloopnest  -array-flatten -gvn -instcombine -dce  -array-map -dce -func-legal  -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify   -array-burst -promote-global-argument -dce  -axi4-lower -array-seg-normalize  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm  -inst-simplify -dce  -globaldce -array-streaming -instcombine  -dce   -deadargelim -doublePtrSimplify  -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg  -instcombine  -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine  -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound  -loop-simplify -loop-preproc  -constprop -global-constprop -gvn -mem2reg -instcombine -dce  -loop-merge -dce  -bitwidthmin  -scalar-propagation -globaldce -mem2reg  -interface-preproc -interface-gen  -deadargelim -directive-preproc -inst-simplify -dce  -gvn -mem2reg -instcombine -dce -adse  -loop-bound  -instcombine -cfgopt -simplifycfg -loop-simplify  -clean-region -io-protocol  -find-region -mem2reg  -bitop-raise  -inst-simplify -inst-rectify -instcombine -adce -deadargelim  -loop-simplify -phi-opt -bitop-raise  -cfgopt -simplifycfg -strip-dead-prototypes  -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa  -inst-simplify -simplifycfg   -mergereturn -inst-simplify -inst-rectify  -dce -bitop-lower  -loop-rewind -pointer-simplify -dce -cfgopt  -norm-name -legalize -read-loop-dep -dce -bitwidth   -cdfg-build  /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.o.2.bc -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.o.3.bc -f  -phase build-ssdm
+@I [HLS-0] Build ssdm time: 1 seconds per iteration
+@I [HLS-100] Command "is_encrypted /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.o.3.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 68.557 sec.
+@I [HLS-0] Finish building internal data model.
+@I [HLS-100] Command 'opt_and_import_c' returned 0; elapsed 15.23Total elapsed time: 69.552 sec.
+@I [HLS-111] Elapsed time: 21.5 seconds; current memory usage: 485 MB.
+@I [HLS-100] Command 'elaborate' returned 0; elapsed 20.56Total elapsed time: 69.562 sec.
+@I [HLS-100] Command "autosyn "
+@I [HLS-10] Starting hardware synthesis ...
+@0 [HLS-0] Starting hardware synthesis ...
+@I [HLS-0] Synthesizing C/C++ design ...
+@I [HLS-10] Synthesizing 'voicerec' ...
+@0 [HLS-0] Synthesizing 'voicerec' ...
+@I [HLS-100] Command "ap_set_top_model voicerec "
+@I [HLS-100] Command 'ap_set_top_model' returned 0; elapsed 0Total elapsed time: 69.564 sec.
+@I [HLS-100] Command "get_model_list voicerec -filter all-wo-channel -topdown "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 69.565 sec.
+@I [HLS-100] Command "preproc_iomode -model voicerec "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 69.567 sec.
+@I [HLS-100] Command "preproc_iomode -model voicerec_classifySound "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 69.567 sec.
+@I [HLS-100] Command "preproc_iomode -model voicerec_feedForward "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 69.567 sec.
+@I [HLS-100] Command "preproc_iomode -model voicerec_processChunk "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 69.567 sec.
+@I [HLS-100] Command "preproc_iomode -model voicerec_FFT "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 69.567 sec.
+@I [HLS-100] Command "preproc_iomode -model voicerec_preprocessSound "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 69.567 sec.
+@I [HLS-100] Command "get_model_list voicerec -filter all-wo-channel "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 69.568 sec.
+@I [HLS-0] Model list for configure: voicerec_preprocessSound voicerec_FFT voicerec_processChunk voicerec_feedForward voicerec_classifySound voicerec
+@I [HLS-0] Configuring Module : voicerec_preprocessSound ...
+@I [HLS-100] Command "set_default_model voicerec_preprocessSound "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 69.568 sec.
+@I [HLS-100] Command "apply_spec_resource_limit voicerec_preprocessSound "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 69.568 sec.
+@I [HLS-0] Configuring Module : voicerec_FFT ...
+@I [HLS-100] Command "set_default_model voicerec_FFT "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 69.569 sec.
+@I [HLS-100] Command "apply_spec_resource_limit voicerec_FFT "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 69.569 sec.
+@I [HLS-0] Configuring Module : voicerec_processChunk ...
+@I [HLS-100] Command "set_default_model voicerec_processChunk "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 69.569 sec.
+@I [HLS-100] Command "apply_spec_resource_limit voicerec_processChunk "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 69.569 sec.
+@I [HLS-0] Configuring Module : voicerec_feedForward ...
+@I [HLS-100] Command "set_default_model voicerec_feedForward "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 69.569 sec.
+@I [HLS-100] Command "apply_spec_resource_limit voicerec_feedForward "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 69.569 sec.
+@I [HLS-0] Configuring Module : voicerec_classifySound ...
+@I [HLS-100] Command "set_default_model voicerec_classifySound "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 69.569 sec.
+@I [HLS-100] Command "apply_spec_resource_limit voicerec_classifySound "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 69.569 sec.
+@I [HLS-0] Configuring Module : voicerec ...
+@I [HLS-100] Command "set_default_model voicerec "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 69.569 sec.
+@I [HLS-100] Command "apply_spec_resource_limit voicerec "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 69.570 sec.
+@I [HLS-0] Model list for preprocess: voicerec_preprocessSound voicerec_FFT voicerec_processChunk voicerec_feedForward voicerec_classifySound voicerec
+@I [HLS-0] Preprocessing Module: voicerec_preprocessSound ...
+@I [HLS-100] Command "set_default_model voicerec_preprocessSound "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 69.570 sec.
+@I [HLS-100] Command "cdfg_preprocess -model voicerec_preprocessSound "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.01Total elapsed time: 69.576 sec.
+@I [HLS-100] Command "rtl_gen_preprocess voicerec_preprocessSound "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 69.577 sec.
+@I [HLS-0] Preprocessing Module: voicerec_FFT ...
+@I [HLS-100] Command "set_default_model voicerec_FFT "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 69.577 sec.
+@I [HLS-100] Command "cdfg_preprocess -model voicerec_FFT "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 69.579 sec.
+@I [HLS-100] Command "rtl_gen_preprocess voicerec_FFT "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 69.580 sec.
+@I [HLS-0] Preprocessing Module: voicerec_processChunk ...
+@I [HLS-100] Command "set_default_model voicerec_processChunk "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 69.580 sec.
+@I [HLS-100] Command "cdfg_preprocess -model voicerec_processChunk "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.01Total elapsed time: 69.583 sec.
+@I [HLS-100] Command "rtl_gen_preprocess voicerec_processChunk "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 69.584 sec.
+@I [HLS-0] Preprocessing Module: voicerec_feedForward ...
+@I [HLS-100] Command "set_default_model voicerec_feedForward "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 69.584 sec.
+@I [HLS-100] Command "cdfg_preprocess -model voicerec_feedForward "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 69.585 sec.
+@I [HLS-100] Command "rtl_gen_preprocess voicerec_feedForward "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 69.586 sec.
+@I [HLS-0] Preprocessing Module: voicerec_classifySound ...
+@I [HLS-100] Command "set_default_model voicerec_classifySound "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 69.586 sec.
+@I [HLS-100] Command "cdfg_preprocess -model voicerec_classifySound "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 69.587 sec.
+@I [HLS-100] Command "rtl_gen_preprocess voicerec_classifySound "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 69.588 sec.
+@I [HLS-0] Preprocessing Module: voicerec ...
+@I [HLS-100] Command "set_default_model voicerec "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 69.588 sec.
+@I [HLS-100] Command "cdfg_preprocess -model voicerec "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 69.589 sec.
+@I [HLS-100] Command "rtl_gen_preprocess voicerec "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 69.590 sec.
+@I [HLS-0] Model list for synthesis: voicerec_preprocessSound voicerec_FFT voicerec_processChunk voicerec_feedForward voicerec_classifySound voicerec
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'voicerec_preprocessSound' 
+@0 [HLS-0] -- Scheduling module 'voicerec_preprocessSound' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model voicerec_preprocessSound "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 69.591 sec.
+@I [HLS-100] Command "schedule -model voicerec_preprocessSound "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.13Total elapsed time: 69.729 sec.
+@I [HLS-111] Elapsed time: 0.17 seconds; current memory usage: 486 MB.
+@I [HLS-100] Command "report -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_preprocessSound.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 69.760 sec.
+@I [HLS-100] Command "db_write -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_preprocessSound.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.03Total elapsed time: 69.797 sec.
+@I [HLS-0] Finish scheduling voicerec_preprocessSound.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'voicerec_preprocessSound' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'voicerec_preprocessSound' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model voicerec_preprocessSound "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 69.807 sec.
+@I [HLS-100] Command "bind -model voicerec_preprocessSound "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=voicerec_preprocessSound
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.04Total elapsed time: 69.853 sec.
+@I [HLS-111] Elapsed time: 0.11 seconds; current memory usage: 486 MB.
+@I [HLS-100] Command "report -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_preprocessSound.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.11Total elapsed time: 69.965 sec.
+@I [HLS-100] Command "db_write -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_preprocessSound.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.03Total elapsed time: 70.11 sec.
+@I [HLS-0] Finish binding voicerec_preprocessSound.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'voicerec_FFT' 
+@0 [HLS-0] -- Scheduling module 'voicerec_FFT' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model voicerec_FFT "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 70.12 sec.
+@I [HLS-100] Command "schedule -model voicerec_FFT "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.18Total elapsed time: 70.196 sec.
+@I [HLS-111] Elapsed time: 0.33 seconds; current memory usage: 487 MB.
+@I [HLS-100] Command "report -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_FFT.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 70.228 sec.
+@I [HLS-100] Command "db_write -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_FFT.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.03Total elapsed time: 70.261 sec.
+@I [HLS-0] Finish scheduling voicerec_FFT.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'voicerec_FFT' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'voicerec_FFT' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model voicerec_FFT "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 70.262 sec.
+@I [HLS-100] Command "bind -model voicerec_FFT "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=voicerec_FFT
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.03Total elapsed time: 70.298 sec.
+@I [HLS-111] Elapsed time: 0.09 seconds; current memory usage: 488 MB.
+@I [HLS-100] Command "report -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_FFT.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.08Total elapsed time: 70.385 sec.
+@I [HLS-100] Command "db_write -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_FFT.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.03Total elapsed time: 70.425 sec.
+@I [HLS-0] Finish binding voicerec_FFT.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'voicerec_processChunk' 
+@0 [HLS-0] -- Scheduling module 'voicerec_processChunk' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model voicerec_processChunk "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 70.427 sec.
+@I [HLS-100] Command "schedule -model voicerec_processChunk "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.23Total elapsed time: 70.659 sec.
+@I [HLS-111] Elapsed time: 0.36 seconds; current memory usage: 488 MB.
+@I [HLS-100] Command "report -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_processChunk.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 70.695 sec.
+@I [HLS-100] Command "db_write -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_processChunk.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.04Total elapsed time: 70.746 sec.
+@I [HLS-0] Finish scheduling voicerec_processChunk.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'voicerec_processChunk' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'voicerec_processChunk' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model voicerec_processChunk "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 70.747 sec.
+@I [HLS-100] Command "bind -model voicerec_processChunk "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=voicerec_processChunk
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.07Total elapsed time: 70.822 sec.
+@I [HLS-111] Elapsed time: 0.14 seconds; current memory usage: 489 MB.
+@I [HLS-100] Command "report -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_processChunk.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.15Total elapsed time: 70.991 sec.
+@I [HLS-100] Command "db_write -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_processChunk.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.04Total elapsed time: 71.43 sec.
+@I [HLS-0] Finish binding voicerec_processChunk.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'voicerec_feedForward' 
+@0 [HLS-0] -- Scheduling module 'voicerec_feedForward' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model voicerec_feedForward "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 71.44 sec.
+@I [HLS-100] Command "schedule -model voicerec_feedForward "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.11Total elapsed time: 71.147 sec.
+@I [HLS-111] Elapsed time: 0.3 seconds; current memory usage: 490 MB.
+@I [HLS-100] Command "report -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_feedForward.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 71.175 sec.
+@I [HLS-100] Command "db_write -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_feedForward.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.04Total elapsed time: 71.204 sec.
+@I [HLS-0] Finish scheduling voicerec_feedForward.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'voicerec_feedForward' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'voicerec_feedForward' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model voicerec_feedForward "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 71.205 sec.
+@I [HLS-100] Command "bind -model voicerec_feedForward "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=voicerec_feedForward
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.04Total elapsed time: 71.254 sec.
+@I [HLS-111] Elapsed time: 0.1 seconds; current memory usage: 491 MB.
+@I [HLS-100] Command "report -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_feedForward.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.09Total elapsed time: 71.347 sec.
+@I [HLS-100] Command "db_write -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_feedForward.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.04Total elapsed time: 71.385 sec.
+@I [HLS-0] Finish binding voicerec_feedForward.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'voicerec_classifySound' 
+@0 [HLS-0] -- Scheduling module 'voicerec_classifySound' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model voicerec_classifySound "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 71.386 sec.
+@I [HLS-100] Command "schedule -model voicerec_classifySound "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.03Total elapsed time: 71.419 sec.
+@I [HLS-111] Elapsed time: 0.16 seconds; current memory usage: 491 MB.
+@I [HLS-100] Command "report -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_classifySound.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 71.434 sec.
+@I [HLS-100] Command "db_write -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_classifySound.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 71.450 sec.
+@I [HLS-0] Finish scheduling voicerec_classifySound.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'voicerec_classifySound' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'voicerec_classifySound' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model voicerec_classifySound "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 71.451 sec.
+@I [HLS-100] Command "bind -model voicerec_classifySound "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=voicerec_classifySound
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.04Total elapsed time: 71.488 sec.
+@I [HLS-111] Elapsed time: 0.06 seconds; current memory usage: 491 MB.
+@I [HLS-100] Command "report -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_classifySound.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.11Total elapsed time: 71.593 sec.
+@I [HLS-100] Command "db_write -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_classifySound.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 71.611 sec.
+@I [HLS-0] Finish binding voicerec_classifySound.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'voicerec' 
+@0 [HLS-0] -- Scheduling module 'voicerec' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model voicerec "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 71.612 sec.
+@I [HLS-100] Command "schedule -model voicerec "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.01Total elapsed time: 71.624 sec.
+@I [HLS-111] Elapsed time: 0.13 seconds; current memory usage: 491 MB.
+@I [HLS-100] Command "report -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 71.635 sec.
+@I [HLS-100] Command "db_write -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 71.646 sec.
+@I [HLS-0] Finish scheduling voicerec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'voicerec' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'voicerec' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model voicerec "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 71.647 sec.
+@I [HLS-100] Command "bind -model voicerec "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=voicerec
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.3Total elapsed time: 71.952 sec.
+@I [HLS-111] Elapsed time: 0.32 seconds; current memory usage: 492 MB.
+@I [HLS-100] Command "report -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.3Total elapsed time: 72.262 sec.
+@I [HLS-100] Command "db_write -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 72.270 sec.
+@I [HLS-0] Finish binding voicerec.
+@I [HLS-100] Command "get_model_list voicerec -filter all-wo-channel "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 72.270 sec.
+@I [HLS-0] Preprocessing for RTLGen ...
+@I [HLS-100] Command "rtl_gen_preprocess voicerec_preprocessSound "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 72.271 sec.
+@I [HLS-100] Command "rtl_gen_preprocess voicerec_FFT "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 72.272 sec.
+@I [HLS-100] Command "rtl_gen_preprocess voicerec_processChunk "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 72.272 sec.
+@I [HLS-100] Command "rtl_gen_preprocess voicerec_feedForward "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 72.273 sec.
+@I [HLS-100] Command "rtl_gen_preprocess voicerec_classifySound "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 72.274 sec.
+@I [HLS-100] Command "rtl_gen_preprocess voicerec "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 72.274 sec.
+@I [HLS-0] Model list for RTL generation: voicerec_preprocessSound voicerec_FFT voicerec_processChunk voicerec_feedForward voicerec_classifySound voicerec
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'voicerec_preprocessSound' 
+@0 [HLS-0] -- Generating RTL for module 'voicerec_preprocessSound' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model voicerec_preprocessSound -vendor xilinx -mg_file /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_preprocessSound.compgen.tcl "
+@I [RTGEN-100] Generating core module 'voicerec_dcmp_64ns_64ns_1_1': 1 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_fpext_32ns_64_1': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'voicerec_preprocessSound'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.07Total elapsed time: 72.341 sec.
+@I [HLS-111] Elapsed time: 0.38 seconds; current memory usage: 493 MB.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 72.347 sec.
+@I [HLS-100] Command "gen_rtl voicerec_preprocessSound -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/systemc/voicerec_preprocessSound -synmodules voicerec_preprocessSound voicerec_FFT voicerec_processChunk voicerec_feedForward voicerec_classifySound voicerec "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 72.357 sec.
+@I [HLS-100] Command "gen_rtl voicerec_preprocessSound -style xilinx -f -lang vhdl -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/vhdl/voicerec_preprocessSound "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 72.363 sec.
+@I [HLS-100] Command "gen_rtl voicerec_preprocessSound -style xilinx -f -lang vlog -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/verilog/voicerec_preprocessSound "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 72.370 sec.
+@I [HLS-100] Command "gen_tb_info voicerec_preprocessSound -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_preprocessSound -p /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 72.374 sec.
+@I [HLS-100] Command "report -model voicerec_preprocessSound -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/report/voicerec_preprocessSound_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 72.412 sec.
+@I [HLS-100] Command "report -model voicerec_preprocessSound -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/report/voicerec_preprocessSound_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 72.443 sec.
+@I [HLS-100] Command "report -model voicerec_preprocessSound -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_preprocessSound.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.14Total elapsed time: 72.578 sec.
+@I [HLS-100] Command "db_write -model voicerec_preprocessSound -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_preprocessSound.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.07Total elapsed time: 72.653 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'voicerec_FFT' 
+@0 [HLS-0] -- Generating RTL for module 'voicerec_FFT' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model voicerec_FFT -vendor xilinx -mg_file /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_FFT.compgen.tcl "
+@I [RTGEN-100] Generating core module 'voicerec_faddfsub_32ns_32ns_32_5_full_dsp': 2 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_fmul_32ns_32ns_32_4_max_dsp': 4 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_sdiv_11ns_32ns_32_15_seq': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'voicerec_FFT'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.07Total elapsed time: 72.814 sec.
+@I [HLS-111] Elapsed time: 0.45 seconds; current memory usage: 497 MB.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 72.818 sec.
+@I [HLS-100] Command "gen_rtl voicerec_FFT -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/systemc/voicerec_FFT -synmodules voicerec_preprocessSound voicerec_FFT voicerec_processChunk voicerec_feedForward voicerec_classifySound voicerec "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 72.828 sec.
+@I [HLS-100] Command "gen_rtl voicerec_FFT -style xilinx -f -lang vhdl -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/vhdl/voicerec_FFT "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 72.840 sec.
+@I [HLS-100] Command "gen_rtl voicerec_FFT -style xilinx -f -lang vlog -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/verilog/voicerec_FFT "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 72.847 sec.
+@I [HLS-100] Command "gen_tb_info voicerec_FFT -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_FFT -p /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 72.861 sec.
+@I [HLS-100] Command "report -model voicerec_FFT -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/report/voicerec_FFT_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 72.900 sec.
+@I [HLS-100] Command "report -model voicerec_FFT -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/report/voicerec_FFT_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 72.925 sec.
+@I [HLS-100] Command "report -model voicerec_FFT -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_FFT.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.1Total elapsed time: 73.32 sec.
+@I [HLS-100] Command "db_write -model voicerec_FFT -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_FFT.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.05Total elapsed time: 73.97 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'voicerec_processChunk' 
+@0 [HLS-0] -- Generating RTL for module 'voicerec_processChunk' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model voicerec_processChunk -vendor xilinx -mg_file /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_processChunk.compgen.tcl "
+@I [RTGEN-100] Generating core module 'voicerec_dmul_64ns_64ns_64_6_max_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_faddfsub_32ns_32ns_32_5_full_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_fcmp_32ns_32ns_1_1': 1 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_fdiv_32ns_32ns_32_16': 1 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_fmul_32ns_32ns_32_4_max_dsp': 2 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_fpext_32ns_64_1': 1 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_fptrunc_64ns_32_1': 1 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_sitofp_64ns_32_6': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'voicerec_processChunk'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.11Total elapsed time: 73.287 sec.
+@I [HLS-111] Elapsed time: 0.41 seconds; current memory usage: 500 MB.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 73.291 sec.
+@I [HLS-100] Command "gen_rtl voicerec_processChunk -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/systemc/voicerec_processChunk -synmodules voicerec_preprocessSound voicerec_FFT voicerec_processChunk voicerec_feedForward voicerec_classifySound voicerec "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 73.309 sec.
+@I [HLS-100] Command "gen_rtl voicerec_processChunk -style xilinx -f -lang vhdl -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/vhdl/voicerec_processChunk "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 73.320 sec.
+@I [HLS-100] Command "gen_rtl voicerec_processChunk -style xilinx -f -lang vlog -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/verilog/voicerec_processChunk "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 73.331 sec.
+@I [HLS-100] Command "gen_tb_info voicerec_processChunk -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_processChunk -p /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.01Total elapsed time: 73.336 sec.
+@I [HLS-100] Command "report -model voicerec_processChunk -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/report/voicerec_processChunk_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 73.376 sec.
+@I [HLS-100] Command "report -model voicerec_processChunk -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/report/voicerec_processChunk_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 73.409 sec.
+@I [HLS-100] Command "report -model voicerec_processChunk -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_processChunk.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.19Total elapsed time: 73.602 sec.
+@I [HLS-100] Command "db_write -model voicerec_processChunk -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_processChunk.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.08Total elapsed time: 73.688 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'voicerec_feedForward' 
+@0 [HLS-0] -- Generating RTL for module 'voicerec_feedForward' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model voicerec_feedForward -vendor xilinx -mg_file /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_feedForward.compgen.tcl "
+@I [RTGEN-100] Generating core module 'voicerec_dadd_64ns_64ns_64_5_full_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_ddiv_64ns_64ns_64_31': 1 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_dexp_64ns_64ns_64_18_full_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_fadd_32ns_32ns_32_5_full_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_fmul_32ns_32ns_32_4_max_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_fpext_32ns_64_1': 1 instance(s).
+@I [RTGEN-100] Generating core module 'voicerec_fptrunc_64ns_32_1': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'voicerec_feedForward'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.12Total elapsed time: 73.916 sec.
+@I [HLS-111] Elapsed time: 0.58 seconds; current memory usage: 505 MB.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 73.918 sec.
+@I [HLS-100] Command "gen_rtl voicerec_feedForward -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/systemc/voicerec_feedForward -synmodules voicerec_preprocessSound voicerec_FFT voicerec_processChunk voicerec_feedForward voicerec_classifySound voicerec "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 73.929 sec.
+@I [HLS-100] Command "gen_rtl voicerec_feedForward -style xilinx -f -lang vhdl -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/vhdl/voicerec_feedForward "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 73.938 sec.
+@I [HLS-100] Command "gen_rtl voicerec_feedForward -style xilinx -f -lang vlog -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/verilog/voicerec_feedForward "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 73.947 sec.
+@I [HLS-100] Command "gen_tb_info voicerec_feedForward -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_feedForward -p /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.01Total elapsed time: 73.951 sec.
+@I [HLS-100] Command "report -model voicerec_feedForward -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/report/voicerec_feedForward_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 73.981 sec.
+@I [HLS-100] Command "report -model voicerec_feedForward -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/report/voicerec_feedForward_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 74.7 sec.
+@I [HLS-100] Command "report -model voicerec_feedForward -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_feedForward.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.12Total elapsed time: 74.121 sec.
+@I [HLS-100] Command "db_write -model voicerec_feedForward -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_feedForward.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.05Total elapsed time: 74.184 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'voicerec_classifySound' 
+@0 [HLS-0] -- Generating RTL for module 'voicerec_classifySound' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model voicerec_classifySound -vendor xilinx -mg_file /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_classifySound.compgen.tcl "
+@I [RTGEN-100] Generating core module 'voicerec_fcmp_32ns_32ns_1_1': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'voicerec_classifySound'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.04Total elapsed time: 74.274 sec.
+@I [HLS-111] Elapsed time: 0.34 seconds; current memory usage: 507 MB.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.276 sec.
+@I [HLS-100] Command "gen_rtl voicerec_classifySound -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/systemc/voicerec_classifySound -synmodules voicerec_preprocessSound voicerec_FFT voicerec_processChunk voicerec_feedForward voicerec_classifySound voicerec "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 74.282 sec.
+@I [HLS-100] Command "gen_rtl voicerec_classifySound -style xilinx -f -lang vhdl -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/vhdl/voicerec_classifySound "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 74.285 sec.
+@I [HLS-100] Command "gen_rtl voicerec_classifySound -style xilinx -f -lang vlog -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/verilog/voicerec_classifySound "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 74.289 sec.
+@I [HLS-100] Command "gen_tb_info voicerec_classifySound -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_classifySound -p /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 74.293 sec.
+@I [HLS-100] Command "report -model voicerec_classifySound -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/report/voicerec_classifySound_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 74.310 sec.
+@I [HLS-100] Command "report -model voicerec_classifySound -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/report/voicerec_classifySound_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 74.324 sec.
+@I [HLS-100] Command "report -model voicerec_classifySound -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_classifySound.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.11Total elapsed time: 74.438 sec.
+@I [HLS-100] Command "db_write -model voicerec_classifySound -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_classifySound.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02Total elapsed time: 74.469 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'voicerec' 
+@0 [HLS-0] -- Generating RTL for module 'voicerec' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model voicerec -vendor xilinx -mg_file /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.compgen.tcl "
+@I [RTGEN-500] Setting interface mode on port 'voicerec/inSound' to 'ap_memory'.
+@I [RTGEN-500] Setting interface mode on function 'voicerec' to 'ap_ctrl_hs'.
+@W [RTGEN-101] Global array 'begins' will not be exposed as RTL port.
+@W [RTGEN-101] Global array 'ends' will not be exposed as RTL port.
+@W [RTGEN-101] Global array 'c' will not be exposed as RTL port.
+@W [RTGEN-101] Global array 'e' will not be exposed as RTL port.
+@W [RTGEN-101] Global array 'spec' will not be exposed as RTL port.
+@W [RTGEN-101] Global array 'result' will not be exposed as RTL port.
+@W [RTGEN-101] Global array 'input_r' will not be exposed as RTL port.
+@W [RTGEN-101] Global array 'hidden' will not be exposed as RTL port.
+@W [RTGEN-101] Global array 'weightIH' will not be exposed as RTL port.
+@W [RTGEN-101] Global array 'output_r' will not be exposed as RTL port.
+@W [RTGEN-101] Global array 'weightHO' will not be exposed as RTL port.
+@I [RTGEN-100] Finished creating RTL model for 'voicerec'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.05Total elapsed time: 74.545 sec.
+@I [HLS-111] Elapsed time: 0.25 seconds; current memory usage: 508 MB.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.547 sec.
+@I [HLS-100] Command "gen_rtl voicerec -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/systemc/voicerec -synmodules voicerec_preprocessSound voicerec_FFT voicerec_processChunk voicerec_feedForward voicerec_classifySound voicerec "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 74.552 sec.
+@I [HLS-100] Command "gen_rtl voicerec -istop -style xilinx -f -lang vhdl -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/vhdl/voicerec "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 74.559 sec.
+@I [HLS-100] Command "gen_rtl voicerec -istop -style xilinx -f -lang vlog -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/verilog/voicerec "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 74.566 sec.
+@I [HLS-100] Command "export_constraint_db -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.constraint.tcl -f -tool general "
+@I [HLS-100] Command 'export_constraint_db' returned 0; elapsed 0Total elapsed time: 74.567 sec.
+@I [HLS-100] Command "report -model voicerec -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.design.xml -verbose -f -dv "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.24Total elapsed time: 74.808 sec.
+@I [HLS-100] Command "gen_tb_info voicerec -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec -p /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 74.823 sec.
+@I [HLS-100] Command "report -model voicerec -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/report/voicerec_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 74.832 sec.
+@I [HLS-100] Command "report -model voicerec -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/syn/report/voicerec_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 74.838 sec.
+@I [HLS-100] Command "report -model voicerec -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.3Total elapsed time: 75.147 sec.
+@I [HLS-100] Command "db_write -model voicerec -o /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 75.160 sec.
+@I [HLS-100] Command "sc_get_clocks voicerec "
+@I [HLS-100] Command 'sc_get_clocks' returned 0; elapsed 0Total elapsed time: 75.173 sec.
+@I [HLS-100] Command "sc_get_portdomain voicerec "
+@I [HLS-100] Command 'sc_get_portdomain' returned 0; elapsed 0Total elapsed time: 75.174 sec.
+@I [HLS-0] Model list for RTL component generation: voicerec_preprocessSound voicerec_FFT voicerec_processChunk voicerec_feedForward voicerec_classifySound voicerec
+@I [HLS-0] Handling components in module [voicerec_preprocessSound] ... 
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_preprocessSound.compgen.tcl "
+@I [HLS-0] Found component voicerec_fpext_32ns_64_1.
+@I [HLS-0] Append model voicerec_fpext_32ns_64_1
+@I [HLS-0] Found component voicerec_dcmp_64ns_64ns_1_1.
+@I [HLS-0] Append model voicerec_dcmp_64ns_64ns_1_1
+@I [HLS-0] Found component voicerec_preprocessSound_begins.
+@I [HLS-0] Append model voicerec_preprocessSound_begins
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.180 sec.
+@I [HLS-0] Handling components in module [voicerec_FFT] ... 
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_FFT.compgen.tcl "
+@I [HLS-0] Found component voicerec_faddfsub_32ns_32ns_32_5_full_dsp.
+@I [HLS-0] Append model voicerec_faddfsub_32ns_32ns_32_5_full_dsp
+@I [HLS-0] Found component voicerec_fmul_32ns_32ns_32_4_max_dsp.
+@I [HLS-0] Append model voicerec_fmul_32ns_32ns_32_4_max_dsp
+@I [HLS-0] Found component voicerec_sdiv_11ns_32ns_32_15_seq.
+@I [HLS-0] Append model voicerec_sdiv_11ns_32ns_32_15_seq
+@I [HLS-0] Found component voicerec_FFT_cosVec.
+@I [HLS-0] Append model voicerec_FFT_cosVec
+@I [HLS-0] Found component voicerec_FFT_sinVec.
+@I [HLS-0] Append model voicerec_FFT_sinVec
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.182 sec.
+@I [HLS-0] Handling components in module [voicerec_processChunk] ... 
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_processChunk.compgen.tcl "
+@I [HLS-0] Found component voicerec_fdiv_32ns_32ns_32_16.
+@I [HLS-0] Append model voicerec_fdiv_32ns_32ns_32_16
+@I [HLS-0] Found component voicerec_sitofp_64ns_32_6.
+@I [HLS-0] Append model voicerec_sitofp_64ns_32_6
+@I [HLS-0] Found component voicerec_fptrunc_64ns_32_1.
+@I [HLS-0] Append model voicerec_fptrunc_64ns_32_1
+@I [HLS-0] Found component voicerec_fcmp_32ns_32ns_1_1.
+@I [HLS-0] Append model voicerec_fcmp_32ns_32ns_1_1
+@I [HLS-0] Found component voicerec_dmul_64ns_64ns_64_6_max_dsp.
+@I [HLS-0] Append model voicerec_dmul_64ns_64ns_64_6_max_dsp
+@I [HLS-0] Found component voicerec_processChunk_c.
+@I [HLS-0] Append model voicerec_processChunk_c
+@I [HLS-0] Found component voicerec_processChunk_e.
+@I [HLS-0] Append model voicerec_processChunk_e
+@I [HLS-0] Found component voicerec_processChunk_spec.
+@I [HLS-0] Append model voicerec_processChunk_spec
+@I [HLS-0] Found component voicerec_processChunk_mell.
+@I [HLS-0] Append model voicerec_processChunk_mell
+@I [HLS-0] Found component voicerec_processChunk_dctMatrix.
+@I [HLS-0] Append model voicerec_processChunk_dctMatrix
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.185 sec.
+@I [HLS-0] Handling components in module [voicerec_feedForward] ... 
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_feedForward.compgen.tcl "
+@I [HLS-0] Found component voicerec_fadd_32ns_32ns_32_5_full_dsp.
+@I [HLS-0] Append model voicerec_fadd_32ns_32ns_32_5_full_dsp
+@I [HLS-0] Found component voicerec_dadd_64ns_64ns_64_5_full_dsp.
+@I [HLS-0] Append model voicerec_dadd_64ns_64ns_64_5_full_dsp
+@I [HLS-0] Found component voicerec_ddiv_64ns_64ns_64_31.
+@I [HLS-0] Append model voicerec_ddiv_64ns_64ns_64_31
+@I [HLS-0] Found component voicerec_dexp_64ns_64ns_64_18_full_dsp.
+@I [HLS-0] Append model voicerec_dexp_64ns_64ns_64_18_full_dsp
+@I [HLS-0] Found component voicerec_feedForward_input_r.
+@I [HLS-0] Append model voicerec_feedForward_input_r
+@I [HLS-0] Found component voicerec_feedForward_weightIH.
+@I [HLS-0] Append model voicerec_feedForward_weightIH
+@I [HLS-0] Found component voicerec_feedForward_weightHO.
+@I [HLS-0] Append model voicerec_feedForward_weightHO
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 75.197 sec.
+@I [HLS-0] Handling components in module [voicerec_classifySound] ... 
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_classifySound.compgen.tcl "
+@I [HLS-0] Found component voicerec_classifySound_output_r.
+@I [HLS-0] Append model voicerec_classifySound_output_r
+@I [HLS-0] Found component voicerec_classifySound_flatInput.
+@I [HLS-0] Append model voicerec_classifySound_flatInput
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.198 sec.
+@I [HLS-0] Handling components in module [voicerec] ... 
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.compgen.tcl "
+@I [HLS-0] Found component voicerec_result.
+@I [HLS-0] Append model voicerec_result
+@I [HLS-0] Found component voicerec_outSound.
+@I [HLS-0] Append model voicerec_outSound
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.200 sec.
+@I [HLS-0] Append model voicerec_preprocessSound
+@I [HLS-0] Append model voicerec_FFT
+@I [HLS-0] Append model voicerec_processChunk
+@I [HLS-0] Append model voicerec_feedForward
+@I [HLS-0] Append model voicerec_classifySound
+@I [HLS-0] Append model voicerec
+@I [HLS-0] Generating RTL model list ...
+@I [HLS-0] All models in this session: voicerec_fpext_32ns_64_1 voicerec_dcmp_64ns_64ns_1_1 voicerec_preprocessSound_begins voicerec_faddfsub_32ns_32ns_32_5_full_dsp voicerec_fmul_32ns_32ns_32_4_max_dsp voicerec_sdiv_11ns_32ns_32_15_seq voicerec_FFT_cosVec voicerec_FFT_sinVec voicerec_fdiv_32ns_32ns_32_16 voicerec_sitofp_64ns_32_6 voicerec_fptrunc_64ns_32_1 voicerec_fcmp_32ns_32ns_1_1 voicerec_dmul_64ns_64ns_64_6_max_dsp voicerec_processChunk_c voicerec_processChunk_e voicerec_processChunk_spec voicerec_processChunk_mell voicerec_processChunk_dctMatrix voicerec_fadd_32ns_32ns_32_5_full_dsp voicerec_dadd_64ns_64ns_64_5_full_dsp voicerec_ddiv_64ns_64ns_64_31 voicerec_dexp_64ns_64ns_64_18_full_dsp voicerec_feedForward_input_r voicerec_feedForward_weightIH voicerec_feedForward_weightHO voicerec_classifySound_output_r voicerec_classifySound_flatInput voicerec_result voicerec_outSound voicerec_preprocessSound voicerec_FFT voicerec_processChunk voicerec_feedForward voicerec_classifySound voicerec
+@I [HLS-0] To file: write model voicerec_fpext_32ns_64_1
+@I [HLS-0] To file: write model voicerec_dcmp_64ns_64ns_1_1
+@I [HLS-0] To file: write model voicerec_preprocessSound_begins
+@I [HLS-0] To file: write model voicerec_faddfsub_32ns_32ns_32_5_full_dsp
+@I [HLS-0] To file: write model voicerec_fmul_32ns_32ns_32_4_max_dsp
+@I [HLS-0] To file: write model voicerec_sdiv_11ns_32ns_32_15_seq
+@I [HLS-0] To file: write model voicerec_FFT_cosVec
+@I [HLS-0] To file: write model voicerec_FFT_sinVec
+@I [HLS-0] To file: write model voicerec_fdiv_32ns_32ns_32_16
+@I [HLS-0] To file: write model voicerec_sitofp_64ns_32_6
+@I [HLS-0] To file: write model voicerec_fptrunc_64ns_32_1
+@I [HLS-0] To file: write model voicerec_fcmp_32ns_32ns_1_1
+@I [HLS-0] To file: write model voicerec_dmul_64ns_64ns_64_6_max_dsp
+@I [HLS-0] To file: write model voicerec_processChunk_c
+@I [HLS-0] To file: write model voicerec_processChunk_e
+@I [HLS-0] To file: write model voicerec_processChunk_spec
+@I [HLS-0] To file: write model voicerec_processChunk_mell
+@I [HLS-0] To file: write model voicerec_processChunk_dctMatrix
+@I [HLS-0] To file: write model voicerec_fadd_32ns_32ns_32_5_full_dsp
+@I [HLS-0] To file: write model voicerec_dadd_64ns_64ns_64_5_full_dsp
+@I [HLS-0] To file: write model voicerec_ddiv_64ns_64ns_64_31
+@I [HLS-0] To file: write model voicerec_dexp_64ns_64ns_64_18_full_dsp
+@I [HLS-0] To file: write model voicerec_feedForward_input_r
+@I [HLS-0] To file: write model voicerec_feedForward_weightIH
+@I [HLS-0] To file: write model voicerec_feedForward_weightHO
+@I [HLS-0] To file: write model voicerec_classifySound_output_r
+@I [HLS-0] To file: write model voicerec_classifySound_flatInput
+@I [HLS-0] To file: write model voicerec_result
+@I [HLS-0] To file: write model voicerec_outSound
+@I [HLS-0] To file: write model voicerec_preprocessSound
+@I [HLS-0] To file: write model voicerec_FFT
+@I [HLS-0] To file: write model voicerec_processChunk
+@I [HLS-0] To file: write model voicerec_feedForward
+@I [HLS-0] To file: write model voicerec_classifySound
+@I [HLS-0] To file: write model voicerec
+@I [HLS-0] Finished generating RTL model list.
+
+
+@I [HLS-0] RTL Generation done.
+@I [HLS-0] CAS Generation done.
+@I [HLS-0] CBC Generation done.
+@I [HLS-100] Command "export_ssdm /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/a.export.ll "
+@I [HLS-100] Command 'export_ssdm' returned 0; elapsed 0.11Total elapsed time: 75.309 sec.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.316 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.321 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 75.322 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.323 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.325 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.326 sec.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.327 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.335 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.337 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 75.342 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.348 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 75.360 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 75.360 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 75.378 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.03Total elapsed time: 75.392 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.400 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.401 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.18Total elapsed time: 75.577 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.05Total elapsed time: 75.628 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.29Total elapsed time: 75.628 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.632 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.29Total elapsed time: 75.632 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.29Total elapsed time: 75.632 sec.
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.637 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.637 sec.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.639 sec.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.640 sec.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.642 sec.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 75.642 sec.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_preprocessSound.compgen.tcl "
+@I [RTMG-278] Implementing memory 'voicerec_preprocessSound_begins_ram' using block RAMs with power-on initialization.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.07Total elapsed time: 75.771 sec.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_FFT.compgen.tcl "
+@I [RTMG-282] Generating pipelined core: 'voicerec_sdiv_11ns_32ns_32_15_seq_div'
+@I [RTMG-279] Implementing memory 'voicerec_FFT_cosVec_rom' using auto ROMs.
+@I [RTMG-279] Implementing memory 'voicerec_FFT_sinVec_rom' using auto ROMs.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.18Total elapsed time: 76.59 sec.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_processChunk.compgen.tcl "
+@I [RTMG-278] Implementing memory 'voicerec_processChunk_c_ram' using block RAMs with power-on initialization.
+@I [RTMG-278] Implementing memory 'voicerec_processChunk_e_ram' using distributed RAMs with power-on initialization.
+@I [RTMG-278] Implementing memory 'voicerec_processChunk_spec_ram' using block RAMs with power-on initialization.
+@I [RTMG-279] Implementing memory 'voicerec_processChunk_mell_rom' using distributed ROMs.
+@I [RTMG-279] Implementing memory 'voicerec_processChunk_dctMatrix_rom' using auto ROMs.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.3Total elapsed time: 76.501 sec.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_feedForward.compgen.tcl "
+@I [RTMG-278] Implementing memory 'voicerec_feedForward_input_r_ram' using block RAMs with power-on initialization.
+@I [RTMG-279] Implementing memory 'voicerec_feedForward_weightIH_rom' using auto ROMs.
+@I [RTMG-279] Implementing memory 'voicerec_feedForward_weightHO_rom' using auto ROMs.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 3.27Total elapsed time: 79.933 sec.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec_classifySound.compgen.tcl "
+@I [RTMG-278] Implementing memory 'voicerec_classifySound_output_r_ram' using distributed RAMs with power-on initialization.
+@I [RTMG-278] Implementing memory 'voicerec_classifySound_flatInput_ram' using block RAMs.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.04Total elapsed time: 79.989 sec.
+@I [HLS-100] Command "source /home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/voicerec.compgen.tcl "
+@I [RTMG-278] Implementing memory 'voicerec_result_ram' using block RAMs with power-on initialization.
+@I [RTMG-278] Implementing memory 'voicerec_outSound_ram' using block RAMs.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.03Total elapsed time: 80.44 sec.
+@I [HLS-10] Finished generating all RTL models.
+@0 [HLS-0] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'voicerec'.
+@I [WVHDL-304] Generating RTL VHDL for 'voicerec'.
+@I [WVLOG-307] Generating RTL Verilog for 'voicerec'.
+@I [HLS-100] Command 'autosyn' returned 0; elapsed 9.88Total elapsed time: 81.207 sec.
+@I [HLS-100] Command 'csynth_design' returned 0; elapsed 30.44Total elapsed time: 81.207 sec.
+@I [HLS-100] Command "cleanup_all "
+@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0.09Total elapsed time: 81.293 sec.
