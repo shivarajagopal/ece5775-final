@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="voicerec.cpp" path="/home/rz252/tjp79/ece5775-final/combined/voicerec.cpp"/>
+    <originFiles name="neuralNetworkSynth.cpp" path="/home/rz252/tjp79/ece5775-final/combined/neuralNetworkSynth.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="voicerec_test.cpp" path="/home/rz252/tjp79/ece5775-final/combined/voicerec_test.cpp"/>
+    <originFiles name="data" path="/home/rz252/tjp79/ece5775-final/combined/data"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

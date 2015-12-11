@@ -1,0 +1,10 @@
+<project>
+  <core name="" type="" target="">
+    <kernel name="voicerec" language="clc" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="256">
+      <port name="m_axi_voicerec_inSound" mode="master" range="0x3FFFFFFF" datawidth="64" portType="addressable" base="0x0"/>
+      <port name="s_axi_voicerec_ctrl" mode="slave" range="0x1000" datawidth="32" portType="addressable" base="0x0"/>
+      <arg name="inSound" type="float[]"/>
+      <compileWorkGroupSize x="0" y="0" z="0"/>
+    </kernel>
+  </core>
+</project>
