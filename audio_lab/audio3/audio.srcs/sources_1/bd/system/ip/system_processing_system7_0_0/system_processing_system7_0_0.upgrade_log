@@ -1,0 +1,45 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Thu Dec 10 23:33:27 2015
+| Host         : en-ec-azz284-b running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_processing_system7_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_processing_system7_0_0 from xilinx.com:ip:processing_system7:5.4 (Rev. 1) to xilinx.com:ip:processing_system7:5.5
+
+2. Warnings
+-----------
+
+WARNING: 1. The custom time stamp unit(PTP) signals will be exposed to the Programmable Logic(PL),  
+  even when the Ethernet is routed through the MIO. For more details 
+,  please refer Zynq Technical Reference Manual (UG 585) CH No. 16.4 IEEE 1588 Time Stamping. 
+ This change enables additional optional functionality for designs with Ethernet on MIO. 
+ No changes are required for existing designs. 
+  2. Updated the JTAG interface from master to slave mode. Based on Zynq Technical Reference Manual, 
+  PS boot mode supports 4 master boot mode and 2 Slave JTAG Boot mode. Prior versions of Zynq PS7 
+  IP had PL JTAG in master mode incorrectly. The JTAG port TDO will have a buffer (OBUFT) 
+  instantiated as part of the Processing System7 IP. This change only affects designs which use PL JTAG 
+  through EMIO interface. For More details, refer chapter no.6 of Zynq Technical Reference Manual 
+  (UG 585) - Boot and Configuration. 
+
+
+3. Interface Information
+------------------------
+
+Detected external interface differences while upgrading IP 'system_processing_system7_0_0'.
+
+
+-upgraded interface 'PJTAG' (xilinx.com:interface:jtag:2.0) differs from original interface xilinx.com:interface:jtag:1.0
+
+4. Upgrade messages
+-------------------
+
+Added parameter PCW_TRACE_INTERNAL_WIDTH with value 32
+

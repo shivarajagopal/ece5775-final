@@ -1,0 +1,292 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Dec 10 23:20:00 2015
+# Process ID: 4892
+# Log file: C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/vivado.log
+# Journal file: C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.xpr
+INFO: [Project 1-313] Project file moved from '/home/student/svr24/ece5775/final_proj/audio_lab/audio' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [Project 1-230] Project 'audio.xpr' upgraded for this version of Vivado.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/fir.prj/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2014.4/data/ip'.
+WARNING: [BD 41-1303] One or more IPs have been locked in the design 'system.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+open_project: Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 691.195 ; gain = 140.430
+report_ip_status -name ip_status 
+open_bd_design {C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/system.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.4 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:user:zed_audio_ctrl:1.0 - zed_audio_ctrl_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+Adding component instance block -- xilinx.com:hls:fir:1.0 - fir_left
+Adding component instance block -- xilinx.com:hls:fir:1.0 - fir_right
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system> from BD file <C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 737.066 ; gain = 42.184
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M02_AXI] [get_bd_intf_nets processing_system7_0_axi_periph_M03_AXI] [get_bd_nets fir_left_interrupt] [get_bd_nets fir_right_interrupt] [get_bd_nets xlconcat_0_dout] [get_bd_cells fir_left] [get_bd_cells fir_right] [get_bd_cells xlconcat_0]
+set_property location {4 1103 -160} [get_bd_cells processing_system7_0_axi_periph]
+set_property location {3 1169 -139} [get_bd_cells processing_system7_0]
+set_property location {3 1182 691} [get_bd_cells processing_system7_0_axi_periph]
+set_property location {3 1192 424} [get_bd_cells processing_system7_0]
+set_property location {3 1206 366} [get_bd_cells processing_system7_0_axi_periph]
+set_property location {2.5 896 473} [get_bd_cells zed_audio_ctrl_0]
+set_property location {4 1239 414} [get_bd_cells axi_gpio_0]
+set_property location {3 1108 497} [get_bd_cells zed_audio_ctrl_0]
+set_property location {0.5 28 451} [get_bd_cells rst_processing_system7_0_100M]
+set_property location {2 676 336} [get_bd_cells processing_system7_0_axi_periph]
+set_property location {1 314 294} [get_bd_cells rst_processing_system7_0_100M]
+set_property ip_repo_paths  {c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/ip_repo C:/Users/rz252/Desktop/tjp79/ece5775-final-master/combined/voicerec.prj c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/fir.prj/solution1/impl/ip} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/combined/voicerec.prj'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/fir.prj/solution1/impl/ip'.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'update_ip_catalog' was cancelled
+set_property ip_repo_paths  {c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/ip_repo c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/fir.prj/solution1/impl/ip} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/fir.prj/solution1/impl/ip'.
+set_property ip_repo_paths  {c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/ip_repo c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/fir.prj/solution1/impl/ip C:/Users/rz252/Desktop/tjp79/ece5775-final-master/combined/voicerec.prj/solution1/impl/ip} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/fir.prj/solution1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/combined/voicerec.prj/solution1/impl/ip'.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:voicerec:1.0 voicerec_0
+endgroup
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {system_processing_system7_0_0 system_rst_processing_system7_0_100M_0 system_axi_gpio_0_0 system_processing_system7_0_axi_periph_0}]
+Upgrading 'C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/system.bd'
+INFO: [IP_Flow 19-3422] Upgraded system_axi_gpio_0_0 (AXI GPIO 2.0) from revision 5 to revision 6
+INFO: [IP_Flow 19-3471] Wrote upgrade log to 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.upgrade_log'.
+INFO: [PS7-6] Configuring Board Preset part0. Please wait ......
+WARNING: [IP_Flow 19-3501] Upgraded system_processing_system7_0_0 from ZYNQ7 Processing System 5.4 to ZYNQ7 Processing System 5.5, with warnings. Please review the upgrade log 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.upgrade_log'.
+INFO: [IP_Flow 19-3670] Detected external interface differences while upgrading IP 'system_processing_system7_0_0'.
+INFO: [IP_Flow 19-3471] Wrote upgrade log to 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.upgrade_log'.
+INFO: [IP_Flow 19-3422] Upgraded system_processing_system7_0_axi_periph_0 (AXI Interconnect 2.1) from revision 3 to revision 5
+INFO: [IP_Flow 19-3471] Wrote upgrade log to 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/ip/system_processing_system7_0_axi_periph_0/system_processing_system7_0_axi_periph_0.upgrade_log'.
+create_bd_cell: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 813.012 ; gain = 9.168
+INFO: [Ipptcl 7-578] No Compatible Board Interface found.Board Tab not created
+INFO: [IP_Flow 19-3422] Upgraded system_rst_processing_system7_0_100M_0 (Processor System Reset 5.0) from revision 5 to revision 6
+INFO: [IP_Flow 19-3471] Wrote upgrade log to 'c:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_100M_0/system_rst_processing_system7_0_100M_0.upgrade_log'.
+Wrote  : <C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/system.bd> 
+upgrade_ip: Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 840.098 ; gain = 42.039
+report_ip_status -name ip_status 
+startgroup
+set_property -dict [list CONFIG.NUM_SI {2}] [get_bd_cells processing_system7_0_axi_periph]
+endgroup
+set_property location {2 747 430} [get_bd_cells processing_system7_0_axi_periph]
+connect_bd_intf_net [get_bd_intf_pins voicerec_0/m_axi_voicerec_inSound] -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/S01_AXI]
+set_property location {1 311 477} [get_bd_cells rst_processing_system7_0_100M]
+set_property location {1 319 347} [get_bd_cells voicerec_0]
+set_property location {1 405 190} [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.0 axi_bram_ctrl_0
+endgroup
+set_property location {3 1101 609} [get_bd_cells axi_bram_ctrl_0]
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {12.288}] [get_bd_cells processing_system7_0]
+endgroup
+set_property location {3 1103 368} [get_bd_cells zed_audio_ctrl_0]
+set_property location {3 1108 245} [get_bd_cells axi_gpio_0]
+set_property location {3 1112 492} [get_bd_cells axi_bram_ctrl_0]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M02_AXI] [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:bram_cntlr -config {BRAM "New Blk_Mem_Gen" }  [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA]
+set_property location {3 1127 595} [get_bd_cells axi_bram_ctrl_0_bram]
+startgroup
+set_property -dict [list CONFIG.DATA_WIDTH {64} CONFIG.SINGLE_PORT_BRAM {1} CONFIG.ECC_TYPE {0}] [get_bd_cells axi_bram_ctrl_0]
+endgroup
+connect_bd_net -net [get_bd_nets processing_system7_0_FCLK_CLK0] [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net -net [get_bd_nets rst_processing_system7_0_100M_peripheral_aresetn] [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
+connect_bd_net -net [get_bd_nets rst_processing_system7_0_100M_peripheral_aresetn] [get_bd_pins voicerec_0/ap_rst_n] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
+connect_bd_net -net [get_bd_nets processing_system7_0_FCLK_CLK0] [get_bd_pins voicerec_0/ap_clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins voicerec_0/interrupt] [get_bd_pins processing_system7_0/IRQ_F2P]
+connect_bd_intf_net [get_bd_intf_pins voicerec_0/s_axi_voicerec_ctrl] -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M03_AXI]
+undo
+INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins voicerec_0/s_axi_voicerec_ctrl] -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M03_AXI]'
+connect_bd_intf_net [get_bd_intf_pins voicerec_0/s_axi_voicerec_ctrl] -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M03_AXI]
+assign_bd_address [get_bd_addr_segs {axi_bram_ctrl_0/S_AXI/Mem0 }]
+</axi_bram_ctrl_0/S_AXI/Mem0> is being mapped into </processing_system7_0/Data> at <0x40000000[ 8K ]>
+</axi_bram_ctrl_0/S_AXI/Mem0> is being mapped into </voicerec_0/Data_m_axi_voicerec_inSound> at <0x40000000[ 8K ]>
+assign_bd_address [get_bd_addr_segs {voicerec_0/s_axi_voicerec_ctrl/Reg }]
+</voicerec_0/s_axi_voicerec_ctrl/Reg> is being mapped into </processing_system7_0/Data> at <0x43C10000[ 64K ]>
+</voicerec_0/s_axi_voicerec_ctrl/Reg> is being mapped into </voicerec_0/Data_m_axi_voicerec_inSound> at <0x43C10000[ 64K ]>
+exclude_bd_addr_seg [get_bd_addr_segs voicerec_0/Data_m_axi_voicerec_inSound/SEG_voicerec_0_Reg]
+Excluding </voicerec_0/s_axi_voicerec_ctrl/Reg> from </voicerec_0/Data_m_axi_voicerec_inSound>
+exclude_bd_addr_seg [get_bd_addr_segs zed_audio_ctrl_0/S_AXI/reg0] -target_address_space [get_bd_addr_spaces voicerec_0/Data_m_axi_voicerec_inSound]
+</zed_audio_ctrl_0/S_AXI/reg0> is being mapped into </voicerec_0/Data_m_axi_voicerec_inSound> at <0x43C00000[ 64K ]>
+Excluding </zed_audio_ctrl_0/S_AXI/reg0> from </voicerec_0/Data_m_axi_voicerec_inSound>
+exclude_bd_addr_seg [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] -target_address_space [get_bd_addr_spaces voicerec_0/Data_m_axi_voicerec_inSound]
+</axi_gpio_0/S_AXI/Reg> is being mapped into </voicerec_0/Data_m_axi_voicerec_inSound> at <0x41200000[ 64K ]>
+Excluding </axi_gpio_0/S_AXI/Reg> from </voicerec_0/Data_m_axi_voicerec_inSound>
+startgroup
+set_property -dict [list CONFIG.DATA_WIDTH {64} CONFIG.PROTOCOL {AXI4}] [get_bd_cells axi_bram_ctrl_0]
+endgroup
+connect_bd_net -net [get_bd_nets processing_system7_0_FCLK_CLK0] [get_bd_pins processing_system7_0_axi_periph/S01_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net -net [get_bd_nets rst_processing_system7_0_100M_peripheral_aresetn] [get_bd_pins processing_system7_0_axi_periph/S01_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
+startgroup
+set_property -dict [list CONFIG.C_M_AXI_VOICEREC_INSOUND_TARGET_ADDR {0x40000000}] [get_bd_cells voicerec_0]
+endgroup
+validate_bd_design
+WARNING: [BD 41-721] Attempt to set value '32' on disabled parameter 'Write_Width_B' of cell '/axi_bram_ctrl_0_bram' is ignored
+WARNING: [BD 41-721] Attempt to set value '32' on disabled parameter 'Read_Width_B' of cell '/axi_bram_ctrl_0_bram' is ignored
+validate_bd_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1015.199 ; gain = 11.570
+make_wrapper -files [get_files C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/system.bd] -top
+WARNING: [BD 41-721] Attempt to set value '32' on disabled parameter 'Write_Width_B' of cell '/axi_bram_ctrl_0_bram' is ignored
+WARNING: [BD 41-721] Attempt to set value '32' on disabled parameter 'Read_Width_B' of cell '/axi_bram_ctrl_0_bram' is ignored
+INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0
+INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0
+Generated Block Design Tcl file C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Exporting to file C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/hw_handoff/system.hwh
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/xbar/s_axi_awid'(2) to net 's01_couplers_to_xbar_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/s01_couplers/M_AXI_rid'(1) to net 's01_couplers_to_xbar_RID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/s01_couplers/M_AXI_bid'(1) to net 's01_couplers_to_xbar_BID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/xbar/s_axi_arid'(2) to net 's01_couplers_to_xbar_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/S01_AXI_arlock'(1) to net 'voicerec_0_m_axi_voicerec_inSound_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/S01_AXI_awlock'(1) to net 'voicerec_0_m_axi_voicerec_inSound_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+Verilog Output written to : system.v
+Verilog Output written to : system_wrapper.v
+Wrote  : <C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/system.bd> 
+make_wrapper: Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1053.953 ; gain = 38.754
+save_bd_design
+Wrote  : <C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/system.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+WARNING: [BD 41-721] Attempt to set value '32' on disabled parameter 'Write_Width_B' of cell '/axi_bram_ctrl_0_bram' is ignored
+WARNING: [BD 41-721] Attempt to set value '32' on disabled parameter 'Read_Width_B' of cell '/axi_bram_ctrl_0_bram' is ignored
+INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0
+INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0
+Generated Block Design Tcl file C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Exporting to file C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/hw_handoff/system.hwh
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/xbar/s_axi_awid'(2) to net 's01_couplers_to_xbar_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/s01_couplers/M_AXI_rid'(1) to net 's01_couplers_to_xbar_RID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/s01_couplers/M_AXI_bid'(1) to net 's01_couplers_to_xbar_BID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/xbar/s_axi_arid'(2) to net 's01_couplers_to_xbar_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/S01_AXI_arlock'(1) to net 'voicerec_0_m_axi_voicerec_inSound_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/S01_AXI_awlock'(1) to net 'voicerec_0_m_axi_voicerec_inSound_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+Verilog Output written to : system.v
+Verilog Output written to : system_wrapper.v
+Wrote  : <C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/system.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_processing_system7_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_axi_gpio_0_0'...
+WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'system_axi_gpio_0_0' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead.
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'system_axi_gpio_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'system_zed_audio_ctrl_0_0'. Target already exists and is up to date.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zed_audio_ctrl_0 .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_rst_processing_system7_0_100M_0'...
+WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'system_rst_processing_system7_0_100M_0' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead.
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'system_rst_processing_system7_0_100M_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_voicerec_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block voicerec_0 .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_xbar_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_axi_bram_ctrl_0_0'...
+WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'system_axi_bram_ctrl_0_0' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_axi_bram_ctrl_0_bram_0'...
+WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'system_axi_bram_ctrl_0_bram_0' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0_bram .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_ds_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m00_couplers/auto_ds .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_pc_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m00_couplers/auto_pc .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_ds_1'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m01_couplers/auto_ds .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_pc_1'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m01_couplers/auto_pc .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_ds_2'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m03_couplers/auto_ds .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_pc_2'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m03_couplers/auto_pc .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_pc_3'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_us_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_us .
+WARNING: [BD 41-721] Attempt to set value '32' on disabled parameter 'Write_Width_B' of cell '/axi_bram_ctrl_0_bram' is ignored
+WARNING: [BD 41-721] Attempt to set value '32' on disabled parameter 'Read_Width_B' of cell '/axi_bram_ctrl_0_bram' is ignored
+INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0
+INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0
+Generated Block Design Tcl file C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Exporting to file C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/hw_handoff/system.hwh
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/xbar/s_axi_awid'(2) to net 's01_couplers_to_xbar_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/s01_couplers/M_AXI_rid'(1) to net 's01_couplers_to_xbar_RID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/s01_couplers/M_AXI_bid'(1) to net 's01_couplers_to_xbar_BID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/xbar/s_axi_arid'(2) to net 's01_couplers_to_xbar_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/S01_AXI_arlock'(1) to net 'voicerec_0_m_axi_voicerec_inSound_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0_axi_periph/S01_AXI_awlock'(1) to net 'voicerec_0_m_axi_voicerec_inSound_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+Verilog Output written to : system.v
+Verilog Output written to : system_wrapper.v
+Wrote  : <C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.srcs/sources_1/bd/system/system.bd> 
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'system_processing_system7_0_0'. Target already exists and is up to date.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'system_axi_gpio_0_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Implementation' target for IP 'system_axi_gpio_0_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Implementation' target for IP 'system_axi_gpio_0_0'. Target already exists and is up to date.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'system_zed_audio_ctrl_0_0'. Target already exists and is up to date.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zed_audio_ctrl_0 .
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'system_rst_processing_system7_0_100M_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Implementation' target for IP 'system_rst_processing_system7_0_100M_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Implementation' target for IP 'system_rst_processing_system7_0_100M_0'. Target already exists and is up to date.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'system_voicerec_0_0'. Target already exists and is up to date.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block voicerec_0 .
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'system_xbar_0'. Target already exists and is up to date.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar .
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'system_axi_bram_ctrl_0_0'. Target already exists and is up to date.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'system_axi_bram_ctrl_0_bram_0'. Target already exists and is up to date.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0_bram .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_ds_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m00_couplers/auto_ds .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_pc_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m00_couplers/auto_pc .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_ds_1'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m01_couplers/auto_ds .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_pc_1'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m01_couplers/auto_pc .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_ds_2'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m03_couplers/auto_ds .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_pc_2'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m03_couplers/auto_pc .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_pc_3'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_us_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_us .
+[Fri Dec 11 00:05:48 2015] Launched synth_1...
+Run output will be captured here: C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.runs/synth_1/runme.log
+[Fri Dec 11 00:05:48 2015] Launched impl_1...
+Run output will be captured here: C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:54 ; elapsed = 00:02:14 . Memory (MB): peak = 1107.387 ; gain = 50.855
+file copy -force C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.runs/impl_1/system_wrapper.sysdef C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 11 00:46:53 2015...

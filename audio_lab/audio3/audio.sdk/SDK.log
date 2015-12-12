@@ -1,0 +1,244 @@
+23:37:29 INFO  : Processing command line option -hwspec /home/student/svr24/ece5775/final_proj/audio_lab/audio/audio.sdk/system_wrapper.hdf.
+00:43:57 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf.
+00:44:22 ERROR :  [Hsi 55-1593] Current Hardware Design is not set.
+00:49:54 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf.
+00:49:55 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+00:49:58 WARN  :  [Hsi 55-1607] Software Repository Paths /home/student/svr24/ece5775/final_proj/audio_lab/fir.prj/solution1/impl/ip and C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper_hw_platform_0/../../../../../../fir.prj/solution1/impl/ip do not exist or not accessible
+00:50:23 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf.
+00:50:24 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+00:50:27 WARN  :  [Hsi 55-1607] Software Repository Paths /home/student/svr24/ece5775/final_proj/audio_lab/fir.prj/solution1/impl/ip and C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper_hw_platform_0/../../../../../../fir.prj/solution1/impl/ip do not exist or not accessible
+00:51:34 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf.
+00:51:35 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+00:51:37 WARN  :  [Hsi 55-1607] Software Repository Paths /home/student/svr24/ece5775/final_proj/audio_lab/fir.prj/solution1/impl/ip and C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper_hw_platform_0/../../../../../../fir.prj/solution1/impl/ip do not exist or not accessible
+00:52:20 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf.
+00:53:51 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf.
+00:54:33 INFO  : BSP Project P/standalone_bsp_0 has been successfully migrated.
+00:56:50 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+01:21:23 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf.
+01:21:25 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+01:21:25 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+01:31:22 INFO  : No changes in MSS file content so not generating sources.
+01:37:51 INFO  : Saving repository preferences.
+01:37:51 INFO  : Reading in cores from local repositories: 
+		 C:\Users\rz252\Desktop\tjp79\ece5775-final-master\combined\voicerec.prj\solution1\impl\ip
+01:37:52 INFO  : Cleaning BSP projects in the workspace.
+01:37:52 INFO  : Saving BSP preferences.
+01:40:52 INFO  : Saving repository preferences.
+01:42:38 ERROR : Failed to regenerate sources for BSP project standalone_bsp_0
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:769)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler.internalGenerateBsp(RegenBspSourcesHandler.java:170)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler.access$2(RegenBspSourcesHandler.java:163)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler$1$1.run(RegenBspSourcesHandler.java:131)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler$1.run(RegenBspSourcesHandler.java:135)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Could not delete '/standalone_bsp_0/ps7_cortexa9_0'.
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:351)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:769)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler.internalGenerateBsp(RegenBspSourcesHandler.java:170)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler.access$2(RegenBspSourcesHandler.java:163)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler$1$1.run(RegenBspSourcesHandler.java:131)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler$1.run(RegenBspSourcesHandler.java:135)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: C:\Users\rz252\Desktop\tjp79\ece5775-final-master\audio_lab\audio3\audio.sdk\standalone_bsp_0\ps7_cortexa9_0\include\xgpio.h.
+Contains: Could not delete: C:\Users\rz252\Desktop\tjp79\ece5775-final-master\audio_lab\audio3\audio.sdk\standalone_bsp_0\ps7_cortexa9_0\include.
+Contains: Could not delete: C:\Users\rz252\Desktop\tjp79\ece5775-final-master\audio_lab\audio3\audio.sdk\standalone_bsp_0\ps7_cortexa9_0.
+01:42:54 INFO  : Refreshed build settings on project TestApp
+05:19:07 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper_hw_platform_1/system_wrapper.bit"
+05:19:42 INFO  : ps7_init is completed.
+05:19:42 INFO  : ps7_post_config is completed.
+05:19:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:23:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:24:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:25:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:27:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:27:09 ERROR : Unexpected error while opening JTAG UART: 
+java.lang.RuntimeException: Error while opening JTAG UART server: MDM Uart NOT Present in the System
+Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.startJTAGUARTServer(TM.java:931)
+	at com.xilinx.sdk.debug.core.internal.comm.JTAGUARTStreamsProxy.<init>(JTAGUARTStreamsProxy.java:32)
+	at com.xilinx.sdk.debug.core.internal.RemoteProcess.createStreamsProxy(RemoteProcess.java:164)
+	at com.xilinx.sdk.debug.core.internal.RemoteProcess.<init>(RemoteProcess.java:65)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:91)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:605)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:293)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+05:47:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:51:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:53:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:07:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:08:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:11:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:13:43 ERROR : Unexpected error while fetching XMD's response: 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.read(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess$CommandResultsReader.run(XMDJSONProcess.java:332)
+	at java.lang.Thread.run(Unknown Source)
+06:13:43 ERROR : Zero sized response read from XMD. This indicates a communication error or a programming error.
+06:14:34 INFO  : Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup
+06:14:34 ERROR : Timeout occured while waiting to get reply for command "xdisconnect 352"
+06:14:34 ERROR : Unexpected error while issuing command {"command": "set_cur_system_target"} to XMD: java.net.SocketException: Connection reset by peer: socket write error
+06:16:37 ERROR : Unexpected error while issuing command {"command": "xfpga_isconfigured -cable type xilinx_tcf url TCP:127.0.0.1:3121 "} to XMD: java.net.SocketException: Connection reset by peer: socket write error
+06:16:37 ERROR : Checking FPGA configuration failed..
+06:16:37 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: 
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:372)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:378)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:287)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+06:17:51 ERROR : Unexpected error while issuing command {"command": "xfpga_isconfigured -cable type xilinx_tcf url TCP:127.0.0.1:3121 "} to XMD: java.net.SocketException: Connection reset by peer: socket write error
+06:17:51 ERROR : Checking FPGA configuration failed..
+06:17:51 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: 
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:372)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:378)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:287)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+06:18:21 ERROR : Unexpected error while issuing command {"command": "xfpga -cable type xilinx_tcf url TCP:127.0.0.1:3121 -f C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper_hw_platform_1/system_wrapper.bit -report_progress"} to XMD: java.net.SocketException: Connection reset by peer: socket write error
+06:18:21 ERROR : FPGA Configuration failed.
+06:18:40 ERROR : Unexpected error while issuing command {"command": "xfpga -cable type xilinx_tcf url TCP:127.0.0.1:3121 -f C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper_hw_platform_1/system_wrapper.bit -report_progress"} to XMD: java.net.SocketException: Connection reset by peer: socket write error
+06:18:40 ERROR : FPGA Configuration failed.
+06:24:19 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf.
+06:24:22 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+06:24:23 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+06:25:26 INFO  : Restoring local repository preferences: 
+		 C:\Users\rz252\Desktop\tjp79\ece5775-final-master\combined\voicerec.prj\solution1\impl\ip
+06:25:47 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper_hw_platform_1/system_wrapper.bit"
+06:26:35 INFO  : ps7_init is completed.
+06:26:36 INFO  : ps7_post_config is completed.
+06:26:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:28:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:30:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:30:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:32:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:33:59 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:34:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:34:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:35:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:54:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:56:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:57:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:00:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:29:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:30:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:31:45 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+07:32:17 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+07:32:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:32:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:34:32 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+07:34:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:48:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:49:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:56:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:59:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+08:04:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+09:38:32 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1449844383811,  Project:1449812498755
+09:38:32 INFO  : Project system_wrapper_hw_platform_1's source hardware specification located at C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+09:38:56 INFO  : Copied contents of C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf into \system_wrapper_hw_platform_1\system.hdf.
+09:39:51 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+09:40:14 INFO  : 
+09:40:17 INFO  : Updating hardware inferred compiler options for HelloWorld.
+09:40:18 INFO  : Updating hardware inferred compiler options for TestApp.
+09:40:18 INFO  : Clearing existing target manager status.
+09:40:18 INFO  : Closing and re-opening the MSS file of ther project standalone_bsp_0
+09:40:19 INFO  : Closing and re-opening the MSS file of ther project standalone_bsp_0
+09:40:19 INFO  : Closing and re-opening the MSS file of ther project standalone_bsp_0
+09:40:20 INFO  : Closing and re-opening the MSS file of ther project standalone_bsp_0
+09:40:21 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+09:42:40 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper_hw_platform_1/system_wrapper.bit"
+09:43:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+09:44:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+09:47:17 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+09:47:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+09:49:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+09:52:55 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+09:52:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+09:55:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+09:56:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+09:57:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+09:59:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+10:00:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+10:01:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+10:09:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+10:35:00 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:47:22 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper.hdf.
+16:47:23 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+16:47:23 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+16:47:28 INFO  : Restoring local repository preferences: 
+		 C:\Users\rz252\Desktop\tjp79\ece5775-final-master\combined\voicerec.prj\solution1\impl\ip
+16:56:58 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+16:56:58 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:372)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:378)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:287)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:57:20 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.sdk/system_wrapper_hw_platform_1/system_wrapper.bit"
+16:58:27 INFO  : ps7_init is completed.
+16:58:27 INFO  : ps7_post_config is completed.
+16:58:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:25:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:32:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:32:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:33:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:58:13 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:13:14 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/test/ece5775-final/audio_lab/audio3/audio.sdk/system_wrapper.hdf.
+18:13:17 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+18:13:28 INFO  : Restoring local repository preferences: 
+		 C:\Users\rz252\Desktop\tjp79\ece5775-final-master\combined\voicerec.prj\solution1\impl\ip
+18:14:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:27:12 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
