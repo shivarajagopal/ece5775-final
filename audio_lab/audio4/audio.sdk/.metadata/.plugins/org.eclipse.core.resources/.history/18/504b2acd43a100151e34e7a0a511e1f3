@@ -116,8 +116,7 @@ void run_voice_recognition(void)
   int sw_check;
   int switch_state, prev_switch_state;
   unsigned int sampleNum;
-  float audio_float;
-  u32* audio_sample;
+  float audio_sample;
   u32 classification;
 
   int print_count =0;
@@ -172,11 +171,10 @@ void run_voice_recognition(void)
 		if(sampleNum%6 == 0) //only use every 6th sample
 		{
             //re-map sample to a double value between 0 and 1
-			audio_float = ( (float)u32Data ) / MAX_AMPLITUDE;
-			audio_sample = (u32*)(&audio_float);
+			audio_sample = ( (float)u32Data ) / MAX_AMPLITUDE;
 
 			//send sample to voice rec system
-			XVoicerec_Set_new_sample(&HlsVoiceRec, *audio_sample);
+			XVoicerec_Set_new_sample(&HlsVoiceRec, audio_sample);
 
 			//fire up the voice recognition:
 			ResultAvailHlsVoiceRec = 0;

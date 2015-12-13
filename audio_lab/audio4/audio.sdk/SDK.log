@@ -143,3 +143,5 @@ java.lang.RuntimeException: Failed to download ELF file
 21:32:37 INFO  : ps7_init is completed.
 21:32:37 INFO  : ps7_post_config is completed.
 21:32:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:42:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:48:53 INFO  : Processor reset is completed for ps7_cortexa9_0

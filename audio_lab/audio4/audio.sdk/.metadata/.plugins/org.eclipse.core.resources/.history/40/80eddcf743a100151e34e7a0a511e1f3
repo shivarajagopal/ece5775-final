@@ -173,7 +173,7 @@ void run_voice_recognition(void)
 		{
             //re-map sample to a double value between 0 and 1
 			audio_float = ( (float)u32Data ) / MAX_AMPLITUDE;
-			audio_sample = (u32*)(&audio_float);
+			audio_sample = &audio_float
 
 			//send sample to voice rec system
 			XVoicerec_Set_new_sample(&HlsVoiceRec, *audio_sample);

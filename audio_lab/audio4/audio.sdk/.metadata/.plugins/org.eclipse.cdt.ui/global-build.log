@@ -7,3 +7,149 @@ make: Nothing to be done for `all'.
 21:32:31 **** Incremental Build of configuration Debug for project HelloWorld ****
 make all 
 make: Nothing to be done for `all'.
+21:42:34 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+21:42:35 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+21:44:53 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72588	   3112	  22716	  98416	  18070	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+21:47:08 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:174:4: error: 'audio_sample' undeclared (first use in this function)
+    audio_sample = ( (float)u32Data ) / MAX_AMPLITUDE;
+    ^
+../zed_testapp.c:174:4: note: each undeclared identifier is reported only once for each function it appears in
+../zed_testapp.c:119:9: warning: unused variable 'audio_float' [-Wunused-variable]
+   float audio_float;
+         ^
+make: *** [zed_testapp.o] Error 1
+21:47:21 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:177:43: error: 'audio_sample' undeclared (first use in this function)
+    XVoicerec_Set_new_sample(&HlsVoiceRec, audio_sample);
+                                           ^
+../zed_testapp.c:177:43: note: each undeclared identifier is reported only once for each function it appears in
+../zed_testapp.c:119:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+make: *** [zed_testapp.o] Error 1
+21:47:43 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:178:4: warning: passing argument 2 of 'XVoicerec_Set_new_sample' makes integer from pointer without a cast [enabled by default]
+    XVoicerec_Set_new_sample(&HlsVoiceRec, audio_sample);
+    ^
+In file included from ../zed_testapp.c:9:0:
+../../standalone_bsp_0/ps7_cortexa9_0/include/xvoicerec.h:91:6: note: expected 'u32' but argument is of type 'u32 *'
+ void XVoicerec_Set_new_sample(XVoicerec *InstancePtr, u32 Data);
+      ^
+../zed_testapp.c:119:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+../zed_testapp.c:178:28: warning: 'audio_sample' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    XVoicerec_Set_new_sample(&HlsVoiceRec, audio_sample);
+                            ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72588	   3112	  22716	  98416	  18070	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+21:48:13 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:176:17: warning: assignment from incompatible pointer type [enabled by default]
+    audio_sample = &audio_float
+                 ^
+../zed_testapp.c:179:4: error: expected ';' before 'XVoicerec_Set_new_sample'
+    XVoicerec_Set_new_sample(&HlsVoiceRec, *audio_sample);
+    ^
+../zed_testapp.c:120:8: warning: variable 'audio_sample' set but not used [-Wunused-but-set-variable]
+   u32* audio_sample;
+        ^
+make: *** [zed_testapp.o] Error 1
+21:48:19 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:176:17: warning: assignment from incompatible pointer type [enabled by default]
+    audio_sample = &audio_float;
+                 ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72588	   3112	  22716	  98416	  18070	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+21:48:42 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72588	   3112	  22716	  98416	  18070	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+21:48:46 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+21:48:47 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
