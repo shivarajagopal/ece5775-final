@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 19
+set id 18
 set name voicerec_fdiv_32ns_32ns_32_16
 set corename simcore_fdiv
 set op fdiv
@@ -43,7 +43,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 set op fdiv
 set corename FDiv
-if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en} || ${::AESL::PGuard_autocg_hpen})} {
+if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
 eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
     id ${id} \
@@ -67,19 +67,19 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 20
-set name voicerec_sitofp_64ns_32_6
-set corename simcore_sitofp
-set op sitofp
+set id 19
+set name voicerec_uitofp_32ns_32_6
+set corename simcore_uitofp
+set op uitofp
 set stage_num 6
 set max_latency -1
 set registered_input 1
-set in0_width 64
+set in0_width 32
 set in0_signed 0
 set out_width 32
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_sitofp] == "ap_gen_simcore_sitofp"} {
-eval "ap_gen_simcore_sitofp { \
+if {[info proc ap_gen_simcore_uitofp] == "ap_gen_simcore_uitofp"} {
+eval "ap_gen_simcore_uitofp { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -94,7 +94,7 @@ eval "ap_gen_simcore_sitofp { \
     out_width ${out_width} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_sitofp, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_uitofp, check your AutoPilot builtin lib"
 }
 }
 
@@ -104,9 +104,9 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op sitofp
+set op uitofp
 set corename Int2Float
-if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en} || ${::AESL::PGuard_autocg_hpen})} {
+if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
 eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
     id ${id} \
@@ -128,7 +128,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 21
+set id 20
 set name voicerec_fptrunc_64ns_32_1
 set corename simcore_fptrunc
 set op fptrunc
@@ -167,7 +167,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 set op fptrunc
 set corename Double2Float
-if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en} || ${::AESL::PGuard_autocg_hpen})} {
+if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
 eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
     id ${id} \
@@ -189,7 +189,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 23
+set id 22
 set name voicerec_fcmp_32ns_32ns_1_1
 set corename simcore_fcmp
 set op fcmp
@@ -232,7 +232,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 set op fcmp
 set corename FCmp
-if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en} || ${::AESL::PGuard_autocg_hpen})} {
+if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
 eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
     id ${id} \
@@ -256,7 +256,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 24
+set id 23
 set name voicerec_dmul_64ns_64ns_64_6_max_dsp
 set corename simcore_dmul
 set op dmul
@@ -301,7 +301,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 set op dmul
 set corename DMul
-if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en} || ${::AESL::PGuard_autocg_hpen})} {
+if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
 eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
     id ${id} \
@@ -327,7 +327,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 # Memory (RAM/ROM)  definition:
-set ID 25
+set ID 24
 set MemName voicerec_processChunk_c
 set CoreName ap_simcore_mem
 set PortList { 2 2 }
@@ -342,7 +342,7 @@ set HasInitializer 1
 set Initializer $ROMData
 set NumOfStage 2
 set MaxLatency -1
-set DelayBudget 2.71
+set DelayBudget 2.39
 set ClkPeriod 10
 set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
@@ -410,7 +410,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 26
+set ID 25
 set MemName voicerec_processChunk_e
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
@@ -493,7 +493,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 27
+set ID 26
 set MemName voicerec_processChunk_spec
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
@@ -508,7 +508,7 @@ set HasInitializer 1
 set Initializer $ROMData
 set NumOfStage 2
 set MaxLatency -1
-set DelayBudget 2.71
+set DelayBudget 2.39
 set ClkPeriod 10
 set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
@@ -576,7 +576,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 28
+set ID 27
 set MemName voicerec_processChunk_mell
 set CoreName ap_simcore_mem
 set PortList { 1 }
@@ -656,7 +656,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 29
+set ID 28
 set MemName voicerec_processChunk_dctMatrix
 set CoreName ap_simcore_mem
 set PortList { 1 }
@@ -746,7 +746,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 31 \
+    id 30 \
     name ret \
     reset_level 1 \
     sync_rst true \
@@ -765,7 +765,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 33 \
+    id 32 \
     name inputSound \
     reset_level 1 \
     sync_rst true \
@@ -783,7 +783,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 30 \
+    id 29 \
     name sp \
     type other \
     dir I \
@@ -798,15 +798,15 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 32 \
-    name tmp \
+    id 31 \
+    name tmp_105 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_tmp \
+    corename dc_tmp_105 \
     op interface \
-    ports { tmp { I 6 vector } } \
+    ports { tmp_105 { I 6 vector } } \
 } "
 }
 

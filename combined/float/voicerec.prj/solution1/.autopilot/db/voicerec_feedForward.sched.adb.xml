@@ -904,7 +904,7 @@
 
 <node id="9" bw="10" op_0_bw="10" op_1_bw="0">
 <![CDATA[
-:0  %j = phi i10 [ 0, %0 ], [ %j_1, %2 ]
+:0  %j = phi i10 [ 0, %0 ], [ %j_2, %2 ]
 
 ]]></node>
 <StgValue><ssdm name="j"/></StgValue>
@@ -949,10 +949,10 @@
 
 <node id="12" bw="10" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-:3  %j_1 = add i10 %j, 1
+:3  %j_2 = add i10 %j, 1
 
 ]]></node>
-<StgValue><ssdm name="j_1"/></StgValue>
+<StgValue><ssdm name="j_2"/></StgValue>
 </operation>
 
 <operation id="145" st_id="2" stage="1" lat="1">
@@ -1093,7 +1093,7 @@
 
 <node id="22" bw="5" op_0_bw="5" op_1_bw="0">
 <![CDATA[
-.preheader5:0  %j1 = phi i5 [ %j_2, %6 ], [ 0, %1 ]
+.preheader5:0  %j1 = phi i5 [ %j_3, %6 ], [ 0, %1 ]
 
 ]]></node>
 <StgValue><ssdm name="j1"/></StgValue>
@@ -1138,10 +1138,10 @@
 
 <node id="25" bw="5" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-.preheader5:3  %j_2 = add i5 %j1, 1
+.preheader5:3  %j_3 = add i5 %j1, 1
 
 ]]></node>
-<StgValue><ssdm name="j_2"/></StgValue>
+<StgValue><ssdm name="j_3"/></StgValue>
 </operation>
 
 <operation id="157" st_id="4" stage="1" lat="1">
@@ -1169,10 +1169,10 @@
 
 <node id="28" bw="64" op_0_bw="5">
 <![CDATA[
-:0  %tmp_2 = zext i5 %j1 to i64
+:0  %tmp_s = zext i5 %j1 to i64
 
 ]]></node>
-<StgValue><ssdm name="tmp_2"/></StgValue>
+<StgValue><ssdm name="tmp_s"/></StgValue>
 </operation>
 
 <operation id="159" st_id="4" stage="1" lat="1">
@@ -1185,7 +1185,7 @@
 
 <node id="29" bw="5" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-:1  %hidden_addr = getelementptr inbounds [26 x float]* @hidden, i64 0, i64 %tmp_2
+:1  %hidden_addr = getelementptr inbounds [26 x float]* @hidden, i64 0, i64 %tmp_s
 
 ]]></node>
 <StgValue><ssdm name="hidden_addr"/></StgValue>
@@ -1217,10 +1217,10 @@
 
 <node id="31" bw="15" op_0_bw="5">
 <![CDATA[
-:3  %tmp_2_trn_cast = zext i5 %j1 to i15
+:3  %tmp_trn_cast = zext i5 %j1 to i15
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_trn_cast"/></StgValue>
+<StgValue><ssdm name="tmp_trn_cast"/></StgValue>
 </operation>
 
 <operation id="162" st_id="4" stage="1" lat="1">
@@ -1251,10 +1251,10 @@
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:0  %tmp_3 = phi float [ 0.000000e+00, %3 ], [ %tmp_11, %5 ]
+:0  %tmp_4 = phi float [ 0.000000e+00, %3 ], [ %tmp_12, %5 ]
 
 ]]></node>
-<StgValue><ssdm name="tmp_3"/></StgValue>
+<StgValue><ssdm name="tmp_4"/></StgValue>
 </operation>
 
 <operation id="164" st_id="5" stage="1" lat="1">
@@ -1357,10 +1357,10 @@
 
 <node id="42" bw="64" op_0_bw="10">
 <![CDATA[
-:0  %tmp_1 = zext i10 %k to i64
+:0  %tmp_10 = zext i10 %k to i64
 
 ]]></node>
-<StgValue><ssdm name="tmp_1"/></StgValue>
+<StgValue><ssdm name="tmp_10"/></StgValue>
 </operation>
 
 <operation id="171" st_id="5" stage="1" lat="1">
@@ -1373,7 +1373,7 @@
 
 <node id="43" bw="10" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-:1  %input_addr_1 = getelementptr inbounds [883 x float]* @input_r, i64 0, i64 %tmp_1
+:1  %input_addr_1 = getelementptr inbounds [883 x float]* @input_r, i64 0, i64 %tmp_10
 
 ]]></node>
 <StgValue><ssdm name="input_addr_1"/></StgValue>
@@ -1421,7 +1421,7 @@
 
 <node id="46" bw="15" op_0_bw="15" op_1_bw="15">
 <![CDATA[
-:4  %weightIH_addr2 = add i15 %tmp_2_trn_cast, %phi_mul
+:4  %weightIH_addr2 = add i15 %phi_mul, %tmp_trn_cast
 
 ]]></node>
 <StgValue><ssdm name="weightIH_addr2"/></StgValue>
@@ -1485,10 +1485,10 @@
 
 <node id="55" bw="32" op_0_bw="32">
 <![CDATA[
-:0  %tmp_5_to_int = bitcast float %tmp_3 to i32
+:0  %tmp_115_to_int = bitcast float %tmp_4 to i32
 
 ]]></node>
-<StgValue><ssdm name="tmp_5_to_int"/></StgValue>
+<StgValue><ssdm name="tmp_115_to_int"/></StgValue>
 </operation>
 
 <operation id="179" st_id="5" stage="1" lat="1">
@@ -1501,10 +1501,10 @@
 
 <node id="56" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:1  %tmp_5_neg = xor i32 %tmp_5_to_int, -2147483648
+:1  %tmp_115_neg = xor i32 %tmp_115_to_int, -2147483648
 
 ]]></node>
-<StgValue><ssdm name="tmp_5_neg"/></StgValue>
+<StgValue><ssdm name="tmp_115_neg"/></StgValue>
 </operation>
 
 <operation id="180" st_id="5" stage="1" lat="1">
@@ -1517,10 +1517,10 @@
 
 <node id="57" bw="32" op_0_bw="32">
 <![CDATA[
-:2  %tmp_5 = bitcast i32 %tmp_5_neg to float
+:2  %tmp_6 = bitcast i32 %tmp_115_neg to float
 
 ]]></node>
-<StgValue><ssdm name="tmp_5"/></StgValue>
+<StgValue><ssdm name="tmp_6"/></StgValue>
 </operation>
 
 <operation id="181" st_id="5" stage="1" lat="1">
@@ -1533,10 +1533,10 @@
 
 <node id="58" bw="64" op_0_bw="32">
 <![CDATA[
-:3  %tmp_6 = fpext float %tmp_5 to double
+:3  %tmp_7 = fpext float %tmp_6 to double
 
 ]]></node>
-<StgValue><ssdm name="tmp_6"/></StgValue>
+<StgValue><ssdm name="tmp_7"/></StgValue>
 </operation>
 </state>
 
@@ -1581,10 +1581,10 @@
 
 <node id="50" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_10 = fmul float %input_load, %weightIH_load
+:8  %tmp_11 = fmul float %input_load, %weightIH_load
 
 ]]></node>
-<StgValue><ssdm name="tmp_10"/></StgValue>
+<StgValue><ssdm name="tmp_11"/></StgValue>
 </operation>
 </state>
 
@@ -1599,10 +1599,10 @@
 
 <node id="50" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_10 = fmul float %input_load, %weightIH_load
+:8  %tmp_11 = fmul float %input_load, %weightIH_load
 
 ]]></node>
-<StgValue><ssdm name="tmp_10"/></StgValue>
+<StgValue><ssdm name="tmp_11"/></StgValue>
 </operation>
 </state>
 
@@ -1617,10 +1617,10 @@
 
 <node id="50" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_10 = fmul float %input_load, %weightIH_load
+:8  %tmp_11 = fmul float %input_load, %weightIH_load
 
 ]]></node>
-<StgValue><ssdm name="tmp_10"/></StgValue>
+<StgValue><ssdm name="tmp_11"/></StgValue>
 </operation>
 </state>
 
@@ -1635,10 +1635,10 @@
 
 <node id="50" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_10 = fmul float %input_load, %weightIH_load
+:8  %tmp_11 = fmul float %input_load, %weightIH_load
 
 ]]></node>
-<StgValue><ssdm name="tmp_10"/></StgValue>
+<StgValue><ssdm name="tmp_11"/></StgValue>
 </operation>
 </state>
 
@@ -1653,10 +1653,10 @@
 
 <node id="51" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:9  %tmp_11 = fadd float %tmp_3, %tmp_10
+:9  %tmp_12 = fadd float %tmp_4, %tmp_11
 
 ]]></node>
-<StgValue><ssdm name="tmp_11"/></StgValue>
+<StgValue><ssdm name="tmp_12"/></StgValue>
 </operation>
 </state>
 
@@ -1671,10 +1671,10 @@
 
 <node id="51" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:9  %tmp_11 = fadd float %tmp_3, %tmp_10
+:9  %tmp_12 = fadd float %tmp_4, %tmp_11
 
 ]]></node>
-<StgValue><ssdm name="tmp_11"/></StgValue>
+<StgValue><ssdm name="tmp_12"/></StgValue>
 </operation>
 </state>
 
@@ -1689,10 +1689,10 @@
 
 <node id="51" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:9  %tmp_11 = fadd float %tmp_3, %tmp_10
+:9  %tmp_12 = fadd float %tmp_4, %tmp_11
 
 ]]></node>
-<StgValue><ssdm name="tmp_11"/></StgValue>
+<StgValue><ssdm name="tmp_12"/></StgValue>
 </operation>
 </state>
 
@@ -1707,10 +1707,10 @@
 
 <node id="51" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:9  %tmp_11 = fadd float %tmp_3, %tmp_10
+:9  %tmp_12 = fadd float %tmp_4, %tmp_11
 
 ]]></node>
-<StgValue><ssdm name="tmp_11"/></StgValue>
+<StgValue><ssdm name="tmp_12"/></StgValue>
 </operation>
 </state>
 
@@ -1725,10 +1725,10 @@
 
 <node id="51" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:9  %tmp_11 = fadd float %tmp_3, %tmp_10
+:9  %tmp_12 = fadd float %tmp_4, %tmp_11
 
 ]]></node>
-<StgValue><ssdm name="tmp_11"/></StgValue>
+<StgValue><ssdm name="tmp_12"/></StgValue>
 </operation>
 </state>
 
@@ -1743,7 +1743,7 @@
 
 <node id="52" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-:10  store float %tmp_11, float* %hidden_addr, align 4
+:10  store float %tmp_12, float* %hidden_addr, align 4
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1776,10 +1776,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -1794,10 +1794,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -1812,10 +1812,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -1830,10 +1830,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -1848,10 +1848,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -1866,10 +1866,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -1884,10 +1884,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -1902,10 +1902,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -1920,10 +1920,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -1938,10 +1938,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -1956,10 +1956,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -1974,10 +1974,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -1992,10 +1992,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -2010,10 +2010,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -2028,10 +2028,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -2046,10 +2046,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -2064,10 +2064,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -2082,10 +2082,10 @@
 
 <node id="59" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+:4  %tmp_8 = call double @llvm.exp.f64(double %tmp_7)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 </state>
 
@@ -2100,10 +2100,10 @@
 
 <node id="60" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:5  %tmp_8 = fadd double %tmp_7, 1.000000e+00
+:5  %tmp_9 = fadd double %tmp_8, 1.000000e+00
 
 ]]></node>
-<StgValue><ssdm name="tmp_8"/></StgValue>
+<StgValue><ssdm name="tmp_9"/></StgValue>
 </operation>
 </state>
 
@@ -2118,10 +2118,10 @@
 
 <node id="60" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:5  %tmp_8 = fadd double %tmp_7, 1.000000e+00
+:5  %tmp_9 = fadd double %tmp_8, 1.000000e+00
 
 ]]></node>
-<StgValue><ssdm name="tmp_8"/></StgValue>
+<StgValue><ssdm name="tmp_9"/></StgValue>
 </operation>
 </state>
 
@@ -2136,10 +2136,10 @@
 
 <node id="60" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:5  %tmp_8 = fadd double %tmp_7, 1.000000e+00
+:5  %tmp_9 = fadd double %tmp_8, 1.000000e+00
 
 ]]></node>
-<StgValue><ssdm name="tmp_8"/></StgValue>
+<StgValue><ssdm name="tmp_9"/></StgValue>
 </operation>
 </state>
 
@@ -2154,10 +2154,10 @@
 
 <node id="60" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:5  %tmp_8 = fadd double %tmp_7, 1.000000e+00
+:5  %tmp_9 = fadd double %tmp_8, 1.000000e+00
 
 ]]></node>
-<StgValue><ssdm name="tmp_8"/></StgValue>
+<StgValue><ssdm name="tmp_9"/></StgValue>
 </operation>
 </state>
 
@@ -2172,10 +2172,10 @@
 
 <node id="60" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:5  %tmp_8 = fadd double %tmp_7, 1.000000e+00
+:5  %tmp_9 = fadd double %tmp_8, 1.000000e+00
 
 ]]></node>
-<StgValue><ssdm name="tmp_8"/></StgValue>
+<StgValue><ssdm name="tmp_9"/></StgValue>
 </operation>
 </state>
 
@@ -2190,10 +2190,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2208,10 +2208,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2226,10 +2226,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2244,10 +2244,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2262,10 +2262,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2280,10 +2280,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2298,10 +2298,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2316,10 +2316,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2334,10 +2334,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2352,10 +2352,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2370,10 +2370,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2388,10 +2388,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2406,10 +2406,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2424,10 +2424,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2442,10 +2442,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2460,10 +2460,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2478,10 +2478,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2496,10 +2496,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2514,10 +2514,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2532,10 +2532,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2550,10 +2550,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2568,10 +2568,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2586,10 +2586,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2604,10 +2604,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2622,10 +2622,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2640,10 +2640,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2658,10 +2658,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2676,10 +2676,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2694,10 +2694,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2712,10 +2712,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2730,10 +2730,10 @@
 
 <node id="61" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+:6  %tmp_2 = fdiv double 1.000000e+00, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -2748,10 +2748,10 @@
 
 <node id="62" bw="32" op_0_bw="64">
 <![CDATA[
-:7  %tmp_s = fptrunc double %tmp_9 to float
+:7  %tmp_3 = fptrunc double %tmp_2 to float
 
 ]]></node>
-<StgValue><ssdm name="tmp_s"/></StgValue>
+<StgValue><ssdm name="tmp_3"/></StgValue>
 </operation>
 </state>
 
@@ -2766,7 +2766,7 @@
 
 <node id="63" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-:8  store float %tmp_s, float* %hidden_addr, align 4
+:8  store float %tmp_3, float* %hidden_addr, align 4
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -2799,7 +2799,7 @@
 
 <node id="66" bw="3" op_0_bw="3" op_1_bw="0">
 <![CDATA[
-.preheader:0  %j2 = phi i3 [ %j_3, %10 ], [ 0, %.preheader5 ]
+.preheader:0  %j2 = phi i3 [ %j_4, %10 ], [ 0, %.preheader5 ]
 
 ]]></node>
 <StgValue><ssdm name="j2"/></StgValue>
@@ -2844,10 +2844,10 @@
 
 <node id="69" bw="3" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-.preheader:3  %j_3 = add i3 %j2, 1
+.preheader:3  %j_4 = add i3 %j2, 1
 
 ]]></node>
-<StgValue><ssdm name="j_3"/></StgValue>
+<StgValue><ssdm name="j_4"/></StgValue>
 </operation>
 
 <operation id="256" st_id="72" stage="1" lat="1">
@@ -2875,10 +2875,10 @@
 
 <node id="72" bw="64" op_0_bw="3">
 <![CDATA[
-:0  %tmp_4 = zext i3 %j2 to i64
+:0  %tmp_5 = zext i3 %j2 to i64
 
 ]]></node>
-<StgValue><ssdm name="tmp_4"/></StgValue>
+<StgValue><ssdm name="tmp_5"/></StgValue>
 </operation>
 
 <operation id="258" st_id="72" stage="1" lat="1">
@@ -2891,7 +2891,7 @@
 
 <node id="73" bw="2" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-:1  %output_addr = getelementptr inbounds [4 x float]* @output_r, i64 0, i64 %tmp_4
+:1  %output_addr = getelementptr inbounds [4 x float]* @output_r, i64 0, i64 %tmp_5
 
 ]]></node>
 <StgValue><ssdm name="output_addr"/></StgValue>
@@ -2923,10 +2923,10 @@
 
 <node id="75" bw="8" op_0_bw="3">
 <![CDATA[
-:3  %tmp_4_trn_cast = zext i3 %j2 to i8
+:3  %tmp_5_trn_cast = zext i3 %j2 to i8
 
 ]]></node>
-<StgValue><ssdm name="tmp_4_trn_cast"/></StgValue>
+<StgValue><ssdm name="tmp_5_trn_cast"/></StgValue>
 </operation>
 
 <operation id="261" st_id="72" stage="1" lat="1">
@@ -2973,10 +2973,10 @@
 
 <node id="78" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:0  %tmp_12 = phi float [ 0.000000e+00, %7 ], [ %tmp_21, %9 ]
+:0  %tmp_1 = phi float [ 0.000000e+00, %7 ], [ %tmp_21, %9 ]
 
 ]]></node>
-<StgValue><ssdm name="tmp_12"/></StgValue>
+<StgValue><ssdm name="tmp_1"/></StgValue>
 </operation>
 
 <operation id="264" st_id="73" stage="1" lat="1">
@@ -3144,7 +3144,7 @@
 
 <node id="90" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-:5  %weightHO_addr4 = add i8 %tmp_4_trn_cast, %weightHO_addr3_cast
+:5  %weightHO_addr4 = add i8 %weightHO_addr3_cast, %tmp_5_trn_cast
 
 ]]></node>
 <StgValue><ssdm name="weightHO_addr4"/></StgValue>
@@ -3208,10 +3208,10 @@
 
 <node id="99" bw="32" op_0_bw="32">
 <![CDATA[
-:0  %tmp_13_to_int = bitcast float %tmp_12 to i32
+:0  %tmp_125_to_int = bitcast float %tmp_1 to i32
 
 ]]></node>
-<StgValue><ssdm name="tmp_13_to_int"/></StgValue>
+<StgValue><ssdm name="tmp_125_to_int"/></StgValue>
 </operation>
 
 <operation id="279" st_id="73" stage="1" lat="1">
@@ -3224,10 +3224,10 @@
 
 <node id="100" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:1  %tmp_13_neg = xor i32 %tmp_13_to_int, -2147483648
+:1  %tmp_125_neg = xor i32 %tmp_125_to_int, -2147483648
 
 ]]></node>
-<StgValue><ssdm name="tmp_13_neg"/></StgValue>
+<StgValue><ssdm name="tmp_125_neg"/></StgValue>
 </operation>
 
 <operation id="280" st_id="73" stage="1" lat="1">
@@ -3240,7 +3240,7 @@
 
 <node id="101" bw="32" op_0_bw="32">
 <![CDATA[
-:2  %tmp_13 = bitcast i32 %tmp_13_neg to float
+:2  %tmp_13 = bitcast i32 %tmp_125_neg to float
 
 ]]></node>
 <StgValue><ssdm name="tmp_13"/></StgValue>
@@ -3376,7 +3376,7 @@
 
 <node id="95" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:10  %tmp_21 = fadd float %tmp_12, %tmp_20
+:10  %tmp_21 = fadd float %tmp_1, %tmp_20
 
 ]]></node>
 <StgValue><ssdm name="tmp_21"/></StgValue>
@@ -3394,7 +3394,7 @@
 
 <node id="95" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:10  %tmp_21 = fadd float %tmp_12, %tmp_20
+:10  %tmp_21 = fadd float %tmp_1, %tmp_20
 
 ]]></node>
 <StgValue><ssdm name="tmp_21"/></StgValue>
@@ -3412,7 +3412,7 @@
 
 <node id="95" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:10  %tmp_21 = fadd float %tmp_12, %tmp_20
+:10  %tmp_21 = fadd float %tmp_1, %tmp_20
 
 ]]></node>
 <StgValue><ssdm name="tmp_21"/></StgValue>
@@ -3430,7 +3430,7 @@
 
 <node id="95" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:10  %tmp_21 = fadd float %tmp_12, %tmp_20
+:10  %tmp_21 = fadd float %tmp_1, %tmp_20
 
 ]]></node>
 <StgValue><ssdm name="tmp_21"/></StgValue>
@@ -3448,7 +3448,7 @@
 
 <node id="95" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:10  %tmp_21 = fadd float %tmp_12, %tmp_20
+:10  %tmp_21 = fadd float %tmp_1, %tmp_20
 
 ]]></node>
 <StgValue><ssdm name="tmp_21"/></StgValue>

@@ -5,15 +5,15 @@ set isPipelined 0
 set pipeline_type none
 set FunctionProtocol ap_ctrl_hs
 set isOneStateSeq 0
-set C_modelName {voicerec_preprocessSound}
+set C_modelName voicerec_preprocessSound
 set C_modelType { void 0 }
 set C_modelArgList { 
 	{ inSound float 32 regular {array 16000 { 2 3 } 1 1 }  }
 	{ outSound float 32 regular {array 8000 { 0 3 } 0 1 }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "inSound", "interface" : "memory", "bitwidth" : 32 ,"direction" : "READWRITE" } , 
- 	{ "Name" : "outSound", "interface" : "memory", "bitwidth" : 32 ,"direction" : "WRITEONLY" } ]}
+	{ "Name" : "inSound", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "outSound", "interface" : "memory", "bitwidth" : 32} ]}
 # RTL Port declarations: 
 set portNum 15
 set portList { 

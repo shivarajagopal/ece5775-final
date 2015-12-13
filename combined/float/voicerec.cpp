@@ -293,17 +293,30 @@ void preprocessSound(float *inSound, int inSize, float *outSound, int outSize) {
  * it through the neural network classifier to get
  * the most likely result
 *****************************************************/
-int voicerec(float inSound[ORIGSIZE]) {
-  int i = 0, j=0, stride = 0, classification = -1;
+int voicerec(float* new_sample) {
+  static float inSound[ORIGSIZE];
+  static int sampleCounter;
 
-  stride = NP/2;
-  float outSound[8000];
-  preprocessSound(inSound, 16000, outSound, 8000);
-  int index = 0;
-  for (i = 0; i+NP <8000 ; i += stride) {
-    processChunk(i, result[index], outSound);
-    index++;
+  inSound[sampleCounter++] = *new_sample;
+
+  if (sampleCounter < ORIGSIZE) {
+	  return -1;
   }
-  classification = classifySound(result);
-  return classification;
+
+  else {
+	  sampleCounter = 0;
+
+	  int i = 0, j=0, stride = 0, classification = -1;
+	  stride = NP/2;
+	  float outSound[8000];
+	  preprocessSound(inSound, 16000, outSound, 8000);
+	  int index = 0;
+	  for (i = 0; i+NP <8000 ; i += stride) {
+		processChunk(i, result[index], outSound);
+		index++;
+	  }
+	  classification = classifySound(result);
+
+	  return classification;
+  }
 }

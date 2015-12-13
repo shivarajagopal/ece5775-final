@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'voicerec'
 ================================================================
-* Date:           Fri Dec 11 15:33:54 2015
+* Date:           Sat Dec 12 03:01:06 2015
 
-* Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
+* Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
 * Project:        voicerec.prj
 * Solution:       solution1
 * Product family: zynq
@@ -17,20 +17,20 @@
 ================================================================
 + Timing (ns): 
     * Summary: 
-    +--------+-------+----------+------------+
-    |  Clock | Target| Estimated| Uncertainty|
-    +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      9.58|        1.25|
-    +--------+-------+----------+------------+
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      8.62|        1.25|
+    +---------+-------+----------+------------+
 
 + Latency (clock cycles): 
     * Summary: 
-    +---------+-----------+---------+-----------+---------+
-    |       Latency       |       Interval      | Pipeline|
-    |   min   |    max    |   min   |    max    |   Type  |
-    +---------+-----------+---------+-----------+---------+
-    |  1369798|  153688944|  1369799|  153688945|   none  |
-    +---------+-----------+---------+-----------+---------+
+    +-----+-----------+-----+-----------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    | min |    max    | min |    max    |   Type  |
+    +-----+-----------+-----+-----------+---------+
+    |    1|  153688945|    2|  153688946|   none  |
+    +-----+-----------+-----+-----------+---------+
 
     + Detail: 
         * Instance: 
@@ -92,7 +92,27 @@
 == Interface
 ================================================================
 * Summary: 
-N/A
++---------------------------+-----+-----+---------+--------------+---------+
+|         RTL Ports         | Dir | Bits| Protocol| Source Object|  C Type |
++---------------------------+-----+-----+---------+--------------+---------+
+|s_axi_voicerec_io_AWVALID  |  in |    1|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_AWREADY  | out |    1|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_AWADDR   |  in |    6|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_WVALID   |  in |    1|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_WREADY   | out |    1|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_WDATA    |  in |   32|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_WSTRB    |  in |    4|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_ARVALID  |  in |    1|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_ARREADY  | out |    1|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_ARADDR   |  in |    6|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_RVALID   | out |    1|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_RREADY   |  in |    1|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_RDATA    | out |   32|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_RRESP    | out |    2|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_BVALID   | out |    1|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_BREADY   |  in |    1|  s_axi  |  voicerec_io | pointer |
+|s_axi_voicerec_io_BRESP    | out |    2|  s_axi  |  voicerec_io | pointer |
++---------------------------+-----+-----+---------+--------------+---------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -120,91 +140,138 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states: 5
+* Number of FSM states: 6
 * Pipeline: 0
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
 1 --> 
-	2  / true
+	2  / (!tmp_s)
+	6  / (tmp_s)
 2 --> 
 	3  / true
 3 --> 
-	4  / (!exitcond)
-	5  / (exitcond)
+	4  / true
 4 --> 
-	3  / true
+	5  / (!exitcond)
+	6  / (exitcond)
 5 --> 
+	4  / true
+6 --> 
 * FSM state operations: 
 
- <State 1>: 0.00ns
+ <State 1>: 6.53ns
+ST_1: stg_7 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(float* %new_sample) nounwind, !map !66
+
+ST_1: stg_8 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !72
+
+ST_1: stg_9 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @str) nounwind
+
 ST_1: outSound [1/1] 0.00ns
 :3  %outSound = alloca [8000 x float], align 16
 
-ST_1: stg_7 [2/2] 0.00ns
-:4  call fastcc void @voicerec_preprocessSound([16000 x float]* %inSound, [8000 x float]* %outSound) nounwind
+ST_1: stg_11 [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecInterface(float* %new_sample, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [12 x i8]* @p_str1, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+
+ST_1: stg_12 [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [12 x i8]* @p_str1, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+
+ST_1: new_sample_read [1/1] 1.00ns
+:6  %new_sample_read = call float @_ssdm_op_Read.s_axilite.floatP(float* %new_sample) nounwind
+
+ST_1: sampleCounter_load [1/1] 0.00ns
+:7  %sampleCounter_load = load i32* @sampleCounter, align 4
+
+ST_1: sampleCounter_assign [1/1] 2.44ns
+:8  %sampleCounter_assign = add nsw i32 %sampleCounter_load, 1
+
+ST_1: tmp [1/1] 0.00ns
+:9  %tmp = sext i32 %sampleCounter_load to i64
+
+ST_1: inSound_addr [1/1] 0.00ns
+:10  %inSound_addr = getelementptr inbounds [16000 x float]* @inSound, i64 0, i64 %tmp
+
+ST_1: stg_18 [1/1] 2.39ns
+:11  store float %new_sample_read, float* %inSound_addr, align 4
+
+ST_1: tmp_s [1/1] 2.52ns
+:12  %tmp_s = icmp slt i32 %sampleCounter_assign, 16000
+
+ST_1: stg_20 [1/1] 1.57ns
+:13  br i1 %tmp_s, label %mergeST, label %1
 
 
- <State 2>: 1.57ns
-ST_2: stg_8 [1/1] 0.00ns
-:0  call void (...)* @_ssdm_op_SpecBitsMap([16000 x float]* %inSound) nounwind, !map !66
-
-ST_2: stg_9 [1/1] 0.00ns
-:1  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !72
-
-ST_2: stg_10 [1/1] 0.00ns
-:2  call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @voicerec_str) nounwind
-
-ST_2: stg_11 [1/2] 0.00ns
-:4  call fastcc void @voicerec_preprocessSound([16000 x float]* %inSound, [8000 x float]* %outSound) nounwind
-
-ST_2: stg_12 [1/1] 1.57ns
-:5  br label %1
+ <State 2>: 0.00ns
+ST_2: stg_21 [2/2] 0.00ns
+:0  call fastcc void @voicerec_preprocessSound([16000 x float]* @inSound, [8000 x float]* %outSound) nounwind
 
 
- <State 3>: 1.96ns
-ST_3: i [1/1] 0.00ns
-:0  %i = phi i13 [ 0, %0 ], [ %i_1, %2 ]
+ <State 3>: 1.57ns
+ST_3: stg_22 [1/2] 0.00ns
+:0  call fastcc void @voicerec_preprocessSound([16000 x float]* @inSound, [8000 x float]* %outSound) nounwind
 
-ST_3: index [1/1] 0.00ns
-:1  %index = phi i6 [ 0, %0 ], [ %index_1, %2 ]
+ST_3: stg_23 [1/1] 1.57ns
+:1  br label %2
 
-ST_3: exitcond [1/1] 1.94ns
+
+ <State 4>: 1.96ns
+ST_4: i [1/1] 0.00ns
+:0  %i = phi i13 [ 0, %1 ], [ %i_1, %3 ]
+
+ST_4: index [1/1] 0.00ns
+:1  %index = phi i6 [ 0, %1 ], [ %index_1, %3 ]
+
+ST_4: exitcond [1/1] 1.94ns
 :2  %exitcond = icmp eq i6 %index, -3
 
-ST_3: empty [1/1] 0.00ns
+ST_4: empty [1/1] 0.00ns
 :3  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 61, i64 61, i64 61) nounwind
 
-ST_3: index_1 [1/1] 1.72ns
+ST_4: index_1 [1/1] 1.72ns
 :4  %index_1 = add i6 %index, 1
 
-ST_3: stg_18 [1/1] 0.00ns
-:5  br i1 %exitcond, label %3, label %2
+ST_4: stg_29 [1/1] 0.00ns
+:5  br i1 %exitcond, label %4, label %3
 
-ST_3: stg_19 [2/2] 0.00ns
+ST_4: stg_30 [2/2] 0.00ns
 :0  call fastcc void @voicerec_processChunk(i13 %i, [882 x float]* nocapture @result, i6 %index, [8000 x float]* nocapture %outSound) nounwind
 
-ST_3: i_1 [1/1] 1.96ns
+ST_4: i_1 [1/1] 1.96ns
 :1  %i_1 = add i13 %i, 128
 
-ST_3: classification [2/2] 0.00ns
+ST_4: classification [2/2] 0.00ns
 :0  %classification = call fastcc i32 @voicerec_classifySound() nounwind
-
-
- <State 4>: 0.00ns
-ST_4: stg_22 [1/2] 0.00ns
-:0  call fastcc void @voicerec_processChunk(i13 %i, [882 x float]* nocapture @result, i6 %index, [8000 x float]* nocapture %outSound) nounwind
-
-ST_4: stg_23 [1/1] 0.00ns
-:2  br label %1
 
 
  <State 5>: 0.00ns
-ST_5: classification [1/2] 0.00ns
+ST_5: stg_33 [1/2] 0.00ns
+:0  call fastcc void @voicerec_processChunk(i13 %i, [882 x float]* nocapture @result, i6 %index, [8000 x float]* nocapture %outSound) nounwind
+
+ST_5: stg_34 [1/1] 0.00ns
+:2  br label %2
+
+
+ <State 6>: 1.57ns
+ST_6: classification [1/2] 0.00ns
 :0  %classification = call fastcc i32 @voicerec_classifySound() nounwind
 
-ST_5: stg_25 [1/1] 0.00ns
-:1  ret i32 %classification
+ST_6: stg_36 [1/1] 1.57ns
+:1  br label %mergeST
+
+ST_6: sampleCounter_new [1/1] 0.00ns
+mergeST:0  %sampleCounter_new = phi i32 [ %sampleCounter_assign, %0 ], [ 0, %4 ]
+
+ST_6: p_0 [1/1] 0.00ns
+mergeST:1  %p_0 = phi i32 [ -1, %0 ], [ %classification, %4 ]
+
+ST_6: stg_39 [1/1] 0.00ns
+mergeST:2  store i32 %sampleCounter_new, i32* @sampleCounter, align 4
+
+ST_6: stg_40 [1/1] 0.00ns
+mergeST:3  ret i32 %p_0
 
 
 
@@ -220,6 +287,7 @@ N/A
 	State 3
 	State 4
 	State 5
+	State 6
 
 
 ============================================================

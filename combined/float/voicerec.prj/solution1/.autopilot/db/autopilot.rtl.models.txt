@@ -7,7 +7,7 @@ voicerec_sdiv_11ns_32ns_32_15_seq
 voicerec_FFT_cosVec
 voicerec_FFT_sinVec
 voicerec_fdiv_32ns_32ns_32_16
-voicerec_sitofp_64ns_32_6
+voicerec_uitofp_32ns_32_6
 voicerec_fptrunc_64ns_32_1
 voicerec_fcmp_32ns_32ns_1_1
 voicerec_dmul_64ns_64ns_64_6_max_dsp
@@ -25,8 +25,10 @@ voicerec_feedForward_weightIH
 voicerec_feedForward_weightHO
 voicerec_classifySound_output_r
 voicerec_classifySound_flatInput
+voicerec_inSound
 voicerec_result
 voicerec_outSound
+voicerec_voicerec_io_s_axi
 voicerec_preprocessSound
 voicerec_FFT
 voicerec_processChunk

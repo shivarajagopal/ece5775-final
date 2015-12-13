@@ -1,17 +1,20 @@
-# 1 "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.1.cpp"
-# 1 "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.1.cpp" 1
+# 1 "C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.1.cpp"
+# 1 "C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
-# 155 "<built-in>" 3
+# 152 "<built-in>" 3
 # 1 "<command line>" 1
 
 
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
+
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
 /* autopilot_ssdm_op.h*/
 /*
-#-  (c) Copyright 2011-2015 Xilinx, Inc. All rights reserved.
+#-  (c) Copyright 2011-2014 Xilinx, Inc. All rights reserved.
 #-
 #-  This file contains confidential and proprietary information
 #-  of Xilinx, Inc. and is protected under U.S. and
@@ -61,7 +64,7 @@
  *
  * $Id$
  */
-# 145 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+# 145 "C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
 /*#define AP_SPEC_ATTR __attribute__ ((pure))*/
 
 
@@ -89,7 +92,6 @@ extern "C" {
     _uint1_ _ssdm_StreamNbWrite(...) __attribute__ ((nothrow));
     _uint1_ _ssdm_StreamCanRead(...) __attribute__ ((nothrow));
     _uint1_ _ssdm_StreamCanWrite(...) __attribute__ ((nothrow));
-    unsigned _ssdm_StreamSize(...) __attribute__ ((nothrow));
 
     // Misc
     void _ssdm_op_MemShiftRead(...) __attribute__ ((nothrow));
@@ -190,29 +192,31 @@ extern "C" {
     void _ssdm_SpecDataPack(...) __attribute__ ((nothrow));
 
     void _ssdm_op_SpecBitsMap(...) __attribute__ ((nothrow));
-    void _ssdm_op_SpecLicense(...) __attribute__ ((nothrow));
 
 }
-# 404 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+# 401 "C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
 /*#define _ssdm_op_WaitUntil(X) while (!(X)) _ssdm_op_Wait(1);
 #define _ssdm_op_Delayed(X) X */
-# 6 "<command line>" 2
+# 9 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.1.cpp" 2
+# 1 "C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj/solution1/.autopilot/db/neuralNetworkSynth.pragma.1.cpp" 2
 # 1 "neuralNetworkSynth.cpp"
 # 1 "neuralNetworkSynth.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
-# 155 "<built-in>" 3
+# 152 "<built-in>" 3
 # 1 "<command line>" 1
 
 
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
+
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
 /* autopilot_ssdm_op.h*/
 /*
-#-  (c) Copyright 2011-2015 Xilinx, Inc. All rights reserved.
+#-  (c) Copyright 2011-2014 Xilinx, Inc. All rights reserved.
 #-
 #-  This file contains confidential and proprietary information
 #-  of Xilinx, Inc. and is protected under U.S. and
@@ -262,7 +266,7 @@ extern "C" {
  *
  * $Id$
  */
-# 145 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+# 145 "C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
 /*#define AP_SPEC_ATTR __attribute__ ((pure))*/
 
 
@@ -290,7 +294,6 @@ extern "C" {
     _uint1_ _ssdm_StreamNbWrite(...) __attribute__ ((nothrow));
     _uint1_ _ssdm_StreamCanRead(...) __attribute__ ((nothrow));
     _uint1_ _ssdm_StreamCanWrite(...) __attribute__ ((nothrow));
-    unsigned _ssdm_StreamSize(...) __attribute__ ((nothrow));
 
     // Misc
     void _ssdm_op_MemShiftRead(...) __attribute__ ((nothrow));
@@ -391,16 +394,15 @@ extern "C" {
     void _ssdm_SpecDataPack(...) __attribute__ ((nothrow));
 
     void _ssdm_op_SpecBitsMap(...) __attribute__ ((nothrow));
-    void _ssdm_op_SpecLicense(...) __attribute__ ((nothrow));
 
 }
-# 404 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+# 401 "C:/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
 /*#define _ssdm_op_WaitUntil(X) while (!(X)) _ssdm_op_Wait(1);
 #define _ssdm_op_Delayed(X) X */
-# 6 "<command line>" 2
+# 9 "<command line>" 2
 # 1 "<built-in>" 2
 # 1 "neuralNetworkSynth.cpp" 2
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iostream" 1 3
 // Standard iostream objects -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2001, 2002, 2005, 2008, 2009, 2010
@@ -426,20 +428,20 @@ extern "C" {
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file include/iostream
- *  This is a Standard C++ Library header.
+/** @file iostream
+ *  This is a Standard C++ Library header. 
  */
 
 //
 // ISO C++ 14882: 27.3  Standard iostream objects
 //
-# 37 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
+# 37 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iostream" 3
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++config.h" 1 3
 // Predefined symbols and macros -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011 Free Software Foundation, Inc.
+// 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -461,9 +463,9 @@ extern "C" {
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/c++config.h
+/** @file c++config.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{iosfwd}
+ *  You should not attempt to use it directly.
  */
 
 
@@ -472,151 +474,95 @@ extern "C" {
 // The current version of the C++ library in compressed ISO date format.
 
 
-// Macros for various attributes.
-//   _GLIBCXX_PURE
-//   _GLIBCXX_CONST
-//   _GLIBCXX_NORETURN
-//   _GLIBCXX_NOTHROW
-//   _GLIBCXX_VISIBILITY
-# 63 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
-// Macros for visibility attributes.
-//   _GLIBCXX_HAVE_ATTRIBUTE_VISIBILITY
-//   _GLIBCXX_VISIBILITY
-# 76 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
-// Macros for deprecated attributes.
-//   _GLIBCXX_USE_DEPRECATED
-//   _GLIBCXX_DEPRECATED
-# 91 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
-// Macro for constexpr, to support in mixed 03/0x mode.
-# 102 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
-// Macro for extern template, ie controling template linkage via use
-// of extern keyword on template declaration. As documented in the g++
-// manual, it inhibits all implicit instantiations and is used
-// throughout the library to avoid multiple weak definitions for
-// required types that are already explicitly instantiated in the
-// library binary. This substantially reduces the binary size of
-// resulting executables.
-// Special case: _GLIBCXX_EXTERN_TEMPLATE == -1 disallows extern
-// templates only in basic_string, thus activating its debug-mode
-// checks even at -O0.
+// Macros for visibility.
+// _GLIBCXX_HAVE_ATTRIBUTE_VISIBILITY
+// _GLIBCXX_VISIBILITY_ATTR
 
 
+
+
+
+// If this is not supplied by the OS-specific or CPU-specific
+// headers included below, it will be defined to an empty default.
+
+
+
+// Macros for deprecated.
+// _GLIBCXX_DEPRECATED
+// _GLIBCXX_DEPRECATED_ATTR
+# 63 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++config.h" 3
+// Macros for activating various namespace association modes.
+// _GLIBCXX_NAMESPACE_ASSOCIATION_DEBUG
+// _GLIBCXX_NAMESPACE_ASSOCIATION_PARALLEL
+// _GLIBCXX_NAMESPACE_ASSOCIATION_VERSION
+
+// Guide to libstdc++ namespaces.
 /*
-  Outline of libstdc++ namespaces.
-
   namespace std
   {
     namespace __debug { }
     namespace __parallel { }
-    namespace __profile { }
+    namespace __norm { } // __normative, __shadow, __replaced
     namespace __cxx1998 { }
 
-    namespace __detail { }
-
-    namespace rel_ops { }
-
-    namespace tr1
-    {
-      namespace placeholders { }
-      namespace regex_constants { }
-      namespace __detail { }
-    }
-
-    namespace decimal { }
-
-    namespace chrono { }
-    namespace placeholders { }
-    namespace regex_constants { }
-    namespace this_thread { }
+    namespace tr1 { }
   }
-
-  namespace abi { }
-
-  namespace __gnu_cxx
-  {
-    namespace __detail { }
-  }
-
-  For full details see:
-  http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/namespaces.html
 */
-namespace std
-{
-  typedef long unsigned int size_t;
-  typedef long int ptrdiff_t;
+# 90 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++config.h" 3
+// Namespace association for profile
 
 
 
 
-}
 
 
-// Defined if inline namespaces are used for versioning.
+// Defined if any namespace association modes are active.
 
 
-// Inline namespace for symbol versioning.
-# 208 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
-// Inline namespaces for special modes: debug, parallel, profile.
-# 255 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
+
+
+
+
+
 // Macros for namespace scope. Either namespace std:: or the name
-// of some nested namespace within it corresponding to the active mode.
-// _GLIBCXX_STD_A
-// _GLIBCXX_STD_C
+// of some nested namespace within it.
+// _GLIBCXX_STD
+// _GLIBCXX_STD_D
+// _GLIBCXX_STD_P
 //
-// Macros for opening/closing conditional namespaces.
-// _GLIBCXX_BEGIN_NAMESPACE_ALGO
-// _GLIBCXX_END_NAMESPACE_ALGO
-// _GLIBCXX_BEGIN_NAMESPACE_CONTAINER
-// _GLIBCXX_END_NAMESPACE_CONTAINER
-# 307 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
-// GLIBCXX_ABI Deprecated
-// Define if compatibility should be provided for -mlong-double-64.
+// Macros for enclosing namespaces and possibly nested namespaces.
+// _GLIBCXX_BEGIN_NAMESPACE
+// _GLIBCXX_END_NAMESPACE
+// _GLIBCXX_BEGIN_NESTED_NAMESPACE
+// _GLIBCXX_END_NESTED_NAMESPACE
+# 187 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++config.h" 3
+// Namespace associations for debug mode.
+# 197 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++config.h" 3
+// Namespace associations for parallel mode.
+# 207 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++config.h" 3
+// Namespace associations for profile mode
+# 217 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++config.h" 3
+// Namespace associations for versioning mode.
+# 238 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++config.h" 3
+// XXX GLIBCXX_ABI Deprecated
+// Define if compatibility should be provided for -mlong-double-64
 
 
-// Inline namespace for long double 128 mode.
-# 326 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
-// Assert.
-# 352 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
-// Macros for race detectors.
-// _GLIBCXX_SYNCHRONIZATION_HAPPENS_BEFORE(A) and
-// _GLIBCXX_SYNCHRONIZATION_HAPPENS_AFTER(A) should be used to explain
-// atomic (lock-free) synchronization to race detectors:
-// the race detector will infer a happens-before arc from the former to the
-// latter when they share the same argument pointer.
-//
-// The most frequent use case for these macros (and the only case in the
-// current implementation of the library) is atomic reference counting:
-//   void _M_remove_reference()
-//   {
-//     _GLIBCXX_SYNCHRONIZATION_HAPPENS_BEFORE(&this->_M_refcount);
-//     if (__gnu_cxx::__exchange_and_add_dispatch(&this->_M_refcount, -1) <= 0)
-//       {
-//         _GLIBCXX_SYNCHRONIZATION_HAPPENS_AFTER(&this->_M_refcount);
-//         _M_destroy(__a);
-//       }
-//   }
-// The annotations in this example tell the race detector that all memory
-// accesses occurred when the refcount was positive do not race with
-// memory accesses which occurred after the refcount became zero.
-
-
-
-
-
-
-
-// Macros for C linkage: define extern "C" linkage only when using C++.
-# 390 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
+// Namespace associations for long double 128 mode.
+# 258 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++config.h" 3
+// Defines for C compatibility. In particular, define extern "C"
+// linkage only when using C++.
+# 272 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++config.h" 3
 // First includes.
 
 // Pick up any OS-specific definitions.
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h" 1 3
-// Specific definitions for GNU/Linux  -*- C++ -*-
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/os_defines.h" 1 3
+// Specific definitions for generic platforms  -*- C++ -*-
 
-// Copyright (C) 2000, 2001, 2002, 2003, 2009, 2010
-// Free Software Foundation, Inc.
+// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008,
+// 2009  Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -638,9 +584,9 @@ namespace std
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/os_defines.h
+/** @file os_defines.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{iosfwd}
+ *  You should not attempt to use it directly.
  */
 
 
@@ -649,447 +595,28 @@ namespace std
 // System-specific #define, typedefs, corrections, etc, go here.  This
 // file will come before all others.
 
-// This keeps isanum, et al from being propagated as macros.
+//  Define as 0, if you want, to enable inlining of gthread functions.
+//  By default, don't pollute libstdc++ with win32api names.
 
 
 
 
-# 1 "/usr/include/features.h" 1 3 4
-/* Copyright (C) 1991,1992,1993,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006
-	Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
+// Don't let win32api windef.h define min and max as macros
+// if included after c++config.h.
+# 57 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/os_defines.h" 3
+// See libstdc++/20806.
 
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
 
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-
-
-
-/* These are defined by the user (or the compiler)
-   to specify the desired environment:
-
-   __STRICT_ANSI__	ISO Standard C.
-   _ISOC99_SOURCE	Extensions to ISO C89 from ISO C99.
-   _POSIX_SOURCE	IEEE Std 1003.1.
-   _POSIX_C_SOURCE	If ==1, like _POSIX_SOURCE; if >=2 add IEEE Std 1003.2;
-			if >=199309L, add IEEE Std 1003.1b-1993;
-			if >=199506L, add IEEE Std 1003.1c-1995;
-			if >=200112L, all of IEEE 1003.1-2004
-   _XOPEN_SOURCE	Includes POSIX and XPG things.  Set to 500 if
-			Single Unix conformance is wanted, to 600 for the
-			upcoming sixth revision.
-   _XOPEN_SOURCE_EXTENDED XPG things and X/Open Unix extensions.
-   _LARGEFILE_SOURCE	Some more functions for correct standard I/O.
-   _LARGEFILE64_SOURCE	Additional functionality from LFS for large files.
-   _FILE_OFFSET_BITS=N	Select default filesystem interface.
-   _BSD_SOURCE		ISO C, POSIX, and 4.3BSD things.
-   _SVID_SOURCE		ISO C, POSIX, and SVID things.
-   _ATFILE_SOURCE	Additional *at interfaces.
-   _GNU_SOURCE		All of the above, plus GNU extensions.
-   _REENTRANT		Select additionally reentrant object.
-   _THREAD_SAFE		Same as _REENTRANT, often used by other systems.
-   _FORTIFY_SOURCE	If set to numeric value > 0 additional security
-			measures are defined, according to level.
-
-   The `-ansi' switch to the GNU C compiler defines __STRICT_ANSI__.
-   If none of these are defined, the default is to have _SVID_SOURCE,
-   _BSD_SOURCE, and _POSIX_SOURCE set to one and _POSIX_C_SOURCE set to
-   200112L.  If more than one of these are defined, they accumulate.
-   For example __STRICT_ANSI__, _POSIX_SOURCE and _POSIX_C_SOURCE
-   together give you ISO C, 1003.1, and 1003.2, but nothing else.
-
-   These are defined by this file and are used by the
-   header files to decide what to declare or define:
-
-   __USE_ISOC99		Define ISO C99 things.
-   __USE_POSIX		Define IEEE Std 1003.1 things.
-   __USE_POSIX2		Define IEEE Std 1003.2 things.
-   __USE_POSIX199309	Define IEEE Std 1003.1, and .1b things.
-   __USE_POSIX199506	Define IEEE Std 1003.1, .1b, .1c and .1i things.
-   __USE_XOPEN		Define XPG things.
-   __USE_XOPEN_EXTENDED	Define X/Open Unix things.
-   __USE_UNIX98		Define Single Unix V2 things.
-   __USE_XOPEN2K        Define XPG6 things.
-   __USE_LARGEFILE	Define correct standard I/O things.
-   __USE_LARGEFILE64	Define LFS things with separate names.
-   __USE_FILE_OFFSET64	Define 64bit interface as default.
-   __USE_BSD		Define 4.3BSD things.
-   __USE_SVID		Define SVID things.
-   __USE_MISC		Define things common to BSD and System V Unix.
-   __USE_ATFILE		Define *at interfaces and AT_* constants for them.
-   __USE_GNU		Define GNU extensions.
-   __USE_REENTRANT	Define reentrant/thread-safe *_r functions.
-   __USE_FORTIFY_LEVEL	Additional security measures used, according to level.
-   __FAVOR_BSD		Favor 4.3BSD things in cases of conflict.
-
-   The macros `__GNU_LIBRARY__', `__GLIBC__', and `__GLIBC_MINOR__' are
-   defined by this file unconditionally.  `__GNU_LIBRARY__' is provided
-   only for compatibility.  All new code should use the other symbols
-   to test for features.
-
-   All macros listed above as possibly being defined by this file are
-   explicitly undefined if they are not explicitly defined.
-   Feature-test macros that are not defined by the user or compiler
-   but are implied by the other feature-test macros defined (or by the
-   lack of any definitions) are defined by the file.  */
-
-
-/* Undefine everything, so we get a clean slate.  */
-# 115 "/usr/include/features.h" 3 4
-/* Suppress kernel-name space pollution unless user expressedly asks
-   for it.  */
-
-
-
-
-/* Always use ISO C things.  */
-
-
-/* Convenience macros to test the versions of glibc and gcc.
-   Use them like this:
-   #if __GNUC_PREREQ (2,8)
-   ... code requiring gcc 2.8 or later ...
-   #endif
-   Note - they won't work for gcc1 or glibc1, since the _MINOR macros
-   were not defined then.  */
-# 139 "/usr/include/features.h" 3 4
-/* If _BSD_SOURCE was defined by the user, favor BSD over POSIX.  */
-
-
-
-
-
-
-
-/* If _GNU_SOURCE was defined by the user, turn on all the other features.  */
-# 169 "/usr/include/features.h" 3 4
-/* If nothing (other than _GNU_SOURCE) is defined,
-   define _BSD_SOURCE and _SVID_SOURCE.  */
-# 179 "/usr/include/features.h" 3 4
-/* This is to enable the ISO C99 extension.  Also recognize the old macro
-   which was used prior to the standard acceptance.  This macro will
-   eventually go away and the features enabled by default once the ISO C99
-   standard is widely adopted.  */
-
-
-
-
-
-/* If none of the ANSI/POSIX macros are defined, use POSIX.1 and POSIX.2
-   (and IEEE Std 1003.1b-1993 unless _XOPEN_SOURCE is defined).  */
-# 294 "/usr/include/features.h" 3 4
-/* We do support the IEC 559 math functionality, real and complex.  */
-
-
-
-/* wchar_t uses ISO 10646-1 (2nd ed., published 2000-09-15) / Unicode 3.1.  */
-
-
-/* This macro indicates that the installed library is the GNU C Library.
-   For historic reasons the value now is 6 and this will stay from now
-   on.  The use of this variable is deprecated.  Use __GLIBC__ and
-   __GLIBC_MINOR__ now (see below) when you want to test for a specific
-   GNU C library version and use the values in <gnu/lib-names.h> to get
-   the sonames of the shared libraries.  */
-
-
-
-/* Major and minor version number of the GNU C library package.  Use
-   these macros to test for features in specific releases.  */
-
-
-
-
-
-
-/* Decide whether a compiler supports the long long datatypes.  */
-
-
-
-
-
-
-
-/* This is here only because every header file already includes this one.  */
-
-
-
-
-# 1 "/usr/include/sys/cdefs.h" 1 3 4
-/* Copyright (C) 1992-2001, 2002, 2004, 2005, 2006
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-
-
-
-/* We are almost always included from features.h. */
-
-
-
-
-/* The GNU libc does not support any K&R compilers or the traditional mode
-   of ISO C compilers anymore.  Check for some of the combinations not
-   anymore supported.  */
-
-
-
-
-/* Some user header file might have defined this before.  */
-
-
-
-
-
-/* GCC can always grok prototypes.  For C++ programs we add throw()
-   to help it optimize the function calls.  But this works only with
-   gcc 2.8.x and egcs.  For gcc 3.2 and up we even mark C functions
-   as non-throwing using a function attribute since programs can use
-   the -fexceptions options for C code as well.  */
-# 72 "/usr/include/sys/cdefs.h" 3 4
-/* These two macros are not used in glibc anymore.  They are kept here
-   only because some other projects expect the macros to be defined.  */
-
-
-
-/* For these things, GCC behaves the ANSI way normally,
-   and the non-ANSI way under -traditional.  */
-
-
-
-
-/* This is not a typedef so `const __ptr_t' does the right thing.  */
-
-
-
-
-/* C++ needs to know that types and declarations are C, not C++.  */
-# 98 "/usr/include/sys/cdefs.h" 3 4
-/* The standard library needs the functions from the ISO C90 standard
-   in the std namespace.  At the same time we want to be safe for
-   future changes and we include the ISO C99 code in the non-standard
-   namespace __c99.  The C++ wrapper header take case of adding the
-   definitions to the global namespace.  */
-# 111 "/usr/include/sys/cdefs.h" 3 4
-/* For compatibility we do not add the declarations into any
-   namespace.  They will end up in the global namespace which is what
-   old code expects.  */
-# 123 "/usr/include/sys/cdefs.h" 3 4
-/* Support for bounded pointers.  */
-
-
-
-
-
-
-
-/* Fortify support.  */
-
-
-
-
-
-/* Support for flexible arrays.  */
-
-/* GCC 2.97 supports C99 flexible array members.  */
-# 155 "/usr/include/sys/cdefs.h" 3 4
-/* __asm__ ("xyz") is used throughout the headers to rename functions
-   at the assembly language level.  This is wrapped by the __REDIRECT
-   macro, in order to support compilers that can do this some other
-   way.  When compilers don't support asm-names at all, we have to do
-   preprocessor tricks instead (which don't have exactly the right
-   semantics, but it's the best we can do).
-
-   Example:
-   int __REDIRECT(setpgrp, (__pid_t pid, __pid_t pgrp), setpgid); */
-# 178 "/usr/include/sys/cdefs.h" 3 4
-/*
-#elif __SOME_OTHER_COMPILER__
-
-# define __REDIRECT(name, proto, alias) name proto; \
-	_Pragma("let " #name " = " #alias)
-*/
-
-
-/* GCC has various useful declarations that can be made with the
-   `__attribute__' syntax.  All of the ways we use this do fine if
-   they are omitted for compilers that don't understand it. */
-
-
-
-
-/* At some point during the gcc 2.96 development the `malloc' attribute
-   for functions was introduced.  We don't want to use it unconditionally
-   (although this would be possible) since it generates warnings.  */
-
-
-
-
-
-
-/* At some point during the gcc 2.96 development the `pure' attribute
-   for functions was introduced.  We don't want to use it unconditionally
-   (although this would be possible) since it generates warnings.  */
-
-
-
-
-
-
-/* At some point during the gcc 3.1 development the `used' attribute
-   for functions was introduced.  We don't want to use it unconditionally
-   (although this would be possible) since it generates warnings.  */
-# 222 "/usr/include/sys/cdefs.h" 3 4
-/* gcc allows marking deprecated functions.  */
-
-
-
-
-
-
-/* At some point during the gcc 2.8 development the `format_arg' attribute
-   for functions was introduced.  We don't want to use it unconditionally
-   (although this would be possible) since it generates warnings.
-   If several `format_arg' attributes are given for the same function, in
-   gcc-3.0 and older, all but the last one are ignored.  In newer gccs,
-   all designated arguments are considered.  */
-
-
-
-
-
-
-/* At some point during the gcc 2.97 development the `strfmon' format
-   attribute for functions was introduced.  We don't want to use it
-   unconditionally (although this would be possible) since it
-   generates warnings.  */
-
-
-
-
-
-
-
-/* The nonull function attribute allows to mark pointer parameters which
-   must not be NULL.  */
-
-
-
-
-
-
-/* If fortification mode, we warn about unused results of certain
-   function calls which can lead to problems.  */
-# 275 "/usr/include/sys/cdefs.h" 3 4
-/* Forces a function to be always inlined.  */
-
-
-
-
-
-
-/* It is possible to compile containing GCC extensions even if GCC is
-   run in pedantic mode if the uses are carefully marked using the
-   `__extension__' keyword.  But this is not generally available before
-   version 2.8.  */
-
-
-
-
-/* __restrict is known in EGCS 1.2 and above. */
-
-
-
-
-/* ISO C99 also allows to declare arrays as non-overlapping.  The syntax is
-     array_name[restrict]
-   GCC 3.1 supports this.  */
-# 313 "/usr/include/sys/cdefs.h" 3 4
-# 1 "/usr/include/bits/wordsize.h" 1 3 4
-/* Determine the wordsize from the preprocessor defines.  */
-# 314 "/usr/include/sys/cdefs.h" 2 3 4
-# 330 "/usr/include/features.h" 2 3 4
-
-
-/* If we don't have __REDIRECT, prototypes will be missing if
-   __USE_FILE_OFFSET64 but not __USE_LARGEFILE[64]. */
-
-
-
-
-
-
-
-/* Decide whether we can define 'extern inline' functions in headers.  */
-
-
-
-
-
-
-/* This is here only because every header file already includes this one.
-   Get the definitions of all the appropriate `__stub_FUNCTION' symbols.
-   <gnu/stubs.h> contains `#define __stub_FUNCTION' when FUNCTION is a stub
-   that will always return failure (and set errno to ENOSYS).  */
-
-
-# 1 "/usr/include/gnu/stubs.h" 1 3 4
-/* This file selects the right generated file of `__stub_FUNCTION' macros
-   based on the architecture being compiled for.  */
-
-
-
-# 1 "/usr/include/bits/wordsize.h" 1 3 4
-/* Determine the wordsize from the preprocessor defines.  */
-# 5 "/usr/include/gnu/stubs.h" 2 3 4
-
-
-
-
-# 1 "/usr/include/gnu/stubs-64.h" 1 3 4
-/* This file is automatically generated.
-   It defines a symbol `__stub_FUNCTION' for each function
-   in the C library which is a stub, meaning it will fail
-   every time called, usually setting errno to ENOSYS.  */
-# 10 "/usr/include/gnu/stubs.h" 2 3 4
-# 353 "/usr/include/features.h" 2 3 4
-# 41 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h" 2 3
-# 394 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 2 3
+// See  libstdc++/37522.
+# 276 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++config.h" 2 3
 
 // Pick up any CPU-specific definitions.
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/cpu_defines.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/cpu_defines.h" 1 3
 // Specific definitions for generic platforms  -*- C++ -*-
 
-// Copyright (C) 2005, 2009, 2010 Free Software Foundation, Inc.
+// Copyright (C) 2005, 2009 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -1111,14 +638,32 @@ namespace std
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/cpu_defines.h
+/** @file cpu_defines.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{iosfwd}
+ *  You should not attempt to use it directly.
  */
-# 397 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 2 3
+# 279 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++config.h" 2 3
 
 // If platform uses neither visibility nor psuedo-visibility,
 // specify empty default for namespace annotation macros.
+
+
+
+
+// Allow use of "export template." This is currently not a feature
+// that g++ supports.
+// #define _GLIBCXX_EXPORT_TEMPLATE 1
+
+// Allow use of the GNU syntax extension, "extern template." This
+// extension is fully documented in the g++ manual, but in a nutshell,
+// it inhibits all implicit instantiations and is used throughout the
+// library to avoid multiple weak definitions for required types that
+// are already explicitly instantiated in the library binary. This
+// substantially reduces the binary size of resulting executables.
+
+// Special case: _GLIBCXX_EXTERN_TEMPLATE == -1 disallows extern
+// templates only in basic_string, thus activating its debug-mode
+// checks even at -O0.
 
 
 
@@ -1130,7 +675,10 @@ namespace std
 
 
 
-
+// Assert.
+// Avoid the use of assert, because we're trying to keep the <cassert>
+// include out of the mix.
+# 339 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++config.h" 3
 // The remainder of the prewritten config is automatic; all the
 // user hooks are listed above.
 
@@ -1148,10 +696,8 @@ namespace std
 
 
 // For example, <windows.h> is known to #define min and max as macros...
-
-
-
-// End of prewritten config; the settings discovered at configure time follow.
+# 379 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++config.h" 3
+// End of prewritten config; the discovered settings follow.
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
@@ -1168,7 +714,7 @@ namespace std
 
 
 /* Define to 1 if the target assembler supports .symver directive. */
-
+/* #undef _GLIBCXX_HAVE_AS_SYMVER_DIRECTIVE */
 
 /* Define to 1 if you have the `atan2f' function. */
 
@@ -1207,55 +753,55 @@ namespace std
 
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
-
+/* #undef _GLIBCXX_HAVE_DLFCN_H */
 
 /* Define if EBADMSG exists. */
-
+/* #undef _GLIBCXX_HAVE_EBADMSG */
 
 /* Define if ECANCELED exists. */
-
+/* #undef _GLIBCXX_HAVE_ECANCELED */
 
 /* Define if EIDRM exists. */
-
+/* #undef _GLIBCXX_HAVE_EIDRM */
 
 /* Define to 1 if you have the <endian.h> header file. */
-
+/* #undef _GLIBCXX_HAVE_ENDIAN_H */
 
 /* Define if ENODATA exists. */
-
+/* #undef _GLIBCXX_HAVE_ENODATA */
 
 /* Define if ENOLINK exists. */
-
+/* #undef _GLIBCXX_HAVE_ENOLINK */
 
 /* Define if ENOSR exists. */
-
+/* #undef _GLIBCXX_HAVE_ENOSR */
 
 /* Define if ENOSTR exists. */
-
+/* #undef _GLIBCXX_HAVE_ENOSTR */
 
 /* Define if ENOTRECOVERABLE exists. */
-
+/* #undef _GLIBCXX_HAVE_ENOTRECOVERABLE */
 
 /* Define if ENOTSUP exists. */
-
+/* #undef _GLIBCXX_HAVE_ENOTSUP */
 
 /* Define if EOVERFLOW exists. */
-
+/* #undef _GLIBCXX_HAVE_EOVERFLOW */
 
 /* Define if EOWNERDEAD exists. */
-
+/* #undef _GLIBCXX_HAVE_EOWNERDEAD */
 
 /* Define if EPROTO exists. */
-
+/* #undef _GLIBCXX_HAVE_EPROTO */
 
 /* Define if ETIME exists. */
-
+/* #undef _GLIBCXX_HAVE_ETIME */
 
 /* Define if ETXTBSY exists. */
-
+/* #undef _GLIBCXX_HAVE_ETXTBSY */
 
 /* Define to 1 if you have the <execinfo.h> header file. */
-
+/* #undef _GLIBCXX_HAVE_EXECINFO_H */
 
 /* Define to 1 if you have the `expf' function. */
 
@@ -1276,10 +822,10 @@ namespace std
 
 
 /* Define to 1 if you have the `finitef' function. */
-
+/* #undef _GLIBCXX_HAVE_FINITEF */
 
 /* Define to 1 if you have the `finitel' function. */
-
+/* #undef _GLIBCXX_HAVE_FINITEL */
 
 /* Define to 1 if you have the <float.h> header file. */
 
@@ -1297,7 +843,7 @@ namespace std
 
 
 /* Define to 1 if you have the `fpclass' function. */
-/* #undef _GLIBCXX_HAVE_FPCLASS */
+
 
 /* Define to 1 if you have the <fp.h> header file. */
 /* #undef _GLIBCXX_HAVE_FP_H */
@@ -1334,37 +880,37 @@ namespace std
 
 
 /* Define if int64_t is a long. */
-
+/* #undef _GLIBCXX_HAVE_INT64_T_LONG */
 
 /* Define if int64_t is a long long. */
-/* #undef _GLIBCXX_HAVE_INT64_T_LONG_LONG */
+
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 
 
 /* Define to 1 if you have the `isinf' function. */
-
+/* #undef _GLIBCXX_HAVE_ISINF */
 
 /* Define to 1 if you have the `isinff' function. */
-
+/* #undef _GLIBCXX_HAVE_ISINFF */
 
 /* Define to 1 if you have the `isinfl' function. */
-
+/* #undef _GLIBCXX_HAVE_ISINFL */
 
 /* Define to 1 if you have the `isnan' function. */
 
 
 /* Define to 1 if you have the `isnanf' function. */
-
+/* #undef _GLIBCXX_HAVE_ISNANF */
 
 /* Define to 1 if you have the `isnanl' function. */
-
+/* #undef _GLIBCXX_HAVE_ISNANL */
 
 /* Defined if iswblank exists. */
 
 
 /* Define if LC_MESSAGES is available in <locale.h>. */
-
+/* #undef _GLIBCXX_HAVE_LC_MESSAGES */
 
 /* Define to 1 if you have the `ldexpf' function. */
 
@@ -1373,25 +919,25 @@ namespace std
 
 
 /* Define to 1 if you have the <libintl.h> header file. */
-
-
-/* Only used in build directory testsuite_hooks.h. */
-
+/* #undef _GLIBCXX_HAVE_LIBINTL_H */
 
 /* Only used in build directory testsuite_hooks.h. */
-
-
-/* Only used in build directory testsuite_hooks.h. */
-
+/* #undef _GLIBCXX_HAVE_LIMIT_AS */
 
 /* Only used in build directory testsuite_hooks.h. */
-
+/* #undef _GLIBCXX_HAVE_LIMIT_DATA */
 
 /* Only used in build directory testsuite_hooks.h. */
+/* #undef _GLIBCXX_HAVE_LIMIT_FSIZE */
 
+/* Only used in build directory testsuite_hooks.h. */
+/* #undef _GLIBCXX_HAVE_LIMIT_RSS */
+
+/* Only used in build directory testsuite_hooks.h. */
+/* #undef _GLIBCXX_HAVE_LIMIT_VMEM */
 
 /* Define if futex syscall is available. */
-
+/* #undef _GLIBCXX_HAVE_LINUX_FUTEX */
 
 /* Define to 1 if you have the <locale.h> header file. */
 
@@ -1433,7 +979,7 @@ namespace std
 /* #undef _GLIBCXX_HAVE_NAN_H */
 
 /* Define if poll is available in <poll.h>. */
-
+/* #undef _GLIBCXX_HAVE_POLL */
 
 /* Define to 1 if you have the `powf' function. */
 
@@ -1445,7 +991,7 @@ namespace std
 /* #undef _GLIBCXX_HAVE_QFPCLASS */
 
 /* Define to 1 if you have the `setenv' function. */
-
+/* #undef _GLIBCXX_HAVE_SETENV */
 
 /* Define to 1 if you have the `sincos' function. */
 
@@ -1487,7 +1033,7 @@ namespace std
 /* #undef _GLIBCXX_HAVE_STRERROR_L */
 
 /* Define if strerror_r is available in <string.h>. */
-
+/* #undef _GLIBCXX_HAVE_STRERROR_R */
 
 /* Define to 1 if you have the <strings.h> header file. */
 
@@ -1502,20 +1048,16 @@ namespace std
 
 
 /* Define if strxfrm_l is available in <string.h>. */
-
-
-/* Define to 1 if the target runtime linker supports binding the same symbol
-   to different versions. */
-
+/* #undef _GLIBCXX_HAVE_STRXFRM_L */
 
 /* Define to 1 if you have the <sys/filio.h> header file. */
 /* #undef _GLIBCXX_HAVE_SYS_FILIO_H */
 
 /* Define to 1 if you have the <sys/ioctl.h> header file. */
-
+/* #undef _GLIBCXX_HAVE_SYS_IOCTL_H */
 
 /* Define to 1 if you have the <sys/ipc.h> header file. */
-
+/* #undef _GLIBCXX_HAVE_SYS_IPC_H */
 
 /* Define to 1 if you have the <sys/isa_defs.h> header file. */
 /* #undef _GLIBCXX_HAVE_SYS_ISA_DEFS_H */
@@ -1527,10 +1069,10 @@ namespace std
 
 
 /* Define to 1 if you have the <sys/resource.h> header file. */
-
+/* #undef _GLIBCXX_HAVE_SYS_RESOURCE_H */
 
 /* Define to 1 if you have the <sys/sem.h> header file. */
-
+/* #undef _GLIBCXX_HAVE_SYS_SEM_H */
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
 
@@ -1542,7 +1084,7 @@ namespace std
 
 
 /* Define to 1 if you have the <sys/uio.h> header file. */
-
+/* #undef _GLIBCXX_HAVE_SYS_UIO_H */
 
 /* Define if S_IFREG is available in <sys/stat.h>. */
 /* #undef _GLIBCXX_HAVE_S_IFREG */
@@ -1590,7 +1132,7 @@ namespace std
 
 
 /* Define if writev is available in <sys/uio.h>. */
-
+/* #undef _GLIBCXX_HAVE_WRITEV */
 
 /* Define to 1 if you have the `_acosf' function. */
 /* #undef _GLIBCXX_HAVE__ACOSF */
@@ -1650,7 +1192,7 @@ namespace std
 /* #undef _GLIBCXX_HAVE__FINITE */
 
 /* Define to 1 if you have the `_finitef' function. */
-/* #undef _GLIBCXX_HAVE__FINITEF */
+
 
 /* Define to 1 if you have the `_finitel' function. */
 /* #undef _GLIBCXX_HAVE__FINITEL */
@@ -1698,7 +1240,7 @@ namespace std
 /* #undef _GLIBCXX_HAVE__ISNAN */
 
 /* Define to 1 if you have the `_isnanf' function. */
-/* #undef _GLIBCXX_HAVE__ISNANF */
+
 
 /* Define to 1 if you have the `_isnanl' function. */
 /* #undef _GLIBCXX_HAVE__ISNANL */
@@ -1845,10 +1387,10 @@ namespace std
 /* #undef _GLIBCXX_CONCEPT_CHECKS */
 
 /* Define if a fully dynamic basic_string is wanted. */
-/* #undef _GLIBCXX_FULLY_DYNAMIC_STRING */
+
 
 /* Define if gthreads library is available. */
-
+/* #undef _GLIBCXX_HAS_GTHREADS */
 
 /* Define to 1 if a full hosted library is built, or 0 if freestanding. */
 
@@ -1859,21 +1401,15 @@ namespace std
 /* #undef _GLIBCXX_PTRDIFF_T_IS_INT */
 
 /* Define if using setrlimit to set resource limits during "make check" */
-
+/* #undef _GLIBCXX_RES_LIMITS */
 
 /* Define if size_t is unsigned int. */
 /* #undef _GLIBCXX_SIZE_T_IS_UINT */
 
 /* Define if the compiler is configured for setjmp/longjmp exceptions. */
-/* #undef _GLIBCXX_SJLJ_EXCEPTIONS */
-
-/* Define to the value of the EOF integer constant. */
 
 
-/* Define to the value of the SEEK_CUR integer constant. */
-
-
-/* Define to the value of the SEEK_END integer constant. */
+/* Define if EOF == -1, SEEK_CUR == 1, SEEK_END == 2. */
 
 
 /* Define to use symbol versioning in the shared library. */
@@ -1887,9 +1423,6 @@ namespace std
 
 /* Define to use GNU namespace versioning in the shared library. */
 /* #undef _GLIBCXX_SYMVER_GNU_NAMESPACE */
-
-/* Define to use Sun versioning in the shared library. */
-/* #undef _GLIBCXX_SYMVER_SUN */
 
 /* Define if C99 functions or macros from <wchar.h>, <math.h>, <complex.h>,
    <stdio.h>, and <stdlib.h> can be used or exposed. */
@@ -1941,7 +1474,7 @@ namespace std
 
 /* Define if ISO/IEC TR 24733 decimal floating point types are supported on
    this host. */
-
+/* #undef _GLIBCXX_USE_DECIMAL_FLOAT */
 
 /* Defined if gettimeofday is available. */
 
@@ -1956,7 +1489,7 @@ namespace std
 /* #undef _GLIBCXX_USE_NANOSLEEP */
 
 /* Define if NLS translations are to be used. */
-
+/* #undef _GLIBCXX_USE_NLS */
 
 /* Define if /dev/random and /dev/urandom are available for the random_device
    of TR1 (Chapter 5.1). */
@@ -1966,12 +1499,12 @@ namespace std
 /* #undef _GLIBCXX_USE_SCHED_YIELD */
 
 /* Define if code specialized for wchar_t should be used. */
-# 39 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 1 3
+# 39 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iostream" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ostream" 1 3
 // Output streams -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
+// 2006, 2007, 2008, 2009, 2010
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -1994,20 +1527,20 @@ namespace std
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file include/ostream
+/** @file ostream
  *  This is a Standard C++ Library header.
  */
 
 //
 // ISO C++ 14882: 27.6.2  Output streams
 //
-# 38 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 38 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ostream" 3
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ios" 1 3
 // Iostreams base classes -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004,
-// 2005, 2006, 2007, 2009, 2010 Free Software Foundation, Inc.
+// 2005, 2006, 2007, 2009 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -2029,16 +1562,16 @@ namespace std
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file include/ios
+/** @file ios
  *  This is a Standard C++ Library header.
  */
 
 //
 // ISO C++ 14882: 27.4  Iostreams base classes
 //
-# 37 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 3
+# 37 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ios" 3
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iosfwd" 1 3
 // Forwarding declarations -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
@@ -2065,17 +1598,17 @@ namespace std
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file include/iosfwd
+/** @file iosfwd
  *  This is a Standard C++ Library header.
  */
 
 //
 // ISO C++ 14882: 27.2  Forward declarations
 //
-# 38 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 3
+# 38 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iosfwd" 3
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stringfwd.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stringfwd.h" 1 3
 // String support -*- C++ -*-
 
 // Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
@@ -2102,21 +1635,19 @@ namespace std
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/stringfwd.h
+/** @file stringfwd.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{string}
+ *  You should not attempt to use it directly.
  */
 
 //
 // ISO C++ 14882: 21 Strings library
 //
-# 39 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stringfwd.h" 3
+# 39 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stringfwd.h" 3
 
 
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   template<typename _Alloc>
     class allocator;
@@ -2136,23 +1667,22 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   template<> struct char_traits<char>;
 
-  typedef basic_string<char> string; /// A string of @c char
+  typedef basic_string<char> string; ///< A string of @c char
 
 
   template<> struct char_traits<wchar_t>;
 
-  typedef basic_string<wchar_t> wstring; /// A string of @c wchar_t
-# 82 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stringfwd.h" 3
+  typedef basic_string<wchar_t> wstring; ///< A string of @c wchar_t
+# 80 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stringfwd.h" 3
  /** @}  */
 
-
-} // namespace
-# 41 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 1 3
+}
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iosfwd" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/postypes.h" 1 3
 // Position types -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010
+// 2006, 2007, 2008, 2009
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -2175,18 +1705,18 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/postypes.h
+/** @file postypes.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{iosfwd}
+ *  You should not attempt to use it directly.
  */
 
 //
 // ISO C++ 14882: 27.4.1 - Types
 // ISO C++ 14882: 27.4.3 - Template class fpos
 //
-# 40 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
+# 40 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/postypes.h" 3
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cwchar" 1 3
 // -*- C++ -*- forwarding header.
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
@@ -2226,136 +1756,53 @@ namespace std __attribute__ ((__visibility__ ("default")))
 //
 // ISO C++ 14882: 21.4
 //
-# 41 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cwchar" 3
 
 
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 1 3
+// -*- C++ -*- forwarding header.
 
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
 
-# 1 "/usr/include/wchar.h" 1 3 4
-/* Copyright (C) 1995-2004,2005,2006 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
 
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
 
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
 
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/*
- *      ISO C99 Standard: 7.24
- *	Extended multibyte and wide character utilities	<wchar.h>
- */
-# 32 "/usr/include/wchar.h" 3 4
-/* Get FILE definition.  */
-
-
-
-
-
-
-# 1 "/usr/include/stdio.h" 1 3 4
-/* Define ISO C stdio on top of C++ iostreams.
-   Copyright (C) 1991,1994-2004,2005,2006 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/*
- *	ISO C99 Standard: 7.19 Input/output	<stdio.h>
- */
-# 45 "/usr/include/stdio.h" 3 4
-/* The opaque type of streams.  This is the definition used elsewhere.  */
-typedef struct _IO_FILE FILE;
-# 61 "/usr/include/stdio.h" 3 4
-/* The opaque type of streams.  This is the definition used elsewhere.  */
-typedef struct _IO_FILE __FILE;
-# 38 "/usr/include/wchar.h" 2 3 4
-/* Get va_list definition.  */
-
-
-
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdarg.h" 1 3 4
-/*===---- stdarg.h - Variable argument handling ----------------------------===
+/** @file cstddef
+ *  This is a Standard C++ Library file.  You should @c \#include this file
+ *  in your programs, rather than any of the @a *.h implementation files.
  *
- * Copyright (c) 2008 Eli Friedman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- *===-----------------------------------------------------------------------===
+ *  This is the C++ version of the Standard C Library header @c stddef.h,
+ *  and its contents are (mostly) the same as that header, but are all
+ *  contained in the namespace @c std (except for names which are defined
+ *  as macros in C).
  */
 
+//
+// ISO C++ 14882: 18.1  Types
+//
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 3
 
 
-
-
-typedef __builtin_va_list va_list;
-
-
-
-
-
-
-/* GCC always defines __va_copy, but does not define va_copy unless in c99 mode
- * or -ansi is not specified, since it was not part of C90.
- */
-
-
-
-
-
-
-/* Hack required to make standard headers work, at least on Ubuntu */
-
-typedef __builtin_va_list __gnuc_va_list;
-# 41 "/usr/include/wchar.h" 2 3 4
-
-/* Get size_t, wchar_t, wint_t and NULL from <stddef.h>.  */
-
-
-
-
-
-
-
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
 /*===---- stddef.h - Basic type definitions --------------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -2391,752 +1838,856 @@ typedef __typeof__(((int*)0)-((int*)0)) ptrdiff_t;
 
 
 typedef __typeof__(sizeof(int)) size_t;
-# 56 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+# 56 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 3 4
 /* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
 __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
-
-
-
-typedef unsigned int wint_t;
-# 49 "/usr/include/wchar.h" 2 3 4
-
-# 1 "/usr/include/bits/wchar.h" 1 3 4
-/* wchar_t type related definitions.
-   Copyright (C) 2000 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-# 51 "/usr/include/wchar.h" 2 3 4
-
-/* We try to get wint_t from <stddef.h>, but not all GCC versions define it
-   there.  So define it ourselves if it remains undefined.  */
-# 62 "/usr/include/wchar.h" 3 4
-/* Work around problems with the <stddef.h> file which doesn't put
-   wint_t in the std namespace.  */
-# 75 "/usr/include/wchar.h" 3 4
-/* Conversion state information.  */
-typedef struct
-{
-  int __count;
-  union
-  {
-    wint_t __wch;
-    char __wchb[4];
-  } __value; /* Value so far.  */
-} __mbstate_t;
+# 44 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 2 3
 
 
 
 
-/* The rest of the file is only used if used if __need_mbstate_t is not
-   defined.  */
+namespace std {
+
+  using ::ptrdiff_t;
+  using ::size_t;
+
+}
+# 44 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cwchar" 2 3
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
+ */
 
 
 
-/* Public type.  */
-typedef __mbstate_t mbstate_t;
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
+ */
 
 
 
 
 
 
-/* These constants might also be defined in <inttypes.h>.  */
-# 111 "/usr/include/wchar.h" 3 4
-/* For XPG4 compliance we have to define the stuff from <wctype.h> here
-   as well.  */
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/_mingw_mac.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
+ */
+# 18 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/_mingw_mac.h" 3
+/* mingw.org's version macros: these make gcc to define
+   MINGW32_SUPPORTS_MT_EH and to use the _CRT_MT global
+   and the __mingwthr_key_dtor() function from the MinGW
+   CRT in its private gthr-win32.h header. */
 
 
+
+
+/* MS does not prefix symbols by underscores for 64-bit.  */
+
+/* As we have to support older gcc version, which are using underscores
+   as symbol prefix for x64, we have to check here for the user label
+   prefix defined by gcc.  */
+# 62 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/_mingw_mac.h" 3
+/* Use alias for msvcr80 export of get/set_output_format.  */
+
+
+
+
+/* Set VC specific compiler target macros.  */
+# 10 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
+
+
+/* C/C++ specific language defines.  */
+# 32 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+/* Note the extern. This is needed to work around GCC's
+limitations in handling dllimport attribute.  */
+# 147 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+/* Attribute `nonnull' was valid as of gcc 3.3.  We don't use GCC's
+   variadiac macro facility, because variadic macros cause syntax
+   errors with  --traditional-cpp.  */
+# 225 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+/*  High byte is the major version, low byte is the minor. */
+# 247 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+/*typedef int __int128 __attribute__ ((__mode__ (TI)));*/
+# 277 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
+ */
+# 14 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
+ */
+# 674 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/sdks/_mingw_directx.h" 1 3
+# 674 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/sdks/_mingw_ddk.h" 1 3
+# 675 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
+# 13 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 2 3
+
+
+#pragma pack(push,_CRT_PACKING)
+
+
+extern "C" {
+
+
+
+
+
+  typedef __builtin_va_list __gnuc_va_list;
+
+
+
+
+
+
+  typedef __gnuc_va_list va_list;
+# 46 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
+/* Use GCC builtins */
+# 99 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
+}
+
+
+#pragma pack(pop)
+# 277 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
+
+
+#pragma pack(push,_CRT_PACKING)
+# 316 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+/* We have to define _DLL for gcc based mingw version. This define is set
+   by VC, when DLL-based runtime is used. So, gcc based runtime just have
+   DLL-base runtime, therefore this define has to be set.
+   As our headers are possibly used by windows compiler having a static
+   C-runtime, we make this definition gnu compiler specific here.  */
+# 370 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+__extension__ typedef unsigned long long size_t;
+# 380 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+__extension__ typedef long long ssize_t;
+# 392 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+__extension__ typedef long long intptr_t;
+# 405 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+__extension__ typedef unsigned long long uintptr_t;
+# 418 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+__extension__ typedef long long ptrdiff_t;
+# 436 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+typedef unsigned short wint_t;
+typedef unsigned short wctype_t;
+# 456 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+typedef int errno_t;
+
+
+
+
+typedef long __time32_t;
+
+
+
+
+__extension__ typedef long long __time64_t;
+
+
+
+
+
+
+
+typedef __time64_t time_t;
+# 518 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+/* _dowildcard is an int that controls the globbing of the command line.
+ * The MinGW32 (mingw.org) runtime calls it _CRT_glob, so we are adding
+ * a compatibility definition here:  you can use either of _CRT_glob or
+ * _dowildcard .
+ * If _dowildcard is non-zero, the command line will be globbed:  *.*
+ * will be expanded to be all files in the startup directory.
+ * In the mingw-w64 library a _dowildcard variable is defined as being
+ * 0, therefore command line globbing is DISABLED by default. To turn it
+ * on and to leave wildcard command line processing MS's globbing code,
+ * include a line in one of your source modules defining _dowildcard and
+ * setting it to -1, like so:
+ * int _dowildcard = -1;
+ */
+# 605 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+/* MSVC-isms: */
+
+struct threadlocaleinfostruct;
+struct threadmbcinfostruct;
+typedef struct threadlocaleinfostruct *pthreadlocinfo;
+typedef struct threadmbcinfostruct *pthreadmbcinfo;
+struct __lc_time_data;
+
+typedef struct localeinfo_struct {
+  pthreadlocinfo locinfo;
+  pthreadmbcinfo mbcinfo;
+} _locale_tstruct,*_locale_t;
+
+
+
+typedef struct tagLC_ID {
+  unsigned short wLanguage;
+  unsigned short wCountry;
+  unsigned short wCodePage;
+} LC_ID,*LPLC_ID;
+
+
+
+
+typedef struct threadlocaleinfostruct {
+  int refcount;
+  unsigned int lc_codepage;
+  unsigned int lc_collate_cp;
+  unsigned long lc_handle[6];
+  LC_ID lc_id[6];
+  struct {
+    char *locale;
+    wchar_t *wlocale;
+    int *refcount;
+    int *wrefcount;
+  } lc_category[6];
+  int lc_clike;
+  int mb_cur_max;
+  int *lconv_intl_refcount;
+  int *lconv_num_refcount;
+  int *lconv_mon_refcount;
+  struct lconv *lconv;
+  int *ctype1_refcount;
+  unsigned short *ctype1;
+  const unsigned short *pctype;
+  const unsigned char *pclmap;
+  const unsigned char *pcumap;
+  struct __lc_time_data *lc_time_curr;
+} threadlocinfo;
 
 
 
 extern "C" {
 
 
-/* This incomplete type is defined in <time.h> but needed here because
-   of `wcsftime'.  */
-struct tm;
-/* XXX We have to clean this up at some point.  Since tm is in the std
-   namespace but wcsftime is in __c99 the type wouldn't be found
-   without inserting it in the global namespace.  */
+/* mingw-w64 specific functions: */
+const char *__mingw_get_crt_info (void);
 
 
-
-
-
-/* Copy SRC to DEST.  */
-extern wchar_t *wcscpy (wchar_t *__restrict __dest,
-   __const wchar_t *__restrict __src) throw ();
-/* Copy no more than N wide-characters of SRC to DEST.  */
-extern wchar_t *wcsncpy (wchar_t *__restrict __dest,
-    __const wchar_t *__restrict __src, size_t __n)
-     throw ();
-
-/* Append SRC onto DEST.  */
-extern wchar_t *wcscat (wchar_t *__restrict __dest,
-   __const wchar_t *__restrict __src) throw ();
-/* Append no more than N wide-characters of SRC onto DEST.  */
-extern wchar_t *wcsncat (wchar_t *__restrict __dest,
-    __const wchar_t *__restrict __src, size_t __n)
-     throw ();
-
-/* Compare S1 and S2.  */
-extern int wcscmp (__const wchar_t *__s1, __const wchar_t *__s2)
-     throw () __attribute__ ((__pure__));
-/* Compare N wide-characters of S1 and S2.  */
-extern int wcsncmp (__const wchar_t *__s1, __const wchar_t *__s2, size_t __n)
-     throw () __attribute__ ((__pure__));
-
-
-
-/* Compare S1 and S2, ignoring case.  */
-extern int wcscasecmp (__const wchar_t *__s1, __const wchar_t *__s2) throw ();
-
-/* Compare no more than N chars of S1 and S2, ignoring case.  */
-extern int wcsncasecmp (__const wchar_t *__s1, __const wchar_t *__s2,
-   size_t __n) throw ();
-
-/* Similar to the two functions above but take the information from
-   the provided locale and not the global locale.  */
-
-
-# 1 "/usr/include/xlocale.h" 1 3 4
-/* Definition of locale datatype.
-   Copyright (C) 1997,2000,02 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-   Contributed by Ulrich Drepper <drepper@cygnus.com>, 1997.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-
-
-
-/* Structure for reentrant locale using functions.  This is an
-   (almost) opaque type for the user level programs.  The file and
-   this data structure is not standardized.  Don't rely on it.  It can
-   go away without warning.  */
-typedef struct __locale_struct
-{
-  /* Note: LC_ALL is not a valid index into this array.  */
-  struct locale_data *__locales[13]; /* 13 = __LC_LAST. */
-
-  /* To increase the speed of this solution we add some special members.  */
-  const unsigned short int *__ctype_b;
-  const int *__ctype_tolower;
-  const int *__ctype_toupper;
-
-  /* Note: LC_ALL is not a valid index into this array.  */
-  const char *__names[13];
-
-public :
-inline __attribute__((always_inline)) __locale_struct() { _ssdm_SpecConstant(__names); }
-# 40 "/usr/include/xlocale.h"
-} *__locale_t;
-# 167 "/usr/include/wchar.h" 2 3 4
-
-extern int wcscasecmp_l (__const wchar_t *__s1, __const wchar_t *__s2,
-    __locale_t __loc) throw ();
-
-extern int wcsncasecmp_l (__const wchar_t *__s1, __const wchar_t *__s2,
-     size_t __n, __locale_t __loc) throw ();
-
-
-
-/* Compare S1 and S2, both interpreted as appropriate to the
-   LC_COLLATE category of the current locale.  */
-extern int wcscoll (__const wchar_t *__s1, __const wchar_t *__s2) throw ();
-/* Transform S2 into array pointed to by S1 such that if wcscmp is
-   applied to two transformed strings the result is the as applying
-   `wcscoll' to the original strings.  */
-extern size_t wcsxfrm (wchar_t *__restrict __s1,
-         __const wchar_t *__restrict __s2, size_t __n) throw ();
-
-
-
-/* Similar to the two functions above but take the information from
-   the provided locale and not the global locale.  */
-
-/* Compare S1 and S2, both interpreted as appropriate to the
-   LC_COLLATE category of the given locale.  */
-extern int wcscoll_l (__const wchar_t *__s1, __const wchar_t *__s2,
-        __locale_t __loc) throw ();
-
-/* Transform S2 into array pointed to by S1 such that if wcscmp is
-   applied to two transformed strings the result is the as applying
-   `wcscoll' to the original strings.  */
-extern size_t wcsxfrm_l (wchar_t *__s1, __const wchar_t *__s2,
-    size_t __n, __locale_t __loc) throw ();
-
-/* Duplicate S, returning an identical malloc'd string.  */
-extern wchar_t *wcsdup (__const wchar_t *__s) throw () __attribute__ ((__malloc__));
-
-
-
-/* Find the first occurrence of WC in WCS.  */
-extern wchar_t *wcschr (__const wchar_t *__wcs, wchar_t __wc)
-     throw () __attribute__ ((__pure__));
-/* Find the last occurrence of WC in WCS.  */
-extern wchar_t *wcsrchr (__const wchar_t *__wcs, wchar_t __wc)
-     throw () __attribute__ ((__pure__));
-
-
-
-/* This function is similar to `wcschr'.  But it returns a pointer to
-   the closing NUL wide character in case C is not found in S.  */
-extern wchar_t *wcschrnul (__const wchar_t *__s, wchar_t __wc)
-     throw () __attribute__ ((__pure__));
-
-
-
-/* Return the length of the initial segmet of WCS which
-   consists entirely of wide characters not in REJECT.  */
-extern size_t wcscspn (__const wchar_t *__wcs, __const wchar_t *__reject)
-     throw () __attribute__ ((__pure__));
-/* Return the length of the initial segmet of WCS which
-   consists entirely of wide characters in  ACCEPT.  */
-extern size_t wcsspn (__const wchar_t *__wcs, __const wchar_t *__accept)
-     throw () __attribute__ ((__pure__));
-/* Find the first occurrence in WCS of any character in ACCEPT.  */
-extern wchar_t *wcspbrk (__const wchar_t *__wcs, __const wchar_t *__accept)
-     throw () __attribute__ ((__pure__));
-/* Find the first occurrence of NEEDLE in HAYSTACK.  */
-extern wchar_t *wcsstr (__const wchar_t *__haystack, __const wchar_t *__needle)
-     throw () __attribute__ ((__pure__));
-
-/* Divide WCS into tokens separated by characters in DELIM.  */
-extern wchar_t *wcstok (wchar_t *__restrict __s,
-   __const wchar_t *__restrict __delim,
-   wchar_t **__restrict __ptr) throw ();
-
-/* Return the number of wide characters in S.  */
-extern size_t wcslen (__const wchar_t *__s) throw () __attribute__ ((__pure__));
-
-
-
-/* Another name for `wcsstr' from XPG4.  */
-extern wchar_t *wcswcs (__const wchar_t *__haystack, __const wchar_t *__needle)
-     throw () __attribute__ ((__pure__));
-
-
-
-/* Return the number of wide characters in S, but at most MAXLEN.  */
-extern size_t wcsnlen (__const wchar_t *__s, size_t __maxlen)
-     throw () __attribute__ ((__pure__));
-
-
-
-
-/* Search N wide characters of S for C.  */
-extern wchar_t *wmemchr (__const wchar_t *__s, wchar_t __c, size_t __n)
-     throw () __attribute__ ((__pure__));
-
-/* Compare N wide characters of S1 and S2.  */
-extern int wmemcmp (__const wchar_t *__restrict __s1,
-      __const wchar_t *__restrict __s2, size_t __n)
-     throw () __attribute__ ((__pure__));
-
-/* Copy N wide characters of SRC to DEST.  */
-extern wchar_t *wmemcpy (wchar_t *__restrict __s1,
-    __const wchar_t *__restrict __s2, size_t __n) throw ();
-
-/* Copy N wide characters of SRC to DEST, guaranteeing
-   correct behavior for overlapping strings.  */
-extern wchar_t *wmemmove (wchar_t *__s1, __const wchar_t *__s2, size_t __n)
-     throw ();
-
-/* Set N wide characters of S to C.  */
-extern wchar_t *wmemset (wchar_t *__s, wchar_t __c, size_t __n) throw ();
-
-
-
-/* Copy N wide characters of SRC to DEST and return pointer to following
-   wide character.  */
-extern wchar_t *wmempcpy (wchar_t *__restrict __s1,
-     __const wchar_t *__restrict __s2, size_t __n)
-     throw ();
-
-
-
-
-/* Determine whether C constitutes a valid (one-byte) multibyte
-   character.  */
-extern wint_t btowc (int __c) throw ();
-
-/* Determine whether C corresponds to a member of the extended
-   character set whose multibyte representation is a single byte.  */
-extern int wctob (wint_t __c) throw ();
-
-/* Determine whether PS points to an object representing the initial
-   state.  */
-extern int mbsinit (__const mbstate_t *__ps) throw () __attribute__ ((__pure__));
-
-/* Write wide character representation of multibyte character pointed
-   to by S to PWC.  */
-extern size_t mbrtowc (wchar_t *__restrict __pwc,
-         __const char *__restrict __s, size_t __n,
-         mbstate_t *__p) throw ();
-
-/* Write multibyte representation of wide character WC to S.  */
-extern size_t wcrtomb (char *__restrict __s, wchar_t __wc,
-         mbstate_t *__restrict __ps) throw ();
-
-/* Return number of bytes in multibyte character pointed to by S.  */
-extern size_t __mbrlen (__const char *__restrict __s, size_t __n,
-   mbstate_t *__restrict __ps) throw ();
-extern size_t mbrlen (__const char *__restrict __s, size_t __n,
-        mbstate_t *__restrict __ps) throw ();
-# 349 "/usr/include/wchar.h" 3 4
-/* Write wide character representation of multibyte character string
-   SRC to DST.  */
-extern size_t mbsrtowcs (wchar_t *__restrict __dst,
-    __const char **__restrict __src, size_t __len,
-    mbstate_t *__restrict __ps) throw ();
-
-/* Write multibyte character representation of wide character string
-   SRC to DST.  */
-extern size_t wcsrtombs (char *__restrict __dst,
-    __const wchar_t **__restrict __src, size_t __len,
-    mbstate_t *__restrict __ps) throw ();
-
-
-
-
-/* Write wide character representation of at most NMC bytes of the
-   multibyte character string SRC to DST.  */
-extern size_t mbsnrtowcs (wchar_t *__restrict __dst,
-     __const char **__restrict __src, size_t __nmc,
-     size_t __len, mbstate_t *__restrict __ps) throw ();
-
-/* Write multibyte character representation of at most NWC characters
-   from the wide character string SRC to DST.  */
-extern size_t wcsnrtombs (char *__restrict __dst,
-     __const wchar_t **__restrict __src,
-     size_t __nwc, size_t __len,
-     mbstate_t *__restrict __ps) throw ();
-
-
-
-/* The following functions are extensions found in X/Open CAE.  */
-
-/* Determine number of column positions required for C.  */
-extern int wcwidth (wchar_t __c) throw ();
-
-/* Determine number of column positions required for first N wide
-   characters (or fewer if S ends before this) in S.  */
-extern int wcswidth (__const wchar_t *__s, size_t __n) throw ();
-
-
-
-
-/* Convert initial portion of the wide string NPTR to `double'
-   representation.  */
-extern double wcstod (__const wchar_t *__restrict __nptr,
-        wchar_t **__restrict __endptr) throw ();
-
-
-/* Likewise for `float' and `long double' sizes of floating-point numbers.  */
-extern float wcstof (__const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr) throw ();
-extern long double wcstold (__const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr) throw ();
-
-
-
-/* Convert initial portion of wide string NPTR to `long int'
-   representation.  */
-extern long int wcstol (__const wchar_t *__restrict __nptr,
-   wchar_t **__restrict __endptr, int __base) throw ();
-
-/* Convert initial portion of wide string NPTR to `unsigned long int'
-   representation.  */
-extern unsigned long int wcstoul (__const wchar_t *__restrict __nptr,
-      wchar_t **__restrict __endptr, int __base)
-     throw ();
-
-
-/* Convert initial portion of wide string NPTR to `long int'
-   representation.  */
-__extension__
-extern long long int wcstoll (__const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr, int __base)
-     throw ();
-
-/* Convert initial portion of wide string NPTR to `unsigned long long int'
-   representation.  */
-__extension__
-extern unsigned long long int wcstoull (__const wchar_t *__restrict __nptr,
-     wchar_t **__restrict __endptr,
-     int __base) throw ();
-
-
-
-
-/* Convert initial portion of wide string NPTR to `long int'
-   representation.  */
-__extension__
-extern long long int wcstoq (__const wchar_t *__restrict __nptr,
-        wchar_t **__restrict __endptr, int __base)
-     throw ();
-
-/* Convert initial portion of wide string NPTR to `unsigned long long int'
-   representation.  */
-__extension__
-extern unsigned long long int wcstouq (__const wchar_t *__restrict __nptr,
-           wchar_t **__restrict __endptr,
-           int __base) throw ();
-
-
-
-/* The concept of one static locale per category is not very well
-   thought out.  Many applications will need to process its data using
-   information from several different locales.  Another application is
-   the implementation of the internationalization handling in the
-   upcoming ISO C++ standard library.  To support this another set of
-   the functions using locale data exist which have an additional
-   argument.
-
-   Attention: all these functions are *not* standardized in any form.
-   This is a proof-of-concept implementation.  */
-
-/* Structure for reentrant locale using functions.  This is an
-   (almost) opaque type for the user level programs.  */
-
-
-/* Special versions of the functions above which take the locale to
-   use as an additional parameter.  */
-extern long int wcstol_l (__const wchar_t *__restrict __nptr,
-     wchar_t **__restrict __endptr, int __base,
-     __locale_t __loc) throw ();
-
-extern unsigned long int wcstoul_l (__const wchar_t *__restrict __nptr,
-        wchar_t **__restrict __endptr,
-        int __base, __locale_t __loc) throw ();
-
-__extension__
-extern long long int wcstoll_l (__const wchar_t *__restrict __nptr,
-    wchar_t **__restrict __endptr,
-    int __base, __locale_t __loc) throw ();
-
-__extension__
-extern unsigned long long int wcstoull_l (__const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr,
-       int __base, __locale_t __loc)
-     throw ();
-
-extern double wcstod_l (__const wchar_t *__restrict __nptr,
-   wchar_t **__restrict __endptr, __locale_t __loc)
-     throw ();
-
-extern float wcstof_l (__const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr, __locale_t __loc)
-     throw ();
-
-extern long double wcstold_l (__const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr,
-         __locale_t __loc) throw ();
-
-
-
-/* The internal entry points for `wcstoX' take an extra flag argument
-   saying whether or not to parse locale-dependent number grouping.  */
-extern double __wcstod_internal (__const wchar_t *__restrict __nptr,
-     wchar_t **__restrict __endptr, int __group)
-     throw ();
-extern float __wcstof_internal (__const wchar_t *__restrict __nptr,
-    wchar_t **__restrict __endptr, int __group)
-     throw ();
-extern long double __wcstold_internal (__const wchar_t *__restrict __nptr,
-           wchar_t **__restrict __endptr,
-           int __group) throw ();
-# 591 "/usr/include/wchar.h" 3 4
-/* Copy SRC to DEST, returning the address of the terminating L'\0' in
-   DEST.  */
-extern wchar_t *wcpcpy (wchar_t *__dest, __const wchar_t *__src) throw ();
-
-/* Copy no more than N characters of SRC to DEST, returning the address of
-   the last character written into DEST.  */
-extern wchar_t *wcpncpy (wchar_t *__dest, __const wchar_t *__src, size_t __n)
-     throw ();
-
-
-
-/* Wide character I/O functions.  */
-
-
-/* Like OPEN_MEMSTREAM, but the stream is wide oriented and produces
-   a wide character string.  */
-extern __FILE *open_wmemstream (wchar_t **__bufloc, size_t *__sizeloc) throw ();
-
-
-
-
-
-/* Select orientation for stream.  */
-extern int fwide (__FILE *__fp, int __mode) throw ();
-
-
-/* Write formatted output to STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fwprintf (__FILE *__restrict __stream,
-       __const wchar_t *__restrict __format, ...)
-     /* __attribute__ ((__format__ (__wprintf__, 2, 3))) */;
-/* Write formatted output to stdout.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int wprintf (__const wchar_t *__restrict __format, ...)
-     /* __attribute__ ((__format__ (__wprintf__, 1, 2))) */;
-/* Write formatted output of at most N characters to S.  */
-extern int swprintf (wchar_t *__restrict __s, size_t __n,
-       __const wchar_t *__restrict __format, ...)
-     throw () /* __attribute__ ((__format__ (__wprintf__, 3, 4))) */;
-
-/* Write formatted output to S from argument list ARG.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int vfwprintf (__FILE *__restrict __s,
-        __const wchar_t *__restrict __format,
-        __gnuc_va_list __arg)
-     /* __attribute__ ((__format__ (__wprintf__, 2, 0))) */;
-/* Write formatted output to stdout from argument list ARG.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int vwprintf (__const wchar_t *__restrict __format,
-       __gnuc_va_list __arg)
-     /* __attribute__ ((__format__ (__wprintf__, 1, 0))) */;
-/* Write formatted output of at most N character to S from argument
-   list ARG.  */
-extern int vswprintf (wchar_t *__restrict __s, size_t __n,
-        __const wchar_t *__restrict __format,
-        __gnuc_va_list __arg)
-     throw () /* __attribute__ ((__format__ (__wprintf__, 3, 0))) */;
-
-
-/* Read formatted input from STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fwscanf (__FILE *__restrict __stream,
-      __const wchar_t *__restrict __format, ...)
-     /* __attribute__ ((__format__ (__wscanf__, 2, 3))) */;
-/* Read formatted input from stdin.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int wscanf (__const wchar_t *__restrict __format, ...)
-     /* __attribute__ ((__format__ (__wscanf__, 1, 2))) */;
-/* Read formatted input from S.  */
-extern int swscanf (__const wchar_t *__restrict __s,
-      __const wchar_t *__restrict __format, ...)
-     throw () /* __attribute__ ((__format__ (__wscanf__, 2, 3))) */;
-
-
-
-
-
-
-
-/* Read formatted input from S into argument list ARG.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int vfwscanf (__FILE *__restrict __s,
-       __const wchar_t *__restrict __format,
-       __gnuc_va_list __arg)
-     /* __attribute__ ((__format__ (__wscanf__, 2, 0))) */;
-/* Read formatted input from stdin into argument list ARG.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int vwscanf (__const wchar_t *__restrict __format,
-      __gnuc_va_list __arg)
-     /* __attribute__ ((__format__ (__wscanf__, 1, 0))) */;
-/* Read formatted input from S into argument list ARG.  */
-extern int vswscanf (__const wchar_t *__restrict __s,
-       __const wchar_t *__restrict __format,
-       __gnuc_va_list __arg)
-     throw () /* __attribute__ ((__format__ (__wscanf__, 2, 0))) */;
-
-
-
-
-
-
-/* Read a character from STREAM.
-
-   These functions are possible cancellation points and therefore not
-   marked with __THROW.  */
-extern wint_t fgetwc (__FILE *__stream);
-extern wint_t getwc (__FILE *__stream);
-
-/* Read a character from stdin.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern wint_t getwchar (void);
-
-
-/* Write a character to STREAM.
-
-   These functions are possible cancellation points and therefore not
-   marked with __THROW.  */
-extern wint_t fputwc (wchar_t __wc, __FILE *__stream);
-extern wint_t putwc (wchar_t __wc, __FILE *__stream);
-
-/* Write a character to stdout.
-
-   This function is a possible cancellation points and therefore not
-   marked with __THROW.  */
-extern wint_t putwchar (wchar_t __wc);
-
-
-/* Get a newline-terminated wide character string of finite length
-   from STREAM.
-
-   This function is a possible cancellation points and therefore not
-   marked with __THROW.  */
-extern wchar_t *fgetws (wchar_t *__restrict __ws, int __n,
-   __FILE *__restrict __stream);
-
-/* Write a string to STREAM.
-
-   This function is a possible cancellation points and therefore not
-   marked with __THROW.  */
-extern int fputws (__const wchar_t *__restrict __ws,
-     __FILE *__restrict __stream);
-
-
-/* Push a character back onto the input buffer of STREAM.
-
-   This function is a possible cancellation points and therefore not
-   marked with __THROW.  */
-extern wint_t ungetwc (wint_t __wc, __FILE *__stream);
-
-
-
-
-/* These are defined to be equivalent to the `char' functions defined
-   in POSIX.1:1996.
-
-   These functions are not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation they are cancellation points and
-   therefore not marked with __THROW.  */
-extern wint_t getwc_unlocked (__FILE *__stream);
-extern wint_t getwchar_unlocked (void);
-
-/* This is the wide character version of a GNU extension.
-
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern wint_t fgetwc_unlocked (__FILE *__stream);
-
-/* Faster version when locking is not necessary.
-
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern wint_t fputwc_unlocked (wchar_t __wc, __FILE *__stream);
-
-/* These are defined to be equivalent to the `char' functions defined
-   in POSIX.1:1996.
-
-   These functions are not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation they are cancellation points and
-   therefore not marked with __THROW.  */
-extern wint_t putwc_unlocked (wchar_t __wc, __FILE *__stream);
-extern wint_t putwchar_unlocked (wchar_t __wc);
-
-
-/* This function does the same as `fgetws' but does not lock the stream.
-
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern wchar_t *fgetws_unlocked (wchar_t *__restrict __ws, int __n,
-     __FILE *__restrict __stream);
-
-/* This function does the same as `fputws' but does not lock the stream.
-
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern int fputws_unlocked (__const wchar_t *__restrict __ws,
-       __FILE *__restrict __stream);
-
-
-
-
-/* Format TP into S according to FORMAT.
-   Write no more than MAXSIZE wide characters and return the number
-   of wide characters written, or 0 if it would exceed MAXSIZE.  */
-extern size_t wcsftime (wchar_t *__restrict __s, size_t __maxsize,
-   __const wchar_t *__restrict __format,
-   __const struct tm *__restrict __tp) throw ();
-
-
-
-
-
-/* Similar to `wcsftime' but takes the information from
-   the provided locale and not the global locale.  */
-extern size_t wcsftime_l (wchar_t *__restrict __s, size_t __maxsize,
-     __const wchar_t *__restrict __format,
-     __const struct tm *__restrict __tp,
-     __locale_t __loc) throw ();
-
-
-/* The X/Open standard demands that most of the functions defined in
-   the <wctype.h> header must also appear here.  This is probably
-   because some X/Open members wrote their implementation before the
-   ISO C standard was published and introduced the better solution.
-   We have to provide these definitions for compliance reasons but we
-   do this nonsense only if really necessary.  */
-
-
-
-
-
-/* Define some macros helping to catch buffer overflows.  */
-# 858 "/usr/include/wchar.h" 3 4
 }
-# 46 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 2 3
+
+
+#pragma pack(pop)
+# 9 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 2 3
+
+
+#pragma pack(push,_CRT_PACKING)
+
+
+extern "C" {
+# 27 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+ struct _iobuf {
+    char *_ptr;
+    int _cnt;
+    char *_base;
+    int _flag;
+    int _file;
+    int _charbuf;
+    int _bufsiz;
+    char *_tmpfname;
+  };
+  typedef struct _iobuf FILE;
+
+
+
+
+
+  __attribute__ ((__dllimport__)) FILE * __iob_func(void);
+# 66 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+ typedef unsigned long _fsize_t;
+
+
+
+
+  struct _wfinddata32_t {
+    unsigned attrib;
+    __time32_t time_create;
+    __time32_t time_access;
+    __time32_t time_write;
+    _fsize_t size;
+    wchar_t name[260];
+  };
+
+  struct _wfinddata32i64_t {
+    unsigned attrib;
+    __time32_t time_create;
+    __time32_t time_access;
+    __time32_t time_write;
+    __extension__ long long size;
+    wchar_t name[260];
+  };
+
+  struct _wfinddata64i32_t {
+    unsigned attrib;
+    __time64_t time_create;
+    __time64_t time_access;
+    __time64_t time_write;
+    _fsize_t size;
+    wchar_t name[260];
+  };
+
+  struct _wfinddata64_t {
+    unsigned attrib;
+    __time64_t time_create;
+    __time64_t time_access;
+    __time64_t time_write;
+    __extension__ long long size;
+    wchar_t name[260];
+  };
+/* #endif */
+# 164 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+ extern unsigned short ** __imp__pctype;
+# 178 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+ extern unsigned short ** __imp__wctype;
+# 193 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+ extern unsigned short ** __imp__pwctype;
+# 217 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+ int iswalpha(wint_t _C);
+  __attribute__ ((__dllimport__)) int _iswalpha_l(wint_t _C,_locale_t _Locale);
+  int iswupper(wint_t _C);
+  __attribute__ ((__dllimport__)) int _iswupper_l(wint_t _C,_locale_t _Locale);
+  int iswlower(wint_t _C);
+  __attribute__ ((__dllimport__)) int _iswlower_l(wint_t _C,_locale_t _Locale);
+  int iswdigit(wint_t _C);
+  __attribute__ ((__dllimport__)) int _iswdigit_l(wint_t _C,_locale_t _Locale);
+  int iswxdigit(wint_t _C);
+  __attribute__ ((__dllimport__)) int _iswxdigit_l(wint_t _C,_locale_t _Locale);
+  int iswspace(wint_t _C);
+  __attribute__ ((__dllimport__)) int _iswspace_l(wint_t _C,_locale_t _Locale);
+  int iswpunct(wint_t _C);
+  __attribute__ ((__dllimport__)) int _iswpunct_l(wint_t _C,_locale_t _Locale);
+  int iswalnum(wint_t _C);
+  __attribute__ ((__dllimport__)) int _iswalnum_l(wint_t _C,_locale_t _Locale);
+  int iswprint(wint_t _C);
+  __attribute__ ((__dllimport__)) int _iswprint_l(wint_t _C,_locale_t _Locale);
+  int iswgraph(wint_t _C);
+  __attribute__ ((__dllimport__)) int _iswgraph_l(wint_t _C,_locale_t _Locale);
+  int iswcntrl(wint_t _C);
+  __attribute__ ((__dllimport__)) int _iswcntrl_l(wint_t _C,_locale_t _Locale);
+  int iswascii(wint_t _C);
+  int isleadbyte(int _C);
+  __attribute__ ((__dllimport__)) int _isleadbyte_l(int _C,_locale_t _Locale);
+  wint_t towupper(wint_t _C);
+  __attribute__ ((__dllimport__)) wint_t _towupper_l(wint_t _C,_locale_t _Locale);
+  wint_t towlower(wint_t _C);
+  __attribute__ ((__dllimport__)) wint_t _towlower_l(wint_t _C,_locale_t _Locale);
+  int iswctype(wint_t _C,wctype_t _Type);
+  __attribute__ ((__dllimport__)) int _iswctype_l(wint_t _C,wctype_t _Type,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __iswcsymf(wint_t _C);
+  __attribute__ ((__dllimport__)) int _iswcsymf_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __iswcsym(wint_t _C);
+  __attribute__ ((__dllimport__)) int _iswcsym_l(wint_t _C,_locale_t _Locale);
+  int is_wctype(wint_t _C,wctype_t _Type);
+
+
+  int iswblank(wint_t _C);
+
+
+
+
+
+
+
+  __attribute__ ((__dllimport__)) wchar_t * _wgetcwd(wchar_t *_DstBuf,int _SizeInWords);
+  __attribute__ ((__dllimport__)) wchar_t * _wgetdcwd(int _Drive,wchar_t *_DstBuf,int _SizeInWords);
+  wchar_t * _wgetdcwd_nolock(int _Drive,wchar_t *_DstBuf,int _SizeInWords);
+  __attribute__ ((__dllimport__)) int _wchdir(const wchar_t *_Path);
+  __attribute__ ((__dllimport__)) int _wmkdir(const wchar_t *_Path);
+  __attribute__ ((__dllimport__)) int _wrmdir(const wchar_t *_Path);
+
+
+
+
+
+  __attribute__ ((__dllimport__)) int _waccess(const wchar_t *_Filename,int _AccessMode);
+  __attribute__ ((__dllimport__)) int _wchmod(const wchar_t *_Filename,int _Mode);
+  __attribute__ ((__dllimport__)) int _wcreat(const wchar_t *_Filename,int _PermissionMode) ;
+  __attribute__ ((__dllimport__)) intptr_t _wfindfirst32(const wchar_t *_Filename,struct _wfinddata32_t *_FindData);
+  __attribute__ ((__dllimport__)) int _wfindnext32(intptr_t _FindHandle,struct _wfinddata32_t *_FindData);
+  __attribute__ ((__dllimport__)) int _wunlink(const wchar_t *_Filename);
+  __attribute__ ((__dllimport__)) int _wrename(const wchar_t *_NewFilename,const wchar_t *_OldFilename);
+  __attribute__ ((__dllimport__)) wchar_t * _wmktemp(wchar_t *_TemplateName) ;
+  __attribute__ ((__dllimport__)) intptr_t _wfindfirst32i64(const wchar_t *_Filename,struct _wfinddata32i64_t *_FindData);
+  intptr_t _wfindfirst64i32(const wchar_t *_Filename,struct _wfinddata64i32_t *_FindData);
+  __attribute__ ((__dllimport__)) intptr_t _wfindfirst64(const wchar_t *_Filename,struct _wfinddata64_t *_FindData);
+  __attribute__ ((__dllimport__)) int _wfindnext32i64(intptr_t _FindHandle,struct _wfinddata32i64_t *_FindData);
+  int _wfindnext64i32(intptr_t _FindHandle,struct _wfinddata64i32_t *_FindData);
+  __attribute__ ((__dllimport__)) int _wfindnext64(intptr_t _FindHandle,struct _wfinddata64_t *_FindData);
+  __attribute__ ((__dllimport__)) errno_t _wsopen_s(int *_FileHandle,const wchar_t *_Filename,int _OpenFlag,int _ShareFlag,int _PermissionFlag);
+  __attribute__ ((__dllimport__)) int _wopen(const wchar_t *_Filename,int _OpenFlag,...) ;
+  __attribute__ ((__dllimport__)) int _wsopen(const wchar_t *_Filename,int _OpenFlag,int _ShareFlag,...) ;
+
+
+
+
+  __attribute__ ((__dllimport__)) wchar_t * _wsetlocale(int _Category,const wchar_t *_Locale);
+
+
+
+
+
+  __attribute__ ((__dllimport__)) intptr_t _wexecl(const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t _wexecle(const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t _wexeclp(const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t _wexeclpe(const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t _wexecv(const wchar_t *_Filename,const wchar_t *const *_ArgList);
+  __attribute__ ((__dllimport__)) intptr_t _wexecve(const wchar_t *_Filename,const wchar_t *const *_ArgList,const wchar_t *const *_Env);
+  __attribute__ ((__dllimport__)) intptr_t _wexecvp(const wchar_t *_Filename,const wchar_t *const *_ArgList);
+  __attribute__ ((__dllimport__)) intptr_t _wexecvpe(const wchar_t *_Filename,const wchar_t *const *_ArgList,const wchar_t *const *_Env);
+  __attribute__ ((__dllimport__)) intptr_t _wspawnl(int _Mode,const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t _wspawnle(int _Mode,const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t _wspawnlp(int _Mode,const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t _wspawnlpe(int _Mode,const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t _wspawnv(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList);
+  __attribute__ ((__dllimport__)) intptr_t _wspawnve(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList,const wchar_t *const *_Env);
+  __attribute__ ((__dllimport__)) intptr_t _wspawnvp(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList);
+  __attribute__ ((__dllimport__)) intptr_t _wspawnvpe(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList,const wchar_t *const *_Env);
+
+
+  __attribute__ ((__dllimport__)) int _wsystem(const wchar_t *_Command);
+# 360 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+ typedef unsigned short _ino_t;
+
+  typedef unsigned short ino_t;
+
+
+
+
+
+  typedef unsigned int _dev_t;
+
+  typedef unsigned int dev_t;
+
+
+
+
+
+
+
+  typedef long _off_t;
+
+  typedef long off_t;
+
+
+
+
+
+
+  __extension__ typedef long long _off64_t;
+
+  __extension__ typedef long long off64_t;
+# 412 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+ struct _stat32 {
+    _dev_t st_dev;
+    _ino_t st_ino;
+    unsigned short st_mode;
+    short st_nlink;
+    short st_uid;
+    short st_gid;
+    _dev_t st_rdev;
+    _off_t st_size;
+    __time32_t st_atime;
+    __time32_t st_mtime;
+    __time32_t st_ctime;
+  };
+
+
+  struct stat {
+    _dev_t st_dev;
+    _ino_t st_ino;
+    unsigned short st_mode;
+    short st_nlink;
+    short st_uid;
+    short st_gid;
+    _dev_t st_rdev;
+    _off_t st_size;
+    time_t st_atime;
+    time_t st_mtime;
+    time_t st_ctime;
+  };
+
+
+  struct _stat32i64 {
+    _dev_t st_dev;
+    _ino_t st_ino;
+    unsigned short st_mode;
+    short st_nlink;
+    short st_uid;
+    short st_gid;
+    _dev_t st_rdev;
+    __extension__ long long st_size;
+    __time32_t st_atime;
+    __time32_t st_mtime;
+    __time32_t st_ctime;
+  };
+
+  struct _stat64i32 {
+    _dev_t st_dev;
+    _ino_t st_ino;
+    unsigned short st_mode;
+    short st_nlink;
+    short st_uid;
+    short st_gid;
+    _dev_t st_rdev;
+    _off_t st_size;
+    __time64_t st_atime;
+    __time64_t st_mtime;
+    __time64_t st_ctime;
+  };
+
+  struct _stat64 {
+    _dev_t st_dev;
+    _ino_t st_ino;
+    unsigned short st_mode;
+    short st_nlink;
+    short st_uid;
+    short st_gid;
+    _dev_t st_rdev;
+    __extension__ long long st_size;
+    __time64_t st_atime;
+    __time64_t st_mtime;
+    __time64_t st_ctime;
+  };
+# 493 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+ __attribute__ ((__dllimport__)) int _wstat32(const wchar_t *_Name,struct _stat32 *_Stat);
+  __attribute__ ((__dllimport__)) int _wstat32i64(const wchar_t *_Name,struct _stat32i64 *_Stat);
+  int _wstat64i32(const wchar_t *_Name,struct _stat64i32 *_Stat);
+  __attribute__ ((__dllimport__)) int _wstat64(const wchar_t *_Name,struct _stat64 *_Stat);
+# 507 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+ __attribute__ ((__dllimport__)) wchar_t *_cgetws(wchar_t *_Buffer) ;
+  __attribute__ ((__dllimport__)) wint_t _getwch(void);
+  __attribute__ ((__dllimport__)) wint_t _getwche(void);
+  __attribute__ ((__dllimport__)) wint_t _putwch(wchar_t _WCh);
+  __attribute__ ((__dllimport__)) wint_t _ungetwch(wint_t _WCh);
+  __attribute__ ((__dllimport__)) int _cputws(const wchar_t *_String);
+  __attribute__ ((__dllimport__)) int _cwprintf(const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int _cwscanf(const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int _cwscanf_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,...);
+  __attribute__ ((__dllimport__)) int _vcwprintf(const wchar_t * __restrict__ _Format,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _cwprintf_p(const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int _vcwprintf_p(const wchar_t * __restrict__ _Format,va_list _ArgList);
+
+  __attribute__ ((__dllimport__)) int _cwprintf_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,...);
+  __attribute__ ((__dllimport__)) int _vcwprintf_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _cwprintf_p_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,...);
+  __attribute__ ((__dllimport__)) int _vcwprintf_p_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,va_list _ArgList);
+  wint_t _putwch_nolock(wchar_t _WCh);
+  wint_t _getwch_nolock(void);
+  wint_t _getwche_nolock(void);
+  wint_t _ungetwch_nolock(wint_t _WCh);
+# 540 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+ __attribute__ ((__dllimport__)) FILE * _wfsopen(const wchar_t *_Filename,const wchar_t *_Mode,int _ShFlag);
+
+
+  wint_t fgetwc(FILE *_File);
+  __attribute__ ((__dllimport__)) wint_t _fgetwchar(void);
+  wint_t fputwc(wchar_t _Ch,FILE *_File);
+  __attribute__ ((__dllimport__)) wint_t _fputwchar(wchar_t _Ch);
+  wint_t getwc(FILE *_File);
+  wint_t getwchar(void);
+  wint_t putwc(wchar_t _Ch,FILE *_File);
+  wint_t putwchar(wchar_t _Ch);
+  wint_t ungetwc(wint_t _Ch,FILE *_File);
+  wchar_t * fgetws(wchar_t * __restrict__ _Dst,int _SizeInWords,FILE * __restrict__ _File);
+  int fputws(const wchar_t * __restrict__ _Str,FILE * __restrict__ _File);
+  __attribute__ ((__dllimport__)) wchar_t * _getws(wchar_t *_String) ;
+  __attribute__ ((__dllimport__)) int _putws(const wchar_t *_Str);
+  int fwprintf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,...);
+  int wprintf(const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int _scwprintf(const wchar_t * __restrict__ _Format,...);
+  int vfwprintf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,va_list _ArgList);
+  int vwprintf(const wchar_t * __restrict__ _Format,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int swprintf(wchar_t * __restrict__ , const wchar_t * __restrict__ , ...) ;
+  __attribute__ ((__dllimport__)) int _swprintf_l(wchar_t * __restrict__ ,size_t _SizeInWords,const wchar_t * __restrict__ _Format,_locale_t _Locale,... ) ;
+  __attribute__ ((__dllimport__)) int vswprintf(wchar_t * __restrict__ , const wchar_t * __restrict__ ,va_list) ;
+  __attribute__ ((__dllimport__)) int _swprintf_c(wchar_t * __restrict__ _DstBuf,size_t _SizeInWords,const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int _vswprintf_c(wchar_t * __restrict__ _DstBuf,size_t _SizeInWords,const wchar_t * __restrict__ _Format,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _snwprintf(wchar_t * __restrict__ _Dest,size_t _Count,const wchar_t * __restrict__ _Format,...) ;
+  __attribute__ ((__dllimport__)) int _vsnwprintf(wchar_t * __restrict__ _Dest,size_t _Count,const wchar_t * __restrict__ _Format,va_list _Args) ;
+
+  int snwprintf (wchar_t * __restrict__ s, size_t n, const wchar_t * __restrict__ format, ...);
+  int vsnwprintf (wchar_t * __restrict__ , size_t, const wchar_t * __restrict__ , va_list);
+
+
+
+
+
+
+  int vwscanf (const wchar_t * __restrict__ , va_list);
+  int vfwscanf (FILE * __restrict__ ,const wchar_t * __restrict__ ,va_list);
+  int vswscanf (const wchar_t * __restrict__ ,const wchar_t * __restrict__ ,va_list);
+
+  __attribute__ ((__dllimport__)) int _fwprintf_p(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int _wprintf_p(const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int _vfwprintf_p(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _vwprintf_p(const wchar_t * __restrict__ _Format,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _swprintf_p(wchar_t * __restrict__ _DstBuf,size_t _MaxCount,const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int _vswprintf_p(wchar_t * __restrict__ _DstBuf,size_t _MaxCount,const wchar_t * __restrict__ _Format,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _scwprintf_p(const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int _vscwprintf_p(const wchar_t * __restrict__ _Format,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _wprintf_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,...);
+  __attribute__ ((__dllimport__)) int _wprintf_p_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,...);
+  __attribute__ ((__dllimport__)) int _vwprintf_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _vwprintf_p_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _fwprintf_l(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,_locale_t _Locale,...);
+  __attribute__ ((__dllimport__)) int _fwprintf_p_l(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,_locale_t _Locale,...);
+  __attribute__ ((__dllimport__)) int _vfwprintf_l(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,_locale_t _Locale,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _vfwprintf_p_l(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,_locale_t _Locale,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _swprintf_c_l(wchar_t * __restrict__ _DstBuf,size_t _MaxCount,const wchar_t * __restrict__ _Format,_locale_t _Locale,...);
+  __attribute__ ((__dllimport__)) int _swprintf_p_l(wchar_t * __restrict__ _DstBuf,size_t _MaxCount,const wchar_t * __restrict__ _Format,_locale_t _Locale,...);
+  __attribute__ ((__dllimport__)) int _vswprintf_c_l(wchar_t * __restrict__ _DstBuf,size_t _MaxCount,const wchar_t * __restrict__ _Format,_locale_t _Locale,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _vswprintf_p_l(wchar_t * __restrict__ _DstBuf,size_t _MaxCount,const wchar_t * __restrict__ _Format,_locale_t _Locale,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _scwprintf_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,...);
+  __attribute__ ((__dllimport__)) int _scwprintf_p_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,...);
+  __attribute__ ((__dllimport__)) int _vscwprintf_p_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _snwprintf_l(wchar_t * __restrict__ _DstBuf,size_t _MaxCount,const wchar_t * __restrict__ _Format,_locale_t _Locale,...);
+  __attribute__ ((__dllimport__)) int _vsnwprintf_l(wchar_t * __restrict__ _DstBuf,size_t _MaxCount,const wchar_t * __restrict__ _Format,_locale_t _Locale,va_list _ArgList) ;
+  __attribute__ ((__dllimport__)) int _swprintf(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int _vswprintf(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Format,va_list _Args);
+  __attribute__ ((__dllimport__)) int __swprintf_l(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Format,_locale_t _Plocinfo,...) ;
+  __attribute__ ((__dllimport__)) int _vswprintf_l(wchar_t * __restrict__ _Dest,size_t _MaxCount,const wchar_t * __restrict__ _Format,_locale_t _Locale,va_list _ArgList) ;
+  __attribute__ ((__dllimport__)) int __vswprintf_l(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Format,_locale_t _Plocinfo,va_list _Args) ;
+# 621 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+ __attribute__ ((__dllimport__)) wchar_t * _wtempnam(const wchar_t *_Directory,const wchar_t *_FilePrefix);
+  __attribute__ ((__dllimport__)) int _vscwprintf(const wchar_t * __restrict__ _Format,va_list _ArgList);
+  __attribute__ ((__dllimport__)) int _vscwprintf_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,va_list _ArgList);
+  int fwscanf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,...) ;
+  __attribute__ ((__dllimport__)) int _fwscanf_l(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,_locale_t _Locale,...) ;
+  int swscanf(const wchar_t * __restrict__ _Src,const wchar_t * __restrict__ _Format,...) ;
+  __attribute__ ((__dllimport__)) int _swscanf_l(const wchar_t * __restrict__ _Src,const wchar_t * __restrict__ _Format,_locale_t _Locale,...) ;
+  __attribute__ ((__dllimport__)) int _snwscanf(const wchar_t * __restrict__ _Src,size_t _MaxCount,const wchar_t * __restrict__ _Format,...);
+  __attribute__ ((__dllimport__)) int _snwscanf_l(const wchar_t * __restrict__ _Src,size_t _MaxCount,const wchar_t * __restrict__ _Format,_locale_t _Locale,...);
+  int wscanf(const wchar_t * __restrict__ _Format,...) ;
+  __attribute__ ((__dllimport__)) int _wscanf_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,...) ;
+  __attribute__ ((__dllimport__)) FILE * _wfdopen(int _FileHandle ,const wchar_t *_Mode);
+  __attribute__ ((__dllimport__)) FILE * _wfopen(const wchar_t * __restrict__ _Filename,const wchar_t * __restrict__ _Mode) ;
+  __attribute__ ((__dllimport__)) FILE * _wfreopen(const wchar_t * __restrict__ _Filename,const wchar_t * __restrict__ _Mode,FILE * __restrict__ _OldFile) ;
+
+
+
+  __attribute__ ((__dllimport__)) void _wperror(const wchar_t *_ErrMsg);
+
+  __attribute__ ((__dllimport__)) FILE * _wpopen(const wchar_t *_Command,const wchar_t *_Mode);
+
+
+
+  __attribute__ ((__dllimport__)) int _wremove(const wchar_t *_Filename);
+  __attribute__ ((__dllimport__)) wchar_t * _wtmpnam(wchar_t *_Buffer);
+  __attribute__ ((__dllimport__)) wint_t _fgetwc_nolock(FILE *_File);
+  __attribute__ ((__dllimport__)) wint_t _fputwc_nolock(wchar_t _Ch,FILE *_File);
+  __attribute__ ((__dllimport__)) wint_t _ungetwc_nolock(wint_t _Ch,FILE *_File);
+# 669 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+ __attribute__ ((__dllimport__)) wchar_t * _itow(int _Value,wchar_t *_Dest,int _Radix) ;
+  __attribute__ ((__dllimport__)) wchar_t * _ltow(long _Value,wchar_t *_Dest,int _Radix) ;
+  __attribute__ ((__dllimport__)) wchar_t * _ultow(unsigned long _Value,wchar_t *_Dest,int _Radix) ;
+  double wcstod(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr);
+  __attribute__ ((__dllimport__)) double _wcstod_l(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,_locale_t _Locale);
+  float wcstof( const wchar_t * __restrict__ nptr, wchar_t ** __restrict__ endptr);
+
+  float wcstof (const wchar_t * __restrict__, wchar_t ** __restrict__);
+  long double wcstold (const wchar_t * __restrict__, wchar_t ** __restrict__);
+
+  long wcstol(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,int _Radix);
+  __attribute__ ((__dllimport__)) long _wcstol_l(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,int _Radix,_locale_t _Locale);
+  unsigned long wcstoul(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,int _Radix);
+  __attribute__ ((__dllimport__)) unsigned long _wcstoul_l(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,int _Radix,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) wchar_t * _wgetenv(const wchar_t *_VarName) ;
+
+
+
+
+  __attribute__ ((__dllimport__)) double _wtof(const wchar_t *_Str);
+  __attribute__ ((__dllimport__)) double _wtof_l(const wchar_t *_Str,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int _wtoi(const wchar_t *_Str);
+  __attribute__ ((__dllimport__)) int _wtoi_l(const wchar_t *_Str,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) long _wtol(const wchar_t *_Str);
+  __attribute__ ((__dllimport__)) long _wtol_l(const wchar_t *_Str,_locale_t _Locale);
+
+  __extension__ __attribute__ ((__dllimport__)) wchar_t * _i64tow(long long _Val,wchar_t *_DstBuf,int _Radix) ;
+  __extension__ __attribute__ ((__dllimport__)) wchar_t * _ui64tow(unsigned long long _Val,wchar_t *_DstBuf,int _Radix);
+  __extension__ __attribute__ ((__dllimport__)) long long _wtoi64(const wchar_t *_Str);
+  __extension__ __attribute__ ((__dllimport__)) long long _wtoi64_l(const wchar_t *_Str,_locale_t _Locale);
+  __extension__ __attribute__ ((__dllimport__)) long long _wcstoi64(const wchar_t *_Str,wchar_t **_EndPtr,int _Radix);
+  __extension__ __attribute__ ((__dllimport__)) long long _wcstoi64_l(const wchar_t *_Str,wchar_t **_EndPtr,int _Radix,_locale_t _Locale);
+  __extension__ __attribute__ ((__dllimport__)) unsigned long long _wcstoui64(const wchar_t *_Str,wchar_t **_EndPtr,int _Radix);
+  __extension__ __attribute__ ((__dllimport__)) unsigned long long _wcstoui64_l(const wchar_t *_Str,wchar_t **_EndPtr,int _Radix,_locale_t _Locale);
+
+
+
+
+
+  __attribute__ ((__dllimport__)) wchar_t * _wfullpath(wchar_t *_FullPath,const wchar_t *_Path,size_t _SizeInWords);
+  __attribute__ ((__dllimport__)) void _wmakepath(wchar_t *_ResultPath,const wchar_t *_Drive,const wchar_t *_Dir,const wchar_t *_Filename,const wchar_t *_Ext);
+
+
+
+
+  __attribute__ ((__dllimport__)) int _wputenv(const wchar_t *_EnvString);
+  __attribute__ ((__dllimport__)) void _wsearchenv(const wchar_t *_Filename,const wchar_t *_EnvVar,wchar_t *_ResultPath) ;
+  __attribute__ ((__dllimport__)) void _wsplitpath(const wchar_t *_FullPath,wchar_t *_Drive,wchar_t *_Dir,wchar_t *_Filename,wchar_t *_Ext) ;
+
+
+
+
+
+  __attribute__ ((__dllimport__)) wchar_t * _wcsdup(const wchar_t *_Str);
+  wchar_t * wcscat(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Source) ;
+                wchar_t * wcschr(const wchar_t *_Str,wchar_t _Ch);
+  int wcscmp(const wchar_t *_Str1,const wchar_t *_Str2);
+  wchar_t * wcscpy(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Source) ;
+  size_t wcscspn(const wchar_t *_Str,const wchar_t *_Control);
+  size_t wcslen(const wchar_t *_Str);
+  size_t wcsnlen(const wchar_t *_Src,size_t _MaxCount);
+  wchar_t * wcsncat(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Source,size_t _Count) ;
+  int wcsncmp(const wchar_t *_Str1,const wchar_t *_Str2,size_t _MaxCount);
+  wchar_t * wcsncpy(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Source,size_t _Count) ;
+  wchar_t * _wcsncpy_l(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Source,size_t _Count,_locale_t _Locale) ;
+                wchar_t * wcspbrk(const wchar_t *_Str,const wchar_t *_Control);
+                wchar_t * wcsrchr(const wchar_t *_Str,wchar_t _Ch);
+  size_t wcsspn(const wchar_t *_Str,const wchar_t *_Control);
+                wchar_t * wcsstr(const wchar_t *_Str,const wchar_t *_SubStr);
+  wchar_t * wcstok(wchar_t * __restrict__ _Str,const wchar_t * __restrict__ _Delim) ;
+  __attribute__ ((__dllimport__)) wchar_t * _wcserror(int _ErrNum) ;
+  __attribute__ ((__dllimport__)) wchar_t * __wcserror(const wchar_t *_Str) ;
+  __attribute__ ((__dllimport__)) int _wcsicmp(const wchar_t *_Str1,const wchar_t *_Str2);
+  __attribute__ ((__dllimport__)) int _wcsicmp_l(const wchar_t *_Str1,const wchar_t *_Str2,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int _wcsnicmp(const wchar_t *_Str1,const wchar_t *_Str2,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) int _wcsnicmp_l(const wchar_t *_Str1,const wchar_t *_Str2,size_t _MaxCount,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) wchar_t * _wcsnset(wchar_t *_Str,wchar_t _Val,size_t _MaxCount) ;
+  __attribute__ ((__dllimport__)) wchar_t * _wcsrev(wchar_t *_Str);
+  __attribute__ ((__dllimport__)) wchar_t * _wcsset(wchar_t *_Str,wchar_t _Val) ;
+  __attribute__ ((__dllimport__)) wchar_t * _wcslwr(wchar_t *_String) ;
+  __attribute__ ((__dllimport__)) wchar_t *_wcslwr_l(wchar_t *_String,_locale_t _Locale) ;
+  __attribute__ ((__dllimport__)) wchar_t * _wcsupr(wchar_t *_String) ;
+  __attribute__ ((__dllimport__)) wchar_t *_wcsupr_l(wchar_t *_String,_locale_t _Locale) ;
+  size_t wcsxfrm(wchar_t * __restrict__ _Dst,const wchar_t * __restrict__ _Src,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) size_t _wcsxfrm_l(wchar_t * __restrict__ _Dst,const wchar_t * __restrict__ _Src,size_t _MaxCount,_locale_t _Locale);
+  int wcscoll(const wchar_t *_Str1,const wchar_t *_Str2);
+  __attribute__ ((__dllimport__)) int _wcscoll_l(const wchar_t *_Str1,const wchar_t *_Str2,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int _wcsicoll(const wchar_t *_Str1,const wchar_t *_Str2);
+  __attribute__ ((__dllimport__)) int _wcsicoll_l(const wchar_t *_Str1,const wchar_t *_Str2,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int _wcsncoll(const wchar_t *_Str1,const wchar_t *_Str2,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) int _wcsncoll_l(const wchar_t *_Str1,const wchar_t *_Str2,size_t _MaxCount,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int _wcsnicoll(const wchar_t *_Str1,const wchar_t *_Str2,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) int _wcsnicoll_l(const wchar_t *_Str1,const wchar_t *_Str2,size_t _MaxCount,_locale_t _Locale);
+
+
+  wchar_t * wcsdup(const wchar_t *_Str) ;
+
+  int wcsicmp(const wchar_t *_Str1,const wchar_t *_Str2) ;
+  int wcsnicmp(const wchar_t *_Str1,const wchar_t *_Str2,size_t _MaxCount) ;
+  wchar_t * wcsnset(wchar_t *_Str,wchar_t _Val,size_t _MaxCount) ;
+  wchar_t * wcsrev(wchar_t *_Str) ;
+  wchar_t * wcsset(wchar_t *_Str,wchar_t _Val) ;
+  wchar_t * wcslwr(wchar_t *_Str) ;
+  wchar_t * wcsupr(wchar_t *_Str) ;
+  int wcsicoll(const wchar_t *_Str1,const wchar_t *_Str2) ;
+
+
+
+
+
+  struct tm {
+    int tm_sec;
+    int tm_min;
+    int tm_hour;
+    int tm_mday;
+    int tm_mon;
+    int tm_year;
+    int tm_wday;
+    int tm_yday;
+    int tm_isdst;
+  };
+
+
+
+
+
+  __attribute__ ((__dllimport__)) wchar_t * _wasctime(const struct tm *_Tm);
+  wchar_t * _wctime32(const __time32_t *_Time) ;
+  size_t wcsftime(wchar_t * __restrict__ _Buf,size_t _SizeInWords,const wchar_t * __restrict__ _Format,const struct tm * __restrict__ _Tm);
+  __attribute__ ((__dllimport__)) size_t _wcsftime_l(wchar_t * __restrict__ _Buf,size_t _SizeInWords,const wchar_t * __restrict__ _Format,const struct tm * __restrict__ _Tm,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) wchar_t * _wstrdate(wchar_t *_Buffer) ;
+  __attribute__ ((__dllimport__)) wchar_t * _wstrtime(wchar_t *_Buffer) ;
+  __attribute__ ((__dllimport__)) wchar_t * _wctime64(const __time64_t *_Time) ;
+
+
+
+  wchar_t * _wctime(const time_t *_Time) ;
+# 816 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+ typedef int mbstate_t;
+  typedef wchar_t _Wint_t;
+
+  wint_t btowc(int);
+  size_t mbrlen(const char * __restrict__ _Ch,size_t _SizeInBytes,mbstate_t * __restrict__ _State);
+  size_t mbrtowc(wchar_t * __restrict__ _DstCh,const char * __restrict__ _SrcCh,size_t _SizeInBytes,mbstate_t * __restrict__ _State);
+  size_t mbsrtowcs(wchar_t * __restrict__ _Dest,const char ** __restrict__ _PSrc,size_t _Count,mbstate_t * __restrict__ _State) ;
+  size_t wcrtomb(char * __restrict__ _Dest,wchar_t _Source,mbstate_t * __restrict__ _State) ;
+  size_t wcsrtombs(char * __restrict__ _Dest,const wchar_t ** __restrict__ _PSource,size_t _Count,mbstate_t * __restrict__ _State) ;
+  int wctob(wint_t _WCh);
+
+
+  wchar_t * wmemset(wchar_t *s, wchar_t c, size_t n);
+                wchar_t * wmemchr(const wchar_t *s, wchar_t c, size_t n);
+  int wmemcmp(const wchar_t *s1, const wchar_t *s2,size_t n);
+  wchar_t * wmemcpy(wchar_t * __restrict__ s1,const wchar_t * __restrict__ s2,size_t n) ;
+  wchar_t * wmemmove(wchar_t *s1, const wchar_t *s2, size_t n) ;
+  int fwide(FILE *stream,int mode);
+  int mbsinit(const mbstate_t *ps);
+  __extension__ long long wcstoll(const wchar_t * __restrict__ nptr,wchar_t ** __restrict__ endptr, int base);
+  __extension__ unsigned long long wcstoull(const wchar_t * __restrict__ nptr,wchar_t ** __restrict__ endptr, int base);
+
+
+  void * memmove(void *_Dst,const void *_Src,size_t _MaxCount);
+  void * memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _MaxCount) ;
+# 876 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 3
+}
+
+
+#pragma pack(pop)
+
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/wchar_s.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
+ */
+
+
+
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
+ */
+# 9 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/wchar_s.h" 2 3
+# 881 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wchar.h" 2 3
+# 47 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cwchar" 2 3
 
 
 
@@ -3144,17 +2695,16 @@ extern size_t wcsftime_l (wchar_t *__restrict __s, size_t __maxsize,
 
 // Need to do a bit of trickery here with mbstate_t as char_traits
 // assumes it is in wchar.h, regardless of wchar_t specializations.
-# 63 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
-namespace std
-{
+# 64 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cwchar" 3
+namespace std {
+
   using ::mbstate_t;
-} // namespace std
+
+}
 
 // Get rid of those macros defined in <wchar.h> in lieu of real functions.
-# 136 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+# 138 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cwchar" 3
+namespace std {
 
   using ::wint_t;
 
@@ -3175,7 +2725,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   using ::putwc;
   using ::putwchar;
 
-  using ::swprintf;
+
 
   using ::swscanf;
   using ::ungetwc;
@@ -3184,7 +2734,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   using ::vfwscanf;
 
 
-  using ::vswprintf;
+
 
 
   using ::vswscanf;
@@ -3249,44 +2799,43 @@ namespace std __attribute__ ((__visibility__ ("default")))
   { return wmemchr(const_cast<const wchar_t*>(__p), __c, __n); }
 
 
-
-} // namespace
-
+}
 
 
 
 
 
 
-namespace __gnu_cxx
-{
+
+namespace __gnu_cxx {
+
 
 
 
 
 
   using ::wcstold;
-# 258 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
+# 257 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cwchar" 3
  using ::wcstoll;
   using ::wcstoull;
 
-} // namespace __gnu_cxx
 
-namespace std
-{
+}
+
+namespace std {
+
   using ::__gnu_cxx::wcstold;
   using ::__gnu_cxx::wcstoll;
   using ::__gnu_cxx::wcstoull;
-} // namespace
-# 42 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 2 3
+
+}
+# 42 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/postypes.h" 2 3
 
 // XXX If <stdint.h> is really needed, make sure to define the macros
 // before including it, in order not to break <tr1/cstdint> (and <cstdint>
 // in C++0x).  Reconsider all this as soon as possible...
-# 69 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+# 69 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/postypes.h" 3
+namespace std {
 
   // The types streamoff, streampos and wstreampos and the class
   // template fpos<> are described in clauses 21.1.2, 21.1.3, 27.1.2,
@@ -3304,9 +2853,16 @@ namespace std __attribute__ ((__visibility__ ("default")))
    *  was typedef long.
   */
 
-  typedef long streamoff;
-# 98 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
- /// Integral type for I/O operation counts and buffer sizes.
+
+
+  typedef long long streamoff;
+
+
+
+
+
+
+  /// Integral type for I/O operation counts and buffer sizes.
   typedef ptrdiff_t streamsize; // Signed integral type
 
   /**
@@ -3440,15 +2996,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
   typedef fpos<mbstate_t> streampos;
   /// File position for wchar_t streams.
   typedef fpos<mbstate_t> wstreampos;
-# 241 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
-} // namespace
-# 42 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 2 3
+# 238 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/postypes.h" 3
+}
+# 42 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iosfwd" 2 3
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
+namespace std {
 
-
-  /**
+  /** 
    *  @defgroup io I/O
    *
    *  Nearly all of the I/O classes are parameterized on the type of
@@ -3527,96 +3081,47 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<typename _CharT, typename _Traits = char_traits<_CharT> >
     class ostreambuf_iterator;
 
+  // _GLIBCXX_RESOLVE_LIB_DEFECTS
+  // Not included.   (??? Apparently no LWG number?)
 
-  /// Base class for @c char streams.
-  typedef basic_ios<char> ios;
-
-  /// Base class for @c char buffers.
-  typedef basic_streambuf<char> streambuf;
-
-  /// Base class for @c char input streams.
-  typedef basic_istream<char> istream;
-
-  /// Base class for @c char output streams.
-  typedef basic_ostream<char> ostream;
-
-  /// Base class for @c char mixed input and output streams.
-  typedef basic_iostream<char> iostream;
-
-  /// Class for @c char memory buffers.
-  typedef basic_stringbuf<char> stringbuf;
-
-  /// Class for @c char input memory streams.
-  typedef basic_istringstream<char> istringstream;
-
-  /// Class for @c char output memory streams.
-  typedef basic_ostringstream<char> ostringstream;
-
-  /// Class for @c char mixed input and output memory streams.
-  typedef basic_stringstream<char> stringstream;
-
-  /// Class for @c char file buffers.
-  typedef basic_filebuf<char> filebuf;
-
-  /// Class for @c char input file streams.
-  typedef basic_ifstream<char> ifstream;
-
-  /// Class for @c char output file streams.
-  typedef basic_ofstream<char> ofstream;
-
-  /// Class for @c char mixed input and output file streams.
-  typedef basic_fstream<char> fstream;
+  typedef basic_ios<char> ios; ///< @isiosfwd
+  typedef basic_streambuf<char> streambuf; ///< @isiosfwd
+  typedef basic_istream<char> istream; ///< @isiosfwd
+  typedef basic_ostream<char> ostream; ///< @isiosfwd
+  typedef basic_iostream<char> iostream; ///< @isiosfwd
+  typedef basic_stringbuf<char> stringbuf; ///< @isiosfwd
+  typedef basic_istringstream<char> istringstream; ///< @isiosfwd
+  typedef basic_ostringstream<char> ostringstream; ///< @isiosfwd
+  typedef basic_stringstream<char> stringstream; ///< @isiosfwd
+  typedef basic_filebuf<char> filebuf; ///< @isiosfwd
+  typedef basic_ifstream<char> ifstream; ///< @isiosfwd
+  typedef basic_ofstream<char> ofstream; ///< @isiosfwd
+  typedef basic_fstream<char> fstream; ///< @isiosfwd
 
 
-  /// Base class for @c wchar_t streams.
-  typedef basic_ios<wchar_t> wios;
-
-  /// Base class for @c wchar_t buffers.
-  typedef basic_streambuf<wchar_t> wstreambuf;
-
-  /// Base class for @c wchar_t input streams.
-  typedef basic_istream<wchar_t> wistream;
-
-  /// Base class for @c wchar_t output streams.
-  typedef basic_ostream<wchar_t> wostream;
-
-  /// Base class for @c wchar_t mixed input and output streams.
-  typedef basic_iostream<wchar_t> wiostream;
-
-  /// Class for @c wchar_t memory buffers.
-  typedef basic_stringbuf<wchar_t> wstringbuf;
-
-  /// Class for @c wchar_t input memory streams.
-  typedef basic_istringstream<wchar_t> wistringstream;
-
-  /// Class for @c wchar_t output memory streams.
-  typedef basic_ostringstream<wchar_t> wostringstream;
-
-  /// Class for @c wchar_t mixed input and output memory streams.
-  typedef basic_stringstream<wchar_t> wstringstream;
-
-  /// Class for @c wchar_t file buffers.
-  typedef basic_filebuf<wchar_t> wfilebuf;
-
-  /// Class for @c wchar_t input file streams.
-  typedef basic_ifstream<wchar_t> wifstream;
-
-  /// Class for @c wchar_t output file streams.
-  typedef basic_ofstream<wchar_t> wofstream;
-
-  /// Class for @c wchar_t mixed input and output file streams.
-  typedef basic_fstream<wchar_t> wfstream;
+  typedef basic_ios<wchar_t> wios; ///< @isiosfwd
+  typedef basic_streambuf<wchar_t> wstreambuf; ///< @isiosfwd
+  typedef basic_istream<wchar_t> wistream; ///< @isiosfwd
+  typedef basic_ostream<wchar_t> wostream; ///< @isiosfwd
+  typedef basic_iostream<wchar_t> wiostream; ///< @isiosfwd
+  typedef basic_stringbuf<wchar_t> wstringbuf; ///< @isiosfwd
+  typedef basic_istringstream<wchar_t> wistringstream; ///< @isiosfwd
+  typedef basic_ostringstream<wchar_t> wostringstream; ///< @isiosfwd
+  typedef basic_stringstream<wchar_t> wstringstream; ///< @isiosfwd
+  typedef basic_filebuf<wchar_t> wfilebuf; ///< @isiosfwd
+  typedef basic_ifstream<wchar_t> wifstream; ///< @isiosfwd
+  typedef basic_ofstream<wchar_t> wofstream; ///< @isiosfwd
+  typedef basic_fstream<wchar_t> wfstream; ///< @isiosfwd
 
   /** @}  */
 
-
-} // namespace
-# 39 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/exception" 1 3
+}
+# 39 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ios" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\exception" 1 3
 // Exception Handling support header for -*- C++ -*-
 
 // Copyright (C) 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003,
-// 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
+// 2004, 2005, 2006, 2007, 2008, 2009, 2010
 // Free Software Foundation
 //
 // This file is part of GCC.
@@ -3643,7 +3148,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 /** @file exception
  *  This is a Standard C++ Library header.
  */
-# 35 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/exception" 3
+# 35 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\exception" 3
 
 #pragma GCC visibility push(default)
 
@@ -3731,9 +3236,7 @@ namespace std
   // @} group exceptions
 } // namespace std
 
-namespace __gnu_cxx
-{
-
+namespace __gnu_cxx {
 
   /**
    *  @brief A replacement for the standard terminate_handler which
@@ -3753,14 +3256,13 @@ namespace __gnu_cxx
    */
   void __verbose_terminate_handler();
 
-
-} // namespace
+}
 
 } // extern "C++"
 
 #pragma GCC visibility pop
-# 40 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 1 3
+# 40 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ios" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/char_traits.h" 1 3
 // Character Traits for use by standard string and iostream -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
@@ -3787,21 +3289,21 @@ namespace __gnu_cxx
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/char_traits.h
+/** @file char_traits.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{string}
+ *  You should not attempt to use it directly.
  */
 
 //
 // ISO C++ 14882: 21  Strings library
 //
-# 39 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 3
+# 39 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/char_traits.h" 3
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 1 3
 // Core algorithmic facilities -*- C++ -*-
 
-// Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,
-// 2011 Free Software Foundation, Inc.
+// Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -3849,9 +3351,9 @@ namespace __gnu_cxx
  * purpose.  It is provided "as is" without express or implied warranty.
  */
 
-/** @file bits/stl_algobase.h
+/** @file stl_algobase.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{algorithm}
+ *  You should not attempt to use it directly.
  */
 
 
@@ -3860,10 +3362,11 @@ namespace __gnu_cxx
 
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/functexcept.h" 1 3
-// Function-Based Exception Support -*- C++ -*-
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 1 3
+// -*- C++ -*- forwarding header.
 
-// Copyright (C) 2001, 2004, 2005, 2008, 2009, 2010, 2011
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -3886,10 +3389,78 @@ namespace __gnu_cxx
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/functexcept.h
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{exception}
+/** @file cstddef
+ *  This is a Standard C++ Library file.  You should @c \#include this file
+ *  in your programs, rather than any of the @a *.h implementation files.
  *
+ *  This is the C++ version of the Standard C Library header @c stddef.h,
+ *  and its contents are (mostly) the same as that header, but are all
+ *  contained in the namespace @c std (except for names which are defined
+ *  as macros in C).
+ */
+
+//
+// ISO C++ 14882: 18.1  Types
+//
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 3
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
+/*===---- stddef.h - Basic type definitions --------------------------------===
+ *
+ * Copyright (c) 2008 Eli Friedman
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ *===-----------------------------------------------------------------------===
+ */
+# 56 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 3 4
+/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
+__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
+# 44 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 2 3
+# 62 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/functexcept.h" 1 3
+// Function-Based Exception Support -*- C++ -*-
+
+// Copyright (C) 2001, 2004, 2005, 2008, 2009 Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file functexcept.h
  *  This header provides support for -fno-exceptions.
  */
 
@@ -3903,11 +3474,10 @@ namespace __gnu_cxx
 
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/exception_defines.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\exception_defines.h" 1 3
 // -fno-exceptions Support -*- C++ -*-
 
-// Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2006, 2007, 2008, 2009,
-// 2011
+// Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2006, 2007, 2008, 2009
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -3930,9 +3500,12 @@ namespace __gnu_cxx
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/exception_defines.h
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{exception}
+//
+// ISO C++ 14882: 19.1  Exception classes
+//
+
+/** @file exception_defines.h
+ *  This is a Standard C++ Library header.
  */
 
 
@@ -3940,11 +3513,9 @@ namespace __gnu_cxx
 
 
 // Iff -fno-exceptions, transform error handling code to work without it.
-# 42 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/functexcept.h" 2 3
+# 38 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/functexcept.h" 2 3
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   // Helper for exception objects in <except>
   void
@@ -4003,10 +3574,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
   void
   __throw_bad_function_call() __attribute__((__noreturn__));
 
-
-} // namespace
-# 62 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 1 3
+}
+# 63 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/cpp_type_traits.h" 1 3
 // The  -*- C++ -*- type traits classes for internal use in libstdc++
 
 // Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009, 2010
@@ -4032,13 +3602,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/cpp_type_traits.h
+/** @file cpp_type_traits.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{ext/type_traits}
+ *  You should not attempt to use it directly.
  */
 
 // Written by Gabriel Dos Reis <dosreis@cmla.ens-cachan.fr>
-# 36 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+# 36 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/cpp_type_traits.h" 3
 
 
 
@@ -4071,19 +3641,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
 //
 
 // Forward declaration hack, should really include this from somewhere.
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
+namespace __gnu_cxx {
 
   template<typename _Iterator, typename _Container>
     class __normal_iterator;
 
+}
 
-} // namespace
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   struct __true_type { };
   struct __false_type { };
@@ -4183,7 +3748,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       enum { __value = 1 };
       typedef __true_type __type;
     };
-# 198 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+# 193 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/cpp_type_traits.h" 3
  template<>
     struct __is_integer<short>
     {
@@ -4394,14 +3959,41 @@ namespace std __attribute__ ((__visibility__ ("default")))
       enum { __value = 0 };
       typedef __false_type __type;
     };
-# 422 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
-} // namespace
-# 63 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 1 3
+# 416 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/cpp_type_traits.h" 3
+ template<typename _Tp>
+    class __is_iterator_helper
+    {
+      typedef char __one;
+      typedef struct { char __arr[2]; } __two;
+
+      template<typename _Up>
+        struct _Wrap_type
+ { };
+
+      template<typename _Up>
+        static __one __test(_Wrap_type<typename _Up::iterator_category>*);
+
+      template<typename _Up>
+        static __two __test(...);
+
+    public:
+      static const bool __value = (sizeof(__test<_Tp>(0)) == 1
+       || __is_pointer<_Tp>::__value);
+    };
+
+  template<typename _Tp>
+    struct __is_iterator
+    {
+      enum { __value = __is_iterator_helper<_Tp>::__value };
+      typedef typename __truth_type<__value>::__type __type;
+    };
+
+}
+# 64 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ext/type_traits.h" 1 3
 // -*- C++ -*-
 
-// Copyright (C) 2005, 2006, 2007, 2009, 2010, 2011
-// Free Software Foundation, Inc.
+// Copyright (C) 2005, 2006, 2007, 2009 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the terms
@@ -4426,14 +4018,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 /** @file ext/type_traits.h
  *  This file is a GNU extension to the Standard C++ Library.
  */
-# 33 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3
+# 32 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ext/type_traits.h" 3
 
 
 
 
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
+namespace __gnu_cxx {
 
   // Define a nested type if some predicate holds.
   template<bool, typename>
@@ -4558,59 +4148,52 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
     struct __promote
     { typedef double __type; };
 
-  // No nested __type member for non-integer non-floating point types,
-  // allows this type to be used for SFINAE to constrain overloads in
-  // <cmath> and <complex> to only the intended types.
   template<typename _Tp>
     struct __promote<_Tp, false>
-    { };
+    { typedef _Tp __type; };
 
-  template<>
-    struct __promote<long double>
-    { typedef long double __type; };
-
-  template<>
-    struct __promote<double>
-    { typedef double __type; };
-
-  template<>
-    struct __promote<float>
-    { typedef float __type; };
-
-  template<typename _Tp, typename _Up,
-           typename _Tp2 = typename __promote<_Tp>::__type,
-           typename _Up2 = typename __promote<_Up>::__type>
+  template<typename _Tp, typename _Up>
     struct __promote_2
     {
-      typedef __typeof__(_Tp2() + _Up2()) __type;
+    private:
+      typedef typename __promote<_Tp>::__type __type1;
+      typedef typename __promote<_Up>::__type __type2;
+
+    public:
+      typedef __typeof__(__type1() + __type2()) __type;
     };
 
-  template<typename _Tp, typename _Up, typename _Vp,
-           typename _Tp2 = typename __promote<_Tp>::__type,
-           typename _Up2 = typename __promote<_Up>::__type,
-           typename _Vp2 = typename __promote<_Vp>::__type>
+  template<typename _Tp, typename _Up, typename _Vp>
     struct __promote_3
     {
-      typedef __typeof__(_Tp2() + _Up2() + _Vp2()) __type;
+    private:
+      typedef typename __promote<_Tp>::__type __type1;
+      typedef typename __promote<_Up>::__type __type2;
+      typedef typename __promote<_Vp>::__type __type3;
+
+    public:
+      typedef __typeof__(__type1() + __type2() + __type3()) __type;
     };
 
-  template<typename _Tp, typename _Up, typename _Vp, typename _Wp,
-           typename _Tp2 = typename __promote<_Tp>::__type,
-           typename _Up2 = typename __promote<_Up>::__type,
-           typename _Vp2 = typename __promote<_Vp>::__type,
-           typename _Wp2 = typename __promote<_Wp>::__type>
+  template<typename _Tp, typename _Up, typename _Vp, typename _Wp>
     struct __promote_4
     {
-      typedef __typeof__(_Tp2() + _Up2() + _Vp2() + _Wp2()) __type;
+    private:
+      typedef typename __promote<_Tp>::__type __type1;
+      typedef typename __promote<_Up>::__type __type2;
+      typedef typename __promote<_Vp>::__type __type3;
+      typedef typename __promote<_Wp>::__type __type4;
+
+    public:
+      typedef __typeof__(__type1() + __type2() + __type3() + __type4()) __type;
     };
 
-
-} // namespace
-# 64 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 1 3
+}
+# 65 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ext/numeric_traits.h" 1 3
 // -*- C++ -*-
 
-// Copyright (C) 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
+// Copyright (C) 2007, 2009 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the terms
@@ -4635,18 +4218,16 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 /** @file ext/numeric_traits.h
  *  This file is a GNU extension to the Standard C++ Library.
  */
-# 32 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 3
+# 32 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ext/numeric_traits.h" 3
 
 
 
 
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
+namespace __gnu_cxx {
 
   // Compile time constants for builtin types.
   // Sadly std::numeric_limits member functions cannot be used for this.
-# 53 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 3
+# 51 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ext/numeric_traits.h" 3
  template<typename _Value>
     struct __numeric_traits_integer
     {
@@ -4671,12 +4252,12 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
   template<typename _Value>
     const int __numeric_traits_integer<_Value>::__digits;
-# 98 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 3
+# 96 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ext/numeric_traits.h" 3
  template<typename _Value>
     struct __numeric_traits_floating
     {
       // Only floating point types. See N1822. 
-      static const int __max_digits10 = (2 + (std::__are_same<_Value, float>::__value ? 24 : std::__are_same<_Value, double>::__value ? 53 : 64) * 643L / 2136);
+      static const int __max_digits10 = (2 + (std::__are_same<_Value, float>::__value ? 24 : std::__are_same<_Value, double>::__value ? 53 : 64) * 3010 / 10000);
 
       // See above comment...
       static const bool __is_signed = true;
@@ -4703,10 +4284,9 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
     __numeric_traits_floating<_Value> >::__type
     { };
 
-
-} // namespace
-# 65 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 1 3
+}
+# 66 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_pair.h" 1 3
 // Pair implementation -*- C++ -*-
 
 // Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
@@ -4758,9 +4338,9 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
  * purpose.  It is provided "as is" without express or implied warranty.
  */
 
-/** @file bits/stl_pair.h
+/** @file stl_pair.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{utility}
+ *  You should not attempt to use it directly.
  */
 
 
@@ -4768,10 +4348,10 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/move.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/move.h" 1 3
 // Move, forward and identity for C++0x + swap -*- C++ -*-
 
-// Copyright (C) 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
+// Copyright (C) 2007, 2008, 2009 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -4793,9 +4373,9 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/move.h
+/** @file move.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{utility}
+ *  You should not attempt to use it directly.
  */
 
 
@@ -4804,10 +4384,83 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/concept_check.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 1 3
+// -*- C++ -*- forwarding header.
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file cstddef
+ *  This is a Standard C++ Library file.  You should @c \#include this file
+ *  in your programs, rather than any of the @a *.h implementation files.
+ *
+ *  This is the C++ version of the Standard C Library header @c stddef.h,
+ *  and its contents are (mostly) the same as that header, but are all
+ *  contained in the namespace @c std (except for names which are defined
+ *  as macros in C).
+ */
+
+//
+// ISO C++ 14882: 18.1  Types
+//
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 3
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
+/*===---- stddef.h - Basic type definitions --------------------------------===
+ *
+ * Copyright (c) 2008 Eli Friedman
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ *===-----------------------------------------------------------------------===
+ */
+# 56 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 3 4
+/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
+__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
+# 44 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 2 3
+# 35 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/move.h" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/concept_check.h" 1 3
 // Concept-checking control -*- C++ -*-
 
-// Copyright (C) 2001, 2009, 2010 Free Software Foundation, Inc.
+// Copyright (C) 2001, 2009 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -4829,11 +4482,11 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/concept_check.h
+/** @file concept_check.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{iterator}
+ *  You should not attempt to use it directly.
  */
-# 33 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/concept_check.h" 3
+# 33 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/concept_check.h" 3
 
 
 
@@ -4844,27 +4497,9 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
 // Concept-checking code is off by default unless users turn it on via
 // configure options or editing c++config.h.
-# 35 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/move.h" 2 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  // Used, in C++03 mode too, by allocators, etc.
-  template<typename _Tp>
-    inline _Tp*
-    __addressof(_Tp& __r)
-    {
-      return reinterpret_cast<_Tp*>
- (&const_cast<char&>(reinterpret_cast<const volatile char&>(__r)));
-    }
-
-
-} // namespace
-# 109 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/move.h" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+# 36 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/move.h" 2 3
+# 95 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/move.h" 3
+namespace std {
 
   /**
    *  @brief Swaps two values.
@@ -4895,43 +4530,43 @@ namespace std __attribute__ ((__visibility__ ("default")))
  swap(__a[__n], __b[__n]);
     }
 
-
-} // namespace
-# 61 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 2 3
-
-
+}
+# 61 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_pair.h" 2 3
+ // std::swap
 
 
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-# 85 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 3
- /// Struct holding two objects of arbitrary type.
+
+
+namespace std {
+
+  /// pair holds two objects of arbitrary type.
   template<class _T1, class _T2>
     struct pair
     {
-      typedef _T1 first_type; /// @c first_type is the first bound type
-      typedef _T2 second_type; /// @c second_type is the second bound type
+      typedef _T1 first_type; ///<  @c first_type is the first bound type
+      typedef _T2 second_type; ///<  @c second_type is the second bound type
 
-      _T1 first; /// @c first is a copy of the first object
-      _T2 second; /// @c second is a copy of the second object
+      _T1 first; ///< @c first is a copy of the first object
+      _T2 second; ///< @c second is a copy of the second object
 
       // _GLIBCXX_RESOLVE_LIB_DEFECTS
       // 265.  std::pair::pair() effects overly restrictive
       /** The default constructor creates @c first and @c second using their
        *  respective default constructors.  */
-                         pair()
+      pair()
       : first(), second() { }
 
       /** Two objects may be passed to a @c pair constructor to be copied.  */
-                         pair(const _T1& __a, const _T2& __b)
+      pair(const _T1& __a, const _T2& __b)
       : first(__a), second(__b) { }
-
-      /** There is also a templated copy ctor for the @c pair class itself.  */
+# 112 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_pair.h" 3
+ /** There is also a templated copy ctor for the @c pair class itself.  */
       template<class _U1, class _U2>
-                    pair(const pair<_U1, _U2>& __p)
- : first(__p.first), second(__p.second) { }
-# 196 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 3
+        pair(const pair<_U1, _U2>& __p)
+ : first(__p.first),
+   second(__p.second) { }
+# 149 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_pair.h" 3
  };
 
   /// Two pairs of the same type are equal iff their members are equal.
@@ -4970,7 +4605,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     inline bool
     operator>=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
     { return !(__x < __y); }
-# 245 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 3
+# 198 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_pair.h" 3
  /**
    *  @brief A convenience wrapper for creating a pair from two objects.
    *  @param  x  The first object.
@@ -4983,17 +4618,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
    */
   // _GLIBCXX_RESOLVE_LIB_DEFECTS
   // 181.  make_pair() unintended behavior
-# 270 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 3
- template<class _T1, class _T2>
+
+  template<class _T1, class _T2>
     inline pair<_T1, _T2>
     make_pair(_T1 __x, _T2 __y)
     { return pair<_T1, _T2>(__x, __y); }
-
-
-
-} // namespace
-# 66 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 1 3
+# 257 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_pair.h" 3
+}
+# 67 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_iterator_base_types.h" 1 3
 // Types used in iterator implementation -*- C++ -*-
 
 // Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
@@ -5045,24 +4678,91 @@ namespace std __attribute__ ((__visibility__ ("default")))
  * purpose.  It is provided "as is" without express or implied warranty.
  */
 
-/** @file bits/stl_iterator_base_types.h
+/** @file stl_iterator_base_types.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{iterator}
+ *  You should not attempt to use it directly.
  *
  *  This file contains all of the general iterator-related utility types,
  *  such as iterator_traits and struct iterator.
  */
-# 63 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 3
+# 63 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_iterator_base_types.h" 3
 
 
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 1 3
+// -*- C++ -*- forwarding header.
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file cstddef
+ *  This is a Standard C++ Library file.  You should @c \#include this file
+ *  in your programs, rather than any of the @a *.h implementation files.
+ *
+ *  This is the C++ version of the Standard C Library header @c stddef.h,
+ *  and its contents are (mostly) the same as that header, but are all
+ *  contained in the namespace @c std (except for names which are defined
+ *  as macros in C).
+ */
+
+//
+// ISO C++ 14882: 18.1  Types
+//
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 3
 
 
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
+/*===---- stddef.h - Basic type definitions --------------------------------===
+ *
+ * Copyright (c) 2008 Eli Friedman
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ *===-----------------------------------------------------------------------===
+ */
+# 56 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 3 4
+/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
+__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
+# 44 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 2 3
+# 66 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_iterator_base_types.h" 2 3
 
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   /**
    *  @defgroup iterators Iterators
@@ -5130,8 +4830,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    *  argument.  Specialized versions for pointers and pointers-to-const
    *  provide tighter, more correct semantics.
   */
-# 162 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 3
- template<typename _Iterator>
+  template<typename _Iterator>
     struct iterator_traits
     {
       typedef typename _Iterator::iterator_category iterator_category;
@@ -5140,7 +4839,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
       typedef typename _Iterator::pointer pointer;
       typedef typename _Iterator::reference reference;
     };
-
 
   /// Partial specialization for pointer types.
   template<typename _Tp>
@@ -5175,28 +4873,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   //@}
 
-  // If _Iterator has a base returns it otherwise _Iterator is returned
-  // untouched
-  template<typename _Iterator, bool _HasBase>
-    struct _Iter_base
-    {
-      typedef _Iterator iterator_type;
-      static iterator_type _S_base(_Iterator __it)
-      { return __it; }
-    };
-
-  template<typename _Iterator>
-    struct _Iter_base<_Iterator, true>
-    {
-      typedef typename _Iterator::iterator_type iterator_type;
-      static iterator_type _S_base(_Iterator __it)
-      { return __it.base(); }
-    };
-
-
-} // namespace
-# 67 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 1 3
+}
+# 68 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_iterator_base_funcs.h" 1 3
 // Functions used by iterators -*- C++ -*-
 
 // Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
@@ -5248,20 +4927,18 @@ namespace std __attribute__ ((__visibility__ ("default")))
  * purpose.  It is provided "as is" without express or implied warranty.
  */
 
-/** @file bits/stl_iterator_base_funcs.h
+/** @file stl_iterator_base_funcs.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{iterator}
+ *  You should not attempt to use it directly.
  *
  *  This file contains all of the general iterator-related utility
  *  functions, such as distance() and advance().
  */
-# 63 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 3
+# 63 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_iterator_base_funcs.h" 3
 
 
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   template<typename _InputIterator>
     inline typename iterator_traits<_InputIterator>::difference_type
@@ -5369,10 +5046,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
       typename iterator_traits<_InputIterator>::difference_type __d = __n;
       std::__advance(__i, __d, std::__iterator_category(__i));
     }
-# 200 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 3
-} // namespace
-# 68 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 1 3
+
+}
+# 69 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_iterator.h" 1 3
 // Iterators -*- C++ -*-
 
 // Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
@@ -5424,18 +5101,16 @@ namespace std __attribute__ ((__visibility__ ("default")))
  * purpose.  It is provided "as is" without express or implied warranty.
  */
 
-/** @file bits/stl_iterator.h
+/** @file stl_iterator.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{iterator}
+ *  You should not attempt to use it directly.
  *
  *  This file implements reverse_iterator, back_insert_iterator,
  *  front_insert_iterator, insert_iterator, __normal_iterator, and their
  *  supporting functions and overloaded operators.
  */
-# 68 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+# 68 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_iterator.h" 3
+namespace std {
 
   /**
    * @addtogroup iterators
@@ -5793,7 +5468,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  container->push_back(__value);
  return *this;
       }
-# 444 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 442 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_iterator.h" 3
  /// Simply returns *this.
       back_insert_iterator&
       operator*()
@@ -5868,7 +5543,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  container->push_front(__value);
  return *this;
       }
-# 534 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 532 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_iterator.h" 3
  /// Simply returns *this.
       front_insert_iterator&
       operator*()
@@ -5965,7 +5640,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  ++iter;
  return *this;
       }
-# 648 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 646 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_iterator.h" 3
  /// Simply returns *this.
       insert_iterator&
       operator*()
@@ -6003,12 +5678,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   // @} group iterators
 
+}
 
-} // namespace
-
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
+namespace __gnu_cxx {
 
   // This iterator adapter is @a normal in the sense that it does not
   // change the semantics of any of the operators of its iterator
@@ -6035,7 +5707,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
       typedef typename __traits_type::reference reference;
       typedef typename __traits_type::pointer pointer;
 
-                         __normal_iterator() : _M_current(_Iterator()) { }
+      __normal_iterator() : _M_current(_Iterator()) { }
 
       explicit
       __normal_iterator(const _Iterator& __i) : _M_current(__i) { }
@@ -6218,14 +5890,13 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
        __n, const __normal_iterator<_Iterator, _Container>& __i)
     { return __normal_iterator<_Iterator, _Container>(__i.base() + __n); }
 
+}
+# 70 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 2 3
 
-} // namespace
-# 69 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/debug/debug.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\debug/debug.h" 1 3
 // Debugging support implementation -*- C++ -*-
 
-// Copyright (C) 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
+// Copyright (C) 2003, 2004, 2005, 2006, 2007, 2008, 2009
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -6281,12 +5952,10 @@ namespace __gnu_debug
 {
   using namespace std::__debug;
 }
-# 71 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
+# 72 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 2 3
 
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   // See http://gcc.gnu.org/ml/libstdc++/2004-08/msg00167.html: in a
   // nutshell, we are partially implementing the resolution of DR 187,
@@ -6337,7 +6006,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  _ValueType2;
 
       // concept requirements
-# 135 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 134 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 3
  typedef typename iterator_traits<_ForwardIterator1>::reference
  _ReferenceType1;
       typedef typename iterator_traits<_ForwardIterator2>::reference
@@ -6465,6 +6134,27 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return __a;
     }
 
+
+  // If _Iterator has a base returns it otherwise _Iterator is returned
+  // untouched
+  template<typename _Iterator, bool _HasBase>
+    struct _Iter_base
+    {
+      typedef _Iterator iterator_type;
+      static iterator_type
+      _S_base(_Iterator __it)
+      { return __it; }
+    };
+
+  template<typename _Iterator>
+    struct _Iter_base<_Iterator, true>
+    {
+      typedef typename _Iterator::iterator_type iterator_type;
+      static iterator_type
+      _S_base(_Iterator __it)
+      { return __it.base(); }
+    };
+
   // If _Iterator is a __normal_iterator return its base (a plain pointer,
   // normally) otherwise return it untouched.  See copy, fill, ... 
   template<typename _Iterator>
@@ -6506,7 +6196,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return __result;
  }
     };
-# 319 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 339 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 3
  template<>
     struct __copy_move<false, false, random_access_iterator_tag>
     {
@@ -6524,7 +6214,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return __result;
  }
     };
-# 357 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 377 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 3
  template<bool _IsMove>
     struct __copy_move<_IsMove, true, random_access_iterator_tag>
     {
@@ -6546,7 +6236,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       typedef typename iterator_traits<_II>::value_type _ValueTypeI;
       typedef typename iterator_traits<_OI>::value_type _ValueTypeO;
       typedef typename iterator_traits<_II>::iterator_category _Category;
-      const bool __simple = (__is_trivial(_ValueTypeI)
+      const bool __simple = (__is_pod(_ValueTypeI)
                       && __is_pointer<_II>::__value
                       && __is_pointer<_OI>::__value
         && __are_same<_ValueTypeI, _ValueTypeO>::__value);
@@ -6624,7 +6314,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        (std::__miter_base(__first), std::__miter_base(__last),
         __result));
     }
-# 494 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 514 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 3
  template<bool, bool, typename>
     struct __copy_move_backward
     {
@@ -6637,7 +6327,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return __result;
  }
     };
-# 522 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 542 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 3
  template<>
     struct __copy_move_backward<false, false, random_access_iterator_tag>
     {
@@ -6651,7 +6341,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return __result;
  }
     };
-# 552 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 572 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 3
  template<bool _IsMove>
     struct __copy_move_backward<_IsMove, true, random_access_iterator_tag>
     {
@@ -6673,7 +6363,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       typedef typename iterator_traits<_BI1>::value_type _ValueType1;
       typedef typename iterator_traits<_BI2>::value_type _ValueType2;
       typedef typename iterator_traits<_BI1>::iterator_category _Category;
-      const bool __simple = (__is_trivial(_ValueType1)
+      const bool __simple = (__is_pod(_ValueType1)
                       && __is_pointer<_BI1>::__value
                       && __is_pointer<_BI2>::__value
         && __are_same<_ValueType1, _ValueType2>::__value);
@@ -6727,7 +6417,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        (std::__miter_base(__first), std::__miter_base(__last),
         __result));
     }
-# 669 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 689 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_algobase.h" 3
  template<typename _ForwardIterator, typename _Tp>
     inline typename
     __gnu_cxx::__enable_if<!__is_scalar<_Tp>::__value, void>::__type
@@ -6790,8 +6480,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     __gnu_cxx::__enable_if<!__is_scalar<_Tp>::__value, _OutputIterator>::__type
     __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value)
     {
-      for (__decltype(__n + 0) __niter = __n;
-    __niter > 0; --__niter, ++__first)
+      for (; __n > 0; --__n, ++__first)
  *__first = __value;
       return __first;
     }
@@ -6802,8 +6491,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value)
     {
       const _Tp __tmp = __value;
-      for (__decltype(__n + 0) __niter = __n;
-    __niter > 0; --__niter, ++__first)
+      for (; __n > 0; --__n, ++__first)
  *__first = __tmp;
       return __first;
     }
@@ -7009,11 +6697,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
                                                                   ;
 
       _DistanceType __len = std::distance(__first, __last);
+      _DistanceType __half;
+      _ForwardIterator __middle;
 
       while (__len > 0)
  {
-   _DistanceType __half = __len >> 1;
-   _ForwardIterator __middle = __first;
+   __half = __len >> 1;
+   __middle = __first;
    std::advance(__middle, __half);
    if (*__middle < __val)
      {
@@ -7051,9 +6741,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
   __lg(long long __n)
   { return sizeof(long long) * 8 - 1 - __builtin_clzll(__n); }
 
+}
 
-
-
+namespace std {
 
   /**
    *  @brief Tests a range for element-wise equality.
@@ -7260,15 +6950,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return pair<_InputIterator1, _InputIterator2>(__first1, __first2);
     }
 
-
-} // namespace std
+}
 
 // NB: This file is included within many other C++ includes, as a way
 // of getting the base algorithms. So, make sure that parallel bits
 // come in too if requested. 
-# 41 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 2 3
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/char_traits.h" 2 3
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cwchar" 1 3
 // -*- C++ -*- forwarding header.
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
@@ -7308,12 +6997,92 @@ namespace std __attribute__ ((__visibility__ ("default")))
 //
 // ISO C++ 14882: 21.4
 //
-# 41 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
-# 43 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 2 3
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cwchar" 3
 
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
 
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 1 3
+// -*- C++ -*- forwarding header.
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file cstddef
+ *  This is a Standard C++ Library file.  You should @c \#include this file
+ *  in your programs, rather than any of the @a *.h implementation files.
+ *
+ *  This is the C++ version of the Standard C Library header @c stddef.h,
+ *  and its contents are (mostly) the same as that header, but are all
+ *  contained in the namespace @c std (except for names which are defined
+ *  as macros in C).
+ */
+
+//
+// ISO C++ 14882: 18.1  Types
+//
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 3
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
+/*===---- stddef.h - Basic type definitions --------------------------------===
+ *
+ * Copyright (c) 2008 Eli Friedman
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ *===-----------------------------------------------------------------------===
+ */
+# 56 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 3 4
+/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
+__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
+# 44 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 2 3
+# 44 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cwchar" 2 3
+# 43 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/char_traits.h" 2 3
+
+
+
+
+
+
+
+
+namespace __gnu_cxx {
 
   /**
    *  @brief  Mapping from character type to associated types.
@@ -7403,7 +7172,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
       static int_type
       eof()
-      { return static_cast<int_type>(-1); }
+      { return static_cast<int_type>((-1)); }
 
       static int_type
       not_eof(const int_type& __c)
@@ -7474,12 +7243,9 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
       return __s;
     }
 
+}
 
-} // namespace
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   // 21.1
   /**
@@ -7561,7 +7327,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       static int_type
       eof()
-      { return static_cast<int_type>(-1); }
+      { return static_cast<int_type>((-1)); }
 
       static int_type
       not_eof(const int_type& __c)
@@ -7630,7 +7396,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       static int_type
       eof()
-      { return static_cast<int_type>((0xffffffffu)); }
+      { return static_cast<int_type>((wint_t)(0xFFFF)); }
 
       static int_type
       not_eof(const int_type& __c)
@@ -7638,10 +7404,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
   };
 
 
-
-} // namespace
-# 41 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 1 3
+}
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ios" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/localefwd.h" 1 3
 // Locale support -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
@@ -7668,21 +7433,21 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/localefwd.h
+/** @file localefwd.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{locale}
+ *  You should not attempt to use it directly.
  */
 
 //
 // ISO C++ 14882: 22.1  Locales
 //
-# 39 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 3
+# 39 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/localefwd.h" 3
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++locale.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++locale.h" 1 3
 // Wrapper for underlying C-language localization -*- C++ -*-
 
-// Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009, 2010
+// Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -7705,9 +7470,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/c++locale.h
+/** @file c++locale.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{locale}
+ *  You should not attempt to use it directly.
  */
 
 //
@@ -7715,9 +7480,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
 //
 
 // Written by Benjamin Kosnik <bkoz@redhat.com>
-# 40 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++locale.h" 3
+# 40 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++locale.h" 3
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/clocale" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\clocale" 1 3
 // -*- C++ -*- forwarding header.
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
@@ -7757,33 +7522,136 @@ namespace std __attribute__ ((__visibility__ ("default")))
 //
 // ISO C++ 14882: 18.2.2  Implementation properties: C library
 //
-# 41 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/clocale" 3
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\clocale" 3
 
 
-# 1 "/usr/include/locale.h" 1 3 4
-/* Copyright (C) 1991,92,95-99,2000,01,02 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/*
- *	ISO C99 Standard: 7.11 Localization	<locale.h>
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\locale.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 30 "/usr/include/locale.h" 3 4
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+
+
+
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
+ */
+# 9 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\locale.h" 2 3
+
+
+#pragma pack(push,_CRT_PACKING)
+
+
+extern "C" {
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\locale.h" 3
+ struct lconv {
+    char *decimal_point;
+    char *thousands_sep;
+    char *grouping;
+    char *int_curr_symbol;
+    char *currency_symbol;
+    char *mon_decimal_point;
+    char *mon_thousands_sep;
+    char *mon_grouping;
+    char *positive_sign;
+    char *negative_sign;
+    char int_frac_digits;
+    char frac_digits;
+    char p_cs_precedes;
+    char p_sep_by_space;
+    char n_cs_precedes;
+    char n_sep_by_space;
+    char p_sign_posn;
+    char n_sign_posn;
+  };
+# 75 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\locale.h" 3
+ int _configthreadlocale(int _Flag);
+  char * setlocale(int _Category,const char *_Locale);
+  __attribute__ ((__dllimport__)) struct lconv * localeconv(void);
+  _locale_t _get_current_locale(void);
+  _locale_t _create_locale(int _Category,const char *_Locale);
+  void _free_locale(_locale_t _Locale);
+  _locale_t __get_current_locale(void);
+  _locale_t __create_locale(int _Category,const char *_Locale);
+  void __free_locale(_locale_t _Locale);
+
+
+
+
+
+
+
+}
+
+
+#pragma pack(pop)
+# 44 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\clocale" 2 3
+
+
+
+
+// Get rid of those macros defined in <locale.h> in lieu of real functions.
+
+
+
+namespace std {
+
+  using ::lconv;
+  using ::setlocale;
+  using ::localeconv;
+
+}
+# 42 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++locale.h" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 1 3
+// -*- C++ -*- forwarding header.
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file cstddef
+ *  This is a Standard C++ Library file.  You should @c \#include this file
+ *  in your programs, rather than any of the @a *.h implementation files.
+ *
+ *  This is the C++ version of the Standard C Library header @c stddef.h,
+ *  and its contents are (mostly) the same as that header, but are all
+ *  contained in the namespace @c std (except for names which are defined
+ *  as macros in C).
+ */
+
+//
+// ISO C++ 14882: 18.1  Types
+//
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 3
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
 /*===---- stddef.h - Basic type definitions --------------------------------===
  *
  * Copyright (c) 2008 Eli Friedman
@@ -7808,231 +7676,38 @@ namespace std __attribute__ ((__visibility__ ("default")))
  *
  *===-----------------------------------------------------------------------===
  */
-# 56 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+# 56 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 3 4
 /* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
 __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
-# 30 "/usr/include/locale.h" 2 3 4
-# 1 "/usr/include/bits/locale.h" 1 3 4
-/* Definition of locale category symbol values.
-   Copyright (C) 2001 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-# 27 "/usr/include/bits/locale.h" 3 4
-enum
-{
-  __LC_CTYPE = 0,
-  __LC_NUMERIC = 1,
-  __LC_TIME = 2,
-  __LC_COLLATE = 3,
-  __LC_MONETARY = 4,
-  __LC_MESSAGES = 5,
-  __LC_ALL = 6,
-  __LC_PAPER = 7,
-  __LC_NAME = 8,
-  __LC_ADDRESS = 9,
-  __LC_TELEPHONE = 10,
-  __LC_MEASUREMENT = 11,
-  __LC_IDENTIFICATION = 12
-};
-# 31 "/usr/include/locale.h" 2 3 4
-
-extern "C" {
-
-/* These are the possibilities for the first argument to setlocale.
-   The code assumes that the lowest LC_* symbol has the value zero.  */
-# 51 "/usr/include/locale.h" 3 4
-/* Structure giving information about numeric and monetary notation.  */
-struct lconv
-{
-  /* Numeric (non-monetary) information.  */
-
-  char *decimal_point; /* Decimal point character.  */
-  char *thousands_sep; /* Thousands separator.  */
-  /* Each element is the number of digits in each group;
-     elements with higher indices are farther left.
-     An element with value CHAR_MAX means that no further grouping is done.
-     An element with value 0 means that the previous element is used
-     for all groups farther left.  */
-  char *grouping;
-
-  /* Monetary information.  */
-
-  /* First three chars are a currency symbol from ISO 4217.
-     Fourth char is the separator.  Fifth char is '\0'.  */
-  char *int_curr_symbol;
-  char *currency_symbol; /* Local currency symbol.  */
-  char *mon_decimal_point; /* Decimal point character.  */
-  char *mon_thousands_sep; /* Thousands separator.  */
-  char *mon_grouping; /* Like `grouping' element (above).  */
-  char *positive_sign; /* Sign for positive values.  */
-  char *negative_sign; /* Sign for negative values.  */
-  char int_frac_digits; /* Int'l fractional digits.  */
-  char frac_digits; /* Local fractional digits.  */
-  /* 1 if currency_symbol precedes a positive value, 0 if succeeds.  */
-  char p_cs_precedes;
-  /* 1 iff a space separates currency_symbol from a positive value.  */
-  char p_sep_by_space;
-  /* 1 if currency_symbol precedes a negative value, 0 if succeeds.  */
-  char n_cs_precedes;
-  /* 1 iff a space separates currency_symbol from a negative value.  */
-  char n_sep_by_space;
-  /* Positive and negative sign positions:
-     0 Parentheses surround the quantity and currency_symbol.
-     1 The sign string precedes the quantity and currency_symbol.
-     2 The sign string follows the quantity and currency_symbol.
-     3 The sign string immediately precedes the currency_symbol.
-     4 The sign string immediately follows the currency_symbol.  */
-  char p_sign_posn;
-  char n_sign_posn;
-
-  /* 1 if int_curr_symbol precedes a positive value, 0 if succeeds.  */
-  char int_p_cs_precedes;
-  /* 1 iff a space separates int_curr_symbol from a positive value.  */
-  char int_p_sep_by_space;
-  /* 1 if int_curr_symbol precedes a negative value, 0 if succeeds.  */
-  char int_n_cs_precedes;
-  /* 1 iff a space separates int_curr_symbol from a negative value.  */
-  char int_n_sep_by_space;
-  /* Positive and negative sign positions:
-     0 Parentheses surround the quantity and int_curr_symbol.
-     1 The sign string precedes the quantity and int_curr_symbol.
-     2 The sign string follows the quantity and int_curr_symbol.
-     3 The sign string immediately precedes the int_curr_symbol.
-     4 The sign string immediately follows the int_curr_symbol.  */
-  char int_p_sign_posn;
-  char int_n_sign_posn;
-# 119 "/usr/include/locale.h" 3 4
-};
+# 44 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 2 3
+# 43 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++locale.h" 2 3
 
 
 
+namespace std {
 
-/* Set and/or return the current locale.  */
-extern char *setlocale (int __category, __const char *__locale) throw ();
-
-/* Return the numeric/monetary information for the current locale.  */
-extern struct lconv *localeconv (void) throw ();
-
-
-
-
-
-/* The concept of one static locale per category is not very well
-   thought out.  Many applications will need to process its data using
-   information from several different locales.  Another application is
-   the implementation of the internationalization handling in the
-   upcoming ISO C++ standard library.  To support this another set of
-   the functions using locale data exist which have an additional
-   argument.
-
-   Attention: all these functions are *not* standardized in any form.
-   This is a proof-of-concept implementation.  */
-
-/* Get locale datatype definition.  */
-
-
-typedef __locale_t locale_t;
-
-/* Return a reference to a data structure representing a set of locale
-   datasets.  Unlike for the CATEGORY parameter for `setlocale' the
-   CATEGORY_MASK parameter here uses a single bit for each category,
-   made by OR'ing together LC_*_MASK bits above.  */
-extern __locale_t newlocale (int __category_mask, __const char *__locale,
-        __locale_t __base) throw ();
-
-/* These are the bits that can be set in the CATEGORY_MASK argument to
-   `newlocale'.  In the GNU implementation, LC_FOO_MASK has the value
-   of (1 << LC_FOO), but this is not a part of the interface that
-   callers can assume will be true.  */
-# 187 "/usr/include/locale.h" 3 4
-/* Return a duplicate of the set of locale in DATASET.  All usage
-   counters are increased if necessary.  */
-extern __locale_t duplocale (__locale_t __dataset) throw ();
-
-/* Free the data associated with a locale dataset previously returned
-   by a call to `setlocale_r'.  */
-extern void freelocale (__locale_t __dataset) throw ();
-
-/* Switch the current thread's locale to DATASET.
-   If DATASET is null, instead just return the current setting.
-   The special value LC_GLOBAL_LOCALE is the initial setting
-   for all threads and can also be installed any time, meaning
-   the thread uses the global settings controlled by `setlocale'.  */
-extern __locale_t uselocale (__locale_t __dataset) throw ();
-
-/* This value can be passed to `uselocale' and may be returned by it.
-   Passing this value to any other function has undefined behavior.  */
-
-
-
-
-}
-# 44 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/clocale" 2 3
-
-
-
-
-// Get rid of those macros defined in <locale.h> in lieu of real functions.
-
-
-
-namespace std
-{
-  using ::lconv;
-  using ::setlocale;
-  using ::localeconv;
-} // namespace std
-# 42 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++locale.h" 2 3
-
-
-
-
-
-
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
-
-  extern "C" __typeof(uselocale) __uselocale;
-
-
-} // namespace
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  typedef __locale_t __c_locale;
+  typedef int* __c_locale;
 
   // Convert numeric value of type double and long double to string and
   // return length of string.  If vsnprintf is available use it, otherwise
   // fall back to the unsafe vsprintf which, in general, can be dangerous
   // and should be avoided.
   inline int
-  __convert_from_v(const __c_locale& __cloc __attribute__ ((__unused__)),
-     char* __out,
-     const int __size __attribute__ ((__unused__)),
+  __convert_from_v(const __c_locale&, char* __out,
+     const int __size __attribute__((__unused__)),
      const char* __fmt, ...)
   {
+    char* __old = std::setlocale(4, __null);
+    char* __sav = __null;
+    if (__builtin_strcmp(__old, "C"))
+      {
+ const size_t __len = __builtin_strlen(__old) + 1;
+ __sav = new char[__len];
+ __builtin_memcpy(__sav, __old, __len);
+ std::setlocale(4, "C");
+      }
 
-    __c_locale __old = __gnu_cxx::__uselocale(__cloc);
-# 88 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++locale.h" 3
- __builtin_va_list __args;
+    __builtin_va_list __args;
     __builtin_va_start(__args, __fmt);
 
 
@@ -8043,23 +7718,18 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
     __builtin_va_end(__args);
 
-
-    __gnu_cxx::__uselocale(__old);
-
-
-
-
-
-
-
+    if (__sav)
+      {
+ std::setlocale(4, __sav);
+ delete [] __sav;
+      }
     return __ret;
   }
 
+}
+# 42 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/localefwd.h" 2 3
 
-} // namespace
-# 42 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 2 3
-
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cctype" 1 3
 // -*- C++ -*- forwarding header.
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
@@ -8099,477 +7769,95 @@ namespace std __attribute__ ((__visibility__ ("default")))
 //
 // ISO C++ 14882: <ccytpe>
 //
-# 41 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 3
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cctype" 3
 
 
-# 1 "/usr/include/ctype.h" 1 3 4
-/* Copyright (C) 1991,92,93,95,96,97,98,99,2001,2002,2004
-   	Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/*
- *	ISO C99 Standard 7.4: Character handling	<ctype.h>
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\ctype.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
 
 
 
 
 
-
-
-# 1 "/usr/include/bits/types.h" 1 3 4
-/* bits/types.h -- definitions of __*_t types underlying *_t types.
-   Copyright (C) 2002, 2003, 2004, 2005 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/*
- * Never include this file directly; use <sys/types.h> instead.
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
+# 9 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\ctype.h" 2 3
 
 
-
-
-
-
-
-# 1 "/usr/include/bits/wordsize.h" 1 3 4
-/* Determine the wordsize from the preprocessor defines.  */
-# 29 "/usr/include/bits/types.h" 2 3 4
-
-
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
-/*===---- stddef.h - Basic type definitions --------------------------------===
- *
- * Copyright (c) 2008 Eli Friedman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- *===-----------------------------------------------------------------------===
- */
-# 56 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
-/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
-__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
-# 32 "/usr/include/bits/types.h" 2 3 4
-
-/* Convenience types.  */
-typedef unsigned char __u_char;
-typedef unsigned short int __u_short;
-typedef unsigned int __u_int;
-typedef unsigned long int __u_long;
-
-/* Fixed-size types, underlying types depend on word size and compiler.  */
-typedef signed char __int8_t;
-typedef unsigned char __uint8_t;
-typedef signed short int __int16_t;
-typedef unsigned short int __uint16_t;
-typedef signed int __int32_t;
-typedef unsigned int __uint32_t;
-
-typedef signed long int __int64_t;
-typedef unsigned long int __uint64_t;
-
-
-
-
-
-/* quad_t is also 64 bits.  */
-
-typedef long int __quad_t;
-typedef unsigned long int __u_quad_t;
-# 73 "/usr/include/bits/types.h" 3 4
-/* The machine-dependent file <bits/typesizes.h> defines __*_T_TYPE
-   macros for each of the OS types we define below.  The definitions
-   of those macros must use the following macros for underlying types.
-   We define __S<SIZE>_TYPE and __U<SIZE>_TYPE for the signed and unsigned
-   variants of each of the following integer types on this machine.
-
-	16		-- "natural" 16-bit type (always short)
-	32		-- "natural" 32-bit type (always int)
-	64		-- "natural" 64-bit type (long or long long)
-	LONG32		-- 32-bit type, traditionally long
-	QUAD		-- 64-bit type, always long long
-	WORD		-- natural type of __WORDSIZE bits (int or long)
-	LONGWORD	-- type of __WORDSIZE bits, traditionally long
-
-   We distinguish WORD/LONGWORD, 32/LONG32, and 64/QUAD so that the
-   conventional uses of `long' or `long long' type modifiers match the
-   types we define, even when a less-adorned type would be the same size.
-   This matters for (somewhat) portably writing printf/scanf formats for
-   these types, where using the appropriate l or ll format modifiers can
-   make the typedefs and the formats match up across all GNU platforms.  If
-   we used `long' when it's 64 bits where `long long' is expected, then the
-   compiler would warn about the formats not matching the argument types,
-   and the programmer changing them to shut up the compiler would break the
-   program's portability.
-
-   Here we assume what is presently the case in all the GCC configurations
-   we support: long long is always 64 bits, long is always word/address size,
-   and int is always 32 bits.  */
-# 129 "/usr/include/bits/types.h" 3 4
-/* No need to mark the typedef with __extension__.   */
-
-
-
-
-
-
-# 1 "/usr/include/bits/typesizes.h" 1 3 4
-/* bits/typesizes.h -- underlying types for *_t.  Generic version.
-   Copyright (C) 2002, 2003 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-# 27 "/usr/include/bits/typesizes.h" 3 4
-/* See <bits/types.h> for the meaning of these macros.  This file exists so
-   that <bits/types.h> need not vary across different GNU platforms.  */
-# 62 "/usr/include/bits/typesizes.h" 3 4
-/* Number of descriptors that can fit in an `fd_set'.  */
-# 135 "/usr/include/bits/types.h" 2 3 4
-
-
-typedef unsigned long int __dev_t; /* Type of device numbers.  */
-typedef unsigned int __uid_t; /* Type of user identifications.  */
-typedef unsigned int __gid_t; /* Type of group identifications.  */
-typedef unsigned long int __ino_t; /* Type of file serial numbers.  */
-typedef unsigned long int __ino64_t; /* Type of file serial numbers (LFS).*/
-typedef unsigned int __mode_t; /* Type of file attribute bitmasks.  */
-typedef unsigned long int __nlink_t; /* Type of file link counts.  */
-typedef long int __off_t; /* Type of file sizes and offsets.  */
-typedef long int __off64_t; /* Type of file sizes and offsets (LFS).  */
-typedef int __pid_t; /* Type of process identifications.  */
-typedef struct { int __val[2]; } __fsid_t; /* Type of file system IDs.  */
-typedef long int __clock_t; /* Type of CPU usage counts.  */
-typedef unsigned long int __rlim_t; /* Type for resource measurement.  */
-typedef unsigned long int __rlim64_t; /* Type for resource measurement (LFS).  */
-typedef unsigned int __id_t; /* General type for IDs.  */
-typedef long int __time_t; /* Seconds since the Epoch.  */
-typedef unsigned int __useconds_t; /* Count of microseconds.  */
-typedef long int __suseconds_t; /* Signed count of microseconds.  */
-
-typedef int __daddr_t; /* The type of a disk address.  */
-typedef long int __swblk_t; /* Type of a swap block maybe?  */
-typedef int __key_t; /* Type of an IPC key.  */
-
-/* Clock ID used in clock and timer functions.  */
-typedef int __clockid_t;
-
-/* Timer ID returned by `timer_create'.  */
-typedef void * __timer_t;
-
-/* Type to represent block size.  */
-typedef long int __blksize_t;
-
-/* Types from the Large File Support interface.  */
-
-/* Type to count number of disk blocks.  */
-typedef long int __blkcnt_t;
-typedef long int __blkcnt64_t;
-
-/* Type to count file system blocks.  */
-typedef unsigned long int __fsblkcnt_t;
-typedef unsigned long int __fsblkcnt64_t;
-
-/* Type to count file system nodes.  */
-typedef unsigned long int __fsfilcnt_t;
-typedef unsigned long int __fsfilcnt64_t;
-
-typedef long int __ssize_t; /* Type of a byte count, or error.  */
-
-/* These few don't really vary by system, they always correspond
-   to one of the other defined types.  */
-typedef __off64_t __loff_t; /* Type of file sizes and offsets (LFS).  */
-typedef __quad_t *__qaddr_t;
-typedef char *__caddr_t;
-
-/* Duplicates info from stdint.h but this is used in unistd.h.  */
-typedef long int __intptr_t;
-
-/* Duplicate info from sys/socket.h.  */
-typedef unsigned int __socklen_t;
-# 29 "/usr/include/ctype.h" 2 3 4
 
 extern "C" {
-
-
-/* These are all the characteristics of characters.
-   If there get to be more than 16 distinct characteristics,
-   many things must be changed that use `unsigned short int's.
-
-   The characteristics are stored always in network byte order (big
-   endian).  We define the bit value interpretations here dependent on the
-   machine's byte order.  */
-
-
-
-# 1 "/usr/include/endian.h" 1 3 4
-/* Copyright (C) 1992, 1996, 1997, 2000 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-
-
-
-
-
-/* Definitions for byte order, according to significance of bytes,
-   from low addresses to high addresses.  The value is what you get by
-   putting '4' in the most significant byte, '3' in the second most
-   significant byte, '2' in the second least significant byte, and '1'
-   in the least significant byte, and then writing down one digit for
-   each byte, starting with the byte at the lowest address at the left,
-   and proceeding to the byte with the highest address at the right.  */
-
-
-
-
-
-/* This file defines `__BYTE_ORDER' for the particular machine.  */
-
-
-# 1 "/usr/include/bits/endian.h" 1 3 4
-/* x86_64 is little-endian.  */
-# 38 "/usr/include/endian.h" 2 3 4
-
-/* Some machines may need to use a different endianness for floating point
-   values.  */
-# 42 "/usr/include/ctype.h" 2 3 4
-
-
-
-
-
-
-enum
-{
-  _ISupper = ((0) < 8 ? ((1 << (0)) << 8) : ((1 << (0)) >> 8)), /* UPPERCASE.  */
-  _ISlower = ((1) < 8 ? ((1 << (1)) << 8) : ((1 << (1)) >> 8)), /* lowercase.  */
-  _ISalpha = ((2) < 8 ? ((1 << (2)) << 8) : ((1 << (2)) >> 8)), /* Alphabetic.  */
-  _ISdigit = ((3) < 8 ? ((1 << (3)) << 8) : ((1 << (3)) >> 8)), /* Numeric.  */
-  _ISxdigit = ((4) < 8 ? ((1 << (4)) << 8) : ((1 << (4)) >> 8)), /* Hexadecimal numeric.  */
-  _ISspace = ((5) < 8 ? ((1 << (5)) << 8) : ((1 << (5)) >> 8)), /* Whitespace.  */
-  _ISprint = ((6) < 8 ? ((1 << (6)) << 8) : ((1 << (6)) >> 8)), /* Printing.  */
-  _ISgraph = ((7) < 8 ? ((1 << (7)) << 8) : ((1 << (7)) >> 8)), /* Graphical.  */
-  _ISblank = ((8) < 8 ? ((1 << (8)) << 8) : ((1 << (8)) >> 8)), /* Blank (usually SPC and TAB).  */
-  _IScntrl = ((9) < 8 ? ((1 << (9)) << 8) : ((1 << (9)) >> 8)), /* Control character.  */
-  _ISpunct = ((10) < 8 ? ((1 << (10)) << 8) : ((1 << (10)) >> 8)), /* Punctuation.  */
-  _ISalnum = ((11) < 8 ? ((1 << (11)) << 8) : ((1 << (11)) >> 8)) /* Alphanumeric.  */
-};
-
-
-/* These are defined in ctype-info.c.
-   The declarations here must match those in localeinfo.h.
-
-   In the thread-specific locale model (see `uselocale' in <locale.h>)
-   we cannot use global variables for these as was done in the past.
-   Instead, the following accessor functions return the address of
-   each variable, which is local to the current thread if multithreaded.
-
-   These point into arrays of 384, so they can be indexed by any `unsigned
-   char' value [0,255]; by EOF (-1); or by any `signed char' value
-   [-128,-1).  ISO C requires that the ctype functions work for `unsigned
-   char' values and for EOF; we also support negative `signed char' values
-   for broken old programs.  The case conversion arrays are of `int's
-   rather than `unsigned char's because tolower (EOF) must be EOF, which
-   doesn't fit into an `unsigned char'.  But today more important is that
-   the arrays are also used for multi-byte character sets.  */
-extern __const unsigned short int **__ctype_b_loc (void)
-     __attribute__ ((__const));
-extern __const __int32_t **__ctype_tolower_loc (void)
-     __attribute__ ((__const));
-extern __const __int32_t **__ctype_toupper_loc (void)
-     __attribute__ ((__const));
-# 98 "/usr/include/ctype.h" 3 4
-/* The following names are all functions:
-     int isCHARACTERISTIC(int c);
-   which return nonzero iff C has CHARACTERISTIC.
-   For the meaning of the characteristic names, see the `enum' above.  */
-extern int isalnum (int) throw ();
-extern int isalpha (int) throw ();
-extern int iscntrl (int) throw ();
-extern int isdigit (int) throw ();
-extern int islower (int) throw ();
-extern int isgraph (int) throw ();
-extern int isprint (int) throw ();
-extern int ispunct (int) throw ();
-extern int isspace (int) throw ();
-extern int isupper (int) throw ();
-extern int isxdigit (int) throw ();
-
-
-/* Return the lowercase version of C.  */
-extern int tolower (int __c) throw ();
-
-/* Return the uppercase version of C.  */
-extern int toupper (int __c) throw ();
-
-
-
-
-/* ISO C99 introduced one new function.  */
-
-
-
-extern int isblank (int) throw ();
-
-
-
-
-
-/* Test C for a set of character classes according to MASK.  */
-extern int isctype (int __c, int __mask) throw ();
-
-
-
-
-/* Return nonzero iff C is in the ASCII set
-   (i.e., is no more than 7 bits wide).  */
-extern int isascii (int __c) throw ();
-
-/* Return the part of C that is in the ASCII set
-   (i.e., the low-order 7 bits of C).  */
-extern int toascii (int __c) throw ();
-
-/* These are the same as `toupper' and `tolower' except that they do not
-   check the argument for being in the range of a `char'.  */
-extern int _toupper (int) throw ();
-extern int _tolower (int) throw ();
-
-
-/* This code is needed for the optimized mapping functions.  */
-# 220 "/usr/include/ctype.h" 3 4
-/* The concept of one static locale per category is not very well
-   thought out.  Many applications will need to process its data using
-   information from several different locales.  Another application is
-   the implementation of the internationalization handling in the
-   upcoming ISO C++ standard library.  To support this another set of
-   the functions using locale data exist which have an additional
-   argument.
-
-   Attention: all these functions are *not* standardized in any form.
-   This is a proof-of-concept implementation.  */
-
-/* Structure for reentrant locale using functions.  This is an
-   (almost) opaque type for the user level programs.  */
-
-
-/* These definitions are similar to the ones above but all functions
-   take as an argument a handle for the locale which shall be used.  */
-
-
-
-
-
-
-/* The following names are all functions:
-     int isCHARACTERISTIC(int c, locale_t *locale);
-   which return nonzero iff C has CHARACTERISTIC.
-   For the meaning of the characteristic names, see the `enum' above.  */
-extern int isalnum_l (int, __locale_t) throw ();
-extern int isalpha_l (int, __locale_t) throw ();
-extern int iscntrl_l (int, __locale_t) throw ();
-extern int isdigit_l (int, __locale_t) throw ();
-extern int islower_l (int, __locale_t) throw ();
-extern int isgraph_l (int, __locale_t) throw ();
-extern int isprint_l (int, __locale_t) throw ();
-extern int ispunct_l (int, __locale_t) throw ();
-extern int isspace_l (int, __locale_t) throw ();
-extern int isupper_l (int, __locale_t) throw ();
-extern int isxdigit_l (int, __locale_t) throw ();
-
-extern int isblank_l (int, __locale_t) throw ();
-
-
-/* Return the lowercase version of C in locale L.  */
-extern int __tolower_l (int __c, __locale_t __l) throw ();
-extern int tolower_l (int __c, __locale_t __l) throw ();
-
-/* Return the uppercase version of C.  */
-extern int __toupper_l (int __c, __locale_t __l) throw ();
-extern int toupper_l (int __c, __locale_t __l) throw ();
-# 323 "/usr/include/ctype.h" 3 4
+# 70 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\ctype.h" 3
+ /* CRT stuff */
+
+  extern const unsigned char __newclmap[];
+  extern const unsigned char __newcumap[];
+  extern pthreadlocinfo __ptlocinfo;
+  extern pthreadmbcinfo __ptmbcinfo;
+  extern int __globallocalestatus;
+  extern int __locale_changed;
+  extern struct threadlocaleinfostruct __initiallocinfo;
+  extern _locale_tstruct __initiallocalestructinfo;
+  pthreadlocinfo __updatetlocinfo(void);
+  pthreadmbcinfo __updatetmbcinfo(void);
+# 100 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\ctype.h" 3
+ __attribute__ ((__dllimport__)) int _isctype(int _C,int _Type);
+  __attribute__ ((__dllimport__)) int _isctype_l(int _C,int _Type,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int isalpha(int _C);
+  __attribute__ ((__dllimport__)) int _isalpha_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int isupper(int _C);
+  __attribute__ ((__dllimport__)) int _isupper_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int islower(int _C);
+  __attribute__ ((__dllimport__)) int _islower_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int isdigit(int _C);
+  __attribute__ ((__dllimport__)) int _isdigit_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int isxdigit(int _C);
+  __attribute__ ((__dllimport__)) int _isxdigit_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int isspace(int _C);
+  __attribute__ ((__dllimport__)) int _isspace_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int ispunct(int _C);
+  __attribute__ ((__dllimport__)) int _ispunct_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int isalnum(int _C);
+  __attribute__ ((__dllimport__)) int _isalnum_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int isprint(int _C);
+  __attribute__ ((__dllimport__)) int _isprint_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int isgraph(int _C);
+  __attribute__ ((__dllimport__)) int _isgraph_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int iscntrl(int _C);
+  __attribute__ ((__dllimport__)) int _iscntrl_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int toupper(int _C);
+  __attribute__ ((__dllimport__)) int tolower(int _C);
+  __attribute__ ((__dllimport__)) int _tolower(int _C);
+  __attribute__ ((__dllimport__)) int _tolower_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int _toupper(int _C);
+  __attribute__ ((__dllimport__)) int _toupper_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __isascii(int _C);
+  __attribute__ ((__dllimport__)) int __toascii(int _C);
+  __attribute__ ((__dllimport__)) int __iscsymf(int _C);
+  __attribute__ ((__dllimport__)) int __iscsym(int _C);
+
+
+int isblank(int _C);
+# 193 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\ctype.h" 3
+ extern int * __imp___mb_cur_max;
+# 275 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\ctype.h" 3
 }
-# 44 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 2 3
+# 44 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cctype" 2 3
 
 
 
 
 // Get rid of those macros defined in <ctype.h> in lieu of real functions.
-# 63 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 3
-namespace std
-{
+# 63 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cctype" 3
+namespace std {
+
   using ::isalnum;
   using ::isalpha;
   using ::iscntrl;
@@ -8583,12 +7871,11 @@ namespace std
   using ::isxdigit;
   using ::tolower;
   using ::toupper;
-} // namespace std
-# 44 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 2 3
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
+}
+# 44 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/localefwd.h" 2 3
 
+namespace std {
 
   /** 
    *  @defgroup locales Locales
@@ -8729,10 +8016,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<typename _CharT>
     class messages_byname;
 
-
-} // namespace
-# 42 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 1 3
+}
+# 42 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ios" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/ios_base.h" 1 3
 // Iostreams base classes -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
@@ -8759,21 +8045,20 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/ios_base.h
+/** @file ios_base.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{ios}
+ *  You should not attempt to use it directly.
  */
 
 //
 // ISO C++ 14882: 27.4  Iostreams base classes
 //
-# 39 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 39 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/ios_base.h" 3
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/atomicity.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ext/atomicity.h" 1 3
 // Support for atomic operations -*- C++ -*-
 
-// Copyright (C) 2004, 2005, 2006, 2008, 2009, 2010
-// Free Software Foundation, Inc.
+// Copyright (C) 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -8795,8 +8080,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file ext/atomicity.h
- *  This file is a GNU extension to the Standard C++ Library.
+/** @file atomicity.h
+ *  This is an internal header file, included by other library headers.
+ *  You should not attempt to use it directly.
  */
 
 
@@ -8805,7 +8091,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/gthr.h" 1 3
 /* Threads compatibility routines for libgcc2.  */
 /* Compile this one with gcc.  */
 /* Copyright (C) 1997, 1998, 2004, 2008, 2009 Free Software Foundation, Inc.
@@ -8949,16 +8235,14 @@ see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 */
 
 /* Check first for thread specific defines.  */
-# 158 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr.h" 3
-/* The pe-coff weak support isn't fully compatible to ELF's weak.
-   For static libraries it might would work, but as we need to deal
-   with shared versions too, we disable it for mingw-targets.  */
-# 170 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr.h" 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 1 3
+# 162 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/gthr.h" 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/gthr-default.h" 1 3
 /* Threads compatibility routines for libgcc2 and libobjc.  */
 /* Compile this one with gcc.  */
-/* Copyright (C) 1997, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007,
-   2008, 2009, 2010 Free Software Foundation, Inc.
+
+/* Copyright (C) 1999, 2000, 2002, 2003, 2004, 2005, 2008, 2009
+   Free Software Foundation, Inc.
+   Contributed by Mumit Khan <khan@xraylith.wisc.edu>.
 
 This file is part of GCC.
 
@@ -8984,3952 +8268,162 @@ see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 
 
 
-/* POSIX threads specific definitions.
-   Easy, since the interface is just one-to-one mapping.  */
+/* Make sure CONST_CAST2 (origin in system.h) is declared.  */
 
 
 
 
-/* Some implementations of <pthread.h> require this to be defined.  */
+/* Windows32 threads specific definitions. The windows32 threading model
+   does not map well into pthread-inspired gcc's threading model, and so
+   there are caveats one needs to be aware of.
 
+   1. The destructor supplied to __gthread_key_create is ignored for
+      generic x86-win32 ports. This will certainly cause memory leaks
+      due to unreclaimed eh contexts (sizeof (eh_context) is at least
+      24 bytes for x86 currently).
 
+      This memory leak may be significant for long-running applications
+      that make heavy use of C++ EH.
 
+      However, Mingw runtime (version 0.3 or newer) provides a mechanism
+      to emulate pthreads key dtors; the runtime provides a special DLL,
+      linked in if -mthreads option is specified, that runs the dtors in
+      the reverse order of registration when each thread exits. If
+      -mthreads option is not given, a stub is linked in instead of the
+      DLL, which results in memory leak. Other x86-win32 ports can use
+      the same technique of course to avoid the leak.
 
+   2. The error codes returned are non-POSIX like, and cast into ints.
+      This may cause incorrect error return due to truncation values on
+      hw where sizeof (DWORD) > sizeof (int).
 
+   3. We are currently using a special mutex instead of the Critical
+      Sections, since Win9x does not support TryEnterCriticalSection
+      (while NT does).
 
-# 1 "/usr/include/pthread.h" 1 3 4
-/* Copyright (C) 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
+   The basic framework should work well enough. In the long term, GCC
+   needs to use Structured Exception Handling on Windows32.  */
 
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
 
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
 
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
 
 
-
-
-
-
-
-
-# 1 "/usr/include/sched.h" 1 3 4
-/* Definitions for POSIX 1003.1b-1993 (aka POSIX.4) scheduling interface.
-   Copyright (C) 1996,1997,1999,2001-2003,2004 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-
-
-
-
-
-/* Get type definitions.  */
-
-
-
-
-
-# 1 "/usr/include/time.h" 1 3 4
-/* Copyright (C) 1991-1999,2000,2001,2002,2003,2006
-	Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/*
- *	ISO C99 Standard: 7.23 Date and time	<time.h>
- */
-# 119 "/usr/include/time.h" 3 4
-/* POSIX.1b structure for a time value.  This is like a `struct timeval' but
-   has nanoseconds instead of microseconds.  */
-struct timespec
-  {
-    __time_t tv_sec; /* Seconds.  */
-    long int tv_nsec; /* Nanoseconds.  */
-  };
-# 30 "/usr/include/sched.h" 2 3 4
-
-/* Get system specific constant and data structure definitions.  */
-
-
-# 1 "/usr/include/bits/sched.h" 1 3 4
-/* Definitions of constants and data structure for POSIX 1003.1b-1993
-   scheduling interface.
-   Copyright (C) 1996-1999,2001-2003,2005,2006 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-# 28 "/usr/include/bits/sched.h" 3 4
-/* Scheduling algorithms.  */
-# 37 "/usr/include/bits/sched.h" 3 4
-/* Cloning flags.  */
-# 64 "/usr/include/bits/sched.h" 3 4
-/* The official definition.  */
-struct sched_param
-  {
-    int __sched_priority;
-  };
-
-extern "C" {
-
-
-/* Clone current process.  */
-extern int clone (int (*__fn) (void *__arg), void *__child_stack,
-    int __flags, void *__arg, ...) throw ();
-
-/* Unshare the specified resources.  */
-extern int unshare (int __flags) throw ();
-
-
-}
-
-
-
-
-
-
-/* Data structure to describe a process' schedulability.  */
-struct __sched_param
-  {
-    int __sched_priority;
-  };
-
-
-
-
-
-
-/* Size definition for CPU sets.  */
-
-
-
-/* Type for array elements in 'cpu_set'.  */
-typedef unsigned long int __cpu_mask;
-
-/* Basic access functions.  */
-
-
-
-/* Data structure to describe CPU mask.  */
-typedef struct
-{
-  __cpu_mask __bits[1024 / (8 * sizeof (__cpu_mask))];
-} cpu_set_t;
-
-/* Access functions for CPU masks.  */
-# 33 "/usr/include/sched.h" 2 3 4
-/* Define the real names for the elements of `struct sched_param'.  */
-
-
-
-extern "C" {
-
-/* Set scheduling parameters for a process.  */
-extern int sched_setparam (__pid_t __pid, __const struct sched_param *__param)
-     throw ();
-
-/* Retrieve scheduling parameters for a particular process.  */
-extern int sched_getparam (__pid_t __pid, struct sched_param *__param) throw ();
-
-/* Set scheduling algorithm and/or parameters for a process.  */
-extern int sched_setscheduler (__pid_t __pid, int __policy,
-          __const struct sched_param *__param) throw ();
-
-/* Retrieve scheduling algorithm for a particular purpose.  */
-extern int sched_getscheduler (__pid_t __pid) throw ();
-
-/* Yield the processor.  */
-extern int sched_yield (void) throw ();
-
-/* Get maximum priority value for a scheduler.  */
-extern int sched_get_priority_max (int __algorithm) throw ();
-
-/* Get minimum priority value for a scheduler.  */
-extern int sched_get_priority_min (int __algorithm) throw ();
-
-/* Get the SCHED_RR interval for the named process.  */
-extern int sched_rr_get_interval (__pid_t __pid, struct timespec *__t) throw ();
-
-
-
-/* Access macros for `cpu_set'.  */
-
-
-
-
-
-
-
-/* Set the CPU affinity for a task */
-extern int sched_setaffinity (__pid_t __pid, size_t __cpusetsize,
-         __const cpu_set_t *__cpuset) throw ();
-
-/* Get the CPU affinity for a task */
-extern int sched_getaffinity (__pid_t __pid, size_t __cpusetsize,
-         cpu_set_t *__cpuset) throw ();
-
-
-}
-# 25 "/usr/include/pthread.h" 2 3 4
-# 1 "/usr/include/time.h" 1 3 4
-/* Copyright (C) 1991-1999,2000,2001,2002,2003,2006
-	Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/*
- *	ISO C99 Standard: 7.23 Date and time	<time.h>
- */
-# 31 "/usr/include/time.h" 3 4
-extern "C" {
-
-
-
-
-/* Get size_t and NULL from <stddef.h>.  */
-
-
-
-
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
-/*===---- stddef.h - Basic type definitions --------------------------------===
- *
- * Copyright (c) 2008 Eli Friedman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- *===-----------------------------------------------------------------------===
- */
-# 56 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
-/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
-__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
-# 40 "/usr/include/time.h" 2 3 4
-
-/* This defines CLOCKS_PER_SEC, which is the number of processor clock
-   ticks per second.  */
-
-
-# 1 "/usr/include/bits/time.h" 1 3 4
-/* System-dependent timing definitions.  Generic version.
-   Copyright (C) 1996,1997,1999-2002,2003 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/*
- * Never include this file directly; use <time.h> instead.
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\errno.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
 
 
 
 
 
-/* ISO/IEC 9899:1990 7.12.1: <time.h>
-   The macro `CLOCKS_PER_SEC' is the number per second of the value
-   returned by the `clock' function. */
-/* CAE XSH, Issue 4, Version 2: <time.h>
-   The value of CLOCKS_PER_SEC is required to be 1 million on all
-   XSI-conformant systems. */
-# 45 "/usr/include/bits/time.h" 3 4
-/* Identifier for system-wide realtime clock.  */
-
-/* Monotonic system-wide clock.  */
-
-/* High-resolution timer from the CPU.  */
-
-/* Thread-specific CPU-time clock.  */
-
-
-/* Flag to indicate time is absolute.  */
-# 44 "/usr/include/time.h" 2 3 4
-
-/* This is the obsolete POSIX.1-1988 name for the same constant.  */
-# 60 "/usr/include/time.h" 3 4
-/* Returned by `clock'.  */
-typedef __clock_t clock_t;
-# 76 "/usr/include/time.h" 3 4
-/* Returned by `time'.  */
-typedef __time_t time_t;
-# 92 "/usr/include/time.h" 3 4
-/* Clock ID used in clock and timer functions.  */
-typedef __clockid_t clockid_t;
-# 104 "/usr/include/time.h" 3 4
-/* Timer ID returned by `timer_create'.  */
-typedef __timer_t timer_t;
-# 133 "/usr/include/time.h" 3 4
-/* Used by other time functions.  */
-struct tm
-{
-  int tm_sec; /* Seconds.	[0-60] (1 leap second) */
-  int tm_min; /* Minutes.	[0-59] */
-  int tm_hour; /* Hours.	[0-23] */
-  int tm_mday; /* Day.		[1-31] */
-  int tm_mon; /* Month.	[0-11] */
-  int tm_year; /* Year	- 1900.  */
-  int tm_wday; /* Day of week.	[0-6] */
-  int tm_yday; /* Days in year.[0-365]	*/
-  int tm_isdst; /* DST.		[-1/0/1]*/
-
-
-  long int tm_gmtoff; /* Seconds east of UTC.  */
-  __const char *tm_zone; /* Timezone abbreviation.  */
-
-
-
-
-};
-
-
-
-
-
-
-
-/* POSIX.1b structure for timer start values and intervals.  */
-struct itimerspec
-  {
-    struct timespec it_interval;
-    struct timespec it_value;
-  };
-
-/* We can use a simple forward declaration.  */
-struct sigevent;
-
-
-
-
-
-typedef __pid_t pid_t;
-
-
-
-
-
-
-/* Time used by the program so far (user time + system time).
-   The result / CLOCKS_PER_SECOND is program time in seconds.  */
-extern clock_t clock (void) throw ();
-
-/* Return the current time and put it in *TIMER if TIMER is not NULL.  */
-extern time_t time (time_t *__timer) throw ();
-
-/* Return the difference between TIME1 and TIME0.  */
-extern double difftime (time_t __time1, time_t __time0)
-     throw () __attribute__ ((__const__));
-
-/* Return the `time_t' representation of TP and normalize TP.  */
-extern time_t mktime (struct tm *__tp) throw ();
-
-
-/* Format TP into S according to FORMAT.
-   Write no more than MAXSIZE characters and return the number
-   of characters written, or 0 if it would exceed MAXSIZE.  */
-extern size_t strftime (char *__restrict __s, size_t __maxsize,
-   __const char *__restrict __format,
-   __const struct tm *__restrict __tp) throw ();
-
-
-
-/* Parse S according to FORMAT and store binary time information in TP.
-   The return value is a pointer to the first unparsed character in S.  */
-extern char *strptime (__const char *__restrict __s,
-         __const char *__restrict __fmt, struct tm *__tp)
-     throw ();
-
-
-
-/* Similar to the two functions above but take the information from
-   the provided locale and not the global locale.  */
-
-
-extern size_t strftime_l (char *__restrict __s, size_t __maxsize,
-     __const char *__restrict __format,
-     __const struct tm *__restrict __tp,
-     __locale_t __loc) throw ();
-
-extern char *strptime_l (__const char *__restrict __s,
-    __const char *__restrict __fmt, struct tm *__tp,
-    __locale_t __loc) throw ();
-
-
-
-
-/* Return the `struct tm' representation of *TIMER
-   in Universal Coordinated Time (aka Greenwich Mean Time).  */
-extern struct tm *gmtime (__const time_t *__timer) throw ();
-
-/* Return the `struct tm' representation
-   of *TIMER in the local timezone.  */
-extern struct tm *localtime (__const time_t *__timer) throw ();
-
-
-
-/* Return the `struct tm' representation of *TIMER in UTC,
-   using *TP to store the result.  */
-extern struct tm *gmtime_r (__const time_t *__restrict __timer,
-       struct tm *__restrict __tp) throw ();
-
-/* Return the `struct tm' representation of *TIMER in local time,
-   using *TP to store the result.  */
-extern struct tm *localtime_r (__const time_t *__restrict __timer,
-          struct tm *__restrict __tp) throw ();
-
-
-
-/* Return a string of the form "Day Mon dd hh:mm:ss yyyy\n"
-   that is the representation of TP in this format.  */
-extern char *asctime (__const struct tm *__tp) throw ();
-
-/* Equivalent to `asctime (localtime (timer))'.  */
-extern char *ctime (__const time_t *__timer) throw ();
-
-
-
-/* Reentrant versions of the above functions.  */
-
-/* Return in BUF a string of the form "Day Mon dd hh:mm:ss yyyy\n"
-   that is the representation of TP in this format.  */
-extern char *asctime_r (__const struct tm *__restrict __tp,
-   char *__restrict __buf) throw ();
-
-/* Equivalent to `asctime_r (localtime_r (timer, *TMP*), buf)'.  */
-extern char *ctime_r (__const time_t *__restrict __timer,
-        char *__restrict __buf) throw ();
-
-
-
-/* Defined in localtime.c.  */
-extern char *__tzname[2]; /* Current timezone names.  */
-extern int __daylight; /* If daylight-saving time is ever in use.  */
-extern long int __timezone; /* Seconds west of UTC.  */
-
-
-
-/* Same as above.  */
-extern char *tzname[2];
-
-/* Set time conversion information from the TZ environment variable.
-   If TZ is not defined, a locale-dependent default is used.  */
-extern void tzset (void) throw ();
-
-
-
-extern int daylight;
-extern long int timezone;
-
-
-
-/* Set the system time to *WHEN.
-   This call is restricted to the superuser.  */
-extern int stime (__const time_t *__when) throw ();
-
-
-
-/* Nonzero if YEAR is a leap year (every 4 years,
-   except every 100th isn't, and every 400th is).  */
-
-
-
-
-
-/* Miscellaneous functions many Unices inherited from the public domain
-   localtime package.  These are included only for compatibility.  */
-
-/* Like `mktime', but for TP represents Universal Time, not local time.  */
-extern time_t timegm (struct tm *__tp) throw ();
-
-/* Another name for `mktime'.  */
-extern time_t timelocal (struct tm *__tp) throw ();
-
-/* Return the number of days in YEAR.  */
-extern int dysize (int __year) throw () __attribute__ ((__const__));
-
-
-
-
-/* Pause execution for a number of nanoseconds.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern int nanosleep (__const struct timespec *__requested_time,
-        struct timespec *__remaining);
-
-
-/* Get resolution of clock CLOCK_ID.  */
-extern int clock_getres (clockid_t __clock_id, struct timespec *__res) throw ();
-
-/* Get current value of clock CLOCK_ID and store it in TP.  */
-extern int clock_gettime (clockid_t __clock_id, struct timespec *__tp) throw ();
-
-/* Set clock CLOCK_ID to value TP.  */
-extern int clock_settime (clockid_t __clock_id, __const struct timespec *__tp)
-     throw ();
-
-
-/* High-resolution sleep with the specified clock.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern int clock_nanosleep (clockid_t __clock_id, int __flags,
-       __const struct timespec *__req,
-       struct timespec *__rem);
-
-/* Return clock ID for CPU-time clock.  */
-extern int clock_getcpuclockid (pid_t __pid, clockid_t *__clock_id) throw ();
-
-
-
-/* Create new per-process timer using CLOCK_ID.  */
-extern int timer_create (clockid_t __clock_id,
-    struct sigevent *__restrict __evp,
-    timer_t *__restrict __timerid) throw ();
-
-/* Delete timer TIMERID.  */
-extern int timer_delete (timer_t __timerid) throw ();
-
-/* Set timer TIMERID to VALUE, returning old value in OVLAUE.  */
-extern int timer_settime (timer_t __timerid, int __flags,
-     __const struct itimerspec *__restrict __value,
-     struct itimerspec *__restrict __ovalue) throw ();
-
-/* Get current value of timer TIMERID and store it in VLAUE.  */
-extern int timer_gettime (timer_t __timerid, struct itimerspec *__value)
-     throw ();
-
-/* Get expiration overrun for timer TIMERID.  */
-extern int timer_getoverrun (timer_t __timerid) throw ();
-
-
-
-
-/* Set to one of the following values to indicate an error.
-     1  the DATEMSK environment variable is null or undefined,
-     2  the template file cannot be opened for reading,
-     3  failed to get file status information,
-     4  the template file is not a regular file,
-     5  an error is encountered while reading the template file,
-     6  memory allication failed (not enough memory available),
-     7  there is no line in the template that matches the input,
-     8  invalid input specification Example: February 31 or a time is
-        specified that can not be represented in a time_t (representing
-	the time in seconds since 00:00:00 UTC, January 1, 1970) */
-extern int getdate_err;
-
-/* Parse the given string as a date specification and return a value
-   representing the value.  The templates from the file identified by
-   the environment variable DATEMSK are used.  In case of an error
-   `getdate_err' is set.
-
-   This function is a possible cancellation points and therefore not
-   marked with __THROW.  */
-extern struct tm *getdate (__const char *__string);
-
-
-
-/* Since `getdate' is not reentrant because of the use of `getdate_err'
-   and the static buffer to return the result in, we provide a thread-safe
-   variant.  The functionality is the same.  The result is returned in
-   the buffer pointed to by RESBUFP and in case of an error the return
-   value is != 0 with the same values as given above for `getdate_err'.
-
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern int getdate_r (__const char *__restrict __string,
-        struct tm *__restrict __resbufp);
-
-
-}
-# 26 "/usr/include/pthread.h" 2 3 4
-
-
-# 1 "/usr/include/signal.h" 1 3 4
-/* Copyright (C) 1991-2003, 2004 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/*
- *	ISO C99 Standard: 7.14 Signal handling <signal.h>
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 31 "/usr/include/signal.h" 3 4
-extern "C" {
-
-
-
-# 1 "/usr/include/bits/sigset.h" 1 3 4
-/* __sig_atomic_t, __sigset_t, and related definitions.  Linux version.
-   Copyright (C) 1991, 1992, 1994, 1996, 1997 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-
-
-
-typedef int __sig_atomic_t;
-
-/* A `sigset_t' has a bit for each signal.  */
-
-
-typedef struct
-  {
-    unsigned long int __val[(1024 / (8 * sizeof (unsigned long int)))];
-  } __sigset_t;
-
-
-
-
-/* We only want to define these functions if <signal.h> was actually
-   included; otherwise we were included just to define the types.  Since we
-   are namespace-clean, it wouldn't hurt to define extra macros.  But
-   trouble can be caused by functions being defined (e.g., any global
-   register vars declared later will cause compilation errors).  */
-# 34 "/usr/include/signal.h" 2 3 4
-
-/* An integral type that can be modified atomically, without the
-   possibility of a signal arriving in the middle of the operation.  */
-# 50 "/usr/include/signal.h" 3 4
-typedef __sigset_t sigset_t;
-# 400 "/usr/include/signal.h" 3 4
-}
-# 29 "/usr/include/pthread.h" 2 3 4
-# 1 "/usr/include/bits/pthreadtypes.h" 1 3 4
-/* Copyright (C) 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-   Contributed by Ulrich Drepper <drepper@redhat.com>, 2002.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-
-
-
-
-
-# 1 "/usr/include/bits/wordsize.h" 1 3 4
-/* Determine the wordsize from the preprocessor defines.  */
-# 24 "/usr/include/bits/pthreadtypes.h" 2 3 4
-# 48 "/usr/include/bits/pthreadtypes.h" 3 4
-/* Thread identifiers.  The structure of the attribute type is not
-   exposed on purpose.  */
-typedef unsigned long int pthread_t;
-
-
-typedef union
-{
-  char __size[56];
-  long int __align;
-} pthread_attr_t;
-
-
-
-typedef struct __pthread_internal_list
-{
-  struct __pthread_internal_list *__prev;
-  struct __pthread_internal_list *__next;
-} __pthread_list_t;
-# 74 "/usr/include/bits/pthreadtypes.h" 3 4
-/* Data structures for mutex handling.  The structure of the attribute
-   type is not exposed on purpose.  */
-typedef union
-{
-  struct __pthread_mutex_s
-  {
-    int __lock;
-    unsigned int __count;
-    int __owner;
-
-    unsigned int __nusers;
-
-    /* KIND must stay at this position in the structure to maintain
-       binary compatibility.  */
-    int __kind;
-
-    int __spins;
-    __pthread_list_t __list;
-# 101 "/usr/include/bits/pthreadtypes.h" 3 4
- } __data;
-  char __size[40];
-  long int __align;
-} pthread_mutex_t;
-
-typedef union
-{
-  char __size[4];
-  int __align;
-} pthread_mutexattr_t;
-
-
-/* Data structure for conditional variable handling.  The structure of
-   the attribute type is not exposed on purpose.  */
-typedef union
-{
-  struct
-  {
-    int __lock;
-    unsigned int __futex;
-    __extension__ unsigned long long int __total_seq;
-    __extension__ unsigned long long int __wakeup_seq;
-    __extension__ unsigned long long int __woken_seq;
-    void *__mutex;
-    unsigned int __nwaiters;
-    unsigned int __broadcast_seq;
-  } __data;
-  char __size[48];
-  __extension__ long long int __align;
-} pthread_cond_t;
-
-typedef union
-{
-  char __size[4];
-  int __align;
-} pthread_condattr_t;
-
-
-/* Keys for thread-specific data */
-typedef unsigned int pthread_key_t;
-
-
-/* Once-only execution */
-typedef int pthread_once_t;
-
-
-
-/* Data structure for read-write lock variable handling.  The
-   structure of the attribute type is not exposed on purpose.  */
-typedef union
-{
-
-  struct
-  {
-    int __lock;
-    unsigned int __nr_readers;
-    unsigned int __readers_wakeup;
-    unsigned int __writer_wakeup;
-    unsigned int __nr_readers_queued;
-    unsigned int __nr_writers_queued;
-    int __writer;
-    int __shared;
-    unsigned long int __pad1;
-    unsigned long int __pad2;
-    /* FLAGS must stay at this position in the structure to maintain
-       binary compatibility.  */
-    unsigned int __flags;
-  } __data;
-# 187 "/usr/include/bits/pthreadtypes.h" 3 4
- char __size[56];
-  long int __align;
-} pthread_rwlock_t;
-
-typedef union
-{
-  char __size[8];
-  long int __align;
-} pthread_rwlockattr_t;
-
-
-
-
-/* POSIX spinlock data type.  */
-typedef volatile int pthread_spinlock_t;
-
-
-/* POSIX barriers data type.  The structure of the type is
-   deliberately not exposed.  */
-typedef union
-{
-  char __size[32];
-  long int __align;
-} pthread_barrier_t;
-
-typedef union
-{
-  char __size[4];
-  int __align;
-} pthread_barrierattr_t;
-# 30 "/usr/include/pthread.h" 2 3 4
-# 1 "/usr/include/bits/setjmp.h" 1 3 4
-/* Copyright (C) 2001,2002,2003,2005,2006 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/* Define the machine-dependent type `jmp_buf'.  x86-64 version.  */
-# 28 "/usr/include/bits/setjmp.h" 3 4
-# 1 "/usr/include/bits/wordsize.h" 1 3 4
-/* Determine the wordsize from the preprocessor defines.  */
-# 28 "/usr/include/bits/setjmp.h" 2 3 4
-
-
-
-
-typedef long int __jmp_buf[8];
-# 31 "/usr/include/pthread.h" 2 3 4
-# 1 "/usr/include/bits/wordsize.h" 1 3 4
-/* Determine the wordsize from the preprocessor defines.  */
-# 32 "/usr/include/pthread.h" 2 3 4
-
-
-/* Detach state.  */
-enum
-{
-  PTHREAD_CREATE_JOINABLE,
-
-  PTHREAD_CREATE_DETACHED
-
-};
-
-
-/* Mutex types.  */
-enum
-{
-  PTHREAD_MUTEX_TIMED_NP,
-  PTHREAD_MUTEX_RECURSIVE_NP,
-  PTHREAD_MUTEX_ERRORCHECK_NP,
-  PTHREAD_MUTEX_ADAPTIVE_NP
-
-  ,
-  PTHREAD_MUTEX_NORMAL = PTHREAD_MUTEX_TIMED_NP,
-  PTHREAD_MUTEX_RECURSIVE = PTHREAD_MUTEX_RECURSIVE_NP,
-  PTHREAD_MUTEX_ERRORCHECK = PTHREAD_MUTEX_ERRORCHECK_NP,
-  PTHREAD_MUTEX_DEFAULT = PTHREAD_MUTEX_NORMAL
-
-
-  /* For compatibility.  */
-  , PTHREAD_MUTEX_FAST_NP = PTHREAD_MUTEX_TIMED_NP
-
-};
-
-
-
-/* Robust mutex or not flags.  */
-enum
-{
-  PTHREAD_MUTEX_STALLED_NP,
-  PTHREAD_MUTEX_ROBUST_NP
-};
-
-
-
-
-/* Mutex protocols.  */
-enum
-{
-  PTHREAD_PRIO_NONE,
-  PTHREAD_PRIO_INHERIT,
-  PTHREAD_PRIO_PROTECT
-};
-
-
-
-/* Mutex initializers.  */
-# 112 "/usr/include/pthread.h" 3 4
-/* Read-write lock types.  */
-
-enum
-{
-  PTHREAD_RWLOCK_PREFER_READER_NP,
-  PTHREAD_RWLOCK_PREFER_WRITER_NP,
-  PTHREAD_RWLOCK_PREFER_WRITER_NONRECURSIVE_NP,
-  PTHREAD_RWLOCK_DEFAULT_NP = PTHREAD_RWLOCK_PREFER_READER_NP
-};
-
-/* Read-write lock initializers.  */
-# 145 "/usr/include/pthread.h" 3 4
-/* Scheduler inheritance.  */
-enum
-{
-  PTHREAD_INHERIT_SCHED,
-
-  PTHREAD_EXPLICIT_SCHED
-
-};
-
-
-/* Scope handling.  */
-enum
-{
-  PTHREAD_SCOPE_SYSTEM,
-
-  PTHREAD_SCOPE_PROCESS
-
-};
-
-
-/* Process shared or private flag.  */
-enum
-{
-  PTHREAD_PROCESS_PRIVATE,
-
-  PTHREAD_PROCESS_SHARED
-
-};
-
-
-
-/* Conditional variable handling.  */
-
-
-
-/* Cleanup buffers */
-struct _pthread_cleanup_buffer
-{
-  void (*__routine) (void *); /* Function to call.  */
-  void *__arg; /* Its argument.  */
-  int __canceltype; /* Saved cancellation type. */
-  struct _pthread_cleanup_buffer *__prev; /* Chaining of cleanup functions.  */
-};
-
-/* Cancellation */
-enum
-{
-  PTHREAD_CANCEL_ENABLE,
-
-  PTHREAD_CANCEL_DISABLE
-
-};
-enum
-{
-  PTHREAD_CANCEL_DEFERRED,
-
-  PTHREAD_CANCEL_ASYNCHRONOUS
-
-};
-
-
-
-/* Single execution handling.  */
-
-
-
-
-/* Value returned by 'pthread_barrier_wait' for one of the threads after
-   the required number of threads have called this function.
-   -1 is distinct from 0 and all errno constants */
-
+# 9 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\errno.h" 2 3
 
 
 
 extern "C" {
 
-/* Create a new thread, starting with execution of START-ROUTINE
-   getting passed ARG.  Creation attributed come from ATTR.  The new
-   handle is stored in *NEWTHREAD.  */
-extern int pthread_create (pthread_t *__restrict __newthread,
-      __const pthread_attr_t *__restrict __attr,
-      void *(*__start_routine) (void *),
-      void *__restrict __arg) throw () __attribute__ ((__nonnull__ (1, 3)));
 
-/* Terminate calling thread.
 
-   The registered cleanup handlers are called via exception handling
-   so we cannot mark this function with __THROW.*/
-extern void pthread_exit (void *__retval) __attribute__ ((__noreturn__));
 
-/* Make calling thread wait for termination of the thread TH.  The
-   exit status of the thread is stored in *THREAD_RETURN, if THREAD_RETURN
-   is not NULL.
+__attribute__ ((__dllimport__)) extern int * _errno(void);
 
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern int pthread_join (pthread_t __th, void **__thread_return);
 
-
-/* Check whether thread TH has terminated.  If yes return the status of
-   the thread in *THREAD_RETURN, if THREAD_RETURN is not NULL.  */
-extern int pthread_tryjoin_np (pthread_t __th, void **__thread_return) throw ();
-
-/* Make calling thread wait for termination of the thread TH, but only
-   until TIMEOUT.  The exit status of the thread is stored in
-   *THREAD_RETURN, if THREAD_RETURN is not NULL.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern int pthread_timedjoin_np (pthread_t __th, void **__thread_return,
-     __const struct timespec *__abstime);
-
-
-/* Indicate that the thread TH is never to be joined with PTHREAD_JOIN.
-   The resources of TH will therefore be freed immediately when it
-   terminates, instead of waiting for another thread to perform PTHREAD_JOIN
-   on it.  */
-extern int pthread_detach (pthread_t __th) throw ();
-
-
-/* Obtain the identifier of the current thread.  */
-extern pthread_t pthread_self (void) throw () __attribute__ ((__const__));
-
-/* Compare two thread identifiers.  */
-extern int pthread_equal (pthread_t __thread1, pthread_t __thread2) throw ();
-
-
-/* Thread attribute handling.  */
-
-/* Initialize thread attribute *ATTR with default attributes
-   (detachstate is PTHREAD_JOINABLE, scheduling policy is SCHED_OTHER,
-    no user-provided stack).  */
-extern int pthread_attr_init (pthread_attr_t *__attr) throw () __attribute__ ((__nonnull__ (1)));
-
-/* Destroy thread attribute *ATTR.  */
-extern int pthread_attr_destroy (pthread_attr_t *__attr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Get detach state attribute.  */
-extern int pthread_attr_getdetachstate (__const pthread_attr_t *__attr,
-     int *__detachstate)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set detach state attribute.  */
-extern int pthread_attr_setdetachstate (pthread_attr_t *__attr,
-     int __detachstate)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Get the size of the guard area created for stack overflow protection.  */
-extern int pthread_attr_getguardsize (__const pthread_attr_t *__attr,
-          size_t *__guardsize)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set the size of the guard area created for stack overflow protection.  */
-extern int pthread_attr_setguardsize (pthread_attr_t *__attr,
-          size_t __guardsize)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Return in *PARAM the scheduling parameters of *ATTR.  */
-extern int pthread_attr_getschedparam (__const pthread_attr_t *__restrict
-           __attr,
-           struct sched_param *__restrict __param)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set scheduling parameters (priority, etc) in *ATTR according to PARAM.  */
-extern int pthread_attr_setschedparam (pthread_attr_t *__restrict __attr,
-           __const struct sched_param *__restrict
-           __param) throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Return in *POLICY the scheduling policy of *ATTR.  */
-extern int pthread_attr_getschedpolicy (__const pthread_attr_t *__restrict
-     __attr, int *__restrict __policy)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set scheduling policy in *ATTR according to POLICY.  */
-extern int pthread_attr_setschedpolicy (pthread_attr_t *__attr, int __policy)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Return in *INHERIT the scheduling inheritance mode of *ATTR.  */
-extern int pthread_attr_getinheritsched (__const pthread_attr_t *__restrict
-      __attr, int *__restrict __inherit)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set scheduling inheritance mode in *ATTR according to INHERIT.  */
-extern int pthread_attr_setinheritsched (pthread_attr_t *__attr,
-      int __inherit)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Return in *SCOPE the scheduling contention scope of *ATTR.  */
-extern int pthread_attr_getscope (__const pthread_attr_t *__restrict __attr,
-      int *__restrict __scope)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set scheduling contention scope in *ATTR according to SCOPE.  */
-extern int pthread_attr_setscope (pthread_attr_t *__attr, int __scope)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Return the previously set address for the stack.  */
-extern int pthread_attr_getstackaddr (__const pthread_attr_t *__restrict
-          __attr, void **__restrict __stackaddr)
-     throw () __attribute__ ((__nonnull__ (1, 2))) __attribute__ ((__deprecated__));
-
-/* Set the starting address of the stack of the thread to be created.
-   Depending on whether the stack grows up or down the value must either
-   be higher or lower than all the address in the memory block.  The
-   minimal size of the block must be PTHREAD_STACK_MIN.  */
-extern int pthread_attr_setstackaddr (pthread_attr_t *__attr,
-          void *__stackaddr)
-     throw () __attribute__ ((__nonnull__ (1))) __attribute__ ((__deprecated__));
-
-/* Return the currently used minimal stack size.  */
-extern int pthread_attr_getstacksize (__const pthread_attr_t *__restrict
-          __attr, size_t *__restrict __stacksize)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Add information about the minimum stack size needed for the thread
-   to be started.  This size must never be less than PTHREAD_STACK_MIN
-   and must also not exceed the system limits.  */
-extern int pthread_attr_setstacksize (pthread_attr_t *__attr,
-          size_t __stacksize)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Return the previously set address for the stack.  */
-extern int pthread_attr_getstack (__const pthread_attr_t *__restrict __attr,
-      void **__restrict __stackaddr,
-      size_t *__restrict __stacksize)
-     throw () __attribute__ ((__nonnull__ (1, 2, 3)));
-
-/* The following two interfaces are intended to replace the last two.  They
-   require setting the address as well as the size since only setting the
-   address will make the implementation on some architectures impossible.  */
-extern int pthread_attr_setstack (pthread_attr_t *__attr, void *__stackaddr,
-      size_t __stacksize) throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-/* Thread created with attribute ATTR will be limited to run only on
-   the processors represented in CPUSET.  */
-extern int pthread_attr_setaffinity_np (pthread_attr_t *__attr,
-     size_t __cpusetsize,
-     __const cpu_set_t *__cpuset)
-     throw () __attribute__ ((__nonnull__ (1, 3)));
-
-/* Get bit set in CPUSET representing the processors threads created with
-   ATTR can run on.  */
-extern int pthread_attr_getaffinity_np (__const pthread_attr_t *__attr,
-     size_t __cpusetsize,
-     cpu_set_t *__cpuset)
-     throw () __attribute__ ((__nonnull__ (1, 3)));
-
-
-/* Initialize thread attribute *ATTR with attributes corresponding to the
-   already running thread TH.  It shall be called on unitialized ATTR
-   and destroyed with pthread_attr_destroy when no longer needed.  */
-extern int pthread_getattr_np (pthread_t __th, pthread_attr_t *__attr)
-     throw () __attribute__ ((__nonnull__ (2)));
-
-
-
-/* Functions for scheduling control.  */
-
-/* Set the scheduling parameters for TARGET_THREAD according to POLICY
-   and *PARAM.  */
-extern int pthread_setschedparam (pthread_t __target_thread, int __policy,
-      __const struct sched_param *__param)
-     throw () __attribute__ ((__nonnull__ (3)));
-
-/* Return in *POLICY and *PARAM the scheduling parameters for TARGET_THREAD. */
-extern int pthread_getschedparam (pthread_t __target_thread,
-      int *__restrict __policy,
-      struct sched_param *__restrict __param)
-     throw () __attribute__ ((__nonnull__ (2, 3)));
-
-/* Set the scheduling priority for TARGET_THREAD.  */
-extern int pthread_setschedprio (pthread_t __target_thread, int __prio)
-     throw ();
-
-
-
-/* Determine level of concurrency.  */
-extern int pthread_getconcurrency (void) throw ();
-
-/* Set new concurrency level to LEVEL.  */
-extern int pthread_setconcurrency (int __level) throw ();
-
-
-
-/* Yield the processor to another thread or process.
-   This function is similar to the POSIX `sched_yield' function but
-   might be differently implemented in the case of a m-on-n thread
-   implementation.  */
-extern int pthread_yield (void) throw ();
-
-
-/* Limit specified thread TH to run only on the processors represented
-   in CPUSET.  */
-extern int pthread_setaffinity_np (pthread_t __th, size_t __cpusetsize,
-       __const cpu_set_t *__cpuset)
-     throw () __attribute__ ((__nonnull__ (3)));
-
-/* Get bit set in CPUSET representing the processors TH can run on.  */
-extern int pthread_getaffinity_np (pthread_t __th, size_t __cpusetsize,
-       cpu_set_t *__cpuset)
-     throw () __attribute__ ((__nonnull__ (3)));
-
-
-
-/* Functions for handling initialization.  */
-
-/* Guarantee that the initialization function INIT_ROUTINE will be called
-   only once, even if pthread_once is executed several times with the
-   same ONCE_CONTROL argument. ONCE_CONTROL must point to a static or
-   extern variable initialized to PTHREAD_ONCE_INIT.
-
-   The initialization functions might throw exception which is why
-   this function is not marked with __THROW.  */
-extern int pthread_once (pthread_once_t *__once_control,
-    void (*__init_routine) (void)) __attribute__ ((__nonnull__ (1, 2)));
-
-
-/* Functions for handling cancellation.
-
-   Note that these functions are explicitly not marked to not throw an
-   exception in C++ code.  If cancellation is implemented by unwinding
-   this is necessary to have the compiler generate the unwind information.  */
-
-/* Set cancelability state of current thread to STATE, returning old
-   state in *OLDSTATE if OLDSTATE is not NULL.  */
-extern int pthread_setcancelstate (int __state, int *__oldstate);
-
-/* Set cancellation state of current thread to TYPE, returning the old
-   type in *OLDTYPE if OLDTYPE is not NULL.  */
-extern int pthread_setcanceltype (int __type, int *__oldtype);
-
-/* Cancel THREAD immediately or at the next possibility.  */
-extern int pthread_cancel (pthread_t __th);
-
-/* Test for pending cancellation for the current thread and terminate
-   the thread as per pthread_exit(PTHREAD_CANCELED) if it has been
-   cancelled.  */
-extern void pthread_testcancel (void);
-
-
-/* Cancellation handling with integration into exception handling.  */
-
-typedef struct
-{
-  struct
-  {
-    __jmp_buf __cancel_jmp_buf;
-    int __mask_was_saved;
-  } __cancel_jmp_buf[1];
-  void *__pad[4];
-} __pthread_unwind_buf_t __attribute__ ((__aligned__));
-
-/* No special attributes by default.  */
-
-
-
-
-
-/* Structure to hold the cleanup handler information.  */
-struct __pthread_cleanup_frame
-{
-  void (*__cancel_routine) (void *);
-  void *__cancel_arg;
-  int __do_it;
-  int __cancel_type;
-};
-# 628 "/usr/include/pthread.h" 3 4
-/* Install a cleanup handler: ROUTINE will be called with arguments ARG
-   when the thread is canceled or calls pthread_exit.  ROUTINE will also
-   be called with arguments ARG when the matching pthread_cleanup_pop
-   is executed with non-zero EXECUTE argument.
-
-   pthread_cleanup_push and pthread_cleanup_pop are macros and must always
-   be used in matching pairs at the same nesting level of braces.  */
-# 651 "/usr/include/pthread.h" 3 4
-extern void __pthread_register_cancel (__pthread_unwind_buf_t *__buf)
-                            ;
-
-/* Remove a cleanup handler installed by the matching pthread_cleanup_push.
-   If EXECUTE is non-zero, the handler function is called. */
-
-
-
-
-
-
-extern void __pthread_unregister_cancel (__pthread_unwind_buf_t *__buf)
-                         ;
-
-
-/* Install a cleanup handler as pthread_cleanup_push does, but also
-   saves the current cancellation type and sets it to deferred
-   cancellation.  */
-# 685 "/usr/include/pthread.h" 3 4
-extern void __pthread_register_cancel_defer (__pthread_unwind_buf_t *__buf)
-                            ;
-
-/* Remove a cleanup handler as pthread_cleanup_pop does, but also
-   restores the cancellation type that was in effect when the matching
-   pthread_cleanup_push_defer was called.  */
-
-
-
-
-
-
-extern void __pthread_unregister_cancel_restore (__pthread_unwind_buf_t *__buf)
-                         ;
-
-
-/* Internal interface to initiate cleanup.  */
-extern void __pthread_unwind_next (__pthread_unwind_buf_t *__buf)
-                             __attribute__ ((__noreturn__))
-
-     __attribute__ ((__weak__))
-
-     ;
-
-
-/* Function used in the macros.  */
-struct __jmp_buf_tag;
-extern int __sigsetjmp (struct __jmp_buf_tag *__env, int __savemask) throw ();
-
-
-/* Mutex handling.  */
-
-/* Initialize a mutex.  */
-extern int pthread_mutex_init (pthread_mutex_t *__mutex,
-          __const pthread_mutexattr_t *__mutexattr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Destroy a mutex.  */
-extern int pthread_mutex_destroy (pthread_mutex_t *__mutex)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Try locking a mutex.  */
-extern int pthread_mutex_trylock (pthread_mutex_t *__mutex)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Lock a mutex.  */
-extern int pthread_mutex_lock (pthread_mutex_t *__mutex)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Wait until lock becomes available, or specified time passes. */
-extern int pthread_mutex_timedlock (pthread_mutex_t *__restrict __mutex,
-                                    __const struct timespec *__restrict
-                                    __abstime) throw () __attribute__ ((__nonnull__ (1, 2)));
-
-
-/* Unlock a mutex.  */
-extern int pthread_mutex_unlock (pthread_mutex_t *__mutex)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-/* Get the priority ceiling of MUTEX.  */
-extern int pthread_mutex_getprioceiling (__const pthread_mutex_t *
-      __restrict __mutex,
-      int *__restrict __prioceiling)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set the priority ceiling of MUTEX to PRIOCEILING, return old
-   priority ceiling value in *OLD_CEILING.  */
-extern int pthread_mutex_setprioceiling (pthread_mutex_t *__restrict __mutex,
-      int __prioceiling,
-      int *__restrict __old_ceiling)
-     throw () __attribute__ ((__nonnull__ (1, 3)));
-
-
-
-
-/* Declare the state protected by MUTEX as consistent.  */
-extern int pthread_mutex_consistent_np (pthread_mutex_t *__mutex)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-/* Functions for handling mutex attributes.  */
-
-/* Initialize mutex attribute object ATTR with default attributes
-   (kind is PTHREAD_MUTEX_TIMED_NP).  */
-extern int pthread_mutexattr_init (pthread_mutexattr_t *__attr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Destroy mutex attribute object ATTR.  */
-extern int pthread_mutexattr_destroy (pthread_mutexattr_t *__attr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Get the process-shared flag of the mutex attribute ATTR.  */
-extern int pthread_mutexattr_getpshared (__const pthread_mutexattr_t *
-      __restrict __attr,
-      int *__restrict __pshared)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set the process-shared flag of the mutex attribute ATTR.  */
-extern int pthread_mutexattr_setpshared (pthread_mutexattr_t *__attr,
-      int __pshared)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Return in *KIND the mutex kind attribute in *ATTR.  */
-extern int pthread_mutexattr_gettype (__const pthread_mutexattr_t *__restrict
-          __attr, int *__restrict __kind)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set the mutex kind attribute in *ATTR to KIND (either PTHREAD_MUTEX_NORMAL,
-   PTHREAD_MUTEX_RECURSIVE, PTHREAD_MUTEX_ERRORCHECK, or
-   PTHREAD_MUTEX_DEFAULT).  */
-extern int pthread_mutexattr_settype (pthread_mutexattr_t *__attr, int __kind)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Return in *PROTOCOL the mutex protocol attribute in *ATTR.  */
-extern int pthread_mutexattr_getprotocol (__const pthread_mutexattr_t *
-       __restrict __attr,
-       int *__restrict __protocol)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set the mutex protocol attribute in *ATTR to PROTOCOL (either
-   PTHREAD_PRIO_NONE, PTHREAD_PRIO_INHERIT, or PTHREAD_PRIO_PROTECT).  */
-extern int pthread_mutexattr_setprotocol (pthread_mutexattr_t *__attr,
-       int __protocol)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Return in *PRIOCEILING the mutex prioceiling attribute in *ATTR.  */
-extern int pthread_mutexattr_getprioceiling (__const pthread_mutexattr_t *
-          __restrict __attr,
-          int *__restrict __prioceiling)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set the mutex prioceiling attribute in *ATTR to PRIOCEILING.  */
-extern int pthread_mutexattr_setprioceiling (pthread_mutexattr_t *__attr,
-          int __prioceiling)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-/* Get the robustness flag of the mutex attribute ATTR.  */
-extern int pthread_mutexattr_getrobust_np (__const pthread_mutexattr_t *__attr,
-        int *__robustness)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set the robustness flag of the mutex attribute ATTR.  */
-extern int pthread_mutexattr_setrobust_np (pthread_mutexattr_t *__attr,
-        int __robustness)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-/* Functions for handling read-write locks.  */
-
-/* Initialize read-write lock RWLOCK using attributes ATTR, or use
-   the default values if later is NULL.  */
-extern int pthread_rwlock_init (pthread_rwlock_t *__restrict __rwlock,
-    __const pthread_rwlockattr_t *__restrict
-    __attr) throw () __attribute__ ((__nonnull__ (1)));
-
-/* Destroy read-write lock RWLOCK.  */
-extern int pthread_rwlock_destroy (pthread_rwlock_t *__rwlock)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Acquire read lock for RWLOCK.  */
-extern int pthread_rwlock_rdlock (pthread_rwlock_t *__rwlock)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Try to acquire read lock for RWLOCK.  */
-extern int pthread_rwlock_tryrdlock (pthread_rwlock_t *__rwlock)
-  throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Try to acquire read lock for RWLOCK or return after specfied time.  */
-extern int pthread_rwlock_timedrdlock (pthread_rwlock_t *__restrict __rwlock,
-           __const struct timespec *__restrict
-           __abstime) throw () __attribute__ ((__nonnull__ (1, 2)));
-
-
-/* Acquire write lock for RWLOCK.  */
-extern int pthread_rwlock_wrlock (pthread_rwlock_t *__rwlock)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Try to acquire write lock for RWLOCK.  */
-extern int pthread_rwlock_trywrlock (pthread_rwlock_t *__rwlock)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Try to acquire write lock for RWLOCK or return after specfied time.  */
-extern int pthread_rwlock_timedwrlock (pthread_rwlock_t *__restrict __rwlock,
-           __const struct timespec *__restrict
-           __abstime) throw () __attribute__ ((__nonnull__ (1, 2)));
-
-
-/* Unlock RWLOCK.  */
-extern int pthread_rwlock_unlock (pthread_rwlock_t *__rwlock)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Functions for handling read-write lock attributes.  */
-
-/* Initialize attribute object ATTR with default values.  */
-extern int pthread_rwlockattr_init (pthread_rwlockattr_t *__attr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Destroy attribute object ATTR.  */
-extern int pthread_rwlockattr_destroy (pthread_rwlockattr_t *__attr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Return current setting of process-shared attribute of ATTR in PSHARED.  */
-extern int pthread_rwlockattr_getpshared (__const pthread_rwlockattr_t *
-       __restrict __attr,
-       int *__restrict __pshared)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set process-shared attribute of ATTR to PSHARED.  */
-extern int pthread_rwlockattr_setpshared (pthread_rwlockattr_t *__attr,
-       int __pshared)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Return current setting of reader/writer preference.  */
-extern int pthread_rwlockattr_getkind_np (__const pthread_rwlockattr_t *
-       __restrict __attr,
-       int *__restrict __pref)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set reader/write preference.  */
-extern int pthread_rwlockattr_setkind_np (pthread_rwlockattr_t *__attr,
-       int __pref) throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-/* Functions for handling conditional variables.  */
-
-/* Initialize condition variable COND using attributes ATTR, or use
-   the default values if later is NULL.  */
-extern int pthread_cond_init (pthread_cond_t *__restrict __cond,
-         __const pthread_condattr_t *__restrict
-         __cond_attr) throw () __attribute__ ((__nonnull__ (1)));
-
-/* Destroy condition variable COND.  */
-extern int pthread_cond_destroy (pthread_cond_t *__cond)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Wake up one thread waiting for condition variable COND.  */
-extern int pthread_cond_signal (pthread_cond_t *__cond)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Wake up all threads waiting for condition variables COND.  */
-extern int pthread_cond_broadcast (pthread_cond_t *__cond)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Wait for condition variable COND to be signaled or broadcast.
-   MUTEX is assumed to be locked before.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern int pthread_cond_wait (pthread_cond_t *__restrict __cond,
-         pthread_mutex_t *__restrict __mutex)
-     __attribute__ ((__nonnull__ (1, 2)));
-
-/* Wait for condition variable COND to be signaled or broadcast until
-   ABSTIME.  MUTEX is assumed to be locked before.  ABSTIME is an
-   absolute time specification; zero is the beginning of the epoch
-   (00:00:00 GMT, January 1, 1970).
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern int pthread_cond_timedwait (pthread_cond_t *__restrict __cond,
-       pthread_mutex_t *__restrict __mutex,
-       __const struct timespec *__restrict
-       __abstime) __attribute__ ((__nonnull__ (1, 2, 3)));
-
-/* Functions for handling condition variable attributes.  */
-
-/* Initialize condition variable attribute ATTR.  */
-extern int pthread_condattr_init (pthread_condattr_t *__attr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Destroy condition variable attribute ATTR.  */
-extern int pthread_condattr_destroy (pthread_condattr_t *__attr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Get the process-shared flag of the condition variable attribute ATTR.  */
-extern int pthread_condattr_getpshared (__const pthread_condattr_t *
-                                        __restrict __attr,
-                                        int *__restrict __pshared)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set the process-shared flag of the condition variable attribute ATTR.  */
-extern int pthread_condattr_setpshared (pthread_condattr_t *__attr,
-                                        int __pshared) throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Get the clock selected for the conditon variable attribute ATTR.  */
-extern int pthread_condattr_getclock (__const pthread_condattr_t *
-          __restrict __attr,
-          __clockid_t *__restrict __clock_id)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set the clock selected for the conditon variable attribute ATTR.  */
-extern int pthread_condattr_setclock (pthread_condattr_t *__attr,
-          __clockid_t __clock_id)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-/* Functions to handle spinlocks.  */
-
-/* Initialize the spinlock LOCK.  If PSHARED is nonzero the spinlock can
-   be shared between different processes.  */
-extern int pthread_spin_init (pthread_spinlock_t *__lock, int __pshared)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Destroy the spinlock LOCK.  */
-extern int pthread_spin_destroy (pthread_spinlock_t *__lock)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Wait until spinlock LOCK is retrieved.  */
-extern int pthread_spin_lock (pthread_spinlock_t *__lock)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Try to lock spinlock LOCK.  */
-extern int pthread_spin_trylock (pthread_spinlock_t *__lock)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Release spinlock LOCK.  */
-extern int pthread_spin_unlock (pthread_spinlock_t *__lock)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Functions to handle barriers.  */
-
-/* Initialize BARRIER with the attributes in ATTR.  The barrier is
-   opened when COUNT waiters arrived.  */
-extern int pthread_barrier_init (pthread_barrier_t *__restrict __barrier,
-     __const pthread_barrierattr_t *__restrict
-     __attr, unsigned int __count)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Destroy a previously dynamically initialized barrier BARRIER.  */
-extern int pthread_barrier_destroy (pthread_barrier_t *__barrier)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Wait on barrier BARRIER.  */
-extern int pthread_barrier_wait (pthread_barrier_t *__barrier)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Initialize barrier attribute ATTR.  */
-extern int pthread_barrierattr_init (pthread_barrierattr_t *__attr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Destroy previously dynamically initialized barrier attribute ATTR.  */
-extern int pthread_barrierattr_destroy (pthread_barrierattr_t *__attr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Get the process-shared flag of the barrier attribute ATTR.  */
-extern int pthread_barrierattr_getpshared (__const pthread_barrierattr_t *
-        __restrict __attr,
-        int *__restrict __pshared)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Set the process-shared flag of the barrier attribute ATTR.  */
-extern int pthread_barrierattr_setpshared (pthread_barrierattr_t *__attr,
-                                           int __pshared)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-/* Functions for handling thread-specific data.  */
-
-/* Create a key value identifying a location in the thread-specific
-   data area.  Each thread maintains a distinct thread-specific data
-   area.  DESTR_FUNCTION, if non-NULL, is called with the value
-   associated to that key when the key is destroyed.
-   DESTR_FUNCTION is not called if the value associated is NULL when
-   the key is destroyed.  */
-extern int pthread_key_create (pthread_key_t *__key,
-          void (*__destr_function) (void *))
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Destroy KEY.  */
-extern int pthread_key_delete (pthread_key_t __key) throw ();
-
-/* Return current value of the thread-specific data slot identified by KEY.  */
-extern void *pthread_getspecific (pthread_key_t __key) throw ();
-
-/* Store POINTER in the thread-specific data slot identified by KEY. */
-extern int pthread_setspecific (pthread_key_t __key,
-    __const void *__pointer) throw () ;
-
-
-
-/* Get ID of CPU-time clock for thread THREAD_ID.  */
-extern int pthread_getcpuclockid (pthread_t __thread_id,
-      __clockid_t *__clock_id)
-     throw () __attribute__ ((__nonnull__ (2)));
-
-
-
-/* Install handlers to be called when a new process is created with FORK.
-   The PREPARE handler is called in the parent process just before performing
-   FORK. The PARENT handler is called in the parent process just after FORK.
-   The CHILD handler is called in the child process.  Each of the three
-   handlers can be NULL, meaning that no handler needs to be called at that
-   point.
-   PTHREAD_ATFORK can be called several times, in which case the PREPARE
-   handlers are called in LIFO order (last added with PTHREAD_ATFORK,
-   first called before FORK), and the PARENT and CHILD handlers are called
-   in FIFO (first added, first called).  */
-
-extern int pthread_atfork (void (*__prepare) (void),
-      void (*__parent) (void),
-      void (*__child) (void)) throw ();
-# 1116 "/usr/include/pthread.h" 3 4
+errno_t _set_errno(int _Value);
+errno_t _get_errno(int *_Value);
+# 74 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\errno.h" 3
 }
-# 42 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 2 3
-# 1 "/usr/include/unistd.h" 1 3 4
-/* Copyright (C) 1991-2002,2003,2004,2005,2006 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
+# 71 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/gthr-default.h" 2 3
 
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/*
- *	POSIX Standard: 2.10 Symbolic Constants		<unistd.h>
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-
-
-
-
-
-
-extern "C" {
-
-/* These may be used to determine what facilities are present at compile time.
-   Their values can be obtained at run time from `sysconf'.  */
-
-/* POSIX Standard approved as ISO/IEC 9945-1 as of December 2001.  */
-
-
-/* These are not #ifdef __USE_POSIX2 because they are
-   in the theoretically application-owned namespace.  */
-
-/* The utilities on GNU systems also correspond to this version.  */
-
-
-/* If defined, the implementation supports the
-   C Language Bindings Option.  */
-
-
-/* If defined, the implementation supports the
-   C Language Development Utilities Option.  */
-
-
-/* If defined, the implementation supports the
-   Software Development Utilities Option.  */
-
-
-/* If defined, the implementation supports the
-   creation of locales with the localedef utility.  */
-
-
-/* X/Open version number to which the library conforms.  It is selectable.  */
-# 67 "/usr/include/unistd.h" 3 4
-/* Commands and utilities from XPG4 are available.  */
-
-
-/* We are compatible with the old published standards as well.  */
-
-
-
-
-/* The X/Open Unix extensions are available.  */
-
-
-/* Encryption is present.  */
-
-
-/* The enhanced internationalization capabilities according to XPG4.2
-   are present.  */
-
-
-/* The legacy interfaces are also available.  */
-
-
-
-/* Get values of POSIX options:
-
-   If these symbols are defined, the corresponding features are
-   always available.  If not, they may be available sometimes.
-   The current values can be obtained with `sysconf'.
-
-   _POSIX_JOB_CONTROL		Job control is supported.
-   _POSIX_SAVED_IDS		Processes have a saved set-user-ID
-				and a saved set-group-ID.
-   _POSIX_REALTIME_SIGNALS	Real-time, queued signals are supported.
-   _POSIX_PRIORITY_SCHEDULING	Priority scheduling is supported.
-   _POSIX_TIMERS		POSIX.4 clocks and timers are supported.
-   _POSIX_ASYNCHRONOUS_IO	Asynchronous I/O is supported.
-   _POSIX_PRIORITIZED_IO	Prioritized asynchronous I/O is supported.
-   _POSIX_SYNCHRONIZED_IO	Synchronizing file data is supported.
-   _POSIX_FSYNC			The fsync function is present.
-   _POSIX_MAPPED_FILES		Mapping of files to memory is supported.
-   _POSIX_MEMLOCK		Locking of all memory is supported.
-   _POSIX_MEMLOCK_RANGE		Locking of ranges of memory is supported.
-   _POSIX_MEMORY_PROTECTION	Setting of memory protections is supported.
-   _POSIX_MESSAGE_PASSING	POSIX.4 message queues are supported.
-   _POSIX_SEMAPHORES		POSIX.4 counting semaphores are supported.
-   _POSIX_SHARED_MEMORY_OBJECTS	POSIX.4 shared memory objects are supported.
-   _POSIX_THREADS		POSIX.1c pthreads are supported.
-   _POSIX_THREAD_ATTR_STACKADDR	Thread stack address attribute option supported.
-   _POSIX_THREAD_ATTR_STACKSIZE	Thread stack size attribute option supported.
-   _POSIX_THREAD_SAFE_FUNCTIONS	Thread-safe functions are supported.
-   _POSIX_THREAD_PRIORITY_SCHEDULING
-				POSIX.1c thread execution scheduling supported.
-   _POSIX_THREAD_PRIO_INHERIT	Thread priority inheritance option supported.
-   _POSIX_THREAD_PRIO_PROTECT	Thread priority protection option supported.
-   _POSIX_THREAD_PROCESS_SHARED	Process-shared synchronization supported.
-   _POSIX_PII			Protocol-independent interfaces are supported.
-   _POSIX_PII_XTI		XTI protocol-indep. interfaces are supported.
-   _POSIX_PII_SOCKET		Socket protocol-indep. interfaces are supported.
-   _POSIX_PII_INTERNET		Internet family of protocols supported.
-   _POSIX_PII_INTERNET_STREAM	Connection-mode Internet protocol supported.
-   _POSIX_PII_INTERNET_DGRAM	Connectionless Internet protocol supported.
-   _POSIX_PII_OSI		ISO/OSI family of protocols supported.
-   _POSIX_PII_OSI_COTS		Connection-mode ISO/OSI service supported.
-   _POSIX_PII_OSI_CLTS		Connectionless ISO/OSI service supported.
-   _POSIX_POLL			Implementation supports `poll' function.
-   _POSIX_SELECT		Implementation supports `select' and `pselect'.
-
-   _XOPEN_REALTIME		X/Open realtime support is available.
-   _XOPEN_REALTIME_THREADS	X/Open realtime thread support is available.
-   _XOPEN_SHM			Shared memory interface according to XPG4.2.
-
-   _XBS5_ILP32_OFF32		Implementation provides environment with 32-bit
-				int, long, pointer, and off_t types.
-   _XBS5_ILP32_OFFBIG		Implementation provides environment with 32-bit
-				int, long, and pointer and off_t with at least
-				64 bits.
-   _XBS5_LP64_OFF64		Implementation provides environment with 32-bit
-				int, and 64-bit long, pointer, and off_t types.
-   _XBS5_LPBIG_OFFBIG		Implementation provides environment with at
-				least 32 bits int and long, pointer, and off_t
-				with at least 64 bits.
-
-   If any of these symbols is defined as -1, the corresponding option is not
-   true for any file.  If any is defined as other than -1, the corresponding
-   option is true for all files.  If a symbol is not defined at all, the value
-   for a specific file can be obtained from `pathconf' and `fpathconf'.
-
-   _POSIX_CHOWN_RESTRICTED	Only the super user can use `chown' to change
-				the owner of a file.  `chown' can only be used
-				to change the group ID of a file to a group of
-				which the calling process is a member.
-   _POSIX_NO_TRUNC		Pathname components longer than
-				NAME_MAX generate an error.
-   _POSIX_VDISABLE		If defined, if the value of an element of the
-				`c_cc' member of `struct termios' is
-				_POSIX_VDISABLE, no character will have the
-				effect associated with that element.
-   _POSIX_SYNC_IO		Synchronous I/O may be performed.
-   _POSIX_ASYNC_IO		Asynchronous I/O may be performed.
-   _POSIX_PRIO_IO		Prioritized Asynchronous I/O may be performed.
-
-   Support for the Large File Support interface is not generally available.
-   If it is available the following constants are defined to one.
-   _LFS64_LARGEFILE		Low-level I/O supports large files.
-   _LFS64_STDIO			Standard I/O supports large files.
-   */
-
-
-
-# 1 "/usr/include/bits/posix_opt.h" 1 3 4
-/* Define POSIX options for Linux.
-   Copyright (C) 1996-2004, 2006 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public License as
-   published by the Free Software Foundation; either version 2.1 of the
-   License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; see the file COPYING.LIB.  If not,
-   write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-   Boston, MA 02111-1307, USA.  */
-
-
-
-
-/* Job control is supported.  */
-
-
-/* Processes have a saved set-user-ID and a saved set-group-ID.  */
-
-
-/* Priority scheduling is supported.  */
-
-
-/* Synchronizing file data is supported.  */
-
-
-/* The fsync function is present.  */
-
-
-/* Mapping of files to memory is supported.  */
-
-
-/* Locking of all memory is supported.  */
-
-
-/* Locking of ranges of memory is supported.  */
-
-
-/* Setting of memory protections is supported.  */
-
-
-/* Only root can change owner of file.  */
-
-
-/* `c_cc' member of 'struct termios' structure can be disabled by
-   using the value _POSIX_VDISABLE.  */
-
-
-/* Filenames are not silently truncated.  */
-
-
-/* X/Open realtime support is available.  */
-
-
-/* X/Open thread realtime support is available.  */
-
-
-/* XPG4.2 shared memory is supported.  */
-
-
-/* Tell we have POSIX threads.  */
-
-
-/* We have the reentrant functions described in POSIX.  */
-
-
-
-/* We provide priority scheduling for threads.  */
-
-
-/* We support user-defined stack sizes.  */
-
-
-/* We support user-defined stacks.  */
-
-
-/* We support priority inheritence.  */
-
-
-/* We support priority protection, though only for non-robust
-   mutexes.  */
-
-
-/* We support POSIX.1b semaphores.  */
-
-
-/* Real-time signals are supported.  */
-
-
-/* We support asynchronous I/O.  */
-
-
-/* Alternative name for Unix98.  */
-
-/* Support for prioritization is also available.  */
-
-
-/* The LFS support in asynchronous I/O is also available.  */
-
-
-/* The rest of the LFS is also available.  */
-
-
-
-
-/* POSIX shared memory objects are implemented.  */
-
-
-/* CPU-time clocks support needs to be checked at runtime.  */
-
-
-/* Clock support in threads must be also checked at runtime.  */
-
-
-/* GNU libc provides regular expression handling.  */
-
-
-/* Reader/Writer locks are available.  */
-
-
-/* We have a POSIX shell.  */
-
-
-/* We support the Timeouts option.  */
-
-
-/* We support spinlocks.  */
-
-
-/* The `spawn' function family is supported.  */
-
-
-/* We have POSIX timers.  */
-
-
-/* The barrier functions are available.  */
-
-
-/* POSIX message queues are available.  */
-
-
-/* Thread process-shared synchronization is supported.  */
-
-
-/* The monotonic clock might be available.  */
-
-
-/* The clock selection interfaces are available.  */
-
-
-/* Advisory information interfaces are available.  */
-
-
-/* IPv6 support is available.  */
-
-
-/* Raw socket support is available.  */
-
-
-/* We have at least one terminal.  */
-
-
-/* Neither process nor thread sporadic server interfaces is available.  */
-
-
-
-/* trace.h is not available.  */
-
-
-
-
-
-/* Typed memory objects are not available.  */
-# 174 "/usr/include/unistd.h" 2 3 4
-
-/* Get the environment definitions from Unix98.  */
-
-
-
-# 1 "/usr/include/bits/environments.h" 1 3 4
-/* Copyright (C) 1999, 2001, 2004 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-
-
-
-
-
-
-# 1 "/usr/include/bits/wordsize.h" 1 3 4
-/* Determine the wordsize from the preprocessor defines.  */
-# 24 "/usr/include/bits/environments.h" 2 3 4
-
-/* This header should define the following symbols under the described
-   situations.  A value `1' means that the model is always supported,
-   `-1' means it is never supported.  Undefined means it cannot be
-   statically decided.
-
-   _POSIX_V6_ILP32_OFF32   32bit int, long, pointers, and off_t type
-   _POSIX_V6_ILP32_OFFBIG  32bit int, long, and pointers and larger off_t type
-
-   _POSIX_V6_LP64_OFF32	   64bit long and pointers and 32bit off_t type
-   _POSIX_V6_LPBIG_OFFBIG  64bit long and pointers and large off_t type
-
-   The macros _XBS5_ILP32_OFF32, _XBS5_ILP32_OFFBIG, _XBS5_LP64_OFF32, and
-   _XBS5_LPBIG_OFFBIG were used in previous versions of the Unix standard
-   and are available only for compatibility.
-*/
-
-
-
-/* Environments with 32-bit wide pointers are optionally provided.
-   Therefore following macros aren't defined:
-   # undef _POSIX_V6_ILP32_OFF32
-   # undef _POSIX_V6_ILP32_OFFBIG
-   # undef _XBS5_ILP32_OFF32
-   # undef _XBS5_ILP32_OFFBIG
-   and users need to check at runtime.  */
-
-/* We also have no use (for now) for an environment with bigger pointers
-   and offsets.  */
-
-
-
-/* By default we have 64-bit wide `long int', pointers and `off_t'.  */
-# 178 "/usr/include/unistd.h" 2 3 4
-
-
-/* Standard file descriptors.  */
-
-
-
-
-
-/* All functions that are not declared anywhere else.  */
-
-
-
-
-typedef __ssize_t ssize_t;
-
-
-
-
-
-
-
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
-/*===---- stddef.h - Basic type definitions --------------------------------===
- *
- * Copyright (c) 2008 Eli Friedman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- *===-----------------------------------------------------------------------===
- */
-# 56 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
-/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
-__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
-# 198 "/usr/include/unistd.h" 2 3 4
-
-
-/* The Single Unix specification says that some more types are
-   available here.  */
-
-typedef __gid_t gid_t;
-
-
-
-
-typedef __uid_t uid_t;
-
-
-
-
-
-typedef __off_t off_t;
-
-
-
-
-
-
-typedef __off64_t off64_t;
-
-
-
-
-typedef __useconds_t useconds_t;
-# 238 "/usr/include/unistd.h" 3 4
-typedef __intptr_t intptr_t;
-
-
-
-
-
-
-typedef __socklen_t socklen_t;
-
-
-
-
-/* Values for the second argument to access.
-   These may be OR'd together.  */
-
-
-
-
-
-/* Test for access to NAME using the real UID and real GID.  */
-extern int access (__const char *__name, int __type) throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Test for access to NAME using the effective UID and GID
-   (as normal file operations use).  */
-extern int euidaccess (__const char *__name, int __type)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* An alias for `euidaccess', used by some other systems.  */
-extern int eaccess (__const char *__name, int __type)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-/* Test for access to FILE relative to the directory FD is open on.
-   If AT_EACCESS is set in FLAG, then use effective IDs like `eaccess',
-   otherwise use real IDs like `access'.  */
-extern int faccessat (int __fd, __const char *__file, int __type, int __flag)
-     throw () __attribute__ ((__nonnull__ (2))) /* Ignore */;
-
-
-
-/* Values for the WHENCE argument to lseek.  */
-
-
-
-
-
-
-
-/* Old BSD names for the same constants; just for compatibility.  */
-
-
-
-
-
-
-/* Move FD's file position to OFFSET bytes from the
-   beginning of the file (if WHENCE is SEEK_SET),
-   the current position (if WHENCE is SEEK_CUR),
-   or the end of the file (if WHENCE is SEEK_END).
-   Return the new file position.  */
-
-extern __off_t lseek (int __fd, __off_t __offset, int __whence) throw ();
-# 312 "/usr/include/unistd.h" 3 4
-extern __off64_t lseek64 (int __fd, __off64_t __offset, int __whence)
-     throw ();
-
-
-/* Close the file descriptor FD.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern int close (int __fd);
-
-/* Read NBYTES into BUF from FD.  Return the
-   number read, -1 for errors or 0 for EOF.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern ssize_t read (int __fd, void *__buf, size_t __nbytes) /* Ignore */;
-
-/* Write N bytes of BUF to FD.  Return the number written, or -1.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern ssize_t write (int __fd, __const void *__buf, size_t __n) /* Ignore */;
-
-
-
-/* Read NBYTES into BUF from FD at the given position OFFSET without
-   changing the file pointer.  Return the number read, -1 for errors
-   or 0 for EOF.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern ssize_t pread (int __fd, void *__buf, size_t __nbytes,
-        __off_t __offset) /* Ignore */;
-
-/* Write N bytes of BUF to FD at the given position OFFSET without
-   changing the file pointer.  Return the number written, or -1.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern ssize_t pwrite (int __fd, __const void *__buf, size_t __n,
-         __off_t __offset) /* Ignore */;
-# 368 "/usr/include/unistd.h" 3 4
-/* Read NBYTES into BUF from FD at the given position OFFSET without
-   changing the file pointer.  Return the number read, -1 for errors
-   or 0 for EOF.  */
-extern ssize_t pread64 (int __fd, void *__buf, size_t __nbytes,
-   __off64_t __offset) /* Ignore */;
-/* Write N bytes of BUF to FD at the given position OFFSET without
-   changing the file pointer.  Return the number written, or -1.  */
-extern ssize_t pwrite64 (int __fd, __const void *__buf, size_t __n,
-    __off64_t __offset) /* Ignore */;
-
-
-
-/* Create a one-way communication channel (pipe).
-   If successful, two file descriptors are stored in PIPEDES;
-   bytes written on PIPEDES[1] can be read from PIPEDES[0].
-   Returns 0 if successful, -1 if not.  */
-extern int pipe (int __pipedes[2]) throw () /* Ignore */;
-
-/* Schedule an alarm.  In SECONDS seconds, the process will get a SIGALRM.
-   If SECONDS is zero, any currently scheduled alarm will be cancelled.
-   The function returns the number of seconds remaining until the last
-   alarm scheduled would have signaled, or zero if there wasn't one.
-   There is no return value to indicate an error, but you can set `errno'
-   to 0 and check its value after calling `alarm', and this might tell you.
-   The signal may come late due to processor scheduling.  */
-extern unsigned int alarm (unsigned int __seconds) throw ();
-
-/* Make the process sleep for SECONDS seconds, or until a signal arrives
-   and is not ignored.  The function returns the number of seconds less
-   than SECONDS which it actually slept (thus zero if it slept the full time).
-   If a signal handler does a `longjmp' or modifies the handling of the
-   SIGALRM signal while inside `sleep' call, the handling of the SIGALRM
-   signal afterwards is undefined.  There is no return value to indicate
-   error, but if `sleep' returns SECONDS, it probably didn't work.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern unsigned int sleep (unsigned int __seconds);
-
-
-/* Set an alarm to go off (generating a SIGALRM signal) in VALUE
-   microseconds.  If INTERVAL is nonzero, when the alarm goes off, the
-   timer is reset to go off every INTERVAL microseconds thereafter.
-   Returns the number of microseconds remaining before the alarm.  */
-extern __useconds_t ualarm (__useconds_t __value, __useconds_t __interval)
-     throw ();
-
-/* Sleep USECONDS microseconds, or until a signal arrives that is not blocked
-   or ignored.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern int usleep (__useconds_t __useconds);
-
-
-
-/* Suspend the process until a signal arrives.
-   This always returns -1 and sets `errno' to EINTR.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern int pause (void);
-
-
-/* Change the owner and group of FILE.  */
-extern int chown (__const char *__file, __uid_t __owner, __gid_t __group)
-     throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-/* Change the owner and group of the file that FD is open on.  */
-extern int fchown (int __fd, __uid_t __owner, __gid_t __group) throw () /* Ignore */;
-
-
-/* Change owner and group of FILE, if it is a symbolic
-   link the ownership of the symbolic link is changed.  */
-extern int lchown (__const char *__file, __uid_t __owner, __gid_t __group)
-     throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-
-
-/* Change the owner and group of FILE relative to the directory FD is open
-   on.  */
-extern int fchownat (int __fd, __const char *__file, __uid_t __owner,
-       __gid_t __group, int __flag)
-     throw () __attribute__ ((__nonnull__ (2))) /* Ignore */;
-
-
-/* Change the process's working directory to PATH.  */
-extern int chdir (__const char *__path) throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-/* Change the process's working directory to the one FD is open on.  */
-extern int fchdir (int __fd) throw () /* Ignore */;
-
-
-/* Get the pathname of the current working directory,
-   and put it in SIZE bytes of BUF.  Returns NULL if the
-   directory couldn't be determined or SIZE was too small.
-   If successful, returns BUF.  In GNU, if BUF is NULL,
-   an array is allocated with `malloc'; the array is SIZE
-   bytes long, unless SIZE == 0, in which case it is as
-   big as necessary.  */
-extern char *getcwd (char *__buf, size_t __size) throw () /* Ignore */;
-
-
-/* Return a malloc'd string containing the current directory name.
-   If the environment variable `PWD' is set, and its value is correct,
-   that value is used.  */
-extern char *get_current_dir_name (void) throw ();
-
-
-
-/* Put the absolute pathname of the current working directory in BUF.
-   If successful, return BUF.  If not, put an error message in
-   BUF and return NULL.  BUF should be at least PATH_MAX bytes long.  */
-extern char *getwd (char *__buf)
-     throw () __attribute__ ((__nonnull__ (1))) __attribute__ ((__deprecated__)) /* Ignore */;
-
-
-
-/* Duplicate FD, returning a new file descriptor on the same file.  */
-extern int dup (int __fd) throw () /* Ignore */;
-
-/* Duplicate FD to FD2, closing FD2 and making it open on the same file.  */
-extern int dup2 (int __fd, int __fd2) throw ();
-
-/* NULL-terminated array of "NAME=VALUE" environment variables.  */
-extern char **__environ;
-
-extern char **environ;
-
-
-
-/* Replace the current process, executing PATH with arguments ARGV and
-   environment ENVP.  ARGV and ENVP are terminated by NULL pointers.  */
-extern int execve (__const char *__path, char *__const __argv[],
-     char *__const __envp[]) throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Execute the file FD refers to, overlaying the running program image.
-   ARGV and ENVP are passed to the new program, as for `execve'.  */
-extern int fexecve (int __fd, char *__const __argv[], char *__const __envp[])
-     throw ();
-
-
-
-/* Execute PATH with arguments ARGV and environment from `environ'.  */
-extern int execv (__const char *__path, char *__const __argv[])
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Execute PATH with all arguments after PATH until a NULL pointer,
-   and the argument after that for environment.  */
-extern int execle (__const char *__path, __const char *__arg, ...)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Execute PATH with all arguments after PATH until
-   a NULL pointer and environment from `environ'.  */
-extern int execl (__const char *__path, __const char *__arg, ...)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Execute FILE, searching in the `PATH' environment variable if it contains
-   no slashes, with arguments ARGV and environment from `environ'.  */
-extern int execvp (__const char *__file, char *__const __argv[])
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Execute FILE, searching in the `PATH' environment variable if
-   it contains no slashes, with all arguments after FILE until a
-   NULL pointer and environment from `environ'.  */
-extern int execlp (__const char *__file, __const char *__arg, ...)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-/* Add INC to priority of the current process.  */
-extern int nice (int __inc) throw () /* Ignore */;
-
-
-
-/* Terminate program execution with the low-order 8 bits of STATUS.  */
-extern void _exit (int __status) __attribute__ ((__noreturn__));
-
-
-/* Get the `_PC_*' symbols for the NAME argument to `pathconf' and `fpathconf';
-   the `_SC_*' symbols for the NAME argument to `sysconf';
-   and the `_CS_*' symbols for the NAME argument to `confstr'.  */
-
-
-# 1 "/usr/include/bits/confname.h" 1 3 4
-/* `sysconf', `pathconf', and `confstr' NAME values.  Generic version.
-   Copyright (C) 1993,1995-1998,2000,2001,2003,2004
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-
-
-
-
-/* Values for the NAME argument to `pathconf' and `fpathconf'.  */
-enum
-  {
-    _PC_LINK_MAX,
-
-    _PC_MAX_CANON,
-
-    _PC_MAX_INPUT,
-
-    _PC_NAME_MAX,
-
-    _PC_PATH_MAX,
-
-    _PC_PIPE_BUF,
-
-    _PC_CHOWN_RESTRICTED,
-
-    _PC_NO_TRUNC,
-
-    _PC_VDISABLE,
-
-    _PC_SYNC_IO,
-
-    _PC_ASYNC_IO,
-
-    _PC_PRIO_IO,
-
-    _PC_SOCK_MAXBUF,
-
-    _PC_FILESIZEBITS,
-
-    _PC_REC_INCR_XFER_SIZE,
-
-    _PC_REC_MAX_XFER_SIZE,
-
-    _PC_REC_MIN_XFER_SIZE,
-
-    _PC_REC_XFER_ALIGN,
-
-    _PC_ALLOC_SIZE_MIN,
-
-    _PC_SYMLINK_MAX,
-
-    _PC_2_SYMLINKS
-
-  };
-
-/* Values for the argument to `sysconf'.  */
-enum
-  {
-    _SC_ARG_MAX,
-
-    _SC_CHILD_MAX,
-
-    _SC_CLK_TCK,
-
-    _SC_NGROUPS_MAX,
-
-    _SC_OPEN_MAX,
-
-    _SC_STREAM_MAX,
-
-    _SC_TZNAME_MAX,
-
-    _SC_JOB_CONTROL,
-
-    _SC_SAVED_IDS,
-
-    _SC_REALTIME_SIGNALS,
-
-    _SC_PRIORITY_SCHEDULING,
-
-    _SC_TIMERS,
-
-    _SC_ASYNCHRONOUS_IO,
-
-    _SC_PRIORITIZED_IO,
-
-    _SC_SYNCHRONIZED_IO,
-
-    _SC_FSYNC,
-
-    _SC_MAPPED_FILES,
-
-    _SC_MEMLOCK,
-
-    _SC_MEMLOCK_RANGE,
-
-    _SC_MEMORY_PROTECTION,
-
-    _SC_MESSAGE_PASSING,
-
-    _SC_SEMAPHORES,
-
-    _SC_SHARED_MEMORY_OBJECTS,
-
-    _SC_AIO_LISTIO_MAX,
-
-    _SC_AIO_MAX,
-
-    _SC_AIO_PRIO_DELTA_MAX,
-
-    _SC_DELAYTIMER_MAX,
-
-    _SC_MQ_OPEN_MAX,
-
-    _SC_MQ_PRIO_MAX,
-
-    _SC_VERSION,
-
-    _SC_PAGESIZE,
-
-
-    _SC_RTSIG_MAX,
-
-    _SC_SEM_NSEMS_MAX,
-
-    _SC_SEM_VALUE_MAX,
-
-    _SC_SIGQUEUE_MAX,
-
-    _SC_TIMER_MAX,
-
-
-    /* Values for the argument to `sysconf'
-       corresponding to _POSIX2_* symbols.  */
-    _SC_BC_BASE_MAX,
-
-    _SC_BC_DIM_MAX,
-
-    _SC_BC_SCALE_MAX,
-
-    _SC_BC_STRING_MAX,
-
-    _SC_COLL_WEIGHTS_MAX,
-
-    _SC_EQUIV_CLASS_MAX,
-
-    _SC_EXPR_NEST_MAX,
-
-    _SC_LINE_MAX,
-
-    _SC_RE_DUP_MAX,
-
-    _SC_CHARCLASS_NAME_MAX,
-
-
-    _SC_2_VERSION,
-
-    _SC_2_C_BIND,
-
-    _SC_2_C_DEV,
-
-    _SC_2_FORT_DEV,
-
-    _SC_2_FORT_RUN,
-
-    _SC_2_SW_DEV,
-
-    _SC_2_LOCALEDEF,
-
-
-    _SC_PII,
-
-    _SC_PII_XTI,
-
-    _SC_PII_SOCKET,
-
-    _SC_PII_INTERNET,
-
-    _SC_PII_OSI,
-
-    _SC_POLL,
-
-    _SC_SELECT,
-
-    _SC_UIO_MAXIOV,
-
-    _SC_IOV_MAX = _SC_UIO_MAXIOV,
-
-    _SC_PII_INTERNET_STREAM,
-
-    _SC_PII_INTERNET_DGRAM,
-
-    _SC_PII_OSI_COTS,
-
-    _SC_PII_OSI_CLTS,
-
-    _SC_PII_OSI_M,
-
-    _SC_T_IOV_MAX,
-
-
-    /* Values according to POSIX 1003.1c (POSIX threads).  */
-    _SC_THREADS,
-
-    _SC_THREAD_SAFE_FUNCTIONS,
-
-    _SC_GETGR_R_SIZE_MAX,
-
-    _SC_GETPW_R_SIZE_MAX,
-
-    _SC_LOGIN_NAME_MAX,
-
-    _SC_TTY_NAME_MAX,
-
-    _SC_THREAD_DESTRUCTOR_ITERATIONS,
-
-    _SC_THREAD_KEYS_MAX,
-
-    _SC_THREAD_STACK_MIN,
-
-    _SC_THREAD_THREADS_MAX,
-
-    _SC_THREAD_ATTR_STACKADDR,
-
-    _SC_THREAD_ATTR_STACKSIZE,
-
-    _SC_THREAD_PRIORITY_SCHEDULING,
-
-    _SC_THREAD_PRIO_INHERIT,
-
-    _SC_THREAD_PRIO_PROTECT,
-
-    _SC_THREAD_PROCESS_SHARED,
-
-
-    _SC_NPROCESSORS_CONF,
-
-    _SC_NPROCESSORS_ONLN,
-
-    _SC_PHYS_PAGES,
-
-    _SC_AVPHYS_PAGES,
-
-    _SC_ATEXIT_MAX,
-
-    _SC_PASS_MAX,
-
-
-    _SC_XOPEN_VERSION,
-
-    _SC_XOPEN_XCU_VERSION,
-
-    _SC_XOPEN_UNIX,
-
-    _SC_XOPEN_CRYPT,
-
-    _SC_XOPEN_ENH_I18N,
-
-    _SC_XOPEN_SHM,
-
-
-    _SC_2_CHAR_TERM,
-
-    _SC_2_C_VERSION,
-
-    _SC_2_UPE,
-
-
-    _SC_XOPEN_XPG2,
-
-    _SC_XOPEN_XPG3,
-
-    _SC_XOPEN_XPG4,
-
-
-    _SC_CHAR_BIT,
-
-    _SC_CHAR_MAX,
-
-    _SC_CHAR_MIN,
-
-    _SC_INT_MAX,
-
-    _SC_INT_MIN,
-
-    _SC_LONG_BIT,
-
-    _SC_WORD_BIT,
-
-    _SC_MB_LEN_MAX,
-
-    _SC_NZERO,
-
-    _SC_SSIZE_MAX,
-
-    _SC_SCHAR_MAX,
-
-    _SC_SCHAR_MIN,
-
-    _SC_SHRT_MAX,
-
-    _SC_SHRT_MIN,
-
-    _SC_UCHAR_MAX,
-
-    _SC_UINT_MAX,
-
-    _SC_ULONG_MAX,
-
-    _SC_USHRT_MAX,
-
-
-    _SC_NL_ARGMAX,
-
-    _SC_NL_LANGMAX,
-
-    _SC_NL_MSGMAX,
-
-    _SC_NL_NMAX,
-
-    _SC_NL_SETMAX,
-
-    _SC_NL_TEXTMAX,
-
-
-    _SC_XBS5_ILP32_OFF32,
-
-    _SC_XBS5_ILP32_OFFBIG,
-
-    _SC_XBS5_LP64_OFF64,
-
-    _SC_XBS5_LPBIG_OFFBIG,
-
-
-    _SC_XOPEN_LEGACY,
-
-    _SC_XOPEN_REALTIME,
-
-    _SC_XOPEN_REALTIME_THREADS,
-
-
-    _SC_ADVISORY_INFO,
-
-    _SC_BARRIERS,
-
-    _SC_BASE,
-
-    _SC_C_LANG_SUPPORT,
-
-    _SC_C_LANG_SUPPORT_R,
-
-    _SC_CLOCK_SELECTION,
-
-    _SC_CPUTIME,
-
-    _SC_THREAD_CPUTIME,
-
-    _SC_DEVICE_IO,
-
-    _SC_DEVICE_SPECIFIC,
-
-    _SC_DEVICE_SPECIFIC_R,
-
-    _SC_FD_MGMT,
-
-    _SC_FIFO,
-
-    _SC_PIPE,
-
-    _SC_FILE_ATTRIBUTES,
-
-    _SC_FILE_LOCKING,
-
-    _SC_FILE_SYSTEM,
-
-    _SC_MONOTONIC_CLOCK,
-
-    _SC_MULTI_PROCESS,
-
-    _SC_SINGLE_PROCESS,
-
-    _SC_NETWORKING,
-
-    _SC_READER_WRITER_LOCKS,
-
-    _SC_SPIN_LOCKS,
-
-    _SC_REGEXP,
-
-    _SC_REGEX_VERSION,
-
-    _SC_SHELL,
-
-    _SC_SIGNALS,
-
-    _SC_SPAWN,
-
-    _SC_SPORADIC_SERVER,
-
-    _SC_THREAD_SPORADIC_SERVER,
-
-    _SC_SYSTEM_DATABASE,
-
-    _SC_SYSTEM_DATABASE_R,
-
-    _SC_TIMEOUTS,
-
-    _SC_TYPED_MEMORY_OBJECTS,
-
-    _SC_USER_GROUPS,
-
-    _SC_USER_GROUPS_R,
-
-    _SC_2_PBS,
-
-    _SC_2_PBS_ACCOUNTING,
-
-    _SC_2_PBS_LOCATE,
-
-    _SC_2_PBS_MESSAGE,
-
-    _SC_2_PBS_TRACK,
-
-    _SC_SYMLOOP_MAX,
-
-    _SC_STREAMS,
-
-    _SC_2_PBS_CHECKPOINT,
-
-
-    _SC_V6_ILP32_OFF32,
-
-    _SC_V6_ILP32_OFFBIG,
-
-    _SC_V6_LP64_OFF64,
-
-    _SC_V6_LPBIG_OFFBIG,
-
-
-    _SC_HOST_NAME_MAX,
-
-    _SC_TRACE,
-
-    _SC_TRACE_EVENT_FILTER,
-
-    _SC_TRACE_INHERIT,
-
-    _SC_TRACE_LOG,
-
-
-    _SC_LEVEL1_ICACHE_SIZE,
-
-    _SC_LEVEL1_ICACHE_ASSOC,
-
-    _SC_LEVEL1_ICACHE_LINESIZE,
-
-    _SC_LEVEL1_DCACHE_SIZE,
-
-    _SC_LEVEL1_DCACHE_ASSOC,
-
-    _SC_LEVEL1_DCACHE_LINESIZE,
-
-    _SC_LEVEL2_CACHE_SIZE,
-
-    _SC_LEVEL2_CACHE_ASSOC,
-
-    _SC_LEVEL2_CACHE_LINESIZE,
-
-    _SC_LEVEL3_CACHE_SIZE,
-
-    _SC_LEVEL3_CACHE_ASSOC,
-
-    _SC_LEVEL3_CACHE_LINESIZE,
-
-    _SC_LEVEL4_CACHE_SIZE,
-
-    _SC_LEVEL4_CACHE_ASSOC,
-
-    _SC_LEVEL4_CACHE_LINESIZE,
-
-    /* Leave room here, maybe we need a few more cache levels some day.  */
-
-    _SC_IPV6 = _SC_LEVEL1_ICACHE_SIZE + 50,
-
-    _SC_RAW_SOCKETS
-
-  };
-
-/* Values for the NAME argument to `confstr'.  */
-enum
-  {
-    _CS_PATH, /* The default search path.  */
-
-
-    _CS_V6_WIDTH_RESTRICTED_ENVS,
-
-
-    _CS_GNU_LIBC_VERSION,
-
-    _CS_GNU_LIBPTHREAD_VERSION,
-
-
-    _CS_LFS_CFLAGS = 1000,
-
-    _CS_LFS_LDFLAGS,
-
-    _CS_LFS_LIBS,
-
-    _CS_LFS_LINTFLAGS,
-
-    _CS_LFS64_CFLAGS,
-
-    _CS_LFS64_LDFLAGS,
-
-    _CS_LFS64_LIBS,
-
-    _CS_LFS64_LINTFLAGS,
-
-
-    _CS_XBS5_ILP32_OFF32_CFLAGS = 1100,
-
-    _CS_XBS5_ILP32_OFF32_LDFLAGS,
-
-    _CS_XBS5_ILP32_OFF32_LIBS,
-
-    _CS_XBS5_ILP32_OFF32_LINTFLAGS,
-
-    _CS_XBS5_ILP32_OFFBIG_CFLAGS,
-
-    _CS_XBS5_ILP32_OFFBIG_LDFLAGS,
-
-    _CS_XBS5_ILP32_OFFBIG_LIBS,
-
-    _CS_XBS5_ILP32_OFFBIG_LINTFLAGS,
-
-    _CS_XBS5_LP64_OFF64_CFLAGS,
-
-    _CS_XBS5_LP64_OFF64_LDFLAGS,
-
-    _CS_XBS5_LP64_OFF64_LIBS,
-
-    _CS_XBS5_LP64_OFF64_LINTFLAGS,
-
-    _CS_XBS5_LPBIG_OFFBIG_CFLAGS,
-
-    _CS_XBS5_LPBIG_OFFBIG_LDFLAGS,
-
-    _CS_XBS5_LPBIG_OFFBIG_LIBS,
-
-    _CS_XBS5_LPBIG_OFFBIG_LINTFLAGS,
-
-
-    _CS_POSIX_V6_ILP32_OFF32_CFLAGS,
-
-    _CS_POSIX_V6_ILP32_OFF32_LDFLAGS,
-
-    _CS_POSIX_V6_ILP32_OFF32_LIBS,
-
-    _CS_POSIX_V6_ILP32_OFF32_LINTFLAGS,
-
-    _CS_POSIX_V6_ILP32_OFFBIG_CFLAGS,
-
-    _CS_POSIX_V6_ILP32_OFFBIG_LDFLAGS,
-
-    _CS_POSIX_V6_ILP32_OFFBIG_LIBS,
-
-    _CS_POSIX_V6_ILP32_OFFBIG_LINTFLAGS,
-
-    _CS_POSIX_V6_LP64_OFF64_CFLAGS,
-
-    _CS_POSIX_V6_LP64_OFF64_LDFLAGS,
-
-    _CS_POSIX_V6_LP64_OFF64_LIBS,
-
-    _CS_POSIX_V6_LP64_OFF64_LINTFLAGS,
-
-    _CS_POSIX_V6_LPBIG_OFFBIG_CFLAGS,
-
-    _CS_POSIX_V6_LPBIG_OFFBIG_LDFLAGS,
-
-    _CS_POSIX_V6_LPBIG_OFFBIG_LIBS,
-
-    _CS_POSIX_V6_LPBIG_OFFBIG_LINTFLAGS
-
-  };
-# 555 "/usr/include/unistd.h" 2 3 4
-
-/* Get file-specific configuration information about PATH.  */
-extern long int pathconf (__const char *__path, int __name)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Get file-specific configuration about descriptor FD.  */
-extern long int fpathconf (int __fd, int __name) throw ();
-
-/* Get the value of the system variable NAME.  */
-extern long int sysconf (int __name) throw ();
-
-
-/* Get the value of the string-valued system variable NAME.  */
-extern size_t confstr (int __name, char *__buf, size_t __len) throw ();
-
-
-
-/* Get the process ID of the calling process.  */
-extern __pid_t getpid (void) throw ();
-
-/* Get the process ID of the calling process's parent.  */
-extern __pid_t getppid (void) throw ();
-
-/* Get the process group ID of the calling process.
-   This function is different on old BSD. */
-
-extern __pid_t getpgrp (void) throw ();
-# 590 "/usr/include/unistd.h" 3 4
-/* Get the process group ID of process PID.  */
-extern __pid_t __getpgid (__pid_t __pid) throw ();
-
-extern __pid_t getpgid (__pid_t __pid) throw ();
-
-
-
-/* Set the process group ID of the process matching PID to PGID.
-   If PID is zero, the current process's process group ID is set.
-   If PGID is zero, the process ID of the process is used.  */
-extern int setpgid (__pid_t __pid, __pid_t __pgid) throw ();
-
-
-/* Both System V and BSD have `setpgrp' functions, but with different
-   calling conventions.  The BSD function is the same as POSIX.1 `setpgid'
-   (above).  The System V function takes no arguments and puts the calling
-   process in its on group like `setpgid (0, 0)'.
-
-   New programs should always use `setpgid' instead.
-
-   The default in GNU is to provide the System V function.  The BSD
-   function is available under -D_BSD_SOURCE.  */
-
-
-
-/* Set the process group ID of the calling process to its own PID.
-   This is exactly the same as `setpgid (0, 0)'.  */
-extern int setpgrp (void) throw ();
-# 631 "/usr/include/unistd.h" 3 4
-/* Create a new session with the calling process as its leader.
-   The process group IDs of the session and the calling process
-   are set to the process ID of the calling process, which is returned.  */
-extern __pid_t setsid (void) throw ();
-
-
-/* Return the session ID of the given process.  */
-extern __pid_t getsid (__pid_t __pid) throw ();
-
-
-/* Get the real user ID of the calling process.  */
-extern __uid_t getuid (void) throw ();
-
-/* Get the effective user ID of the calling process.  */
-extern __uid_t geteuid (void) throw ();
-
-/* Get the real group ID of the calling process.  */
-extern __gid_t getgid (void) throw ();
-
-/* Get the effective group ID of the calling process.  */
-extern __gid_t getegid (void) throw ();
-
-/* If SIZE is zero, return the number of supplementary groups
-   the calling process is in.  Otherwise, fill in the group IDs
-   of its supplementary groups in LIST and return the number written.  */
-extern int getgroups (int __size, __gid_t __list[]) throw () /* Ignore */;
-
-
-/* Return nonzero iff the calling process is in group GID.  */
-extern int group_member (__gid_t __gid) throw ();
-
-
-/* Set the user ID of the calling process to UID.
-   If the calling process is the super-user, set the real
-   and effective user IDs, and the saved set-user-ID to UID;
-   if not, the effective user ID is set to UID.  */
-extern int setuid (__uid_t __uid) throw ();
-
-
-/* Set the real user ID of the calling process to RUID,
-   and the effective user ID of the calling process to EUID.  */
-extern int setreuid (__uid_t __ruid, __uid_t __euid) throw ();
-
-
-
-/* Set the effective user ID of the calling process to UID.  */
-extern int seteuid (__uid_t __uid) throw ();
-
-
-/* Set the group ID of the calling process to GID.
-   If the calling process is the super-user, set the real
-   and effective group IDs, and the saved set-group-ID to GID;
-   if not, the effective group ID is set to GID.  */
-extern int setgid (__gid_t __gid) throw ();
-
-
-/* Set the real group ID of the calling process to RGID,
-   and the effective group ID of the calling process to EGID.  */
-extern int setregid (__gid_t __rgid, __gid_t __egid) throw ();
-
-
-
-/* Set the effective group ID of the calling process to GID.  */
-extern int setegid (__gid_t __gid) throw ();
-
-
-
-/* Fetch the real user ID, effective user ID, and saved-set user ID,
-   of the calling process.  */
-extern int getresuid (__uid_t *__ruid, __uid_t *__euid, __uid_t *__suid)
-     throw ();
-
-/* Fetch the real group ID, effective group ID, and saved-set group ID,
-   of the calling process.  */
-extern int getresgid (__gid_t *__rgid, __gid_t *__egid, __gid_t *__sgid)
-     throw ();
-
-/* Set the real user ID, effective user ID, and saved-set user ID,
-   of the calling process to RUID, EUID, and SUID, respectively.  */
-extern int setresuid (__uid_t __ruid, __uid_t __euid, __uid_t __suid)
-     throw ();
-
-/* Set the real group ID, effective group ID, and saved-set group ID,
-   of the calling process to RGID, EGID, and SGID, respectively.  */
-extern int setresgid (__gid_t __rgid, __gid_t __egid, __gid_t __sgid)
-     throw ();
-
-
-
-/* Clone the calling process, creating an exact copy.
-   Return -1 for errors, 0 to the new process,
-   and the process ID of the new process to the old process.  */
-extern __pid_t fork (void) throw ();
-
-
-/* Clone the calling process, but without copying the whole address space.
-   The calling process is suspended until the new process exits or is
-   replaced by a call to `execve'.  Return -1 for errors, 0 to the new process,
-   and the process ID of the new process to the old process.  */
-extern __pid_t vfork (void) throw ();
-
-
-
-/* Return the pathname of the terminal FD is open on, or NULL on errors.
-   The returned storage is good only until the next call to this function.  */
-extern char *ttyname (int __fd) throw ();
-
-/* Store at most BUFLEN characters of the pathname of the terminal FD is
-   open on in BUF.  Return 0 on success, otherwise an error number.  */
-extern int ttyname_r (int __fd, char *__buf, size_t __buflen)
-     throw () __attribute__ ((__nonnull__ (2))) /* Ignore */;
-
-/* Return 1 if FD is a valid descriptor associated
-   with a terminal, zero if not.  */
-extern int isatty (int __fd) throw ();
-
-
-
-/* Return the index into the active-logins file (utmp) for
-   the controlling terminal.  */
-extern int ttyslot (void) throw ();
-
-
-
-/* Make a link to FROM named TO.  */
-extern int link (__const char *__from, __const char *__to)
-     throw () __attribute__ ((__nonnull__ (1, 2))) /* Ignore */;
-
-
-/* Like link but relative paths in TO and FROM are interpreted relative
-   to FROMFD and TOFD respectively.  */
-extern int linkat (int __fromfd, __const char *__from, int __tofd,
-     __const char *__to, int __flags)
-     throw () __attribute__ ((__nonnull__ (2, 4))) /* Ignore */;
-
-
-
-/* Make a symbolic link to FROM named TO.  */
-extern int symlink (__const char *__from, __const char *__to)
-     throw () __attribute__ ((__nonnull__ (1, 2))) /* Ignore */;
-
-/* Read the contents of the symbolic link PATH into no more than
-   LEN bytes of BUF.  The contents are not null-terminated.
-   Returns the number of characters read, or -1 for errors.  */
-extern ssize_t readlink (__const char *__restrict __path,
-    char *__restrict __buf, size_t __len)
-     throw () __attribute__ ((__nonnull__ (1, 2))) /* Ignore */;
-
-
-
-/* Like symlink but a relative path in TO is interpreted relative to TOFD.  */
-extern int symlinkat (__const char *__from, int __tofd,
-        __const char *__to) throw () __attribute__ ((__nonnull__ (1, 3))) /* Ignore */;
-
-/* Like readlink but a relative PATH is interpreted relative to FD.  */
-extern ssize_t readlinkat (int __fd, __const char *__restrict __path,
-      char *__restrict __buf, size_t __len)
-     throw () __attribute__ ((__nonnull__ (2, 3))) /* Ignore */;
-
-
-/* Remove the link NAME.  */
-extern int unlink (__const char *__name) throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Remove the link NAME relative to FD.  */
-extern int unlinkat (int __fd, __const char *__name, int __flag)
-     throw () __attribute__ ((__nonnull__ (2)));
-
-
-/* Remove the directory PATH.  */
-extern int rmdir (__const char *__path) throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Return the foreground process group ID of FD.  */
-extern __pid_t tcgetpgrp (int __fd) throw ();
-
-/* Set the foreground process group ID of FD set PGRP_ID.  */
-extern int tcsetpgrp (int __fd, __pid_t __pgrp_id) throw ();
-
-
-/* Return the login name of the user.
-
-   This function is a possible cancellation points and therefore not
-   marked with __THROW.  */
-extern char *getlogin (void);
-
-/* Return at most NAME_LEN characters of the login name of the user in NAME.
-   If it cannot be determined or some other error occurred, return the error
-   code.  Otherwise return 0.
-
-   This function is a possible cancellation points and therefore not
-   marked with __THROW.  */
-extern int getlogin_r (char *__name, size_t __name_len) __attribute__ ((__nonnull__ (1)));
-
-
-
-/* Set the login name returned by `getlogin'.  */
-extern int setlogin (__const char *__name) throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-/* Get definitions and prototypes for functions to process the
-   arguments in ARGV (ARGC of them, minus the program name) for
-   options given in OPTS.  */
-
-
-
-# 1 "/usr/include/getopt.h" 1 3 4
-/* Declarations for getopt.
-   Copyright (C) 1989-1994,1996-1999,2001,2003,2004
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-
-
-
-
-
-
-/* If __GNU_LIBRARY__ is not already defined, either we are being used
-   standalone, or this is the first header included in the source file.
-   If we are being used with glibc, we need to include <features.h>, but
-   that does not exist if we are standalone.  So: if __GNU_LIBRARY__ is
-   not defined, include <ctype.h>, which will pull in <features.h> for us
-   if it's from glibc.  (Why ctype.h?  It's guaranteed to exist and it
-   doesn't flood the namespace with stuff the way some other headers do.)  */
-# 50 "/usr/include/getopt.h" 3 4
+# 73 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/gthr-default.h" 2 3
+# 340 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/gthr-default.h" 3
 extern "C" {
 
 
-/* For communication from `getopt' to the caller.
-   When `getopt' finds an option that takes an argument,
-   the argument value is returned here.
-   Also, when `ordering' is RETURN_IN_ORDER,
-   each non-option ARGV-element is returned here.  */
-
-extern char *optarg;
-
-/* Index in ARGV of the next element to be scanned.
-   This is used for communication to and from the caller
-   and for communication between successive calls to `getopt'.
-
-   On entry to `getopt', zero means this is the first call; initialize.
-
-   When `getopt' returns -1, this is the index of the first of the
-   non-option elements that the caller should itself scan.
-
-   Otherwise, `optind' communicates from one call to the next
-   how much of ARGV has been scanned so far.  */
-
-extern int optind;
-
-/* Callers store zero here to inhibit the error message `getopt' prints
-   for unrecognized options.  */
-
-extern int opterr;
-
-/* Set to an option character which was unrecognized.  */
-
-extern int optopt;
-# 124 "/usr/include/getopt.h" 3 4
-/* Get definitions and prototypes for functions to process the
-   arguments in ARGV (ARGC of them, minus the program name) for
-   options given in OPTS.
-
-   Return the option character from OPTS just read.  Return -1 when
-   there are no more options.  For unrecognized options, or options
-   missing arguments, `optopt' is set to the option letter, and '?' is
-   returned.
-
-   The OPTS string is a list of characters which are recognized option
-   letters, optionally followed by colons, specifying that that letter
-   takes an argument, to be placed in `optarg'.
-
-   If a letter in OPTS is followed by two colons, its argument is
-   optional.  This behavior is specific to the GNU `getopt'.
-
-   The argument `--' causes premature termination of argument
-   scanning, explicitly telling `getopt' that there are no more
-   options.
-
-   If OPTS begins with `--', then non-option arguments are treated as
-   arguments to the option '\0'.  This behavior is specific to the GNU
-   `getopt'.  */
-
-
-/* Many other libraries have conflicting prototypes for getopt, with
-   differences in the consts, in stdlib.h.  To avoid compilation
-   errors, only prototype getopt for the GNU C library.  */
-extern int getopt (int ___argc, char *const *___argv, const char *__shortopts)
-       throw ();
-# 171 "/usr/include/getopt.h" 3 4
-}
-
-
-/* Make sure we later can get all the definitions and declarations.  */
-# 838 "/usr/include/unistd.h" 2 3 4
-
-
-
-
-/* Put the name of the current host in no more than LEN bytes of NAME.
-   The result is null-terminated if LEN is large enough for the full
-   name and the terminator.  */
-extern int gethostname (char *__name, size_t __len) throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-/* Set the name of the current host to NAME, which is LEN bytes long.
-   This call is restricted to the super-user.  */
-extern int sethostname (__const char *__name, size_t __len)
-     throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-/* Set the current machine's Internet number to ID.
-   This call is restricted to the super-user.  */
-extern int sethostid (long int __id) throw () /* Ignore */;
-
-
-/* Get and set the NIS (aka YP) domain name, if any.
-   Called just like `gethostname' and `sethostname'.
-   The NIS domain name is usually the empty string when not using NIS.  */
-extern int getdomainname (char *__name, size_t __len)
-     throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-extern int setdomainname (__const char *__name, size_t __len)
-     throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-/* Revoke access permissions to all processes currently communicating
-   with the control terminal, and then send a SIGHUP signal to the process
-   group of the control terminal.  */
-extern int vhangup (void) throw ();
-
-/* Revoke the access of all descriptors currently open on FILE.  */
-extern int revoke (__const char *__file) throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-/* Enable statistical profiling, writing samples of the PC into at most
-   SIZE bytes of SAMPLE_BUFFER; every processor clock tick while profiling
-   is enabled, the system examines the user PC and increments
-   SAMPLE_BUFFER[((PC - OFFSET) / 2) * SCALE / 65536].  If SCALE is zero,
-   disable profiling.  Returns zero on success, -1 on error.  */
-extern int profil (unsigned short int *__sample_buffer, size_t __size,
-     size_t __offset, unsigned int __scale)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Turn accounting on if NAME is an existing file.  The system will then write
-   a record for each process as it terminates, to this file.  If NAME is NULL,
-   turn accounting off.  This call is restricted to the super-user.  */
-extern int acct (__const char *__name) throw ();
-
-
-/* Successive calls return the shells listed in `/etc/shells'.  */
-extern char *getusershell (void) throw ();
-extern void endusershell (void) throw (); /* Discard cached info.  */
-extern void setusershell (void) throw (); /* Rewind and re-read the file.  */
-
-
-/* Put the program in the background, and dissociate from the controlling
-   terminal.  If NOCHDIR is zero, do `chdir ("/")'.  If NOCLOSE is zero,
-   redirects stdin, stdout, and stderr to /dev/null.  */
-extern int daemon (int __nochdir, int __noclose) throw () /* Ignore */;
-
-
-
-
-/* Make PATH be the root directory (the starting point for absolute paths).
-   This call is restricted to the super-user.  */
-extern int chroot (__const char *__path) throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-/* Prompt with PROMPT and read a string from the terminal without echoing.
-   Uses /dev/tty if possible; otherwise stderr and stdin.  */
-extern char *getpass (__const char *__prompt) __attribute__ ((__nonnull__ (1)));
-
-
-
-
-/* Make all changes done to FD actually appear on disk.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern int fsync (int __fd);
-
-
-
-
-
-/* Return identifier for the current host.  */
-extern long int gethostid (void);
-
-/* Make all changes done to all files actually appear on disk.  */
-extern void sync (void) throw ();
-
-
-/* Return the number of bytes in a page.  This is the system's page size,
-   which is not necessarily the same as the hardware page size.  */
-extern int getpagesize (void) throw () __attribute__ ((__const__));
-
-
-/* Return the maximum number of file descriptors
-   the current process could possibly have.  */
-extern int getdtablesize (void) throw ();
-
-
-/* Truncate FILE to LENGTH bytes.  */
-
-extern int truncate (__const char *__file, __off_t __length)
-     throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-# 960 "/usr/include/unistd.h" 3 4
-extern int truncate64 (__const char *__file, __off64_t __length)
-     throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-
-
-
-
-/* Truncate the file FD is open on to LENGTH bytes.  */
-
-extern int ftruncate (int __fd, __off_t __length) throw () /* Ignore */;
-# 980 "/usr/include/unistd.h" 3 4
-extern int ftruncate64 (int __fd, __off64_t __length) throw () /* Ignore */;
-
-
-
-
-
-
-
-/* Set the end of accessible data space (aka "the break") to ADDR.
-   Returns zero on success and -1 for errors (with errno set).  */
-extern int brk (void *__addr) throw () /* Ignore */;
-
-/* Increase or decrease the end of accessible data space by DELTA bytes.
-   If successful, returns the address the previous end of data space
-   (i.e. the beginning of the new space, if DELTA > 0);
-   returns (void *) -1 for errors (with errno set).  */
-extern void *sbrk (intptr_t __delta) throw ();
-
-
-
-
-/* Invoke `system call' number SYSNO, passing it the remaining arguments.
-   This is completely system-dependent, and not often useful.
-
-   In Unix, `syscall' sets `errno' for all errors and most calls return -1
-   for errors; in many systems you cannot pass arguments or get return
-   values for all system calls (`pipe', `fork', and `getppid' typically
-   among them).
-
-   In Mach, all system calls take normal arguments and always return an
-   error code (zero for success).  */
-extern long int syscall (long int __sysno, ...) throw ();
-
-
-
-
-
-/* NOTE: These declarations also appear in <fcntl.h>; be sure to keep both
-   files consistent.  Some systems have them there and some here, and some
-   software depends on the macros being defined without including both.  */
-
-/* `lockf' is a simpler interface to the locking facilities of `fcntl'.
-   LEN is always relative to the current file position.
-   The CMD argument is one of the following.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-
-
-
-
-
-
-
-extern int lockf (int __fd, int __cmd, __off_t __len) /* Ignore */;
-# 1044 "/usr/include/unistd.h" 3 4
-extern int lockf64 (int __fd, int __cmd, __off64_t __len) /* Ignore */;
-
-
-
-
-
-
-/* Evaluate EXPRESSION, and repeat as long as it returns -1 with `errno'
-   set to EINTR.  */
-# 1063 "/usr/include/unistd.h" 3 4
-/* Synchronize at least the data part of a file with the underlying
-   media.  */
-extern int fdatasync (int __fildes);
-
-
-
-/* XPG4.2 specifies that prototypes for the encryption functions must
-   be defined here.  */
-
-/* Encrypt at most 8 characters from KEY using salt to perturb DES.  */
-extern char *crypt (__const char *__key, __const char *__salt)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Encrypt data in BLOCK in place if EDFLAG is zero; otherwise decrypt
-   block in place.  */
-extern void encrypt (char *__block, int __edflag) throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Swab pairs bytes in the first N bytes of the area pointed to by
-   FROM and copy the result to TO.  The value of TO must not be in the
-   range [FROM - N + 1, FROM - 1].  If N is odd the first byte in FROM
-   is without partner.  */
-extern void swab (__const void *__restrict __from, void *__restrict __to,
-    ssize_t __n) throw () __attribute__ ((__nonnull__ (1, 2)));
-
-
-
-/* The Single Unix specification demands this prototype to be here.
-   It is also found in <stdio.h>.  */
-
-/* Return the name of the controlling terminal.  */
-extern char *ctermid (char *__s) throw ();
-
-
-
-/* Define some macros helping to catch buffer overflows.  */
-
-
-
-
-}
-# 43 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 2 3
-
-typedef pthread_t __gthread_t;
-typedef pthread_key_t __gthread_key_t;
-typedef pthread_once_t __gthread_once_t;
-typedef pthread_mutex_t __gthread_mutex_t;
-typedef pthread_mutex_t __gthread_recursive_mutex_t;
-typedef pthread_cond_t __gthread_cond_t;
-typedef struct timespec __gthread_time_t;
-
-/* POSIX like conditional variables are supported.  Please look at comments
-   in gthr.h for details. */
-# 81 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
-/* Typically, __gthrw_foo is a weak reference to symbol foo.  */
-
-
-/* On Tru64, /usr/include/pthread.h uses #pragma extern_prefix "__" to
-   map a subset of the POSIX pthread API to mangled versions of their
-   names.  */
-# 118 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
-static __typeof(pthread_once) __gthrw_pthread_once __attribute__ ((__weakref__("pthread_once")));
-static __typeof(pthread_getspecific) __gthrw_pthread_getspecific __attribute__ ((__weakref__("pthread_getspecific")));
-static __typeof(pthread_setspecific) __gthrw_pthread_setspecific __attribute__ ((__weakref__("pthread_setspecific")));
-
-static __typeof(pthread_create) __gthrw_pthread_create __attribute__ ((__weakref__("pthread_create")));
-static __typeof(pthread_join) __gthrw_pthread_join __attribute__ ((__weakref__("pthread_join")));
-static __typeof(pthread_equal) __gthrw_pthread_equal __attribute__ ((__weakref__("pthread_equal")));
-static __typeof(pthread_self) __gthrw_pthread_self __attribute__ ((__weakref__("pthread_self")));
-static __typeof(pthread_detach) __gthrw_pthread_detach __attribute__ ((__weakref__("pthread_detach")));
-
-static __typeof(pthread_cancel) __gthrw_pthread_cancel __attribute__ ((__weakref__("pthread_cancel")));
-
-static __typeof(sched_yield) __gthrw_sched_yield __attribute__ ((__weakref__("sched_yield")));
-
-static __typeof(pthread_mutex_lock) __gthrw_pthread_mutex_lock __attribute__ ((__weakref__("pthread_mutex_lock")));
-static __typeof(pthread_mutex_trylock) __gthrw_pthread_mutex_trylock __attribute__ ((__weakref__("pthread_mutex_trylock")));
-
-
-static __typeof(pthread_mutex_timedlock) __gthrw_pthread_mutex_timedlock __attribute__ ((__weakref__("pthread_mutex_timedlock")));
-
-
-static __typeof(pthread_mutex_unlock) __gthrw_pthread_mutex_unlock __attribute__ ((__weakref__("pthread_mutex_unlock")));
-static __typeof(pthread_mutex_init) __gthrw_pthread_mutex_init __attribute__ ((__weakref__("pthread_mutex_init")));
-static __typeof(pthread_mutex_destroy) __gthrw_pthread_mutex_destroy __attribute__ ((__weakref__("pthread_mutex_destroy")));
-
-static __typeof(pthread_cond_broadcast) __gthrw_pthread_cond_broadcast __attribute__ ((__weakref__("pthread_cond_broadcast")));
-static __typeof(pthread_cond_signal) __gthrw_pthread_cond_signal __attribute__ ((__weakref__("pthread_cond_signal")));
-static __typeof(pthread_cond_wait) __gthrw_pthread_cond_wait __attribute__ ((__weakref__("pthread_cond_wait")));
-static __typeof(pthread_cond_timedwait) __gthrw_pthread_cond_timedwait __attribute__ ((__weakref__("pthread_cond_timedwait")));
-static __typeof(pthread_cond_destroy) __gthrw_pthread_cond_destroy __attribute__ ((__weakref__("pthread_cond_destroy")));
-
-
-static __typeof(pthread_key_create) __gthrw_pthread_key_create __attribute__ ((__weakref__("pthread_key_create")));
-static __typeof(pthread_key_delete) __gthrw_pthread_key_delete __attribute__ ((__weakref__("pthread_key_delete")));
-static __typeof(pthread_mutexattr_init) __gthrw_pthread_mutexattr_init __attribute__ ((__weakref__("pthread_mutexattr_init")));
-static __typeof(pthread_mutexattr_settype) __gthrw_pthread_mutexattr_settype __attribute__ ((__weakref__("pthread_mutexattr_settype")));
-static __typeof(pthread_mutexattr_destroy) __gthrw_pthread_mutexattr_destroy __attribute__ ((__weakref__("pthread_mutexattr_destroy")));
-# 183 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
-/* On Solaris 2.6 up to 9, the libc exposes a POSIX threads interface even if
-   -pthreads is not specified.  The functions are dummies and most return an
-   error value.  However pthread_once returns 0 without invoking the routine
-   it is passed so we cannot pretend that the interface is active if -pthreads
-   is not specified.  On Solaris 2.5.1, the interface is not exposed at all so
-   we need to play the usual game with weak symbols.  On Solaris 10 and up, a
-   working interface is always exposed.  On FreeBSD 6 and later, libc also
-   exposes a dummy POSIX threads interface, similar to what Solaris 2.6 up
-   to 9 does.  FreeBSD >= 700014 even provides a pthread_cancel stub in libc,
-   which means the alternate __gthread_active_p below cannot be used there.  */
-# 239 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
+typedef unsigned long __gthread_key_t;
+
+typedef struct {
+  int done;
+  long started;
+} __gthread_once_t;
+
+typedef struct {
+  long counter;
+  void *sema;
+} __gthread_mutex_t;
+
+typedef struct {
+  long counter;
+  long depth;
+  unsigned long owner;
+  void *sema;
+} __gthread_recursive_mutex_t;
+# 371 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/gthr-default.h" 3
+/* Mingw runtime >= v0.3 provides a magic variable that is set to nonzero
+   if -mthreads option was specified, or 0 otherwise. This is to get around
+   the lack of weak symbols in PE-COFF.  */
+extern int _CRT_MT;
+extern int __mingwthr_key_dtor (unsigned long, void (*) (void *));
+
+
+/* The Windows95 kernel does not export InterlockedCompareExchange.
+   This provides a substitute.   When building apps that reference
+   gthread_mutex_try_lock, the  __GTHREAD_I486_INLINE_LOCK_PRIMITIVES
+   macro  must be defined if Windows95 is a target.  Currently
+   gthread_mutex_try_lock is not referenced by libgcc or libstdc++.  */
+# 401 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/gthr-default.h" 3
 static inline int
 __gthread_active_p (void)
 {
-  static void *const __gthread_active_ptr
-    = __extension__ (void *) &__gthrw_pthread_cancel;
+
+  return _CRT_MT;
 
 
 
-
-
-
-  return __gthread_active_ptr != 0;
-}
-# 657 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
-static inline int
-__gthread_create (__gthread_t *__threadid, void *(*__func) (void*),
-    void *__args)
-{
-  return __gthrw_pthread_create (__threadid, __null, __func, __args);
 }
 
-static inline int
-__gthread_join (__gthread_t __threadid, void **__value_ptr)
-{
-  return __gthrw_pthread_join (__threadid, __value_ptr);
-}
 
-static inline int
-__gthread_detach (__gthread_t __threadid)
-{
-  return __gthrw_pthread_detach (__threadid);
-}
 
-static inline int
-__gthread_equal (__gthread_t __t1, __gthread_t __t2)
-{
-  return __gthrw_pthread_equal (__t1, __t2);
-}
+/* The implementations are in config/i386/gthr-win32.c in libgcc.a.
+   Only stubs are exposed to avoid polluting the C++ namespace with
+   windows api definitions.  */
 
-static inline __gthread_t
-__gthread_self (void)
-{
-  return __gthrw_pthread_self ();
-}
-
-static inline int
-__gthread_yield (void)
-{
-  return __gthrw_sched_yield ();
-}
+extern int __gthr_win32_once (__gthread_once_t *, void (*) (void));
+extern int __gthr_win32_key_create (__gthread_key_t *, void (*) (void*));
+extern int __gthr_win32_key_delete (__gthread_key_t);
+extern void * __gthr_win32_getspecific (__gthread_key_t);
+extern int __gthr_win32_setspecific (__gthread_key_t, const void *);
+extern void __gthr_win32_mutex_init_function (__gthread_mutex_t *);
+extern int __gthr_win32_mutex_lock (__gthread_mutex_t *);
+extern int __gthr_win32_mutex_trylock (__gthread_mutex_t *);
+extern int __gthr_win32_mutex_unlock (__gthread_mutex_t *);
+extern void
+  __gthr_win32_recursive_mutex_init_function (__gthread_recursive_mutex_t *);
+extern int __gthr_win32_recursive_mutex_lock (__gthread_recursive_mutex_t *);
+extern int
+  __gthr_win32_recursive_mutex_trylock (__gthread_recursive_mutex_t *);
+extern int __gthr_win32_recursive_mutex_unlock (__gthread_recursive_mutex_t *);
+extern void __gthr_win32_mutex_destroy (__gthread_mutex_t *);
 
 static inline int
 __gthread_once (__gthread_once_t *__once, void (*__func) (void))
 {
   if (__gthread_active_p ())
-    return __gthrw_pthread_once (__once, __func);
+    return __gthr_win32_once (__once, __func);
   else
     return -1;
 }
@@ -12937,41 +8431,44 @@ __gthread_once (__gthread_once_t *__once, void (*__func) (void))
 static inline int
 __gthread_key_create (__gthread_key_t *__key, void (*__dtor) (void *))
 {
-  return __gthrw_pthread_key_create (__key, __dtor);
+  return __gthr_win32_key_create (__key, __dtor);
 }
 
 static inline int
 __gthread_key_delete (__gthread_key_t __key)
 {
-  return __gthrw_pthread_key_delete (__key);
+  return __gthr_win32_key_delete (__key);
 }
 
 static inline void *
 __gthread_getspecific (__gthread_key_t __key)
 {
-  return __gthrw_pthread_getspecific (__key);
+  return __gthr_win32_getspecific (__key);
 }
 
 static inline int
 __gthread_setspecific (__gthread_key_t __key, const void *__ptr)
 {
-  return __gthrw_pthread_setspecific (__key, __ptr);
+  return __gthr_win32_setspecific (__key, __ptr);
 }
 
-static inline int
+static inline void
+__gthread_mutex_init_function (__gthread_mutex_t *__mutex)
+{
+  __gthr_win32_mutex_init_function (__mutex);
+}
+
+static inline void
 __gthread_mutex_destroy (__gthread_mutex_t *__mutex)
 {
-  if (__gthread_active_p ())
-    return __gthrw_pthread_mutex_destroy (__mutex);
-  else
-    return 0;
+  __gthr_win32_mutex_destroy (__mutex);
 }
 
 static inline int
 __gthread_mutex_lock (__gthread_mutex_t *__mutex)
 {
   if (__gthread_active_p ())
-    return __gthrw_pthread_mutex_lock (__mutex);
+    return __gthr_win32_mutex_lock (__mutex);
   else
     return 0;
 }
@@ -12980,109 +8477,55 @@ static inline int
 __gthread_mutex_trylock (__gthread_mutex_t *__mutex)
 {
   if (__gthread_active_p ())
-    return __gthrw_pthread_mutex_trylock (__mutex);
+    return __gthr_win32_mutex_trylock (__mutex);
   else
     return 0;
 }
-
-
-
-static inline int
-__gthread_mutex_timedlock (__gthread_mutex_t *__mutex,
-      const __gthread_time_t *__abs_timeout)
-{
-  if (__gthread_active_p ())
-    return __gthrw_pthread_mutex_timedlock (__mutex, __abs_timeout);
-  else
-    return 0;
-}
-
-
 
 static inline int
 __gthread_mutex_unlock (__gthread_mutex_t *__mutex)
 {
   if (__gthread_active_p ())
-    return __gthrw_pthread_mutex_unlock (__mutex);
+    return __gthr_win32_mutex_unlock (__mutex);
   else
     return 0;
 }
-# 800 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
+
+static inline void
+__gthread_recursive_mutex_init_function (__gthread_recursive_mutex_t *__mutex)
+{
+   __gthr_win32_recursive_mutex_init_function (__mutex);
+}
+
 static inline int
 __gthread_recursive_mutex_lock (__gthread_recursive_mutex_t *__mutex)
 {
-  return __gthread_mutex_lock (__mutex);
+  if (__gthread_active_p ())
+    return __gthr_win32_recursive_mutex_lock (__mutex);
+  else
+    return 0;
 }
 
 static inline int
 __gthread_recursive_mutex_trylock (__gthread_recursive_mutex_t *__mutex)
 {
-  return __gthread_mutex_trylock (__mutex);
+  if (__gthread_active_p ())
+    return __gthr_win32_recursive_mutex_trylock (__mutex);
+  else
+    return 0;
 }
-
-
-
-static inline int
-__gthread_recursive_mutex_timedlock (__gthread_recursive_mutex_t *__mutex,
-         const __gthread_time_t *__abs_timeout)
-{
-  return __gthread_mutex_timedlock (__mutex, __abs_timeout);
-}
-
-
 
 static inline int
 __gthread_recursive_mutex_unlock (__gthread_recursive_mutex_t *__mutex)
 {
-  return __gthread_mutex_unlock (__mutex);
+  if (__gthread_active_p ())
+    return __gthr_win32_recursive_mutex_unlock (__mutex);
+  else
+    return 0;
 }
-
-static inline int
-__gthread_cond_broadcast (__gthread_cond_t *__cond)
-{
-  return __gthrw_pthread_cond_broadcast (__cond);
+# 767 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/gthr-default.h" 3
 }
-
-static inline int
-__gthread_cond_signal (__gthread_cond_t *__cond)
-{
-  return __gthrw_pthread_cond_signal (__cond);
-}
-
-static inline int
-__gthread_cond_wait (__gthread_cond_t *__cond, __gthread_mutex_t *__mutex)
-{
-  return __gthrw_pthread_cond_wait (__cond, __mutex);
-}
-
-static inline int
-__gthread_cond_timedwait (__gthread_cond_t *__cond, __gthread_mutex_t *__mutex,
-     const __gthread_time_t *__abs_timeout)
-{
-  return __gthrw_pthread_cond_timedwait (__cond, __mutex, __abs_timeout);
-}
-
-static inline int
-__gthread_cond_wait_recursive (__gthread_cond_t *__cond,
-          __gthread_recursive_mutex_t *__mutex)
-{
-  return __gthread_cond_wait (__cond, __mutex);
-}
-
-static inline int
-__gthread_cond_timedwait_recursive (__gthread_cond_t *__cond,
-        __gthread_recursive_mutex_t *__mutex,
-        const __gthread_time_t *__abs_timeout)
-{
-  return __gthread_cond_timedwait (__cond, __mutex, __abs_timeout);
-}
-
-static inline int
-__gthread_cond_destroy (__gthread_cond_t* __cond)
-{
-  return __gthrw_pthread_cond_destroy (__cond);
-}
-# 171 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr.h" 2 3
+# 163 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/gthr.h" 2 3
 
 /* Fallback to single thread definitions.  */
 
@@ -13091,8 +8534,8 @@ __gthread_cond_destroy (__gthread_cond_t* __cond)
 
 
 #pragma GCC visibility pop
-# 35 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/atomicity.h" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/atomic_word.h" 1 3
+# 35 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ext/atomicity.h" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/atomic_word.h" 1 3
 // Low-level type for atomic operations -*- C++ -*-
 
 // Copyright (C) 2004, 2009 Free Software Foundation, Inc.
@@ -13138,11 +8581,9 @@ typedef int _Atomic_word;
 // This one prevents stores from being sunk across the barrier; in other
 // words, a Store-Store release barrier.
 // #define _GLIBCXX_WRITE_MEM_BARRIER __asm __volatile ("":::"memory")
-# 36 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/atomicity.h" 2 3
+# 36 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ext/atomicity.h" 2 3
 
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
+namespace __gnu_cxx {
 
   // Functions for portable atomic access.
   // To abstract locking primitives across all thread policies, use:
@@ -13156,7 +8597,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
   static inline void
   __atomic_add(volatile _Atomic_word* __mem, int __val)
   { __sync_fetch_and_add(__mem, __val); }
-# 63 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/atomicity.h" 3
+# 61 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ext/atomicity.h" 3
  static inline _Atomic_word
   __exchange_and_add_single(_Atomic_word* __mem, int __val)
   {
@@ -13197,19 +8638,18 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
   }
 
-
-} // namespace
+}
 
 // Even if the CPU doesn't need a memory barrier, we need to ensure
 // that the compiler doesn't reorder memory accesses across the
 // barriers.
-# 41 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 2 3
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/ios_base.h" 2 3
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_classes.h" 1 3
 // Locale support -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
+// 2006, 2007, 2008, 2009, 2010
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -13232,22 +8672,22 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/locale_classes.h
+/** @file locale_classes.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{locale}
+ *  You should not attempt to use it directly.
  */
 
 //
 // ISO C++ 14882: 22.1  Locales
 //
-# 39 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 39 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_classes.h" 3
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\string" 1 3
 // Components for manipulating sequences of characters -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004,
-// 2005, 2006, 2007, 2009, 2010, 2011
+// 2005, 2006, 2007, 2009
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -13277,16 +8717,16 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 //
 // ISO C++ 14882: 21  Strings library
 //
-# 38 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 3
+# 38 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\string" 3
 
 
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/allocator.h" 1 3
 // Allocators -*- C++ -*-
 
-// Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,
-// 2011 Free Software Foundation, Inc.
+// Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -13321,9 +8761,9 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
  * purpose.  It is provided "as is" without express or implied warranty.
  */
 
-/** @file bits/allocator.h
+/** @file allocator.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{memory}
+ *  You should not attempt to use it directly.
  */
 
 
@@ -13332,10 +8772,10 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 // Define the base class to std::allocator.
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++allocator.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++allocator.h" 1 3
 // Base to std::allocator -*- C++ -*-
 
-// Copyright (C) 2004, 2005, 2009, 2010 Free Software Foundation, Inc.
+// Copyright (C) 2004, 2005, 2009 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -13357,9 +8797,9 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/c++allocator.h
+/** @file c++allocator.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{memory}
+ *  You should not attempt to use it directly.
  */
 
 
@@ -13368,10 +8808,10 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 // Define new_allocator as the base class to std::allocator.
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/new_allocator.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ext/new_allocator.h" 1 3
 // Allocator that wraps operator new -*- C++ -*-
 
-// Copyright (C) 2001, 2002, 2003, 2004, 2005, 2009, 2010
+// Copyright (C) 2001, 2002, 2003, 2004, 2005, 2009
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -13403,8 +8843,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
 
 
-
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/new" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\new" 1 3
 // The -*- C++ -*- dynamic memory management header.
 
 // Copyright (C) 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002,
@@ -13439,9 +8878,81 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
  *  handling memory allocation errors; see
  *  http://gcc.gnu.org/onlinedocs/libstdc++/18_support/howto.html#4 for more.
  */
-# 39 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/new" 3
+# 39 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\new" 3
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 1 3
+// -*- C++ -*- forwarding header.
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file cstddef
+ *  This is a Standard C++ Library file.  You should @c \#include this file
+ *  in your programs, rather than any of the @a *.h implementation files.
+ *
+ *  This is the C++ version of the Standard C Library header @c stddef.h,
+ *  and its contents are (mostly) the same as that header, but are all
+ *  contained in the namespace @c std (except for names which are defined
+ *  as macros in C).
+ */
+
+//
+// ISO C++ 14882: 18.1  Types
+//
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 3
 
 
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
+/*===---- stddef.h - Basic type definitions --------------------------------===
+ *
+ * Copyright (c) 2008 Eli Friedman
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ *===-----------------------------------------------------------------------===
+ */
+# 56 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 3 4
+/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
+__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
+# 44 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 2 3
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\new" 2 3
 
 
 #pragma GCC visibility push(default)
@@ -13513,13 +9024,11 @@ inline void operator delete[](void*, void*) throw() { }
 } // extern "C++"
 
 #pragma GCC visibility pop
-# 35 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/new_allocator.h" 2 3
+# 34 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ext/new_allocator.h" 2 3
 
 
 
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
+namespace __gnu_cxx {
 
   using std::size_t;
   using std::ptrdiff_t;
@@ -13558,10 +9067,10 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
       ~new_allocator() throw() { }
 
       pointer
-      address(reference __x) const { return std::__addressof(__x); }
+      address(reference __x) const { return &__x; }
 
       const_pointer
-      address(const_reference __x) const { return std::__addressof(__x); }
+      address(const_reference __x) const { return &__x; }
 
       // NB: __n is permitted to be 0.  The C++ standard says nothing
       // about what the return value is when __n == 0.
@@ -13588,7 +9097,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
       void
       construct(pointer __p, const _Tp& __val)
       { ::new((void *)__p) _Tp(__val); }
-# 117 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/new_allocator.h" 3
+# 114 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ext/new_allocator.h" 3
  void
       destroy(pointer __p) { __p->~_Tp(); }
     };
@@ -13603,18 +9112,11 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
     operator!=(const new_allocator<_Tp>&, const new_allocator<_Tp>&)
     { return false; }
 
+}
+# 35 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/c++allocator.h" 2 3
+# 49 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/allocator.h" 2 3
 
-} // namespace
-# 35 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++allocator.h" 2 3
-# 49 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 2 3
-
-
-
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   /**
    * @defgroup allocators Allocators
@@ -13700,6 +9202,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   // Inhibit implicit instantiations for required instantiations,
   // which are defined via explicit instantiations elsewhere.
+  // NB: This syntax is a GNU extension.
 
   extern template class allocator<char>;
   extern template class allocator<wchar_t>;
@@ -13741,15 +9244,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
       _S_do_it(const _Alloc& __one, const _Alloc& __two)
       { return __one != __two; }
     };
-# 237 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 3
-} // namespace std
-# 43 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
+# 204 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/allocator.h" 3
+}
+# 43 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\string" 2 3
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream_insert.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/ostream_insert.h" 1 3
 // Helpers for ostream inserters -*- C++ -*-
 
-// Copyright (C) 2007, 2008, 2009, 2010, 2011 Free Software Foundation, Inc.
+// Copyright (C) 2007, 2008, 2009 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -13771,17 +9274,17 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/ostream_insert.h
+/** @file ostream_insert.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{ostream}
+ *  You should not attempt to use it directly.
  */
-# 33 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream_insert.h" 3
+# 33 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/ostream_insert.h" 3
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cxxabi_forced.h" 1 3
-// cxxabi.h subset for cancellation -*- C++ -*-
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cxxabi-forced.h" 1 3
+// cxxabi.h subset for inclusion by other library headers -*- C++ -*-
 
-// Copyright (C) 2007, 2009, 2010, 2011 Free Software Foundation, Inc.
+// Copyright (C) 2007, 2009, 2010 Free Software Foundation, Inc.
 //
 // This file is part of GCC.
 //
@@ -13804,11 +9307,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/cxxabi_forced.h
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{cxxabi.h}
+/** @file cxxabi-forced.h
+ *  The header provides an interface to the C++ ABI.
  */
-# 34 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cxxabi_forced.h" 3
+# 33 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cxxabi-forced.h" 3
 
 #pragma GCC visibility push(default)
 
@@ -13822,25 +9324,24 @@ namespace __cxxabiv1
    *  A magic placeholder class that can be caught by reference to
    *  recognize forced unwinding.
    */
-# 47 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cxxabi_forced.h"
+# 46 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cxxabi-forced.h"
 class __forced_unwind
   {
             ~__forced_unwind() throw();
 
     // Prevent catch by value.
-# 53 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cxxabi_forced.h"
- };
-# 54 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cxxabi_forced.h"
+# 52 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cxxabi-forced.h"
+
+  };
+# 53 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cxxabi-forced.h"
 
 }
 
 
 #pragma GCC visibility pop
-# 36 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream_insert.h" 2 3
+# 36 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/ostream_insert.h" 2 3
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   template<typename _CharT, typename _Traits>
     inline void
@@ -13917,6 +9418,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   // Inhibit implicit instantiations for required instantiations,
   // which are defined via explicit instantiations elsewhere.
+  // NB:  This syntax is a GNU extension.
 
   extern template ostream& __ostream_insert(ostream&, const char*, streamsize);
 
@@ -13926,16 +9428,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
-
-} // namespace std
-# 46 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
-
+}
+# 46 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\string" 2 3
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 1 3
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_function.h" 1 3
 // Functor implementations -*- C++ -*-
 
-// Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009, 2010, 2011
+// Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009, 2010
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -13984,17 +9485,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
  * purpose.  It is provided "as is" without express or implied warranty.
  */
 
-/** @file bits/stl_function.h
+/** @file stl_function.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{functional}
+ *  You should not attempt to use it directly.
  */
 
 
 
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   // 20.3.1 base classes
   /** @defgroup functors Function Objects
@@ -14036,11 +9535,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<typename _Arg, typename _Result>
     struct unary_function
     {
-      /// @c argument_type is the type of the argument
-      typedef _Arg argument_type;
+      typedef _Arg argument_type; ///< @c argument_type is the type of the
+                                    ///     argument (no surprises here)
 
-      /// @c result_type is the return type
-      typedef _Result result_type;
+      typedef _Result result_type; ///< @c result_type is the return type
     };
 
   /**
@@ -14049,14 +9547,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<typename _Arg1, typename _Arg2, typename _Result>
     struct binary_function
     {
-      /// @c first_argument_type is the type of the first argument
-      typedef _Arg1 first_argument_type;
+      typedef _Arg1 first_argument_type; ///< the type of the first argument
+                                           ///  (no surprises here)
 
-      /// @c second_argument_type is the type of the second argument
-      typedef _Arg2 second_argument_type;
-
-      /// @c result_type is the return type
-      typedef _Result result_type;
+      typedef _Arg2 second_argument_type; ///< the type of the second argument
+      typedef _Result result_type; ///< type of the return type
     };
   /** @}  */
 
@@ -14428,8 +9923,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       const typename _Pair::first_type&
       operator()(const _Pair& __x) const
       { return __x.first; }
-# 508 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
- };
+    };
 
   template<typename _Pair>
     struct _Select2nd : public unary_function<_Pair,
@@ -14648,16 +10142,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   /** @}  */
 
-
-} // namespace
-
+}
 
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/backward/binders.h" 1 3
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\backward/binders.h" 1 3
 // Functor implementations -*- C++ -*-
 
-// Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009, 2010, 2011
+// Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009, 2010
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -14708,15 +10201,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 /** @file backward/binders.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{functional}
+ *  You should not attempt to use it directly.
  */
 
 
 
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   // 20.3.6 binders
   /** @defgroup binders Binder Classes
@@ -14823,48 +10314,16 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
   /** @}  */
 
+}
+# 713 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/stl_function.h" 2 3
+# 50 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\string" 2 3
 
-} // namespace
-# 732 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 2 3
-# 50 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
 
-
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/range_access.h" 1 3
-// <range_access.h> -*- C++ -*-
-
-// Copyright (C) 2010 Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file bits/range_access.h
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{iterator}
- */
-# 33 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/range_access.h" 3
-# 53 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.h" 1 3
 // Components for manipulating sequences of characters -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
+// 2006, 2007, 2008, 2009, 2010
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -14887,19 +10346,19 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/basic_string.h
+/** @file basic_string.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{string}
+ *  You should not attempt to use it directly.
  */
 
 //
 // ISO C++ 14882: 21 Strings library
 //
-# 39 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 39 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.h" 3
 
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/initializer_list" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\initializer_list" 1 3
 // std::initializer_list support -*- C++ -*-
 
 // Copyright (C) 2008, 2009, 2010 Free Software Foundation, Inc.
@@ -14928,12 +10387,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 /** @file initializer_list
  *  This is a Standard C++ Library header.
  */
-# 33 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/initializer_list" 3
-# 43 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 2 3
+# 33 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\initializer_list" 3
+# 43 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.h" 2 3
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   /**
    *  @class basic_string basic_string.h <string>
@@ -15091,7 +10548,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  _M_set_length_and_sharable(size_type __n)
  {
 
-   if (__builtin_expect(this != &_S_empty_rep(), false))
+
 
      {
        this->_M_set_sharable(); // One reference.
@@ -15121,18 +10578,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
  _M_dispose(const _Alloc& __a)
  {
 
-   if (__builtin_expect(this != &_S_empty_rep(), false))
 
-     {
-       // Be race-detector-friendly.  For more info see bits/c++config.
-                                                                  ;
-       if (__gnu_cxx::__exchange_and_add_dispatch(&this->_M_refcount,
-        -1) <= 0)
-  {
-                                                              ;
-    _M_destroy(__a);
-  }
-     }
+
+     if (__gnu_cxx::__exchange_and_add_dispatch(&this->_M_refcount,
+             -1) <= 0)
+       _M_destroy(__a);
  } // XXX MT
 
  void
@@ -15142,7 +10592,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  _M_refcopy() throw()
  {
 
-   if (__builtin_expect(this != &_S_empty_rep(), false))
+
 
             __gnu_cxx::__atomic_add_dispatch(&this->_M_refcount, 1);
    return _M_refdata();
@@ -15320,9 +10770,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
        */
       basic_string()
 
-      : _M_dataplus(_S_empty_rep()._M_refdata(), _Alloc()) { }
 
 
+      : _M_dataplus(_S_construct(size_type(), _CharT(), _Alloc()), _Alloc()){ }
 
 
       /**
@@ -15379,7 +10829,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        *  @param  a  Allocator to use (default is default allocator).
        */
       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc());
-# 519 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 510 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.h" 3
  /**
        *  @brief  Construct string as copy of a range.
        *  @param  beg  Start of range.
@@ -15425,7 +10875,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  this->assign(1, __c);
  return *this;
       }
-# 593 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 584 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.h" 3
  // Iterators:
       /**
        *  Returns a read/write iterator that points to the first character in
@@ -15500,7 +10950,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       const_reverse_iterator
       rend() const
       { return const_reverse_iterator(this->begin()); }
-# 704 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 695 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.h" 3
  public:
       // Capacity:
       ///  Returns the number of characters in the string, not including any
@@ -15546,7 +10996,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       void
       resize(size_type __n)
       { this->resize(__n, _CharT()); }
-# 762 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 753 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.h" 3
  /**
        *  Returns the total number of characters that the %string can hold
        *  before needing to allocate more memory.
@@ -15646,8 +11096,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __throw_out_of_range(("basic_string::at"));
  return _M_data()[__n];
       }
-# 896 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
- /**
+
+      /**
        *  @brief  Provides access to the data contained in the %string.
        *  @param n The index of the character to access.
        *  @return  Read/write reference to the character.
@@ -15697,7 +11147,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  this->push_back(__c);
  return *this;
       }
-# 958 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 915 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.h" 3
  /**
        *  @brief  Append a string to this string.
        *  @param str  The string to append.
@@ -15752,7 +11202,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        */
       basic_string&
       append(size_type __n, _CharT __c);
-# 1024 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 981 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.h" 3
  /**
        *  @brief  Append a range of characters.
        *  @param first  Iterator referencing the first character to append.
@@ -15787,7 +11237,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        */
       basic_string&
       assign(const basic_string& __str);
-# 1076 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1033 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.h" 3
  /**
        *  @brief  Set value to a substring of a string.
        *  @param str  The string to use.
@@ -15860,7 +11310,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
         basic_string&
         assign(_InputIterator __first, _InputIterator __last)
         { return this->replace(_M_ibegin(), _M_iend(), __first, __last); }
-# 1160 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1117 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.h" 3
  /**
        *  @brief  Insert multiple characters.
        *  @param p  Iterator referencing location in string to insert at.
@@ -15892,7 +11342,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
         void
         insert(iterator __p, _InputIterator __beg, _InputIterator __end)
         { this->replace(__p, __p, __beg, __end); }
-# 1207 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1164 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.h" 3
  /**
        *  @brief  Insert value of a string.
        *  @param pos1  Iterator referencing location in string to insert at.
@@ -16329,7 +11779,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  return this->replace(__i1 - _M_ibegin(), __i2 - __i1,
         __k1.base(), __k2 - __k1);
       }
-# 1663 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1620 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.h" 3
  private:
       template<class _Integer>
  basic_string&
@@ -17033,8 +12483,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __str.append(__size_type(1), __rhs);
       return __str;
     }
-# 2417 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
- // operator ==
+
+  // operator ==
   /**
    *  @brief  Test equivalence of two strings.
    *  @param lhs  First string.
@@ -17366,14 +12816,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
      wchar_t __delim);
 
 
+}
+# 53 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\string" 2 3
 
-} // namespace
-# 54 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.tcc" 1 3
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.tcc" 1 3
 // Components for manipulating sequences of characters -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
+// 2006, 2007, 2008, 2009
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -17396,9 +12847,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/basic_string.tcc
+/** @file basic_string.tcc
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{string}
+ *  You should not attempt to use it directly.
  */
 
 //
@@ -17407,13 +12858,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 // Written by Jason Merrill based upon the specification by Takanori Adachi
 // in ANSI X3J16/94-0013R2.  Rewritten by Nathan Myers to ISO-14882.
-# 42 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.tcc" 3
+# 42 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.tcc" 3
 
 
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   template<typename _CharT, typename _Traits, typename _Alloc>
     const typename basic_string<_CharT, _Traits, _Alloc>::size_type
@@ -17449,8 +12898,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
      input_iterator_tag)
       {
 
- if (__beg == __end && __a == _Alloc())
-   return _S_empty_rep()._M_refdata();
+
+
 
  // Avoid reallocation for common case.
  _CharT __buf[128];
@@ -17495,12 +12944,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
      forward_iterator_tag)
       {
 
- if (__beg == __end && __a == _Alloc())
-   return _S_empty_rep()._M_refdata();
+
+
 
  // NB: Not required, but considered best practice.
  if (__gnu_cxx::__is_null_pointer(__beg) && __beg != __end)
-   __throw_logic_error(("basic_string::_S_construct null not valid"));
+   __throw_logic_error(("basic_string::_S_construct NULL not valid"));
 
  const size_type __dnew = static_cast<size_type>(std::distance(__beg,
               __end));
@@ -17523,8 +12972,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
     _S_construct(size_type __n, _CharT __c, const _Alloc& __a)
     {
 
-      if (__n == 0 && __a == _Alloc())
- return _S_empty_rep()._M_refdata();
+
+
 
       // Check for out_of_range and length_error exceptions.
       _Rep* __r = _Rep::_S_create(__n, size_type(0), __a);
@@ -17598,7 +13047,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     basic_string(_InputIterator __beg, _InputIterator __end, const _Alloc& __a)
     : _M_dataplus(_S_construct(__beg, __end, __a), __a)
     { }
-# 241 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.tcc" 3
+# 239 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_string.tcc" 3
  template<typename _CharT, typename _Traits, typename _Alloc>
     basic_string<_CharT, _Traits, _Alloc>&
     basic_string<_CharT, _Traits, _Alloc>::
@@ -17817,8 +13266,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
     _M_leak_hard()
     {
 
-      if (_M_rep() == &_S_empty_rep())
- return;
+
+
 
       if (_M_rep()->_M_is_shared())
  _M_mutate(0, 0, 0);
@@ -18490,6 +13939,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   // Inhibit implicit instantiations for required instantiations,
   // which are defined via explicit instantiations elsewhere.
+  // NB: This syntax is a GNU extension.
 
   extern template class basic_string<char>;
   extern template
@@ -18522,15 +13972,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
+}
+# 56 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\string" 2 3
+# 42 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_classes.h" 2 3
 
-} // namespace std
-# 55 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
-# 42 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 2 3
 
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   // 22.1.1 Class locale
   /**
@@ -18788,7 +14235,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     // macros. For GNU systems, the following are also valid:
     // LC_PAPER, LC_NAME, LC_ADDRESS, LC_TELEPHONE, LC_MEASUREMENT,
     // and LC_IDENTIFICATION.
-    enum { _S_categories_size = 6 + 6 };
+    enum { _S_categories_size = 6 + 0 };
 
 
     static __gthread_once_t _S_once;
@@ -18890,11 +14337,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
     void
     _M_remove_reference() const throw()
     {
-      // Be race-detector-friendly.  For more info see bits/c++config.
-                                                           ;
       if (__gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1) == 1)
  {
-                                                              ;
    if (true)
      { delete this; }
    if (false)
@@ -18999,11 +14443,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
     void
     _M_remove_reference() throw()
     {
-      // Be race-detector-friendly.  For more info see bits/c++config.
-                                                           ;
       if (__gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1) == 1)
  {
-                                                              ;
    if (true)
      { delete this; }
    if (false)
@@ -19303,15 +14744,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
       ~collate_byname() { }
     };
 
-
-} // namespace
-
+}
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.tcc" 1 3
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_classes.tcc" 1 3
 // Locale support -*- C++ -*-
 
-// Copyright (C) 2007, 2008, 2009, 2010, 2011 Free Software Foundation, Inc.
+// Copyright (C) 2007, 2008, 2009 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -19333,19 +14774,17 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/locale_classes.tcc
+/** @file locale_classes.tcc
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{locale}
+ *  You should not attempt to use it directly.
  */
 
 //
 // ISO C++ 14882: 22.1  Locales
 //
-# 37 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.tcc" 3
+# 37 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_classes.tcc" 3
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   template<typename _Facet>
     locale::
@@ -19548,6 +14987,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   // Inhibit implicit instantiations for required instantiations,
   // which are defined via explicit instantiations elsewhere.
+  // NB: This syntax is a GNU extension.
 
   extern template class collate<char>;
   extern template class collate_byname<char>;
@@ -19574,14 +15014,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
-
-} // namespace std
-# 823 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 2 3
-# 43 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 2 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+}
+# 815 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_classes.h" 2 3
+# 43 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/ios_base.h" 2 3
+# 53 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/ios_base.h" 3
+namespace std {
 
   // The following definitions of bitmask types are enums, not ints,
   // as permitted (but not required) in the standard, in order to provide
@@ -19622,21 +15059,21 @@ namespace std __attribute__ ((__visibility__ ("default")))
   operator^(_Ios_Fmtflags __a, _Ios_Fmtflags __b)
   { return _Ios_Fmtflags(static_cast<int>(__a) ^ static_cast<int>(__b)); }
 
-  inline _Ios_Fmtflags
-  operator~(_Ios_Fmtflags __a)
-  { return _Ios_Fmtflags(~static_cast<int>(__a)); }
-
-  inline const _Ios_Fmtflags&
+  inline _Ios_Fmtflags&
   operator|=(_Ios_Fmtflags& __a, _Ios_Fmtflags __b)
   { return __a = __a | __b; }
 
-  inline const _Ios_Fmtflags&
+  inline _Ios_Fmtflags&
   operator&=(_Ios_Fmtflags& __a, _Ios_Fmtflags __b)
   { return __a = __a & __b; }
 
-  inline const _Ios_Fmtflags&
+  inline _Ios_Fmtflags&
   operator^=(_Ios_Fmtflags& __a, _Ios_Fmtflags __b)
   { return __a = __a ^ __b; }
+
+  inline _Ios_Fmtflags
+  operator~(_Ios_Fmtflags __a)
+  { return _Ios_Fmtflags(~static_cast<int>(__a)); }
 
 
   enum _Ios_Openmode
@@ -19662,21 +15099,21 @@ namespace std __attribute__ ((__visibility__ ("default")))
   operator^(_Ios_Openmode __a, _Ios_Openmode __b)
   { return _Ios_Openmode(static_cast<int>(__a) ^ static_cast<int>(__b)); }
 
-  inline _Ios_Openmode
-  operator~(_Ios_Openmode __a)
-  { return _Ios_Openmode(~static_cast<int>(__a)); }
-
-  inline const _Ios_Openmode&
+  inline _Ios_Openmode&
   operator|=(_Ios_Openmode& __a, _Ios_Openmode __b)
   { return __a = __a | __b; }
 
-  inline const _Ios_Openmode&
+  inline _Ios_Openmode&
   operator&=(_Ios_Openmode& __a, _Ios_Openmode __b)
   { return __a = __a & __b; }
 
-  inline const _Ios_Openmode&
+  inline _Ios_Openmode&
   operator^=(_Ios_Openmode& __a, _Ios_Openmode __b)
   { return __a = __a ^ __b; }
+
+  inline _Ios_Openmode
+  operator~(_Ios_Openmode __a)
+  { return _Ios_Openmode(~static_cast<int>(__a)); }
 
 
   enum _Ios_Iostate
@@ -19700,22 +15137,21 @@ namespace std __attribute__ ((__visibility__ ("default")))
   operator^(_Ios_Iostate __a, _Ios_Iostate __b)
   { return _Ios_Iostate(static_cast<int>(__a) ^ static_cast<int>(__b)); }
 
-  inline _Ios_Iostate
-  operator~(_Ios_Iostate __a)
-  { return _Ios_Iostate(~static_cast<int>(__a)); }
-
-  inline const _Ios_Iostate&
+  inline _Ios_Iostate&
   operator|=(_Ios_Iostate& __a, _Ios_Iostate __b)
   { return __a = __a | __b; }
 
-  inline const _Ios_Iostate&
+  inline _Ios_Iostate&
   operator&=(_Ios_Iostate& __a, _Ios_Iostate __b)
   { return __a = __a & __b; }
 
-  inline const _Ios_Iostate&
+  inline _Ios_Iostate&
   operator^=(_Ios_Iostate& __a, _Ios_Iostate __b)
   { return __a = __a ^ __b; }
 
+  inline _Ios_Iostate
+  operator~(_Ios_Iostate __a)
+  { return _Ios_Iostate(~static_cast<int>(__a)); }
 
   enum _Ios_Seekdir
     {
@@ -20014,16 +15450,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       // 0 => OK to delete.
       int
       _M_remove_reference()
-      {
-        // Be race-detector-friendly.  For more info see bits/c++config.
-                                                             ;
-        int __res = __gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1);
-        if (__res == 0)
-          {
-                                                                ;
-          }
-        return __res;
-      }
+      { return __gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1); }
     };
 
      _Callback_list* _M_callbacks;
@@ -20508,14 +15935,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
     return __base;
   }
 
-
-} // namespace
-# 43 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 1 3
+}
+# 43 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ios" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\streambuf" 1 3
 // Stream buffer classes -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011 Free Software Foundation, Inc.
+// 2006, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -20537,14 +15963,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file include/streambuf
+/** @file streambuf
  *  This is a Standard C++ Library header.
  */
 
 //
 // ISO C++ 14882: 27.5  Stream buffers
 //
-# 37 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 37 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\streambuf" 3
 
 
 
@@ -20553,9 +15979,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   template<typename _CharT, typename _Traits>
     streamsize
@@ -21279,13 +16703,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
       }
 
 
-      // Also used by specializations for char and wchar_t in src.
-      void
-      __safe_gbump(streamsize __n) { _M_in_cur += __n; }
-
-      void
-      __safe_pbump(streamsize __n) { _M_out_cur += __n; }
-
     private:
       // _GLIBCXX_RESOLVE_LIB_DEFECTS
       // Side effect of DR 50. 
@@ -21312,16 +16729,16 @@ namespace std __attribute__ ((__visibility__ ("default")))
      basic_streambuf<wchar_t>* __sbout, bool& __ineof);
 
 
-
-} // namespace
-
+}
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf.tcc" 1 3
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/streambuf.tcc" 1 3
 // Stream buffer classes -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011  Free Software Foundation, Inc.
+// 2006, 2009  Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -21343,19 +16760,17 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/streambuf.tcc
+/** @file streambuf.tcc
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{streambuf}
+ *  You should not attempt to use it directly.
  */
 
 //
 // ISO C++ 14882: 27.5  Stream buffers
 //
-# 38 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf.tcc" 3
+# 38 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/streambuf.tcc" 3
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   template<typename _CharT, typename _Traits>
     streamsize
@@ -21373,7 +16788,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        traits_type::copy(__s, this->gptr(), __len);
        __ret += __len;
        __s += __len;
-       this->__safe_gbump(__len);
+       this->gbump(__len);
      }
 
    if (__ret < __n)
@@ -21407,7 +16822,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        traits_type::copy(this->pptr(), __s, __len);
        __ret += __len;
        __s += __len;
-       this->__safe_pbump(__len);
+       this->pbump(__len);
      }
 
    if (__ret < __n)
@@ -21462,6 +16877,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   // Inhibit implicit instantiations for required instantiations,
   // which are defined via explicit instantiations elsewhere.
+  // NB:  This syntax is a GNU extension.
 
   extern template class basic_streambuf<char>;
   extern template
@@ -21486,15 +16902,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
-
-} // namespace std
-# 808 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 2 3
-# 44 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 1 3
+}
+# 799 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\streambuf" 2 3
+# 44 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ios" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_ios.h" 1 3
 // Iostreams base classes -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
+// 2006, 2007, 2008, 2009, 2010
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -21517,19 +16932,19 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/basic_ios.h
+/** @file basic_ios.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{ios}
+ *  You should not attempt to use it directly.
  */
-# 35 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 35 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_ios.h" 3
 
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_facets.h" 1 3
 // Locale support -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
+// 2006, 2007, 2008, 2009, 2010
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -21552,17 +16967,17 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/locale_facets.h
+/** @file locale_facets.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{locale}
+ *  You should not attempt to use it directly.
  */
 
 //
 // ISO C++ 14882: 22.1  Locales
 //
-# 39 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 39 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_facets.h" 3
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cwctype" 1 3
 // -*- C++ -*- forwarding header.
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
@@ -21602,385 +17017,52 @@ namespace std __attribute__ ((__visibility__ ("default")))
 //
 // ISO C++ 14882: <cwctype>
 //
-# 41 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 3
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cwctype" 3
 
 
 
 
-
-
-// Work around glibc BZ 9694
-
-
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3
-/*===---- stddef.h - Basic type definitions --------------------------------===
- *
- * Copyright (c) 2008 Eli Friedman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- *===-----------------------------------------------------------------------===
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wctype.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 56 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3
-/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
-__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
-# 49 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 2 3
-
-
-# 1 "/usr/include/wctype.h" 1 3 4
-/* Copyright (C) 1996-2002, 2005 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/*
- *	ISO C99 Standard: 7.25
- *	Wide character classification and mapping utilities  <wctype.h>
+# 14 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wctype.h" 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 32 "/usr/include/wctype.h" 3 4
-/* We try to get wint_t from <stddef.h>, but not all GCC versions define it
-   there.  So define it ourselves if it remains undefined.  */
+# 13 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wctype.h" 2 3
 
 
-
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
-/*===---- stddef.h - Basic type definitions --------------------------------===
- *
- * Copyright (c) 2008 Eli Friedman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- *===-----------------------------------------------------------------------===
- */
-# 56 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
-/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
-__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
-# 36 "/usr/include/wctype.h" 2 3 4
-# 49 "/usr/include/wctype.h" 3 4
-/* Constant expression of type `wint_t' whose value does not correspond
-   to any member of the extended character set.  */
-
-
-
-
-
-
-
-/* The following part is also used in the <wcsmbs.h> header when compiled
-   in the Unix98 compatibility mode.  */
-
-
-
-
-/* Scalar type that can hold values which represent locale-specific
-   character classifications.  */
-typedef unsigned long int wctype_t;
-
-
-
-/* The characteristics are stored always in network byte order (big
-   endian).  We define the bit value interpretations here dependent on the
-   machine's byte order.  */
-# 85 "/usr/include/wctype.h" 3 4
-enum
-{
-  __ISwupper = 0, /* UPPERCASE.  */
-  __ISwlower = 1, /* lowercase.  */
-  __ISwalpha = 2, /* Alphabetic.  */
-  __ISwdigit = 3, /* Numeric.  */
-  __ISwxdigit = 4, /* Hexadecimal numeric.  */
-  __ISwspace = 5, /* Whitespace.  */
-  __ISwprint = 6, /* Printing.  */
-  __ISwgraph = 7, /* Graphical.  */
-  __ISwblank = 8, /* Blank (usually SPC and TAB).  */
-  __ISwcntrl = 9, /* Control character.  */
-  __ISwpunct = 10, /* Punctuation.  */
-  __ISwalnum = 11, /* Alphanumeric.  */
-
-  _ISwupper = ((__ISwupper) < 8 ? (int) ((1UL << (__ISwupper)) << 24) : ((__ISwupper) < 16 ? (int) ((1UL << (__ISwupper)) << 8) : ((__ISwupper) < 24 ? (int) ((1UL << (__ISwupper)) >> 8) : (int) ((1UL << (__ISwupper)) >> 24)))), /* UPPERCASE.  */
-  _ISwlower = ((__ISwlower) < 8 ? (int) ((1UL << (__ISwlower)) << 24) : ((__ISwlower) < 16 ? (int) ((1UL << (__ISwlower)) << 8) : ((__ISwlower) < 24 ? (int) ((1UL << (__ISwlower)) >> 8) : (int) ((1UL << (__ISwlower)) >> 24)))), /* lowercase.  */
-  _ISwalpha = ((__ISwalpha) < 8 ? (int) ((1UL << (__ISwalpha)) << 24) : ((__ISwalpha) < 16 ? (int) ((1UL << (__ISwalpha)) << 8) : ((__ISwalpha) < 24 ? (int) ((1UL << (__ISwalpha)) >> 8) : (int) ((1UL << (__ISwalpha)) >> 24)))), /* Alphabetic.  */
-  _ISwdigit = ((__ISwdigit) < 8 ? (int) ((1UL << (__ISwdigit)) << 24) : ((__ISwdigit) < 16 ? (int) ((1UL << (__ISwdigit)) << 8) : ((__ISwdigit) < 24 ? (int) ((1UL << (__ISwdigit)) >> 8) : (int) ((1UL << (__ISwdigit)) >> 24)))), /* Numeric.  */
-  _ISwxdigit = ((__ISwxdigit) < 8 ? (int) ((1UL << (__ISwxdigit)) << 24) : ((__ISwxdigit) < 16 ? (int) ((1UL << (__ISwxdigit)) << 8) : ((__ISwxdigit) < 24 ? (int) ((1UL << (__ISwxdigit)) >> 8) : (int) ((1UL << (__ISwxdigit)) >> 24)))), /* Hexadecimal numeric.  */
-  _ISwspace = ((__ISwspace) < 8 ? (int) ((1UL << (__ISwspace)) << 24) : ((__ISwspace) < 16 ? (int) ((1UL << (__ISwspace)) << 8) : ((__ISwspace) < 24 ? (int) ((1UL << (__ISwspace)) >> 8) : (int) ((1UL << (__ISwspace)) >> 24)))), /* Whitespace.  */
-  _ISwprint = ((__ISwprint) < 8 ? (int) ((1UL << (__ISwprint)) << 24) : ((__ISwprint) < 16 ? (int) ((1UL << (__ISwprint)) << 8) : ((__ISwprint) < 24 ? (int) ((1UL << (__ISwprint)) >> 8) : (int) ((1UL << (__ISwprint)) >> 24)))), /* Printing.  */
-  _ISwgraph = ((__ISwgraph) < 8 ? (int) ((1UL << (__ISwgraph)) << 24) : ((__ISwgraph) < 16 ? (int) ((1UL << (__ISwgraph)) << 8) : ((__ISwgraph) < 24 ? (int) ((1UL << (__ISwgraph)) >> 8) : (int) ((1UL << (__ISwgraph)) >> 24)))), /* Graphical.  */
-  _ISwblank = ((__ISwblank) < 8 ? (int) ((1UL << (__ISwblank)) << 24) : ((__ISwblank) < 16 ? (int) ((1UL << (__ISwblank)) << 8) : ((__ISwblank) < 24 ? (int) ((1UL << (__ISwblank)) >> 8) : (int) ((1UL << (__ISwblank)) >> 24)))), /* Blank (usually SPC and TAB).  */
-  _ISwcntrl = ((__ISwcntrl) < 8 ? (int) ((1UL << (__ISwcntrl)) << 24) : ((__ISwcntrl) < 16 ? (int) ((1UL << (__ISwcntrl)) << 8) : ((__ISwcntrl) < 24 ? (int) ((1UL << (__ISwcntrl)) >> 8) : (int) ((1UL << (__ISwcntrl)) >> 24)))), /* Control character.  */
-  _ISwpunct = ((__ISwpunct) < 8 ? (int) ((1UL << (__ISwpunct)) << 24) : ((__ISwpunct) < 16 ? (int) ((1UL << (__ISwpunct)) << 8) : ((__ISwpunct) < 24 ? (int) ((1UL << (__ISwpunct)) >> 8) : (int) ((1UL << (__ISwpunct)) >> 24)))), /* Punctuation.  */
-  _ISwalnum = ((__ISwalnum) < 8 ? (int) ((1UL << (__ISwalnum)) << 24) : ((__ISwalnum) < 16 ? (int) ((1UL << (__ISwalnum)) << 8) : ((__ISwalnum) < 24 ? (int) ((1UL << (__ISwalnum)) >> 8) : (int) ((1UL << (__ISwalnum)) >> 24)))) /* Alphanumeric.  */
-};
-
+#pragma pack(push,_CRT_PACKING)
 
 
 extern "C" {
-
-
-/*
- * Wide-character classification functions: 7.15.2.1.
- */
-
-/* Test for any wide character for which `iswalpha' or `iswdigit' is
-   true.  */
-extern int iswalnum (wint_t __wc) throw ();
-
-/* Test for any wide character for which `iswupper' or 'iswlower' is
-   true, or any wide character that is one of a locale-specific set of
-   wide-characters for which none of `iswcntrl', `iswdigit',
-   `iswpunct', or `iswspace' is true.  */
-extern int iswalpha (wint_t __wc) throw ();
-
-/* Test for any control wide character.  */
-extern int iswcntrl (wint_t __wc) throw ();
-
-/* Test for any wide character that corresponds to a decimal-digit
-   character.  */
-extern int iswdigit (wint_t __wc) throw ();
-
-/* Test for any wide character for which `iswprint' is true and
-   `iswspace' is false.  */
-extern int iswgraph (wint_t __wc) throw ();
-
-/* Test for any wide character that corresponds to a lowercase letter
-   or is one of a locale-specific set of wide characters for which
-   none of `iswcntrl', `iswdigit', `iswpunct', or `iswspace' is true.  */
-extern int iswlower (wint_t __wc) throw ();
-
-/* Test for any printing wide character.  */
-extern int iswprint (wint_t __wc) throw ();
-
-/* Test for any printing wide character that is one of a
-   locale-specific et of wide characters for which neither `iswspace'
-   nor `iswalnum' is true.  */
-extern int iswpunct (wint_t __wc) throw ();
-
-/* Test for any wide character that corresponds to a locale-specific
-   set of wide characters for which none of `iswalnum', `iswgraph', or
-   `iswpunct' is true.  */
-extern int iswspace (wint_t __wc) throw ();
-
-/* Test for any wide character that corresponds to an uppercase letter
-   or is one of a locale-specific set of wide character for which none
-   of `iswcntrl', `iswdigit', `iswpunct', or `iswspace' is true.  */
-extern int iswupper (wint_t __wc) throw ();
-
-/* Test for any wide character that corresponds to a hexadecimal-digit
-   character equivalent to that performed be the functions described
-   in the previous subclause.  */
-extern int iswxdigit (wint_t __wc) throw ();
-
-/* Test for any wide character that corresponds to a standard blank
-   wide character or a locale-specific set of wide characters for
-   which `iswalnum' is false.  */
-
-extern int iswblank (wint_t __wc) throw ();
-
-
-/*
- * Extensible wide-character classification functions: 7.15.2.2.
- */
-
-/* Construct value that describes a class of wide characters identified
-   by the string argument PROPERTY.  */
-extern wctype_t wctype (__const char *__property) throw ();
-
-/* Determine whether the wide-character WC has the property described by
-   DESC.  */
-extern int iswctype (wint_t __wc, wctype_t __desc) throw ();
-
-
-
-/*
- * Wide-character case-mapping functions: 7.15.3.1.
- */
-
-
-/* Scalar type that can hold values which represent locale-specific
-   character mappings.  */
-typedef __const __int32_t *wctrans_t;
-
-
-
-
-
-
-/* Converts an uppercase letter to the corresponding lowercase letter.  */
-extern wint_t towlower (wint_t __wc) throw ();
-
-/* Converts an lowercase letter to the corresponding uppercase letter.  */
-extern wint_t towupper (wint_t __wc) throw ();
+# 166 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\wctype.h" 3
+ typedef wchar_t wctrans_t;
+  wint_t towctrans(wint_t,wctrans_t);
+  wctrans_t wctrans(const char *);
+  wctype_t wctype(const char *);
 
 
 }
 
 
-
-
-/* The remaining definitions and declarations must not appear in the
-   <wcsmbs.h> header.  */
-
-
-/*
- * Extensible wide-character mapping functions: 7.15.3.2.
- */
-
-extern "C" {
-
-
-/* Construct value that describes a mapping between wide characters
-   identified by the string argument PROPERTY.  */
-extern wctrans_t wctrans (__const char *__property) throw ();
-
-/* Map the wide character WC using the mapping described by DESC.  */
-extern wint_t towctrans (wint_t __wc, wctrans_t __desc) throw ();
-
-
-
-/* Declare the interface to extended locale model.  */
-
-
-/* Test for any wide character for which `iswalpha' or `iswdigit' is
-   true.  */
-extern int iswalnum_l (wint_t __wc, __locale_t __locale) throw ();
-
-/* Test for any wide character for which `iswupper' or 'iswlower' is
-   true, or any wide character that is one of a locale-specific set of
-   wide-characters for which none of `iswcntrl', `iswdigit',
-   `iswpunct', or `iswspace' is true.  */
-extern int iswalpha_l (wint_t __wc, __locale_t __locale) throw ();
-
-/* Test for any control wide character.  */
-extern int iswcntrl_l (wint_t __wc, __locale_t __locale) throw ();
-
-/* Test for any wide character that corresponds to a decimal-digit
-   character.  */
-extern int iswdigit_l (wint_t __wc, __locale_t __locale) throw ();
-
-/* Test for any wide character for which `iswprint' is true and
-   `iswspace' is false.  */
-extern int iswgraph_l (wint_t __wc, __locale_t __locale) throw ();
-
-/* Test for any wide character that corresponds to a lowercase letter
-   or is one of a locale-specific set of wide characters for which
-   none of `iswcntrl', `iswdigit', `iswpunct', or `iswspace' is true.  */
-extern int iswlower_l (wint_t __wc, __locale_t __locale) throw ();
-
-/* Test for any printing wide character.  */
-extern int iswprint_l (wint_t __wc, __locale_t __locale) throw ();
-
-/* Test for any printing wide character that is one of a
-   locale-specific et of wide characters for which neither `iswspace'
-   nor `iswalnum' is true.  */
-extern int iswpunct_l (wint_t __wc, __locale_t __locale) throw ();
-
-/* Test for any wide character that corresponds to a locale-specific
-   set of wide characters for which none of `iswalnum', `iswgraph', or
-   `iswpunct' is true.  */
-extern int iswspace_l (wint_t __wc, __locale_t __locale) throw ();
-
-/* Test for any wide character that corresponds to an uppercase letter
-   or is one of a locale-specific set of wide character for which none
-   of `iswcntrl', `iswdigit', `iswpunct', or `iswspace' is true.  */
-extern int iswupper_l (wint_t __wc, __locale_t __locale) throw ();
-
-/* Test for any wide character that corresponds to a hexadecimal-digit
-   character equivalent to that performed be the functions described
-   in the previous subclause.  */
-extern int iswxdigit_l (wint_t __wc, __locale_t __locale) throw ();
-
-/* Test for any wide character that corresponds to a standard blank
-   wide character or a locale-specific set of wide characters for
-   which `iswalnum' is false.  */
-extern int iswblank_l (wint_t __wc, __locale_t __locale) throw ();
-
-/* Construct value that describes a class of wide characters identified
-   by the string argument PROPERTY.  */
-extern wctype_t wctype_l (__const char *__property, __locale_t __locale)
-     throw ();
-
-/* Determine whether the wide-character WC has the property described by
-   DESC.  */
-extern int iswctype_l (wint_t __wc, wctype_t __desc, __locale_t __locale)
-     throw ();
-
-
-/*
- * Wide-character case-mapping functions.
- */
-
-/* Converts an uppercase letter to the corresponding lowercase letter.  */
-extern wint_t towlower_l (wint_t __wc, __locale_t __locale) throw ();
-
-/* Converts an lowercase letter to the corresponding uppercase letter.  */
-extern wint_t towupper_l (wint_t __wc, __locale_t __locale) throw ();
-
-/* Construct value that describes a mapping between wide characters
-   identified by the string argument PROPERTY.  */
-extern wctrans_t wctrans_l (__const char *__property, __locale_t __locale)
-     throw ();
-
-/* Map the wide character WC using the mapping described by DESC.  */
-extern wint_t towctrans_l (wint_t __wc, wctrans_t __desc,
-      __locale_t __locale) throw ();
-
-
-
-}
-# 52 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 2 3
+#pragma pack(pop)
+# 46 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cwctype" 2 3
 
 
 
 
 
 // Get rid of those macros defined in <wctype.h> in lieu of real functions.
-# 81 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 3
-namespace std
-{
+# 75 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cwctype" 3
+namespace std {
+
   using ::wctrans_t;
   using ::wctype_t;
   using ::wint_t;
@@ -22005,9 +17087,10 @@ namespace std
   using ::towupper;
   using ::wctrans;
   using ::wctype;
-} // namespace
-# 41 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 1 3
+
+}
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_facets.h" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cctype" 1 3
 // -*- C++ -*- forwarding header.
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
@@ -22047,13 +17130,12 @@ namespace std
 //
 // ISO C++ 14882: <ccytpe>
 //
-# 41 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 3
-# 42 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/ctype_base.h" 1 3
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cctype" 3
+# 42 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_facets.h" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/ctype_base.h" 1 3
 // Locale support -*- C++ -*-
 
-// Copyright (C) 1997, 1998, 1999, 2000, 2002, 2003, 2004, 2009, 2010
-// Free Software Foundation, Inc.
+// Copyright (C) 1997, 1998, 1999, 2007, 2009 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -22075,20 +17157,19 @@ namespace std
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/ctype_base.h
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{locale}
- */
-
 //
 // ISO C++ 14882: 22.1  Locales
 //
 
-// Information as gleaned from /usr/include/ctype.h
+//  We don't use the C-locale masks defined in mingw/include/ctype.h
+//  because those masks do not conform to the requirements of 22.2.1.
+//  In particular, a separate 'print' bitmask does not exist (isprint(c)
+//  relies on a combination of flags) and the  '_ALPHA' mask is also a
+//  combination of simple bitmasks.  Thus, we define libstdc++-specific
+//  masks here, based on the generic masks, and the corresponding
+//  classic_table in ctype_noninline.h.
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   /// @brief  Base class for ctype.
   struct ctype_base
@@ -22099,33 +17180,32 @@ namespace std __attribute__ ((__visibility__ ("default")))
     // NB: Offsets into ctype<char>::_M_table force a particular size
     // on the mask type. Because of this, we don't use an enum.
     typedef unsigned short mask;
-    static const mask upper = _ISupper;
-    static const mask lower = _ISlower;
-    static const mask alpha = _ISalpha;
-    static const mask digit = _ISdigit;
-    static const mask xdigit = _ISxdigit;
-    static const mask space = _ISspace;
-    static const mask print = _ISprint;
-    static const mask graph = _ISalpha | _ISdigit | _ISpunct;
-    static const mask cntrl = _IScntrl;
-    static const mask punct = _ISpunct;
-    static const mask alnum = _ISalpha | _ISdigit;
+    static const mask upper = 1 << 0;
+    static const mask lower = 1 << 1;
+    static const mask alpha = 1 << 2;
+    static const mask digit = 1 << 3;
+    static const mask xdigit = 1 << 4;
+    static const mask space = 1 << 5;
+    static const mask print = 1 << 6;
+    static const mask graph = (1 << 2) | (1 << 3) | (1 << 9); // alnum|punct
+    static const mask cntrl = 1 << 8;
+    static const mask punct = 1 << 9;
+    static const mask alnum = (1 << 2) | (1 << 3); // alpha|digit
   };
 
-
-} // namespace
-# 43 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
-
+}
+# 43 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_facets.h" 2 3
 
 
 
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf_iterator.h" 1 3
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/streambuf_iterator.h" 1 3
 // Streambuf iterators
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2009, 2010, 2011
+// 2006, 2007, 2009
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -22148,18 +17228,16 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/streambuf_iterator.h
+/** @file streambuf_iterator.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{iterator}
+ *  You should not attempt to use it directly.
  */
-# 35 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf_iterator.h" 3
+# 35 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/streambuf_iterator.h" 3
 
 
 
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   /**
    * @addtogroup iterators
@@ -22215,7 +17293,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
     public:
       ///  Construct end of input stream iterator.
-                         istreambuf_iterator() throw()
+      istreambuf_iterator() throw()
       : _M_sbuf(0), _M_c(traits_type::eof()) { }
 
       ///  Construct start of input stream iterator.
@@ -22459,7 +17537,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        if (__n > 1)
   {
     traits_type::copy(__result, __sb->gptr(), __n);
-    __sb->__safe_gbump(__n);
+    __sb->gbump(__n);
     __result += __n;
     __c = __sb->underflow();
   }
@@ -22499,7 +17577,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        __n, __val);
     if (__p)
       __n = __p - __sb->gptr();
-    __sb->__safe_gbump(__n);
+    __sb->gbump(__n);
     __c = __sb->sgetc();
   }
        else
@@ -22516,13 +17594,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 // @} group iterators
 
+}
+# 50 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_facets.h" 2 3
 
-} // namespace
-# 50 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   // NB: Don't instantiate required wchar_t facets if no wchar_t support.
 
@@ -23976,16 +19051,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
     };
 
 
-
-} // namespace
+}
 
 // Include host and configuration specific ctype inlines.
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/ctype_inline.h" 1 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2/x86_64-w64-mingw32\\bits/ctype_inline.h" 1 3
 // Locale support -*- C++ -*-
 
-// Copyright (C) 2000, 2002, 2009, 2010 Free Software Foundation, Inc.
+// Copyright (C) 2000, 2009 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -24007,9 +19081,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/ctype_inline.h
+/** @file ctype_inline.h
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{locale}
+ *  You should not attempt to use it directly.
  */
 
 //
@@ -24019,14 +19093,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // ctype bits to be inlined go here. Non-inlinable (ie virtual do_*)
 // functions go in ctype.cc
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   bool
   ctype<char>::
   is(mask __m, char __c) const
-  { return _M_table[static_cast<unsigned char>(__c)] & __m; }
+  { return (_M_table[static_cast<unsigned char>(__c) ] & __m); }
+
 
   const char*
   ctype<char>::
@@ -24041,8 +19114,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   ctype<char>::
   scan_is(mask __m, const char* __low, const char* __high) const
   {
-    while (__low < __high
-    && !(_M_table[static_cast<unsigned char>(*__low)] & __m))
+    while (__low < __high && !this->is(__m, *__low))
       ++__low;
     return __low;
   }
@@ -24051,19 +19123,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
   ctype<char>::
   scan_not(mask __m, const char* __low, const char* __high) const
   {
-    while (__low < __high
-    && (_M_table[static_cast<unsigned char>(*__low)] & __m) != 0)
+    while (__low < __high && this->is(__m, *__low) != 0)
       ++__low;
     return __low;
   }
 
+}
+# 1509 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_facets.h" 2 3
 
-} // namespace
-# 1512 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   // 22.2.2  The numeric category.
   class __num_base
@@ -24142,13 +19210,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       bool _M_allocated;
 
-      __numpunct_cache(size_t __refs = 0)
-      : facet(__refs), _M_grouping(0), _M_grouping_size(0),
- _M_use_grouping(false),
- _M_truename(0), _M_truename_size(0), _M_falsename(0),
- _M_falsename_size(0), _M_decimal_point(_CharT()),
- _M_thousands_sep(_CharT()), _M_allocated(false)
-        { }
+      __numpunct_cache(size_t __refs = 0) : facet(__refs),
+      _M_grouping(__null), _M_grouping_size(0), _M_use_grouping(false),
+      _M_truename(__null), _M_truename_size(0), _M_falsename(__null),
+      _M_falsename_size(0), _M_decimal_point(_CharT()),
+      _M_thousands_sep(_CharT()), _M_allocated(false)
+      { }
 
       ~__numpunct_cache();
 
@@ -24213,8 +19280,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        *  @param  refs  Refcount to pass to the base class.
        */
       explicit
-      numpunct(size_t __refs = 0)
-      : facet(__refs), _M_data(0)
+      numpunct(size_t __refs = 0) : facet(__refs), _M_data(__null)
       { _M_initialize_numpunct(); }
 
       /**
@@ -24242,7 +19308,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        */
       explicit
       numpunct(__c_locale __cloc, size_t __refs = 0)
-      : facet(__refs), _M_data(0)
+      : facet(__refs), _M_data(__null)
       { _M_initialize_numpunct(__cloc); }
 
       /**
@@ -24398,7 +19464,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       // For use at construction time only.
       void
-      _M_initialize_numpunct(__c_locale __cloc = 0);
+      _M_initialize_numpunct(__c_locale __cloc = __null);
     };
 
   template<typename _CharT>
@@ -25152,16 +20218,16 @@ namespace std __attribute__ ((__visibility__ ("default")))
     tolower(_CharT __c, const locale& __loc)
     { return use_facet<ctype<_CharT> >(__loc).tolower(__c); }
 
-
-} // namespace
-
+}
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 1 3
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_facets.tcc" 1 3
 // Locale support -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
+// 2006, 2007, 2008, 2009
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -25184,15 +20250,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/locale_facets.tcc
+/** @file locale_facets.tcc
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{locale}
+ *  You should not attempt to use it directly.
  */
-# 35 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
+# 35 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_facets.tcc" 3
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   // Routine to access a cache for the facet.  If the cache didn't
   // exist before, it gets constructed on the fly.
@@ -25214,7 +20278,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  const locale::facet** __caches = __loc._M_impl->_M_caches;
  if (!__caches[__i])
    {
-     __numpunct_cache<_CharT>* __tmp = 0;
+     __numpunct_cache<_CharT>* __tmp = __null;
      if (true)
        {
   __tmp = new __numpunct_cache<_CharT>;
@@ -25867,7 +20931,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  __err |= ios_base::eofbit;
       return __beg;
     }
-# 731 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
+# 729 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_facets.tcc" 3
  template<typename _CharT, typename _InIter>
     _InIter
     num_get<_CharT, _InIter>::
@@ -26144,7 +21208,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
      __len = std::__convert_from_v(_S_get_c_locale(), __cs, __cs_size,
        __fbuf, __prec, __v);
    }
-# 1026 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
+# 1024 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_facets.tcc" 3
  // [22.2.2.2.2] Stage 2, convert to char_type, using correct
  // numpunct.decimal_point() values for '.' and adding grouping.
  const ctype<_CharT>& __ctype = use_facet<ctype<_CharT> >(__loc);
@@ -26263,7 +21327,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     num_put<_CharT, _OutIter>::
     do_put(iter_type __s, ios_base& __io, char_type __fill, double __v) const
     { return _M_insert_float(__s, __io, __fill, char(), __v); }
-# 1153 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
+# 1151 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_facets.tcc" 3
  template<typename _CharT, typename _OutIter>
     _OutIter
     num_put<_CharT, _OutIter>::
@@ -26389,6 +21453,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   // Inhibit implicit instantiations for required instantiations,
   // which are defined via explicit instantiations elsewhere.
+  // NB: This syntax is a GNU extension.
 
   extern template class numpunct<char>;
   extern template class numpunct_byname<char>;
@@ -26469,15 +21534,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
+}
+# 2601 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/locale_facets.h" 2 3
+# 39 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_ios.h" 2 3
 
-} // namespace
-# 2608 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
-# 39 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 2 3
 
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   template<typename _Facet>
     inline const _Facet&
@@ -26903,16 +21965,16 @@ namespace std __attribute__ ((__visibility__ ("default")))
       _M_cache_locale(const locale& __loc);
     };
 
-
-} // namespace
-
+}
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.tcc" 1 3
+
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_ios.tcc" 1 3
 // basic_ios member functions -*- C++ -*-
 
 // Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007,
-// 2009, 2010, 2011  Free Software Foundation, Inc.
+// 2009  Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -26934,15 +21996,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/basic_ios.tcc
+/** @file basic_ios.tcc
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{ios}
+ *  You should not attempt to use it directly.
  */
-# 34 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.tcc" 3
+# 34 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_ios.tcc" 3
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   template<typename _CharT, typename _Traits>
     void
@@ -27082,6 +22142,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   // Inhibit implicit instantiations for required instantiations,
   // which are defined via explicit instantiations elsewhere.
+  // NB:  This syntax is a GNU extension.
 
   extern template class basic_ios<char>;
 
@@ -27090,16 +22151,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
+}
+# 471 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/basic_ios.h" 2 3
+# 45 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ios" 2 3
+# 40 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ostream" 2 3
 
-} // namespace std
-# 473 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 2 3
-# 45 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 40 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 2 3
 
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   // [27.6.2.1] Template class basic_ostream
   /**
@@ -27620,16 +22678,17 @@ namespace std __attribute__ ((__visibility__ ("default")))
     inline basic_ostream<_CharT, _Traits>&
     flush(basic_ostream<_CharT, _Traits>& __os)
     { return __os.flush(); }
-# 585 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
-} // namespace
+# 582 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ostream" 3
+}
 
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream.tcc" 1 3
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/ostream.tcc" 1 3
 // ostream classes -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
+// 2006, 2007, 2008, 2009
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -27652,21 +22711,19 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/ostream.tcc
+/** @file ostream.tcc
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{ostream}
+ *  You should not attempt to use it directly.
  */
 
 //
 // ISO C++ 14882: 27.6.2  Output streams
 //
-# 39 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream.tcc" 3
+# 39 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/ostream.tcc" 3
 
 
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   template<typename _CharT, typename _Traits>
     basic_ostream<_CharT, _Traits>::sentry::
@@ -27981,6 +23038,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   // Inhibit implicit instantiations for required instantiations,
   // which are defined via explicit instantiations elsewhere.
+  // NB:  This syntax is a GNU extension.
 
   extern template class basic_ostream<char>;
   extern template ostream& endl(ostream&);
@@ -28027,15 +23085,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
-
-} // namespace std
-# 588 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 2 3
-# 40 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 1 3
+}
+# 586 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\ostream" 2 3
+# 40 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iostream" 2 3
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\istream" 1 3
 // Input streams -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
+// 2006, 2007, 2008, 2009, 2010
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -28062,17 +23119,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // ISO C++ 14882: 27.6.1  Input streams
 //
 
-/** @file include/istream
+/** @file istream
  *  This is a Standard C++ Library header.
  */
-# 38 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 38 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\istream" 3
 
 
 
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   // [27.6.1.1] Template class basic_istream
   /**
@@ -28525,9 +23580,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
        *  If @c rdbuf() is null or if @c sputbackc() fails, sets badbit in
        *  the error state.
        *
-       *  @note  This function first clears eofbit.  Since no characters
-       *         are extracted, the next call to @c gcount() will return 0,
-       *         as required by DR 60.
+       *  @note  Since no characters are extracted, the next call to
+       *         @c gcount() will return 0, as required by DR 60.
       */
       __istream_type&
       putback(char_type __c);
@@ -28541,9 +23595,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
        *  If @c rdbuf() is null or if @c sungetc() fails, sets badbit in
        *  the error state.
        *
-       *  @note  This function first clears eofbit.  Since no characters
-       *         are extracted, the next call to @c gcount() will return 0,
-       *         as required by DR 60.
+       *  @note  Since no characters are extracted, the next call to
+       *         @c gcount() will return 0, as required by DR 60.
       */
       __istream_type&
       unget();
@@ -28575,8 +23628,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        *
        *  @note  This function does not count the number of characters
        *         extracted, if any, and therefore does not affect the next
-       *         call to @c gcount().  At variance with putback, unget and
-       *         seekg, eofbit is not cleared first.
+       *         call to @c gcount().
       */
       pos_type
       tellg();
@@ -28589,9 +23641,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
        *  If @c fail() is not true, calls @c rdbuf()->pubseekpos(pos).  If
        *  that function fails, sets failbit.
        *
-       *  @note  This function first clears eofbit.  It does not count the
-       *         number of characters extracted, if any, and therefore does
-       *         not affect the next call to @c gcount().
+       *  @note  This function does not count the number of characters
+       *         extracted, if any, and therefore does not affect the next
+       *         call to @c gcount().
       */
       __istream_type&
       seekg(pos_type);
@@ -28605,9 +23657,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
        *  If @c fail() is not true, calls @c rdbuf()->pubseekoff(off,dir).
        *  If that function fails, sets failbit.
        *
-       *  @note  This function first clears eofbit.  It does not count the
-       *         number of characters extracted, if any, and therefore does
-       *         not affect the next call to @c gcount().
+       *  @note  This function does not count the number of characters
+       *         extracted, if any, and therefore does not affect the next
+       *         call to @c gcount().
       */
       __istream_type&
       seekg(off_type, ios_base::seekdir);
@@ -28864,16 +23916,17 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<typename _CharT, typename _Traits>
     basic_istream<_CharT, _Traits>&
     ws(basic_istream<_CharT, _Traits>& __is);
-# 856 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
-} // namespace
+# 850 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\istream" 3
+}
 
 
 
-# 1 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/istream.tcc" 1 3
+
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/istream.tcc" 1 3
 // istream classes -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
+// 2006, 2007, 2008, 2009
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -28896,21 +23949,19 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file bits/istream.tcc
+/** @file istream.tcc
  *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{istream}
+ *  You should not attempt to use it directly.
  */
 
 //
 // ISO C++ 14882: 27.6.1  Input streams
 //
-# 39 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/istream.tcc" 3
+# 39 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\bits/istream.tcc" 3
 
 
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   template<typename _CharT, typename _Traits>
     basic_istream<_CharT, _Traits>::sentry::
@@ -29583,8 +24634,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
       // _GLIBCXX_RESOLVE_LIB_DEFECTS
       // 60. What is a formatted input function?
       _M_gcount = 0;
-      // Clear eofbit per N3168.
-      this->clear(this->rdstate() & ~ios_base::eofbit);
       sentry __cerb(*this, true);
       if (__cerb)
  {
@@ -29618,8 +24667,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
       // _GLIBCXX_RESOLVE_LIB_DEFECTS
       // 60. What is a formatted input function?
       _M_gcount = 0;
-      // Clear eofbit per N3168.
-      this->clear(this->rdstate() & ~ios_base::eofbit);
       sentry __cerb(*this, true);
       if (__cerb)
  {
@@ -29689,23 +24736,19 @@ namespace std __attribute__ ((__visibility__ ("default")))
       // _GLIBCXX_RESOLVE_LIB_DEFECTS
       // DR60.  Do not change _M_gcount.
       pos_type __ret = pos_type(-1);
-      sentry __cerb(*this, true);
-      if (__cerb)
+      if (true)
  {
-   if (true)
-     {
-       if (!this->fail())
-  __ret = this->rdbuf()->pubseekoff(0, ios_base::cur,
-        ios_base::in);
-     }
-   if (false)
-     {
-       this->_M_setstate(ios_base::badbit);
-                              ;
-     }
-   if (false)
-     { this->_M_setstate(ios_base::badbit); }
+   if (!this->fail())
+     __ret = this->rdbuf()->pubseekoff(0, ios_base::cur,
+           ios_base::in);
  }
+      if (false)
+ {
+   this->_M_setstate(ios_base::badbit);
+                          ;
+ }
+      if (false)
+ { this->_M_setstate(ios_base::badbit); }
       return __ret;
     }
 
@@ -29716,35 +24759,29 @@ namespace std __attribute__ ((__visibility__ ("default")))
     {
       // _GLIBCXX_RESOLVE_LIB_DEFECTS
       // DR60.  Do not change _M_gcount.
-      // Clear eofbit per N3168.
-      this->clear(this->rdstate() & ~ios_base::eofbit);
-      sentry __cerb(*this, true);
-      if (__cerb)
+      ios_base::iostate __err = ios_base::goodbit;
+      if (true)
  {
-   ios_base::iostate __err = ios_base::goodbit;
-   if (true)
+   if (!this->fail())
      {
-       if (!this->fail())
-  {
-    // 136.  seekp, seekg setting wrong streams?
-    const pos_type __p = this->rdbuf()->pubseekpos(__pos,
-         ios_base::in);
+       // 136.  seekp, seekg setting wrong streams?
+       const pos_type __p = this->rdbuf()->pubseekpos(__pos,
+            ios_base::in);
 
-    // 129.  Need error indication from seekp() and seekg()
-    if (__p == pos_type(off_type(-1)))
-      __err |= ios_base::failbit;
-  }
+       // 129.  Need error indication from seekp() and seekg()
+       if (__p == pos_type(off_type(-1)))
+  __err |= ios_base::failbit;
      }
-   if (false)
-     {
-       this->_M_setstate(ios_base::badbit);
-                              ;
-     }
-   if (false)
-     { this->_M_setstate(ios_base::badbit); }
-   if (__err)
-     this->setstate(__err);
  }
+      if (false)
+ {
+   this->_M_setstate(ios_base::badbit);
+                          ;
+ }
+      if (false)
+ { this->_M_setstate(ios_base::badbit); }
+      if (__err)
+ this->setstate(__err);
       return *this;
     }
 
@@ -29755,35 +24792,29 @@ namespace std __attribute__ ((__visibility__ ("default")))
     {
       // _GLIBCXX_RESOLVE_LIB_DEFECTS
       // DR60.  Do not change _M_gcount.
-      // Clear eofbit per N3168.
-      this->clear(this->rdstate() & ~ios_base::eofbit);
-      sentry __cerb(*this, true);
-      if (__cerb)
+      ios_base::iostate __err = ios_base::goodbit;
+      if (true)
  {
-   ios_base::iostate __err = ios_base::goodbit;
-   if (true)
+   if (!this->fail())
      {
-       if (!this->fail())
-  {
-    // 136.  seekp, seekg setting wrong streams?
-    const pos_type __p = this->rdbuf()->pubseekoff(__off, __dir,
-         ios_base::in);
+       // 136.  seekp, seekg setting wrong streams?
+       const pos_type __p = this->rdbuf()->pubseekoff(__off, __dir,
+            ios_base::in);
 
-    // 129.  Need error indication from seekp() and seekg()
-    if (__p == pos_type(off_type(-1)))
-      __err |= ios_base::failbit;
-  }
+       // 129.  Need error indication from seekp() and seekg()
+       if (__p == pos_type(off_type(-1)))
+  __err |= ios_base::failbit;
      }
-   if (false)
-     {
-       this->_M_setstate(ios_base::badbit);
-                              ;
-     }
-   if (false)
-     { this->_M_setstate(ios_base::badbit); }
-   if (__err)
-     this->setstate(__err);
  }
+      if (false)
+ {
+   this->_M_setstate(ios_base::badbit);
+                          ;
+ }
+      if (false)
+ { this->_M_setstate(ios_base::badbit); }
+      if (__err)
+ this->setstate(__err);
       return *this;
     }
 
@@ -29906,6 +24937,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   // Inhibit implicit instantiations for required instantiations,
   // which are defined via explicit instantiations elsewhere.
+  // NB:  This syntax is a GNU extension.
 
   extern template class basic_istream<char>;
   extern template istream& ws(istream&);
@@ -29956,14 +24988,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
+}
+# 854 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\istream" 2 3
+# 41 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iostream" 2 3
 
-} // namespace std
-# 859 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 2 3
-# 41 "/research/brg/install/bare-pkgs/x86_64-centos6/pkgs/xilinx-vivado-2015.2/Vivado_HLS/2015.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
+namespace std {
 
   /**
    *  @name Standard Stream Objects
@@ -29979,1559 +25008,556 @@ namespace std __attribute__ ((__visibility__ ("default")))
    *  linked to above.
   */
   //@{
-  extern istream cin; /// Linked to standard input
-  extern ostream cout; /// Linked to standard output
-  extern ostream cerr; /// Linked to standard error (unbuffered)
-  extern ostream clog; /// Linked to standard error (buffered)
+  extern istream cin; ///< Linked to standard input
+  extern ostream cout; ///< Linked to standard output
+  extern ostream cerr; ///< Linked to standard error (unbuffered)
+  extern ostream clog; ///< Linked to standard error (buffered)
 
 
-  extern wistream wcin; /// Linked to standard input
-  extern wostream wcout; /// Linked to standard output
-  extern wostream wcerr; /// Linked to standard error (unbuffered)
-  extern wostream wclog; /// Linked to standard error (buffered)
+  extern wistream wcin; ///< Linked to standard input
+  extern wostream wcout; ///< Linked to standard output
+  extern wostream wcerr; ///< Linked to standard error (unbuffered)
+  extern wostream wclog; ///< Linked to standard error (buffered)
 
   //@}
 
   // For construction of filebuffers for cout, cin, cerr, clog et. al.
   static ios_base::Init __ioinit;
 
-
-} // namespace
+}
 # 2 "neuralNetworkSynth.cpp" 2
 extern "C" {
 
-# 1 "/usr/include/math.h" 1 3 4
-/* Declarations for math functions.
-   Copyright (C) 1991-1993, 1995-1999, 2001, 2002, 2004, 2006
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/*
- *	ISO C99 Standard: 7.12 Mathematics	<math.h>
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
+# 10 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
 
 
+# 1 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+/**
+ * This file has no copyright assigned and is placed in the Public Domain.
+ * This file is part of the w64 mingw-runtime package.
+ * No warranty is given; refer to the file DISCLAIMER.PD within this package.
+ */
+# 12 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 2 3
 
 
+struct _exception;
+
+#pragma pack(push,_CRT_PACKING)
+# 55 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+/* See also float.h  */
 
 
+/* IEEE 754 classication */
+# 75 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
 extern "C" {
 
-/* Get machine-dependent HUGE_VAL value (returned on overflow).
-   On all IEEE754 machines, this is +Infinity.  */
 
 
-# 1 "/usr/include/bits/huge_val.h" 1 3 4
-/* `HUGE_VAL' constant for IEEE 754 machines (where it is infinity).
-   Used by <stdlib.h> and <math.h> functions for overflow.
-   Copyright (C) 1992, 1995, 1996, 1997, 1999, 2000, 2004
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-
-
-
-
-/* IEEE positive infinity (-HUGE_VAL is negative infinity).  */
-# 35 "/usr/include/math.h" 2 3 4
-
-# 1 "/usr/include/bits/huge_valf.h" 1 3 4
-/* `HUGE_VALF' constant for IEEE 754 machines (where it is infinity).
-   Used by <stdlib.h> and <math.h> functions for overflow.
-   Copyright (C) 1992, 1995, 1996, 1997, 1999, 2000, 2004
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-
-
-
-
-/* IEEE positive infinity (-HUGE_VAL is negative infinity).  */
-# 37 "/usr/include/math.h" 2 3 4
-# 1 "/usr/include/bits/huge_vall.h" 1 3 4
-/* Default `HUGE_VALL' constant.
-   Used by <stdlib.h> and <math.h> functions for overflow.
-   Copyright (C) 1992, 1996, 1997, 2004 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-# 38 "/usr/include/math.h" 2 3 4
-
-/* Get machine-dependent INFINITY value.  */
-
-
-# 1 "/usr/include/bits/inf.h" 1 3 4
-/* `INFINITY' constant for IEEE 754 machines.
-   Copyright (C) 2004 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-
-
-
-
-/* IEEE positive infinity.  */
-# 41 "/usr/include/math.h" 2 3 4
-
-/* Get machine-dependent NAN value (returned for some domain errors).  */
-
-
-# 1 "/usr/include/bits/nan.h" 1 3 4
-/* `NAN' constant for IEEE 754 machines.
-   Copyright (C) 1992,1996,1997,1999,2004,2006 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-
-
-
-
-
-/* IEEE Not A Number.  */
-# 44 "/usr/include/math.h" 2 3 4
-
-
-/* Get general and ISO C99 specific information.  */
-
-
-# 1 "/usr/include/bits/mathdef.h" 1 3 4
-/* Copyright (C) 2001, 2004 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-# 26 "/usr/include/bits/mathdef.h" 3 4
-# 1 "/usr/include/bits/wordsize.h" 1 3 4
-/* Determine the wordsize from the preprocessor defines.  */
-# 27 "/usr/include/bits/mathdef.h" 2 3 4
-
-
-/* The x86-64 architecture computes values with the precission of the
-   used type.  Similarly for -m32 -mfpmath=sse.  */
-typedef float float_t; /* `float' expressions are evaluated as `float'.  */
-typedef double double_t; /* `double' expressions are evaluated
-				   as `double'.  */
-# 44 "/usr/include/bits/mathdef.h" 3 4
-/* The values returned by `ilogb' for 0 and NaN respectively.  */
-# 48 "/usr/include/math.h" 2 3 4
-
-/* The file <bits/mathcalls.h> contains the prototypes for all the
-   actual math functions.  These macros are used for those prototypes,
-   so we can easily declare each function as both `name' and `__name',
-   and can declare the float versions `namef' and `__namef'.  */
-# 71 "/usr/include/math.h" 3 4
-# 1 "/usr/include/bits/mathcalls.h" 1 3 4
-/* Prototype declarations for math functions; helper file for <math.h>.
-   Copyright (C) 1996-2002, 2003, 2006 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/* NOTE: Because of the special way this file is used by <math.h>, this
-   file must NOT be protected from multiple inclusion as header files
-   usually are.
-
-   This file provides prototype declarations for the math functions.
-   Most functions are declared using the macro:
-
-   __MATHCALL (NAME,[_r], (ARGS...));
-
-   This means there is a function `NAME' returning `double' and a function
-   `NAMEf' returning `float'.  Each place `_Mdouble_' appears in the
-   prototype, that is actually `double' in the prototype for `NAME' and
-   `float' in the prototype for `NAMEf'.  Reentrant variant functions are
-   called `NAME_r' and `NAMEf_r'.
-
-   Functions returning other types like `int' are declared using the macro:
-
-   __MATHDECL (TYPE, NAME,[_r], (ARGS...));
-
-   This is just like __MATHCALL but for a function returning `TYPE'
-   instead of `_Mdouble_'.  In all of these cases, there is still
-   both a `NAME' and a `NAMEf' that takes `float' arguments.
-
-   Note that there must be no whitespace before the argument passed for
-   NAME, to make token pasting work with -traditional.  */
-
-
-
-
-
-
-/* Trigonometric functions.  */
-
-
-/* Arc cosine of X.  */
-extern double acos (double __x) throw (); extern double __acos (double __x) throw ();
-/* Arc sine of X.  */
-extern double asin (double __x) throw (); extern double __asin (double __x) throw ();
-/* Arc tangent of X.  */
-extern double atan (double __x) throw (); extern double __atan (double __x) throw ();
-/* Arc tangent of Y/X.  */
-extern double atan2 (double __y, double __x) throw (); extern double __atan2 (double __y, double __x) throw ();
-
-/* Cosine of X.  */
-extern double cos (double __x) throw (); extern double __cos (double __x) throw ();
-/* Sine of X.  */
-extern double sin (double __x) throw (); extern double __sin (double __x) throw ();
-/* Tangent of X.  */
-extern double tan (double __x) throw (); extern double __tan (double __x) throw ();
-
-/* Hyperbolic functions.  */
-
-/* Hyperbolic cosine of X.  */
-extern double cosh (double __x) throw (); extern double __cosh (double __x) throw ();
-/* Hyperbolic sine of X.  */
-extern double sinh (double __x) throw (); extern double __sinh (double __x) throw ();
-/* Hyperbolic tangent of X.  */
-extern double tanh (double __x) throw (); extern double __tanh (double __x) throw ();
-
-
-
-/* Cosine and sine of X.  */
-extern void sincos (double __x, double *__sinx, double *__cosx) throw (); extern void __sincos (double __x, double *__sinx, double *__cosx) throw ();
-
-
-
-
-
-/* Hyperbolic arc cosine of X.  */
-extern double acosh (double __x) throw (); extern double __acosh (double __x) throw ();
-/* Hyperbolic arc sine of X.  */
-extern double asinh (double __x) throw (); extern double __asinh (double __x) throw ();
-/* Hyperbolic arc tangent of X.  */
-extern double atanh (double __x) throw (); extern double __atanh (double __x) throw ();
-
-
-
-/* Exponential and logarithmic functions.  */
-
-
-/* Exponential function of X.  */
-extern double exp (double __x) throw (); extern double __exp (double __x) throw ();
-
-/* Break VALUE into a normalized fraction and an integral power of 2.  */
-extern double frexp (double __x, int *__exponent) throw (); extern double __frexp (double __x, int *__exponent) throw ();
-
-/* X times (two to the EXP power).  */
-extern double ldexp (double __x, int __exponent) throw (); extern double __ldexp (double __x, int __exponent) throw ();
-
-/* Natural logarithm of X.  */
-extern double log (double __x) throw (); extern double __log (double __x) throw ();
-
-/* Base-ten logarithm of X.  */
-extern double log10 (double __x) throw (); extern double __log10 (double __x) throw ();
-
-/* Break VALUE into integral and fractional parts.  */
-extern double modf (double __x, double *__iptr) throw (); extern double __modf (double __x, double *__iptr) throw ();
-
-
-
-/* A function missing in all standards: compute exponent to base ten.  */
-extern double exp10 (double __x) throw (); extern double __exp10 (double __x) throw ();
-/* Another name occasionally used.  */
-extern double pow10 (double __x) throw (); extern double __pow10 (double __x) throw ();
-
-
-
-
-/* Return exp(X) - 1.  */
-extern double expm1 (double __x) throw (); extern double __expm1 (double __x) throw ();
-
-/* Return log(1 + X).  */
-extern double log1p (double __x) throw (); extern double __log1p (double __x) throw ();
-
-/* Return the base 2 signed integral exponent of X.  */
-extern double logb (double __x) throw (); extern double __logb (double __x) throw ();
-
-
-
-
-
-/* Compute base-2 exponential of X.  */
-extern double exp2 (double __x) throw (); extern double __exp2 (double __x) throw ();
-
-/* Compute base-2 logarithm of X.  */
-extern double log2 (double __x) throw (); extern double __log2 (double __x) throw ();
-
-
-
-
-/* Power functions.  */
-
-
-/* Return X to the Y power.  */
-extern double pow (double __x, double __y) throw (); extern double __pow (double __x, double __y) throw ();
-
-/* Return the square root of X.  */
-extern double sqrt (double __x) throw (); extern double __sqrt (double __x) throw ();
-
-
-
-
-/* Return `sqrt(X*X + Y*Y)'.  */
-extern double hypot (double __x, double __y) throw (); extern double __hypot (double __x, double __y) throw ();
-
-
-
-
-
-/* Return the cube root of X.  */
-extern double cbrt (double __x) throw (); extern double __cbrt (double __x) throw ();
-
-
-
-
-/* Nearest integer, absolute value, and remainder functions.  */
-
-
-/* Smallest integral value not less than X.  */
-extern double ceil (double __x) throw () __attribute__ ((__const__)); extern double __ceil (double __x) throw () __attribute__ ((__const__));
-
-/* Absolute value of X.  */
-extern double fabs (double __x) throw () __attribute__ ((__const__)); extern double __fabs (double __x) throw () __attribute__ ((__const__));
-
-/* Largest integer not greater than X.  */
-extern double floor (double __x) throw () __attribute__ ((__const__)); extern double __floor (double __x) throw () __attribute__ ((__const__));
-
-/* Floating-point modulo remainder of X/Y.  */
-extern double fmod (double __x, double __y) throw (); extern double __fmod (double __x, double __y) throw ();
-
-
-/* Return 0 if VALUE is finite or NaN, +1 if it
-   is +Infinity, -1 if it is -Infinity.  */
-extern int __isinf (double __value) throw () __attribute__ ((__const__));
-
-/* Return nonzero if VALUE is finite and not NaN.  */
-extern int __finite (double __value) throw () __attribute__ ((__const__));
-
-
-
-/* Return 0 if VALUE is finite or NaN, +1 if it
-   is +Infinity, -1 if it is -Infinity.  */
-extern int isinf (double __value) throw () __attribute__ ((__const__));
-
-/* Return nonzero if VALUE is finite and not NaN.  */
-extern int finite (double __value) throw () __attribute__ ((__const__));
-
-/* Return the remainder of X/Y.  */
-extern double drem (double __x, double __y) throw (); extern double __drem (double __x, double __y) throw ();
-
-
-/* Return the fractional part of X after dividing out `ilogb (X)'.  */
-extern double significand (double __x) throw (); extern double __significand (double __x) throw ();
-
-
-
-
-/* Return X with its signed changed to Y's.  */
-extern double copysign (double __x, double __y) throw () __attribute__ ((__const__)); extern double __copysign (double __x, double __y) throw () __attribute__ ((__const__));
-
-
-
-
-
-/* Return representation of NaN for double type.  */
-extern double nan (__const char *__tagb) throw () __attribute__ ((__const__)); extern double __nan (__const char *__tagb) throw () __attribute__ ((__const__));
-
-
-
-
-/* Return nonzero if VALUE is not a number.  */
-extern int __isnan (double __value) throw () __attribute__ ((__const__));
-
-
-/* Return nonzero if VALUE is not a number.  */
-extern int isnan (double __value) throw () __attribute__ ((__const__));
-
-/* Bessel functions.  */
-extern double j0 (double) throw (); extern double __j0 (double) throw ();
-extern double j1 (double) throw (); extern double __j1 (double) throw ();
-extern double jn (int, double) throw (); extern double __jn (int, double) throw ();
-extern double y0 (double) throw (); extern double __y0 (double) throw ();
-extern double y1 (double) throw (); extern double __y1 (double) throw ();
-extern double yn (int, double) throw (); extern double __yn (int, double) throw ();
-
-
-
-
-
-/* Error and gamma functions.  */
-extern double erf (double) throw (); extern double __erf (double) throw ();
-extern double erfc (double) throw (); extern double __erfc (double) throw ();
-extern double lgamma (double) throw (); extern double __lgamma (double) throw ();
-
-
-
-
-
-/* True gamma function.  */
-extern double tgamma (double) throw (); extern double __tgamma (double) throw ();
-
-
-
-
-/* Obsolete alias for `lgamma'.  */
-extern double gamma (double) throw (); extern double __gamma (double) throw ();
-
-
-
-/* Reentrant version of lgamma.  This function uses the global variable
-   `signgam'.  The reentrant version instead takes a pointer and stores
-   the value through it.  */
-extern double lgamma_r (double, int *__signgamp) throw (); extern double __lgamma_r (double, int *__signgamp) throw ();
-
-
-
-
-
-/* Return the integer nearest X in the direction of the
-   prevailing rounding mode.  */
-extern double rint (double __x) throw (); extern double __rint (double __x) throw ();
-
-/* Return X + epsilon if X < Y, X - epsilon if X > Y.  */
-extern double nextafter (double __x, double __y) throw () __attribute__ ((__const__)); extern double __nextafter (double __x, double __y) throw () __attribute__ ((__const__));
-
-extern double nexttoward (double __x, long double __y) throw () __attribute__ ((__const__)); extern double __nexttoward (double __x, long double __y) throw () __attribute__ ((__const__));
-
-
-/* Return the remainder of integer divison X / Y with infinite precision.  */
-extern double remainder (double __x, double __y) throw (); extern double __remainder (double __x, double __y) throw ();
-
-
-/* Return X times (2 to the Nth power).  */
-extern double scalbn (double __x, int __n) throw (); extern double __scalbn (double __x, int __n) throw ();
-
-
-/* Return the binary exponent of X, which must be nonzero.  */
-extern int ilogb (double __x) throw (); extern int __ilogb (double __x) throw ();
-
-
-
-/* Return X times (2 to the Nth power).  */
-extern double scalbln (double __x, long int __n) throw (); extern double __scalbln (double __x, long int __n) throw ();
-
-/* Round X to integral value in floating-point format using current
-   rounding direction, but do not raise inexact exception.  */
-extern double nearbyint (double __x) throw (); extern double __nearbyint (double __x) throw ();
-
-/* Round X to nearest integral value, rounding halfway cases away from
-   zero.  */
-extern double round (double __x) throw () __attribute__ ((__const__)); extern double __round (double __x) throw () __attribute__ ((__const__));
-
-/* Round X to the integral value in floating-point format nearest but
-   not larger in magnitude.  */
-extern double trunc (double __x) throw () __attribute__ ((__const__)); extern double __trunc (double __x) throw () __attribute__ ((__const__));
-
-/* Compute remainder of X and Y and put in *QUO a value with sign of x/y
-   and magnitude congruent `mod 2^n' to the magnitude of the integral
-   quotient x/y, with n >= 3.  */
-extern double remquo (double __x, double __y, int *__quo) throw (); extern double __remquo (double __x, double __y, int *__quo) throw ();
-
-
-/* Conversion functions.  */
-
-/* Round X to nearest integral value according to current rounding
-   direction.  */
-extern long int lrint (double __x) throw (); extern long int __lrint (double __x) throw ();
-extern long long int llrint (double __x) throw (); extern long long int __llrint (double __x) throw ();
-
-/* Round X to nearest integral value, rounding halfway cases away from
-   zero.  */
-extern long int lround (double __x) throw (); extern long int __lround (double __x) throw ();
-extern long long int llround (double __x) throw (); extern long long int __llround (double __x) throw ();
-
-
-/* Return positive difference between X and Y.  */
-extern double fdim (double __x, double __y) throw (); extern double __fdim (double __x, double __y) throw ();
-
-/* Return maximum numeric value from X and Y.  */
-extern double fmax (double __x, double __y) throw (); extern double __fmax (double __x, double __y) throw ();
-
-/* Return minimum numeric value from X and Y.  */
-extern double fmin (double __x, double __y) throw (); extern double __fmin (double __x, double __y) throw ();
-
-
-/* Classify given number.  */
-extern int __fpclassify (double __value) throw ()
-     __attribute__ ((__const__));
-
-/* Test for negative number.  */
-extern int __signbit (double __value) throw ()
-     __attribute__ ((__const__));
-
-
-/* Multiply-add function computed as a ternary operation.  */
-extern double fma (double __x, double __y, double __z) throw (); extern double __fma (double __x, double __y, double __z) throw ();
-
-
-
-
-
-
-
-/* Return X times (2 to the Nth power).  */
-extern double scalb (double __x, double __n) throw (); extern double __scalb (double __x, double __n) throw ();
-# 72 "/usr/include/math.h" 2 3 4
-
-
-
-
-
-
-
-
-/* Include the file of declarations again, this time using `float'
-   instead of `double' and appending f to each function name.  */
-# 94 "/usr/include/math.h" 3 4
-# 1 "/usr/include/bits/mathcalls.h" 1 3 4
-/* Prototype declarations for math functions; helper file for <math.h>.
-   Copyright (C) 1996-2002, 2003, 2006 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/* NOTE: Because of the special way this file is used by <math.h>, this
-   file must NOT be protected from multiple inclusion as header files
-   usually are.
-
-   This file provides prototype declarations for the math functions.
-   Most functions are declared using the macro:
-
-   __MATHCALL (NAME,[_r], (ARGS...));
-
-   This means there is a function `NAME' returning `double' and a function
-   `NAMEf' returning `float'.  Each place `_Mdouble_' appears in the
-   prototype, that is actually `double' in the prototype for `NAME' and
-   `float' in the prototype for `NAMEf'.  Reentrant variant functions are
-   called `NAME_r' and `NAMEf_r'.
-
-   Functions returning other types like `int' are declared using the macro:
-
-   __MATHDECL (TYPE, NAME,[_r], (ARGS...));
-
-   This is just like __MATHCALL but for a function returning `TYPE'
-   instead of `_Mdouble_'.  In all of these cases, there is still
-   both a `NAME' and a `NAMEf' that takes `float' arguments.
-
-   Note that there must be no whitespace before the argument passed for
-   NAME, to make token pasting work with -traditional.  */
-
-
-
-
-
-
-/* Trigonometric functions.  */
-
-
-/* Arc cosine of X.  */
-extern float acosf (float __x) throw (); extern float __acosf (float __x) throw ();
-/* Arc sine of X.  */
-extern float asinf (float __x) throw (); extern float __asinf (float __x) throw ();
-/* Arc tangent of X.  */
-extern float atanf (float __x) throw (); extern float __atanf (float __x) throw ();
-/* Arc tangent of Y/X.  */
-extern float atan2f (float __y, float __x) throw (); extern float __atan2f (float __y, float __x) throw ();
-
-/* Cosine of X.  */
-extern float cosf (float __x) throw (); extern float __cosf (float __x) throw ();
-/* Sine of X.  */
-extern float sinf (float __x) throw (); extern float __sinf (float __x) throw ();
-/* Tangent of X.  */
-extern float tanf (float __x) throw (); extern float __tanf (float __x) throw ();
-
-/* Hyperbolic functions.  */
-
-/* Hyperbolic cosine of X.  */
-extern float coshf (float __x) throw (); extern float __coshf (float __x) throw ();
-/* Hyperbolic sine of X.  */
-extern float sinhf (float __x) throw (); extern float __sinhf (float __x) throw ();
-/* Hyperbolic tangent of X.  */
-extern float tanhf (float __x) throw (); extern float __tanhf (float __x) throw ();
-
-
-
-/* Cosine and sine of X.  */
-extern void sincosf (float __x, float *__sinx, float *__cosx) throw (); extern void __sincosf (float __x, float *__sinx, float *__cosx) throw ();
-
-
-
-
-
-/* Hyperbolic arc cosine of X.  */
-extern float acoshf (float __x) throw (); extern float __acoshf (float __x) throw ();
-/* Hyperbolic arc sine of X.  */
-extern float asinhf (float __x) throw (); extern float __asinhf (float __x) throw ();
-/* Hyperbolic arc tangent of X.  */
-extern float atanhf (float __x) throw (); extern float __atanhf (float __x) throw ();
-
-
-
-/* Exponential and logarithmic functions.  */
-
-
-/* Exponential function of X.  */
-extern float expf (float __x) throw (); extern float __expf (float __x) throw ();
-
-/* Break VALUE into a normalized fraction and an integral power of 2.  */
-extern float frexpf (float __x, int *__exponent) throw (); extern float __frexpf (float __x, int *__exponent) throw ();
-
-/* X times (two to the EXP power).  */
-extern float ldexpf (float __x, int __exponent) throw (); extern float __ldexpf (float __x, int __exponent) throw ();
-
-/* Natural logarithm of X.  */
-extern float logf (float __x) throw (); extern float __logf (float __x) throw ();
-
-/* Base-ten logarithm of X.  */
-extern float log10f (float __x) throw (); extern float __log10f (float __x) throw ();
-
-/* Break VALUE into integral and fractional parts.  */
-extern float modff (float __x, float *__iptr) throw (); extern float __modff (float __x, float *__iptr) throw ();
-
-
-
-/* A function missing in all standards: compute exponent to base ten.  */
-extern float exp10f (float __x) throw (); extern float __exp10f (float __x) throw ();
-/* Another name occasionally used.  */
-extern float pow10f (float __x) throw (); extern float __pow10f (float __x) throw ();
-
-
-
-
-/* Return exp(X) - 1.  */
-extern float expm1f (float __x) throw (); extern float __expm1f (float __x) throw ();
-
-/* Return log(1 + X).  */
-extern float log1pf (float __x) throw (); extern float __log1pf (float __x) throw ();
-
-/* Return the base 2 signed integral exponent of X.  */
-extern float logbf (float __x) throw (); extern float __logbf (float __x) throw ();
-
-
-
-
-
-/* Compute base-2 exponential of X.  */
-extern float exp2f (float __x) throw (); extern float __exp2f (float __x) throw ();
-
-/* Compute base-2 logarithm of X.  */
-extern float log2f (float __x) throw (); extern float __log2f (float __x) throw ();
-
-
-
-
-/* Power functions.  */
-
-
-/* Return X to the Y power.  */
-extern float powf (float __x, float __y) throw (); extern float __powf (float __x, float __y) throw ();
-
-/* Return the square root of X.  */
-extern float sqrtf (float __x) throw (); extern float __sqrtf (float __x) throw ();
-
-
-
-
-/* Return `sqrt(X*X + Y*Y)'.  */
-extern float hypotf (float __x, float __y) throw (); extern float __hypotf (float __x, float __y) throw ();
-
-
-
-
-
-/* Return the cube root of X.  */
-extern float cbrtf (float __x) throw (); extern float __cbrtf (float __x) throw ();
-
-
-
-
-/* Nearest integer, absolute value, and remainder functions.  */
-
-
-/* Smallest integral value not less than X.  */
-extern float ceilf (float __x) throw () __attribute__ ((__const__)); extern float __ceilf (float __x) throw () __attribute__ ((__const__));
-
-/* Absolute value of X.  */
-extern float fabsf (float __x) throw () __attribute__ ((__const__)); extern float __fabsf (float __x) throw () __attribute__ ((__const__));
-
-/* Largest integer not greater than X.  */
-extern float floorf (float __x) throw () __attribute__ ((__const__)); extern float __floorf (float __x) throw () __attribute__ ((__const__));
-
-/* Floating-point modulo remainder of X/Y.  */
-extern float fmodf (float __x, float __y) throw (); extern float __fmodf (float __x, float __y) throw ();
-
-
-/* Return 0 if VALUE is finite or NaN, +1 if it
-   is +Infinity, -1 if it is -Infinity.  */
-extern int __isinff (float __value) throw () __attribute__ ((__const__));
-
-/* Return nonzero if VALUE is finite and not NaN.  */
-extern int __finitef (float __value) throw () __attribute__ ((__const__));
-
-
-
-/* Return 0 if VALUE is finite or NaN, +1 if it
-   is +Infinity, -1 if it is -Infinity.  */
-extern int isinff (float __value) throw () __attribute__ ((__const__));
-
-/* Return nonzero if VALUE is finite and not NaN.  */
-extern int finitef (float __value) throw () __attribute__ ((__const__));
-
-/* Return the remainder of X/Y.  */
-extern float dremf (float __x, float __y) throw (); extern float __dremf (float __x, float __y) throw ();
-
-
-/* Return the fractional part of X after dividing out `ilogb (X)'.  */
-extern float significandf (float __x) throw (); extern float __significandf (float __x) throw ();
-
-
-
-
-/* Return X with its signed changed to Y's.  */
-extern float copysignf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __copysignf (float __x, float __y) throw () __attribute__ ((__const__));
-
-
-
-
-
-/* Return representation of NaN for double type.  */
-extern float nanf (__const char *__tagb) throw () __attribute__ ((__const__)); extern float __nanf (__const char *__tagb) throw () __attribute__ ((__const__));
-
-
-
-
-/* Return nonzero if VALUE is not a number.  */
-extern int __isnanf (float __value) throw () __attribute__ ((__const__));
-
-
-/* Return nonzero if VALUE is not a number.  */
-extern int isnanf (float __value) throw () __attribute__ ((__const__));
-
-/* Bessel functions.  */
-extern float j0f (float) throw (); extern float __j0f (float) throw ();
-extern float j1f (float) throw (); extern float __j1f (float) throw ();
-extern float jnf (int, float) throw (); extern float __jnf (int, float) throw ();
-extern float y0f (float) throw (); extern float __y0f (float) throw ();
-extern float y1f (float) throw (); extern float __y1f (float) throw ();
-extern float ynf (int, float) throw (); extern float __ynf (int, float) throw ();
-
-
-
-
-
-/* Error and gamma functions.  */
-extern float erff (float) throw (); extern float __erff (float) throw ();
-extern float erfcf (float) throw (); extern float __erfcf (float) throw ();
-extern float lgammaf (float) throw (); extern float __lgammaf (float) throw ();
-
-
-
-
-
-/* True gamma function.  */
-extern float tgammaf (float) throw (); extern float __tgammaf (float) throw ();
-
-
-
-
-/* Obsolete alias for `lgamma'.  */
-extern float gammaf (float) throw (); extern float __gammaf (float) throw ();
-
-
-
-/* Reentrant version of lgamma.  This function uses the global variable
-   `signgam'.  The reentrant version instead takes a pointer and stores
-   the value through it.  */
-extern float lgammaf_r (float, int *__signgamp) throw (); extern float __lgammaf_r (float, int *__signgamp) throw ();
-
-
-
-
-
-/* Return the integer nearest X in the direction of the
-   prevailing rounding mode.  */
-extern float rintf (float __x) throw (); extern float __rintf (float __x) throw ();
-
-/* Return X + epsilon if X < Y, X - epsilon if X > Y.  */
-extern float nextafterf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __nextafterf (float __x, float __y) throw () __attribute__ ((__const__));
-
-extern float nexttowardf (float __x, long double __y) throw () __attribute__ ((__const__)); extern float __nexttowardf (float __x, long double __y) throw () __attribute__ ((__const__));
-
-
-/* Return the remainder of integer divison X / Y with infinite precision.  */
-extern float remainderf (float __x, float __y) throw (); extern float __remainderf (float __x, float __y) throw ();
-
-
-/* Return X times (2 to the Nth power).  */
-extern float scalbnf (float __x, int __n) throw (); extern float __scalbnf (float __x, int __n) throw ();
-
-
-/* Return the binary exponent of X, which must be nonzero.  */
-extern int ilogbf (float __x) throw (); extern int __ilogbf (float __x) throw ();
-
-
-
-/* Return X times (2 to the Nth power).  */
-extern float scalblnf (float __x, long int __n) throw (); extern float __scalblnf (float __x, long int __n) throw ();
-
-/* Round X to integral value in floating-point format using current
-   rounding direction, but do not raise inexact exception.  */
-extern float nearbyintf (float __x) throw (); extern float __nearbyintf (float __x) throw ();
-
-/* Round X to nearest integral value, rounding halfway cases away from
-   zero.  */
-extern float roundf (float __x) throw () __attribute__ ((__const__)); extern float __roundf (float __x) throw () __attribute__ ((__const__));
-
-/* Round X to the integral value in floating-point format nearest but
-   not larger in magnitude.  */
-extern float truncf (float __x) throw () __attribute__ ((__const__)); extern float __truncf (float __x) throw () __attribute__ ((__const__));
-
-/* Compute remainder of X and Y and put in *QUO a value with sign of x/y
-   and magnitude congruent `mod 2^n' to the magnitude of the integral
-   quotient x/y, with n >= 3.  */
-extern float remquof (float __x, float __y, int *__quo) throw (); extern float __remquof (float __x, float __y, int *__quo) throw ();
-
-
-/* Conversion functions.  */
-
-/* Round X to nearest integral value according to current rounding
-   direction.  */
-extern long int lrintf (float __x) throw (); extern long int __lrintf (float __x) throw ();
-extern long long int llrintf (float __x) throw (); extern long long int __llrintf (float __x) throw ();
-
-/* Round X to nearest integral value, rounding halfway cases away from
-   zero.  */
-extern long int lroundf (float __x) throw (); extern long int __lroundf (float __x) throw ();
-extern long long int llroundf (float __x) throw (); extern long long int __llroundf (float __x) throw ();
-
-
-/* Return positive difference between X and Y.  */
-extern float fdimf (float __x, float __y) throw (); extern float __fdimf (float __x, float __y) throw ();
-
-/* Return maximum numeric value from X and Y.  */
-extern float fmaxf (float __x, float __y) throw (); extern float __fmaxf (float __x, float __y) throw ();
-
-/* Return minimum numeric value from X and Y.  */
-extern float fminf (float __x, float __y) throw (); extern float __fminf (float __x, float __y) throw ();
-
-
-/* Classify given number.  */
-extern int __fpclassifyf (float __value) throw ()
-     __attribute__ ((__const__));
-
-/* Test for negative number.  */
-extern int __signbitf (float __value) throw ()
-     __attribute__ ((__const__));
-
-
-/* Multiply-add function computed as a ternary operation.  */
-extern float fmaf (float __x, float __y, float __z) throw (); extern float __fmaf (float __x, float __y, float __z) throw ();
-
-
-
-
-
-
-
-/* Return X times (2 to the Nth power).  */
-extern float scalbf (float __x, float __n) throw (); extern float __scalbf (float __x, float __n) throw ();
-# 95 "/usr/include/math.h" 2 3 4
-# 141 "/usr/include/math.h" 3 4
-# 1 "/usr/include/bits/mathcalls.h" 1 3 4
-/* Prototype declarations for math functions; helper file for <math.h>.
-   Copyright (C) 1996-2002, 2003, 2006 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, write to the Free
-   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-   02111-1307 USA.  */
-
-/* NOTE: Because of the special way this file is used by <math.h>, this
-   file must NOT be protected from multiple inclusion as header files
-   usually are.
-
-   This file provides prototype declarations for the math functions.
-   Most functions are declared using the macro:
-
-   __MATHCALL (NAME,[_r], (ARGS...));
-
-   This means there is a function `NAME' returning `double' and a function
-   `NAMEf' returning `float'.  Each place `_Mdouble_' appears in the
-   prototype, that is actually `double' in the prototype for `NAME' and
-   `float' in the prototype for `NAMEf'.  Reentrant variant functions are
-   called `NAME_r' and `NAMEf_r'.
-
-   Functions returning other types like `int' are declared using the macro:
-
-   __MATHDECL (TYPE, NAME,[_r], (ARGS...));
-
-   This is just like __MATHCALL but for a function returning `TYPE'
-   instead of `_Mdouble_'.  In all of these cases, there is still
-   both a `NAME' and a `NAMEf' that takes `float' arguments.
-
-   Note that there must be no whitespace before the argument passed for
-   NAME, to make token pasting work with -traditional.  */
-
-
-
-
-
-
-/* Trigonometric functions.  */
-
-
-/* Arc cosine of X.  */
-extern long double acosl (long double __x) throw (); extern long double __acosl (long double __x) throw ();
-/* Arc sine of X.  */
-extern long double asinl (long double __x) throw (); extern long double __asinl (long double __x) throw ();
-/* Arc tangent of X.  */
-extern long double atanl (long double __x) throw (); extern long double __atanl (long double __x) throw ();
-/* Arc tangent of Y/X.  */
-extern long double atan2l (long double __y, long double __x) throw (); extern long double __atan2l (long double __y, long double __x) throw ();
-
-/* Cosine of X.  */
-extern long double cosl (long double __x) throw (); extern long double __cosl (long double __x) throw ();
-/* Sine of X.  */
-extern long double sinl (long double __x) throw (); extern long double __sinl (long double __x) throw ();
-/* Tangent of X.  */
-extern long double tanl (long double __x) throw (); extern long double __tanl (long double __x) throw ();
-
-/* Hyperbolic functions.  */
-
-/* Hyperbolic cosine of X.  */
-extern long double coshl (long double __x) throw (); extern long double __coshl (long double __x) throw ();
-/* Hyperbolic sine of X.  */
-extern long double sinhl (long double __x) throw (); extern long double __sinhl (long double __x) throw ();
-/* Hyperbolic tangent of X.  */
-extern long double tanhl (long double __x) throw (); extern long double __tanhl (long double __x) throw ();
-
-
-
-/* Cosine and sine of X.  */
-extern void sincosl (long double __x, long double *__sinx, long double *__cosx) throw (); extern void __sincosl (long double __x, long double *__sinx, long double *__cosx) throw ();
-
-
-
-
-
-/* Hyperbolic arc cosine of X.  */
-extern long double acoshl (long double __x) throw (); extern long double __acoshl (long double __x) throw ();
-/* Hyperbolic arc sine of X.  */
-extern long double asinhl (long double __x) throw (); extern long double __asinhl (long double __x) throw ();
-/* Hyperbolic arc tangent of X.  */
-extern long double atanhl (long double __x) throw (); extern long double __atanhl (long double __x) throw ();
-
-
-
-/* Exponential and logarithmic functions.  */
-
-
-/* Exponential function of X.  */
-extern long double expl (long double __x) throw (); extern long double __expl (long double __x) throw ();
-
-/* Break VALUE into a normalized fraction and an integral power of 2.  */
-extern long double frexpl (long double __x, int *__exponent) throw (); extern long double __frexpl (long double __x, int *__exponent) throw ();
-
-/* X times (two to the EXP power).  */
-extern long double ldexpl (long double __x, int __exponent) throw (); extern long double __ldexpl (long double __x, int __exponent) throw ();
-
-/* Natural logarithm of X.  */
-extern long double logl (long double __x) throw (); extern long double __logl (long double __x) throw ();
-
-/* Base-ten logarithm of X.  */
-extern long double log10l (long double __x) throw (); extern long double __log10l (long double __x) throw ();
-
-/* Break VALUE into integral and fractional parts.  */
-extern long double modfl (long double __x, long double *__iptr) throw (); extern long double __modfl (long double __x, long double *__iptr) throw ();
-
-
-
-/* A function missing in all standards: compute exponent to base ten.  */
-extern long double exp10l (long double __x) throw (); extern long double __exp10l (long double __x) throw ();
-/* Another name occasionally used.  */
-extern long double pow10l (long double __x) throw (); extern long double __pow10l (long double __x) throw ();
-
-
-
-
-/* Return exp(X) - 1.  */
-extern long double expm1l (long double __x) throw (); extern long double __expm1l (long double __x) throw ();
-
-/* Return log(1 + X).  */
-extern long double log1pl (long double __x) throw (); extern long double __log1pl (long double __x) throw ();
-
-/* Return the base 2 signed integral exponent of X.  */
-extern long double logbl (long double __x) throw (); extern long double __logbl (long double __x) throw ();
-
-
-
-
-
-/* Compute base-2 exponential of X.  */
-extern long double exp2l (long double __x) throw (); extern long double __exp2l (long double __x) throw ();
-
-/* Compute base-2 logarithm of X.  */
-extern long double log2l (long double __x) throw (); extern long double __log2l (long double __x) throw ();
-
-
-
-
-/* Power functions.  */
-
-
-/* Return X to the Y power.  */
-extern long double powl (long double __x, long double __y) throw (); extern long double __powl (long double __x, long double __y) throw ();
-
-/* Return the square root of X.  */
-extern long double sqrtl (long double __x) throw (); extern long double __sqrtl (long double __x) throw ();
-
-
-
-
-/* Return `sqrt(X*X + Y*Y)'.  */
-extern long double hypotl (long double __x, long double __y) throw (); extern long double __hypotl (long double __x, long double __y) throw ();
-
-
-
-
-
-/* Return the cube root of X.  */
-extern long double cbrtl (long double __x) throw (); extern long double __cbrtl (long double __x) throw ();
-
-
-
-
-/* Nearest integer, absolute value, and remainder functions.  */
-
-
-/* Smallest integral value not less than X.  */
-extern long double ceill (long double __x) throw () __attribute__ ((__const__)); extern long double __ceill (long double __x) throw () __attribute__ ((__const__));
-
-/* Absolute value of X.  */
-extern long double fabsl (long double __x) throw () __attribute__ ((__const__)); extern long double __fabsl (long double __x) throw () __attribute__ ((__const__));
-
-/* Largest integer not greater than X.  */
-extern long double floorl (long double __x) throw () __attribute__ ((__const__)); extern long double __floorl (long double __x) throw () __attribute__ ((__const__));
-
-/* Floating-point modulo remainder of X/Y.  */
-extern long double fmodl (long double __x, long double __y) throw (); extern long double __fmodl (long double __x, long double __y) throw ();
-
-
-/* Return 0 if VALUE is finite or NaN, +1 if it
-   is +Infinity, -1 if it is -Infinity.  */
-extern int __isinfl (long double __value) throw () __attribute__ ((__const__));
-
-/* Return nonzero if VALUE is finite and not NaN.  */
-extern int __finitel (long double __value) throw () __attribute__ ((__const__));
-
-
-
-/* Return 0 if VALUE is finite or NaN, +1 if it
-   is +Infinity, -1 if it is -Infinity.  */
-extern int isinfl (long double __value) throw () __attribute__ ((__const__));
-
-/* Return nonzero if VALUE is finite and not NaN.  */
-extern int finitel (long double __value) throw () __attribute__ ((__const__));
-
-/* Return the remainder of X/Y.  */
-extern long double dreml (long double __x, long double __y) throw (); extern long double __dreml (long double __x, long double __y) throw ();
-
-
-/* Return the fractional part of X after dividing out `ilogb (X)'.  */
-extern long double significandl (long double __x) throw (); extern long double __significandl (long double __x) throw ();
-
-
-
-
-/* Return X with its signed changed to Y's.  */
-extern long double copysignl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __copysignl (long double __x, long double __y) throw () __attribute__ ((__const__));
-
-
-
-
-
-/* Return representation of NaN for double type.  */
-extern long double nanl (__const char *__tagb) throw () __attribute__ ((__const__)); extern long double __nanl (__const char *__tagb) throw () __attribute__ ((__const__));
-
-
-
-
-/* Return nonzero if VALUE is not a number.  */
-extern int __isnanl (long double __value) throw () __attribute__ ((__const__));
-
-
-/* Return nonzero if VALUE is not a number.  */
-extern int isnanl (long double __value) throw () __attribute__ ((__const__));
-
-/* Bessel functions.  */
-extern long double j0l (long double) throw (); extern long double __j0l (long double) throw ();
-extern long double j1l (long double) throw (); extern long double __j1l (long double) throw ();
-extern long double jnl (int, long double) throw (); extern long double __jnl (int, long double) throw ();
-extern long double y0l (long double) throw (); extern long double __y0l (long double) throw ();
-extern long double y1l (long double) throw (); extern long double __y1l (long double) throw ();
-extern long double ynl (int, long double) throw (); extern long double __ynl (int, long double) throw ();
-
-
-
-
-
-/* Error and gamma functions.  */
-extern long double erfl (long double) throw (); extern long double __erfl (long double) throw ();
-extern long double erfcl (long double) throw (); extern long double __erfcl (long double) throw ();
-extern long double lgammal (long double) throw (); extern long double __lgammal (long double) throw ();
-
-
-
-
-
-/* True gamma function.  */
-extern long double tgammal (long double) throw (); extern long double __tgammal (long double) throw ();
-
-
-
-
-/* Obsolete alias for `lgamma'.  */
-extern long double gammal (long double) throw (); extern long double __gammal (long double) throw ();
-
-
-
-/* Reentrant version of lgamma.  This function uses the global variable
-   `signgam'.  The reentrant version instead takes a pointer and stores
-   the value through it.  */
-extern long double lgammal_r (long double, int *__signgamp) throw (); extern long double __lgammal_r (long double, int *__signgamp) throw ();
-
-
-
-
-
-/* Return the integer nearest X in the direction of the
-   prevailing rounding mode.  */
-extern long double rintl (long double __x) throw (); extern long double __rintl (long double __x) throw ();
-
-/* Return X + epsilon if X < Y, X - epsilon if X > Y.  */
-extern long double nextafterl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __nextafterl (long double __x, long double __y) throw () __attribute__ ((__const__));
-
-extern long double nexttowardl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __nexttowardl (long double __x, long double __y) throw () __attribute__ ((__const__));
-
-
-/* Return the remainder of integer divison X / Y with infinite precision.  */
-extern long double remainderl (long double __x, long double __y) throw (); extern long double __remainderl (long double __x, long double __y) throw ();
-
-
-/* Return X times (2 to the Nth power).  */
-extern long double scalbnl (long double __x, int __n) throw (); extern long double __scalbnl (long double __x, int __n) throw ();
-
-
-/* Return the binary exponent of X, which must be nonzero.  */
-extern int ilogbl (long double __x) throw (); extern int __ilogbl (long double __x) throw ();
-
-
-
-/* Return X times (2 to the Nth power).  */
-extern long double scalblnl (long double __x, long int __n) throw (); extern long double __scalblnl (long double __x, long int __n) throw ();
-
-/* Round X to integral value in floating-point format using current
-   rounding direction, but do not raise inexact exception.  */
-extern long double nearbyintl (long double __x) throw (); extern long double __nearbyintl (long double __x) throw ();
-
-/* Round X to nearest integral value, rounding halfway cases away from
-   zero.  */
-extern long double roundl (long double __x) throw () __attribute__ ((__const__)); extern long double __roundl (long double __x) throw () __attribute__ ((__const__));
-
-/* Round X to the integral value in floating-point format nearest but
-   not larger in magnitude.  */
-extern long double truncl (long double __x) throw () __attribute__ ((__const__)); extern long double __truncl (long double __x) throw () __attribute__ ((__const__));
-
-/* Compute remainder of X and Y and put in *QUO a value with sign of x/y
-   and magnitude congruent `mod 2^n' to the magnitude of the integral
-   quotient x/y, with n >= 3.  */
-extern long double remquol (long double __x, long double __y, int *__quo) throw (); extern long double __remquol (long double __x, long double __y, int *__quo) throw ();
-
-
-/* Conversion functions.  */
-
-/* Round X to nearest integral value according to current rounding
-   direction.  */
-extern long int lrintl (long double __x) throw (); extern long int __lrintl (long double __x) throw ();
-extern long long int llrintl (long double __x) throw (); extern long long int __llrintl (long double __x) throw ();
-
-/* Round X to nearest integral value, rounding halfway cases away from
-   zero.  */
-extern long int lroundl (long double __x) throw (); extern long int __lroundl (long double __x) throw ();
-extern long long int llroundl (long double __x) throw (); extern long long int __llroundl (long double __x) throw ();
-
-
-/* Return positive difference between X and Y.  */
-extern long double fdiml (long double __x, long double __y) throw (); extern long double __fdiml (long double __x, long double __y) throw ();
-
-/* Return maximum numeric value from X and Y.  */
-extern long double fmaxl (long double __x, long double __y) throw (); extern long double __fmaxl (long double __x, long double __y) throw ();
-
-/* Return minimum numeric value from X and Y.  */
-extern long double fminl (long double __x, long double __y) throw (); extern long double __fminl (long double __x, long double __y) throw ();
-
-
-/* Classify given number.  */
-extern int __fpclassifyl (long double __value) throw ()
-     __attribute__ ((__const__));
-
-/* Test for negative number.  */
-extern int __signbitl (long double __value) throw ()
-     __attribute__ ((__const__));
-
-
-/* Multiply-add function computed as a ternary operation.  */
-extern long double fmal (long double __x, long double __y, long double __z) throw (); extern long double __fmal (long double __x, long double __y, long double __z) throw ();
-
-
-
-
-
-
-
-/* Return X times (2 to the Nth power).  */
-extern long double scalbl (long double __x, long double __n) throw (); extern long double __scalbl (long double __x, long double __n) throw ();
-# 142 "/usr/include/math.h" 2 3 4
-# 156 "/usr/include/math.h" 3 4
-/* This variable is used by `gamma' and `lgamma'.  */
-extern int signgam;
-
-
-
-/* ISO C99 defines some generic macros which work on any data type.  */
-
-
-/* Get the architecture specific values describing the floating-point
-   evaluation.  The following symbols will get defined:
-
-    float_t	floating-point type at least as wide as `float' used
-		to evaluate `float' expressions
-    double_t	floating-point type at least as wide as `double' used
-		to evaluate `double' expressions
-
-    FLT_EVAL_METHOD
-		Defined to
-		  0	if `float_t' is `float' and `double_t' is `double'
-		  1	if `float_t' and `double_t' are `double'
-		  2	if `float_t' and `double_t' are `long double'
-		  else	`float_t' and `double_t' are unspecified
-
-    INFINITY	representation of the infinity value of type `float'
-
-    FP_FAST_FMA
-    FP_FAST_FMAF
-    FP_FAST_FMAL
-		If defined it indicates that the `fma' function
-		generally executes about as fast as a multiply and an add.
-		This macro is defined only iff the `fma' function is
-		implemented directly with a hardware multiply-add instructions.
-
-    FP_ILOGB0	Expands to a value returned by `ilogb (0.0)'.
-    FP_ILOGBNAN	Expands to a value returned by `ilogb (NAN)'.
-
-    DECIMAL_DIG	Number of decimal digits supported by conversion between
-		decimal and all internal floating-point formats.
-
-*/
-
-/* All floating-point numbers can be put in one of these categories.  */
-enum
-  {
-    FP_NAN,
-
-    FP_INFINITE,
-
-    FP_ZERO,
-
-    FP_SUBNORMAL,
-
-    FP_NORMAL
-
-  };
-
-/* Return number of classification appropriate for X.  */
-# 224 "/usr/include/math.h" 3 4
-/* Return nonzero value if sign of X is negative.  */
-# 236 "/usr/include/math.h" 3 4
-/* Return nonzero value if X is not +-Inf or NaN.  */
-# 248 "/usr/include/math.h" 3 4
-/* Return nonzero value if X is neither zero, subnormal, Inf, nor NaN.  */
-
-
-/* Return nonzero value if X is a NaN.  We could use `fpclassify' but
-   we already have this functions `__isnan' and it is faster.  */
-# 264 "/usr/include/math.h" 3 4
-/* Return nonzero value is X is positive or negative infinity.  */
-# 276 "/usr/include/math.h" 3 4
-/* Bitmasks for the math_errhandling macro.  */
-
-
-
-
-
-
-/* Support for various different standard error handling behaviors.  */
-typedef enum
-{
-  _IEEE_ = -1, /* According to IEEE 754/IEEE 854.  */
-  _SVID_, /* According to System V, release 4.  */
-  _XOPEN_, /* Nowadays also Unix98.  */
-  _POSIX_,
-  _ISOC_ /* Actually this is ISO C99.  */
-} _LIB_VERSION_TYPE;
-
-/* This variable can be changed at run-time to any of the values above to
-   affect floating point error handling behavior (it may also be necessary
-   to change the hardware FPU exception settings).  */
-extern _LIB_VERSION_TYPE _LIB_VERSION;
-
-
-
-
-/* In SVID error handling, `matherr' is called with this description
-   of the exceptional condition.
-
-   We have a problem when using C++ since `exception' is a reserved
-   name in C++.  */
-
-struct __exception
-
-
-
-  {
+  extern double * __imp__HUGE;
+# 91 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+ struct _exception {
     int type;
-    char *name;
+    const char *name;
     double arg1;
     double arg2;
     double retval;
   };
 
-
-extern int matherr (struct __exception *__exc) throw ();
-
-
-
-
-
-
-/* Types of exceptions in the `type' field.  */
+  void __mingw_raise_matherr (int typ, const char *name, double a1, double a2,
+         double rslt);
+  void __mingw_setusermatherr (int ( *)(struct _exception *));
+  __attribute__ ((__dllimport__)) void __setusermatherr(int ( *)(struct _exception *));
 
 
 
+  double sin(double _X);
+  double cos(double _X);
+  double tan(double _X);
+  double sinh(double _X);
+  double cosh(double _X);
+  double tanh(double _X);
+  double asin(double _X);
+  double acos(double _X);
+  double atan(double _X);
+  double atan2(double _Y,double _X);
+  double exp(double _X);
+  double log(double _X);
+  double log10(double _X);
+  double pow(double _X,double _Y);
+  double sqrt(double _X);
+  double ceil(double _X);
+  double floor(double _X);
+  double fabs(double _X);
+# 135 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+ double ldexp(double _X,int _Y);
+  double frexp(double _X,int *_Y);
+  double modf(double _X,double *_Y);
+  double fmod(double _X,double _Y);
+
+  void sincos (double __x, double *p_sin, double *p_cos);
+  void sincosl (long double __x, long double *p_sin, long double *p_cos);
+  void sincosf (float __x, float *p_sin, float *p_cos);
+
+
+
+  int abs(int _X);
+  long labs(long _X);
+
+
+
+  double atof(const char *_String);
+  double _atof_l(const char *_String,_locale_t _Locale);
+# 162 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+ struct _complex {
+    double x;
+    double y;
+  };
+
+
+  __attribute__ ((__dllimport__)) double _cabs(struct _complex _ComplexA);
+  double _hypot(double _X,double _Y);
+  __attribute__ ((__dllimport__)) double _j0(double _X);
+  __attribute__ ((__dllimport__)) double _j1(double _X);
+  __attribute__ ((__dllimport__)) double _jn(int _X,double _Y);
+  __attribute__ ((__dllimport__)) double _y0(double _X);
+  __attribute__ ((__dllimport__)) double _y1(double _X);
+  __attribute__ ((__dllimport__)) double _yn(int _X,double _Y);
+
+
+  __attribute__ ((__dllimport__)) int _matherr (struct _exception *);
+
+
+/* These are also declared in Mingw float.h; needed here as well to work 
+   around GCC build issues.  */
+/* BEGIN FLOAT.H COPY */
+/*
+ * IEEE recommended functions
+ */
+
+
+  __attribute__ ((__dllimport__)) double _chgsign (double _X);
+  __attribute__ ((__dllimport__)) double _copysign (double _Number,double _Sign);
+  __attribute__ ((__dllimport__)) double _logb (double);
+  __attribute__ ((__dllimport__)) double _nextafter (double, double);
+  __attribute__ ((__dllimport__)) double _scalb (double, long);
+  __attribute__ ((__dllimport__)) int _finite (double);
+  __attribute__ ((__dllimport__)) int _fpclass (double);
+  __attribute__ ((__dllimport__)) int _isnan (double);
+
+
+/* END FLOAT.H COPY */
+
+
+
+__attribute__ ((__dllimport__)) double j0 (double) ;
+__attribute__ ((__dllimport__)) double j1 (double) ;
+__attribute__ ((__dllimport__)) double jn (int, double) ;
+__attribute__ ((__dllimport__)) double y0 (double) ;
+__attribute__ ((__dllimport__)) double y1 (double) ;
+__attribute__ ((__dllimport__)) double yn (int, double) ;
+
+__attribute__ ((__dllimport__)) double chgsign (double);
+/*
+ * scalb() is a GCC built-in.
+ * Exclude this _scalb() stub; the semantics are incompatible
+ * with the built-in implementation.
+ *
+_CRTIMP double __cdecl scalb (double, long);
+ *
+ */
+  __attribute__ ((__dllimport__)) int finite (double);
+  __attribute__ ((__dllimport__)) int fpclass (double);
+# 260 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+/* Use the compiler's builtin define for FLT_EVAL_METHOD to
+   set float_t and double_t.  */
+
+
+typedef float float_t;
+typedef double double_t;
+# 278 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+/* 7.12.3.1 */
+/*
+   Return values for fpclassify.
+   These are based on Intel x87 fpu condition codes
+   in the high byte of status word and differ from
+   the return values for MS IEEE 754 extension _fpclass()
+*/
 
 
 
 
-/* SVID mode specifies returning this large value instead of infinity.  */
-# 348 "/usr/include/math.h" 3 4
-/* Some useful constants.  */
-# 365 "/usr/include/math.h" 3 4
-/* The above constants are not adequate for computation using `long double's.
-   Therefore we provide as an extension constants with similar names as a
-   GNU extension.  Provide enough digits for the 128-bit IEEE quad.  */
-# 385 "/usr/include/math.h" 3 4
-/* When compiling in strict ISO C compatible mode we must not use the
-   inline functions since they, among other things, do not set the
-   `errno' variable correctly.  */
+
+/* 0x0200 is signbit mask */
+
+/*
+  We can't inline float or double, because we want to ensure truncation
+  to semantic type before classification. 
+  (A normal long double value might become subnormal when 
+  converted to double, and zero when converted to float.)
+*/
+
+  extern int __fpclassifyl (long double);
+  extern int __fpclassifyf (float);
+  extern int __fpclassify (double);
+# 325 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+/* 7.12.3.2 */
+
+
+/* 7.12.3.3 */
+
+
+/* 7.12.3.4 */
+/* We don't need to worry about truncation here:
+   A NaN stays a NaN. */
+
+  extern int __isnan (double);
+  extern int __isnanf (float);
+  extern int __isnanl (long double);
+# 372 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+/* 7.12.3.5 */
+
+
+/* 7.12.3.6 The signbit macro */
+  extern int __signbit (double);
+  extern int __signbitf (float);
+  extern int __signbitl (long double);
+# 403 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+/* 7.12.4 Trigonometric functions: Double in C89 */
+  extern float sinf(float _X);
+  extern long double sinl(long double);
+
+  extern float cosf(float _X);
+  extern long double cosl(long double);
+
+  extern float tanf(float _X);
+  extern long double tanl(long double);
+  extern float asinf(float _X);
+  extern long double asinl(long double);
+
+  extern float acosf (float);
+  extern long double acosl (long double);
+
+  extern float atanf (float);
+  extern long double atanl (long double);
+
+  extern float atan2f (float, float);
+  extern long double atan2l (long double, long double);
+
+/* 7.12.5 Hyperbolic functions: Double in C89  */
+  extern float sinhf(float _X);
+
+
+
+  extern long double sinhl(long double);
+
+  extern float coshf(float _X);
+
+
+
+  extern long double coshl(long double);
+
+  extern float tanhf(float _X);
+
+
+
+  extern long double tanhl(long double);
+
+/* Inverse hyperbolic trig functions  */
+/* 7.12.5.1 */
+  extern double acosh (double);
+  extern float acoshf (float);
+  extern long double acoshl (long double);
+
+/* 7.12.5.2 */
+  extern double asinh (double);
+  extern float asinhf (float);
+  extern long double asinhl (long double);
+
+/* 7.12.5.3 */
+  extern double atanh (double);
+  extern float atanhf (float);
+  extern long double atanhl (long double);
+
+/* Exponentials and logarithms  */
+/* 7.12.6.1 Double in C89 */
+  extern float expf(float _X);
+
+
+
+  extern long double expl(long double);
+
+/* 7.12.6.2 */
+  extern double exp2(double);
+  extern float exp2f(float);
+  extern long double exp2l(long double);
+
+/* 7.12.6.3 The expm1 functions */
+/* TODO: These could be inlined */
+  extern double expm1(double);
+  extern float expm1f(float);
+  extern long double expm1l(long double);
+
+/* 7.12.6.4 Double in C89 */
+  extern float frexpf(float _X,int *_Y);
+
+
+
+  extern long double frexpl(long double,int *);
+
+/* 7.12.6.5 */
+
+
+  extern int ilogb (double);
+  extern int ilogbf (float);
+  extern int ilogbl (long double);
+
+/* 7.12.6.6  Double in C89 */
+  extern float ldexpf(float _X,int _Y);
+
+
+
+  extern long double ldexpl (long double, int);
+
+/* 7.12.6.7 Double in C89 */
+  extern float logf (float);
+  extern long double logl(long double);
+
+/* 7.12.6.8 Double in C89 */
+  extern float log10f (float);
+  extern long double log10l(long double);
+
+/* 7.12.6.9 */
+  extern double log1p(double);
+  extern float log1pf(float);
+  extern long double log1pl(long double);
+
+/* 7.12.6.10 */
+  extern double log2 (double);
+  extern float log2f (float);
+  extern long double log2l (long double);
+
+/* 7.12.6.11 */
+  extern double logb (double);
+  extern float logbf (float);
+  extern long double logbl (long double);
+
+/* Inline versions.  GCC-4.0+ can do a better fast-math optimization
+   with __builtins. */
+# 552 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+/* 7.12.6.12  Double in C89 */
+  extern float modff (float, float*);
+  extern long double modfl (long double, long double*);
+
+/* 7.12.6.13 */
+  extern double scalbn (double, int);
+  extern float scalbnf (float, int);
+  extern long double scalbnl (long double, int);
+
+  extern double scalbln (double, long);
+  extern float scalblnf (float, long);
+  extern long double scalblnl (long double, long);
+
+/* 7.12.7.1 */
+/* Implementations adapted from Cephes versions */
+  extern double cbrt (double);
+  extern float cbrtf (float);
+  extern long double cbrtl (long double);
+
+/* 7.12.7.2 The fabs functions: Double in C89 */
+  extern float fabsf (float x);
+# 583 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+ extern long double fabsl (long double);
+# 594 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+/* 7.12.7.3  */
+  extern double hypot (double, double) ; /* in libmoldname.a */
+  extern float hypotf (float x, float y);
+
+
+
+  extern long double hypotl (long double, long double);
+
+/* 7.12.7.4 The pow functions. Double in C89 */
+  extern float powf(float _X,float _Y);
+
+
+
+  extern long double powl (long double, long double);
+
+/* 7.12.7.5 The sqrt functions. Double in C89. */
+  extern float sqrtf (float);
+  extern long double sqrtl(long double);
+
+/* 7.12.8.1 The erf functions  */
+  extern double erf (double);
+  extern float erff (float);
+  extern long double erfl (long double);
+
+/* 7.12.8.2 The erfc functions  */
+  extern double erfc (double);
+  extern float erfcf (float);
+  extern long double erfcl (long double);
+
+/* 7.12.8.3 The lgamma functions */
+  extern double lgamma (double);
+  extern float lgammaf (float);
+  extern long double lgammal (long double);
+
+/* 7.12.8.4 The tgamma functions */
+  extern double tgamma (double);
+  extern float tgammaf (float);
+  extern long double tgammal (long double);
+
+/* 7.12.9.1 Double in C89 */
+  extern float ceilf (float);
+  extern long double ceill (long double);
+
+/* 7.12.9.2 Double in C89 */
+  extern float floorf (float);
+  extern long double floorl (long double);
+
+/* 7.12.9.3 */
+  extern double nearbyint ( double);
+  extern float nearbyintf (float);
+  extern long double nearbyintl (long double);
+
+/* 7.12.9.4 */
+/* round, using fpu control word settings */
+extern double rint (double);
+extern float rintf (float);
+extern long double rintl (long double);
+
+/* 7.12.9.5 */
+extern long lrint (double);
+extern long lrintf (float);
+extern long lrintl (long double);
+
+__extension__ long long llrint (double);
+__extension__ long long llrintf (float);
+__extension__ long long llrintl (long double);
+
+/* Inline versions of above. 
+   GCC 4.0+ can do a better fast-math job with __builtins. */
+# 737 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+/* 7.12.9.6 */
+/* round away from zero, regardless of fpu control word settings */
+  extern double round (double);
+  extern float roundf (float);
+  extern long double roundl (long double);
+
+/* 7.12.9.7  */
+  extern long lround (double);
+  extern long lroundf (float);
+  extern long lroundl (long double);
+  __extension__ long long llround (double);
+  __extension__ long long llroundf (float);
+  __extension__ long long llroundl (long double);
+
+/* 7.12.9.8 */
+/* round towards zero, regardless of fpu control word settings */
+  extern double trunc (double);
+  extern float truncf (float);
+  extern long double truncl (long double);
+
+/* 7.12.10.1 Double in C89 */
+  extern float fmodf (float, float);
+  extern long double fmodl (long double, long double);
+
+/* 7.12.10.2 */
+  extern double remainder (double, double);
+  extern float remainderf (float, float);
+  extern long double remainderl (long double, long double);
+
+/* 7.12.10.3 */
+  extern double remquo(double, double, int *);
+  extern float remquof(float, float, int *);
+  extern long double remquol(long double, long double, int *);
+
+/* 7.12.11.1 */
+  extern double copysign (double, double); /* in libmoldname.a */
+  extern float copysignf (float, float);
+  extern long double copysignl (long double, long double);
+
+/* 7.12.11.2 Return a NaN */
+  extern double nan(const char *tagp);
+  extern float nanf(const char *tagp);
+  extern long double nanl(const char *tagp);
 
 
 
 
 
-/* ISO C99 defines some macros to compare number while taking care for
-   unordered numbers.  Many FPUs provide special instructions to support
-   these operations.  Generic support in GCC for these as builtins went
-   in before 3.0.0, but not all cpus added their patterns.  We define
-   versions that use the builtins here, and <bits/mathinline.h> will
-   undef/redefine as appropriate for the specific GCC version in use.  */
-# 407 "/usr/include/math.h" 3 4
-/* Get machine-dependent inline versions (if there are any).  */
+
+
+/* 7.12.11.3 */
+  extern double nextafter (double, double); /* in libmoldname.a */
+  extern float nextafterf (float, float);
+  extern long double nextafterl (long double, long double);
+
+/* 7.12.11.4 The nexttoward functions */
+  extern double nexttoward (double, long double);
+  extern float nexttowardf (float, long double);
+  extern long double nexttowardl (long double, long double);
+
+/* 7.12.12.1 */
+/*  x > y ? (x - y) : 0.0  */
+  extern double fdim (double x, double y);
+  extern float fdimf (float x, float y);
+  extern long double fdiml (long double x, long double y);
+
+/* fmax and fmin.
+   NaN arguments are treated as missing data: if one argument is a NaN
+   and the other numeric, then these functions choose the numeric
+   value. */
+
+/* 7.12.12.2 */
+  extern double fmax (double, double);
+  extern float fmaxf (float, float);
+  extern long double fmaxl (long double, long double);
+
+/* 7.12.12.3 */
+  extern double fmin (double, double);
+  extern float fminf (float, float);
+  extern long double fminl (long double, long double);
+
+/* 7.12.13.1 */
+/* return x * y + z as a ternary op */
+  extern double fma (double, double, double);
+  extern float fmaf (float, float, float);
+  extern long double fmal (long double, long double, long double);
+
+/* 7.12.14 */
+/* 
+ *  With these functions, comparisons involving quiet NaNs set the FP
+ *  condition code to "unordered".  The IEEE floating-point spec
+ *  dictates that the result of floating-point comparisons should be
+ *  false whenever a NaN is involved, with the exception of the != op, 
+ *  which always returns true: yes, (NaN != NaN) is true).
+ */
+# 871 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+ __attribute__ ((__dllimport__)) float _copysignf (float _Number,float _Sign);
+   __attribute__ ((__dllimport__)) float _chgsignf (float _X);
+   __attribute__ ((__dllimport__)) float _logbf(float _X);
+   __attribute__ ((__dllimport__)) float _nextafterf(float _X,float _Y);
+   __attribute__ ((__dllimport__)) int _finitef(float _X);
+   __attribute__ ((__dllimport__)) int _isnanf(float _X);
+   __attribute__ ((__dllimport__)) int _fpclassf(float _X);
 
 
 
-
-
-/* If we've still got undefined comparison macros, provide defaults.  */
-
-/* Return nonzero value if X is greater than Y.  */
-
-
-
-
-
-
-
-/* Return nonzero value if X is greater than or equal to Y.  */
-
-
-
-
-
-
-
-/* Return nonzero value if X is less than Y.  */
-
-
-
-
-
-
-
-/* Return nonzero value if X is less than or equal to Y.  */
-
-
-
-
-
-
-
-/* Return nonzero value if either X is less than Y or Y is less than X.  */
-
-
-
-
-
-
-
-/* Return nonzero value if arguments are unordered.  */
-# 465 "/usr/include/math.h" 3 4
+   extern long double _chgsignl (long double);
+# 893 "C:/Xilinx/Vivado_HLS/2014.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
 }
+
+
+
+
+#pragma pack(pop)
 # 3 "neuralNetworkSynth.cpp" 2
 }
 # 3 "neuralNetworkSynth.cpp"
@@ -32458,7 +26484,8 @@ float weightHO[26][4] = {
 
 
 # 1 "./neuralNetworkConstants.h" 1
-# 5 "./neuralNetworkSynth.h" 2
+# 4 "./neuralNetworkSynth.h" 2
+
 
 void feedForward(float pattern[882 /* = INPUT_ROWS*INPUT_COLS*/]);
 int guessClassification();

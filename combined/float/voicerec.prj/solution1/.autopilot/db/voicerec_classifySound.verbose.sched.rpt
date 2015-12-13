@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'voicerec_classifySound'
 ================================================================
-* Date:           Fri Dec 11 15:33:54 2015
+* Date:           Sat Dec 12 03:01:05 2015
 
-* Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
+* Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
 * Project:        voicerec.prj
 * Solution:       solution1
 * Product family: zynq
@@ -17,11 +17,11 @@
 ================================================================
 + Timing (ns): 
     * Summary: 
-    +--------+-------+----------+------------+
-    |  Clock | Target| Estimated| Uncertainty|
-    +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      8.62|        1.25|
-    +--------+-------+----------+------------+
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      8.62|        1.25|
+    +---------+-------+----------+------------+
 
 + Latency (clock cycles): 
     * Summary: 
@@ -159,7 +159,7 @@ ST_1: stg_11 [1/1] 1.57ns
 
  <State 2>: 1.94ns
 ST_2: i [1/1] 0.00ns
-.loopexit:0  %i = phi i6 [ 0, %0 ], [ %i_1, %.preheader ]
+.loopexit:0  %i = phi i6 [ 0, %0 ], [ %i_2, %.preheader ]
 
 ST_2: exitcond1 [1/1] 1.94ns
 .loopexit:1  %exitcond1 = icmp eq i6 %i, -1
@@ -167,8 +167,8 @@ ST_2: exitcond1 [1/1] 1.94ns
 ST_2: empty [1/1] 0.00ns
 .loopexit:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 63, i64 63, i64 63)
 
-ST_2: i_1 [1/1] 1.72ns
-.loopexit:3  %i_1 = add i6 %i, 1
+ST_2: i_2 [1/1] 1.72ns
+.loopexit:3  %i_2 = add i6 %i, 1
 
 ST_2: stg_16 [1/1] 0.00ns
 .loopexit:4  br i1 %exitcond1, label %2, label %.preheader.preheader
@@ -185,11 +185,11 @@ ST_2: p_shl2 [1/1] 0.00ns
 ST_2: p_shl2_cast [1/1] 0.00ns
 .preheader.preheader:3  %p_shl2_cast = zext i7 %p_shl2 to i11
 
-ST_2: tmp_8 [1/1] 1.84ns
-.preheader.preheader:4  %tmp_8 = sub i11 %p_shl_cast, %p_shl2_cast
+ST_2: tmp_9 [1/1] 1.84ns
+.preheader.preheader:4  %tmp_9 = sub i11 %p_shl_cast, %p_shl2_cast
 
 ST_2: result_addr1_cast [1/1] 0.00ns
-.preheader.preheader:5  %result_addr1_cast = sext i11 %tmp_8 to i12
+.preheader.preheader:5  %result_addr1_cast = sext i11 %tmp_9 to i12
 
 ST_2: stg_23 [1/1] 1.57ns
 .preheader.preheader:6  br label %.preheader
@@ -198,7 +198,7 @@ ST_2: stg_24 [2/2] 0.00ns
 :0  call fastcc void @voicerec_feedForward([882 x float]* %flatInput)
 
 
- <State 3>: 4.55ns
+ <State 3>: 4.23ns
 ST_3: j [1/1] 0.00ns
 .preheader:0  %j = phi i4 [ %j_1, %1 ], [ 0, %.preheader.preheader ]
 
@@ -217,11 +217,11 @@ ST_3: j_1 [1/1] 0.80ns
 ST_3: stg_30 [1/1] 0.00ns
 .preheader:5  br i1 %exitcond, label %.loopexit, label %1
 
-ST_3: tmp_9_trn_cast [1/1] 0.00ns
-:0  %tmp_9_trn_cast = zext i4 %j to i12
+ST_3: tmp_1_trn_cast [1/1] 0.00ns
+:0  %tmp_1_trn_cast = zext i4 %j to i12
 
 ST_3: result_addr2 [1/1] 1.84ns
-:1  %result_addr2 = add i12 %tmp_9_trn_cast, %result_addr1_cast
+:1  %result_addr2 = add i12 %result_addr1_cast, %tmp_1_trn_cast
 
 ST_3: result_addr2_cast [1/1] 0.00ns
 :2  %result_addr2_cast = sext i12 %result_addr2 to i32
@@ -232,27 +232,27 @@ ST_3: tmp_11 [1/1] 0.00ns
 ST_3: result_addr [1/1] 0.00ns
 :4  %result_addr = getelementptr [882 x float]* @result, i64 0, i64 %tmp_11
 
-ST_3: result_load [2/2] 2.71ns
+ST_3: result_load [2/2] 2.39ns
 :5  %result_load = load float* %result_addr, align 4
 
-ST_3: tmp_1 [1/1] 1.84ns
-:6  %tmp_1 = add i11 %tmp_8, %j_cast3
+ST_3: tmp_2 [1/1] 1.84ns
+:6  %tmp_2 = add i11 %j_cast3, %tmp_9
 
 
- <State 4>: 5.42ns
-ST_4: result_load [1/2] 2.71ns
+ <State 4>: 4.78ns
+ST_4: result_load [1/2] 2.39ns
 :5  %result_load = load float* %result_addr, align 4
 
-ST_4: tmp_1_cast [1/1] 0.00ns
-:7  %tmp_1_cast = sext i11 %tmp_1 to i32
+ST_4: tmp_2_cast [1/1] 0.00ns
+:7  %tmp_2_cast = sext i11 %tmp_2 to i32
 
-ST_4: tmp_2 [1/1] 0.00ns
-:8  %tmp_2 = zext i32 %tmp_1_cast to i64
+ST_4: tmp_3 [1/1] 0.00ns
+:8  %tmp_3 = zext i32 %tmp_2_cast to i64
 
 ST_4: flatInput_addr [1/1] 0.00ns
-:9  %flatInput_addr = getelementptr inbounds [882 x float]* %flatInput, i64 0, i64 %tmp_2
+:9  %flatInput_addr = getelementptr inbounds [882 x float]* %flatInput, i64 0, i64 %tmp_3
 
-ST_4: stg_42 [1/1] 2.71ns
+ST_4: stg_42 [1/1] 2.39ns
 :10  store float %result_load, float* %flatInput_addr, align 4
 
 ST_4: stg_43 [1/1] 0.00ns
@@ -311,8 +311,8 @@ ST_7: max [1/2] 2.39ns
 
 
  <State 8>: 6.79ns
-ST_8: tmp_9 [1/1] 6.79ns
-._crit_edge.i:16  %tmp_9 = fcmp ogt float %max, %second_max
+ST_8: tmp_6 [1/1] 6.79ns
+._crit_edge.i:16  %tmp_6 = fcmp ogt float %max, %second_max
 
 
  <State 9>: 7.87ns
@@ -322,41 +322,41 @@ ST_9: max_to_int [1/1] 0.00ns
 ST_9: tmp [1/1] 0.00ns
 ._crit_edge.i:4  %tmp = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_to_int, i32 23, i32 30)
 
-ST_9: tmp_3 [1/1] 0.00ns
-._crit_edge.i:5  %tmp_3 = trunc i32 %max_to_int to i23
+ST_9: tmp_1 [1/1] 0.00ns
+._crit_edge.i:5  %tmp_1 = trunc i32 %max_to_int to i23
 
 ST_9: second_max_to_int [1/1] 0.00ns
 ._crit_edge.i:6  %second_max_to_int = bitcast float %second_max to i32
 
-ST_9: tmp_4 [1/1] 0.00ns
-._crit_edge.i:7  %tmp_4 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %second_max_to_int, i32 23, i32 30)
-
 ST_9: tmp_5 [1/1] 0.00ns
-._crit_edge.i:8  %tmp_5 = trunc i32 %second_max_to_int to i23
+._crit_edge.i:7  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %second_max_to_int, i32 23, i32 30)
+
+ST_9: tmp_4 [1/1] 0.00ns
+._crit_edge.i:8  %tmp_4 = trunc i32 %second_max_to_int to i23
 
 ST_9: notlhs [1/1] 2.00ns
 ._crit_edge.i:9  %notlhs = icmp ne i8 %tmp, -1
 
 ST_9: notrhs [1/1] 2.39ns
-._crit_edge.i:10  %notrhs = icmp eq i23 %tmp_3, 0
-
-ST_9: tmp_6 [1/1] 1.37ns
-._crit_edge.i:11  %tmp_6 = or i1 %notrhs, %notlhs
-
-ST_9: notlhs6 [1/1] 2.00ns
-._crit_edge.i:12  %notlhs6 = icmp ne i8 %tmp_4, -1
-
-ST_9: notrhs7 [1/1] 2.39ns
-._crit_edge.i:13  %notrhs7 = icmp eq i23 %tmp_5, 0
+._crit_edge.i:10  %notrhs = icmp eq i23 %tmp_1, 0
 
 ST_9: tmp_7 [1/1] 1.37ns
-._crit_edge.i:14  %tmp_7 = or i1 %notrhs7, %notlhs6
+._crit_edge.i:11  %tmp_7 = or i1 %notrhs, %notlhs
+
+ST_9: notlhs6 [1/1] 2.00ns
+._crit_edge.i:12  %notlhs6 = icmp ne i8 %tmp_5, -1
+
+ST_9: notrhs7 [1/1] 2.39ns
+._crit_edge.i:13  %notrhs7 = icmp eq i23 %tmp_4, 0
+
+ST_9: tmp_8 [1/1] 1.37ns
+._crit_edge.i:14  %tmp_8 = or i1 %notrhs7, %notlhs6
 
 ST_9: tmp_s [1/1] 1.37ns
-._crit_edge.i:15  %tmp_s = and i1 %tmp_6, %tmp_7
+._crit_edge.i:15  %tmp_s = and i1 %tmp_7, %tmp_8
 
 ST_9: tmp_10 [1/1] 1.37ns
-._crit_edge.i:17  %tmp_10 = and i1 %tmp_s, %tmp_9
+._crit_edge.i:17  %tmp_10 = and i1 %tmp_s, %tmp_6
 
 ST_9: guess_1 [1/1] 1.37ns
 ._crit_edge.i:18  %guess_1 = select i1 %tmp_10, i32 %guess_cast1, i32 %guess_i

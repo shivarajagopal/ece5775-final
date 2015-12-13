@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [RTGEN-101] Global array 'weightHO' will not be exposed as RTL port." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:12.131-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'output_r' will not be exposed as RTL port." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:12.116-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'weightIH' will not be exposed as RTL port." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:12.100-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'hidden' will not be exposed as RTL port." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:12.100-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'input_r' will not be exposed as RTL port." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:12.084-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'result' will not be exposed as RTL port." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:12.069-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'spec' will not be exposed as RTL port." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:12.069-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'e' will not be exposed as RTL port." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:12.053-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'c' will not be exposed as RTL port." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:12.038-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'ends' will not be exposed as RTL port." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:11.991-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'begins' will not be exposed as RTL port." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:11.975-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:08.138-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:08.138-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:08.122-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:08.106-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:08.091-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:08.044-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:08.044-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:08.013-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:07.919-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:07.872-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:07.701-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:07.685-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:07.685-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:07.670-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:07.654-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:07.623-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:07.607-0500" type="Warning"/>
+        <logs message="@W [HLS-40] C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj and r:/scratch/builds/2014.4/continuous/20141118161353/src/products are not the same volume, so there is no relative path." projectName="voicerec.prj" solutionName="solution1" date="2015-12-12T03:01:07.592-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

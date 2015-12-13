@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
-//Date        : Fri Dec 11 08:57:42 2015
+//Date        : Fri Dec 11 23:30:20 2015
 //Host        : en-ec-azz284-b running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
