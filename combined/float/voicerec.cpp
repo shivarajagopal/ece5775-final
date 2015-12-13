@@ -284,6 +284,12 @@ void preprocessSound(float *inSound, int inSize, float *outSound, int outSize) {
       j++;
     }
   }
+  for (i=0; i < 8000; ++i) {
+    if (j < 8000) {
+      outSound[j] = 0;
+      j++;
+    }
+  }
 }
 
 /****************************************************
