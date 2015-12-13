@@ -24,21 +24,6 @@
 #include "neuralNetworkSynth.h"
 
 //------------------------------------------------------------------------
-// Helper function for hex to int conversion
-//------------------------------------------------------------------------
-int64_t hexstring_to_int64 (std::string h) {
-  int64_t x = 0;
-  for (int i = 0; i < h.length(); ++i) {
-    char c = h[i];
-    int i = (c > '9') ? toupper(c)-'A'+10 : c - '0';
-    x = x*16 + i;
-  }
-  return x;
-}
-float filter_testOutput[127];
-
-
-//------------------------------------------------------------------------
 // Voicerec testbench
 //------------------------------------------------------------------------
 
