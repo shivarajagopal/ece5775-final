@@ -1,8 +1,0 @@
-CXX=icpc
-CXXFLAGS=-std=c++14 -g
-
-# If you're using icc, these are good flags to try
-OPTFLAGS=-O3 -no-prec-div -xcore-avx2 -ipo \
-  -qopt-report=5 -qopt-report-phase=vec
-
-CXXFLAGS+=$(OPTFLAGS)
