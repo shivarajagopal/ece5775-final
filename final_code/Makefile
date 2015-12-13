@@ -14,6 +14,7 @@ VHLS_INC ?= ${VHLS_PATH}/include
 TARGET = voicerec
 CFLAGS = -g -I${VHLS_INC} 
 TRAINFILE = forward.dat
+ZBINCPATH = /usr/include/vivado_hls/2015.2
 
 all: csim
 
@@ -21,6 +22,11 @@ csim: $(TARGET).cpp $(TARGET)_test.cpp neuralNetworkSynth.cpp
 	@echo "Compiling & simulating $(TARGET) on amdpool ..."
 	g++ ${CFLAGS} $^ -o $(TARGET)
 	./$(TARGET)
+
+zb: $(TARGET).cpp $(TARGET)_test.cpp neuralNetworkSynth.cpp
+	@echo "Compiling & simulating $(TARGET) on amdpool ..."
+	g++ -I$(ZBINCPATH) $^ -o $(TARGET)-arm
+	./$(TARGET)-arm
 
 bitstream: 
 	@echo "Synthesizing $(TARGET) and creating bitstream on amdpool ..."
