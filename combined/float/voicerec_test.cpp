@@ -44,25 +44,15 @@ float filter_testOutput[127];
 
 int main(int argc, char *argv[]) 
 {
-  int classification;
+  int classification, i;
 
   // Number of test instances
-  const int N = 180;
+  const int N = 20;
   
   // Timer
-  Timer timer("voicerec FPGA");
+  Timer timer("voicerec");
   
-  int nbytes;
-  int error = 0;
-  int num_test_insts = 0;
-  bit32_t interpreted_digit;
-  float result[NUMRESULTS][(NUM_BANKS/2)+1];
-  int i=0, j=0;
-  for (i = 0; i < NUMRESULTS ; ++i) {
-    for (j = 0; j < (NUM_BANKS/2)+1 ; ++j) {
-      result[i][j] = 0.0;
-    }
-  }
+  timer.start();
   //classification = voicerec(backup1);
   std::cout << "should be 0 ****************" << "\n";
   for (i = 0; i < 16000; i++) classification = voicerec(&forward21[i]);
@@ -84,11 +74,6 @@ int main(int argc, char *argv[])
   for (i = 0; i < 16000; i++) classification = voicerec(&left23[i]);
   for (i = 0; i < 16000; i++) classification = voicerec(&left24[i]);
   for (i = 0; i < 16000; i++) classification = voicerec(&left25[i]);
-  for (i = 0; i < 16000; i++) classification = voicerec(&left31[i]);
-  for (i = 0; i < 16000; i++) classification = voicerec(&left32[i]);
-  for (i = 0; i < 16000; i++) classification = voicerec(&left33[i]);
-  for (i = 0; i < 16000; i++) classification = voicerec(&left34[i]);
-  for (i = 0; i < 16000; i++) classification = voicerec(&left35[i]);
 
   std::cout << "should be 3 ****************" << "\n";
   for (i = 0; i < 16000; i++) classification = voicerec(&reverse1[i]);
@@ -96,11 +81,8 @@ int main(int argc, char *argv[])
   for (i = 0; i < 16000; i++) classification = voicerec(&reverse3[i]);
   for (i = 0; i < 16000; i++) classification = voicerec(&reverse4[i]);
   for (i = 0; i < 16000; i++) classification = voicerec(&reverse5[i]);
-  for (i = 0; i < 16000; i++) classification = voicerec(&reverse21[i]);
-  for (i = 0; i < 16000; i++) classification = voicerec(&reverse22[i]);
-  for (i = 0; i < 16000; i++) classification = voicerec(&reverse23[i]);
-  for (i = 0; i < 16000; i++) classification = voicerec(&reverse24[i]);
-  for (i = 0; i < 16000; i++) classification = voicerec(&reverse25[i]);
+
+  timer.stop();
 
   //classification = classifySound(nn, result);
   //std::cout << "classification: " << classification << "\n";
