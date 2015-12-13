@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 0
+set id 1
 set name voicerec_fpext_32ns_64_1
 set corename simcore_fpext
 set op fpext
@@ -39,7 +39,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 set op fpext
 set corename Float2Double
-if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en})} {
+if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en} || ${::AESL::PGuard_autocg_hpen})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
 eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
     id ${id} \
@@ -61,7 +61,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 1
+set id 2
 set name voicerec_dcmp_64ns_64ns_1_1
 set corename simcore_dcmp
 set op dcmp
@@ -104,7 +104,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 set op dcmp
 set corename DCmp
-if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en})} {
+if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en} || ${::AESL::PGuard_autocg_hpen})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
 eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
     id ${id} \
@@ -129,7 +129,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 # Memory (RAM/ROM)  definition:
-set ID 2
+set ID 3
 set MemName voicerec_preprocessSound_begins
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
@@ -144,7 +144,7 @@ set HasInitializer 1
 set Initializer $ROMData
 set NumOfStage 2
 set MaxLatency -1
-set DelayBudget 2.39
+set DelayBudget 2.71
 set ClkPeriod 10
 set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
@@ -222,7 +222,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 3 \
+    id 4 \
     name inSound \
     reset_level 1 \
     sync_rst true \
@@ -241,7 +241,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 4 \
+    id 5 \
     name outSound \
     reset_level 1 \
     sync_rst true \

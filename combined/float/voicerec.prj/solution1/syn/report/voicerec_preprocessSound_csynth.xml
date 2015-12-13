@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2014.4</Version>
+<Version>2015.2</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -17,15 +17,15 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>8.20</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.26</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>160084</Best-caseLatency>
-<Average-caseLatency>224084</Average-caseLatency>
-<Worst-caseLatency>224084</Worst-caseLatency>
-<Interval-min>160084</Interval-min>
-<Interval-max>224084</Interval-max>
+<Best-caseLatency>168085</Best-caseLatency>
+<Average-caseLatency>232085</Average-caseLatency>
+<Worst-caseLatency>232085</Worst-caseLatency>
+<Interval-min>168085</Interval-min>
+<Interval-max>232085</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
@@ -68,6 +68,11 @@
 </range>
 </IterationLatency>
 </Loop4>
+<Loop5>
+<TripCount>8000</TripCount>
+<Latency>8000</Latency>
+<IterationLatency>1</IterationLatency>
+</Loop5>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
@@ -75,16 +80,14 @@
 <Resources>
 <BRAM_18K>2</BRAM_18K>
 <DSP48E>0</DSP48E>
-<FF>1083</FF>
-<LUT>2460</LUT>
-<SLICE>0</SLICE>
+<FF>1161</FF>
+<LUT>1949</LUT>
 </Resources>
 <AvailableResources>
 <BRAM_18K>280</BRAM_18K>
 <DSP48E>220</DSP48E>
 <FF>106400</FF>
 <LUT>53200</LUT>
-<SLICE>13300</SLICE>
 </AvailableResources>
 </AreaEstimates>
 

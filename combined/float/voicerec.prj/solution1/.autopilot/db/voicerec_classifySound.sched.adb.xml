@@ -123,7 +123,7 @@
 
 <node id="10" bw="6" op_0_bw="6" op_1_bw="0">
 <![CDATA[
-.loopexit:0  %i = phi i6 [ 0, %0 ], [ %i_2, %.preheader ]
+.loopexit:0  %i = phi i6 [ 0, %0 ], [ %i_1, %.preheader ]
 
 ]]></node>
 <StgValue><ssdm name="i"/></StgValue>
@@ -168,10 +168,10 @@
 
 <node id="13" bw="6" op_0_bw="6" op_1_bw="6">
 <![CDATA[
-.loopexit:3  %i_2 = add i6 %i, 1
+.loopexit:3  %i_1 = add i6 %i, 1
 
 ]]></node>
-<StgValue><ssdm name="i_2"/></StgValue>
+<StgValue><ssdm name="i_1"/></StgValue>
 </operation>
 
 <operation id="16" st_id="2" stage="1" lat="1">
@@ -436,7 +436,7 @@
 
 <node id="32" bw="12" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-:1  %result_addr2 = add i12 %result_addr1_cast, %tmp_1_trn_cast
+:1  %result_addr2 = add i12 %tmp_1_trn_cast, %result_addr1_cast
 
 ]]></node>
 <StgValue><ssdm name="result_addr2"/></StgValue>
@@ -516,7 +516,7 @@
 
 <node id="37" bw="11" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-:6  %tmp_2 = add i11 %j_cast3, %tmp_9
+:6  %tmp_2 = add i11 %tmp_9, %j_cast3
 
 ]]></node>
 <StgValue><ssdm name="tmp_2"/></StgValue>

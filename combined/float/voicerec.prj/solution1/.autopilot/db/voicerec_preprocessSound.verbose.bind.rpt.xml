@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'voicerec_preprocessSound'" level="0">
-<item name = "Date">Sat Dec 12 03:01:02 2015
+<item name = "Date">Sun Dec 13 12:33:18 2015
 </item>
-<item name = "Version">2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)</item>
+<item name = "Version">2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)</item>
 <item name = "Project">voicerec.prj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="default">10.00, 8.20, 1.25</column>
+<column name="ap_clk">10.00, 8.26, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">160084, 224084, 160084, 224084, none</column>
+<column name="">168085, 232085, 168085, 232085, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -39,6 +39,7 @@
 <column name="- Loop 2">64000, 64000, 4, -, -, 16000, no</column>
 <column name="- Loop 3">32000, 64000, 2 ~ 4, -, -, 16000, no</column>
 <column name="- Loop 4">64000, 96000, 4 ~ 6, -, -, 16000, no</column>
+<column name="- Loop 5">8000, 8000, 1, -, -, 8000, no</column>
 </table>
 </item>
 </section>

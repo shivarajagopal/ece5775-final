@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'voicerec'" level="0">
-<item name = "Date">Sat Dec 12 03:01:12 2015
+<item name = "Date">Sun Dec 13 12:33:23 2015
 </item>
-<item name = "Version">2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)</item>
+<item name = "Version">2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)</item>
 <item name = "Project">voicerec.prj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="default">10.00, 8.62, 1.25</column>
+<column name="ap_clk">10.00, 9.58, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,16 +24,16 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1, 153688945, 2, 153688946, none</column>
+<column name="">1, 153696946, 2, 153696947, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_voicerec_classifySound_fu_153">voicerec_classifySound, 249327, 249327, 249327, 249327, none</column>
-<column name="grp_voicerec_processChunk_fu_170">voicerec_processChunk, 15742, 2511728, 15742, 2511728, none</column>
-<column name="grp_voicerec_preprocessSound_fu_195">voicerec_preprocessSound, 160084, 224084, 160084, 224084, none</column>
+<column name="grp_voicerec_classifySound_fu_144">voicerec_classifySound, 249327, 249327, 249327, 249327, none</column>
+<column name="grp_voicerec_processChunk_fu_161">voicerec_processChunk, 15742, 2511728, 15742, 2511728, none</column>
+<column name="grp_voicerec_preprocessSound_fu_186">voicerec_preprocessSound, 168085, 232085, 168085, 232085, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -50,24 +50,23 @@
 <section name = "Utilization Estimates" level="0">
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="Expression">-, -, 0, 97</column>
+<column name="Expression">-, -, 0, 65</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">78, 69, 13399, 21118</column>
+<column name="Instance">78, 69, 13333, 20024</column>
 <column name="Memory">50, -, 0, 0</column>
 <column name="Multiplexer">-, -, -, 223</column>
 <column name="Register">-, -, 144, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">45, 31, 12, 40</specialColumn>
+<specialColumn name="Utilization (%)">45, 31, 12, 38</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="grp_voicerec_classifySound_fu_153">voicerec_classifySound, 69, 34, 6851, 9963</column>
-<column name="grp_voicerec_preprocessSound_fu_195">voicerec_preprocessSound, 2, 0, 1083, 2460</column>
-<column name="grp_voicerec_processChunk_fu_170">voicerec_processChunk, 7, 35, 5359, 8527</column>
-<column name="voicerec_voicerec_io_s_axi_U">voicerec_voicerec_io_s_axi, 0, 0, 106, 168</column>
+<column name="grp_voicerec_classifySound_fu_144">voicerec_classifySound, 69, 34, 6851, 9882</column>
+<column name="grp_voicerec_preprocessSound_fu_186">voicerec_preprocessSound, 2, 0, 1161, 1949</column>
+<column name="grp_voicerec_processChunk_fu_161">voicerec_processChunk, 7, 35, 5321, 8193</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -83,48 +82,48 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_1_fu_239_p2">+, 0, 0, 13, 13, 8</column>
-<column name="index_1_fu_233_p2">+, 0, 0, 6, 6, 1</column>
-<column name="sampleCounter_assign_fu_210_p2">+, 0, 0, 32, 32, 1</column>
-<column name="exitcond_fu_227_p2">icmp, 0, 0, 6, 6, 3</column>
-<column name="tmp_s_fu_221_p2">icmp, 0, 0, 40, 32, 14</column>
+<column name="i_1_fu_230_p2">+, 0, 0, 13, 13, 8</column>
+<column name="index_1_fu_224_p2">+, 0, 0, 6, 6, 1</column>
+<column name="sampleCounter_assign_fu_201_p2">+, 0, 0, 32, 32, 1</column>
+<column name="exitcond_fu_218_p2">icmp, 0, 0, 3, 6, 3</column>
+<column name="tmp_s_fu_212_p2">icmp, 0, 0, 11, 32, 14</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">1, 7, 1, 7</column>
-<column name="i_reg_107">13, 2, 13, 26</column>
+<column name="i_reg_99">13, 2, 13, 26</column>
 <column name="inSound_address0">14, 3, 14, 42</column>
 <column name="inSound_ce0">1, 3, 1, 3</column>
 <column name="inSound_d0">32, 3, 32, 96</column>
 <column name="inSound_we0">1, 3, 1, 3</column>
-<column name="index_reg_119">6, 2, 6, 12</column>
+<column name="index_reg_111">6, 2, 6, 12</column>
 <column name="outSound_address0">13, 3, 13, 39</column>
 <column name="outSound_ce0">1, 3, 1, 3</column>
 <column name="outSound_we0">1, 2, 1, 2</column>
-<column name="p_0_phi_fu_145_p4">32, 2, 32, 64</column>
-<column name="p_0_reg_141">32, 2, 32, 64</column>
+<column name="p_0_phi_fu_137_p4">32, 2, 32, 64</column>
+<column name="p_0_reg_133">32, 2, 32, 64</column>
 <column name="result_address0">10, 3, 10, 30</column>
 <column name="result_ce0">1, 3, 1, 3</column>
 <column name="result_we0">1, 2, 1, 2</column>
-<column name="sampleCounter_new_phi_fu_134_p4">32, 2, 32, 64</column>
-<column name="sampleCounter_new_reg_131">32, 2, 32, 64</column>
+<column name="sampleCounter_new_phi_fu_126_p4">32, 2, 32, 64</column>
+<column name="sampleCounter_new_reg_123">32, 2, 32, 64</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">6, 0, 6, 0</column>
-<column name="grp_voicerec_classifySound_fu_153_ap_start_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_voicerec_preprocessSound_fu_195_ap_start_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_voicerec_processChunk_fu_170_ap_start_ap_start_reg">1, 0, 1, 0</column>
-<column name="i_1_reg_268">13, 0, 13, 0</column>
-<column name="i_reg_107">13, 0, 13, 0</column>
-<column name="index_1_reg_263">6, 0, 6, 0</column>
-<column name="index_reg_119">6, 0, 6, 0</column>
-<column name="p_0_reg_141">32, 0, 32, 0</column>
+<column name="grp_voicerec_classifySound_fu_144_ap_start_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_voicerec_preprocessSound_fu_186_ap_start_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_voicerec_processChunk_fu_161_ap_start_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_1_reg_259">13, 0, 13, 0</column>
+<column name="i_reg_99">13, 0, 13, 0</column>
+<column name="index_1_reg_254">6, 0, 6, 0</column>
+<column name="index_reg_111">6, 0, 6, 0</column>
+<column name="p_0_reg_133">32, 0, 32, 0</column>
 <column name="sampleCounter">32, 0, 32, 0</column>
-<column name="sampleCounter_new_reg_131">32, 0, 32, 0</column>
-<column name="tmp_s_reg_256">1, 0, 1, 0</column>
+<column name="sampleCounter_new_reg_123">32, 0, 32, 0</column>
+<column name="tmp_s_reg_247">1, 0, 1, 0</column>
 </table>
 </item>
 </section>
@@ -134,26 +133,14 @@
 <section name = "Interface" level="0">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
-<column name="s_axi_voicerec_io_AWVALID">in, 1, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_AWREADY">out, 1, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_AWADDR">in, 6, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_WVALID">in, 1, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_WREADY">out, 1, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_WDATA">in, 32, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_WSTRB">in, 4, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_ARVALID">in, 1, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_ARREADY">out, 1, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_ARADDR">in, 6, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_RVALID">out, 1, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_RREADY">in, 1, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_RDATA">out, 32, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_RRESP">out, 2, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_BVALID">out, 1, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_BREADY">in, 1, s_axi, voicerec_io, pointer</column>
-<column name="s_axi_voicerec_io_BRESP">out, 2, s_axi, voicerec_io, pointer</column>
 <column name="ap_clk">in, 1, ap_ctrl_hs, voicerec, return value</column>
-<column name="ap_rst_n">in, 1, ap_ctrl_hs, voicerec, return value</column>
-<column name="interrupt">out, 1, ap_ctrl_hs, voicerec, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, voicerec, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, voicerec, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, voicerec, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, voicerec, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, voicerec, return value</column>
+<column name="ap_return">out, 32, ap_ctrl_hs, voicerec, return value</column>
+<column name="new_sample">in, 32, ap_none, new_sample, pointer</column>
 </table>
 </item>
 </section>

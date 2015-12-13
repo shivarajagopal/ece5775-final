@@ -11,8 +11,10 @@ set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
 set FloatingPointFlag 1
 set FftOrFirFlag 0
-set NewDSPMapping 0
-set ResetLevelFlag 0
+set NbRWValue 0
+set NewDSPMapping 1
+set HasDSPModule 0
+set ResetLevelFlag 1
 set ResetStyle "control"
 set ResetSyncFlag 1
 set ResetRegisterFlag 0
@@ -38,10 +40,10 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
-set SourceFiles {sc {} c {../../voicerec.cpp ../../neuralNetworkSynth.cpp}}
+set SourceFiles {sc {} c {../../neuralNetworkSynth.cpp ../../voicerec.cpp}}
 set SourceFlags {sc {} c {{} {}}}
-set DirectiveFile {C:/Users/rz252/Desktop/tjp79/ece5775-final/combined/float/voicerec.prj/solution1/solution1.directive}
-set TBFiles {verilog {../../voicerec_test.cpp ../../data} bc {../../voicerec_test.cpp ../../data} sc {../../voicerec_test.cpp ../../data} vhdl {../../voicerec_test.cpp ../../data} c {} cas {../../voicerec_test.cpp ../../data}}
+set DirectiveFile {/home/student/svr24/ece5775/final_proj/combined/float/voicerec.prj/solution1/solution1.directive}
+set TBFiles {verilog {../../data ../../voicerec_test.cpp} bc {../../data ../../voicerec_test.cpp} sc {../../data ../../voicerec_test.cpp} vhdl {../../data ../../voicerec_test.cpp} c {} cas {../../data ../../voicerec_test.cpp}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
@@ -54,3 +56,4 @@ set TBTVFileNotFound ""
 set AppFile "../vivado_hls.app"
 set ApsFile "solution1.aps"
 set AvePath "../.."
+set HPFPO "0"

@@ -5,15 +5,15 @@ set isPipelined 0
 set pipeline_type none
 set FunctionProtocol ap_ctrl_hs
 set isOneStateSeq 0
-set C_modelName voicerec_feedForward
+set C_modelName {voicerec_feedForward}
 set C_modelType { void 0 }
 set C_modelArgList { 
 	{ pattern float 32 regular {array 882 { 1 3 } 1 1 }  }
 	{ output_r float 32 regular {array 4 { 0 3 } 0 1 } {global 1}  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "pattern", "interface" : "memory", "bitwidth" : 32} , 
- 	{ "Name" : "output_r", "interface" : "memory", "bitwidth" : 32,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "output","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 3,"step" : 1}]}]}],"extern" : 0} ]}
+	{ "Name" : "pattern", "interface" : "memory", "bitwidth" : 32 ,"direction" : "READONLY" } , 
+ 	{ "Name" : "output_r", "interface" : "memory", "bitwidth" : 32 ,"direction" : "WRITEONLY" ,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "output","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 3,"step" : 1}]}]}],"extern" : 0} ]}
 # RTL Port declarations: 
 set portNum 13
 set portList { 

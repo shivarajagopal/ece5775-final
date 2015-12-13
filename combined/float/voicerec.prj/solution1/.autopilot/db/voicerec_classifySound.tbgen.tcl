@@ -5,13 +5,13 @@ set isPipelined 0
 set pipeline_type none
 set FunctionProtocol ap_ctrl_hs
 set isOneStateSeq 0
-set C_modelName voicerec_classifySound
+set C_modelName {voicerec_classifySound}
 set C_modelType { int 32 }
 set C_modelArgList { 
 	{ result float 32 regular {array 882 { 1 3 } 1 1 } {global 0}  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "result", "interface" : "memory", "bitwidth" : 32,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "result","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 62,"step" : 1},{"low" : 0,"up" : 13,"step" : 1}]}]}],"extern" : 0} , 
+	{ "Name" : "result", "interface" : "memory", "bitwidth" : 32 ,"direction" : "READONLY" ,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "result","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 62,"step" : 1},{"low" : 0,"up" : 13,"step" : 1}]}]}],"extern" : 0} , 
  	{ "Name" : "ap_return", "interface" : "wire", "bitwidth" : 32} ]}
 # RTL Port declarations: 
 set portNum 10
