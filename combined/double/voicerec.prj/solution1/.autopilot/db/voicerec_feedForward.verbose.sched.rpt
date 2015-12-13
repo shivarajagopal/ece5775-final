@@ -1,0 +1,1482 @@
+
+
+================================================================
+== Vivado HLS Report for 'voicerec_feedForward'
+================================================================
+* Date:           Wed Dec  9 22:20:26 2015
+
+* Version:        2015.3 (Build 1244743 on Sun May 31 20:30:40 PM 2015)
+* Project:        voicerec.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.62|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  247418|  247418|  247418|  247418|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+--------+--------+----------+-----------+-----------+------+----------+
+        |             |     Latency     | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min  |   max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+--------+--------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    1764|    1764|         2|          -|          -|   882|    no    |
+        |- Loop 2     |  244275|  244275|      9771|          -|          -|    25|    no    |
+        | + Loop 2.1  |    9713|    9713|        11|          -|          -|   883|    no    |
+        |- Loop 3     |    1376|    1376|       344|          -|          -|     4|    no    |
+        | + Loop 3.1  |     286|     286|        11|          -|          -|    26|    no    |
+        +-------------+--------+--------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 139
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond4)
+	4  / (exitcond4)
+3 --> 
+	2  / true
+4 --> 
+	72  / (exitcond3)
+	5  / (!exitcond3)
+5 --> 
+	6  / (!exitcond2)
+	16  / (exitcond2)
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	5  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	4  / true
+72 --> 
+	73  / (!exitcond1)
+73 --> 
+	74  / (!exitcond)
+	84  / (exitcond)
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	78  / true
+78 --> 
+	79  / true
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	73  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	88  / true
+88 --> 
+	89  / true
+89 --> 
+	90  / true
+90 --> 
+	91  / true
+91 --> 
+	92  / true
+92 --> 
+	93  / true
+93 --> 
+	94  / true
+94 --> 
+	95  / true
+95 --> 
+	96  / true
+96 --> 
+	97  / true
+97 --> 
+	98  / true
+98 --> 
+	99  / true
+99 --> 
+	100  / true
+100 --> 
+	101  / true
+101 --> 
+	102  / true
+102 --> 
+	103  / true
+103 --> 
+	104  / true
+104 --> 
+	105  / true
+105 --> 
+	106  / true
+106 --> 
+	107  / true
+107 --> 
+	108  / true
+108 --> 
+	109  / true
+109 --> 
+	110  / true
+110 --> 
+	111  / true
+111 --> 
+	112  / true
+112 --> 
+	113  / true
+113 --> 
+	114  / true
+114 --> 
+	115  / true
+115 --> 
+	116  / true
+116 --> 
+	117  / true
+117 --> 
+	118  / true
+118 --> 
+	119  / true
+119 --> 
+	120  / true
+120 --> 
+	121  / true
+121 --> 
+	122  / true
+122 --> 
+	123  / true
+123 --> 
+	124  / true
+124 --> 
+	125  / true
+125 --> 
+	126  / true
+126 --> 
+	127  / true
+127 --> 
+	128  / true
+128 --> 
+	129  / true
+129 --> 
+	130  / true
+130 --> 
+	131  / true
+131 --> 
+	132  / true
+132 --> 
+	133  / true
+133 --> 
+	134  / true
+134 --> 
+	135  / true
+135 --> 
+	136  / true
+136 --> 
+	137  / true
+137 --> 
+	138  / true
+138 --> 
+	139  / true
+139 --> 
+	72  / true
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: stg_140 [1/1] 1.57ns
+:0  br label %1
+
+
+ <State 2>: 3.64ns
+ST_2: j [1/1] 0.00ns
+:0  %j = phi i10 [ 0, %0 ], [ %j_1, %2 ]
+
+ST_2: exitcond4 [1/1] 2.07ns
+:1  %exitcond4 = icmp eq i10 %j, -142
+
+ST_2: empty [1/1] 0.00ns
+:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 882, i64 882, i64 882)
+
+ST_2: j_1 [1/1] 1.84ns
+:3  %j_1 = add i10 %j, 1
+
+ST_2: stg_145 [1/1] 1.57ns
+:4  br i1 %exitcond4, label %.preheader5, label %2
+
+ST_2: tmp [1/1] 0.00ns
+:0  %tmp = zext i10 %j to i64
+
+ST_2: pattern_addr [1/1] 0.00ns
+:1  %pattern_addr = getelementptr [882 x float]* %pattern, i64 0, i64 %tmp
+
+ST_2: pattern_load [2/2] 2.71ns
+:2  %pattern_load = load float* %pattern_addr, align 4
+
+
+ <State 3>: 5.42ns
+ST_3: pattern_load [1/2] 2.71ns
+:2  %pattern_load = load float* %pattern_addr, align 4
+
+ST_3: input_addr [1/1] 0.00ns
+:3  %input_addr = getelementptr inbounds [883 x float]* @input_r, i64 0, i64 %tmp
+
+ST_3: stg_151 [1/1] 2.71ns
+:4  store float %pattern_load, float* %input_addr, align 4
+
+ST_3: stg_152 [1/1] 0.00ns
+:5  br label %1
+
+
+ <State 4>: 3.48ns
+ST_4: j1 [1/1] 0.00ns
+.preheader5:0  %j1 = phi i5 [ %j_2, %6 ], [ 0, %1 ]
+
+ST_4: exitcond3 [1/1] 1.91ns
+.preheader5:1  %exitcond3 = icmp eq i5 %j1, -7
+
+ST_4: empty_9 [1/1] 0.00ns
+.preheader5:2  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 25, i64 25, i64 25)
+
+ST_4: j_2 [1/1] 1.72ns
+.preheader5:3  %j_2 = add i5 %j1, 1
+
+ST_4: stg_157 [1/1] 1.57ns
+.preheader5:4  br i1 %exitcond3, label %.preheader, label %3
+
+ST_4: tmp_2 [1/1] 0.00ns
+:0  %tmp_2 = zext i5 %j1 to i64
+
+ST_4: hidden_addr [1/1] 0.00ns
+:1  %hidden_addr = getelementptr inbounds [26 x float]* @hidden, i64 0, i64 %tmp_2
+
+ST_4: stg_160 [1/1] 2.39ns
+:2  store float 0.000000e+00, float* %hidden_addr, align 4
+
+ST_4: tmp_2_trn_cast [1/1] 0.00ns
+:3  %tmp_2_trn_cast = zext i5 %j1 to i15
+
+ST_4: stg_162 [1/1] 1.57ns
+:4  br label %4
+
+
+ <State 5>: 6.92ns
+ST_5: tmp_3 [1/1] 0.00ns
+:0  %tmp_3 = phi float [ 0.000000e+00, %3 ], [ %tmp_11, %5 ]
+
+ST_5: k [1/1] 0.00ns
+:1  %k = phi i10 [ 0, %3 ], [ %k_1, %5 ]
+
+ST_5: phi_mul [1/1] 0.00ns
+:2  %phi_mul = phi i15 [ 0, %3 ], [ %next_mul, %5 ]
+
+ST_5: exitcond2 [1/1] 2.07ns
+:3  %exitcond2 = icmp eq i10 %k, -141
+
+ST_5: empty_10 [1/1] 0.00ns
+:4  %empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 883, i64 883, i64 883)
+
+ST_5: k_1 [1/1] 1.84ns
+:5  %k_1 = add i10 %k, 1
+
+ST_5: stg_169 [1/1] 0.00ns
+:6  br i1 %exitcond2, label %6, label %5
+
+ST_5: tmp_1 [1/1] 0.00ns
+:0  %tmp_1 = zext i10 %k to i64
+
+ST_5: input_addr_1 [1/1] 0.00ns
+:1  %input_addr_1 = getelementptr inbounds [883 x float]* @input_r, i64 0, i64 %tmp_1
+
+ST_5: input_load [2/2] 2.71ns
+:2  %input_load = load float* %input_addr_1, align 4
+
+ST_5: next_mul [1/1] 1.96ns
+:3  %next_mul = add i15 %phi_mul, 25
+
+ST_5: weightIH_addr2 [1/1] 1.96ns
+:4  %weightIH_addr2 = add i15 %tmp_2_trn_cast, %phi_mul
+
+ST_5: tmp_22 [1/1] 0.00ns
+:5  %tmp_22 = zext i15 %weightIH_addr2 to i64
+
+ST_5: weightIH_addr [1/1] 0.00ns
+:6  %weightIH_addr = getelementptr [22075 x float]* @weightIH, i64 0, i64 %tmp_22
+
+ST_5: weightIH_load [2/2] 2.39ns
+:7  %weightIH_load = load float* %weightIH_addr, align 4
+
+ST_5: tmp_5_to_int [1/1] 0.00ns
+:0  %tmp_5_to_int = bitcast float %tmp_3 to i32
+
+ST_5: tmp_5_neg [1/1] 1.37ns
+:1  %tmp_5_neg = xor i32 %tmp_5_to_int, -2147483648
+
+ST_5: tmp_5 [1/1] 0.00ns
+:2  %tmp_5 = bitcast i32 %tmp_5_neg to float
+
+ST_5: tmp_6 [1/1] 5.55ns
+:3  %tmp_6 = fpext float %tmp_5 to double
+
+
+ <State 6>: 8.41ns
+ST_6: input_load [1/2] 2.71ns
+:2  %input_load = load float* %input_addr_1, align 4
+
+ST_6: weightIH_load [1/2] 2.39ns
+:7  %weightIH_load = load float* %weightIH_addr, align 4
+
+ST_6: tmp_10 [4/4] 5.70ns
+:8  %tmp_10 = fmul float %input_load, %weightIH_load
+
+
+ <State 7>: 5.70ns
+ST_7: tmp_10 [3/4] 5.70ns
+:8  %tmp_10 = fmul float %input_load, %weightIH_load
+
+
+ <State 8>: 5.70ns
+ST_8: tmp_10 [2/4] 5.70ns
+:8  %tmp_10 = fmul float %input_load, %weightIH_load
+
+
+ <State 9>: 5.70ns
+ST_9: tmp_10 [1/4] 5.70ns
+:8  %tmp_10 = fmul float %input_load, %weightIH_load
+
+
+ <State 10>: 7.26ns
+ST_10: tmp_11 [5/5] 7.26ns
+:9  %tmp_11 = fadd float %tmp_3, %tmp_10
+
+
+ <State 11>: 7.26ns
+ST_11: tmp_11 [4/5] 7.26ns
+:9  %tmp_11 = fadd float %tmp_3, %tmp_10
+
+
+ <State 12>: 7.26ns
+ST_12: tmp_11 [3/5] 7.26ns
+:9  %tmp_11 = fadd float %tmp_3, %tmp_10
+
+
+ <State 13>: 7.26ns
+ST_13: tmp_11 [2/5] 7.26ns
+:9  %tmp_11 = fadd float %tmp_3, %tmp_10
+
+
+ <State 14>: 7.26ns
+ST_14: tmp_11 [1/5] 7.26ns
+:9  %tmp_11 = fadd float %tmp_3, %tmp_10
+
+
+ <State 15>: 2.39ns
+ST_15: stg_193 [1/1] 2.39ns
+:10  store float %tmp_11, float* %hidden_addr, align 4
+
+ST_15: stg_194 [1/1] 0.00ns
+:11  br label %4
+
+
+ <State 16>: 7.32ns
+ST_16: tmp_7 [18/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 17>: 7.32ns
+ST_17: tmp_7 [17/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 18>: 7.32ns
+ST_18: tmp_7 [16/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 19>: 7.32ns
+ST_19: tmp_7 [15/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 20>: 7.32ns
+ST_20: tmp_7 [14/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 21>: 7.32ns
+ST_21: tmp_7 [13/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 22>: 7.32ns
+ST_22: tmp_7 [12/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 23>: 7.32ns
+ST_23: tmp_7 [11/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 24>: 7.32ns
+ST_24: tmp_7 [10/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 25>: 7.32ns
+ST_25: tmp_7 [9/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 26>: 7.32ns
+ST_26: tmp_7 [8/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 27>: 7.32ns
+ST_27: tmp_7 [7/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 28>: 7.32ns
+ST_28: tmp_7 [6/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 29>: 7.32ns
+ST_29: tmp_7 [5/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 30>: 7.32ns
+ST_30: tmp_7 [4/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 31>: 7.32ns
+ST_31: tmp_7 [3/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 32>: 7.32ns
+ST_32: tmp_7 [2/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 33>: 7.32ns
+ST_33: tmp_7 [1/18] 7.32ns
+:4  %tmp_7 = call double @llvm.exp.f64(double %tmp_6)
+
+
+ <State 34>: 8.23ns
+ST_34: tmp_8 [5/5] 8.23ns
+:5  %tmp_8 = fadd double %tmp_7, 1.000000e+00
+
+
+ <State 35>: 8.23ns
+ST_35: tmp_8 [4/5] 8.23ns
+:5  %tmp_8 = fadd double %tmp_7, 1.000000e+00
+
+
+ <State 36>: 8.23ns
+ST_36: tmp_8 [3/5] 8.23ns
+:5  %tmp_8 = fadd double %tmp_7, 1.000000e+00
+
+
+ <State 37>: 8.23ns
+ST_37: tmp_8 [2/5] 8.23ns
+:5  %tmp_8 = fadd double %tmp_7, 1.000000e+00
+
+
+ <State 38>: 8.23ns
+ST_38: tmp_8 [1/5] 8.23ns
+:5  %tmp_8 = fadd double %tmp_7, 1.000000e+00
+
+
+ <State 39>: 8.62ns
+ST_39: tmp_9 [31/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 40>: 8.62ns
+ST_40: tmp_9 [30/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 41>: 8.62ns
+ST_41: tmp_9 [29/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 42>: 8.62ns
+ST_42: tmp_9 [28/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 43>: 8.62ns
+ST_43: tmp_9 [27/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 44>: 8.62ns
+ST_44: tmp_9 [26/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 45>: 8.62ns
+ST_45: tmp_9 [25/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 46>: 8.62ns
+ST_46: tmp_9 [24/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 47>: 8.62ns
+ST_47: tmp_9 [23/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 48>: 8.62ns
+ST_48: tmp_9 [22/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 49>: 8.62ns
+ST_49: tmp_9 [21/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 50>: 8.62ns
+ST_50: tmp_9 [20/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 51>: 8.62ns
+ST_51: tmp_9 [19/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 52>: 8.62ns
+ST_52: tmp_9 [18/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 53>: 8.62ns
+ST_53: tmp_9 [17/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 54>: 8.62ns
+ST_54: tmp_9 [16/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 55>: 8.62ns
+ST_55: tmp_9 [15/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 56>: 8.62ns
+ST_56: tmp_9 [14/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 57>: 8.62ns
+ST_57: tmp_9 [13/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 58>: 8.62ns
+ST_58: tmp_9 [12/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 59>: 8.62ns
+ST_59: tmp_9 [11/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 60>: 8.62ns
+ST_60: tmp_9 [10/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 61>: 8.62ns
+ST_61: tmp_9 [9/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 62>: 8.62ns
+ST_62: tmp_9 [8/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 63>: 8.62ns
+ST_63: tmp_9 [7/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 64>: 8.62ns
+ST_64: tmp_9 [6/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 65>: 8.62ns
+ST_65: tmp_9 [5/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 66>: 8.62ns
+ST_66: tmp_9 [4/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 67>: 8.62ns
+ST_67: tmp_9 [3/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 68>: 8.62ns
+ST_68: tmp_9 [2/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 69>: 8.62ns
+ST_69: tmp_9 [1/31] 8.62ns
+:6  %tmp_9 = fdiv double 1.000000e+00, %tmp_8
+
+
+ <State 70>: 6.50ns
+ST_70: tmp_s [1/1] 6.50ns
+:7  %tmp_s = fptrunc double %tmp_9 to float
+
+
+ <State 71>: 2.39ns
+ST_71: stg_250 [1/1] 2.39ns
+:8  store float %tmp_s, float* %hidden_addr, align 4
+
+ST_71: stg_251 [1/1] 0.00ns
+:9  br label %.preheader5
+
+
+ <State 72>: 2.39ns
+ST_72: j2 [1/1] 0.00ns
+.preheader:0  %j2 = phi i3 [ %j_3, %10 ], [ 0, %.preheader5 ]
+
+ST_72: exitcond1 [1/1] 1.62ns
+.preheader:1  %exitcond1 = icmp eq i3 %j2, -4
+
+ST_72: empty_11 [1/1] 0.00ns
+.preheader:2  %empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
+
+ST_72: j_3 [1/1] 0.80ns
+.preheader:3  %j_3 = add i3 %j2, 1
+
+ST_72: stg_256 [1/1] 0.00ns
+.preheader:4  br i1 %exitcond1, label %11, label %7
+
+ST_72: tmp_4 [1/1] 0.00ns
+:0  %tmp_4 = zext i3 %j2 to i64
+
+ST_72: output_addr [1/1] 0.00ns
+:1  %output_addr = getelementptr inbounds [4 x float]* @output_r, i64 0, i64 %tmp_4
+
+ST_72: stg_259 [1/1] 2.39ns
+:2  store float 0.000000e+00, float* %output_addr, align 4
+
+ST_72: tmp_4_trn_cast [1/1] 0.00ns
+:3  %tmp_4_trn_cast = zext i3 %j2 to i8
+
+ST_72: stg_261 [1/1] 1.57ns
+:4  br label %8
+
+ST_72: stg_262 [1/1] 0.00ns
+:0  ret void
+
+
+ <State 73>: 6.92ns
+ST_73: tmp_12 [1/1] 0.00ns
+:0  %tmp_12 = phi float [ 0.000000e+00, %7 ], [ %tmp_21, %9 ]
+
+ST_73: k3 [1/1] 0.00ns
+:1  %k3 = phi i5 [ 0, %7 ], [ %k_2, %9 ]
+
+ST_73: exitcond [1/1] 1.91ns
+:2  %exitcond = icmp eq i5 %k3, -6
+
+ST_73: empty_12 [1/1] 0.00ns
+:3  %empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 26, i64 26, i64 26)
+
+ST_73: k_2 [1/1] 1.72ns
+:4  %k_2 = add i5 %k3, 1
+
+ST_73: stg_268 [1/1] 0.00ns
+:5  br i1 %exitcond, label %10, label %9
+
+ST_73: tmp_19 [1/1] 0.00ns
+:0  %tmp_19 = zext i5 %k3 to i64
+
+ST_73: hidden_addr_1 [1/1] 0.00ns
+:1  %hidden_addr_1 = getelementptr inbounds [26 x float]* @hidden, i64 0, i64 %tmp_19
+
+ST_73: hidden_load [2/2] 2.39ns
+:2  %hidden_load = load float* %hidden_addr_1, align 4
+
+ST_73: tmp_23 [1/1] 0.00ns
+:3  %tmp_23 = call i7 @_ssdm_op_BitConcatenate.i7.i5.i2(i5 %k3, i2 0)
+
+ST_73: weightHO_addr3_cast [1/1] 0.00ns
+:4  %weightHO_addr3_cast = zext i7 %tmp_23 to i8
+
+ST_73: weightHO_addr4 [1/1] 1.72ns
+:5  %weightHO_addr4 = add i8 %tmp_4_trn_cast, %weightHO_addr3_cast
+
+ST_73: tmp_24 [1/1] 0.00ns
+:6  %tmp_24 = zext i8 %weightHO_addr4 to i64
+
+ST_73: weightHO_addr [1/1] 0.00ns
+:7  %weightHO_addr = getelementptr [104 x float]* @weightHO, i64 0, i64 %tmp_24
+
+ST_73: weightHO_load [2/2] 2.39ns
+:8  %weightHO_load = load float* %weightHO_addr, align 4
+
+ST_73: tmp_13_to_int [1/1] 0.00ns
+:0  %tmp_13_to_int = bitcast float %tmp_12 to i32
+
+ST_73: tmp_13_neg [1/1] 1.37ns
+:1  %tmp_13_neg = xor i32 %tmp_13_to_int, -2147483648
+
+ST_73: tmp_13 [1/1] 0.00ns
+:2  %tmp_13 = bitcast i32 %tmp_13_neg to float
+
+ST_73: tmp_14 [1/1] 5.55ns
+:3  %tmp_14 = fpext float %tmp_13 to double
+
+
+ <State 74>: 8.09ns
+ST_74: hidden_load [1/2] 2.39ns
+:2  %hidden_load = load float* %hidden_addr_1, align 4
+
+ST_74: weightHO_load [1/2] 2.39ns
+:8  %weightHO_load = load float* %weightHO_addr, align 4
+
+ST_74: tmp_20 [4/4] 5.70ns
+:9  %tmp_20 = fmul float %hidden_load, %weightHO_load
+
+
+ <State 75>: 5.70ns
+ST_75: tmp_20 [3/4] 5.70ns
+:9  %tmp_20 = fmul float %hidden_load, %weightHO_load
+
+
+ <State 76>: 5.70ns
+ST_76: tmp_20 [2/4] 5.70ns
+:9  %tmp_20 = fmul float %hidden_load, %weightHO_load
+
+
+ <State 77>: 5.70ns
+ST_77: tmp_20 [1/4] 5.70ns
+:9  %tmp_20 = fmul float %hidden_load, %weightHO_load
+
+
+ <State 78>: 7.26ns
+ST_78: tmp_21 [5/5] 7.26ns
+:10  %tmp_21 = fadd float %tmp_12, %tmp_20
+
+
+ <State 79>: 7.26ns
+ST_79: tmp_21 [4/5] 7.26ns
+:10  %tmp_21 = fadd float %tmp_12, %tmp_20
+
+
+ <State 80>: 7.26ns
+ST_80: tmp_21 [3/5] 7.26ns
+:10  %tmp_21 = fadd float %tmp_12, %tmp_20
+
+
+ <State 81>: 7.26ns
+ST_81: tmp_21 [2/5] 7.26ns
+:10  %tmp_21 = fadd float %tmp_12, %tmp_20
+
+
+ <State 82>: 7.26ns
+ST_82: tmp_21 [1/5] 7.26ns
+:10  %tmp_21 = fadd float %tmp_12, %tmp_20
+
+
+ <State 83>: 2.39ns
+ST_83: stg_293 [1/1] 2.39ns
+:11  store float %tmp_21, float* %output_addr, align 4
+
+ST_83: stg_294 [1/1] 0.00ns
+:12  br label %8
+
+
+ <State 84>: 7.32ns
+ST_84: tmp_15 [18/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 85>: 7.32ns
+ST_85: tmp_15 [17/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 86>: 7.32ns
+ST_86: tmp_15 [16/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 87>: 7.32ns
+ST_87: tmp_15 [15/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 88>: 7.32ns
+ST_88: tmp_15 [14/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 89>: 7.32ns
+ST_89: tmp_15 [13/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 90>: 7.32ns
+ST_90: tmp_15 [12/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 91>: 7.32ns
+ST_91: tmp_15 [11/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 92>: 7.32ns
+ST_92: tmp_15 [10/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 93>: 7.32ns
+ST_93: tmp_15 [9/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 94>: 7.32ns
+ST_94: tmp_15 [8/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 95>: 7.32ns
+ST_95: tmp_15 [7/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 96>: 7.32ns
+ST_96: tmp_15 [6/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 97>: 7.32ns
+ST_97: tmp_15 [5/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 98>: 7.32ns
+ST_98: tmp_15 [4/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 99>: 7.32ns
+ST_99: tmp_15 [3/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 100>: 7.32ns
+ST_100: tmp_15 [2/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 101>: 7.32ns
+ST_101: tmp_15 [1/18] 7.32ns
+:4  %tmp_15 = call double @llvm.exp.f64(double %tmp_14)
+
+
+ <State 102>: 8.23ns
+ST_102: tmp_16 [5/5] 8.23ns
+:5  %tmp_16 = fadd double %tmp_15, 1.000000e+00
+
+
+ <State 103>: 8.23ns
+ST_103: tmp_16 [4/5] 8.23ns
+:5  %tmp_16 = fadd double %tmp_15, 1.000000e+00
+
+
+ <State 104>: 8.23ns
+ST_104: tmp_16 [3/5] 8.23ns
+:5  %tmp_16 = fadd double %tmp_15, 1.000000e+00
+
+
+ <State 105>: 8.23ns
+ST_105: tmp_16 [2/5] 8.23ns
+:5  %tmp_16 = fadd double %tmp_15, 1.000000e+00
+
+
+ <State 106>: 8.23ns
+ST_106: tmp_16 [1/5] 8.23ns
+:5  %tmp_16 = fadd double %tmp_15, 1.000000e+00
+
+
+ <State 107>: 8.62ns
+ST_107: tmp_17 [31/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 108>: 8.62ns
+ST_108: tmp_17 [30/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 109>: 8.62ns
+ST_109: tmp_17 [29/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 110>: 8.62ns
+ST_110: tmp_17 [28/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 111>: 8.62ns
+ST_111: tmp_17 [27/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 112>: 8.62ns
+ST_112: tmp_17 [26/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 113>: 8.62ns
+ST_113: tmp_17 [25/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 114>: 8.62ns
+ST_114: tmp_17 [24/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 115>: 8.62ns
+ST_115: tmp_17 [23/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 116>: 8.62ns
+ST_116: tmp_17 [22/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 117>: 8.62ns
+ST_117: tmp_17 [21/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 118>: 8.62ns
+ST_118: tmp_17 [20/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 119>: 8.62ns
+ST_119: tmp_17 [19/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 120>: 8.62ns
+ST_120: tmp_17 [18/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 121>: 8.62ns
+ST_121: tmp_17 [17/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 122>: 8.62ns
+ST_122: tmp_17 [16/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 123>: 8.62ns
+ST_123: tmp_17 [15/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 124>: 8.62ns
+ST_124: tmp_17 [14/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 125>: 8.62ns
+ST_125: tmp_17 [13/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 126>: 8.62ns
+ST_126: tmp_17 [12/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 127>: 8.62ns
+ST_127: tmp_17 [11/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 128>: 8.62ns
+ST_128: tmp_17 [10/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 129>: 8.62ns
+ST_129: tmp_17 [9/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 130>: 8.62ns
+ST_130: tmp_17 [8/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 131>: 8.62ns
+ST_131: tmp_17 [7/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 132>: 8.62ns
+ST_132: tmp_17 [6/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 133>: 8.62ns
+ST_133: tmp_17 [5/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 134>: 8.62ns
+ST_134: tmp_17 [4/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 135>: 8.62ns
+ST_135: tmp_17 [3/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 136>: 8.62ns
+ST_136: tmp_17 [2/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 137>: 8.62ns
+ST_137: tmp_17 [1/31] 8.62ns
+:6  %tmp_17 = fdiv double 1.000000e+00, %tmp_16
+
+
+ <State 138>: 6.50ns
+ST_138: tmp_18 [1/1] 6.50ns
+:7  %tmp_18 = fptrunc double %tmp_17 to float
+
+
+ <State 139>: 2.39ns
+ST_139: stg_350 [1/1] 2.39ns
+:8  store float %tmp_18, float* %output_addr, align 4
+
+ST_139: stg_351 [1/1] 0.00ns
+:9  br label %.preheader
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+	State 134
+	State 135
+	State 136
+	State 137
+	State 138
+	State 139
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

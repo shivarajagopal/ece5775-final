@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="voicerec" xd:componentRef="voicerec" xd:initiationInterval="1714125034" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:returnValue xd:interfaceRef="s_axi_voicerec_ctrl" xd:busTypeRef="axilite" xd:offset="0x10" xd:statusOffset="0x14" xd:dataWidth="32"/>
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_voicerec_ctrl" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="inSound[]" xd:originalName="inSound" xd:direction="inout" xd:interfaceRef="m_axi_voicerec_inSound" xd:busTypeRef="aximm" xd:arraySize="16000" xd:dataWidth="64" xd:bufferDirection="inout"/>
+  <xd:latencyEstimates xd:best-case="1464539" xd:worst-case="1714125033" xd:average-case="177866038"/>
+  <xd:resourceEstimates xd:LUT="25900" xd:FF="16490" xd:BRAM="121" xd:DSP="114"/>
+</xd:acceleratorMap>
