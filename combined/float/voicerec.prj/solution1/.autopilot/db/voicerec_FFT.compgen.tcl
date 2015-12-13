@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 6
+set id 5
 set name voicerec_faddfsub_32ns_32ns_32_5_full_dsp
 set corename simcore_faddfsub
 set op faddfsub
@@ -45,7 +45,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 set op faddfsub
 set corename FAddSub
-if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en} || ${::AESL::PGuard_autocg_hpen})} {
+if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
 eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
     id ${id} \
@@ -70,7 +70,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 8
+set id 7
 set name voicerec_fmul_32ns_32ns_32_4_max_dsp
 set corename simcore_fmul
 set op fmul
@@ -115,7 +115,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 set op fmul
 set corename FMul
-if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en} || ${::AESL::PGuard_autocg_hpen})} {
+if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
 eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
     id ${id} \
@@ -140,7 +140,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 12
+set id 11
 set name voicerec_sdiv_11ns_32ns_32_15_seq
 set corename simcore_sdiv_seq
 set op sdiv
@@ -208,7 +208,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_div, check your pla
 
 
 # Memory (RAM/ROM)  definition:
-set ID 13
+set ID 12
 set MemName voicerec_FFT_cosVec
 set CoreName ap_simcore_mem
 set PortList { 1 }
@@ -288,7 +288,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 14
+set ID 13
 set MemName voicerec_FFT_sinVec
 set CoreName ap_simcore_mem
 set PortList { 1 }
@@ -378,7 +378,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 15 \
+    id 14 \
     name c \
     reset_level 1 \
     sync_rst true \

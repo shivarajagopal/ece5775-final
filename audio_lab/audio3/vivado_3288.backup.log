@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Fri Dec 11 18:11:32 2015
+# Process ID: 2916
+# Log file: C:/Users/rz252/Desktop/test/ece5775-final/audio_lab/audio3/vivado.log
+# Journal file: C:/Users/rz252/Desktop/test/ece5775-final/audio_lab/audio3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/rz252/Desktop/test/ece5775-final/audio_lab/audio3/audio.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rz252/Desktop/test/ece5775-final/audio_lab/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rz252/Desktop/test/ece5775-final/audio_lab/fir.prj/solution1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rz252/Desktop/test/ece5775-final/combined/voicerec.prj/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2014.4/data/ip'.
+open_project: Time (s): cpu = 00:00:57 ; elapsed = 00:00:32 . Memory (MB): peak = 714.691 ; gain = 168.145
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace C:/Users/rz252/Desktop/test/ece5775-final/audio_lab/audio3/audio.sdk -hwspec C:/Users/rz252/Desktop/test/ece5775-final/audio_lab/audio3/audio.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/rz252/Desktop/test/ece5775-final/audio_lab/audio3/audio.sdk -hwspec C:/Users/rz252/Desktop/test/ece5775-final/audio_lab/audio3/audio.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 11 20:27:08 2015...

@@ -124,7 +124,7 @@
 
 <node id="10" bw="6" op_0_bw="6" op_1_bw="0">
 <![CDATA[
-.loopexit:0  %i = phi i6 [ 0, %0 ], [ %i_1, %.preheader ]
+.loopexit:0  %i = phi i6 [ 0, %0 ], [ %i_2, %.preheader ]
 
 ]]></node>
 <StgValue><ssdm name="i"/></StgValue>
@@ -169,10 +169,10 @@
 
 <node id="13" bw="6" op_0_bw="6" op_1_bw="6">
 <![CDATA[
-.loopexit:3  %i_1 = add i6 %i, 1
+.loopexit:3  %i_2 = add i6 %i, 1
 
 ]]></node>
-<StgValue><ssdm name="i_1"/></StgValue>
+<StgValue><ssdm name="i_2"/></StgValue>
 </operation>
 
 <operation id="16" st_id="2" stage="1" lat="1">
@@ -264,10 +264,10 @@
 
 <node id="20" bw="11" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-.preheader.preheader:4  %tmp_8 = sub i11 %p_shl_cast, %p_shl2_cast
+.preheader.preheader:4  %tmp_9 = sub i11 %p_shl_cast, %p_shl2_cast
 
 ]]></node>
-<StgValue><ssdm name="tmp_8"/></StgValue>
+<StgValue><ssdm name="tmp_9"/></StgValue>
 </operation>
 
 <operation id="22" st_id="2" stage="1" lat="1">
@@ -280,7 +280,7 @@
 
 <node id="21" bw="12" op_0_bw="11">
 <![CDATA[
-.preheader.preheader:5  %result_addr1_cast = sext i11 %tmp_8 to i12
+.preheader.preheader:5  %result_addr1_cast = sext i11 %tmp_9 to i12
 
 ]]></node>
 <StgValue><ssdm name="result_addr1_cast"/></StgValue>
@@ -421,10 +421,10 @@
 
 <node id="31" bw="12" op_0_bw="4">
 <![CDATA[
-:0  %tmp_9_trn_cast = zext i4 %j to i12
+:0  %tmp_1_trn_cast = zext i4 %j to i12
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_trn_cast"/></StgValue>
+<StgValue><ssdm name="tmp_1_trn_cast"/></StgValue>
 </operation>
 
 <operation id="32" st_id="3" stage="1" lat="1">
@@ -437,7 +437,7 @@
 
 <node id="32" bw="12" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-:1  %result_addr2 = add i12 %tmp_9_trn_cast, %result_addr1_cast
+:1  %result_addr2 = add i12 %result_addr1_cast, %tmp_1_trn_cast
 
 ]]></node>
 <StgValue><ssdm name="result_addr2"/></StgValue>
@@ -517,10 +517,10 @@
 
 <node id="37" bw="11" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-:6  %tmp_1 = add i11 %tmp_8, %j_cast3
+:6  %tmp_2 = add i11 %j_cast3, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_1"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 </state>
 
@@ -550,10 +550,10 @@
 
 <node id="38" bw="32" op_0_bw="11">
 <![CDATA[
-:7  %tmp_1_cast = sext i11 %tmp_1 to i32
+:7  %tmp_2_cast = sext i11 %tmp_2 to i32
 
 ]]></node>
-<StgValue><ssdm name="tmp_1_cast"/></StgValue>
+<StgValue><ssdm name="tmp_2_cast"/></StgValue>
 </operation>
 
 <operation id="40" st_id="4" stage="1" lat="1">
@@ -565,10 +565,10 @@
 
 <node id="39" bw="64" op_0_bw="32">
 <![CDATA[
-:8  %tmp_2 = zext i32 %tmp_1_cast to i64
+:8  %tmp_3 = zext i32 %tmp_2_cast to i64
 
 ]]></node>
-<StgValue><ssdm name="tmp_2"/></StgValue>
+<StgValue><ssdm name="tmp_3"/></StgValue>
 </operation>
 
 <operation id="41" st_id="4" stage="1" lat="1">
@@ -580,7 +580,7 @@
 
 <node id="40" bw="10" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-:9  %flatInput_addr = getelementptr inbounds [882 x float]* %flatInput, i64 0, i64 %tmp_2
+:9  %flatInput_addr = getelementptr inbounds [882 x float]* %flatInput, i64 0, i64 %tmp_3
 
 ]]></node>
 <StgValue><ssdm name="flatInput_addr"/></StgValue>
@@ -866,10 +866,10 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="72" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-._crit_edge.i:16  %tmp_9 = fcmp ogt float %max, %second_max
+._crit_edge.i:16  %tmp_6 = fcmp ogt float %max, %second_max
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_6"/></StgValue>
 </operation>
 </state>
 
@@ -914,10 +914,10 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="61" bw="23" op_0_bw="32">
 <![CDATA[
-._crit_edge.i:5  %tmp_3 = trunc i32 %max_to_int to i23
+._crit_edge.i:5  %tmp_1 = trunc i32 %max_to_int to i23
 
 ]]></node>
-<StgValue><ssdm name="tmp_3"/></StgValue>
+<StgValue><ssdm name="tmp_1"/></StgValue>
 </operation>
 
 <operation id="63" st_id="9" stage="1" lat="1">
@@ -944,10 +944,10 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="63" bw="8" op_0_bw="8" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge.i:7  %tmp_4 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %second_max_to_int, i32 23, i32 30)
+._crit_edge.i:7  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %second_max_to_int, i32 23, i32 30)
 
 ]]></node>
-<StgValue><ssdm name="tmp_4"/></StgValue>
+<StgValue><ssdm name="tmp_5"/></StgValue>
 </operation>
 
 <operation id="65" st_id="9" stage="1" lat="1">
@@ -959,10 +959,10 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="64" bw="23" op_0_bw="32">
 <![CDATA[
-._crit_edge.i:8  %tmp_5 = trunc i32 %second_max_to_int to i23
+._crit_edge.i:8  %tmp_4 = trunc i32 %second_max_to_int to i23
 
 ]]></node>
-<StgValue><ssdm name="tmp_5"/></StgValue>
+<StgValue><ssdm name="tmp_4"/></StgValue>
 </operation>
 
 <operation id="66" st_id="9" stage="1" lat="1">
@@ -989,7 +989,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="66" bw="1" op_0_bw="23" op_1_bw="23">
 <![CDATA[
-._crit_edge.i:10  %notrhs = icmp eq i23 %tmp_3, 0
+._crit_edge.i:10  %notrhs = icmp eq i23 %tmp_1, 0
 
 ]]></node>
 <StgValue><ssdm name="notrhs"/></StgValue>
@@ -1004,10 +1004,10 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="67" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-._crit_edge.i:11  %tmp_6 = or i1 %notrhs, %notlhs
+._crit_edge.i:11  %tmp_7 = or i1 %notrhs, %notlhs
 
 ]]></node>
-<StgValue><ssdm name="tmp_6"/></StgValue>
+<StgValue><ssdm name="tmp_7"/></StgValue>
 </operation>
 
 <operation id="69" st_id="9" stage="1" lat="1">
@@ -1019,7 +1019,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="68" bw="1" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-._crit_edge.i:12  %notlhs6 = icmp ne i8 %tmp_4, -1
+._crit_edge.i:12  %notlhs6 = icmp ne i8 %tmp_5, -1
 
 ]]></node>
 <StgValue><ssdm name="notlhs6"/></StgValue>
@@ -1034,7 +1034,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="69" bw="1" op_0_bw="23" op_1_bw="23">
 <![CDATA[
-._crit_edge.i:13  %notrhs7 = icmp eq i23 %tmp_5, 0
+._crit_edge.i:13  %notrhs7 = icmp eq i23 %tmp_4, 0
 
 ]]></node>
 <StgValue><ssdm name="notrhs7"/></StgValue>
@@ -1049,10 +1049,10 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="70" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-._crit_edge.i:14  %tmp_7 = or i1 %notrhs7, %notlhs6
+._crit_edge.i:14  %tmp_8 = or i1 %notrhs7, %notlhs6
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 
 <operation id="72" st_id="9" stage="1" lat="1">
@@ -1064,7 +1064,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="71" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-._crit_edge.i:15  %tmp_s = and i1 %tmp_6, %tmp_7
+._crit_edge.i:15  %tmp_s = and i1 %tmp_7, %tmp_8
 
 ]]></node>
 <StgValue><ssdm name="tmp_s"/></StgValue>
@@ -1079,7 +1079,7 @@ guessClassification.exit:0  ret i32 %guess_i
 
 <node id="73" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-._crit_edge.i:17  %tmp_10 = and i1 %tmp_s, %tmp_9
+._crit_edge.i:17  %tmp_10 = and i1 %tmp_s, %tmp_6
 
 ]]></node>
 <StgValue><ssdm name="tmp_10"/></StgValue>
@@ -1171,7 +1171,7 @@ guessClassification.exit:0  ret i32 %guess_i
 </dataflow>
 <dataflow id="101" from="stg_11" to="i" fromId="11" toId="12">
 </dataflow>
-<dataflow id="102" from="i_1" to="i" fromId="15" toId="12">
+<dataflow id="102" from="i_2" to="i" fromId="15" toId="12">
 <BackEdge/>
 <condition id="49">
 <or_exp><and_exp><literal name="exitcond" val="1"/>
@@ -1193,9 +1193,9 @@ guessClassification.exit:0  ret i32 %guess_i
 </dataflow>
 <dataflow id="112" from="stg_109" to="empty" fromId="109" toId="14">
 </dataflow>
-<dataflow id="113" from="i" to="i_1" fromId="12" toId="15">
+<dataflow id="113" from="i" to="i_2" fromId="12" toId="15">
 </dataflow>
-<dataflow id="115" from="stg_114" to="i_1" fromId="114" toId="15">
+<dataflow id="115" from="stg_114" to="i_2" fromId="114" toId="15">
 </dataflow>
 <dataflow id="116" from="exitcond1" to="stg_16" fromId="13" toId="16">
 </dataflow>
@@ -1215,11 +1215,11 @@ guessClassification.exit:0  ret i32 %guess_i
 </dataflow>
 <dataflow id="128" from="p_shl2" to="p_shl2_cast" fromId="19" toId="20">
 </dataflow>
-<dataflow id="129" from="p_shl_cast" to="tmp_8" fromId="18" toId="21">
+<dataflow id="129" from="p_shl_cast" to="tmp_9" fromId="18" toId="21">
 </dataflow>
-<dataflow id="130" from="p_shl2_cast" to="tmp_8" fromId="20" toId="21">
+<dataflow id="130" from="p_shl2_cast" to="tmp_9" fromId="20" toId="21">
 </dataflow>
-<dataflow id="131" from="tmp_8" to="result_addr1_cast" fromId="21" toId="22">
+<dataflow id="131" from="tmp_9" to="result_addr1_cast" fromId="21" toId="22">
 </dataflow>
 <dataflow id="133" from="voicerec_feedForward" to="stg_24" fromId="132" toId="24">
 </dataflow>
@@ -1272,11 +1272,11 @@ guessClassification.exit:0  ret i32 %guess_i
 </dataflow>
 <dataflow id="156" from="exitcond" to="stg_30" fromId="27" toId="30">
 </dataflow>
-<dataflow id="157" from="j" to="tmp_9_trn_cast" fromId="25" toId="31">
+<dataflow id="157" from="j" to="tmp_1_trn_cast" fromId="25" toId="31">
 </dataflow>
-<dataflow id="158" from="tmp_9_trn_cast" to="result_addr2" fromId="31" toId="32">
+<dataflow id="158" from="result_addr1_cast" to="result_addr2" fromId="22" toId="32">
 </dataflow>
-<dataflow id="159" from="result_addr1_cast" to="result_addr2" fromId="22" toId="32">
+<dataflow id="159" from="tmp_1_trn_cast" to="result_addr2" fromId="31" toId="32">
 </dataflow>
 <dataflow id="160" from="result_addr2" to="result_addr2_cast" fromId="32" toId="33">
 </dataflow>
@@ -1290,21 +1290,21 @@ guessClassification.exit:0  ret i32 %guess_i
 </dataflow>
 <dataflow id="166" from="result_addr" to="result_load" fromId="35" toId="36">
 </dataflow>
-<dataflow id="167" from="tmp_8" to="tmp_1" fromId="21" toId="37">
+<dataflow id="167" from="j_cast3" to="tmp_2" fromId="26" toId="37">
 </dataflow>
-<dataflow id="168" from="j_cast3" to="tmp_1" fromId="26" toId="37">
+<dataflow id="168" from="tmp_9" to="tmp_2" fromId="21" toId="37">
 </dataflow>
 <dataflow id="169" from="result_addr" to="result_load" fromId="35" toId="38">
 </dataflow>
-<dataflow id="170" from="tmp_1" to="tmp_1_cast" fromId="37" toId="39">
+<dataflow id="170" from="tmp_2" to="tmp_2_cast" fromId="37" toId="39">
 </dataflow>
-<dataflow id="171" from="tmp_1_cast" to="tmp_2" fromId="39" toId="40">
+<dataflow id="171" from="tmp_2_cast" to="tmp_3" fromId="39" toId="40">
 </dataflow>
 <dataflow id="172" from="flatInput" to="flatInput_addr" fromId="10" toId="41">
 </dataflow>
 <dataflow id="173" from="stg_163" to="flatInput_addr" fromId="163" toId="41">
 </dataflow>
-<dataflow id="174" from="tmp_2" to="flatInput_addr" fromId="40" toId="41">
+<dataflow id="174" from="tmp_3" to="flatInput_addr" fromId="40" toId="41">
 </dataflow>
 <dataflow id="175" from="result_load" to="stg_42" fromId="38" toId="42">
 </dataflow>
@@ -1406,9 +1406,9 @@ guessClassification.exit:0  ret i32 %guess_i
 </dataflow>
 <dataflow id="218" from="output_addr" to="max" fromId="55" toId="58">
 </dataflow>
-<dataflow id="219" from="max" to="tmp_9" fromId="58" toId="59">
+<dataflow id="219" from="max" to="tmp_6" fromId="58" toId="59">
 </dataflow>
-<dataflow id="220" from="second_max" to="tmp_9" fromId="48" toId="59">
+<dataflow id="220" from="second_max" to="tmp_6" fromId="48" toId="59">
 </dataflow>
 <dataflow id="221" from="max" to="max_to_int" fromId="58" toId="60">
 </dataflow>
@@ -1420,51 +1420,51 @@ guessClassification.exit:0  ret i32 %guess_i
 </dataflow>
 <dataflow id="228" from="stg_227" to="tmp" fromId="227" toId="61">
 </dataflow>
-<dataflow id="229" from="max_to_int" to="tmp_3" fromId="60" toId="62">
+<dataflow id="229" from="max_to_int" to="tmp_1" fromId="60" toId="62">
 </dataflow>
 <dataflow id="230" from="second_max" to="second_max_to_int" fromId="48" toId="63">
 </dataflow>
-<dataflow id="231" from="_ssdm_op_PartSelect.i8.i32.i32.i32" to="tmp_4" fromId="222" toId="64">
+<dataflow id="231" from="_ssdm_op_PartSelect.i8.i32.i32.i32" to="tmp_5" fromId="222" toId="64">
 </dataflow>
-<dataflow id="232" from="second_max_to_int" to="tmp_4" fromId="63" toId="64">
+<dataflow id="232" from="second_max_to_int" to="tmp_5" fromId="63" toId="64">
 </dataflow>
-<dataflow id="233" from="stg_225" to="tmp_4" fromId="225" toId="64">
+<dataflow id="233" from="stg_225" to="tmp_5" fromId="225" toId="64">
 </dataflow>
-<dataflow id="234" from="stg_227" to="tmp_4" fromId="227" toId="64">
+<dataflow id="234" from="stg_227" to="tmp_5" fromId="227" toId="64">
 </dataflow>
-<dataflow id="235" from="second_max_to_int" to="tmp_5" fromId="63" toId="65">
+<dataflow id="235" from="second_max_to_int" to="tmp_4" fromId="63" toId="65">
 </dataflow>
 <dataflow id="236" from="tmp" to="notlhs" fromId="61" toId="66">
 </dataflow>
 <dataflow id="238" from="stg_237" to="notlhs" fromId="237" toId="66">
 </dataflow>
-<dataflow id="239" from="tmp_3" to="notrhs" fromId="62" toId="67">
+<dataflow id="239" from="tmp_1" to="notrhs" fromId="62" toId="67">
 </dataflow>
 <dataflow id="241" from="stg_240" to="notrhs" fromId="240" toId="67">
 </dataflow>
-<dataflow id="242" from="notrhs" to="tmp_6" fromId="67" toId="68">
+<dataflow id="242" from="notrhs" to="tmp_7" fromId="67" toId="68">
 </dataflow>
-<dataflow id="243" from="notlhs" to="tmp_6" fromId="66" toId="68">
+<dataflow id="243" from="notlhs" to="tmp_7" fromId="66" toId="68">
 </dataflow>
-<dataflow id="244" from="tmp_4" to="notlhs6" fromId="64" toId="69">
+<dataflow id="244" from="tmp_5" to="notlhs6" fromId="64" toId="69">
 </dataflow>
 <dataflow id="245" from="stg_237" to="notlhs6" fromId="237" toId="69">
 </dataflow>
-<dataflow id="246" from="tmp_5" to="notrhs7" fromId="65" toId="70">
+<dataflow id="246" from="tmp_4" to="notrhs7" fromId="65" toId="70">
 </dataflow>
 <dataflow id="247" from="stg_240" to="notrhs7" fromId="240" toId="70">
 </dataflow>
-<dataflow id="248" from="notrhs7" to="tmp_7" fromId="70" toId="71">
+<dataflow id="248" from="notrhs7" to="tmp_8" fromId="70" toId="71">
 </dataflow>
-<dataflow id="249" from="notlhs6" to="tmp_7" fromId="69" toId="71">
+<dataflow id="249" from="notlhs6" to="tmp_8" fromId="69" toId="71">
 </dataflow>
-<dataflow id="250" from="tmp_6" to="tmp_s" fromId="68" toId="72">
+<dataflow id="250" from="tmp_7" to="tmp_s" fromId="68" toId="72">
 </dataflow>
-<dataflow id="251" from="tmp_7" to="tmp_s" fromId="71" toId="72">
+<dataflow id="251" from="tmp_8" to="tmp_s" fromId="71" toId="72">
 </dataflow>
 <dataflow id="252" from="tmp_s" to="tmp_10" fromId="72" toId="73">
 </dataflow>
-<dataflow id="253" from="tmp_9" to="tmp_10" fromId="59" toId="73">
+<dataflow id="253" from="tmp_6" to="tmp_10" fromId="59" toId="73">
 </dataflow>
 <dataflow id="254" from="tmp_10" to="guess_1" fromId="73" toId="74">
 </dataflow>

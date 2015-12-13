@@ -6,11 +6,13 @@
 #include "xiicps.h"
 #include <xil_printf.h>
 #include <xparameters.h>
-#include "xfir.h"
+#include "xvoicerec.h"
+#include "xbram.h"
 #include "xuartps.h"
 #include "xscutimer.h"
 #include "xscugic.h"
 
+#define MAX_AMPLITUDE 16777215.0 //max amplitude for audio stream, (2^24)-1
 
 unsigned char IicConfig(unsigned int DeviceIdPS);
 void AudioPllConfig();
@@ -23,61 +25,40 @@ XIicPs Iic;
 typedef short   Xint16;
 typedef long    Xint32;
 
-// HLS FIR HW instance
-XFir HlsFir_left, HlsFir_right;
+// HLS VoiceRec HW instance
+XVoicerec HlsVoiceRec;
 //Interrupt Controller Instance
 XScuGic ScuGic;
 //Global variables used by ISR
-int ResultAvailHlsFir_left, ResultAvailHlsFir_right;
+int ResultAvailHlsVoiceRec;
 
-int hls_fir_init(XFir *hls_firPtr_left, XFir *hls_firPtr_right)
+int hls_voicerec_init(XVoicerec *hls_voiceRecPtr)
 {
-   XFir_Config *cfgPtr_left, *cfgPtr_right;
+   XVoicerec_Config *cfgPtr;
    int status;
 
-   cfgPtr_left = XFir_LookupConfig(XPAR_FIR_LEFT_DEVICE_ID);
-   if (!cfgPtr_left) {
-      print("ERROR: Lookup of Left FIR configuration failed.\n\r");
+   cfgPtr = XVoicerec_LookupConfig(XPAR_VOICEREC_0_DEVICE_ID);
+   if (!cfgPtr) {
+      print("ERROR: Lookup of Voice Rec configuration failed.\n\r");
       return XST_FAILURE;
    }
-   status = XFir_CfgInitialize(hls_firPtr_left, cfgPtr_left);
+   status = XVoicerec_CfgInitialize(hls_voiceRecPtr, cfgPtr);
    if (status != XST_SUCCESS) {
-      print("ERROR: Could not initialize left FIR.\n\r");
-      return XST_FAILURE;
-   }
-
-   cfgPtr_right = XFir_LookupConfig(XPAR_FIR_RIGHT_DEVICE_ID);
-   if (!cfgPtr_right) {
-      print("ERROR: Lookup of Right FIR configuration failed.\n\r");
-      return XST_FAILURE;
-   }
-   status = XFir_CfgInitialize(hls_firPtr_right, cfgPtr_right);
-   if (status != XST_SUCCESS) {
-      print("ERROR: Could not initialize right FIR.\n\r");
+      print("ERROR: Could not initialize Voice Rec.\n\r");
       return XST_FAILURE;
    }
 
    return status;
 }
 
-void hls_fir_left_isr(void *InstancePtr)
+void hls_voicerec_isr(void *InstancePtr)
 {
-     XFir *pAccelerator = (XFir *)InstancePtr;
+     XVoicerec *pAccelerator = (XVoicerec *)InstancePtr;
 
      // clear the local interrupt
-     XFir_InterruptClear(pAccelerator,1);
+     XVoicerec_InterruptClear(pAccelerator,1);
 
-     ResultAvailHlsFir_left = 1;
-}
-
-void hls_fir_right_isr(void *InstancePtr)
-{
-     XFir *pAccelerator = (XFir *)InstancePtr;
-
-     // clear the local interrupt
-     XFir_InterruptClear(pAccelerator,1);
-
-     ResultAvailHlsFir_right = 1;
+     ResultAvailHlsVoiceRec = 1;
 }
 
 int setup_interrupt()
@@ -104,64 +85,130 @@ int setup_interrupt()
      Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,(Xil_ExceptionHandler)XScuGic_InterruptHandler,&ScuGic);
      //Enable the exception handler
      Xil_ExceptionEnable();
-     // Connect the Left FIR ISR to the exception table
-     result = XScuGic_Connect(&ScuGic,XPAR_FABRIC_FIR_LEFT_INTERRUPT_INTR,(Xil_InterruptHandler)hls_fir_left_isr,&HlsFir_left);
+     // Connect the Voice Rec ISR to the exception table
+     result = XScuGic_Connect(&ScuGic,XPAR_FABRIC_VOICEREC_0_INTERRUPT_INTR,(Xil_InterruptHandler)hls_voicerec_isr,&HlsVoiceRec);
      if(result != XST_SUCCESS){
         return result;
      }
-     // Connect the Right FIR ISR to the exception table
-     result = XScuGic_Connect(&ScuGic,XPAR_FABRIC_FIR_RIGHT_INTERRUPT_INTR,(Xil_InterruptHandler)hls_fir_right_isr,&HlsFir_right);
-     if(result != XST_SUCCESS){
-        return result;
-     }
-     // Enable the Left FIR ISR
-     XScuGic_Enable(&ScuGic,XPAR_FABRIC_FIR_LEFT_INTERRUPT_INTR);
-     // Enable the Right FIR ISR
-     XScuGic_Enable(&ScuGic,XPAR_FABRIC_FIR_RIGHT_INTERRUPT_INTR);
+
+     // Enable the Voice Rec ISR
+     XScuGic_Enable(&ScuGic,XPAR_FABRIC_VOICEREC_0_INTERRUPT_INTR);
+
      return XST_SUCCESS;
 }
 
-void filter_or_bypass_input(void)
+void read_audio(unsigned long* left, unsigned long* right) {
+	unsigned long u32Temp;
+
+	do //wait for RX data to become available
+	{
+	  u32Temp = Xil_In32(I2S_STATUS_REG);
+	} while ( u32Temp == 0);
+
+	Xil_Out32(I2S_STATUS_REG, 0x00000001); //Clear data rdy bit
+
+	*left = Xil_In32(I2S_DATA_RX_L_REG);
+	*right = Xil_In32(I2S_DATA_RX_R_REG);
+}
+
+void run_voice_recognition(void)
 {
-  unsigned long u32DataL, u32DataR;
-  unsigned long u32Temp;
+  unsigned long u32DataL, u32DataR, u32Data;
   int sw_check;
+  int switch_state, prev_switch_state;
+  unsigned int sampleNum;
+  unsigned int mem_offset;
+  double audio_sample;
+  u32* raw_data;
+  u32 classification;
+
+  int print_count =0;
+
+  //set initial state of switch SW0
+  sw_check = Xil_In32(XPAR_AXI_GPIO_0_BASEADDR+8);
+  prev_switch_state = sw_check & 0x01;
+  switch_state = prev_switch_state;
 
   while (1)
   {
-    do //wait for RX data to become available
-    {
-      u32Temp = Xil_In32(I2S_STATUS_REG);
-    } while ( u32Temp == 0);
+	//throw data away until switch changes
+	while(switch_state == prev_switch_state)
+	{
+		//read audio data
+        read_audio(&u32DataL, &u32DataR);
 
-    Xil_Out32(I2S_STATUS_REG, 0x00000001); //Clear data rdy bit
+        //send audio data back out
+		Xil_Out32(I2S_DATA_TX_L_REG, u32DataL);
+		Xil_Out32(I2S_DATA_TX_R_REG, u32DataR);
 
-    u32DataL = Xil_In32(I2S_DATA_RX_L_REG);
-    u32DataR = Xil_In32(I2S_DATA_RX_R_REG);
-    sw_check = Xil_In32(XPAR_AXI_GPIO_0_BASEADDR+8);
-    if(sw_check & 01) // SW0=1 then pass the sample through the filter
-    {
-      // send samples after shifting least significant 8 bits as the filter
-      // requires 16 bit input sample
-      XFir_Set_x(&HlsFir_left, u32DataL >> 8);
-      XFir_Set_x(&HlsFir_right, u32DataR >> 8);
-      // Clear done flags
-      ResultAvailHlsFir_left = 0;
-      ResultAvailHlsFir_right = 0;
-      // issue start
-      XFir_Start(&HlsFir_left);
-      XFir_Start(&HlsFir_right);
-      // wait for done interrupt on each channel and then read the corresponding output sample
-        while(!ResultAvailHlsFir_left);
-        u32DataL = XFir_Get_y(&HlsFir_left);
-        while(!ResultAvailHlsFir_right);
-      u32DataR = XFir_Get_y(&HlsFir_right);
-      // shift left by 8 bits as output sample is 16 bit whereas CODEC requires 24 bits
-      u32DataL = u32DataL << 8;
-      u32DataR = u32DataR << 8;
-    }
-    Xil_Out32(I2S_DATA_TX_L_REG, u32DataL);
-    Xil_Out32(I2S_DATA_TX_R_REG, u32DataR);
+		//update switch state
+		sw_check = Xil_In32(XPAR_AXI_GPIO_0_BASEADDR+8);
+		switch_state = sw_check & 0x01;
+
+		//debug print statement
+		if (++print_count == 160000)
+		{
+			print_count = 0;
+			printf("Waiting for switch...\n");
+		}
+	}
+
+	//save new switch state
+	prev_switch_state = switch_state;
+    printf("Switch flipped, recording for 2 seconds...\n");
+
+	//switch has been thrown, record 2 seconds worth of sound data
+	for(sampleNum = 0; sampleNum < 96000; sampleNum ++) {
+
+		//read audio data
+        read_audio(&u32DataL, &u32DataR);
+
+        //only utilize one channel for voice recognition
+        u32Data = u32DataL;
+
+        //send audio data back out
+		Xil_Out32(I2S_DATA_TX_L_REG, u32DataL);
+		Xil_Out32(I2S_DATA_TX_R_REG, u32DataR);
+
+
+		if(sampleNum%6 == 0) //only use every 6th sample
+		{
+            //re-map sample to a double value between 0 and 1
+			audio_sample = ( (double)u32Data ) / MAX_AMPLITUDE;
+
+			//
+
+			//send the sample to the bram
+			mem_offset = sampleNum/6;
+			if(mem_offset%1000==0)
+			{
+				printf("Storing sample %d in BRAM at 0x%08x\n", mem_offset, XPAR_BRAM_0_BASEADDR+mem_offset);
+			}
+			Xil_Out32(XPAR_BRAM_0_BASEADDR+mem_offset, 0xDEADBEEF);
+		}
+
+
+	}
+
+//	for ( mem_offset = 0; mem_offset < 16000; mem_offset++ ){
+//		u32 read0 = Xil_In32(XPAR_BRAM_0_BASEADDR+mem_offset);
+//		u32 read1 = Xil_In32(XPAR_BRAM_0_BASEADDR+mem_offset);
+//		printf("mem offset: %d\n",mem_offset);
+//		printf("read 0x%08x\n", (unsigned int)read0);
+//		printf("read 0x%08x\n", (unsigned int)read1);
+//	}
+
+	//fire up the voice recognition:
+	//print("Firing up voice recognition hardware\n");
+	ResultAvailHlsVoiceRec = 0;
+	XVoicerec_Start(&HlsVoiceRec);
+
+	// wait for done interrupt on each channel and then read the classification
+	printf("Waiting for classification...\n\n");
+	while(!ResultAvailHlsVoiceRec);
+	classification = XVoicerec_Get_return(&HlsVoiceRec);
+    printf("classified as %d\n",(int)classification);
+
   }
 }
 
@@ -184,7 +231,7 @@ int main(void)
   xil_printf("ADAU1761 configured\n\r");
 
   // Setup the FIR instances
-  status=hls_fir_init(&HlsFir_left, &HlsFir_right);
+  status=hls_voicerec_init(&HlsVoiceRec);
     if(status != XST_SUCCESS){
      print("HLS peripheral setup failed\n\r");
      return(-1);
@@ -198,15 +245,12 @@ int main(void)
     }
 
     // Enable Global and instance interrupts
-    XFir_InterruptEnable(&HlsFir_left,1);
-    XFir_InterruptGlobalEnable(&HlsFir_left);
-    XFir_InterruptEnable(&HlsFir_right,1);
-    XFir_InterruptGlobalEnable(&HlsFir_right);
+    XVoicerec_InterruptEnable(&HlsVoiceRec,1);
+    XVoicerec_InterruptGlobalEnable(&HlsVoiceRec);
 
-  ResultAvailHlsFir_left = 0;
-  ResultAvailHlsFir_right = 0;
+  ResultAvailHlsVoiceRec = 0;
 
-  filter_or_bypass_input(); // check SW0 in the function.  If 1 then filter otherwise bypasss
+  run_voice_recognition(); // switch SW0 to record 2 second command
   return 0;
 }
 

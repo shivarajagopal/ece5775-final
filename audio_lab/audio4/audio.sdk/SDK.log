@@ -1,0 +1,182 @@
+02:28:59 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf.
+02:29:05 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+02:30:13 INFO  : BSP Project P/standalone_bsp_0 has been successfully migrated.
+02:32:30 INFO  : Saving repository preferences.
+02:32:30 INFO  : Reading in cores from local repositories: 
+		 C:\Users\rz252\Desktop\tjp79\ece5775-final\combined\float\voicerec.prj\solution1\impl\ip
+02:32:31 INFO  : Cleaning BSP projects in the workspace.
+02:32:33 INFO  : Saving repository preferences.
+02:33:09 INFO  : Refreshed build settings on project TestApp
+02:33:38 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+02:50:09 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+02:50:19 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf.
+02:50:21 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+02:50:21 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+02:50:25 INFO  : Restoring local repository preferences: 
+		 C:\Users\rz252\Desktop\tjp79\ece5775-final\combined\float\voicerec.prj\solution1\impl\ip
+02:52:28 ERROR : Unexpected error while launching program.
+java.lang.IllegalArgumentException: Path for project must have only one segment.
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.resources.WorkspaceRoot.getProject(WorkspaceRoot.java:184)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyCProject(CDebugUtils.java:586)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyProgramPath(CDebugUtils.java:623)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyProgramPath(CDebugUtils.java:675)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:546)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:293)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+02:54:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:54:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:56:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:57:53 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+03:53:22 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf.
+03:53:25 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+03:53:25 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+03:53:42 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1449910298159,  Project:1449904534443
+03:53:42 INFO  : The hardware specification for project 'system_wrapper_hw_platform_0' is different from C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf.
+03:53:42 INFO  : Copied contents of C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf into \system_wrapper_hw_platform_0\system.hdf.
+03:53:43 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+03:53:44 INFO  : Restoring local repository preferences: 
+		 C:\Users\rz252\Desktop\tjp79\ece5775-final\combined\float\voicerec.prj\solution1\impl\ip
+03:54:07 INFO  : 
+03:54:09 INFO  : Updating hardware inferred compiler options for TestApp.
+03:54:09 INFO  : Clearing existing target manager status.
+03:54:11 INFO  : Closing and re-opening the MSS file of ther project standalone_bsp_0
+03:54:12 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+03:59:52 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+03:59:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:05:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:09:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:11:05 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+04:11:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:11:13 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:666)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:605)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:293)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+04:12:09 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:12:23 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf.
+04:12:26 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+04:12:26 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:12:27 INFO  : Restoring local repository preferences: 
+		 C:\Users\rz252\Desktop\tjp79\ece5775-final\combined\float\voicerec.prj\solution1\impl\ip
+04:12:54 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+04:13:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:13:05 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:666)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:605)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:293)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+04:16:16 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:17:22 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf.
+04:17:24 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+04:17:24 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:17:26 INFO  : Restoring local repository preferences: 
+		 C:\Users\rz252\Desktop\tjp79\ece5775-final\combined\float\voicerec.prj\solution1\impl\ip
+04:20:14 ERROR : FPGA Configuration failed.Failed to download the bit file
+
+    Failed to configure device 2 (xc7z020) with bitstream C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit
+    Reason: Programming initialization failed
+
+
+04:20:54 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+04:21:54 INFO  : Processor reset is completed for ps7_cortexa9_1
+04:21:55 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:666)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:605)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:293)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+04:26:13 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+21:13:25 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf.
+21:13:27 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+21:13:28 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+21:13:29 INFO  : Restoring local repository preferences: 
+		 C:\Users\rz252\Desktop\tjp79\ece5775-final\combined\float\voicerec.prj\solution1\impl\ip
+21:15:43 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+21:16:08 INFO  : ps7_init is completed.
+21:16:08 INFO  : Processor reset is completed for ps7_cortexa9_1
+21:16:44 INFO  : Processor reset is completed for ps7_cortexa9_1
+21:18:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:21:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:21:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:22:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:24:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:26:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:28:55 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+21:32:37 INFO  : ps7_init is completed.
+21:32:37 INFO  : ps7_post_config is completed.
+21:32:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:42:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:48:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:36:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:42:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:43:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:46:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:47:34 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:47:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:47:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:50:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:51:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:57:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:59:19 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:59:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:00:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:00:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:03:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:03:52 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+23:04:14 INFO  : ps7_init is completed.
+23:04:14 INFO  : ps7_post_config is completed.
+23:04:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:10:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:13:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:15:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:34:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:41:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:55:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:55:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:17:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:18:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:19:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:29:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:40:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:00:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:01:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:04:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:05:31 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

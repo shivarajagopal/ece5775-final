@@ -5,13 +5,13 @@ set isPipelined 0
 set pipeline_type none
 set FunctionProtocol ap_ctrl_hs
 set isOneStateSeq 0
-set C_modelName {voicerec_FFT}
+set C_modelName voicerec_FFT
 set C_modelType { void 0 }
 set C_modelArgList { 
 	{ c float 32 regular {array 512 { 2 2 } 1 1 }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "c", "interface" : "memory", "bitwidth" : 32 ,"direction" : "READWRITE" } ]}
+	{ "Name" : "c", "interface" : "memory", "bitwidth" : 32} ]}
 # RTL Port declarations: 
 set portNum 16
 set portList { 

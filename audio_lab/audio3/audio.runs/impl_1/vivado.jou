@@ -2,9 +2,9 @@
 # Vivado v2014.4 (64-bit)
 # SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
 # IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
-# Start of session at: Fri Dec 11 09:20:19 2015
-# Process ID: 5136
-# Log file: C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.runs/impl_1/system_wrapper.vdi
-# Journal file: C:/Users/rz252/Desktop/tjp79/ece5775-final-master/audio_lab/audio3/audio.runs/impl_1\vivado.jou
+# Start of session at: Fri Dec 11 22:00:42 2015
+# Process ID: 4868
+# Log file: C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio3/audio.runs/impl_1/system_wrapper.vdi
+# Journal file: C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio3/audio.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source system_wrapper.tcl -notrace

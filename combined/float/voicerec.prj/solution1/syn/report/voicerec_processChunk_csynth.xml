@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2015.2</Version>
+<Version>2014.4</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -17,7 +17,7 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>9.58</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.09</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -85,14 +85,16 @@
 <Resources>
 <BRAM_18K>7</BRAM_18K>
 <DSP48E>35</DSP48E>
-<FF>5321</FF>
-<LUT>8193</LUT>
+<FF>5359</FF>
+<LUT>8527</LUT>
+<SLICE>0</SLICE>
 </Resources>
 <AvailableResources>
 <BRAM_18K>280</BRAM_18K>
 <DSP48E>220</DSP48E>
 <FF>106400</FF>
 <LUT>53200</LUT>
+<SLICE>13300</SLICE>
 </AvailableResources>
 </AreaEstimates>
 
@@ -219,8 +221,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>tmp</name>
-<Object>tmp</Object>
+<name>tmp_105</name>
+<Object>tmp_105</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

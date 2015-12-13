@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Sat Dec 12 21:12:14 2015
+# Process ID: 4100
+# Log file: C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/vivado.log
+# Journal file: C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.xpr
+launch_sdk -workspace C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf
