@@ -10,17 +10,10 @@
 
 #include "voicerec.h"
 #include "timer.h"
-#include "testSound.h"
-#include "test_forward2.h"
-#include "test_backup.h"
-#include "test_reverse.h"
-#include "test_reverse2.h"
-#include "test_right2.h"
-#include "test_left2.h"
-#include "test_left3.h"
-#include "leftTest.h"
-#include "rightTest.h"
-#include "forwardTest.h"
+#include "data/test/test_forward2.h"
+#include "data/test/test_reverse2.h"
+#include "data/test/test_right2.h"
+#include "data/test/test_left2.h"
 #include "neuralNetworkSynth.h"
 
 //------------------------------------------------------------------------
@@ -61,11 +54,11 @@ int main(int argc, char *argv[])
   for (i = 0; i < 16000; i++) classification = voicerec(&left25[i]);
 
   std::cout << "should be 3 ****************" << "\n";
-  for (i = 0; i < 16000; i++) classification = voicerec(&reverse1[i]);
-  for (i = 0; i < 16000; i++) classification = voicerec(&reverse2[i]);
-  for (i = 0; i < 16000; i++) classification = voicerec(&reverse3[i]);
-  for (i = 0; i < 16000; i++) classification = voicerec(&reverse4[i]);
-  for (i = 0; i < 16000; i++) classification = voicerec(&reverse5[i]);
+  for (i = 0; i < 16000; i++) classification = voicerec(&reverse21[i]);
+  for (i = 0; i < 16000; i++) classification = voicerec(&reverse22[i]);
+  for (i = 0; i < 16000; i++) classification = voicerec(&reverse23[i]);
+  for (i = 0; i < 16000; i++) classification = voicerec(&reverse24[i]);
+  for (i = 0; i < 16000; i++) classification = voicerec(&reverse25[i]);
 
   timer.stop();
 
