@@ -32,6 +32,8 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\rz252\Desktop\tjp79\ece5775-final\combined\float"/>
+			<item value="C:\Users\rz252\Desktop\tjp79\ece5775-final\combined\float\data"/>
 			<item value="C:\Users\rz252\Desktop\tjp79\ece5775-final\audio_lab"/>
 		</list>
 	</section>

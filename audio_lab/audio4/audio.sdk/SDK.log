@@ -145,3 +145,38 @@ java.lang.RuntimeException: Failed to download ELF file
 21:32:37 INFO  : Processor reset is completed for ps7_cortexa9_0
 21:42:41 INFO  : Processor reset is completed for ps7_cortexa9_0
 21:48:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:36:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:42:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:43:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:46:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:47:34 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:47:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:47:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:50:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:51:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:57:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:59:19 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:59:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:00:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:00:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:03:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:03:52 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+23:04:14 INFO  : ps7_init is completed.
+23:04:14 INFO  : ps7_post_config is completed.
+23:04:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:10:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:13:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:15:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:34:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:41:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:55:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:55:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:17:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:18:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:19:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:29:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:40:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:00:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:01:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:04:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:05:31 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

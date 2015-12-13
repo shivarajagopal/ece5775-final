@@ -23,7 +23,8 @@ zed_testapp.o zed_testapp.d: ../zed_testapp.c ../zed_audio.h \
  ../../standalone_bsp_0/ps7_cortexa9_0/include/xscutimer_hw.h \
  ../../standalone_bsp_0/ps7_cortexa9_0/include/xscugic.h \
  ../../standalone_bsp_0/ps7_cortexa9_0/include/xscugic_hw.h \
- ../../standalone_bsp_0/ps7_cortexa9_0/include/xil_exception.h
+ ../../standalone_bsp_0/ps7_cortexa9_0/include/xil_exception.h \
+ ../test_forward2.h ../test_right2.h ../test_left2.h ../test_reverse2.h
 
 ../zed_audio.h:
 
@@ -76,3 +77,11 @@ zed_testapp.o zed_testapp.d: ../zed_testapp.c ../zed_audio.h \
 ../../standalone_bsp_0/ps7_cortexa9_0/include/xscugic_hw.h:
 
 ../../standalone_bsp_0/ps7_cortexa9_0/include/xil_exception.h:
+
+../test_forward2.h:
+
+../test_right2.h:
+
+../test_left2.h:
+
+../test_reverse2.h:

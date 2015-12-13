@@ -11,6 +11,14 @@
 #include "xscutimer.h"
 #include "xscugic.h"
 
+#include "test_forward2.h"
+#include "test_right2.h"
+#include "test_left2.h"
+#include "test_reverse2.h"
+
+//#define USE_LIVE_AUDIO
+float* pregen = reverse23;
+
 #define MAX_AMPLITUDE 16777215.0 //max amplitude for audio stream, (2^24)-1
 
 unsigned char IicConfig(unsigned int DeviceIdPS);
@@ -135,9 +143,9 @@ void run_voice_recognition(void)
 		//read audio data
         read_audio(&u32DataL, &u32DataR);
 
-        //send audio data back out
-		Xil_Out32(I2S_DATA_TX_L_REG, u32DataL);
-		Xil_Out32(I2S_DATA_TX_R_REG, u32DataR);
+        //send no audio out
+		Xil_Out32(I2S_DATA_TX_L_REG, 0);
+		Xil_Out32(I2S_DATA_TX_R_REG, 0);
 
 		//update switch state
 		sw_check = Xil_In32(XPAR_AXI_GPIO_0_BASEADDR+8);
@@ -162,18 +170,26 @@ void run_voice_recognition(void)
         read_audio(&u32DataL, &u32DataR);
 
         //only utilize one channel for voice recognition
-        u32Data = u32DataL;
+		#ifdef USE_LIVE_AUDIO
+        	u32Data = u32DataR;
+		#else
+        	u32Data = (u32)(MAX_AMPLITUDE * pregen[sampleNum/6]);
+		#endif
 
         //send audio data back out
-		Xil_Out32(I2S_DATA_TX_L_REG, u32DataL);
-		Xil_Out32(I2S_DATA_TX_R_REG, u32DataR);
+		Xil_Out32(I2S_DATA_TX_L_REG, u32Data);
+		Xil_Out32(I2S_DATA_TX_R_REG, u32Data);
 
 
 		if(sampleNum%6 == 0) //only use every 6th sample
 		{
             //re-map sample to a double value between 0 and 1
 			audio_float = ( (float)u32Data ) / MAX_AMPLITUDE;
-			audio_sample = (u32*)(&audio_float);
+			#ifdef USE_LIVE_AUDIO
+				audio_sample = (u32*)(&audio_float);
+			#else
+				audio_sample = (u32*)(&pregen[sampleNum/6]);
+			#endif
 
 			//send sample to voice rec system
 			XVoicerec_Set_new_sample(&HlsVoiceRec, *audio_sample);
@@ -189,7 +205,19 @@ void run_voice_recognition(void)
 
 			if(sampleNum/6 == 15999) {
 				classification = XVoicerec_Get_return(&HlsVoiceRec);
-				printf("classified as %d\n",(int)classification);
+//				printf("Classified as %d\n\n", (int)classification);
+				switch(classification) {
+				case 0:	 printf("Command Recognized:\tGo Forward.\n\n");
+						 break;
+				case 1:	 printf("Command Recognized:\tTurn Right.\n\n");
+						 break;
+				case 2:	 printf("Command Recognized:\tTurn Left.\n\n");
+						 break;
+				case 3:	 printf("Command Recognized:\tReverse.\n\n");
+						 break;
+				default: printf("Invalid classification\n\n");
+						 break;
+				}
 			}
 
 		}
