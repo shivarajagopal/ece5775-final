@@ -117,7 +117,7 @@ void run_voice_recognition(void)
   int switch_state, prev_switch_state;
   unsigned int sampleNum;
   float audio_sample;
-  u32 classification;
+  u32 classification;         //voice rec for debugging
 
   int print_count =0;
 
@@ -203,8 +203,6 @@ int main(void)
 {
   int status;
 
-  printf("Starting up...");
-
   //Configure the IIC data structure
   IicConfig(XPAR_XIICPS_0_DEVICE_ID);
 
@@ -216,7 +214,7 @@ int main(void)
   //enables the HP jack too.
   AudioConfigureJacks();
 
-  printf("ADAU1761 configured\n\r");
+  xil_printf("ADAU1761 configured\n\r");
 
   // Setup the FIR instances
   status=hls_voicerec_init(&HlsVoiceRec);

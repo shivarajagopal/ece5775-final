@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Sat Dec 12 02:23:55 2015
+# Process ID: 5784
+# Log file: C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/vivado.log
+# Journal file: C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.xpr
+launch_sdk -workspace C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf
+remove_files C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.srcs/sources_1/bd/system/ip/system_xlconcat_0_0/system_xlconcat_0_0.upgrade_log
+file delete -force C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.srcs/sources_1/bd/system/ip/system_xlconcat_0_0/system_xlconcat_0_0.upgrade_log
+set_property target_constrs_file C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.srcs/constrs_1/imports/audio_lab/zed_audio_constraints.xdc [current_fileset -constrset]
+file mkdir C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk
+file copy -force C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.runs/impl_1/system_wrapper.sysdef C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf
+open_bd_design {C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.srcs/sources_1/bd/system/system.bd}
+reset_target all [get_files  C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.srcs/sources_1/bd/system/system.bd]
+generate_target all [get_files  C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.srcs/sources_1/bd/system/system.bd]
+update_ip_catalog -rebuild
+validate_bd_design
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:hls:voicerec:1.0 [get_ips  system_voicerec_0_1]
+report_ip_status -name ip_status 
+make_wrapper -files [get_files C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.srcs/sources_1/bd/system/system.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+file copy -force C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.runs/impl_1/system_wrapper.sysdef C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf
+launch_sdk -workspace C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf
+launch_sdk -workspace C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf

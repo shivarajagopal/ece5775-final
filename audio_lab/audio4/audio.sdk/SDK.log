@@ -124,3 +124,22 @@ java.lang.RuntimeException: Failed to download ELF file
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
 04:26:13 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+21:13:25 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf.
+21:13:27 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+21:13:28 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+21:13:29 INFO  : Restoring local repository preferences: 
+		 C:\Users\rz252\Desktop\tjp79\ece5775-final\combined\float\voicerec.prj\solution1\impl\ip
+21:15:43 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+21:16:08 INFO  : ps7_init is completed.
+21:16:08 INFO  : Processor reset is completed for ps7_cortexa9_1
+21:16:44 INFO  : Processor reset is completed for ps7_cortexa9_1
+21:18:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:21:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:21:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:22:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:24:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:26:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:28:55 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+21:32:37 INFO  : ps7_init is completed.
+21:32:37 INFO  : ps7_post_config is completed.
+21:32:37 INFO  : Processor reset is completed for ps7_cortexa9_0

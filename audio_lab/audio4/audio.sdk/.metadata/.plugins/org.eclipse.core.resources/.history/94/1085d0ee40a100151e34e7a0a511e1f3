@@ -203,8 +203,6 @@ int main(void)
 {
   int status;
 
-  printf("Starting up...");
-
   //Configure the IIC data structure
   IicConfig(XPAR_XIICPS_0_DEVICE_ID);
 
