@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="svr24" Host="amdpool-03.ece.cornell.edu" Pid="4418">
-    </Process>
-</ProcessHandle>
