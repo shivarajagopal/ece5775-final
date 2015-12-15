@@ -180,3 +180,164 @@ java.lang.RuntimeException: Failed to download ELF file
 01:01:49 INFO  : Processor reset is completed for ps7_cortexa9_0
 01:04:51 INFO  : Processor reset is completed for ps7_cortexa9_0
 01:05:31 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:36:52 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf.
+19:36:55 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+19:36:55 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+19:36:58 INFO  : Restoring local repository preferences: 
+		 C:\Users\rz252\Desktop\tjp79\ece5775-final\combined\float\voicerec.prj\solution1\impl\ip
+19:37:12 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+19:37:25 INFO  : ps7_init is completed.
+19:37:25 INFO  : ps7_post_config is completed.
+19:37:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:41:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:42:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:43:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:44:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:44:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:45:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:03:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:04:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:06:10 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:56:22 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf.
+18:56:24 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+18:56:24 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+18:56:26 INFO  : Restoring local repository preferences: 
+		 C:\Users\rz252\Desktop\tjp79\ece5775-final\combined\float\voicerec.prj\solution1\impl\ip
+18:58:26 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+18:59:02 INFO  : ps7_init is completed.
+18:59:02 INFO  : ps7_post_config is completed.
+18:59:03 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:09:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:10:28 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error while running ps7_init method.
+No Target with ID 64 in the System
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(TM.java:1069)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:482)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:584)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:293)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+19:10:52 INFO  : Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup
+19:10:52 ERROR : Timeout occured while waiting to get reply for command "xdisconnect 64"
+19:10:52 ERROR : Disconnect target failed.
+19:10:52 ERROR : Disconnect target failed.No Target with ID 64 in the System
+
+
+19:11:00 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error while running ps7_init method.
+No Target with ID 64 in the System
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(TM.java:1069)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:482)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:584)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:293)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+19:11:00 ERROR : Disconnect target failed.No Target with ID 64 in the System
+
+
+19:12:35 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:548)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:293)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+19:12:35 ERROR : Disconnect target failed.No Target with ID 64 in the System
+
+
+19:14:08 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error while running ps7_init method.
+No Target with ID 64 in the System
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(TM.java:1069)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:482)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:584)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:293)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+19:14:08 ERROR : Disconnect target failed.No Target with ID 64 in the System
+
+
+19:14:33 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+19:14:33 ERROR : Disconnect target failed.No Target with ID 64 in the System
+
+
+19:14:41 ERROR : FPGA Configuration failed.Lost communication with jtag cable. Run "xdisconnect -cable"
+                           and start over again
+
+
+19:15:01 ERROR : FPGA Configuration failed.Lost communication with jtag cable. Run "xdisconnect -cable"
+                           and start over again
+
+
+19:16:22 ERROR : FPGA Configuration failed.Lost communication with jtag cable. Run "xdisconnect -cable"
+                           and start over again
+
+
+19:16:50 ERROR : Disconnect target failed.No Target with ID 64 in the System
+
+
+19:16:50 ERROR : Unable to disconnect from existing targets
+java.lang.RuntimeException: No Target with ID 64 in the System
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(TM.java:327)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectExistingTargets(TM.java:306)
+	at com.xilinx.sdk.targetmanager.internal.TM.terminate(TM.java:210)
+	at com.xilinx.sdk.targetmanager.TMPlugin.stop(TMPlugin.java:57)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+19:16:50 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:17:04 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+19:17:05 INFO  : Processing command line option -hwspec C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper.hdf.
+19:17:07 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+19:17:08 INFO  : Restoring local repository preferences: 
+		 C:\Users\rz252\Desktop\tjp79\ece5775-final\combined\float\voicerec.prj\solution1\impl\ip
+19:17:24 INFO  : FPGA configured successfully with bitstream "C:/Users/rz252/Desktop/tjp79/ece5775-final/audio_lab/audio4/audio.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+19:17:50 INFO  : ps7_init is completed.
+19:17:50 INFO  : ps7_post_config is completed.
+19:17:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:18:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:31:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:41:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:42:01 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

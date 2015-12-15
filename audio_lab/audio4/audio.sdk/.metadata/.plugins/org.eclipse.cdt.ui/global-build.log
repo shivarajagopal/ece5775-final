@@ -1317,3 +1317,972 @@ make: Nothing to be done for `all'.
 01:04:47 **** Incremental Build of configuration Debug for project HelloWorld ****
 make all 
 make: Nothing to be done for `all'.
+19:37:18 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+19:37:19 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:41:48 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+19:41:49 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:42:37 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+19:42:38 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:43:25 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:127:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:43:31 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+19:43:32 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:44:05 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72860	1283120	  22716	1378696	 150988	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:44:24 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72860	1283120	  22716	1378696	 150988	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:44:33 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+19:44:34 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:44:43 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:127:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:44:53 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+19:44:54 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:45:41 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72860	1283120	  22716	1378696	 150988	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:45:53 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+19:45:53 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+20:03:15 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:127:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+20:03:32 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+20:03:32 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+20:04:03 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:127:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+20:04:30 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+20:04:31 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+18:58:10 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:128:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+18:58:55 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+18:58:56 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:01:03 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:129:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:02:15 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:131:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:02:47 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:135:3: error: unknown type name 'timeval'
+   timeval ts_start;
+   ^
+../zed_testapp.c:135:11: warning: unused variable 'ts_start' [-Wunused-variable]
+   timeval ts_start;
+           ^
+../zed_testapp.c:134:9: warning: unused variable 'total_time' [-Wunused-variable]
+   float total_time;
+         ^
+../zed_testapp.c:131:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+make: *** [zed_testapp.o] Error 1
+19:04:00 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:135:18: warning: unused variable 'ts_start' [-Wunused-variable]
+   struct timeval ts_start;
+                  ^
+../zed_testapp.c:134:9: warning: unused variable 'total_time' [-Wunused-variable]
+   float total_time;
+         ^
+../zed_testapp.c:131:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:05:30 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:135:18: warning: unused variable 'ts_start' [-Wunused-variable]
+   struct timeval ts_start;
+                  ^
+../zed_testapp.c:134:9: warning: unused variable 'total_time' [-Wunused-variable]
+   float total_time;
+         ^
+../zed_testapp.c:131:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:06:29 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:135:28: warning: unused variable 'ts_end' [-Wunused-variable]
+   struct timeval ts_start, ts_end;
+                            ^
+../zed_testapp.c:135:18: warning: unused variable 'ts_start' [-Wunused-variable]
+   struct timeval ts_start, ts_end;
+                  ^
+../zed_testapp.c:134:9: warning: unused variable 'total_time' [-Wunused-variable]
+   float total_time;
+         ^
+../zed_testapp.c:131:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:06:36 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:135:28: warning: unused variable 'ts_end' [-Wunused-variable]
+   struct timeval ts_start, ts_end;
+                            ^
+../zed_testapp.c:135:18: warning: unused variable 'ts_start' [-Wunused-variable]
+   struct timeval ts_start, ts_end;
+                  ^
+../zed_testapp.c:134:9: warning: unused variable 'total_time' [-Wunused-variable]
+   float total_time;
+         ^
+../zed_testapp.c:131:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:08:18 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:135:28: warning: unused variable 'ts_end' [-Wunused-variable]
+   struct timeval ts_start, ts_end;
+                            ^
+../zed_testapp.c:135:18: warning: unused variable 'ts_start' [-Wunused-variable]
+   struct timeval ts_start, ts_end;
+                  ^
+../zed_testapp.c:134:9: warning: unused variable 'total_time' [-Wunused-variable]
+   float total_time;
+         ^
+../zed_testapp.c:131:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:09:14 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:135:28: warning: unused variable 'ts_end' [-Wunused-variable]
+   struct timeval ts_start, ts_end;
+                            ^
+../zed_testapp.c:135:18: warning: unused variable 'ts_start' [-Wunused-variable]
+   struct timeval ts_start, ts_end;
+                  ^
+../zed_testapp.c:134:9: warning: unused variable 'total_time' [-Wunused-variable]
+   float total_time;
+         ^
+../zed_testapp.c:131:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:09:20 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+19:09:20 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:10:00 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:236:6: error: 'totalTime' undeclared (first use in this function)
+      totalTime = float(ts_end.tv_sec - ts_start.tv_sec) + float(ts_end.tv_usec)*1e-6 - float(ts_start.tv_usec)*1e-6;
+      ^
+../zed_testapp.c:236:6: note: each undeclared identifier is reported only once for each function it appears in
+../zed_testapp.c:236:18: error: expected expression before 'float'
+      totalTime = float(ts_end.tv_sec - ts_start.tv_sec) + float(ts_end.tv_usec)*1e-6 - float(ts_start.tv_usec)*1e-6;
+                  ^
+../zed_testapp.c:134:9: warning: unused variable 'total_time' [-Wunused-variable]
+   float total_time;
+         ^
+../zed_testapp.c:131:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+make: *** [zed_testapp.o] Error 1
+19:10:18 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:236:6: error: 'totalTime' undeclared (first use in this function)
+      totalTime = float(ts_end.tv_sec - ts_start.tv_sec) + float(ts_end.tv_usec)*1e-6 - float(ts_start.tv_usec)*1e-6;
+      ^
+../zed_testapp.c:236:6: note: each undeclared identifier is reported only once for each function it appears in
+../zed_testapp.c:236:18: error: expected expression before 'float'
+      totalTime = float(ts_end.tv_sec - ts_start.tv_sec) + float(ts_end.tv_usec)*1e-6 - float(ts_start.tv_usec)*1e-6;
+                  ^
+../zed_testapp.c:134:9: warning: unused variable 'total_time' [-Wunused-variable]
+   float total_time;
+         ^
+make: *** [zed_testapp.o] Error 1
+19:10:26 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:236:6: error: 'totalTime' undeclared (first use in this function)
+      totalTime = float(ts_end.tv_sec - ts_start.tv_sec) + float(ts_end.tv_usec)*1e-6 - float(ts_start.tv_usec)*1e-6;
+      ^
+../zed_testapp.c:236:6: note: each undeclared identifier is reported only once for each function it appears in
+../zed_testapp.c:236:18: error: expected expression before 'float'
+      totalTime = float(ts_end.tv_sec - ts_start.tv_sec) + float(ts_end.tv_usec)*1e-6 - float(ts_start.tv_usec)*1e-6;
+                  ^
+../zed_testapp.c:134:9: warning: unused variable 'total_time' [-Wunused-variable]
+   float total_time;
+         ^
+make: *** [zed_testapp.o] Error 1
+19:10:27 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:10:41 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:236:6: error: 'totalTime' undeclared (first use in this function)
+      totalTime = float(ts_end.tv_sec - ts_start.tv_sec) + float(ts_end.tv_usec)*1e-6 - float(ts_start.tv_usec)*1e-6;
+      ^
+../zed_testapp.c:236:6: note: each undeclared identifier is reported only once for each function it appears in
+../zed_testapp.c:236:18: error: expected expression before 'float'
+      totalTime = float(ts_end.tv_sec - ts_start.tv_sec) + float(ts_end.tv_usec)*1e-6 - float(ts_start.tv_usec)*1e-6;
+                  ^
+../zed_testapp.c:134:9: warning: unused variable 'total_time' [-Wunused-variable]
+   float total_time;
+         ^
+make: *** [zed_testapp.o] Error 1
+19:10:43 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:10:57 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:236:6: error: 'totalTime' undeclared (first use in this function)
+      totalTime = float(ts_end.tv_sec - ts_start.tv_sec) + float(ts_end.tv_usec)*1e-6 - float(ts_start.tv_usec)*1e-6;
+      ^
+../zed_testapp.c:236:6: note: each undeclared identifier is reported only once for each function it appears in
+../zed_testapp.c:236:18: error: expected expression before 'float'
+      totalTime = float(ts_end.tv_sec - ts_start.tv_sec) + float(ts_end.tv_usec)*1e-6 - float(ts_start.tv_usec)*1e-6;
+                  ^
+../zed_testapp.c:134:9: warning: unused variable 'total_time' [-Wunused-variable]
+   float total_time;
+         ^
+make: *** [zed_testapp.o] Error 1
+19:10:59 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:11:20 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:236:18: error: expected expression before 'float'
+      totalTime = float(ts_end.tv_sec - ts_start.tv_sec) + float(ts_end.tv_usec)*1e-6 - float(ts_start.tv_usec)*1e-6;
+                  ^
+make: *** [zed_testapp.o] Error 1
+19:11:39 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:236:92: error: expected expression before 'float'
+      totalTime = (float)(ts_end.tv_sec - ts_start.tv_sec) + (float)(ts_end.tv_usec)*1e-6 - float(ts_start.tv_usec)*1e-6;
+                                                                                            ^
+make: *** [zed_testapp.o] Error 1
+19:11:45 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2014.4/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.8.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+gettimeofdayr.c:(.text+0x20): undefined reference to `_gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [TestApp.elf] Error 1
+19:12:34 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2014.4/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.8.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+gettimeofdayr.c:(.text+0x20): undefined reference to `_gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [TestApp.elf] Error 1
+19:12:35 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:13:50 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:135:28: warning: unused variable 'ts_end' [-Wunused-variable]
+   struct timeval ts_start, ts_end;
+                            ^
+../zed_testapp.c:135:18: warning: unused variable 'ts_start' [-Wunused-variable]
+   struct timeval ts_start, ts_end;
+                  ^
+../zed_testapp.c:134:9: warning: unused variable 'totalTime' [-Wunused-variable]
+   float totalTime;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72860	1283120	  22716	1378696	 150988	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:14:06 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+19:14:07 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:17:41 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+19:17:42 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:18:29 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:135:28: warning: unused variable 'ts_end' [-Wunused-variable]
+   struct timeval ts_start, ts_end;
+                            ^
+../zed_testapp.c:135:18: warning: unused variable 'ts_start' [-Wunused-variable]
+   struct timeval ts_start, ts_end;
+                  ^
+../zed_testapp.c:134:9: warning: unused variable 'totalTime' [-Wunused-variable]
+   float totalTime;
+         ^
+../zed_testapp.c:131:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:18:35 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+19:18:36 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:22:45 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:129:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:22:51 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+19:22:51 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:23:02 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:128:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:31:26 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'xscu_timer_init':
+../zed_testapp.c:48:11: error: expected expression before 'XScuTimer'
+  cfgPtr = XScuTimer = XScuTimer_LookupConfig(XPAR_XSCUTIMER_0_DEVICE_ID);
+           ^
+../zed_testapp.c:53:2: error: too few arguments to function 'XScuTimer_CfgInitialize'
+  status = XScuTimer_CfgInitialize(scuTimerPtr, cfgPtr);
+  ^
+In file included from ../zed_testapp.c:12:0:
+../../standalone_bsp_0/ps7_cortexa9_0/include/xscutimer.h:350:5: note: declared here
+ int XScuTimer_CfgInitialize(XScuTimer *InstancePtr,
+     ^
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:144:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+../zed_testapp.c: In function 'xscu_timer_init':
+../zed_testapp.c:58:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [zed_testapp.o] Error 1
+19:31:32 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:145:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:31:44 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+19:31:44 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
+19:35:27 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'xscu_timer_init':
+../zed_testapp.c:48:11: error: expected expression before 'XScuTimer'
+  cfgPtr = XScuTimer = XScuTimer_LookupConfig(XPAR_XSCUTIMER_0_DEVICE_ID);
+           ^
+../zed_testapp.c:53:2: error: too few arguments to function 'XScuTimer_CfgInitialize'
+  status = XScuTimer_CfgInitialize(scuTimerPtr, cfgPtr);
+  ^
+In file included from ../zed_testapp.c:12:0:
+../../standalone_bsp_0/ps7_cortexa9_0/include/xscutimer.h:350:5: note: declared here
+ int XScuTimer_CfgInitialize(XScuTimer *InstancePtr,
+     ^
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:145:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+../zed_testapp.c: In function 'xscu_timer_init':
+../zed_testapp.c:58:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [zed_testapp.o] Error 1
+19:35:46 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'xscu_timer_init':
+../zed_testapp.c:53:2: error: too few arguments to function 'XScuTimer_CfgInitialize'
+  status = XScuTimer_CfgInitialize(scuTimerPtr, cfgPtr);
+  ^
+In file included from ../zed_testapp.c:12:0:
+../../standalone_bsp_0/ps7_cortexa9_0/include/xscutimer.h:350:5: note: declared here
+ int XScuTimer_CfgInitialize(XScuTimer *InstancePtr,
+     ^
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:145:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+../zed_testapp.c: In function 'xscu_timer_init':
+../zed_testapp.c:58:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [zed_testapp.o] Error 1
+19:37:32 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'xscu_timer_init':
+../zed_testapp.c:54:2: error: 'XScu' undeclared (first use in this function)
+  XScu
+  ^
+../zed_testapp.c:54:2: note: each undeclared identifier is reported only once for each function it appears in
+../zed_testapp.c:55:2: error: expected ';' before 'if'
+  if (status != XST_SUCCESS) {
+  ^
+../zed_testapp.c:46:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  int status;
+      ^
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:146:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+../zed_testapp.c: In function 'xscu_timer_init':
+../zed_testapp.c:59:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [zed_testapp.o] Error 1
+19:37:50 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'xscu_timer_init':
+../zed_testapp.c:55:2: error: expected ';' before 'if'
+  if (status != XST_SUCCESS) {
+  ^
+../zed_testapp.c:46:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  int status;
+      ^
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:146:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+../zed_testapp.c: In function 'xscu_timer_init':
+../zed_testapp.c:59:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [zed_testapp.o] Error 1
+19:37:55 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:146:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+../zed_testapp.c: In function 'xscu_timer_init':
+../zed_testapp.c:59:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  74272	1283128	  22716	1380116	 150f14	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:38:19 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:146:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+../zed_testapp.c: In function 'xscu_timer_init':
+../zed_testapp.c:59:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  74272	1283128	  22716	1380116	 150f14	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:41:08 **** Auto Build of configuration Debug for project TestApp ****
+make all 
+'Building file: ../zed_testapp.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"zed_testapp.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"zed_testapp.d" -MT"zed_testapp.d" -o "zed_testapp.o" "../zed_testapp.c"
+../zed_testapp.c: In function 'run_voice_recognition':
+../zed_testapp.c:128:9: warning: variable 'audio_float' set but not used [-Wunused-but-set-variable]
+   float audio_float;
+         ^
+'Finished building: ../zed_testapp.c'
+' '
+'Building target: TestApp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "TestApp.elf"  ./zed_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72924	1283120	  22716	1378760	 1509c8	TestApp.elf
+'Finished building: TestApp.elf.size'
+' '
+19:41:26 **** Incremental Build of configuration Debug for project TestApp ****
+make all 
+make: Nothing to be done for `all'.
+19:41:26 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for `all'.
