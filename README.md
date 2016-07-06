@@ -1,6 +1,6 @@
 # ECE 5775 Final Project
 ## A neural network-based method for recognizing speech commands with fixed-latency on a Xilinx Zedboard
-## A project by [taylorpritchard](https://github.com/taylorpritchard/), [shivarajagopal](https://github.com/shivarajagopal/), and [ianvermeulen](ianvermeulen).
+## A project by [taylorpritchard](https://github.com/taylorpritchard/), [shivarajagopal](https://github.com/shivarajagopal/), and [ianvermeulen](https://github.com/ianvermeulen/).
 
 A description of each folder and its contents is below
 
